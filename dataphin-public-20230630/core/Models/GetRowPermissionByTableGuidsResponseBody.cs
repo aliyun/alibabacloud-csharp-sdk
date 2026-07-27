@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetRowPermissionByTableGuidsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code. A value of OK indicates that the request was successful</para>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetRowPermissionByTableGuidsResponseBodyData> Data { get; set; }
         public class GetRowPermissionByTableGuidsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Row permission description</para>
+            /// <para>The row permission description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Restrict query region</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string RowPermissionDesc { get; set; }
 
             /// <summary>
-            /// <para>Row permission ID</para>
+            /// <para>The row permission ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300000001</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string RowPermissionId { get; set; }
 
             /// <summary>
-            /// <para>Row permission name</para>
+            /// <para>The row permission name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Region</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code of the backend response</para>
+        /// <para>The HTTP status code returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

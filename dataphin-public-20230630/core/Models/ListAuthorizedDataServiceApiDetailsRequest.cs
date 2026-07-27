@@ -24,9 +24,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// 
             /// <summary>
             /// <para>The application key.</para>
-            /// <remarks>
-            /// <para>Notice: Deprecated. Use AppKeyStr instead.</notice>.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>200000000</para>

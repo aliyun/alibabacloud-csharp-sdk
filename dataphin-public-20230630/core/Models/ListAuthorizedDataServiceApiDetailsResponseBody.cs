@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>非法入参</para>
+        /// <para>Invalid input parameter.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. It is a unique identifier for the request.</para>
+        /// <para>The request ID, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The permission type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>使用权限</para>
+                /// <para>Usage permission.</para>
                 /// </summary>
                 [NameInMap("AuthType")]
                 [Validation(Required=false)]
                 public string AuthType { get; set; }
 
                 /// <summary>
-                /// <para>The list of fields authorized for the API in the development environment.</para>
+                /// <para>The list of authorized fields for the API in the development environment.</para>
                 /// </summary>
                 [NameInMap("AuthorizedDevReturnParameters")]
                 [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public int? IsAuthorized { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter type.</para>
+                    /// <para>The parameter data type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The list of fields authorized for the API in the production environment.</para>
+                /// <para>The list of authorized fields for the API in the production environment.</para>
                 /// </summary>
                 [NameInMap("AuthorizedProdReturnParameters")]
                 [Validation(Required=false)]
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public int? IsAuthorized { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter type.</para>
+                    /// <para>The parameter data type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -277,6 +277,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
         /// <summary>
         /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

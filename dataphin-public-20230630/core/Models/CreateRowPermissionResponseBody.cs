@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateRowPermissionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code of the request. OK indicates a successful request.</para>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message of the request.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

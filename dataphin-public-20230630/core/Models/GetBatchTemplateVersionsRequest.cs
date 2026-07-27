@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetBatchTemplateVersionsRequest : TeaModel {
         /// <summary>
+        /// <para>The environment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DEV: development environment.</description></item>
+        /// <item><description>PROD: production environment.</description></item>
+        /// </list>
+        /// <para>Default value for dev_prod projects: DEV.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DEV</para>
         /// </summary>
@@ -18,6 +25,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +36,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

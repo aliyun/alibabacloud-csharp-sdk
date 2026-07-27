@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateRowPermissionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Request command.</para>
+        /// <para>The request command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateRowPermissionCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string CreateRowPermissionCommandShrink { get; set; }
 
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

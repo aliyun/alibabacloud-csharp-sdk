@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetOperationRecordByIdShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The query command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DetailCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string DetailCommandShrink { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

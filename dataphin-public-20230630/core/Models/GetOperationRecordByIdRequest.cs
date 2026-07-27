@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetOperationRecordByIdRequest : TeaModel {
         /// <summary>
+        /// <para>The query command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DetailCommand")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetOperationRecordByIdRequestDetailCommand DetailCommand { get; set; }
         public class GetOperationRecordByIdRequestDetailCommand : TeaModel {
             /// <summary>
+            /// <para>The operation log ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? OperationId { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -39,6 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

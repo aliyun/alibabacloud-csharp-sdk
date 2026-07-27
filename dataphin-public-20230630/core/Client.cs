@@ -1527,6 +1527,310 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates knowledge graph entity records in batches. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchCreateKgEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateKgEntityResponse
+        /// </returns>
+        public BatchCreateKgEntityResponse BatchCreateKgEntityWithOptions(BatchCreateKgEntityRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchCreateKgEntityShrinkRequest request = new BatchCreateKgEntityShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCreateKgEntity",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCreateKgEntityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates knowledge graph entity records in batches. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchCreateKgEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateKgEntityResponse
+        /// </returns>
+        public async Task<BatchCreateKgEntityResponse> BatchCreateKgEntityWithOptionsAsync(BatchCreateKgEntityRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchCreateKgEntityShrinkRequest request = new BatchCreateKgEntityShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCreateKgEntity",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCreateKgEntityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates knowledge graph entity records in batches. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchCreateKgEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateKgEntityResponse
+        /// </returns>
+        public BatchCreateKgEntityResponse BatchCreateKgEntity(BatchCreateKgEntityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchCreateKgEntityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates knowledge graph entity records in batches. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchCreateKgEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateKgEntityResponse
+        /// </returns>
+        public async Task<BatchCreateKgEntityResponse> BatchCreateKgEntityAsync(BatchCreateKgEntityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchCreateKgEntityWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates knowledge graph relationship records in batches. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchCreateKgRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateKgRelationResponse
+        /// </returns>
+        public BatchCreateKgRelationResponse BatchCreateKgRelationWithOptions(BatchCreateKgRelationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchCreateKgRelationShrinkRequest request = new BatchCreateKgRelationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCreateKgRelation",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCreateKgRelationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates knowledge graph relationship records in batches. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchCreateKgRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateKgRelationResponse
+        /// </returns>
+        public async Task<BatchCreateKgRelationResponse> BatchCreateKgRelationWithOptionsAsync(BatchCreateKgRelationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchCreateKgRelationShrinkRequest request = new BatchCreateKgRelationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCreateKgRelation",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCreateKgRelationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates knowledge graph relationship records in batches. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchCreateKgRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateKgRelationResponse
+        /// </returns>
+        public BatchCreateKgRelationResponse BatchCreateKgRelation(BatchCreateKgRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchCreateKgRelationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates knowledge graph relationship records in batches. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchCreateKgRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCreateKgRelationResponse
+        /// </returns>
+        public async Task<BatchCreateKgRelationResponse> BatchCreateKgRelationAsync(BatchCreateKgRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchCreateKgRelationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Checks the connectivity of a compute source.</para>
         /// </summary>
         /// 
@@ -2483,6 +2787,150 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAdHocFileWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Basic (single-environment) project.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateBasicProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBasicProjectResponse
+        /// </returns>
+        public CreateBasicProjectResponse CreateBasicProjectWithOptions(CreateBasicProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateBasicProjectShrinkRequest request = new CreateBasicProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBasicProject",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBasicProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Basic (single-environment) project.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateBasicProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBasicProjectResponse
+        /// </returns>
+        public async Task<CreateBasicProjectResponse> CreateBasicProjectWithOptionsAsync(CreateBasicProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateBasicProjectShrinkRequest request = new CreateBasicProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBasicProject",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBasicProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Basic (single-environment) project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBasicProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBasicProjectResponse
+        /// </returns>
+        public CreateBasicProjectResponse CreateBasicProject(CreateBasicProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateBasicProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Basic (single-environment) project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBasicProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBasicProjectResponse
+        /// </returns>
+        public async Task<CreateBasicProjectResponse> CreateBasicProjectAsync(CreateBasicProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateBasicProjectWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4131,6 +4579,150 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a Dev-Prod (dual-environment) project.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDevProdProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDevProdProjectResponse
+        /// </returns>
+        public CreateDevProdProjectResponse CreateDevProdProjectWithOptions(CreateDevProdProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDevProdProjectShrinkRequest request = new CreateDevProdProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDevProdProject",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDevProdProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Dev-Prod (dual-environment) project.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDevProdProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDevProdProjectResponse
+        /// </returns>
+        public async Task<CreateDevProdProjectResponse> CreateDevProdProjectWithOptionsAsync(CreateDevProdProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDevProdProjectShrinkRequest request = new CreateDevProdProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDevProdProject",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDevProdProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Dev-Prod (dual-environment) project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDevProdProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDevProdProjectResponse
+        /// </returns>
+        public CreateDevProdProjectResponse CreateDevProdProject(CreateDevProdProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDevProdProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Dev-Prod (dual-environment) project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDevProdProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDevProdProjectResponse
+        /// </returns>
+        public async Task<CreateDevProdProjectResponse> CreateDevProdProjectAsync(CreateDevProdProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDevProdProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a menu tree directory. This operation supports features such as compute nodes, data integration, and synchronization tasks.</para>
         /// </summary>
         /// 
@@ -4271,6 +4863,310 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDirectoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge graph entity record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKgEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKgEntityResponse
+        /// </returns>
+        public CreateKgEntityResponse CreateKgEntityWithOptions(CreateKgEntityRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKgEntityShrinkRequest request = new CreateKgEntityShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKgEntity",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKgEntityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge graph entity record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKgEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKgEntityResponse
+        /// </returns>
+        public async Task<CreateKgEntityResponse> CreateKgEntityWithOptionsAsync(CreateKgEntityRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKgEntityShrinkRequest request = new CreateKgEntityShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKgEntity",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKgEntityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge graph entity record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKgEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKgEntityResponse
+        /// </returns>
+        public CreateKgEntityResponse CreateKgEntity(CreateKgEntityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateKgEntityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge graph entity record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKgEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKgEntityResponse
+        /// </returns>
+        public async Task<CreateKgEntityResponse> CreateKgEntityAsync(CreateKgEntityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateKgEntityWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge graph relationship record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKgRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKgRelationResponse
+        /// </returns>
+        public CreateKgRelationResponse CreateKgRelationWithOptions(CreateKgRelationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKgRelationShrinkRequest request = new CreateKgRelationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKgRelation",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKgRelationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge graph relationship record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKgRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKgRelationResponse
+        /// </returns>
+        public async Task<CreateKgRelationResponse> CreateKgRelationWithOptionsAsync(CreateKgRelationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKgRelationShrinkRequest request = new CreateKgRelationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKgRelation",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKgRelationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge graph relationship record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKgRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKgRelationResponse
+        /// </returns>
+        public CreateKgRelationResponse CreateKgRelation(CreateKgRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateKgRelationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge graph relationship record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKgRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKgRelationResponse
+        /// </returns>
+        public async Task<CreateKgRelationResponse> CreateKgRelationAsync(CreateKgRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateKgRelationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5056,7 +5952,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query detailed information about published APIs based on the appKey.</para>
+        /// <para>Queries the details of published APIs by appKey.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5115,7 +6011,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query detailed information about published APIs based on the appKey.</para>
+        /// <para>Queries the details of published APIs by appKey.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5174,7 +6070,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query detailed information about published APIs based on the appKey.</para>
+        /// <para>Queries the details of published APIs by appKey.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5197,7 +6093,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query detailed information about published APIs based on the appKey.</para>
+        /// <para>Queries the details of published APIs by appKey.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9063,6 +9959,422 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes an entity record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKgEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKgEntityResponse
+        /// </returns>
+        public DeleteKgEntityResponse DeleteKgEntityWithOptions(DeleteKgEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
+            {
+                query["EntityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKgEntity",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKgEntityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an entity record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKgEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKgEntityResponse
+        /// </returns>
+        public async Task<DeleteKgEntityResponse> DeleteKgEntityWithOptionsAsync(DeleteKgEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
+            {
+                query["EntityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKgEntity",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKgEntityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an entity record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKgEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKgEntityResponse
+        /// </returns>
+        public DeleteKgEntityResponse DeleteKgEntity(DeleteKgEntityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteKgEntityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an entity record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKgEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKgEntityResponse
+        /// </returns>
+        public async Task<DeleteKgEntityResponse> DeleteKgEntityAsync(DeleteKgEntityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteKgEntityWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a relationship record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKgRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKgRelationResponse
+        /// </returns>
+        public DeleteKgRelationResponse DeleteKgRelationWithOptions(DeleteKgRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationId))
+            {
+                query["RelationId"] = request.RelationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationType))
+            {
+                query["RelationType"] = request.RelationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKgRelation",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKgRelationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a relationship record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKgRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKgRelationResponse
+        /// </returns>
+        public async Task<DeleteKgRelationResponse> DeleteKgRelationWithOptionsAsync(DeleteKgRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationId))
+            {
+                query["RelationId"] = request.RelationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationType))
+            {
+                query["RelationType"] = request.RelationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKgRelation",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKgRelationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a relationship record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKgRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKgRelationResponse
+        /// </returns>
+        public DeleteKgRelationResponse DeleteKgRelation(DeleteKgRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteKgRelationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a relationship record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKgRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKgRelationResponse
+        /// </returns>
+        public async Task<DeleteKgRelationResponse> DeleteKgRelationAsync(DeleteKgRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteKgRelationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project (applicable to both Basic and Dev-Prod projects).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
+        public DeleteProjectResponse DeleteProjectWithOptions(DeleteProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProject",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project (applicable to both Basic and Dev-Prod projects).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
+        public async Task<DeleteProjectResponse> DeleteProjectWithOptionsAsync(DeleteProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteProject",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project (applicable to both Basic and Dev-Prod projects).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
+        public DeleteProjectResponse DeleteProject(DeleteProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project (applicable to both Basic and Dev-Prod projects).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteProjectResponse
+        /// </returns>
+        public async Task<DeleteProjectResponse> DeleteProjectAsync(DeleteProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes quality rule objects in batches.
         /// Release version: v5.4.2.</para>
         /// </summary>
@@ -11919,6 +13231,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Executes a custom Cypher query. Online version: v6.2.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ExecKgCypherRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecKgCypherResponse
+        /// </returns>
+        public ExecKgCypherResponse ExecKgCypherWithOptions(ExecKgCypherRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ExecKgCypherShrinkRequest request = new ExecKgCypherShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExecCommand))
+            {
+                request.ExecCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExecCommand, "ExecCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecCommandShrink))
+            {
+                body["ExecCommand"] = request.ExecCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecKgCypher",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecKgCypherResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a custom Cypher query. Online version: v6.2.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ExecKgCypherRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecKgCypherResponse
+        /// </returns>
+        public async Task<ExecKgCypherResponse> ExecKgCypherWithOptionsAsync(ExecKgCypherRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ExecKgCypherShrinkRequest request = new ExecKgCypherShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExecCommand))
+            {
+                request.ExecCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExecCommand, "ExecCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecCommandShrink))
+            {
+                body["ExecCommand"] = request.ExecCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecKgCypher",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecKgCypherResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a custom Cypher query. Online version: v6.2.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecKgCypherRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecKgCypherResponse
+        /// </returns>
+        public ExecKgCypherResponse ExecKgCypher(ExecKgCypherRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExecKgCypherWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a custom Cypher query. Online version: v6.2.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecKgCypherRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecKgCypherResponse
+        /// </returns>
+        public async Task<ExecKgCypherResponse> ExecKgCypherAsync(ExecKgCypherRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExecKgCypherWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Executes an ad hoc query task.</para>
         /// </summary>
         /// 
@@ -12371,6 +13835,150 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExecuteTriggerNodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出知识图谱定义。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportKgSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportKgSchemaResponse
+        /// </returns>
+        public ExportKgSchemaResponse ExportKgSchemaWithOptions(ExportKgSchemaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFormat))
+            {
+                query["OutputFormat"] = request.OutputFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportKgSchema",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportKgSchemaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出知识图谱定义。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportKgSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportKgSchemaResponse
+        /// </returns>
+        public async Task<ExportKgSchemaResponse> ExportKgSchemaWithOptionsAsync(ExportKgSchemaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFormat))
+            {
+                query["OutputFormat"] = request.OutputFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExportKgSchema",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExportKgSchemaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出知识图谱定义。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportKgSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportKgSchemaResponse
+        /// </returns>
+        public ExportKgSchemaResponse ExportKgSchema(ExportKgSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExportKgSchemaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导出知识图谱定义。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExportKgSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExportKgSchemaResponse
+        /// </returns>
+        public async Task<ExportKgSchemaResponse> ExportKgSchemaAsync(ExportKgSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExportKgSchemaWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13947,7 +15555,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定离线模板ID版本列表。</para>
+        /// <para>Retrieves the version list of a specified offline template ID. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14001,7 +15609,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定离线模板ID版本列表。</para>
+        /// <para>Retrieves the version list of a specified offline template ID. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14055,7 +15663,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定离线模板ID版本列表。</para>
+        /// <para>Retrieves the version list of a specified offline template ID. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14073,7 +15681,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定离线模板ID版本列表。</para>
+        /// <para>Retrieves the version list of a specified offline template ID. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18415,6 +20023,598 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取知识图谱实体记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgEntityResponse
+        /// </returns>
+        public GetKgEntityResponse GetKgEntityWithOptions(GetKgEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
+            {
+                query["EntityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKgEntity",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKgEntityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取知识图谱实体记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgEntityResponse
+        /// </returns>
+        public async Task<GetKgEntityResponse> GetKgEntityWithOptionsAsync(GetKgEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
+            {
+                query["EntityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKgEntity",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKgEntityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取知识图谱实体记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgEntityResponse
+        /// </returns>
+        public GetKgEntityResponse GetKgEntity(GetKgEntityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetKgEntityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取知识图谱实体记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgEntityResponse
+        /// </returns>
+        public async Task<GetKgEntityResponse> GetKgEntityAsync(GetKgEntityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetKgEntityWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图谱模型邻居节点。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetKgNeighborRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgNeighborResponse
+        /// </returns>
+        public GetKgNeighborResponse GetKgNeighborWithOptions(GetKgNeighborRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetKgNeighborShrinkRequest request = new GetKgNeighborShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NeighborsQuery))
+            {
+                request.NeighborsQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NeighborsQuery, "NeighborsQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityDataId))
+            {
+                query["EntityDataId"] = request.EntityDataId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeighborsQueryShrink))
+            {
+                body["NeighborsQuery"] = request.NeighborsQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKgNeighbor",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKgNeighborResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图谱模型邻居节点。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetKgNeighborRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgNeighborResponse
+        /// </returns>
+        public async Task<GetKgNeighborResponse> GetKgNeighborWithOptionsAsync(GetKgNeighborRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetKgNeighborShrinkRequest request = new GetKgNeighborShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.NeighborsQuery))
+            {
+                request.NeighborsQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NeighborsQuery, "NeighborsQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityDataId))
+            {
+                query["EntityDataId"] = request.EntityDataId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeighborsQueryShrink))
+            {
+                body["NeighborsQuery"] = request.NeighborsQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKgNeighbor",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKgNeighborResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图谱模型邻居节点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgNeighborRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgNeighborResponse
+        /// </returns>
+        public GetKgNeighborResponse GetKgNeighbor(GetKgNeighborRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetKgNeighborWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图谱模型邻居节点。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgNeighborRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgNeighborResponse
+        /// </returns>
+        public async Task<GetKgNeighborResponse> GetKgNeighborAsync(GetKgNeighborRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetKgNeighborWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取知识图谱关系记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgRelationResponse
+        /// </returns>
+        public GetKgRelationResponse GetKgRelationWithOptions(GetKgRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationId))
+            {
+                query["RelationId"] = request.RelationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationType))
+            {
+                query["RelationType"] = request.RelationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKgRelation",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKgRelationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取知识图谱关系记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgRelationResponse
+        /// </returns>
+        public async Task<GetKgRelationResponse> GetKgRelationWithOptionsAsync(GetKgRelationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationId))
+            {
+                query["RelationId"] = request.RelationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationType))
+            {
+                query["RelationType"] = request.RelationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKgRelation",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKgRelationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取知识图谱关系记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgRelationResponse
+        /// </returns>
+        public GetKgRelationResponse GetKgRelation(GetKgRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetKgRelationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取知识图谱关系记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgRelationResponse
+        /// </returns>
+        public async Task<GetKgRelationResponse> GetKgRelationAsync(GetKgRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetKgRelationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图谱模型发布结果。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgSchemaPublishResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgSchemaPublishResultResponse
+        /// </returns>
+        public GetKgSchemaPublishResultResponse GetKgSchemaPublishResultWithOptions(GetKgSchemaPublishResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKgSchemaPublishResult",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKgSchemaPublishResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图谱模型发布结果。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgSchemaPublishResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgSchemaPublishResultResponse
+        /// </returns>
+        public async Task<GetKgSchemaPublishResultResponse> GetKgSchemaPublishResultWithOptionsAsync(GetKgSchemaPublishResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetKgSchemaPublishResult",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetKgSchemaPublishResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图谱模型发布结果。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgSchemaPublishResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgSchemaPublishResultResponse
+        /// </returns>
+        public GetKgSchemaPublishResultResponse GetKgSchemaPublishResult(GetKgSchemaPublishResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetKgSchemaPublishResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取图谱模型发布结果。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetKgSchemaPublishResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetKgSchemaPublishResultResponse
+        /// </returns>
+        public async Task<GetKgSchemaPublishResultResponse> GetKgSchemaPublishResultAsync(GetKgSchemaPublishResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetKgSchemaPublishResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of the latest pending submit record.</para>
         /// </summary>
         /// 
@@ -18999,7 +21199,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据Id查询运行记录</para>
+        /// <para>Queries an operation log by ID. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19053,7 +21253,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据Id查询运行记录</para>
+        /// <para>Queries an operation log by ID. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19107,7 +21307,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据Id查询运行记录</para>
+        /// <para>Queries an operation log by ID. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19125,7 +21325,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据Id查询运行记录</para>
+        /// <para>Queries an operation log by ID. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23123,7 +25323,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release version: v5.4.2.</para>
+        /// <para>Retrieves row permissions by table GUIDs. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23177,7 +25377,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release version: v5.4.2.</para>
+        /// <para>Retrieves row permissions by table GUIDs. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23231,7 +25431,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release version: v5.4.2.</para>
+        /// <para>Retrieves row permissions by table GUIDs. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23249,7 +25449,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release version: v5.4.2.</para>
+        /// <para>Retrieves row permissions by table GUIDs. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27051,6 +29251,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>导入知识图谱定义。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ImportKgSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportKgSchemaResponse
+        /// </returns>
+        public ImportKgSchemaResponse ImportKgSchemaWithOptions(ImportKgSchemaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ImportKgSchemaShrinkRequest request = new ImportKgSchemaShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImportCommand))
+            {
+                request.ImportCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImportCommand, "ImportCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImportCommandShrink))
+            {
+                body["ImportCommand"] = request.ImportCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportKgSchema",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportKgSchemaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入知识图谱定义。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ImportKgSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportKgSchemaResponse
+        /// </returns>
+        public async Task<ImportKgSchemaResponse> ImportKgSchemaWithOptionsAsync(ImportKgSchemaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ImportKgSchemaShrinkRequest request = new ImportKgSchemaShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ImportCommand))
+            {
+                request.ImportCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ImportCommand, "ImportCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImportCommandShrink))
+            {
+                body["ImportCommand"] = request.ImportCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportKgSchema",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportKgSchemaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入知识图谱定义。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportKgSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportKgSchemaResponse
+        /// </returns>
+        public ImportKgSchemaResponse ImportKgSchema(ImportKgSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportKgSchemaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入知识图谱定义。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportKgSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportKgSchemaResponse
+        /// </returns>
+        public async Task<ImportKgSchemaResponse> ImportKgSchemaAsync(ImportKgSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportKgSchemaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the global roles that can be assigned to tenant members. Only built-in global roles are supported. Custom global roles are not supported.</para>
         /// </summary>
         /// 
@@ -27767,8 +30119,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of specific fields for APIs that an application has requested.</para>
+        /// <para>Queries the specific field list of APIs that an application has requested.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该 API 允许用户通过提供租户 ID、数据服务应用的AppKey 或应用名称的关键词来已授权给应用的API。支持分页查询，返回的数据包括API的ID、名称、所属项目、已授权的有效期（开发及生产环境）、权限类型、生产及开发环境字段列表（字段/参数名称、参数类型、描述、示例值、是否已授权等）。请注意，分页参数是必填值。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListAuthorizedDataServiceApiDetailsRequest
@@ -27821,8 +30179,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of specific fields for APIs that an application has requested.</para>
+        /// <para>Queries the specific field list of APIs that an application has requested.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该 API 允许用户通过提供租户 ID、数据服务应用的AppKey 或应用名称的关键词来已授权给应用的API。支持分页查询，返回的数据包括API的ID、名称、所属项目、已授权的有效期（开发及生产环境）、权限类型、生产及开发环境字段列表（字段/参数名称、参数类型、描述、示例值、是否已授权等）。请注意，分页参数是必填值。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListAuthorizedDataServiceApiDetailsRequest
@@ -27875,8 +30239,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of specific fields for APIs that an application has requested.</para>
+        /// <para>Queries the specific field list of APIs that an application has requested.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该 API 允许用户通过提供租户 ID、数据服务应用的AppKey 或应用名称的关键词来已授权给应用的API。支持分页查询，返回的数据包括API的ID、名称、所属项目、已授权的有效期（开发及生产环境）、权限类型、生产及开发环境字段列表（字段/参数名称、参数类型、描述、示例值、是否已授权等）。请注意，分页参数是必填值。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAuthorizedDataServiceApiDetailsRequest
@@ -27893,8 +30263,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of specific fields for APIs that an application has requested.</para>
+        /// <para>Queries the specific field list of APIs that an application has requested.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该 API 允许用户通过提供租户 ID、数据服务应用的AppKey 或应用名称的关键词来已授权给应用的API。支持分页查询，返回的数据包括API的ID、名称、所属项目、已授权的有效期（开发及生产环境）、权限类型、生产及开发环境字段列表（字段/参数名称、参数类型、描述、示例值、是否已授权等）。请注意，分页参数是必填值。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAuthorizedDataServiceApiDetailsRequest
@@ -30583,6 +32959,326 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries knowledge graph entity records with paging. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListKgEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKgEntityResponse
+        /// </returns>
+        public ListKgEntityResponse ListKgEntityWithOptions(ListKgEntityRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListKgEntityShrinkRequest request = new ListKgEntityShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKgEntity",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKgEntityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries knowledge graph entity records with paging. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListKgEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKgEntityResponse
+        /// </returns>
+        public async Task<ListKgEntityResponse> ListKgEntityWithOptionsAsync(ListKgEntityRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListKgEntityShrinkRequest request = new ListKgEntityShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                query["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKgEntity",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKgEntityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries knowledge graph entity records with paging. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKgEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKgEntityResponse
+        /// </returns>
+        public ListKgEntityResponse ListKgEntity(ListKgEntityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKgEntityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries knowledge graph entity records with paging. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKgEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKgEntityResponse
+        /// </returns>
+        public async Task<ListKgEntityResponse> ListKgEntityAsync(ListKgEntityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKgEntityWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询知识图谱关系记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListKgRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKgRelationResponse
+        /// </returns>
+        public ListKgRelationResponse ListKgRelationWithOptions(ListKgRelationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListKgRelationShrinkRequest request = new ListKgRelationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationType))
+            {
+                query["RelationType"] = request.RelationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKgRelation",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKgRelationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询知识图谱关系记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListKgRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKgRelationResponse
+        /// </returns>
+        public async Task<ListKgRelationResponse> ListKgRelationWithOptionsAsync(ListKgRelationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListKgRelationShrinkRequest request = new ListKgRelationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationType))
+            {
+                query["RelationType"] = request.RelationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKgRelation",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKgRelationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询知识图谱关系记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKgRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKgRelationResponse
+        /// </returns>
+        public ListKgRelationResponse ListKgRelation(ListKgRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKgRelationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询知识图谱关系记录。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKgRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKgRelationResponse
+        /// </returns>
+        public async Task<ListKgRelationResponse> ListKgRelationAsync(ListKgRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKgRelationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -35451,6 +38147,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Publishes a knowledge graph model. Online version: v6.2.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PublishKgSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishKgSchemaResponse
+        /// </returns>
+        public PublishKgSchemaResponse PublishKgSchemaWithOptions(PublishKgSchemaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PublishKgSchemaShrinkRequest request = new PublishKgSchemaShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PublishCommand))
+            {
+                request.PublishCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PublishCommand, "PublishCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishCommandShrink))
+            {
+                body["PublishCommand"] = request.PublishCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PublishKgSchema",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PublishKgSchemaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a knowledge graph model. Online version: v6.2.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// PublishKgSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishKgSchemaResponse
+        /// </returns>
+        public async Task<PublishKgSchemaResponse> PublishKgSchemaWithOptionsAsync(PublishKgSchemaRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PublishKgSchemaShrinkRequest request = new PublishKgSchemaShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PublishCommand))
+            {
+                request.PublishCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PublishCommand, "PublishCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishCommandShrink))
+            {
+                body["PublishCommand"] = request.PublishCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PublishKgSchema",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PublishKgSchemaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a knowledge graph model. Online version: v6.2.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PublishKgSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishKgSchemaResponse
+        /// </returns>
+        public PublishKgSchemaResponse PublishKgSchema(PublishKgSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PublishKgSchemaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a knowledge graph model. Online version: v6.2.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PublishKgSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishKgSchemaResponse
+        /// </returns>
+        public async Task<PublishKgSchemaResponse> PublishKgSchemaAsync(PublishKgSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PublishKgSchemaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Publishes objects in batches.</para>
         /// </summary>
         /// 
@@ -38543,6 +41391,150 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Edits a Basic (single-environment) project. The project name cannot be modified. You must pass in the current project name.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateBasicProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBasicProjectResponse
+        /// </returns>
+        public UpdateBasicProjectResponse UpdateBasicProjectWithOptions(UpdateBasicProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateBasicProjectShrinkRequest request = new UpdateBasicProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateCommand))
+            {
+                request.UpdateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateCommand, "UpdateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateCommandShrink))
+            {
+                body["UpdateCommand"] = request.UpdateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBasicProject",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBasicProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a Basic (single-environment) project. The project name cannot be modified. You must pass in the current project name.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateBasicProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBasicProjectResponse
+        /// </returns>
+        public async Task<UpdateBasicProjectResponse> UpdateBasicProjectWithOptionsAsync(UpdateBasicProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateBasicProjectShrinkRequest request = new UpdateBasicProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateCommand))
+            {
+                request.UpdateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateCommand, "UpdateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateCommandShrink))
+            {
+                body["UpdateCommand"] = request.UpdateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBasicProject",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBasicProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a Basic (single-environment) project. The project name cannot be modified. You must pass in the current project name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBasicProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBasicProjectResponse
+        /// </returns>
+        public UpdateBasicProjectResponse UpdateBasicProject(UpdateBasicProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateBasicProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a Basic (single-environment) project. The project name cannot be modified. You must pass in the current project name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBasicProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBasicProjectResponse
+        /// </returns>
+        public async Task<UpdateBasicProjectResponse> UpdateBasicProjectAsync(UpdateBasicProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateBasicProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates an offline compute node.</para>
         /// </summary>
         /// 
@@ -40491,6 +43483,150 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Edits a Dev-Prod (dual-environment) project.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDevProdProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDevProdProjectResponse
+        /// </returns>
+        public UpdateDevProdProjectResponse UpdateDevProdProjectWithOptions(UpdateDevProdProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDevProdProjectShrinkRequest request = new UpdateDevProdProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateCommand))
+            {
+                request.UpdateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateCommand, "UpdateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateCommandShrink))
+            {
+                body["UpdateCommand"] = request.UpdateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDevProdProject",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDevProdProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a Dev-Prod (dual-environment) project.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateDevProdProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDevProdProjectResponse
+        /// </returns>
+        public async Task<UpdateDevProdProjectResponse> UpdateDevProdProjectWithOptionsAsync(UpdateDevProdProjectRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDevProdProjectShrinkRequest request = new UpdateDevProdProjectShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateCommand))
+            {
+                request.UpdateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateCommand, "UpdateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateCommandShrink))
+            {
+                body["UpdateCommand"] = request.UpdateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDevProdProject",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDevProdProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a Dev-Prod (dual-environment) project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDevProdProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDevProdProjectResponse
+        /// </returns>
+        public UpdateDevProdProjectResponse UpdateDevProdProject(UpdateDevProdProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDevProdProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a Dev-Prod (dual-environment) project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDevProdProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDevProdProjectResponse
+        /// </returns>
+        public async Task<UpdateDevProdProjectResponse> UpdateDevProdProjectAsync(UpdateDevProdProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDevProdProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Moves the file position in the menu tree.</para>
         /// </summary>
         /// 
@@ -40775,6 +43911,310 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateFileNameWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a knowledge graph entity record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateKgEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKgEntityResponse
+        /// </returns>
+        public UpdateKgEntityResponse UpdateKgEntityWithOptions(UpdateKgEntityRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateKgEntityShrinkRequest request = new UpdateKgEntityShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateCommand))
+            {
+                request.UpdateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateCommand, "UpdateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateCommandShrink))
+            {
+                body["UpdateCommand"] = request.UpdateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKgEntity",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKgEntityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a knowledge graph entity record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateKgEntityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKgEntityResponse
+        /// </returns>
+        public async Task<UpdateKgEntityResponse> UpdateKgEntityWithOptionsAsync(UpdateKgEntityRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateKgEntityShrinkRequest request = new UpdateKgEntityShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateCommand))
+            {
+                request.UpdateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateCommand, "UpdateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateCommandShrink))
+            {
+                body["UpdateCommand"] = request.UpdateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKgEntity",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKgEntityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a knowledge graph entity record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKgEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKgEntityResponse
+        /// </returns>
+        public UpdateKgEntityResponse UpdateKgEntity(UpdateKgEntityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateKgEntityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a knowledge graph entity record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKgEntityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKgEntityResponse
+        /// </returns>
+        public async Task<UpdateKgEntityResponse> UpdateKgEntityAsync(UpdateKgEntityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateKgEntityWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a knowledge graph relationship record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateKgRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKgRelationResponse
+        /// </returns>
+        public UpdateKgRelationResponse UpdateKgRelationWithOptions(UpdateKgRelationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateKgRelationShrinkRequest request = new UpdateKgRelationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateCommand))
+            {
+                request.UpdateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateCommand, "UpdateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateCommandShrink))
+            {
+                body["UpdateCommand"] = request.UpdateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKgRelation",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKgRelationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a knowledge graph relationship record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateKgRelationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKgRelationResponse
+        /// </returns>
+        public async Task<UpdateKgRelationResponse> UpdateKgRelationWithOptionsAsync(UpdateKgRelationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateKgRelationShrinkRequest request = new UpdateKgRelationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateCommand))
+            {
+                request.UpdateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateCommand, "UpdateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateCommandShrink))
+            {
+                body["UpdateCommand"] = request.UpdateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateKgRelation",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateKgRelationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a knowledge graph relationship record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKgRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKgRelationResponse
+        /// </returns>
+        public UpdateKgRelationResponse UpdateKgRelation(UpdateKgRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateKgRelationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a knowledge graph relationship record. Online version: v6.1.1.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateKgRelationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateKgRelationResponse
+        /// </returns>
+        public async Task<UpdateKgRelationResponse> UpdateKgRelationAsync(UpdateKgRelationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateKgRelationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -41691,7 +45131,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a row-level permission.</para>
+        /// <para>Updates row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41745,7 +45185,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a row-level permission.</para>
+        /// <para>Updates row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41799,7 +45239,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a row-level permission.</para>
+        /// <para>Updates row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41817,7 +45257,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a row-level permission.</para>
+        /// <para>Updates row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">

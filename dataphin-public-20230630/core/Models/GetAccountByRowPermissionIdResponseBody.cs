@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The accounts associated with the rule.</para>
+            /// <para>The accounts bound to the rule.</para>
             /// </summary>
             [NameInMap("UserMappingList")]
             [Validation(Required=false)]
             public List<GetAccountByRowPermissionIdResponseBodyDataUserMappingList> UserMappingList { get; set; }
             public class GetAccountByRowPermissionIdResponseBodyDataUserMappingList : TeaModel {
                 /// <summary>
-                /// <para>The type of the account associated with the rule.</para>
+                /// <para>The type of the account bound to the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PERSONAL</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AccountType { get; set; }
 
                 /// <summary>
-                /// <para>The accounts associated with the rule.</para>
+                /// <para>The accounts bound to the rule.</para>
                 /// </summary>
                 [NameInMap("Accounts")]
                 [Validation(Required=false)]
                 public List<GetAccountByRowPermissionIdResponseBodyDataUserMappingListAccounts> Accounts { get; set; }
                 public class GetAccountByRowPermissionIdResponseBodyDataUserMappingListAccounts : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the account associated with the rule.</para>
+                    /// <para>The ID of the account bound to the rule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>300901111</para>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string AccountId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the account associated with the rule.</para>
+                    /// <para>The name of the account bound to the rule.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>张三</para>
+                    /// <para>John.</para>
                     /// </summary>
                     [NameInMap("AccountName")]
                     [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
