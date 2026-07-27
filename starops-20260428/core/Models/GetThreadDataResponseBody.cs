@@ -9,23 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class GetThreadDataResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The message data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<GetThreadDataResponseBodyData> Data { get; set; }
         public class GetThreadDataResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>A list of messages in the thread.</para>
+            /// </summary>
             [NameInMap("messages")]
             [Validation(Required=false)]
             public List<GetThreadDataResponseBodyDataMessages> Messages { get; set; }
             public class GetThreadDataResponseBodyDataMessages : TeaModel {
+                /// <summary>
+                /// <para>A list of called agents.</para>
+                /// </summary>
                 [NameInMap("agents")]
                 [Validation(Required=false)]
                 public List<Dictionary<string, object>> Agents { get; set; }
 
+                /// <summary>
+                /// <para>A list of generated artifacts.</para>
+                /// </summary>
                 [NameInMap("artifacts")]
                 [Validation(Required=false)]
                 public List<Dictionary<string, object>> Artifacts { get; set; }
 
                 /// <summary>
+                /// <para>The current call ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3b5287b7176360</para>
                 /// </summary>
@@ -33,11 +47,16 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 [Validation(Required=false)]
                 public string CallId { get; set; }
 
+                /// <summary>
+                /// <para>The contents of the message.</para>
+                /// </summary>
                 [NameInMap("contents")]
                 [Validation(Required=false)]
                 public List<Dictionary<string, object>> Contents { get; set; }
 
                 /// <summary>
+                /// <para>The message details.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>context of model exceed</para>
                 /// </summary>
@@ -45,11 +64,16 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 [Validation(Required=false)]
                 public string Detail { get; set; }
 
+                /// <summary>
+                /// <para>A list of events.</para>
+                /// </summary>
                 [NameInMap("events")]
                 [Validation(Required=false)]
                 public List<Dictionary<string, object>> Events { get; set; }
 
                 /// <summary>
+                /// <para>The parent call ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3b5287b7176360</para>
                 /// </summary>
@@ -58,6 +82,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public string ParentCallId { get; set; }
 
                 /// <summary>
+                /// <para>The role that initiates the message.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>user</para>
                 /// </summary>
@@ -66,6 +92,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public string Role { get; set; }
 
                 /// <summary>
+                /// <para>The sequence number of the message.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -74,6 +102,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public int? Seq { get; set; }
 
                 /// <summary>
+                /// <para>The message creation time in nanoseconds since the Unix epoch.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1768702985000000000</para>
                 /// </summary>
@@ -81,11 +111,16 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 [Validation(Required=false)]
                 public string Timestamp { get; set; }
 
+                /// <summary>
+                /// <para>A list of tools used to generate the message.</para>
+                /// </summary>
                 [NameInMap("tools")]
                 [Validation(Required=false)]
                 public List<Dictionary<string, object>> Tools { get; set; }
 
                 /// <summary>
+                /// <para>The message type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>task_finished</para>
                 /// </summary>
@@ -94,6 +129,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public string Type { get; set; }
 
                 /// <summary>
+                /// <para>The message data version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>v0.1.0</para>
                 /// </summary>
@@ -104,6 +141,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             }
 
             /// <summary>
+            /// <para>The ID of the original request that generated this message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
             /// </summary>
@@ -112,6 +151,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string RequestId { get; set; }
 
             /// <summary>
+            /// <para>The unique ID that identifies the entire trace of a request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3b5287b717636040171772050d0095</para>
             /// </summary>
@@ -122,6 +163,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
+        /// <para>The name of the current digital employee.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -130,6 +173,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string DigitalEmployeeName { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -138,6 +183,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token to retrieve the next page of results. If this parameter is not returned, there are no more results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxx</para>
         /// </summary>
@@ -146,6 +193,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The unique ID for this GetThreadData API request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
         /// </summary>
@@ -154,6 +203,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the thread.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>thread_id01</para>
         /// </summary>

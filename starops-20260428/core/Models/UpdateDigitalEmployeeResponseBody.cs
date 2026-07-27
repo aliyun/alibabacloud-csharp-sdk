@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class UpdateDigitalEmployeeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0CEC5375-C554-562B-A65F-***</para>
         /// </summary>

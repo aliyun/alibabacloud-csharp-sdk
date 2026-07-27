@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class UpdateDigitalEmployeeRequest : TeaModel {
+        /// <summary>
+        /// <para>The attributes.</para>
+        /// </summary>
         [NameInMap("attributes")]
         [Validation(Required=false)]
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
+        /// <para>The default rule of the digital employee.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string DefaultRule { get; set; }
 
         /// <summary>
+        /// <para>The description of the digital employee.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The display name of the digital employee.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -37,15 +46,23 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
+        /// <summary>
+        /// <para>The list of knowledge bases.</para>
+        /// </summary>
         [NameInMap("knowledges")]
         [Validation(Required=false)]
         public UpdateDigitalEmployeeRequestKnowledges Knowledges { get; set; }
         public class UpdateDigitalEmployeeRequestKnowledges : TeaModel {
+            /// <summary>
+            /// <para>The list of Bailian knowledge bases.</para>
+            /// </summary>
             [NameInMap("bailian")]
             [Validation(Required=false)]
             public List<UpdateDigitalEmployeeRequestKnowledgesBailian> Bailian { get; set; }
             public class UpdateDigitalEmployeeRequestKnowledgesBailian : TeaModel {
                 /// <summary>
+                /// <para>The attributes of the knowledge base.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public string Attributes { get; set; }
 
                 /// <summary>
+                /// <para>The Bailian index ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>index-xxxx</para>
                 /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public string IndexId { get; set; }
 
                 /// <summary>
+                /// <para>The region of the knowledge base.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
                 /// </summary>
@@ -70,6 +91,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public string Region { get; set; }
 
                 /// <summary>
+                /// <para>The Bailian workspace ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>llm-xxxx</para>
                 /// </summary>
@@ -79,6 +102,9 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of SOP knowledge bases.</para>
+            /// </summary>
             [NameInMap("sop")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Sop { get; set; }
@@ -86,6 +112,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
+        /// <para>The ARN of the RAM role.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::12345678912:role/testrole</para>
         /// </summary>
@@ -94,7 +122,43 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// <para>数字员工工具调用安全策略配置。</para>
+        /// <para>The list of CIDRs or IP addresses that are allowed to be accessed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</para>
+        /// </summary>
+        [NameInMap("sandboxNetworkPolicy")]
+        [Validation(Required=false)]
+        public UpdateDigitalEmployeeRequestSandboxNetworkPolicy SandboxNetworkPolicy { get; set; }
+        public class UpdateDigitalEmployeeRequestSandboxNetworkPolicy : TeaModel {
+            /// <summary>
+            /// <para>The list of CIDRs or IP addresses that are allowed to be accessed.</para>
+            /// </summary>
+            [NameInMap("allowCidrs")]
+            [Validation(Required=false)]
+            public List<string> AllowCidrs { get; set; }
+
+            /// <summary>
+            /// <para>The list of FQDNs that are allowed to be accessed.</para>
+            /// </summary>
+            [NameInMap("allowFqdns")]
+            [Validation(Required=false)]
+            public List<string> AllowFqdns { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether to enable the sandbox network ACL.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("enableAcl")]
+            [Validation(Required=false)]
+            public bool? EnableAcl { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The security policy configuration for tool calling of the digital employee.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</para>
@@ -104,7 +168,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public UpdateDigitalEmployeeRequestToolPolicy ToolPolicy { get; set; }
         public class UpdateDigitalEmployeeRequestToolPolicy : TeaModel {
             /// <summary>
-            /// <para>Aliyun MCP 工具调用安全策略配置。</para>
+            /// <para>The security policy configuration for Aliyun CLI tool calling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</para>
@@ -114,7 +178,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public UpdateDigitalEmployeeRequestToolPolicyAliyun Aliyun { get; set; }
             public class UpdateDigitalEmployeeRequestToolPolicyAliyun : TeaModel {
                 /// <summary>
-                /// <para>是否启用 Aliyun MCP 工具策略。</para>
+                /// <para>Specifies whether to enable the policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -124,7 +188,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>Aliyun OpenAPI 工具策略语句列表。</para>
+                /// <para>The list of Aliyun CLI tool policy statements.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</para>
@@ -134,7 +198,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public List<UpdateDigitalEmployeeRequestToolPolicyAliyunStatements> Statements { get; set; }
                 public class UpdateDigitalEmployeeRequestToolPolicyAliyunStatements : TeaModel {
                     /// <summary>
-                    /// <para>Aliyun OpenAPI Action 列表，格式为 product:ApiName、product:Prefix* 或 product:*。</para>
+                    /// <para>RAM action</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]</para>
@@ -143,18 +207,21 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     [Validation(Required=false)]
                     public List<string> Actions { get; set; }
 
+                    /// <term><b>Obsolete</b></term>
+                    /// 
                     /// <summary>
-                    /// <para>本条语句对应的 Aliyun OpenAPI API 版本。</para>
+                    /// <para>The API version. This parameter is deprecated.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>2020-12-30</para>
+                    /// <para>2024-03-30</para>
                     /// </summary>
                     [NameInMap("apiVersion")]
                     [Validation(Required=false)]
+                    [Obsolete]
                     public string ApiVersion { get; set; }
 
                     /// <summary>
-                    /// <para>命中该 API 后的执行策略。</para>
+                    /// <para>The execution policy.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>user_ack</para>
@@ -164,10 +231,10 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string Decision { get; set; }
 
                     /// <summary>
-                    /// <para>本条语句对应的 Aliyun OpenAPI 产品名。</para>
+                    /// <para>The cloud service code.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Sls</para>
+                    /// <para>Cms</para>
                     /// </summary>
                     [NameInMap("product")]
                     [Validation(Required=false)]

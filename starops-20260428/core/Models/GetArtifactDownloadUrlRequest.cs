@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
-    public class DeleteThreadResponseBody : TeaModel {
+    public class GetArtifactDownloadUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123-0F43-23423-AC43-34234</para>
+        /// <para>reports/summary.pdf</para>
         /// </summary>
-        [NameInMap("requestId")]
+        [NameInMap("artifactPath")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string ArtifactPath { get; set; }
 
     }
 

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ListArtifactsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The list of artifacts.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;path&quot;:&quot;reports/summary.pdf&quot;,&quot;size&quot;:1024,&quot;lastModified&quot;:&quot;2026-05-25T08:00:00Z&quot;,&quot;isDirectory&quot;:false}]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public List<ListArtifactsResponseBodyArtifacts> Artifacts { get; set; }
         public class ListArtifactsResponseBodyArtifacts : TeaModel {
             /// <summary>
+            /// <para>Specifies whether the item is a directory. A value of <c>true</c> indicates a directory and <c>false</c> indicates a file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public bool? IsDirectory { get; set; }
 
             /// <summary>
+            /// <para>The time the artifact was last modified, in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-04-30T16:03:54Z</para>
             /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string LastModified { get; set; }
 
             /// <summary>
+            /// <para>The path of the artifact.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>missions/mission-xxx/artifacts/2026-05/05-01/xxxx.md</para>
             /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string Path { get; set; }
 
             /// <summary>
+            /// <para>The size of the artifact in bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>21950</para>
             /// </summary>
@@ -52,6 +62,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of results returned on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -60,6 +72,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page of results. This parameter is returned only if more results are available. To retrieve the next page, use this token in the <c>nextToken</c> query parameter of your next request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -68,6 +82,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
         /// </summary>

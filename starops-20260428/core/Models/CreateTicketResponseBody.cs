@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class CreateTicketResponseBody : TeaModel {
         /// <summary>
+        /// <para>The passwordless logon ticket.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eyJ***************.eyJ******************.KUT****************</para>
         /// </summary>

@@ -18,7 +18,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-beijing", "starops.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-1", "starops.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("starops", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +44,163 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建对话</para>
+        /// <para>创建产物上传凭证</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取上传内容所需链接，适用于大文件。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateArtifactUploadTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateArtifactUploadTokenResponse
+        /// </returns>
+        public CreateArtifactUploadTokenResponse CreateArtifactUploadTokenWithOptions(string name, CreateArtifactUploadTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactPath))
+            {
+                query["artifactPath"] = request.ArtifactPath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateArtifactUploadToken",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/artifacts/uploadToken",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateArtifactUploadTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建产物上传凭证</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取上传内容所需链接，适用于大文件。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateArtifactUploadTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateArtifactUploadTokenResponse
+        /// </returns>
+        public async Task<CreateArtifactUploadTokenResponse> CreateArtifactUploadTokenWithOptionsAsync(string name, CreateArtifactUploadTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactPath))
+            {
+                query["artifactPath"] = request.ArtifactPath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateArtifactUploadToken",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/artifacts/uploadToken",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateArtifactUploadTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建产物上传凭证</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取上传内容所需链接，适用于大文件。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateArtifactUploadTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateArtifactUploadTokenResponse
+        /// </returns>
+        public CreateArtifactUploadTokenResponse CreateArtifactUploadToken(string name, CreateArtifactUploadTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateArtifactUploadTokenWithOptions(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建产物上传凭证</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取上传内容所需链接，适用于大文件。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateArtifactUploadTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateArtifactUploadTokenResponse
+        /// </returns>
+        public async Task<CreateArtifactUploadTokenResponse> CreateArtifactUploadTokenAsync(string name, CreateArtifactUploadTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateArtifactUploadTokenWithOptionsAsync(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>New conversation</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starts a session.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateChatRequest
@@ -101,8 +261,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建对话</para>
+        /// <para>New conversation</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starts a session.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateChatRequest
@@ -163,8 +328,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建对话</para>
+        /// <para>New conversation</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starts a session.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateChatRequest
@@ -182,8 +352,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建对话</para>
+        /// <para>New conversation</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starts a session.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateChatRequest
@@ -201,8 +376,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建DigitalEmployee</para>
+        /// <para>Creates a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDigitalEmployeeRequest
@@ -253,6 +433,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
             {
                 body["roleArn"] = request.RoleArn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxNetworkPolicy))
+            {
+                body["sandboxNetworkPolicy"] = request.SandboxNetworkPolicy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 body["tags"] = request.Tags;
@@ -283,8 +467,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建DigitalEmployee</para>
+        /// <para>Creates a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDigitalEmployeeRequest
@@ -335,6 +524,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
             {
                 body["roleArn"] = request.RoleArn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxNetworkPolicy))
+            {
+                body["sandboxNetworkPolicy"] = request.SandboxNetworkPolicy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 body["tags"] = request.Tags;
@@ -365,8 +558,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建DigitalEmployee</para>
+        /// <para>Creates a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDigitalEmployeeRequest
@@ -384,8 +582,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建DigitalEmployee</para>
+        /// <para>Creates a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDigitalEmployeeRequest
@@ -403,8 +606,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建技能</para>
+        /// <para>Creates a skill for a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a new skill for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDigitalEmployeeSkillRequest
@@ -469,8 +677,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建技能</para>
+        /// <para>Creates a skill for a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a new skill for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDigitalEmployeeSkillRequest
@@ -535,8 +748,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建技能</para>
+        /// <para>Creates a skill for a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a new skill for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDigitalEmployeeSkillRequest
@@ -554,8 +772,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建技能</para>
+        /// <para>Creates a skill for a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a new skill for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDigitalEmployeeSkillRequest
@@ -573,8 +796,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 MCP 服务</para>
+        /// <para>Creates an MCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMcpServiceRequest
@@ -643,8 +871,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 MCP 服务</para>
+        /// <para>Creates an MCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMcpServiceRequest
@@ -713,8 +946,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 MCP 服务</para>
+        /// <para>Creates an MCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMcpServiceRequest
@@ -732,8 +970,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 MCP 服务</para>
+        /// <para>Creates an MCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMcpServiceRequest
@@ -751,8 +994,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建会话</para>
+        /// <para>Creates a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a thread for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateThreadRequest
@@ -805,8 +1053,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建会话</para>
+        /// <para>Creates a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a thread for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateThreadRequest
@@ -859,8 +1112,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建会话</para>
+        /// <para>Creates a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a thread for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateThreadRequest
@@ -878,8 +1136,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建会话</para>
+        /// <para>Creates a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a thread for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateThreadRequest
@@ -897,7 +1160,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建票据</para>
+        /// <para>Creates a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -947,7 +1210,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建票据</para>
+        /// <para>Creates a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -997,7 +1260,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建票据</para>
+        /// <para>Creates a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1016,7 +1279,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建票据</para>
+        /// <para>Creates a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1035,8 +1298,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DigitalEmployee</para>
+        /// <para>Deletes a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDigitalEmployeeRequest
@@ -1075,8 +1343,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DigitalEmployee</para>
+        /// <para>Deletes a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDigitalEmployeeRequest
@@ -1115,8 +1388,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DigitalEmployee</para>
+        /// <para>Deletes a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDigitalEmployeeRequest
@@ -1134,8 +1412,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DigitalEmployee</para>
+        /// <para>Deletes a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDigitalEmployeeRequest
@@ -1153,8 +1436,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除技能</para>
+        /// <para>Deletes a skill from a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a skill from the specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDigitalEmployeeSkillRequest
@@ -1193,8 +1481,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除技能</para>
+        /// <para>Deletes a skill from a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a skill from the specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDigitalEmployeeSkillRequest
@@ -1233,8 +1526,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除技能</para>
+        /// <para>Deletes a skill from a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a skill from the specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDigitalEmployeeSkillRequest
@@ -1252,8 +1550,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除技能</para>
+        /// <para>Deletes a skill from a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a skill from the specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDigitalEmployeeSkillRequest
@@ -1271,7 +1574,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 MCP 服务</para>
+        /// <para>Deletes an MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1311,7 +1614,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 MCP 服务</para>
+        /// <para>Deletes an MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1351,7 +1654,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 MCP 服务</para>
+        /// <para>Deletes an MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1370,7 +1673,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 MCP 服务</para>
+        /// <para>Deletes an MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1389,8 +1692,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除会话</para>
+        /// <para>This operation deletes a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes a specified thread.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteThreadRequest
@@ -1429,8 +1737,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除会话</para>
+        /// <para>This operation deletes a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes a specified thread.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteThreadRequest
@@ -1469,8 +1782,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除会话</para>
+        /// <para>This operation deletes a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes a specified thread.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteThreadRequest
@@ -1488,8 +1806,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除会话</para>
+        /// <para>This operation deletes a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes a specified thread.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteThreadRequest
@@ -1507,7 +1830,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预览远端 MCP 工具列表</para>
+        /// <para>Retrieves the tool list from a remote MCP server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1557,7 +1880,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预览远端 MCP 工具列表</para>
+        /// <para>Retrieves the tool list from a remote MCP server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1607,7 +1930,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预览远端 MCP 工具列表</para>
+        /// <para>Retrieves the tool list from a remote MCP server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1626,7 +1949,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预览远端 MCP 工具列表</para>
+        /// <para>Retrieves the tool list from a remote MCP server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1645,8 +1968,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载小型产物文件</para>
+        /// <para>Retrieves the content of an artifact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the content of an artifact.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetArtifactRequest
@@ -1708,8 +2036,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载小型产物文件</para>
+        /// <para>Retrieves the content of an artifact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the content of an artifact.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetArtifactRequest
@@ -1771,8 +2104,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载小型产物文件</para>
+        /// <para>Retrieves the content of an artifact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the content of an artifact.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetArtifactRequest
@@ -1790,8 +2128,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载小型产物文件</para>
+        /// <para>Retrieves the content of an artifact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the content of an artifact.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetArtifactRequest
@@ -1809,8 +2152,143 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DigitalEmployee</para>
+        /// <para>获取产物下载链接</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetArtifactDownloadUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetArtifactDownloadUrlResponse
+        /// </returns>
+        public GetArtifactDownloadUrlResponse GetArtifactDownloadUrlWithOptions(string name, GetArtifactDownloadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactPath))
+            {
+                query["artifactPath"] = request.ArtifactPath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetArtifactDownloadUrl",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/artifacts/downloadUrl",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetArtifactDownloadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取产物下载链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetArtifactDownloadUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetArtifactDownloadUrlResponse
+        /// </returns>
+        public async Task<GetArtifactDownloadUrlResponse> GetArtifactDownloadUrlWithOptionsAsync(string name, GetArtifactDownloadUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactPath))
+            {
+                query["artifactPath"] = request.ArtifactPath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetArtifactDownloadUrl",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/artifacts/downloadUrl",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetArtifactDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取产物下载链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetArtifactDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetArtifactDownloadUrlResponse
+        /// </returns>
+        public GetArtifactDownloadUrlResponse GetArtifactDownloadUrl(string name, GetArtifactDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetArtifactDownloadUrlWithOptions(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取产物下载链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetArtifactDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetArtifactDownloadUrlResponse
+        /// </returns>
+        public async Task<GetArtifactDownloadUrlResponse> GetArtifactDownloadUrlAsync(string name, GetArtifactDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetArtifactDownloadUrlWithOptionsAsync(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDigitalEmployeeRequest
@@ -1849,8 +2327,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DigitalEmployee</para>
+        /// <para>Retrieves a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDigitalEmployeeRequest
@@ -1889,8 +2372,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DigitalEmployee</para>
+        /// <para>Retrieves a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDigitalEmployeeRequest
@@ -1908,8 +2396,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 DigitalEmployee</para>
+        /// <para>Retrieves a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDigitalEmployeeRequest
@@ -1927,8 +2420,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取技能详情</para>
+        /// <para>Retrieves the details of a specific skill.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified skill for a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDigitalEmployeeSkillRequest
@@ -1973,8 +2471,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取技能详情</para>
+        /// <para>Retrieves the details of a specific skill.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified skill for a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDigitalEmployeeSkillRequest
@@ -2019,8 +2522,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取技能详情</para>
+        /// <para>Retrieves the details of a specific skill.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified skill for a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDigitalEmployeeSkillRequest
@@ -2038,8 +2546,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取技能详情</para>
+        /// <para>Retrieves the details of a specific skill.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified skill for a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDigitalEmployeeSkillRequest
@@ -2057,7 +2570,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 MCP 服务</para>
+        /// <para>Queries an MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2097,7 +2610,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 MCP 服务</para>
+        /// <para>Queries an MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2137,7 +2650,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 MCP 服务</para>
+        /// <para>Queries an MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2156,7 +2669,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 MCP 服务</para>
+        /// <para>Queries an MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2175,8 +2688,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话</para>
+        /// <para>Retrieves a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a thread.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetThreadRequest
@@ -2215,8 +2733,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话</para>
+        /// <para>Retrieves a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a thread.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetThreadRequest
@@ -2255,8 +2778,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话</para>
+        /// <para>Retrieves a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a thread.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetThreadRequest
@@ -2274,8 +2802,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话</para>
+        /// <para>Retrieves a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a thread.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetThreadRequest
@@ -2293,8 +2826,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话数据</para>
+        /// <para>Get session data</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Gets session data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetThreadDataRequest
@@ -2343,8 +2881,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话数据</para>
+        /// <para>Get session data</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Gets session data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetThreadDataRequest
@@ -2393,8 +2936,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话数据</para>
+        /// <para>Get session data</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Gets session data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetThreadDataRequest
@@ -2412,8 +2960,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话数据</para>
+        /// <para>Get session data</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Gets session data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetThreadDataRequest
@@ -2431,8 +2984,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出产物文件</para>
+        /// <para>Lists artifacts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the artifacts for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListArtifactsRequest
@@ -2485,8 +3043,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出产物文件</para>
+        /// <para>Lists artifacts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the artifacts for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListArtifactsRequest
@@ -2539,8 +3102,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出产物文件</para>
+        /// <para>Lists artifacts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the artifacts for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListArtifactsRequest
@@ -2558,8 +3126,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出产物文件</para>
+        /// <para>Lists artifacts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the artifacts for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListArtifactsRequest
@@ -2577,8 +3150,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出技能版本</para>
+        /// <para>Lists the versions of a skill.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the previous versions of a skill.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDigitalEmployeeSkillVersionsRequest
@@ -2617,8 +3195,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出技能版本</para>
+        /// <para>Lists the versions of a skill.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the previous versions of a skill.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDigitalEmployeeSkillVersionsRequest
@@ -2657,8 +3240,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出技能版本</para>
+        /// <para>Lists the versions of a skill.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the previous versions of a skill.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDigitalEmployeeSkillVersionsRequest
@@ -2676,8 +3264,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出技能版本</para>
+        /// <para>Lists the versions of a skill.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the previous versions of a skill.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDigitalEmployeeSkillVersionsRequest
@@ -2695,8 +3288,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出技能</para>
+        /// <para>Lists the skills of a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the skills of a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDigitalEmployeeSkillsRequest
@@ -2749,8 +3347,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出技能</para>
+        /// <para>Lists the skills of a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the skills of a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDigitalEmployeeSkillsRequest
@@ -2803,8 +3406,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出技能</para>
+        /// <para>Lists the skills of a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the skills of a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDigitalEmployeeSkillsRequest
@@ -2822,8 +3430,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出技能</para>
+        /// <para>Lists the skills of a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the skills of a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDigitalEmployeeSkillsRequest
@@ -2841,8 +3454,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源DigitalEmployee</para>
+        /// <para>Returns a list of digital employees.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists digital employees.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListDigitalEmployeesRequest
@@ -2917,8 +3535,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源DigitalEmployee</para>
+        /// <para>Returns a list of digital employees.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists digital employees.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListDigitalEmployeesRequest
@@ -2993,8 +3616,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源DigitalEmployee</para>
+        /// <para>Returns a list of digital employees.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists digital employees.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDigitalEmployeesRequest
@@ -3012,8 +3640,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源DigitalEmployee</para>
+        /// <para>Returns a list of digital employees.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists digital employees.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDigitalEmployeesRequest
@@ -3031,7 +3664,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字员工下的 MCP 服务列表</para>
+        /// <para>Queries the list of MCP services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3081,7 +3714,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字员工下的 MCP 服务列表</para>
+        /// <para>Queries the list of MCP services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3131,7 +3764,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字员工下的 MCP 服务列表</para>
+        /// <para>Queries the list of MCP services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3150,7 +3783,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字员工下的 MCP 服务列表</para>
+        /// <para>Queries the list of MCP services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3169,8 +3802,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出会话</para>
+        /// <para>List sessions</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>List sessions</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListThreadsRequest
@@ -3241,8 +3879,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出会话</para>
+        /// <para>List sessions</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>List sessions</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListThreadsRequest
@@ -3313,8 +3956,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出会话</para>
+        /// <para>List sessions</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>List sessions</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListThreadsRequest
@@ -3332,8 +3980,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出会话</para>
+        /// <para>List sessions</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>List sessions</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListThreadsRequest
@@ -3351,8 +4004,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateDigitalEmployee</para>
+        /// <para>Updates a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDigitalEmployeeRequest
@@ -3395,6 +4053,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
             {
                 body["roleArn"] = request.RoleArn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxNetworkPolicy))
+            {
+                body["sandboxNetworkPolicy"] = request.SandboxNetworkPolicy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolPolicy))
             {
                 body["toolPolicy"] = request.ToolPolicy;
@@ -3421,8 +4083,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateDigitalEmployee</para>
+        /// <para>Updates a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDigitalEmployeeRequest
@@ -3465,6 +4132,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
             {
                 body["roleArn"] = request.RoleArn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SandboxNetworkPolicy))
+            {
+                body["sandboxNetworkPolicy"] = request.SandboxNetworkPolicy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolPolicy))
             {
                 body["toolPolicy"] = request.ToolPolicy;
@@ -3491,8 +4162,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateDigitalEmployee</para>
+        /// <para>Updates a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDigitalEmployeeRequest
@@ -3510,8 +4186,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateDigitalEmployee</para>
+        /// <para>Updates a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDigitalEmployeeRequest
@@ -3529,8 +4210,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新技能</para>
+        /// <para>Updates a skill for a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation updates a skill for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDigitalEmployeeSkillRequest
@@ -3591,8 +4277,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新技能</para>
+        /// <para>Updates a skill for a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation updates a skill for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDigitalEmployeeSkillRequest
@@ -3653,8 +4344,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新技能</para>
+        /// <para>Updates a skill for a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation updates a skill for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDigitalEmployeeSkillRequest
@@ -3672,8 +4368,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新技能</para>
+        /// <para>Updates a skill for a digital employee.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation updates a skill for a specified digital employee.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDigitalEmployeeSkillRequest
@@ -3691,7 +4392,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 MCP 服务</para>
+        /// <para>Updates an MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3757,7 +4458,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 MCP 服务</para>
+        /// <para>Updates an MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3823,7 +4524,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 MCP 服务</para>
+        /// <para>Updates an MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3842,7 +4543,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 MCP 服务</para>
+        /// <para>Updates an MCP service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3861,8 +4562,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话</para>
+        /// <para>Updates a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a thread.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateThreadRequest
@@ -3915,8 +4621,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话</para>
+        /// <para>Updates a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a thread.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateThreadRequest
@@ -3969,8 +4680,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话</para>
+        /// <para>Updates a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a thread.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateThreadRequest
@@ -3988,8 +4704,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话</para>
+        /// <para>Updates a thread.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a thread.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateThreadRequest

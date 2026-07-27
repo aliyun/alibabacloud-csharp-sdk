@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class GetThreadResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The thread\&quot;s attributes.</para>
+        /// </summary>
         [NameInMap("attributes")]
         [Validation(Required=false)]
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
+        /// <para>The thread\&quot;s creation time, in ISO 8601 format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-12-19T15:19:55.040403272+08:00</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the digital employee.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -30,7 +37,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string DigitalEmployeeName { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The thread\&quot;s status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>active</para>
         /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The thread ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>thread_id01</para>
         /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string ThreadId { get; set; }
 
         /// <summary>
+        /// <para>The thread\&quot;s title.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testLive</para>
         /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Title { get; set; }
 
         /// <summary>
+        /// <para>The thread\&quot;s last update time, in ISO 8601 format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-12-19T15:19:55.040403272+08:00</para>
         /// </summary>
@@ -71,11 +86,16 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
+        /// <summary>
+        /// <para>The thread\&quot;s variables.</para>
+        /// </summary>
         [NameInMap("variables")]
         [Validation(Required=false)]
         public GetThreadResponseBodyVariables Variables { get; set; }
         public class GetThreadResponseBodyVariables : TeaModel {
             /// <summary>
+            /// <para>The name of the SLS project.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -84,6 +104,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string Project { get; set; }
 
             /// <summary>
+            /// <para>The name of the workspace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -94,6 +116,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
+        /// <para>The thread\&quot;s version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1231</para>
         /// </summary>

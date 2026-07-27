@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class GetArtifactRequest : TeaModel {
         /// <summary>
+        /// <para>The path to the artifact.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

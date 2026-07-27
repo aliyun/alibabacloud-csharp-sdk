@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class GetDigitalEmployeeSkillResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time when the skill was created.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The description of the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The display name of the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the skill is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -43,11 +50,16 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        /// <summary>
+        /// <para>The file list of the skill.</para>
+        /// </summary>
         [NameInMap("files")]
         [Validation(Required=false)]
         public List<GetDigitalEmployeeSkillResponseBodyFiles> Files { get; set; }
         public class GetDigitalEmployeeSkillResponseBodyFiles : TeaModel {
             /// <summary>
+            /// <para>The file content.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// <h2>name: skill
@@ -60,6 +72,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The file name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SKILL.md</para>
             /// </summary>
@@ -70,6 +84,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
+        /// <para>A user-provided remark about the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>remark</para>
         /// </summary>
@@ -78,7 +94,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -88,6 +104,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The name of the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -96,6 +114,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string SkillName { get; set; }
 
         /// <summary>
+        /// <para>The time when the skill was last updated.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -106,6 +125,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
+        /// <para>The version of the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1770386951147366810</para>
         /// </summary>

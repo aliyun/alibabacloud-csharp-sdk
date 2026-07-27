@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ListThreadsRequest : TeaModel {
+        /// <summary>
+        /// <para>Filters the results. If this parameter is omitted, the operation returns all threads in the instance.</para>
+        /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]
         public List<ListThreadsRequestFilter> Filter { get; set; }
         public class ListThreadsRequestFilter : TeaModel {
             /// <summary>
+            /// <para>The filter key. Supported values are title, workspace, and project.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -24,6 +28,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The value for the filter key.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -35,11 +40,16 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 
         }
 
+        /// <summary>
+        /// <para>Specifies whether to include threads created by missions.</para>
+        /// </summary>
         [NameInMap("includeMission")]
         [Validation(Required=false)]
         public bool? IncludeMission { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results to return. Maximum value: 200.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -48,6 +58,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxxx</para>
         /// </summary>
@@ -56,6 +68,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The status of the thread.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>active</para>
         /// </summary>
@@ -64,6 +78,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The thread ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>thread-123123</para>
         /// </summary>

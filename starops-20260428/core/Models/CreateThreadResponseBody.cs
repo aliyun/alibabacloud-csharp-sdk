@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class CreateThreadResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The thread id.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>thread_id01</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class UpdateMcpServiceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The service name of the MCP service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>log-query</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string McpServiceName { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0B9377D9-C56B-5C2E-A8A4-************</para>
         /// </summary>

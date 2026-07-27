@@ -9,15 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ListDigitalEmployeesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of digital employees.</para>
+        /// </summary>
         [NameInMap("digitalEmployees")]
         [Validation(Required=false)]
         public List<ListDigitalEmployeesResponseBodyDigitalEmployees> DigitalEmployees { get; set; }
         public class ListDigitalEmployeesResponseBodyDigitalEmployees : TeaModel {
+            /// <summary>
+            /// <para>The custom attributes of the digital employee.</para>
+            /// </summary>
             [NameInMap("attributes")]
             [Validation(Required=false)]
             public Dictionary<string, string> Attributes { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -28,6 +35,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The default rule of the digital employee.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -36,6 +45,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string DefaultRule { get; set; }
 
             /// <summary>
+            /// <para>The description of the digital employee.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -44,6 +55,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The display name of the digital employee.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -52,6 +65,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>The type of the digital employee.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>custom</para>
             /// </summary>
@@ -59,15 +74,23 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             [Validation(Required=false)]
             public string EmployeeType { get; set; }
 
+            /// <summary>
+            /// <para>A list of knowledge bases.</para>
+            /// </summary>
             [NameInMap("knowledges")]
             [Validation(Required=false)]
             public ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges Knowledges { get; set; }
             public class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledges : TeaModel {
+                /// <summary>
+                /// <para>A list of Model Studio knowledge bases.</para>
+                /// </summary>
                 [NameInMap("bailian")]
                 [Validation(Required=false)]
                 public List<ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian> Bailian { get; set; }
                 public class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian : TeaModel {
                     /// <summary>
+                    /// <para>The attributes of the knowledge base.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
                     /// </summary>
@@ -76,6 +99,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string Attributes { get; set; }
 
                     /// <summary>
+                    /// <para>The ID of the Model Studio index.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>index-xxxx</para>
                     /// </summary>
@@ -84,6 +109,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string IndexId { get; set; }
 
                     /// <summary>
+                    /// <para>The region of the knowledge base.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cn-beijing</para>
                     /// </summary>
@@ -92,6 +119,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                     public string Region { get; set; }
 
                     /// <summary>
+                    /// <para>The ID of the Model Studio workspace.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>llm-xxxx</para>
                     /// </summary>
@@ -101,6 +130,9 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 
                 }
 
+                /// <summary>
+                /// <para>A list of SOP knowledge bases.</para>
+                /// </summary>
                 [NameInMap("sop")]
                 [Validation(Required=false)]
                 public List<Dictionary<string, object>> Sop { get; set; }
@@ -108,6 +140,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             }
 
             /// <summary>
+            /// <para>The name of the digital employee.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -116,6 +150,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The ID of the resource group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rg-ae******ey</para>
             /// </summary>
@@ -124,6 +160,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// <para>The RAM role ARN.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acs:ram::12345678912:role/testrole</para>
             /// </summary>
@@ -131,11 +169,15 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             [Validation(Required=false)]
             public string RoleArn { get; set; }
 
+            /// <summary>
+            /// <para>A list of tags.</para>
+            /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
 
             /// <summary>
+            /// <para>The modification time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -148,6 +190,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -156,6 +200,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token to retrieve the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxx</para>
         /// </summary>
@@ -164,6 +210,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
         /// </summary>
@@ -172,6 +220,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>56</para>
         /// </summary>

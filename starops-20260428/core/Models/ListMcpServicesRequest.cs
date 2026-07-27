@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ListMcpServicesRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum number of entries to return in this query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eyJvZmZzZXQiOjIwfQ==</para>
         /// </summary>

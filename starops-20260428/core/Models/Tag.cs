@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class Tag : TeaModel {
         /// <summary>
+        /// <para>The key for the tag.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-key</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>The value for the tag.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-value</para>
         /// </summary>
