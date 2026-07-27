@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
-    public class UmodelLabelFilter : TeaModel {
-        [NameInMap("name")]
+    public class PrometheusMetricFilterValue : TeaModel {
+        [NameInMap("dim")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Dim { get; set; }
 
-        [NameInMap("operator")]
+        [NameInMap("opt")]
         [Validation(Required=false)]
-        public string Operator { get; set; }
+        public string Opt { get; set; }
 
         [NameInMap("value")]
         [Validation(Required=false)]

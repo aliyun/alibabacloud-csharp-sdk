@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
-    public class UmodelLabelFilter : TeaModel {
+    public class LabelFilters : TeaModel {
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }

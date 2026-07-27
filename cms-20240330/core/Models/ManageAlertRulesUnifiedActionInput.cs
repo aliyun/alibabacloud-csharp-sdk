@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public ArmsIntegrationConfig ArmsIntegrationConfig { get; set; }
 
+        [NameInMap("bizSource")]
+        [Validation(Required=false)]
+        public string BizSource { get; set; }
+
         [NameInMap("conditionConfig")]
         [Validation(Required=false)]
         public ConditionConfigUnified ConditionConfig { get; set; }
@@ -56,17 +60,33 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public NotifyConfigUnified NotifyConfig { get; set; }
 
+        [NameInMap("observeResourceConfig")]
+        [Validation(Required=false)]
+        public ObserveResourceConfig ObserveResourceConfig { get; set; }
+
+        /// <term><b>Obsolete</b></term>
         [NameInMap("observeResourceInstanceId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ObserveResourceInstanceId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("observeResourceType")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ObserveResourceType { get; set; }
 
         [NameInMap("queryConfig")]
         [Validation(Required=false)]
         public QueryConfigUnified QueryConfig { get; set; }
+
+        [NameInMap("rcaConfig")]
+        [Validation(Required=false)]
+        public AlertRuleRcaConfig RcaConfig { get; set; }
+
+        [NameInMap("regionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
         [NameInMap("scheduleConfig")]
         [Validation(Required=false)]

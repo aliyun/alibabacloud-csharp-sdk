@@ -13,9 +13,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Aggregate { get; set; }
 
+        [NameInMap("alertCount")]
+        [Validation(Required=false)]
+        public int? AlertCount { get; set; }
+
         [NameInMap("compareList")]
         [Validation(Required=false)]
-        public List<ApmCompositeCompareConfig> CompareList { get; set; }
+        public List<CompareList> CompareList { get; set; }
 
         [NameInMap("compositeEscalation")]
         [Validation(Required=false)]
@@ -73,6 +77,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public double? Min { get; set; }
 
+        [NameInMap("noDataAlertLevel")]
+        [Validation(Required=false)]
+        public string NoDataAlertLevel { get; set; }
+
+        [NameInMap("noDataAlertSeverity")]
+        [Validation(Required=false)]
+        public string NoDataAlertSeverity { get; set; }
+
+        [NameInMap("noDataAppendValue")]
+        [Validation(Required=false)]
+        public double? NoDataAppendValue { get; set; }
+
         [NameInMap("noDataPolicy")]
         [Validation(Required=false)]
         public string NoDataPolicy { get; set; }
@@ -103,11 +119,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         [NameInMap("thresholdList")]
         [Validation(Required=false)]
-        public List<ApmThresholdConfig> ThresholdList { get; set; }
+        public List<ThresholdList> ThresholdList { get; set; }
 
         [NameInMap("triggers")]
         [Validation(Required=false)]
-        public List<MetricSetMultiTrigger> Triggers { get; set; }
+        public List<Triggers> Triggers { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

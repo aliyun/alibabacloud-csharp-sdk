@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
-    public class StatusFilter : TeaModel {
+    public class BizSourceFilter : TeaModel {
         [NameInMap("eq")]
         [Validation(Required=false)]
         public string Eq { get; set; }

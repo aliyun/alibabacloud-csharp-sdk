@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
-    public class UmodelLabelFilter : TeaModel {
-        [NameInMap("name")]
+    public class EntityFilters : TeaModel {
+        [NameInMap("field")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Field { get; set; }
 
         [NameInMap("operator")]
         [Validation(Required=false)]

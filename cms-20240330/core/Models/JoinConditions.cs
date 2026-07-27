@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
-    public class UmodelLabelFilter : TeaModel {
-        [NameInMap("name")]
+    public class JoinConditions : TeaModel {
+        [NameInMap("lhsField")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string LhsField { get; set; }
 
         [NameInMap("operator")]
         [Validation(Required=false)]
         public string Operator { get; set; }
 
-        [NameInMap("value")]
+        [NameInMap("rhsField")]
         [Validation(Required=false)]
-        public string Value { get; set; }
+        public string RhsField { get; set; }
 
     }
 

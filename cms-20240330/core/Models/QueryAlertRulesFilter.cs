@@ -9,34 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class QueryAlertRulesFilter : TeaModel {
+        [NameInMap("bizSource")]
+        [Validation(Required=false)]
+        public BizSourceFilter BizSource { get; set; }
+
         [NameInMap("datasourceType")]
         [Validation(Required=false)]
         public DatasourceTypeFilter DatasourceType { get; set; }
 
-        /// <summary>
-        /// <para>Filters alert rules by display name.</para>
-        /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public DisplayNameFilter DisplayName { get; set; }
 
-        /// <summary>
-        /// <para>Filters alert rules by enabled status.</para>
-        /// </summary>
         [NameInMap("enabled")]
         [Validation(Required=false)]
         public EnabledFilter Enabled { get; set; }
 
-        /// <summary>
-        /// <para>Filters alert rules by label.</para>
-        /// </summary>
         [NameInMap("labels")]
         [Validation(Required=false)]
         public LabelsFilter Labels { get; set; }
 
+        [NameInMap("notificationChannels")]
+        [Validation(Required=false)]
+        public NotificationChannelsFilter NotificationChannels { get; set; }
+
         [NameInMap("notifyStrategyId")]
         [Validation(Required=false)]
         public NotifyStrategyIdFilter NotifyStrategyId { get; set; }
+
+        [NameInMap("observeResourceConfig")]
+        [Validation(Required=false)]
+        public ObserveResourceConfigFilter ObserveResourceConfig { get; set; }
 
         [NameInMap("observeResourceGlobalScope")]
         [Validation(Required=false)]
@@ -58,8 +61,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public ObserveResourceListFilter ObserveResourceList { get; set; }
 
+        /// <term><b>Obsolete</b></term>
         [NameInMap("observeResourceType")]
         [Validation(Required=false)]
+        [Obsolete]
         public ObserveResourceTypeFilter ObserveResourceType { get; set; }
 
         [NameInMap("partitionKey")]
@@ -70,16 +75,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public SeverityLevelsFilter SeverityLevels { get; set; }
 
-        /// <summary>
-        /// <para>Filters alert rules by status.</para>
-        /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public StatusFilter Status { get; set; }
 
-        /// <summary>
-        /// <para>Filters alert rules by UUID.</para>
-        /// </summary>
         [NameInMap("uuid")]
         [Validation(Required=false)]
         public UuidFilter Uuid { get; set; }

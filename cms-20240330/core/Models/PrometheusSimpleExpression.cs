@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
-    public class UmodelLabelFilter : TeaModel {
-        [NameInMap("name")]
-        [Validation(Required=false)]
-        public string Name { get; set; }
-
+    public class PrometheusSimpleExpression : TeaModel {
         [NameInMap("operator")]
         [Validation(Required=false)]
         public string Operator { get; set; }
 
-        [NameInMap("value")]
+        [NameInMap("queryName")]
         [Validation(Required=false)]
-        public string Value { get; set; }
+        public string QueryName { get; set; }
+
+        [NameInMap("threshold")]
+        [Validation(Required=false)]
+        public double? Threshold { get; set; }
 
     }
 

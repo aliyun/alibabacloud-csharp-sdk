@@ -13,9 +13,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Aggregate { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        [NameInMap("checkAfterDataComplete")]
+        [Validation(Required=false)]
+        [Obsolete]
+        public bool? CheckAfterDataComplete { get; set; }
+
         [NameInMap("dimensions")]
         [Validation(Required=false)]
         public List<Dictionary<string, string>> Dimensions { get; set; }
+
+        [NameInMap("durationSecs")]
+        [Validation(Required=false)]
+        public long? DurationSecs { get; set; }
 
         [NameInMap("enableDataCompleteCheck")]
         [Validation(Required=false)]
@@ -27,11 +37,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         [NameInMap("entityFields")]
         [Validation(Required=false)]
-        public List<UmodelEntityField> EntityFields { get; set; }
+        public List<EntityFields> EntityFields { get; set; }
 
         [NameInMap("entityFilters")]
         [Validation(Required=false)]
-        public List<UmodelEntityFilter> EntityFilters { get; set; }
+        public List<EntityFilters> EntityFilters { get; set; }
 
         [NameInMap("entityType")]
         [Validation(Required=false)]
@@ -43,15 +53,31 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         [NameInMap("filterList")]
         [Validation(Required=false)]
-        public List<ApmFilterConfig> FilterList { get; set; }
+        public List<FilterList> FilterList { get; set; }
+
+        [NameInMap("filterValues")]
+        [Validation(Required=false)]
+        public List<PrometheusMetricFilterValue> FilterValues { get; set; }
+
+        [NameInMap("groupFieldList")]
+        [Validation(Required=false)]
+        public List<string> GroupFieldList { get; set; }
 
         [NameInMap("groupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        [NameInMap("groupType")]
+        [Validation(Required=false)]
+        public string GroupType { get; set; }
+
+        [NameInMap("joinings")]
+        [Validation(Required=false)]
+        public List<Joinings> Joinings { get; set; }
+
         [NameInMap("labelFilters")]
         [Validation(Required=false)]
-        public List<UmodelLabelFilter> LabelFilters { get; set; }
+        public List<LabelFilters> LabelFilters { get; set; }
 
         [NameInMap("legacyRaw")]
         [Validation(Required=false)]
@@ -65,13 +91,31 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string LogSet { get; set; }
 
+        [NameInMap("measureGroupKey")]
+        [Validation(Required=false)]
+        public string MeasureGroupKey { get; set; }
+
         [NameInMap("measureList")]
         [Validation(Required=false)]
-        public List<ApmMeasureConfig> MeasureList { get; set; }
+        public List<MeasureList> MeasureList { get; set; }
 
         [NameInMap("metric")]
         [Validation(Required=false)]
         public string Metric { get; set; }
+
+        [NameInMap("metricGroupId")]
+        [Validation(Required=false)]
+        public string MetricGroupId { get; set; }
+
+        [NameInMap("metricId")]
+        [Validation(Required=false)]
+        public string MetricId { get; set; }
+
+        /// <term><b>Obsolete</b></term>
+        [NameInMap("metricIds")]
+        [Validation(Required=false)]
+        [Obsolete]
+        public List<string> MetricIds { get; set; }
 
         [NameInMap("metricSet")]
         [Validation(Required=false)]
@@ -85,6 +129,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public long? OffsetSecs { get; set; }
 
+        [NameInMap("paramValues")]
+        [Validation(Required=false)]
+        public List<PrometheusMetricParamValue> ParamValues { get; set; }
+
         /// <term><b>Obsolete</b></term>
         [NameInMap("promQl")]
         [Validation(Required=false)]
@@ -93,7 +141,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         [NameInMap("queries")]
         [Validation(Required=false)]
-        public List<MetricSetNamedQueryEntry> Queries { get; set; }
+        public List<Queries> Queries { get; set; }
 
         [NameInMap("relationType")]
         [Validation(Required=false)]

@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Labels { get; set; }
 
+        [NameInMap("namespace")]
+        [Validation(Required=false)]
+        public string Namespace { get; set; }
+
+        [NameInMap("productCategory")]
+        [Validation(Required=false)]
+        public string ProductCategory { get; set; }
+
         [NameInMap("ruleConfigs")]
         [Validation(Required=false)]
         public string RuleConfigs { get; set; }

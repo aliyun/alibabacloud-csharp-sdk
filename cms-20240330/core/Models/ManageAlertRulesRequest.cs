@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public ManageAlertRulesUnifiedActionInput Body { get; set; }
 
+        [NameInMap("callSource")]
+        [Validation(Required=false)]
+        public string CallSource { get; set; }
+
     }
 
 }

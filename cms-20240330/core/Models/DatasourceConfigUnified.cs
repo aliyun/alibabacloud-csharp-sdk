@@ -25,9 +25,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string ProductCategory { get; set; }
 
+        [NameInMap("project")]
+        [Validation(Required=false)]
+        public string Project { get; set; }
+
         [NameInMap("regionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("stores")]
+        [Validation(Required=false)]
+        public List<Stores> Stores { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

@@ -59,7 +59,6 @@ namespace AlibabaCloud.SDK.Cms20240330
                 {"ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"},
                 {"ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"},
                 {"ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-2", "metrics.ap-southeast-2.aliyuncs.com"},
                 {"ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"},
                 {"ap-south-1", "metrics.ap-south-1.aliyuncs.com"},
                 {"ap-northeast-2", "metrics.ap-northeast-2.aliyuncs.com"},
@@ -15192,11 +15191,6 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// <para>Retrieves the list of data delivery tasks.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Deletes a specified site monitoring task.</para>
-        /// </description>
-        /// 
         /// <param name="tmpReq">
         /// ListDeliveryTasksRequest
         /// </param>
@@ -15264,11 +15258,6 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// <summary>
         /// <para>Retrieves the list of data delivery tasks.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Deletes a specified site monitoring task.</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListDeliveryTasksRequest
@@ -15338,11 +15327,6 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// <para>Retrieves the list of data delivery tasks.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Deletes a specified site monitoring task.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// ListDeliveryTasksRequest
         /// </param>
@@ -15361,11 +15345,6 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// <summary>
         /// <para>Retrieves the list of data delivery tasks.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Deletes a specified site monitoring task.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListDeliveryTasksRequest
@@ -18726,6 +18705,11 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
             }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallSource))
+            {
+                query["callSource"] = request.CallSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
             {
@@ -18734,6 +18718,7 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -18778,6 +18763,11 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
             }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallSource))
+            {
+                query["callSource"] = request.CallSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
             {
@@ -18786,6 +18776,7 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -19112,7 +19103,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -19150,6 +19141,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryJson))
+            {
+                query["queryJson"] = request.QueryJson;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
             {
@@ -19183,7 +19178,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -19221,6 +19216,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryJson))
+            {
+                query["queryJson"] = request.QueryJson;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
             {
@@ -19254,7 +19253,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19278,7 +19277,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21357,13 +21356,8 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data delivery task. The update uses patch semantics: fields that are not specified remain unchanged.</para>
+        /// <para>Updates a data delivery task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Deletes a specified site monitoring task.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryTaskRequest
@@ -21440,13 +21434,8 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data delivery task. The update uses patch semantics: fields that are not specified remain unchanged.</para>
+        /// <para>Updates a data delivery task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Deletes a specified site monitoring task.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryTaskRequest
@@ -21523,13 +21512,8 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data delivery task. The update uses patch semantics: fields that are not specified remain unchanged.</para>
+        /// <para>Updates a data delivery task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Deletes a specified site monitoring task.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryTaskRequest
@@ -21547,13 +21531,8 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data delivery task. The update uses patch semantics: fields that are not specified remain unchanged.</para>
+        /// <para>Updates a data delivery task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Deletes a specified site monitoring task.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryTaskRequest

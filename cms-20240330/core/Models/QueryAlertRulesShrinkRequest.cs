@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position from which you want to start reading data. If you leave this parameter empty, data is read from the beginning.</para>
+        /// <para>The token that marks the position from which you want to start reading. If this parameter is left empty, data is read from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        [NameInMap("queryJson")]
+        [Validation(Required=false)]
+        public string QueryJson { get; set; }
 
     }
 

@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public class ListDeliveryTasksResponseBodyDeliveryTasks : TeaModel {
             /// <summary>
             /// <para>The creation time.</para>
+            /// <para>The time is in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -102,7 +103,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public Dictionary<string, string> SinkConfigs { get; set; }
 
                 /// <summary>
-                /// <para>The type of the delivery target.</para>
+                /// <para>The delivery target type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Prometheus</para>
@@ -184,6 +185,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>The update time.</para>
+            /// <para>The time is in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
