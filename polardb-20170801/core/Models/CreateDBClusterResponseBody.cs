@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDBClusterResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The Agentic cluster description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pagc-***************</para>
+        /// </summary>
         [NameInMap("AgenticDbClusterDescription")]
         [Validation(Required=false)]
         public string AgenticDbClusterDescription { get; set; }
 
+        /// <summary>
+        /// <para>The Agentic cluster ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pagc-***************</para>
+        /// </summary>
         [NameInMap("AgenticDbClusterId")]
         [Validation(Required=false)]
         public string AgenticDbClusterId { get; set; }

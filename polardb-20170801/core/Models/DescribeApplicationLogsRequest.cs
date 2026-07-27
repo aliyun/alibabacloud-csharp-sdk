@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the subcomponent.</para>
+        /// <para>The subcomponent instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pac-xxx</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. This parameter is used for PolarClaw instances.</para>
+        /// <para>The search keyword. This parameter is used for polarclaw instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Config</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The log level. This parameter is used for PolarClaw instances.</para>
+        /// <para>The log level. This parameter is used for polarclaw instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WARN</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The log type. This parameter is used for PolarClaw instances. Currently, only gateway is supported.</para>
+        /// <para>The log type. This parameter is used for polarclaw instances. Currently, only gateway is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gateway</para>

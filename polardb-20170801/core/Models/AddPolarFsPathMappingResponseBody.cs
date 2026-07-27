@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class AddPolarFsPathMappingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>CDB3258F-B5DE-43C4-8935-CBA0CA******</para>

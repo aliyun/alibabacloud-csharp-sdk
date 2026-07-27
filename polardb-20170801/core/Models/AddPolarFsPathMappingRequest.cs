@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class AddPolarFsPathMappingRequest : TeaModel {
         /// <summary>
-        /// <para>A list of objects, each containing a bucket and its corresponding path.</para>
+        /// <para>The bucket and corresponding path information.</para>
         /// </summary>
         [NameInMap("CustomBucketPathList")]
         [Validation(Required=false)]
         public List<AddPolarFsPathMappingRequestCustomBucketPathList> CustomBucketPathList { get; set; }
         public class AddPolarFsPathMappingRequestCustomBucketPathList : TeaModel {
             /// <summary>
-            /// <para>The name of the bucket.</para>
+            /// <para>The bucket name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Bucket1</para>
@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("Bucket")]
             [Validation(Required=false)]
             public string Bucket { get; set; }
+
+            [NameInMap("BucketAccessKeyId")]
+            [Validation(Required=false)]
+            public string BucketAccessKeyId { get; set; }
+
+            [NameInMap("BucketAccessKeySecret")]
+            [Validation(Required=false)]
+            public string BucketAccessKeySecret { get; set; }
 
             /// <summary>
             /// <para>The custom storage path.</para>
@@ -39,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the PolarFS instance.</para>
+        /// <para>The PolarFS instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
