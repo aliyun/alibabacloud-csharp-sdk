@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
                 {"eu-west-1", "clickhouse.eu-west-1.aliyuncs.com"},
                 {"eu-central-1", "clickhouse.eu-central-1.aliyuncs.com"},
                 {"cn-zhangjiakou", "clickhouse.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu", "clickhouse.aliyuncs.com"},
+                {"cn-wulanchabu", "clickhouse.cn-wulanchabu.aliyuncs.com"},
                 {"cn-huhehaote", "clickhouse.cn-huhehaote.aliyuncs.com"},
                 {"cn-guangzhou", "clickhouse.cn-guangzhou.aliyuncs.com"},
                 {"cn-chengdu", "clickhouse.cn-chengdu.aliyuncs.com"},
@@ -3718,7 +3718,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries database accounts for an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the list of database accounts for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3776,7 +3776,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries database accounts for an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the list of database accounts for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3834,7 +3834,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries database accounts for an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the list of database accounts for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3852,7 +3852,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries database accounts for an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries the list of database accounts for a specified ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4166,7 +4166,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call DescribeDBInstanceAttribute to query the details of an ApsaraDB for ClickHouse enterprise edition cluster.</para>
+        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4212,7 +4212,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call DescribeDBInstanceAttribute to query the details of an ApsaraDB for ClickHouse enterprise edition cluster.</para>
+        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4258,7 +4258,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call DescribeDBInstanceAttribute to query the details of an ApsaraDB for ClickHouse enterprise edition cluster.</para>
+        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4276,7 +4276,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call DescribeDBInstanceAttribute to query the details of an ApsaraDB for ClickHouse enterprise edition cluster.</para>
+        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4846,7 +4846,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To retrieve the cluster endpoints, call DescribeEndpoints.</para>
+        /// <para>Calls the DescribeEndpoints operation to query the endpoints of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4896,7 +4896,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To retrieve the cluster endpoints, call DescribeEndpoints.</para>
+        /// <para>Calls the DescribeEndpoints operation to query the endpoints of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4946,7 +4946,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To retrieve the cluster endpoints, call DescribeEndpoints.</para>
+        /// <para>Calls the DescribeEndpoints operation to query the endpoints of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4964,7 +4964,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To retrieve the cluster endpoints, call DescribeEndpoints.</para>
+        /// <para>Calls the DescribeEndpoints operation to query the endpoints of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6126,7 +6126,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes currently running queries.</para>
+        /// <para>Calls the DescribeProcessList operation to view queries that are currently running.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6204,7 +6204,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes currently running queries.</para>
+        /// <para>Calls the DescribeProcessList operation to view queries that are currently running.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6282,7 +6282,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes currently running queries.</para>
+        /// <para>Calls the DescribeProcessList operation to view queries that are currently running.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6300,7 +6300,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes currently running queries.</para>
+        /// <para>Calls the DescribeProcessList operation to view queries that are currently running.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6406,7 +6406,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a whitelist.</para>
+        /// <para>Queries the IP address whitelist of a cluster by calling the DescribeSecurityIPList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6452,7 +6452,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a whitelist.</para>
+        /// <para>Queries the IP address whitelist of a cluster by calling the DescribeSecurityIPList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6498,7 +6498,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a whitelist.</para>
+        /// <para>Queries the IP address whitelist of a cluster by calling the DescribeSecurityIPList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6516,7 +6516,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a whitelist.</para>
+        /// <para>Queries the IP address whitelist of a cluster by calling the DescribeSecurityIPList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">

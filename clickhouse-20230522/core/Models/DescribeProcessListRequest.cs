@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeProcessListRequest : TeaModel {
         /// <summary>
-        /// <para>The computing group ID.</para>
+        /// <para>The compute group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-gs5j3sua77******-clickhouse</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string InitialUser { get; set; }
 
         /// <summary>
-        /// <para>The keyword in the query statement.</para>
+        /// <para>The keyword of the query statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SELECT</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The minimum query execution duration, in milliseconds (ms). Only queries that run for this duration or longer are returned. The minimum value is 1,000.</para>
+        /// <para>The execution duration of slow SQL statements. Unit: ms. Minimum value: 1000 ms.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -91,13 +91,13 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string QueryDurationMs { get; set; }
 
         /// <summary>
-        /// <para>The criteria by which to sort the results. The results are sorted in descending order. Valid values:</para>
+        /// <para>Sorts the results in descending order by the specified columns.</para>
         /// <list type="bullet">
-        /// <item><description><para>0: Sorts by <c>query_duration_ms</c>.</para>
+        /// <item><description><para>0: sorts by query_duration_ms only.</para>
         /// </description></item>
-        /// <item><description><para>1: Sorts by <c>query_duration_ms</c> and <c>query_start_time</c>.</para>
+        /// <item><description><para>1: sorts by query_duration_ms and query_start_time.</para>
         /// </description></item>
-        /// <item><description><para>2: Sorts by <c>query_duration_ms</c>, <c>query_start_time</c>, and <c>user</c>.</para>
+        /// <item><description><para>2: sorts by query_duration_ms, query_start_time, and user.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -110,6 +110,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
         /// <summary>
         /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

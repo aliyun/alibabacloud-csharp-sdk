@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeProcessListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data object.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public List<DescribeProcessListResponseBodyDataResultSet> ResultSet { get; set; }
             public class DescribeProcessListResponseBodyDataResultSet : TeaModel {
                 /// <summary>
-                /// <para>The address from which the query was initiated.</para>
+                /// <para>The query address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0:0:0:0:0:ffff:1edd65ea</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string InitialQueryId { get; set; }
 
                 /// <summary>
-                /// <para>The user who initiated the query.</para>
+                /// <para>The query user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bany</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string InitialUser { get; set; }
 
                 /// <summary>
-                /// <para>The query statement.</para>
+                /// <para>The statement that is being queried.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>select * from test</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Query { get; set; }
 
                 /// <summary>
-                /// <para>The execution duration of the query, in milliseconds (ms).</para>
+                /// <para>The minimum query duration. Minimum value: <b>1000</b>. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? QueryDurationMs { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the query. The time is in UTC and follows the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
+                /// <para>The time when the query started. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-07-23T10:13:23Z</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries that match the filter criteria.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

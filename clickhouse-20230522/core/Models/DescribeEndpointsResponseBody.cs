@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeEndpointsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeEndpointsResponseBodyData Data { get; set; }
         public class DescribeEndpointsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The endpoints.</para>
+            /// <para>The list of endpoint details.</para>
             /// </summary>
             [NameInMap("Endpoints")]
             [Validation(Required=false)]
             public List<DescribeEndpointsResponseBodyDataEndpoints> Endpoints { get; set; }
             public class DescribeEndpointsResponseBodyDataEndpoints : TeaModel {
                 /// <summary>
-                /// <para>The computing group ID.</para>
+                /// <para>The compute group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cc-ad321**-clickhouse</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string ComputingGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The instance connection string.</para>
+                /// <para>The endpoint of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cc-****-clickhouse.clickhouseserver.pre.rds.aliyuncs.com</para>
@@ -66,10 +66,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 /// <summary>
                 /// <para>The network type of the endpoint. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>VPC</para>
-                /// </description></item>
-                /// <item><description><para>PUBLIC: Internet.</para>
-                /// </description></item>
+                /// <item><description>VPC: virtual private cloud.</description></item>
+                /// <item><description>PUBLIC: public network.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -80,21 +78,18 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string NetType { get; set; }
 
                 /// <summary>
-                /// <para>The ports.</para>
+                /// <para>The list of port details.</para>
                 /// </summary>
                 [NameInMap("Ports")]
                 [Validation(Required=false)]
                 public List<DescribeEndpointsResponseBodyDataEndpointsPorts> Ports { get; set; }
                 public class DescribeEndpointsResponseBodyDataEndpointsPorts : TeaModel {
                     /// <summary>
-                    /// <para>The port number. The value varies based on the protocol type. For example:</para>
+                    /// <para>The access port. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>HttpPort: 8123</para>
-                    /// </description></item>
-                    /// <item><description><para>HttpsPort: 8443</para>
-                    /// </description></item>
-                    /// <item><description><para>TcpPort: 9000</para>
-                    /// </description></item>
+                    /// <item><description>HttpPort: 8123</description></item>
+                    /// <item><description>HttpsPort: 8443</description></item>
+                    /// <item><description>TcpPort: 9000</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -107,12 +102,9 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                     /// <summary>
                     /// <para>The protocol type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>HttpPort: HTTP port.</para>
-                    /// </description></item>
-                    /// <item><description><para>HttpsPort: HTTPS port.</para>
-                    /// </description></item>
-                    /// <item><description><para>TcpPort: TCP port.</para>
-                    /// </description></item>
+                    /// <item><description>HttpPort: HTTP port.</description></item>
+                    /// <item><description>HttpsPort: HTTPS port.</description></item>
+                    /// <item><description>TcpPort: TCP port.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -125,7 +117,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 }
 
                 /// <summary>
-                /// <para>The status of the endpoint.</para>
+                /// <para>The status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>active</para>
@@ -145,7 +137,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The VPC ID.</para>
+                /// <para>VPC ID。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf61z****</para>
@@ -155,7 +147,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The VPC instance ID.</para>
+                /// <para>The VPC-connected instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf61z****</para>
@@ -169,10 +161,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <summary>
             /// <para>The network type of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>VPC</b></para>
-            /// </description></item>
-            /// <item><description><para><b>PUBLIC</b>: Internet.</para>
-            /// </description></item>
+            /// <item><description><b>VPC</b>: virtual private cloud.</description></item>
+            /// <item><description><b>PUBLIC</b>: public network.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

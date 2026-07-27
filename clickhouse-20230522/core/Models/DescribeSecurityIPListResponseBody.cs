@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeSecurityIPListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The whitelist groups.</para>
+            /// <para>The list of whitelist groups.</para>
             /// </summary>
             [NameInMap("GroupItems")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string GroupTag { get; set; }
 
                 /// <summary>
-                /// <para>The IP addresses in the whitelist group.</para>
+                /// <para>The list of IP addresses in the whitelist group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127.0.XX.XX</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string SecurityIPList { get; set; }
 
                 /// <summary>
-                /// <para>The IP address type.</para>
+                /// <para>The type of the IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ipv4</para>
