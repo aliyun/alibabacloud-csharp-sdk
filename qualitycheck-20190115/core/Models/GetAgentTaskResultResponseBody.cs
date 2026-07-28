@@ -65,16 +65,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The number of input tokens.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>100</para>
-            /// </summary>
-            [NameInMap("InputTokens")]
-            [Validation(Required=false)]
-            public string InputTokens { get; set; }
-
-            /// <summary>
             /// <para>The request ID returned by the large language model service.</para>
             /// 
             /// <b>Example:</b>
@@ -83,16 +73,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [NameInMap("LlmRequestId")]
             [Validation(Required=false)]
             public string LlmRequestId { get; set; }
-
-            /// <summary>
-            /// <para>The number of output tokens.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>200</para>
-            /// </summary>
-            [NameInMap("OutputTokens")]
-            [Validation(Required=false)]
-            public string OutputTokens { get; set; }
 
             /// <summary>
             /// <para>The result of the computation task.</para>
@@ -112,7 +92,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     /// <para>The result returned by the large language model.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>175/xl the fabric feels very comfortable, looks quite slim when worn, great clothes super good-looking, quality and feel are top-notch, very satisfied with this purchase.</para>
+                    /// <para>175/XL the fabric feels very comfortable, looks slim when worn, great clothes super good-looking, quality and feel are top-notch, very satisfied with this purchase.</para>
                     /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
@@ -121,21 +101,21 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
                 /// <summary>
-                /// <para>The field extraction result.</para>
+                /// <para>The property extraction result.</para>
                 /// </summary>
                 [NameInMap("FieldResponse")]
                 [Validation(Required=false)]
                 public GetAgentTaskResultResponseBodyDataResponseFieldResponse FieldResponse { get; set; }
                 public class GetAgentTaskResultResponseBodyDataResponseFieldResponse : TeaModel {
                     /// <summary>
-                    /// <para>The list of fields.</para>
+                    /// <para>The list of properties.</para>
                     /// </summary>
                     [NameInMap("FieldVoList")]
                     [Validation(Required=false)]
                     public List<GetAgentTaskResultResponseBodyDataResponseFieldResponseFieldVoList> FieldVoList { get; set; }
                     public class GetAgentTaskResultResponseBodyDataResponseFieldResponseFieldVoList : TeaModel {
                         /// <summary>
-                        /// <para>The field name.</para>
+                        /// <para>The property name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>phone</para>
@@ -162,7 +142,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         public string Remarks { get; set; }
 
                         /// <summary>
-                        /// <para>The field value.</para>
+                        /// <para>The property value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1234561</para>
@@ -200,7 +180,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         public string Dimension { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the tag is matched.</para>
+                        /// <para>Indicates whether the label is matched.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -238,14 +218,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 public GetAgentTaskResultResponseBodyDataResponseTagCategoryResponse TagCategoryResponse { get; set; }
                 public class GetAgentTaskResultResponseBodyDataResponseTagCategoryResponse : TeaModel {
                     /// <summary>
-                    /// <para>The list of tags.</para>
+                    /// <para>The list of labels.</para>
                     /// </summary>
                     [NameInMap("TagCategoryVoList")]
                     [Validation(Required=false)]
                     public List<GetAgentTaskResultResponseBodyDataResponseTagCategoryResponseTagCategoryVoList> TagCategoryVoList { get; set; }
                     public class GetAgentTaskResultResponseBodyDataResponseTagCategoryResponseTagCategoryVoList : TeaModel {
                         /// <summary>
-                        /// <para>The tag dimension.</para>
+                        /// <para>The label dimension.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Customer intent.</para>
@@ -255,7 +235,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         public string Dimension { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the tag is matched.</para>
+                        /// <para>Indicates whether the label is matched.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -381,10 +361,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: pending</description></item>
-            /// <item><description>2: running</description></item>
-            /// <item><description>3: succeeded</description></item>
-            /// <item><description>4: failed</description></item>
+            /// <item><description>1: pending.</description></item>
+            /// <item><description>2: running.</description></item>
+            /// <item><description>3: succeeded.</description></item>
+            /// <item><description>4: failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -404,35 +384,31 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
-            /// <summary>
-            /// <para>The total number of tokens.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>300</para>
-            /// </summary>
-            [NameInMap("TotalTokens")]
+            [NameInMap("Usage")]
             [Validation(Required=false)]
-            public string TotalTokens { get; set; }
+            public GetAgentTaskResultResponseBodyDataUsage Usage { get; set; }
+            public class GetAgentTaskResultResponseBodyDataUsage : TeaModel {
+                [NameInMap("InputTokens")]
+                [Validation(Required=false)]
+                public string InputTokens { get; set; }
 
-            /// <summary>
-            /// <para>The number of times the plus model is used.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("TyxmPlusCount")]
-            [Validation(Required=false)]
-            public string TyxmPlusCount { get; set; }
+                [NameInMap("OutputTokens")]
+                [Validation(Required=false)]
+                public string OutputTokens { get; set; }
 
-            /// <summary>
-            /// <para>The number of times the turbo model is used.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("TyxmTurboCount")]
-            [Validation(Required=false)]
-            public string TyxmTurboCount { get; set; }
+                [NameInMap("TotalTokens")]
+                [Validation(Required=false)]
+                public string TotalTokens { get; set; }
+
+                [NameInMap("TymxPlusCount")]
+                [Validation(Required=false)]
+                public string TymxPlusCount { get; set; }
+
+                [NameInMap("TymxTurboCount")]
+                [Validation(Required=false)]
+                public string TymxTurboCount { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The session ID.</para>
@@ -467,10 +443,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. You can use this field to determine whether the request succeeded:</para>
+        /// <para>Indicates whether the request was successful. You can use this field to determine whether the request was successful:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request succeeded.</description></item>
-        /// <item><description><b>false/null</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: successful.</description></item>
+        /// <item><description><b>false/null</b>: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
