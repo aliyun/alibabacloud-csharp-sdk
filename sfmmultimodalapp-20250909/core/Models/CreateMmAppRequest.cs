@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
         [Validation(Required=false)]
         public CreateMmAppRequestModelConfig ModelConfig { get; set; }
         public class CreateMmAppRequestModelConfig : TeaModel {
+            [NameInMap("AppType")]
+            [Validation(Required=false)]
+            public string AppType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>5</para>
