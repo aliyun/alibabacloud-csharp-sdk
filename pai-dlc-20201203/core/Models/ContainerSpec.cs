@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public ResourceRequirements Resources { get; set; }
 
+        [NameInMap("SecurityContext")]
+        [Validation(Required=false)]
+        public SecurityContext SecurityContext { get; set; }
+
         /// <summary>
         /// <para>The working directory in the container.</para>
         /// 

@@ -1,3 +1,14 @@
+2026-07-28 Version: 1.11.0
+- Support API CreateSignal.
+- Support API GetSignal.
+- Support API ListSignals.
+- Update API CreateJob: add request parameters body.CodeSource.IsSharedMountPath.
+- Update API GetJob: add response parameters Body.supportedProfilingTypes.
+- Update API GetJob: add response parameters Body.Pods.$.supportedProfilingTypes.
+- Update API GetJob: add response parameters Body.Pods.$.HistoryPods.$.supportedProfilingTypes.
+- Update API ListJobs: add request parameters ResourceIds.
+
+
 2026-07-15 Version: 1.10.2
 - Update API ListRayHistoryServers: add request parameters StoragePath.
 

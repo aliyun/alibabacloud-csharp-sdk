@@ -93,6 +93,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>sysom</para>
+        /// </summary>
+        [NameInMap("supportedProfilingTypes")]
+        [Validation(Required=false)]
+        public string SupportedProfilingTypes { get; set; }
+
     }
 
 }

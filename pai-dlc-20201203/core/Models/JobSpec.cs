@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class JobSpec : TeaModel {
         /// <summary>
-        /// <para>The scheduling node assignment configuration.</para>
+        /// <para>The assigned scheduling node configuration.</para>
         /// </summary>
         [NameInMap("AssignNodeSpec")]
         [Validation(Required=false)]
@@ -24,11 +24,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public AutoScalingSpec AutoScalingSpec { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to consider this role when determining job success. This parameter takes effect only when the success policy is set to Partial.</para>
+        /// <para>Specifies whether this role is considered when determining job success. This parameter takes effect only when the success policy is set to Partial.</para>
         /// </summary>
         [NameInMap("ConsiderInSuccessPolicy")]
         [Validation(Required=false)]
         public bool? ConsiderInSuccessPolicy { get; set; }
+
+        [NameInMap("Driver")]
+        [Validation(Required=false)]
+        public string Driver { get; set; }
 
         /// <summary>
         /// <para>The hardware specifications of the worker. Visit <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a> for the detailed list of specifications.&gt;Notice: Prices vary depending on the specifications.</para>
@@ -45,7 +49,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public List<ElasticSpotSpec> ElasticSpotSpecs { get; set; }
 
         /// <summary>
-        /// <para>The additional pod configuration.</para>
+        /// <para>The extra pod configuration.</para>
         /// </summary>
         [NameInMap("ExtraPodSpec")]
         [Validation(Required=false)]
@@ -157,7 +161,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public SystemDisk SystemDisk { get; set; }
 
         /// <summary>
-        /// <para>Type is closely related to Job Type. Different Job Types support different Worker Types.</para>
+        /// <para>Type is closely related to Job Type. Different job types support different worker types.</para>
         /// <list type="bullet">
         /// <item><description><para><b>TFJob</b>: Supports Chief, PS, Worker, Evaluator, and GraphLearn.</para>
         /// </description></item>

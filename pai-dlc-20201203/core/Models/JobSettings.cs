@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public DataJuicerConfig DataJuicerConfig { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip the inventory check. Valid values:</para>
+        /// <para>Specifies whether to skip inventory check. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Driver { get; set; }
 
         /// <summary>
-        /// <para>The CPU affinity setting. This setting takes effect only when general-purpose subscription computing resources are used.</para>
+        /// <para>The CPU affinity setting. This setting is effective only when using general computing subscription resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnableErrorMonitoringInAIMaster { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether OSS append writes are allowed. Valid values:</para>
+        /// <para>Specifies whether to allow OSS append write. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnableOssAppend { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the job is allowed to use RDMA. Valid values:</para>
+        /// <para>Specifies whether to allow the job to use RDMA. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnableSanityCheck { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the job is allowed to use tidal resources. Valid values:</para>
+        /// <para>Specifies whether to allow the job to use tidal resources. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnableTideResource { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters for fault tolerance monitoring after it is enabled. For example, you can specify whether to enable log hang-based detection.</para>
+        /// <para>The configuration parameters for fault tolerance monitoring after it is enabled, such as whether to enable log hang-based detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>--enable-log-hang-detection true</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ErrorMonitoringArgs { get; set; }
 
         /// <summary>
-        /// <para>The duration (in minutes) for which the job is retained after it ends.</para>
+        /// <para>The retention duration after job completion, in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? JobReservedMinutes { get; set; }
 
         /// <summary>
-        /// <para>The retention policy after the job ends.</para>
+        /// <para>The retention policy after job completion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Always</para>
@@ -193,14 +193,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobReservedPolicy { get; set; }
 
         /// <summary>
-        /// <para>The output model configuration. This parameter currently takes effect only in federated training scenarios.</para>
+        /// <para>The output model configuration. This parameter is currently effective only in federated training scenarios.</para>
         /// </summary>
         [NameInMap("ModelConfig")]
         [Validation(Required=false)]
         public ModelConfig ModelConfig { get; set; }
 
         /// <summary>
-        /// <para>The oversold resource usage mode for the job (not accepted, acceptable, or only accepted).</para>
+        /// <para>The oversold resource usage mode for the job (reject/accept/only accept).</para>
         /// 
         /// <b>Example:</b>
         /// <para>AcceptQuotaOverSold</para>

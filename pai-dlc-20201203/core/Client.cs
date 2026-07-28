@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node on which the job runs.</para>
+        /// <para>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <para>Make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</para>
         /// <remarks>
-        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// <para>Notice: The total length of CreateJob request parameters (including system-generated parameters) cannot exceed 65,536 bytes.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -257,14 +257,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node on which the job runs.</para>
+        /// <para>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <para>Make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</para>
         /// <remarks>
-        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// <para>Notice: The total length of CreateJob request parameters (including system-generated parameters) cannot exceed 65,536 bytes.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -411,14 +411,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node on which the job runs.</para>
+        /// <para>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <para>Make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</para>
         /// <remarks>
-        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// <para>Notice: The total length of CreateJob request parameters (including system-generated parameters) cannot exceed 65,536 bytes.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -438,14 +438,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node on which the job runs.</para>
+        /// <para>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <para>Make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before you call this operation.</para>
         /// <remarks>
-        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// <para>Notice: The total length of CreateJob request parameters (including system-generated parameters) cannot exceed 65,536 bytes.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -841,6 +841,184 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateRayHistoryServerWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a signal to the Pods of a specified job and retrieves the signal ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation sends a specific signal to one or more Pods of a specified job.</description></item>
+        /// <item><description>After the signal is sent, the API immediately returns a <c>SignalId</c>. The actual signal delivery is processed by a background worker.</description></item>
+        /// <item><description>Query the signal status by calling the <c>GetSignal</c> or <c>ListSignals</c> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSignalRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSignalResponse
+        /// </returns>
+        public CreateSignalResponse CreateSignalWithOptions(string JobId, CreateSignalRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signal))
+            {
+                body["Signal"] = request.Signal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                body["Target"] = request.Target;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSignal",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/signals",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSignalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a signal to the Pods of a specified job and retrieves the signal ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation sends a specific signal to one or more Pods of a specified job.</description></item>
+        /// <item><description>After the signal is sent, the API immediately returns a <c>SignalId</c>. The actual signal delivery is processed by a background worker.</description></item>
+        /// <item><description>Query the signal status by calling the <c>GetSignal</c> or <c>ListSignals</c> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSignalRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSignalResponse
+        /// </returns>
+        public async Task<CreateSignalResponse> CreateSignalWithOptionsAsync(string JobId, CreateSignalRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signal))
+            {
+                body["Signal"] = request.Signal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                body["Target"] = request.Target;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSignal",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/signals",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSignalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a signal to the Pods of a specified job and retrieves the signal ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation sends a specific signal to one or more Pods of a specified job.</description></item>
+        /// <item><description>After the signal is sent, the API immediately returns a <c>SignalId</c>. The actual signal delivery is processed by a background worker.</description></item>
+        /// <item><description>Query the signal status by calling the <c>GetSignal</c> or <c>ListSignals</c> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSignalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSignalResponse
+        /// </returns>
+        public CreateSignalResponse CreateSignal(string JobId, CreateSignalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateSignalWithOptions(JobId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a signal to the Pods of a specified job and retrieves the signal ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation sends a specific signal to one or more Pods of a specified job.</description></item>
+        /// <item><description>After the signal is sent, the API immediately returns a <c>SignalId</c>. The actual signal delivery is processed by a background worker.</description></item>
+        /// <item><description>Query the signal status by calling the <c>GetSignal</c> or <c>ListSignals</c> operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSignalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSignalResponse
+        /// </returns>
+        public async Task<CreateSignalResponse> CreateSignalAsync(string JobId, CreateSignalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateSignalWithOptionsAsync(JobId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1773,7 +1951,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a DLC job.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1819,7 +1997,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a DLC job.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1865,7 +2043,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a DLC job.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1884,7 +2062,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a DLC job.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3353,6 +3531,160 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of a specific signal in a specified job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API allows you to retrieve the signal details for the specified <c>JobId</c> and <c>SignalId</c>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <c>Status</c>, <c>Reason</c>, and <c>Message</c> fields describe the overall signal processing status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSignalRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSignalResponse
+        /// </returns>
+        public GetSignalResponse GetSignalWithOptions(string JobId, string SignalId, GetSignalRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSignal",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/signals/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(SignalId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSignalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specific signal in a specified job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API allows you to retrieve the signal details for the specified <c>JobId</c> and <c>SignalId</c>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <c>Status</c>, <c>Reason</c>, and <c>Message</c> fields describe the overall signal processing status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSignalRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSignalResponse
+        /// </returns>
+        public async Task<GetSignalResponse> GetSignalWithOptionsAsync(string JobId, string SignalId, GetSignalRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSignal",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/signals/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(SignalId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSignalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specific signal in a specified job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API allows you to retrieve the signal details for the specified <c>JobId</c> and <c>SignalId</c>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <c>Status</c>, <c>Reason</c>, and <c>Message</c> fields describe the overall signal processing status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSignalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSignalResponse
+        /// </returns>
+        public GetSignalResponse GetSignal(string JobId, string SignalId, GetSignalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSignalWithOptions(JobId, SignalId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specific signal in a specified job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This API allows you to retrieve the signal details for the specified <c>JobId</c> and <c>SignalId</c>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <c>Status</c>, <c>Reason</c>, and <c>Message</c> fields describe the overall signal processing status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSignalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSignalResponse
+        /// </returns>
+        public async Task<GetSignalResponse> GetSignalAsync(string JobId, string SignalId, GetSignalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSignalWithOptionsAsync(JobId, SignalId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of a Tensorboard instance.</para>
         /// </summary>
         /// 
@@ -4529,6 +4861,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["ResourceId"] = request.ResourceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                query["ResourceIds"] = request.ResourceIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceQuotaName))
             {
                 query["ResourceQuotaName"] = request.ResourceQuotaName;
@@ -4720,6 +5056,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
                 query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                query["ResourceIds"] = request.ResourceIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceQuotaName))
             {
@@ -5115,6 +5455,200 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListRayHistoryServersWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all signal records of a specified job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>You can call this API operation to retrieve the details of all signal records for a specific job, including signal IDs, statuses, and creation times. You can use query parameters to further filter or sort the results.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSignalsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSignalsResponse
+        /// </returns>
+        public ListSignalsResponse ListSignalsWithOptions(string JobId, ListSignalsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSignals",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/signals",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSignalsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all signal records of a specified job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>You can call this API operation to retrieve the details of all signal records for a specific job, including signal IDs, statuses, and creation times. You can use query parameters to further filter or sort the results.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSignalsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSignalsResponse
+        /// </returns>
+        public async Task<ListSignalsResponse> ListSignalsWithOptionsAsync(string JobId, ListSignalsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSignals",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(JobId) + "/signals",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSignalsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all signal records of a specified job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>You can call this API operation to retrieve the details of all signal records for a specific job, including signal IDs, statuses, and creation times. You can use query parameters to further filter or sort the results.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSignalsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSignalsResponse
+        /// </returns>
+        public ListSignalsResponse ListSignals(string JobId, ListSignalsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSignalsWithOptions(JobId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all signal records of a specified job.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>You can call this API operation to retrieve the details of all signal records for a specific job, including signal IDs, statuses, and creation times. You can use query parameters to further filter or sort the results.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSignalsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSignalsResponse
+        /// </returns>
+        public async Task<ListSignalsResponse> ListSignalsAsync(string JobId, ListSignalsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSignalsWithOptionsAsync(JobId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
