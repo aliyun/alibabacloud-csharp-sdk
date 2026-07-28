@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             /// <para>The local city.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Nanjing</para>
+            /// <para>南京市</para>
             /// </summary>
             [NameInMap("CloudCity")]
             [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             /// <para>The local country or region.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>China</para>
+            /// <para>中国</para>
             /// </summary>
             [NameInMap("CloudCountry")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             /// <para>The local ISP.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>China Mobile</para>
+            /// <para>移动</para>
             /// </summary>
             [NameInMap("CloudIsp")]
             [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             /// <para>The local province.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Jiangsu</para>
+            /// <para>江苏省</para>
             /// </summary>
             [NameInMap("CloudProvince")]
             [Validation(Required=false)]
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             /// <para>The remote city. In most cases, this parameter is empty if you set <b>OtherCountry</b> to a country except China.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Austin</para>
+            /// <para>奥斯汀</para>
             /// </summary>
             [NameInMap("OtherCity")]
             [Validation(Required=false)]
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             /// <para>The remote country or region.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>United States</para>
+            /// <para>美国</para>
             /// </summary>
             [NameInMap("OtherCountry")]
             [Validation(Required=false)]
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             /// <para>The remote province. In most cases, this parameter is empty if you set <b>OtherCountry</b> to a country except China.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Texas</para>
+            /// <para>得克萨斯州</para>
             /// </summary>
             [NameInMap("OtherProvince")]
             [Validation(Required=false)]

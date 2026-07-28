@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Alibaba</para>
+        /// <para>阿里巴巴</para>
         /// </summary>
         [NameInMap("CloudIsp")]
         [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Hangzhou</para>
+        /// <para>杭州市</para>
         /// </summary>
         [NameInMap("OtherCity")]
         [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>China</para>
+        /// <para>中国</para>
         /// </summary>
         [NameInMap("OtherCountry")]
         [Validation(Required=false)]
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>China Mobile</para>
+        /// <para>移动</para>
         /// </summary>
         [NameInMap("OtherIsp")]
         [Validation(Required=false)]

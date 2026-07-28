@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class StartNisTrafficRankingResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result ID of this traffic ranking analysis. Call the DescribeNisTrafficRanking operation to obtain the final analysis result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>task-6462a7b4c4a54b****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public string NisTrafficRankingId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4DAC4BE1-BEEA-5D84-BE06-E1B796F3B941</para>
         /// </summary>

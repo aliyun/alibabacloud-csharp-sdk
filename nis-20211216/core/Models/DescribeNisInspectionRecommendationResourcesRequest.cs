@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class DescribeNisInspectionRecommendationResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the inspection report.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public string InspectionReportId { get; set; }
 
         /// <summary>
+        /// <para>The language to use.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public string Language { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token that is used to query the next page of results. Set this parameter to the NextToken value returned from the last API call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hKrS+MVXkuOgztXnvdml16/uO3mvCyHxSjzdhx9VRUC+8umDTIV2Wg9TTOUrR7ve</para>
         /// </summary>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The recommendation code for the abnormal item.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

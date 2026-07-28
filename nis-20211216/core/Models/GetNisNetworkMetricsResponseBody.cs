@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class GetNisNetworkMetricsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The cloud network metric trends data object.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetNisNetworkMetricsResponseBodyData Data { get; set; }
         public class GetNisNetworkMetricsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The collection of metric trends data.</para>
+            /// </summary>
             [NameInMap("Metrics")]
             [Validation(Required=false)]
             public List<GetNisNetworkMetricsResponseBodyDataMetrics> Metrics { get; set; }
             public class GetNisNetworkMetricsResponseBodyDataMetrics : TeaModel {
                 /// <summary>
+                /// <para>The timestamp of the data in milliseconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1690684091100</para>
                 /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
                 public long? TimeStamp { get; set; }
 
                 /// <summary>
+                /// <para>The metric value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>88</para>
                 /// </summary>
@@ -36,6 +46,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             }
 
             /// <summary>
+            /// <para>The unit.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Bits/Second</para>
             /// </summary>
@@ -46,6 +58,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D5E98683-355B-5867-8D3D-A24755F6895B</para>
         /// </summary>

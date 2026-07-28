@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class DescribeNisInspectionReportSummaryRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the inspection report.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

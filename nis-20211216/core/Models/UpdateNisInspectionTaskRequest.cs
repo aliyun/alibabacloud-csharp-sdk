@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class UpdateNisInspectionTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the inspection task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public string InspectionTaskId { get; set; }
 
         /// <summary>
+        /// <para>The running status of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Active</para>
         /// </summary>

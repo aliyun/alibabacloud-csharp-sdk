@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class DeleteNisInspectionReportResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result of the deletion.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D5E98683-355B-5867-8D3D-A24755F6895B</para>
         /// </summary>

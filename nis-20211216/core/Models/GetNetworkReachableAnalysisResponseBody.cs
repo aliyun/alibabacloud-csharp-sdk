@@ -352,10 +352,14 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// <para>The state of the task for analyzing network reachability. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b>: The task is in progress.</description></item>
-        /// <item><description><b>finish</b>: The task is complete.</description></item>
-        /// <item><description><b>error</b>: An analysis error occurred.</description></item>
-        /// <item><description><b>timeout</b>: The task timed out.</description></item>
+        /// <item><description><para><b>init</b>: The task is in progress.</para>
+        /// </description></item>
+        /// <item><description><para><b>finish</b>: The task is complete.</para>
+        /// </description></item>
+        /// <item><description><para><b>error</b>: An analysis error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>timeout</b>: The task timed out.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -368,8 +372,10 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// <para>Indicates whether the network path is reachable. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The network path is reachable.</description></item>
-        /// <item><description><b>false</b>: The network path is unreachable.</description></item>
+        /// <item><description><para><b>true</b>: The network path is reachable.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The network path is unreachable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

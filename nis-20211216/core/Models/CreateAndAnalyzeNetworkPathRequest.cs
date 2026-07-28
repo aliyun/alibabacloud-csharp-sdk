@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// <para>The protocol type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>tcp</b>: Transmission Control Protocol (TCP)</description></item>
-        /// <item><description><b>udp</b>: User Datagram Protocol (UDP)</description></item>
-        /// <item><description><b>icmp</b>: Internet Control Message Protocol (ICMP)</description></item>
+        /// <item><description><para><b>tcp</b>: Transmission Control Protocol (TCP)</para>
+        /// </description></item>
+        /// <item><description><para><b>udp</b>: User Datagram Protocol (UDP)</para>
+        /// </description></item>
+        /// <item><description><para><b>icmp</b>: Internet Control Message Protocol (ICMP)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,11 +71,16 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// <para>The type of the source resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: the Elastic Compute Service (ECS) instance</description></item>
-        /// <item><description><b>internetIp</b>: the public IP address</description></item>
-        /// <item><description><b>vsw</b>: the vSwitch</description></item>
-        /// <item><description><b>vpn</b>: the VPN gateway</description></item>
-        /// <item><description><b>vbr</b>: the virtual border router (VBR)</description></item>
+        /// <item><description><para><b>ecs</b>: the Elastic Compute Service (ECS) instance</para>
+        /// </description></item>
+        /// <item><description><para><b>internetIp</b>: the public IP address</para>
+        /// </description></item>
+        /// <item><description><para><b>vsw</b>: the vSwitch</para>
+        /// </description></item>
+        /// <item><description><para><b>vpn</b>: the VPN gateway</para>
+        /// </description></item>
+        /// <item><description><para><b>vbr</b>: the virtual border router (VBR)</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -116,12 +124,18 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// <para>The type of the destination resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: the ECS instance</description></item>
-        /// <item><description><b>internetIp</b>: the public IP address</description></item>
-        /// <item><description><b>vsw</b>: the vSwitch</description></item>
-        /// <item><description><b>vpn</b>: the VPN gateway</description></item>
-        /// <item><description><b>vbr</b>: the VBR</description></item>
-        /// <item><description><b>clb</b>: the Classic Load Balancer (CLB) instance</description></item>
+        /// <item><description><para><b>ecs</b>: the ECS instance</para>
+        /// </description></item>
+        /// <item><description><para><b>internetIp</b>: the public IP address</para>
+        /// </description></item>
+        /// <item><description><para><b>vsw</b>: the vSwitch</para>
+        /// </description></item>
+        /// <item><description><para><b>vpn</b>: the VPN gateway</para>
+        /// </description></item>
+        /// <item><description><para><b>vbr</b>: the VBR</para>
+        /// </description></item>
+        /// <item><description><para><b>clb</b>: the Classic Load Balancer (CLB) instance</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

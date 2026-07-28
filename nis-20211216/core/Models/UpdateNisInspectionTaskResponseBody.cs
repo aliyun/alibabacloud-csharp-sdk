@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class UpdateNisInspectionTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The update result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A7F0D6EC-E19E-58AC-AC9F-08036763960F</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
 {
     public class DescribeNisInspectionReportCheckItemsRequest : TeaModel {
         /// <summary>
+        /// <para>The category of the check item.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>stability</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public string CategoryCode { get; set; }
 
         /// <summary>
+        /// <para>The ID of the inspection report.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public string InspectionReportId { get; set; }
 
         /// <summary>
+        /// <para>The language of the content. Valid values: zh-CN and en-US.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public string Language { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Set this parameter to the NextToken value returned from the previous call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hKrS+MVXkuOgztXnvdml16/uO3mvCyHxSjzdhx9VRUC+8umDTIV2Wg9TTOUrR7ve</para>
         /// </summary>
@@ -51,10 +60,16 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The resource type.</para>
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public List<string> ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>A collection of risk levels.</para>
+        /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
         public List<string> RiskLevel { get; set; }

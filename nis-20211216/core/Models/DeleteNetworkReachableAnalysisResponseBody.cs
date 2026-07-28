@@ -12,12 +12,11 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <summary>
         /// <para>Result of operation.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Delete Success.</description></item>
-        /// <item><description><b>false</b>: Delete Fail.</description></item>
+        /// <item><description><para><b>true</b>: Delete Success.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Delete Fail.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

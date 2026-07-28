@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
         /// <para>The ID of the CEN bandwidth plan.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cenbwp-ia8kw1zjv4hyal*****</para>
+        /// <para>cenbwp-ia8kw1zjv4hyal****</para>
         /// </summary>
         [NameInMap("BandwithPackageId")]
         [Validation(Required=false)]

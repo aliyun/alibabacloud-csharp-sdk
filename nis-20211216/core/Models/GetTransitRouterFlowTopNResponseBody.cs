@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>118639953821xxxx</para>
+            /// <para>118639953821****</para>
             /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
