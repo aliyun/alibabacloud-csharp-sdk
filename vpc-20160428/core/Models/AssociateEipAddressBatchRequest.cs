@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateEipAddressBatchRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance with which you want to associate the EIPs.</para>
-        /// <para>The instance can be a NAT gateway or a secondary ENI.</para>
+        /// <para>The ID of the cloud service instance that you want to attach the EIPs to.</para>
+        /// <para>You can enter the instance ID of an Internet NAT gateway instance or a secondary elastic network interfaces (ENIs) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BindedInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance with which you want to associate the EIPs. Valid values:</para>
+        /// <para>The type of the instance that you want to attach the EIPs to. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Nat</b>: NAT gateway</description></item>
-        /// <item><description><b>NetworkInterface</b>: secondary ENI</description></item>
+        /// <item><description><b>Nat</b>: Internet NAT gateway.</description></item>
+        /// <item><description><b>NetworkInterface</b>: secondary elastic network interfaces (ENIs).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The EIPs to be associated with the instance.</para>
-        /// <para>You must enter at least one EIP. You can enter up to 50 EIPs.</para>
+        /// <para>The list of EIPs that you want to associate with the cloud service instance.</para>
+        /// <para>You must specify at least 1 EIP and can specify up to 50 EIPs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
@@ -60,8 +60,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The association mode. Set the value to <b>MULTI_BINDED</b>, which specifies the Multi-EIP-to-ENI mode.</para>
-        /// <para>This parameter is required only when <b>BindedInstanceType</b> is set to <b>NetworkInterface</b>.</para>
+        /// <para>The association mode. Set the value to <b>MULTI_BINDED</b>, which specifies the multi-EIP-to-ENI mode.</para>
+        /// <para>This parameter is required only when <b>InstanceType</b> is set to <b>NetworkInterface</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MULTI_BINDED</para>
@@ -75,7 +75,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the EIPs belong. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the EIPs that you want to associate with a cloud service instance.
+        /// You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -31,18 +31,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeNatGatewayAssociateNetworkInterfacesRequestFilter> Filter { get; set; }
         public class DescribeNatGatewayAssociateNetworkInterfacesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The key of the filter. Valid values:</para>
+            /// <para>The valid values of Filter Key:</para>
             /// <list type="bullet">
             /// <item><description>ResourceId<remarks>
-            /// <para>Set Value to the ID of the EPS resource that you want to query.</para>
+            /// <para>Specify the ID of the EPS resource in Value.</para>
             /// </remarks>
             /// </description></item>
             /// <item><description>NetworkInterfaceId<remarks>
-            /// <para>Set Value to the ID of the elastic network interface (ENI) that you want to query.</para>
+            /// <para>Specify the ID of the network interface controller (NIC) in Value.</para>
             /// </remarks>
             /// </description></item>
             /// <item><description>ResourceOwnerId<remarks>
-            /// <para>Set Value to the UID of the user to whom the EPS resource belongs for resource ownership query.</para>
+            /// <para>Specify the UID of the user to whom the EPS resource ownership belongs in Value.</para>
             /// </remarks>
             /// </description></item>
             /// </list>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value. You can specify multiple values separated by commas (,).</para>
+            /// <para>You can specify multiple values separated by commas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ep-8psre8c8936596cd****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page for a paginated query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -90,9 +90,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this is the first query or no subsequent query is required, you do not need to specify this parameter.</para>
+        /// <item><description><para>If this is the first query or no subsequent query exists, leave this parameter empty.</para>
         /// </description></item>
-        /// <item><description><para>If a subsequent query is required, set the value to the <b>NextToken</b> value returned in the previous API call.</para>
+        /// <item><description><para>If a subsequent query exists, set this parameter to the <b>NextToken</b> value returned by the previous API call.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the NAT gateway.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

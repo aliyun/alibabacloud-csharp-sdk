@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UpdateEnhancedVpnGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic route propagation for the enhanced VPN gateway. Valid values:</para>
+        /// <para>Specifies whether to enable the routing automatic propagation feature for the enhanced VPN gateway instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b><br>
-        /// The enhanced VPN gateway automatically learns system routes from the system route table of the VPC and propagates routes from the on-premises data center to the system route table of the VPC.<br></para>
+        /// <item><description><para><b>true</b>: enabled.<br>
+        /// After routing automatic propagation is enabled, the enhanced VPN gateway instance uses automatic learning to obtain system routes from the system route table of the VPC instance and automatically propagates routes of the on-premises data center to the system route table of the VPC instance.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b><br>
-        /// Automatic route propagation is disabled. Before you disable this feature, make sure that BGP dynamic routing is disabled for all IPsec-VPN connections of the enhanced VPN gateway.<br></para>
+        /// <item><description><para><b>false</b>: disabled.<br>
+        /// Before you disable routing automatic propagation, make sure that BGP dynamic route is disabled for all IPsec-VPN connections under the enhanced VPN gateway.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can generate a token from your client to make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify a <c>ClientToken</c>, the system automatically uses the <c>RequestId</c> of the API request as the <c>ClientToken</c>. Each API request has a different <c>RequestId</c>.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The new name of the enhanced VPN gateway.</para>
-        /// <para>The name must be 2 to 100 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 2 to 100 characters in length. It cannot start with http:// or https://. It must start with an uppercase or lowercase letter and can contain uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). Other special characters are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myvpn</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the enhanced VPN gateway is located. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>The region ID of the enhanced VPN gateway instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the enhanced VPN gateway.</para>
+        /// <para>The ID of the enhanced VPN gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -12,12 +12,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b>: Disables automatic payment. You must go to the Order Center to pay for the order.</para>
+        /// <item><description><para><b>false</b>: Automatic payment is disabled. After an order is generated, go to the Order Center to complete the payment.</para>
         /// </description></item>
-        /// <item><description><para><b>true</b>: Enables automatic payment. The payment is completed automatically.</para>
+        /// <item><description><para><b>true</b>: Automatic payment is enabled. The order is automatically paid.</para>
         /// </description></item>
         /// </list>
-        /// <para>This parameter is required only when <b>InstanceChargeType</b> is set to <b>PrePaid</b>.</para>
+        /// <para>This parameter is required if <b>InstanceChargeType</b> is set to <b>PrePaid</b>. This parameter is optional if <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -27,16 +27,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The peak bandwidth of the EIP. Unit: Mbps.</para>
+        /// <para>The maximum bandwidth of the EIP to allocate. Unit: Mbit/s.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>InstanceChargeType</b> is <b>PostPaid</b> (pay-as-you-go) and <b>InternetChargeType</b> is <b>PayByBandwidth</b>, <b>Bandwidth</b> can be from <b>1</b> to <b>500</b>.</para>
+        /// <item><description><para>If <b>InstanceChargeType</b> is set to <b>PostPaid</b> and <b>InternetChargeType</b> is set to <b>PayByBandwidth</b>, valid values of <b>Bandwidth</b> are <b>1</b> to <b>500</b>.</para>
         /// </description></item>
-        /// <item><description><para>If <b>InstanceChargeType</b> is <b>PostPaid</b> (pay-as-you-go) and <b>InternetChargeType</b> is <b>PayByTraffic</b>, <b>Bandwidth</b> can be from <b>1</b> to <b>200</b>.</para>
+        /// <item><description><para>If <b>InstanceChargeType</b> is set to <b>PostPaid</b> and <b>InternetChargeType</b> is set to <b>PayByTraffic</b>, valid values of <b>Bandwidth</b> are <b>1</b> to <b>200</b>.</para>
         /// </description></item>
-        /// <item><description><para>If <b>InstanceChargeType</b> is <b>PrePaid</b> (subscription), <b>Bandwidth</b> can be from <b>1</b> to <b>1000</b>.</para>
+        /// <item><description><para>If <b>InstanceChargeType</b> is set to <b>PrePaid</b>, valid values of <b>Bandwidth</b> are <b>1</b> to <b>1000</b>.</para>
         /// </description></item>
         /// </list>
-        /// <para>Default value: <b>5</b>.</para>
+        /// <para>Default value: <b>5</b> Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>A token used to ensure the idempotence of the request.</para>
-        /// <para>You must ensure that this token is unique across requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> differs for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,31 +62,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The line type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>BGP</b> (default): BGP (Multi-ISP) line. All regions support EIPs that use BGP (Multi-ISP) lines.</para>
-        /// </description></item>
-        /// <item><description><para><b>BGP_PRO</b>: BGP (Multi-ISP) Pro line. This line type is available only in the China (Hong Kong), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</para>
-        /// </description></item>
+        /// <item><description><b>BGP</b> (default): BGP (multi-ISP) line. All regions support BGP (multi-ISP) EIPs.</description></item>
+        /// <item><description><b>BGP_PRO</b>: BGP (multi-ISP) Pro line. Only the following regions support BGP (multi-ISP) Pro EIPs: Hong Kong (China), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</description></item>
         /// </list>
-        /// <para>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</para>
+        /// <para>For more information about BGP (multi-ISP) and BGP (multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</para>
         /// <list type="bullet">
-        /// <item><description><para>If your account is on the allowlist for single-ISP bandwidth, you can also select one of the following values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>ChinaTelecom</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ChinaUnicom</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ChinaMobile</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ChinaTelecom_L2</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ChinaUnicom_L2</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ChinaMobile_L2</b></para>
-        /// </description></item>
+        /// <item><description>If you are a single-ISP bandwidth whitelist user, you can also select the following types:<list type="bullet">
+        /// <item><description><b>ChinaTelecom</b>: China Telecom</description></item>
+        /// <item><description><b>ChinaUnicom</b>: China Unicom</description></item>
+        /// <item><description><b>ChinaMobile</b>: China Mobile</description></item>
+        /// <item><description><b>ChinaTelecom_L2</b>: China Telecom L2</description></item>
+        /// <item><description><b>ChinaUnicom_L2</b>: China Unicom L2</description></item>
+        /// <item><description><b>ChinaMobile_L2</b>: China Mobile L2</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>For China (Hangzhou) Finance Cloud users, this parameter is required and must be set to <b>BGP_FinanceCloud</b>.</para>
-        /// </description></item>
+        /// <item><description>If you are a China (Hangzhou) Finance Cloud user, this parameter is required. Set the value to <b>BGP_FinanceCloud</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,15 +87,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ISP { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the EIP. Valid values:</para>
+        /// <para>The billing method of the EIP to allocate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PrePaid</b>: subscription</para>
+        /// <item><description><para><b>PrePaid</b>: subscription.</para>
         /// </description></item>
-        /// <item><description><para><b>PostPaid</b> (default): pay-as-you-go</para>
+        /// <item><description><para><b>PostPaid</b> (default): pay-as-you-go.</para>
         /// </description></item>
         /// </list>
         /// <para>If <b>InstanceChargeType</b> is set to <b>PrePaid</b>, <b>InternetChargeType</b> must be set to <b>PayByBandwidth</b>.</para>
-        /// <para>If <b>InstanceChargeType</b> is set to <b>PostPaid</b>, you can set <b>InternetChargeType</b> to <b>PayByBandwidth</b> or <b>PayByTraffic</b>.</para>
+        /// <para>If <b>InstanceChargeType</b> is set to <b>PostPaid</b>, <b>InternetChargeType</b> can be set to <b>PayByBandwidth</b> or <b>PayByTraffic</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -115,8 +105,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the EIP to be allocated.</para>
-        /// <para>You can specify either <b>IpAddress</b> or <b>InstanceId</b>. If you do not specify either parameter, the system randomly allocates an EIP.</para>
+        /// <para>The instance ID of the EIP to allocate.</para>
+        /// <para>You need to specify only one of <b>IpAddress</b> and <b>InstanceId</b>. If neither is specified, the system randomly allocates an EIP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip-25877c70gddh****</para>
@@ -126,15 +116,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The metering method of the EIP. Valid values:</para>
+        /// <para>The metering method of the EIP to allocate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PayByBandwidth</b> (default): pay-by-bandwidth</para>
+        /// <item><description><para><b>PayByBandwidth</b> (default): pay-by-bandwidth.</para>
         /// </description></item>
-        /// <item><description><para><b>PayByTraffic</b>: pay-by-traffic</para>
+        /// <item><description><para><b>PayByTraffic</b>: pay-by-data-transfer.</para>
         /// </description></item>
         /// </list>
         /// <para>If <b>InstanceChargeType</b> is set to <b>PrePaid</b>, <b>InternetChargeType</b> must be set to <b>PayByBandwidth</b>.</para>
-        /// <para>If <b>InstanceChargeType</b> is set to <b>PostPaid</b>, you can set <b>InternetChargeType</b> to <b>PayByBandwidth</b> or <b>PayByTraffic</b>.</para>
+        /// <para>If <b>InstanceChargeType</b> is set to <b>PostPaid</b>, <b>InternetChargeType</b> can be set to <b>PayByBandwidth</b> or <b>PayByTraffic</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayByBandwidth</para>
@@ -144,8 +134,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the EIP to be allocated.</para>
-        /// <para>You can specify either <b>IpAddress</b> or <b>InstanceId</b>. If you do not specify either parameter, the system randomly allocates an EIP.</para>
+        /// <para>The IP address of the EIP to allocate.</para>
+        /// <para>You need to specify only one of <b>IpAddress</b> and <b>InstanceId</b>. If neither is specified, the system randomly allocates an EIP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -155,7 +145,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpAddress { get; set; }
 
         /// <summary>
-        /// <para>The network type. The only valid value is <b>public</b> (default), which indicates the public network.</para>
+        /// <para>The network type. The value can only be <b>public</b> (default), which indicates the public network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>public</para>
@@ -173,15 +163,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription period.</para>
+        /// <para>The subscription duration.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>PricingCycle</b> is <b>Month</b>, <b>Period</b> can be from <b>1</b> to <b>9</b>.</para>
+        /// <item><description><para>If <b>PricingCycle</b> is set to <b>Month</b>, valid values of <b>Period</b> are <b>1</b> to <b>9</b>.</para>
         /// </description></item>
-        /// <item><description><para>If <b>PricingCycle</b> is <b>Year</b>, <b>Period</b> can be from <b>1</b> to <b>3</b>.</para>
+        /// <item><description><para>If <b>PricingCycle</b> is set to <b>Year</b>, valid values of <b>Period</b> are <b>1</b> to <b>3</b>.</para>
         /// </description></item>
         /// </list>
-        /// <para>This parameter is required when <b>InstanceChargeType</b> is set to <b>PrePaid</b>.</para>
-        /// <para>If <c>InstanceChargeType</c> is set to <c>PostPaid</c>, this parameter is not required.</para>
+        /// <para>This parameter is required if <b>InstanceChargeType</b> is set to <b>PrePaid</b>.</para>
+        /// <para>Do not set this parameter if <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -191,14 +181,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle of the subscription EIP. Valid values:</para>
+        /// <para>The billing cycle of the subscription. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Month</b> (default): Billed monthly.</para>
+        /// <item><description><para><b>Month</b> (default): billed on a monthly basis.</para>
         /// </description></item>
-        /// <item><description><para><b>Year</b>: Billed annually.</para>
+        /// <item><description><para><b>Year</b>: billed on a yearly basis.</para>
         /// </description></item>
         /// </list>
-        /// <para>This parameter is required only when <b>InstanceChargeType</b> is set to <b>PrePaid</b> (subscription).</para>
+        /// <para>This parameter is required if <b>InstanceChargeType</b> is set to <b>PrePaid</b>. This parameter is optional if <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -208,8 +198,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IP address pool from which to allocate the EIP.</para>
-        /// <para>This feature is disabled by default. To use this feature, apply for the required permissions in Quota Center. For more information, see <a href="https://help.aliyun.com/document_detail/108213.html">Increase quotas by using Quota Center</a>.</para>
+        /// <para>The ID of the IP address pool.</para>
+        /// <para>The EIP is allocated from the specified IP address pool.</para>
+        /// <para>The IP address pool feature is not available by default. To use this feature, apply for the IP address pool privilege quota in Quota Center. For more information, see <a href="https://help.aliyun.com/document_detail/108213.html">Increase a quota in Quota Center</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pippool-2vc0kxcedhquybdsz****</para>
@@ -219,8 +210,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PublicIpAddressPoolId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the EIP is to be allocated.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the EIP to allocate.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -231,7 +222,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group for the EIP.</para>
+        /// <para>The ID of the resource group to which the EIP belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-resourcegroup****</para>
@@ -251,9 +242,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The security protection level.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify this parameter, DDoS Protection (Basic) is enabled by default.</para>
+        /// <item><description><para>If this parameter is left empty, the default value is Anti-DDoS Basic.</para>
         /// </description></item>
-        /// <item><description><para>Set the value to <b>AntiDDoS_Enhanced</b> to enable DDoS Protection (Enhanced).</para>
+        /// <item><description><para>If this parameter is set to <b>AntiDDoS_Enhanced</b>, Anti-DDoS (Enhanced) is enabled.</para>
         /// </description></item>
         /// </list>
         /// </summary>
@@ -261,23 +252,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public List<string> SecurityProtectionTypes { get; set; }
 
-        /// <summary>
-        /// <para>The tags to add to the EIP.</para>
-        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<AllocateEipAddressProRequestTag> Tag { get; set; }
         public class AllocateEipAddressProRequestTag : TeaModel {
-            /// <summary>
-            /// <para>The tag key.</para>
-            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
-            /// <summary>
-            /// <para>The tag value.</para>
-            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

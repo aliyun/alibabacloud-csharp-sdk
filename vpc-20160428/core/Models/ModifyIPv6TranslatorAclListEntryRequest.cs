@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyIPv6TranslatorAclListEntryRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks of the ACL rule.</para>
-        /// <para>It must be 2 to 100 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The description of the access control policy group entry.</para>
+        /// <para>The description must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), or hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclEntryComment { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ACL rule to which the IP entry belongs.</para>
+        /// <para>The ID of the access control policy group entry that contains the IP entry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclEntryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ACL to which the IP entry belongs.</para>
+        /// <para>The ID of the access control policy group that contains the IP entry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region of the ACL.</para>
+        /// <para>The region of the access control policy group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

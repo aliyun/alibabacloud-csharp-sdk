@@ -16,9 +16,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run without querying resource status. The check items include whether the AccessKey pair is valid, whether the RAM user is authorized, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM user authorization, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): performs a normal request. After the check succeeds, a 2xx HTTP status code is returned and the resource status is queried directly.</para>
+        /// <item><description><para><b>false</b> (default): performs a dry run and sends the request. After the request passes the dry run, a 2xx HTTP status code is returned and the resource status is queried. This is the Normal request behavior.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -30,13 +30,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The billing method of the NAT gateway instance to query. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The billing method of the NAT gateway instance that you want to query. Valid values:</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>PrePaid</b>: the legacy subscription billing method. The subscription billing method is no longer available for new purchases.</description></item>
+        /// <item><description><b>PrePaid</b>: the legacy subscription billing method. New purchases under the subscription billing method are no longer supported.</description></item>
         /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;The billing method of the NAT gateway instance to query. Valid value: <b>PostPaid</b> (pay-as-you-go).</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;The billing method of the NAT gateway instance that you want to query. Valid value: <b>PostPaid</b> (pay-as-you-go).</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The name of the NAT gateway to query.</para>
+        /// <para>The name of the NAT gateway that you want to query.</para>
         /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT gateway to query.</para>
+        /// <para>The ID of the NAT gateway that you want to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-bp1uewa15k4iy5770****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatType { get; set; }
 
         /// <summary>
-        /// <para>The type of the NAT gateway to query. Valid values:</para>
+        /// <para>The type of the NAT gateway that you want to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>internet</b>: Internet NAT gateway.</description></item>
         /// <item><description><b>intranet</b>: VPC NAT gateway.</description></item>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paginated queries. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the NAT gateway to query.</para>
+        /// <para>The region ID of the NAT gateway that you want to query.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the NAT gateway to query belongs.</para>
+        /// <para>The ID of the resource group to which the NAT gateway that you want to query belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4ph****</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The specification of the Internet NAT gateway. Only when <b>InstanceChargeType</b> is <b>PrePaid</b> (legacy subscription Internet NAT gateway), creating a NAT gateway by fixed specification is supported. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The specification of the Internet NAT gateway. This parameter is supported only when <b>InstanceChargeType</b> is set to <b>PrePaid</b> (legacy subscription Internet NAT gateway) to create a NAT gateway with defined specifications. Valid values:</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description><b>Small</b> (default): small.</description></item>
@@ -166,17 +166,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Spec { get; set; }
 
         /// <summary>
-        /// <para>The status of the NAT gateway to query. Valid values:</para>
+        /// <para>The status of the NAT gateway that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Creating</b>: Creating a NAT gateway is an asynchronous operation. The status is <b>Creating</b> before the creation is complete.</para>
+        /// <item><description><para><b>Creating</b>: The NAT gateway is being created. Creating a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Creating</b> state until the operation is complete.</para>
         /// </description></item>
-        /// <item><description><para><b>Available</b>: The status after the NAT gateway is created. This is a stable status.</para>
+        /// <item><description><para><b>Available</b>: The NAT gateway is available. This is a stable state after the NAT gateway is created.</para>
         /// </description></item>
-        /// <item><description><para><b>Modifying</b>: Modifying a NAT gateway is an asynchronous operation. The status is <b>Modifying</b> during the modification process.</para>
+        /// <item><description><para><b>Modifying</b>: The NAT gateway is being modified. Modifying a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Modifying</b> state until the operation is complete.</para>
         /// </description></item>
-        /// <item><description><para><b>Deleting</b>: Deleting a NAT gateway is an asynchronous operation. The status is <b>Deleting</b> during the deletion process.</para>
+        /// <item><description><para><b>Deleting</b>: The NAT gateway is being deleted. Deleting a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Deleting</b> state until the operation is complete.</para>
         /// </description></item>
-        /// <item><description><para><b>Converting</b>: Converting a standard NAT gateway to an enhanced NAT gateway is an asynchronous operation. The status is <b>Converting</b> during the conversion process.</para>
+        /// <item><description><para><b>Converting</b>: The NAT gateway is being upgraded from a standard NAT gateway to an enhanced NAT gateway. This is an asynchronous operation. The NAT gateway remains in the <b>Converting</b> state until the operation is complete.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class DescribeNatGatewaysRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the NAT gateway instance. You can specify up to 20 tag keys.</para>
-            /// <para>The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KeyTest</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the NAT gateway instance. You can specify up to 20 tag values.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>valueTest</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the NAT gateway to query belongs.</para>
+        /// <para>The ID of the VPC to which the NAT gateway that you want to query belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp15zckdt37pq72z****</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone where the NAT gateway is deployed.</para>
+        /// <para>The zone ID of the NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-b</para>

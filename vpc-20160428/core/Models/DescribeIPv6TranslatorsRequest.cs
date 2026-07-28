@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The business status of the IPv6 Translation Service instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b></description></item>
-        /// <item><description><b>FinancialLocked</b></description></item>
+        /// <item><description><para><b>Normal</b>: normal.</para>
+        /// </description></item>
+        /// <item><description><para><b>FinancialLocked</b>: locked.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in paging query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -92,10 +94,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the IPv6 Translation Service instance. Valid values:</para>
+        /// <para>The billing transform type of the IPv6 Translation Service instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Prepay</b>: subscription</description></item>
-        /// <item><description><b>Postpay</b>: pay-as-you-go</description></item>
+        /// <item><description><para><b>Prepay</b>: subscription.</para>
+        /// </description></item>
+        /// <item><description><para><b>Postpay</b>: pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,7 +110,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The region of the IPv6 Translation Service instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region of the IPv6 Translation Service instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -125,7 +129,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The specification of the IPv6 Translation Service instance. Set the value to <b>small</b>.</para>
+        /// <para>The specification of the IPv6 Translation Service instance. Valid values: <b>small</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>small</para>
@@ -137,13 +141,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the IPv6 Translation Service instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b></description></item>
-        /// <item><description><b>provisioning</b></description></item>
-        /// <item><description><b>active</b></description></item>
-        /// <item><description><b>updating</b></description></item>
-        /// <item><description><b>upgrading</b></description></item>
-        /// <item><description><b>deleting</b></description></item>
-        /// <item><description><b>deleted</b></description></item>
+        /// <item><description><para><b>init</b>: initializing.</para>
+        /// </description></item>
+        /// <item><description><para><b>provisioning</b>: being provisioned.</para>
+        /// </description></item>
+        /// <item><description><para><b>active</b>: available.</para>
+        /// </description></item>
+        /// <item><description><para><b>updating</b>: being updated.</para>
+        /// </description></item>
+        /// <item><description><para><b>upgrading</b>: being upgraded.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleting</b>: being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleted</b>: deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

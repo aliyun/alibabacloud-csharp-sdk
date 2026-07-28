@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CompletePhysicalConnectionLOARequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the system automatically uses <b>RequestId</b> as <b>ClientToken</b>. <b>RequestId</b> of each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether the construction is completed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The construction is completed.</description></item>
+        /// <item><description><b>false</b>: Line O&amp;M.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? FinishWork { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Express Connect circuit.</para>
+        /// <para>The instance ID of the Express Connect circuit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The circuit code provided by the connectivity provider.</para>
+        /// <para>The line code of the telecommunications service provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aaa111****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LineCode { get; set; }
 
         /// <summary>
-        /// <para>The label of the cable in the data center.</para>
+        /// <para>The cable label in the data center building.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bbb222****</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LineLabel { get; set; }
 
         /// <summary>
-        /// <para>The contact information about line O\&amp;M.</para>
+        /// <para>The O&amp;M contact information of the line.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1388888****</para>
@@ -79,12 +79,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LineSPContactInfo { get; set; }
 
         /// <summary>
-        /// <para>The ISP. Valid values:</para>
+        /// <para>The telecommunications service provider. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>China Telecom</b></description></item>
-        /// <item><description><b>China Unicom</b></description></item>
-        /// <item><description><b>China Mobile</b></description></item>
-        /// <item><description><b>Other ISPs in China</b></description></item>
+        /// <item><description><b>中国电信</b></description></item>
+        /// <item><description><b>中国联通</b></description></item>
+        /// <item><description><b>中国移动</b></description></item>
+        /// <item><description><b>中国其他</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the Express Connect circuit.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

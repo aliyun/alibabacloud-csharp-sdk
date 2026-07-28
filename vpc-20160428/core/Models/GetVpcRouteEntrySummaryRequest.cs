@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the route table.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the route table resides.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,11 +40,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b>: all route types</description></item>
-        /// <item><description><b>Custom</b>: a custom route</description></item>
-        /// <item><description><b>System</b>: a system route</description></item>
-        /// <item><description><b>BGP</b>: a BGP route</description></item>
-        /// <item><description><b>CEN</b>: a Cloud Enterprise Network (CEN) route</description></item>
+        /// <item><description><b>all</b>: all route types.</description></item>
+        /// <item><description><b>custom</b>: custom route.</description></item>
+        /// <item><description><b>system</b>: system route.</description></item>
+        /// <item><description><b>bgp</b>: BGP route.</description></item>
+        /// <item><description><b>cen</b>: Cloud Enterprise Network (CEN) route.</description></item>
+        /// <item><description><b>type_vpn_bgp_internal</b>: VPN BGP route.</description></item>
+        /// <item><description><b>ECR</b>: Express Connect Router (ECR) route.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteEntryType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table that you want to query.</para>
+        /// <para>The ID of the route table to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-bp145q7glnuzdvzu2****</para>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the route table belongs.</para>
+        /// <para>The ID of the VPC to which the route table belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

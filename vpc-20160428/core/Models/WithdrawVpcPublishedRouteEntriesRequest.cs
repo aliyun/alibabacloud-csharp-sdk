@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class WithdrawVpcPublishedRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without withdrawing the published routing entry. The system checks the required parameters, request format, and business limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the check succeeds, an HTTP 2xx status code is returned and the operation to withdraw the VPC published routing entry is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. Call the DescribeRegions operation to access it.</para>
+        /// <para>The region ID of the instance. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The route entries to be withdrawn. Maximum value: 50.</para>
+        /// <para>The list of route entries to withdraw. You can specify up to 50 route entries.</para>
         /// </summary>
         [NameInMap("RouteEntries")]
         [Validation(Required=false)]
         public List<WithdrawVpcPublishedRouteEntriesRequestRouteEntries> RouteEntries { get; set; }
         public class WithdrawVpcPublishedRouteEntriesRequestRouteEntries : TeaModel {
             /// <summary>
-            /// <para>The destination CIDR block</para>
+            /// <para>The destination CIDR block of the route entry.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route table.</para>
+            /// <para>The route table ID of the route entry.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Target instance ID.</para>
+        /// <para>The publish route entry target instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TargetInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of target instance.</para>
+        /// <para>The type of the route publish target.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

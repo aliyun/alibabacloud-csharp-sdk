@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<ListIpsecServersResponseBodyIpsecServers> IpsecServers { get; set; }
         public class ListIpsecServersResponseBodyIpsecServers : TeaModel {
             /// <summary>
-            /// <para>The client CIDR block. It refers to the CIDR block that is allocated to the virtual interface of the client.</para>
+            /// <para>The client CIDR block, which is the CIDR block from which IP addresses are assigned to the virtual network interface controllers (NICs) of clients.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.0.0/24</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The time when the IPsec server was created.</para>
-            /// <para>T is used as a delimiter. Z indicates that the time is in UTC.</para>
+            /// <para>T is the delimiter. Z indicates UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-12-03T10:11:55Z</para>
@@ -38,10 +38,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current IPsec tunnel is deleted and negotiations are reinitiated. Valid values:</para>
+            /// <para>Indicates whether the current IPsec tunnel is deleted and negotiations are reinitiated.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: immediately initiates negotiations after the configuration is completed.</description></item>
-            /// <item><description><b>false</b>: initiates negotiations when inbound traffic is detected.</description></item>
+            /// <item><description><para><b>true</b>: Negotiations are reinitiated after the configuration is complete.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Negotiations are reinitiated when traffic is detected.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public bool? EffectImmediately { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IDaaS instance.</para>
+            /// <para>The instance ID of IDaaS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas-cn-hangzhou-****</para>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 /// <summary>
                 /// <para>The IKE negotiation mode. Valid values:</para>
-                /// <para><b>main</b>: This mode offers higher security during negotiations.</para>
+                /// <para><b>main</b>: main mode. Negotiations are highly secure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>main</para>
@@ -130,7 +132,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeVersion { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the IPsec server. The default value is the public IP address of the VPN gateway. Both FQDNs and IP addresses are supported.</para>
+                /// <para>The identifier of the IPsec server. FQDN and IP address formats are supported. The default value is the public IP address of the selected VPN gateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>116.64.XX.XX</para>
@@ -140,7 +142,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string LocalId { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the customer gateway. Both fully qualified domain names (FQDNs) and IP addresses are supported. By default, this parameter is empty.</para>
+                /// <para>The identifier of the peer. FQDN and IP address formats are supported. The default value is empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>139.67.XX.XX</para>
@@ -211,7 +213,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The IPsec server ID.</para>
+            /// <para>The ID of the IPsec server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iss-bp1bo3xuvcxo7ixll****</para>
@@ -231,7 +233,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IpsecServerName { get; set; }
 
             /// <summary>
-            /// <para>The local CIDR blocks, which refer to the CIDR blocks on the virtual private cloud (VPC) side.</para>
+            /// <para>The local CIDR block, which is the VPC-side CIDR block that needs to communicate with the client CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/16,172.17.0.0/16</para>
@@ -241,9 +243,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LocalSubnet { get; set; }
 
             /// <summary>
-            /// <para>The number of SSL-VPN connections supported by the VPN gateway.</para>
+            /// <para>The maximum number of SSL-VPN connections supported by the VPN gateway.</para>
             /// <remarks>
-            /// <para> The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, you have five SSL-VPN connections and three SSL clients occupy three SSL-VPN connections. In this case, two clients can connect to the IPsec server.</para>
+            /// <para>SSL-VPN and the IPsec server share SSL-VPN connections. For example, if the maximum number of SSL-VPN connections is 5 and three SSL clients are already connected to SSL-VPN, only two more clients can connect to the IPsec server.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -254,10 +256,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? MaxConnections { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether two-factor authentication is enabled. Valid values:</para>
+            /// <para>Indicates whether two-factor authentication is enabled.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b>: The feature is disabled.</description></item>
+            /// <item><description><para><b>true</b>: Two-factor authentication is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Two-factor authentication is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -288,7 +292,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Psk { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether pre-shared key authentication is enabled. Only <b>true</b> may be returned, which indicates that pre-shared key authentication is enabled.</para>
+            /// <para>Indicates whether pre-shared key authentication is enabled. The value is <b>true</b>, which indicates that pre-shared key authentication is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -298,7 +302,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public bool? PskEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the IPsec server is created.</para>
+            /// <para>The region ID of the IPsec server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -309,7 +313,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The ID of the resource group to which the IPsec server belongs.</para>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group information.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmzs372yg****</para>
@@ -331,7 +335,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -341,10 +345,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for <b>NextToken</b>, no next queries are sent.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, no subsequent query is to be sent.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>NextToken</b> is returned, the value indicates the token for the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

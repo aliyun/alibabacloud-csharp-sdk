@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <item><description><b>VpnIPsecQuota</b>: VPN gateway IPsec-VPN connection quota.</description></item>
             /// <item><description><b>VpnPbrRouteQuota</b>: VPN gateway policy-based route quota.</description></item>
             /// <item><description><b>VcoConfigConsistency</b>: IPsec configuration consistency.</description></item>
-            /// <item><description><b>VcoUserInternetIpConnectivity</b>: public connectivity of the customer gateway.</description></item>
+            /// <item><description><b>VcoUserInternetIpConnectivity</b>: public network connectivity of the customer gateway.</description></item>
             /// <item><description><b>VcoPrivateConnectivity</b>: private network connectivity.</description></item>
             /// </list>
             /// <para>For more information about each diagnostic item, see <a href="https://help.aliyun.com/document_detail/190330.html">One-click diagnostics background information</a>.</para>
@@ -63,41 +63,41 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <list type="bullet">
             /// <item><description><b>RouteEntryConflict</b>: The system returns information about the route conflict.</description></item>
             /// <item><description><b>VpnRouteQuota</b>:<list type="bullet">
-            /// <item><description><b>quotaName</b>: the ID of the destination route quota.</description></item>
-            /// <item><description><b>quantity</b>: the number of destination routes that the current VPN gateway instance supports.</description></item>
-            /// <item><description><b>used</b>: the number of destination routes that have been created for the current VPN gateway instance.</description></item>
+            /// <item><description><b>quotaName</b>: The destination route quota ID.</description></item>
+            /// <item><description><b>quantity</b>: The number of destination routes that the current VPN gateway instance supports.</description></item>
+            /// <item><description><b>used</b>: The number of destination routes that have been created for the current VPN gateway instance.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><b>VpnIPsecQuota</b>:<list type="bullet">
-            /// <item><description><b>quotaName</b>: the ID of the IPsec-VPN connection quota.</description></item>
-            /// <item><description><b>quantity</b>: the number of IPsec-VPN connections that the current VPN gateway instance supports.</description></item>
-            /// <item><description><b>used</b>: the number of IPsec-VPN connections that have been created for the current VPN gateway instance.</description></item>
+            /// <item><description><b>quotaName</b>: The IPsec-VPN connection quota ID.</description></item>
+            /// <item><description><b>quantity</b>: The number of IPsec-VPN connections that the current VPN gateway instance supports.</description></item>
+            /// <item><description><b>used</b>: The number of IPsec-VPN connections that have been created for the current VPN gateway instance.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><b>VpnPbrRouteQuota</b>:<list type="bullet">
-            /// <item><description><b>quotaName</b>: the ID of the policy-based route quota.</description></item>
-            /// <item><description><b>quantity</b>: the number of policy-based routes that the current VPN gateway instance supports.</description></item>
-            /// <item><description><b>used</b>: the number of policy-based routes that have been created for the current VPN gateway instance.</description></item>
+            /// <item><description><b>quotaName</b>: The policy-based route quota ID.</description></item>
+            /// <item><description><b>quantity</b>: The number of policy-based routes that the current VPN gateway instance supports.</description></item>
+            /// <item><description><b>used</b>: The number of policy-based routes that have been created for the current VPN gateway instance.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><b>VcoConfigConsistency</b>:<list type="bullet">
-            /// <item><description><b>vcoLackConf</b>: the system cannot obtain the configuration of the peer end of the IPsec-VPN connection.</description></item>
-            /// <item><description><b>vcoRunningConf</b>: the configuration that has been added to the peer end of the IPsec-VPN connection.</description></item>
-            /// <item><description><b>vcoDiffConf</b>: the list of configurations that are inconsistent between the local end and the peer end of the IPsec-VPN connection.</description></item>
-            /// <item><description><b>vcoConf</b>: the configuration that has been added to the local end of the IPsec-VPN connection.</description></item>
+            /// <item><description><b>vcoLackConf</b>: The system cannot obtain the configuration of the peer end of the IPsec-VPN connection.</description></item>
+            /// <item><description><b>vcoRunningConf</b>: The configuration that has been added to the peer end of the IPsec-VPN connection.</description></item>
+            /// <item><description><b>vcoDiffConf</b>: The list of configurations that are inconsistent between the local end and the peer end of the IPsec-VPN connection.</description></item>
+            /// <item><description><b>vcoConf</b>: The configuration that has been added to the local end of the IPsec-VPN connection.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><b>VcoUserInternetIpConnectivity</b>:<list type="bullet">
-            /// <item><description><b>targetIp</b>: the public IP address of the customer gateway.</description></item>
-            /// <item><description><b>rtt</b>: the latency when the system accesses the public IP address of the customer gateway. Unit: ms.</description></item>
-            /// <item><description><b>lossRate</b>: the packet loss rate when the system accesses the public IP address of the customer gateway.</description></item>
+            /// <item><description><b>targetIp</b>: The public IP address of the customer gateway.</description></item>
+            /// <item><description><b>rtt</b>: The latency when the system accesses the public IP address of the customer gateway. Unit: ms.</description></item>
+            /// <item><description><b>lossRate</b>: The packet loss rate when the system accesses the public IP address of the customer gateway.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><b>VcoPrivateConnectivity</b>:<list type="bullet">
-            /// <item><description><b>targetIp</b>: the source IP address.</description></item>
-            /// <item><description><b>srcIp</b>: the destination IP address.</description></item>
-            /// <item><description><b>rtt</b>: the latency when the source IP address accesses the destination IP address. Unit: ms.</description></item>
-            /// <item><description><b>lossRate</b>: the packet loss rate when the source IP address accesses the destination IP address.</description></item>
+            /// <item><description><b>targetIp</b>: The source IP address.</description></item>
+            /// <item><description><b>srcIp</b>: The destination IP address.</description></item>
+            /// <item><description><b>rtt</b>: The latency when the source IP address accesses the destination IP address. Unit: ms.</description></item>
+            /// <item><description><b>lossRate</b>: The packet loss rate when the source IP address accesses the destination IP address.</description></item>
             /// </list>
             /// </description></item>
             /// </list>

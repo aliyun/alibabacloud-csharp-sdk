@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeGrantRulesToEcrResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The cross-account authorization list of the ECR</para>
+        /// <para>The cross-account authorization list of Express Connect Router (ECR).</para>
         /// </summary>
         [NameInMap("EcrGrantRules")]
         [Validation(Required=false)]
         public List<DescribeGrantRulesToEcrResponseBodyEcrGrantRules> EcrGrantRules { get; set; }
         public class DescribeGrantRulesToEcrResponseBodyEcrGrantRules : TeaModel {
             /// <summary>
-            /// <para>The authorization time. The time follows the ISO8601 standard and uses UTC time. The format is YYYY-MM-DDThh:mm:ssZ.</para>
+            /// <para>The authorization time. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-15T14:00:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ECR account ID.</para>
+            /// <para>The instance ID of the cross-account authorization for the Express Connect Router (ECR).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecr-xxxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string EcrInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ECR account ID.</para>
+            /// <para>The authorized user ID for the cross-account authorization of the Express Connect Router (ECR).</para>
             /// 
             /// <b>Example:</b>
             /// <para>11111111111</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on each page. Maximum value: 50. Default value: 10.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: 50. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C1CCAB91-6AE6-50E3-AAA3-D0E5A2BC6ADE</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyVpcPrefixListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the prefix list.</para>
+        /// <para>The instance ID of the prefix list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-0b7hwu67****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PrefixListId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54B48E3D-DF70-471B-AA93-08E683A1B45</para>

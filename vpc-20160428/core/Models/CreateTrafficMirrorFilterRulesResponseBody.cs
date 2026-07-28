@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateTrafficMirrorFilterRulesResponseBodyEgressRules> EgressRules { get; set; }
         public class CreateTrafficMirrorFilterRulesResponseBodyEgressRules : TeaModel {
             /// <summary>
-            /// <para>The ID of the outbound rule.</para>
+            /// <para>The instance ID of the outbound rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tmr-j6cok23ugp53eeib5****</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateTrafficMirrorFilterRulesResponseBodyIngressRules> IngressRules { get; set; }
         public class CreateTrafficMirrorFilterRulesResponseBodyIngressRules : TeaModel {
             /// <summary>
-            /// <para>The ID of the inbound rule.</para>
+            /// <para>The instance ID of the inbound rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tmr-j6c6rtallo51ouzv3****</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>07F272E2-6AD5-433A-8207-A607C76F1676</para>

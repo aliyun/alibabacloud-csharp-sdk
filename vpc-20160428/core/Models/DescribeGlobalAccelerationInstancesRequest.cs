@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeGlobalAccelerationInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The bandwidth type of the GA instance. Valid values:</para>
+        /// <para>The bandwidth type of the Alibaba Cloud Global Accelerator (GA) instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>Sharing</b></description></item>
-        /// <item><description><b>Exclusive</b> (default)</description></item>
+        /// <item><description><para><b>Sharing</b>: Queries shared-bandwidth instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>Exclusive</b> (default): Queries dedicated-bandwidth instances.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BandwidthType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ga-234sljmxaz****</para>
@@ -34,10 +36,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GlobalAccelerationInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return information about pending orders. Valid values:</para>
+        /// <para>Specifies whether to include reservation data that has not taken effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default)</description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b> (default): Does not include reservation data that has not taken effect.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: Includes reservation data that has not taken effect.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? IncludeReservationData { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the GA instance.</para>
+        /// <para>The public IP address of the Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12.xx.xx.78</para>
@@ -58,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpAddress { get; set; }
 
         /// <summary>
-        /// <para>The name of the GA instance.</para>
+        /// <para>The name of the Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GA-1</para>
@@ -76,7 +80,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -86,7 +90,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for paging queries. Maximum value: <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -96,7 +100,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the GA instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region where the Alibaba Cloud Global Accelerator (GA) instance resides. You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +119,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backend service instance.</para>
+        /// <para>The instance ID of the backend service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-sxjblddejj9x****</para>
@@ -125,12 +129,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ServerId { get; set; }
 
         /// <summary>
-        /// <para>The region of the backend service. Valid values:</para>
+        /// <para>The backend service region. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>china-mainland</b></description></item>
-        /// <item><description><b>north-america</b></description></item>
-        /// <item><description><b>asia-pacific</b></description></item>
-        /// <item><description><b>europe</b></description></item>
+        /// <item><description><para><b>china-mainland</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>north-america</b>: North America.</para>
+        /// </description></item>
+        /// <item><description><para><b>asia-pacific</b>: Asia Pacific.</para>
+        /// </description></item>
+        /// <item><description><para><b>europe</b>: Europe.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,12 +149,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ServiceLocation { get; set; }
 
         /// <summary>
-        /// <para>The status of the GA instance. Valid values:</para>
+        /// <para>The instance status of the Alibaba Cloud Global Accelerator (GA) instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>Available</b></description></item>
-        /// <item><description><b>Inuse</b></description></item>
-        /// <item><description><b>Associating</b></description></item>
-        /// <item><description><b>Unassociating</b></description></item>
+        /// <item><description><para><b>Available</b>: active.</para>
+        /// </description></item>
+        /// <item><description><para><b>Inuse</b>: Allocated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Associating</b>: Being attached.</para>
+        /// </description></item>
+        /// <item><description><para><b>Unassociating</b>: Being disassociated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

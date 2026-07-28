@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIPv6TranslatorEntryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the associated ACL.</para>
+        /// <para>The ID of the associated access control policy group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6transacl-bp1g8bhrdexnrxxxx</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable access control lists (ACLs). Valid values:</para>
+        /// <para>Specifies whether to enable access control. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b></description></item>
+        /// <item><description><b>on</b>: Enabled.</description></item>
+        /// <item><description><b>off</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclStatus { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable ACLs. Valid values:</para>
+        /// <para>The type of access control:</para>
         /// <list type="bullet">
-        /// <item><description><b>white</b>: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</description></item>
-        /// <item><description><b>black</b>: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</description></item>
+        /// <item><description><para><b>white</b>: Allows the IPv6 addresses in the access control policy group to access backend services.</para>
+        /// </description></item>
+        /// <item><description><para><b>black</b>: Denies the IPv6 addresses in the access control policy group from accessing backend services.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclType { get; set; }
 
         /// <summary>
-        /// <para>The port that is used by the IPv6 address allocated to the IPv6 Translation Service instance.</para>
+        /// <para>The port used by the IPv6 address allocated by the IPv6 Translation Service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? AllocateIpv6Port { get; set; }
 
         /// <summary>
-        /// <para>The public IPv4 address that needs to provide IPv6 services.</para>
+        /// <para>The public IPv4 address that requires IPv6 services (the IPv4 address of the IPv4-only server).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BackendIpv4Addr { get; set; }
 
         /// <summary>
-        /// <para>The port of the public IPv4 address that needs to provide IPv6 services.</para>
+        /// <para>The port of the public IPv4 address that requires IPv6 services.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,13 +83,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? BackendIpv4Port { get; set; }
 
         /// <summary>
-        /// <para>The maximum bandwidth specified in the IPv6 mapping entry. Valid values:</para>
+        /// <para>The peak bandwidth of the IPv6 translation mapping entry. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>\-1 (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.</description></item>
-        /// <item><description>1 to 200: the bandwidth value specified in the IPv6 mapping entry. Unit: Mbit/s.</description></item>
+        /// <item><description>-1 (default): No bandwidth limit is imposed on the IPv6 translation mapping entry.  </description></item>
+        /// <item><description>1-200Mbps: The bandwidth value of the mapping entry.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The sum of the maximum bandwidth values specified in all IPv6 entries cannot exceed the maximum bandwidth supported by the instance.</para>
+        /// <para>The sum of peak bandwidth values of all IPv6 translation mapping entries cannot exceed the peak bandwidth of the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? EntryBandwidth { get; set; }
 
         /// <summary>
-        /// <para>The description of the IPv6 mapping entry.</para>
+        /// <para>The description of the IPv6 translation mapping entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EntryDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the IPv6 mapping entry. It must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the IPv6 translation mapping entry. The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name1</para>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EntryName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IPv6 Translation Service instance.</para>
+        /// <para>The instance ID of the IPv6 Translation Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -137,7 +139,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region of the IPv6 Translation Service instance. You can call the <b>DescribeRegions</b> operation to query the most recent region list.</para>
+        /// <para>The region of the IPv6 Translation Service instance. You can call the <b>DescribeRegions</b> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -156,10 +158,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The protocol. Valid values:</para>
+        /// <para>The protocol type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>tcp</b></description></item>
-        /// <item><description><b>udp</b></description></item>
+        /// <item><description><b>tcp</b>: Forwards TCP packets.  </description></item>
+        /// <item><description><b>udp</b>: Forwards UDP packets.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the resource group to which you want to move the cloud resource instance.</para>
         /// <remarks>
-        /// <para>A resource group is a mechanism for managing resources by group within an Alibaba Cloud account. Resource groups help you address complex resource grouping and authorization management issues within a single cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a>.</para>
+        /// <para>A resource group is a mechanism for grouping and managing resources within an Alibaba Cloud account. Resource groups help you address the complexity of resource grouping and authorization management within a single cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

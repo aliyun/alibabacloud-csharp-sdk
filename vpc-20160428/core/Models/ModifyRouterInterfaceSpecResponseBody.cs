@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// <item><description><para><b>Large.5</b>: 5000 Mbps</para>
         /// </description></item>
-        /// <item><description><para><b>Xlarge.1</b>: 10000 Mbps.</para>
+        /// <item><description><para><b>Xlarge.1</b>: 10000 Mbps</para>
         /// </description></item>
         /// </list>
         /// 

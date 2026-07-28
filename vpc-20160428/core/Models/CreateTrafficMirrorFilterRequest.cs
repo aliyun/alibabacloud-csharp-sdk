@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateTrafficMirrorFilterRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the value of <b>RequestId</b> as the value of <b>ClientToken</b>. The value of <b>RequestId</b> is different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> value as the <b>ClientToken</b> value. The <b>RequestId</b> value is different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the error code <c>DryRunOperation</c> is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the filter is created.</para>
+        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the traffic mirror filter is created.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The information about the outbound rules.</para>
+        /// <para>The information about outbound rules.</para>
         /// </summary>
         [NameInMap("EgressRules")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The destination CIDR block of the outbound rule.</para>
+            /// <para>The destination CIDR block of network traffic for the outbound rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.0.0/24</para>
@@ -71,9 +71,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The destination port range of the outbound rule. Valid values for port numbers: <b>1</b> to <b>65535</b>. Separate the start port and end port with a forward slash (/). Format: <b>1/200</b> or <b>80/80</b>. The value <b>-1/-1</b> cannot be set independently and indicates that all ports are available.</para>
+            /// <para>The destination port range of network traffic for the outbound rule. The port range is <b>1</b> to <b>65535</b>. Separate the start port and end port with a forward slash (/). Example: <b>1/200</b> or <b>80/80</b>. The value <b>-1/-1</b> cannot be set independently and indicates that all ports are available.</para>
             /// <remarks>
-            /// <para>If <b>EgressRules.N.Protocol</b> is set to <b>ALL</b> or <b>ICMP</b>, this parameter does not need to be set, which indicates that all ports are available.</para>
+            /// <para>If <b>EgressRules.N.Protocol</b> is set to <b>ALL</b> or <b>ICMP</b>, you do not need to set this parameter, which indicates that all ports are available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The priority of the outbound rule. A smaller value indicates a higher priority.
-            /// The maximum value of <b>N</b> is <b>10</b>, which indicates that a filter can have up to 10 outbound rules.</para>
+            /// The maximum value of <b>N</b> is <b>10</b>, which indicates that you can configure up to 10 outbound rules for a traffic mirror filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the network traffic to be mirrored for the outbound rule. Valid values:</para>
+            /// <para>The protocol type of network traffic to be mirrored for the outbound rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ALL</b>: all protocols.</description></item>
             /// <item><description><b>ICMP</b>: Internet Control Message Protocol.</description></item>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The source CIDR block of the outbound rule.</para>
+            /// <para>The source CIDR block of network traffic for the outbound rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.0.0/24</para>
@@ -135,9 +135,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string SourceCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The source port range of the outbound rule. Valid values for port numbers: <b>1</b> to <b>65535</b>. Separate the start port and end port with a forward slash (/). Format: <b>1/200</b> or <b>80/80</b>. The value <b>-1/-1</b> cannot be set independently and indicates that all ports are available.</para>
+            /// <para>The source port range of network traffic for the outbound rule. The port range is <b>1</b> to <b>65535</b>. Separate the start port and end port with a forward slash (/). Example: <b>1/200</b> or <b>80/80</b>. The value <b>-1/-1</b> cannot be set independently and indicates that all ports are available.</para>
             /// <remarks>
-            /// <para>If <b>EgressRules.N.Protocol</b> is set to <b>ALL</b> or <b>ICMP</b>, this parameter does not need to be set, which indicates that all ports are available.</para>
+            /// <para>If <b>EgressRules.N.Protocol</b> is set to <b>ALL</b> or <b>ICMP</b>, you do not need to set this parameter, which indicates that all ports are available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The information about the inbound rules.</para>
+        /// <para>The information about inbound rules.</para>
         /// </summary>
         [NameInMap("IngressRules")]
         [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The destination CIDR block of the inbound rule.</para>
+            /// <para>The destination CIDR block of network traffic for the inbound rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.0.0/24</para>
@@ -181,9 +181,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The destination port range of the inbound rule. Valid values for port numbers: <b>1</b> to <b>65535</b>. Separate the start port and end port with a forward slash (/). Format: <b>1/200</b> or <b>80/80</b>.</para>
+            /// <para>The destination port range of network traffic for the inbound rule. The port range is <b>1</b> to <b>65535</b>. Separate the start port and end port with a forward slash (/). Example: <b>1/200</b> or <b>80/80</b>.</para>
             /// <remarks>
-            /// <para>If <b>IngressRules.N.Protocol</b> is set to <b>ALL</b> or <b>ICMP</b>, this parameter does not need to be set, which indicates that all ports are available.</para>
+            /// <para>If <b>IngressRules.N.Protocol</b> is set to <b>ALL</b> or <b>ICMP</b>, you do not need to set this parameter, which indicates that all ports are available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The priority of the inbound rule. A smaller value indicates a higher priority.
-            /// The maximum value of <b>N</b> is <b>10</b>, which indicates that a filter can have up to 10 inbound rules.</para>
+            /// The maximum value of <b>N</b> is <b>10</b>, which indicates that you can configure up to 10 inbound rules for a traffic mirror filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the network traffic to be mirrored for the inbound rule. Valid values:</para>
+            /// <para>The protocol type of network traffic to be mirrored for the inbound rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ALL</b>: all protocols.</description></item>
             /// <item><description><b>ICMP</b>: Internet Control Message Protocol.</description></item>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The source CIDR block of the inbound rule.</para>
+            /// <para>The source CIDR block of network traffic for the inbound rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.0.0/24</para>
@@ -245,9 +245,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string SourceCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The source port range of the inbound rule. Valid values for port numbers: <b>1</b> to <b>65535</b>. Separate the start port and end port with a forward slash (/). Format: <b>1/200</b> or <b>80/80</b>.</para>
+            /// <para>The source port range of network traffic for the inbound rule. The port range is <b>1</b> to <b>65535</b>. Separate the start port and end port with a forward slash (/). Example: <b>1/200</b> or <b>80/80</b>.</para>
             /// <remarks>
-            /// <para>If <b>IngressRules.N.Protocol</b> is set to <b>ALL</b> or <b>ICMP</b>, this parameter does not need to be set, which indicates that all ports are available.</para>
+            /// <para>If <b>IngressRules.N.Protocol</b> is set to <b>ALL</b> or <b>ICMP</b>, you do not need to set this parameter, which indicates that all ports are available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -268,8 +268,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the traffic mirror.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID. For more information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic Mirroring overview</a>.</para>
+        /// <para>The region ID of the traffic mirror filter.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the traffic mirror belongs.</para>
+        /// <para>The ID of the resource group to which the traffic mirroring filter belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4ph****</para>

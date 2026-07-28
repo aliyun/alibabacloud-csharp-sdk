@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateRouteTableResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>62172DD5-6BAC-45DF-8D44-E11ED28DCAC0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the route tables.</para>
+        /// <para>The route table ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-bp145q7glnuzdvzu2****</para>

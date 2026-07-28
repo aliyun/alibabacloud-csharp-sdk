@@ -19,19 +19,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The filter condition. You can specify up to 5 filter conditions. The following filter conditions are supported:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PhysicalConnectionId</b>: instance ID of the Express Connect circuit instance.</para>
+            /// <item><description><para><b>PhysicalConnectionId</b>: the Express Connect circuit ID.</para>
             /// </description></item>
-            /// <item><description><para><b>VbrId</b>: instance ID of the Virtual Border Router instance.</para>
+            /// <item><description><para><b>VbrId</b>: the VBR ID.</para>
             /// </description></item>
-            /// <item><description><para><b>Status</b>: the status of the Virtual Border Router.</para>
+            /// <item><description><para><b>Status</b>: the VBR status.</para>
             /// </description></item>
-            /// <item><description><para><b>Name</b>: the name of the Virtual Border Router.</para>
+            /// <item><description><para><b>Name</b>: the VBR name.</para>
             /// </description></item>
-            /// <item><description><para><b>AccessPointId</b>: instance ID of the access point.</para>
+            /// <item><description><para><b>AccessPointId</b>: the access point ID.</para>
             /// </description></item>
-            /// <item><description><para><b>eccId</b>: instance ID of the Express Cloud Connect instance.</para>
+            /// <item><description><para><b>eccId</b>: the Express Cloud Connect instance ID.</para>
             /// </description></item>
-            /// <item><description><para><b>type</b>: the type of the Express Connect circuit.</para>
+            /// <item><description><para><b>type</b>: the Express Connect circuit type.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value based on the specified Key. You can specify multiple filter values for a Key. The relationship between filter values is OR, which means that a match is found if any of the filter values is met.</para>
+            /// <para>The filter value based on the specified Key. You can specify multiple filter values for a Key. The filter values are evaluated by using a logical OR. A match is found if any of the specified filter values is met.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -55,11 +55,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to include cross-account Virtual Border Routers.</para>
+        /// <para>Specifies whether to include cross-account VBRs.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Included.</para>
+        /// <item><description><para><b>true</b>: includes cross-account VBRs.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): Not included.</para>
+        /// <item><description><para><b>false</b> (default): does not include cross-account VBRs.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class DescribeVirtualBorderRoutersRequestTags : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You must specify at least 1 tag key and can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>

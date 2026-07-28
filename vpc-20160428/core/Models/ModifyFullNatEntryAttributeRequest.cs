@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyFullNatEntryAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The backend domain name of the FULLNAT address translation that needs to be modified.</para>
+        /// <para>The backend domain name to be modified for FULLNAT address translation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AccessDomain { get; set; }
 
         /// <summary>
-        /// <para>The backend IP address to be modified in FULLNAT address translation.</para>
+        /// <para>The backend IP address to be modified for FULLNAT address translation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AccessIp { get; set; }
 
         /// <summary>
-        /// <para>The backend port to be modified in FULLNAT port mapping. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <para>The backend port to be modified for FULLNAT port mapping. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without modifying the FULLNAT entry. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a Normal request. If the check succeeds, a 2xx HTTP status code is returned and the FULLNAT entry is modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The new description of the FULLNAT entry.</para>
-        /// <para>You can leave this parameter empty or enter a description. If you enter a description, the description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description can be empty or 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abcd</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The new name of the FULLNAT entry.</para>
-        /// <para>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>modify</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string FullNatEntryName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the FULLNAT table to be modified.</para>
+        /// <para>The ID of the FULLNAT table to which the FULLNAT entry belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,10 +112,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string FullNatTableId { get; set; }
 
         /// <summary>
-        /// <para>The protocol of the packets that are forwarded by the port. Valid values:</para>
+        /// <para>The protocol type of the Redirection Port. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TCP</b>: TCP</description></item>
-        /// <item><description><b>UDP</b></description></item>
+        /// <item><description><b>TCP</b>: forwards TCP packets. </description></item>
+        /// <item><description><b>UDP</b>: forwards UDP packets.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIp { get; set; }
 
         /// <summary>
-        /// <para>The frontend port to be modified in FULLNAT port mapping. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <para>The frontend port to be modified for FULLNAT port mapping. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIpPort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the elastic network interface (ENI) to be modified.</para>
+        /// <para>The ID of the elastic network interfaces (ENIs), also known as the network interface controller (NIC), to be modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-gw8g131ef2dnbu3k****</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be modified belongs.</para>
+        /// <para>The region ID of the VPC NAT gateway to which the FULLNAT entry belongs.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 

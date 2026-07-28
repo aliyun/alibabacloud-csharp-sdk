@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class EnablePhysicalConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to bypass the service provider (SP) subscription lifecycle. Valid values:</para>
+        /// <para>Specifies whether to skip the SP (order lifecycle). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Bypasses the SP subscription lifecycle. This means the instance is no longer managed by the Alibaba Cloud subscription system.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): Does not bypass the SP subscription lifecycle.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Skips the SP. The Alibaba Cloud billing system no longer manages this instance, and the instance can be used free of charge.</description></item>
+        /// <item><description><b>false</b> (default): Does not skip the SP.</description></item>
         /// </list>
         /// <remarks>
         /// <para>To use this feature, contact your account manager.</para>
@@ -29,8 +27,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? ByPassSp { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token that is used to ensure the idempotence of the request.</para>
-        /// <para>The token must be unique across requests. The token can contain a maximum of 64 ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The client generates the value of this parameter. Make sure that the value is unique among different requests. The value can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
@@ -48,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the physical connection.</para>
+        /// <para>The ID of the Express Connect circuit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,8 +57,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the physical connection is located.</para>
-        /// <para>You can call <c>DescribeRegions</c> to get the latest region IDs.</para>
+        /// <para>The region where the Express Connect circuit resides.</para>
+        /// <para>You can call the DescribeRegions operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

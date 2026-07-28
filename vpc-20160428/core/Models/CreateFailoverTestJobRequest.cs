@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateFailoverTestJobRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the failover test.</para>
+        /// <para>The description of the failover test job.</para>
         /// <para>The description must be 0 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>If you set the value to true, the system performs only a dry run without actually performing the actual request. If you set the value to false, the system performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: sends the request without creating the failover test node. The system checks the request for potential issues, including whether the AccessKey is valid, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a Normal request, and the failover test job is created after the check passes. A 2xx HTTP status code is returned.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -45,7 +49,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The duration of the failover test. Unit: minutes. Valid values: <b>1 to 4320</b>.</para>
+        /// <para>The duration of the failover test job. Unit: minutes. Valid values: <b>1 to 4320</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,10 +60,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? JobDuration { get; set; }
 
         /// <summary>
-        /// <para>The type of the failover test. Valid values:</para>
+        /// <para>The type of the failover test job. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>StartNow</b></description></item>
-        /// <item><description><b>StartLater</b></description></item>
+        /// <item><description><para><b>StartNow</b>: The failover test starts immediately after the job is created.</para>
+        /// </description></item>
+        /// <item><description><para><b>StartLater</b>: Only the job is created. The failover test does not start.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The name of the failover test.</para>
+        /// <para>The name of the failover test job.</para>
         /// <para>The name must be 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -90,8 +96,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the failover test.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the failover test job.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of failover test resources. You can add at most 16 resources.</para>
+        /// <para>The list of resource IDs to test. You can add up to 16 resources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The resource type of the failover test. Set the value to <b>PHYSICALCONNECTION</b>.</para>
+        /// <para>The type of the resource to test. Valid values: <b>PHYSICALCONNECTION</b>: Express Connect circuit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

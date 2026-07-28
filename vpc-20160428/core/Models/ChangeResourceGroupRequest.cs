@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the new resource group.</para>
         /// <remarks>
-        /// <para> You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></para>
+        /// <para>A resource group is a mechanism for managing resources by group within an Alibaba Cloud account. Resource groups help you address the complexity of resource grouping and authorization management within a single cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the new resource group belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>The region ID of the resource group that you want to modify.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Express Connect circuit whose resource group you want to modify.</para>
+        /// <para>The ID of the Express Connect circuit resource whose resource group you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,11 +47,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PHYSICALCONNECTION</b>: Express Connect circuit.</description></item>
-        /// <item><description><b>VIRTUALBORDERROUTER</b>: virtual border router (VBR).</description></item>
-        /// <item><description><b>ROUTERINTERFACE</b>: router interface.</description></item>
+        /// <item><description><b>PHYSICALCONNECTION</b>: Express Connect circuit instance.</description></item>
+        /// <item><description><b>VIRTUALBORDERROUTER</b>: Virtual Border Router.</description></item>
+        /// <item><description><b>ROUTERINTERFACE</b>: VBR uplink.</description></item>
+        /// <item><description><b>TRAFFICQOS</b>: QoS policy.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

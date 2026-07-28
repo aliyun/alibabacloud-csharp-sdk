@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DiagnoseVpnConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic information.</para>
+        /// <para>The diagnostic information list of IPsec-VPN connections.</para>
         /// </summary>
         [NameInMap("VpnConnections")]
         [Validation(Required=false)]
         public List<DiagnoseVpnConnectionsResponseBodyVpnConnections> VpnConnections { get; set; }
         public class DiagnoseVpnConnectionsResponseBodyVpnConnections : TeaModel {
             /// <summary>
-            /// <para>The cause of the error.</para>
+            /// <para>The error reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Phase1 negotiation timeout</para>
@@ -77,8 +77,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string FailedReasonCode { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the current error occurred on the IPsec-VPN connection. Unit: millisecond.</para>
-            /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp when the current error occurred on the IPsec-VPN connection. Unit: milliseconds.</para>
+            /// <para>The timestamp is in UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the current error occurred on the IPsec-VPN connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1673581161000</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? FailedTime { get; set; }
 
             /// <summary>
-            /// <para>If the values of the parameters configured for the IPsec-VPN connection and the peer gateway device do not match, this parameter indicates the value of the parameters configured for the IPsec-VPN connection.</para>
+            /// <para>The parameter value configured on the IPsec-VPN connection when the parameter values configured on the IPsec-VPN connection and the peer gateway device do not match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SHA256</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string MismatchLocalParam { get; set; }
 
             /// <summary>
-            /// <para>If the parameter values configured for the IPsec-VPN connection and the peer gateway device do not match, this parameter indicates the value of the parameter configured for the peer gateway device.</para>
+            /// <para>The parameter value configured on the peer gateway device when the parameter values configured on the IPsec-VPN connection and the peer gateway device do not match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SHA</para>
@@ -108,11 +108,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string MismatchRemoteParam { get; set; }
 
             /// <summary>
-            /// <para>The error level. Valid values:</para>
+            /// <para>The severity level of the current error.</para>
             /// <list type="bullet">
-            /// <item><description><b>Critical</b></description></item>
-            /// <item><description><b>Warn</b></description></item>
-            /// <item><description><b>Normal</b></description></item>
+            /// <item><description><b>Critical</b>: Critical. Troubleshoot the issue immediately.</description></item>
+            /// <item><description><b>Warn</b>: Warning. Troubleshoot the issue as soon as possible.</description></item>
+            /// <item><description><b>Normal</b>: Normal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Severity { get; set; }
 
             /// <summary>
-            /// <para>The log information about the error.</para>
+            /// <para>The log information related to the current error.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-13 11:39:21 vco-bp1spxu8hlcvpd7ry**** [PROTO_ERR]: ikev1.c:1433:isakmp_ph1resend(): phase1 negotiation failed due to time up. [{remote id:4}{ph1: 172.16.0.88[500] &lt;=&gt; 192.168.0.206[500], 172.16.0.88 &lt;=&gt; 192.168.0.206}]</para>

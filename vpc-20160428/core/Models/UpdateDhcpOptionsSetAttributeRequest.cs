@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Enter a description for the DHCP options set.</para>
-        /// <para>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. You can also leave the description empty.</para>
+        /// <para>The description of the DHCP options set. </para>
+        /// <para>The description can be empty or 2 to 256 characters in length. It must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DhcpOptionsSetDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DHCP options set.</para>
+        /// <para>The ID of the DHCP options set to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the DHCP options set.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DhcpOptionsSetName { get; set; }
 
         /// <summary>
-        /// <para>The root domain. For example, you can set the value to example.com.</para>
-        /// <para>After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the ECS instances in the VPC.</para>
+        /// <para>The hostname suffix, such as example.com.</para>
+        /// <para>After you attach the DHCP options set to an associate VPC, the hostname suffix is automatically synchronized to ECS instances in the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -68,9 +68,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the DNS server. You can enter at most four DNS server IP addresses. Separate IP addresses with commas (,).</para>
+        /// <para>The IP addresses of DNS servers. You can specify up to four DNS server IP addresses, separated by commas (,).</para>
         /// <remarks>
-        /// <para> If you do not specify a DNS server IP address, Elastic Compute Service (ECS) instances use the IP addresses of the Alibaba Cloud DNS servers, which are 100.100.2.136 and 100.100.2.138.</para>
+        /// <para>If you do not specify any DNS server IP addresses, ECS instances use the DNS server IP addresses provided by Alibaba Cloud (100.100.2.136 and 100.100.2.138) by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
-        /// <para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// <para><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
+        /// <para><b>true</b>: performs a dry run without modifying the DHCP options set configuration. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <para><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the DHCP options set configuration is modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -93,13 +93,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The lease time of the IPv6 addresses for the DHCP options set.</para>
+        /// <para>The lease time of the IPv6 DHCP options set.</para>
         /// <list type="bullet">
-        /// <item><description>If you use hours as the unit, valid values are <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</description></item>
-        /// <item><description>If you use days as the unit, valid values are <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</description></item>
+        /// <item><description><para>If the lease time is set in hours, the unit is h. Valid values: <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>24h</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If the lease time is set in days, the unit is d. Valid values: <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>1d</b>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you specify a value, you must also specify the unit.</para>
+        /// <para>You must include the unit when specifying the value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -110,13 +112,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6LeaseTime { get; set; }
 
         /// <summary>
-        /// <para>The lease time of the IPv4 addresses for the DHCP options set.</para>
+        /// <para>The lease time of the IPv4 DHCP options set.</para>
         /// <list type="bullet">
-        /// <item><description>If you use hours as the unit, valid values are <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</description></item>
-        /// <item><description>If you use days as the unit, valid values are <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</description></item>
+        /// <item><description><para>If the lease time is set in hours, the unit is h. Valid values: <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If the lease time is set in days, the unit is d. Valid values: <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you specify a value, you must also specify the unit.</para>
+        /// <para>You must include the unit when specifying the value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -135,7 +139,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the DHCP options set is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the DHCP options set to modify. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreatePhysicalConnectionOccupancyOrderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details.</para>
+        /// <para>The detailed information about the data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreatePhysicalConnectionOccupancyOrderResponseBodyData Data { get; set; }
         public class CreatePhysicalConnectionOccupancyOrderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the order that is placed.</para>
+            /// <para>The ID of the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50187055895****</para>

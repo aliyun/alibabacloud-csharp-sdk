@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnAttachmentsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of resource to which the IPsec-VPN connection is attached. Default value: <b>CEN</b>.</para>
-        /// <para>The value can only be <b>CEN</b>, which indicates that the system queries IPsec-VPN connections that are associated with transit router instances.</para>
+        /// <para>The type of resource to which the IPsec-VPN connection is associated. Default value: <b>CEN</b>.</para>
+        /// <para>The value can only be <b>CEN</b>, which indicates that the system queries IPsec-VPN connections associated with transit router instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CEN</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page when paging is used. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// <para>The number of entries per page in paging queries. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the IPsec-VPN connection.</para>
         /// <remarks>
-        /// <para>If you do not specify the IPsec-VPN connection ID, the system queries information about all IPsec-VPN connections that are associated with transit router instances in the current region.</para>
+        /// <para>If you do not specify an IPsec-VPN connection ID, the system queries all IPsec-VPN connections that are associated with transit router instances in the current region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the flow log.</para>
+        /// <para>The flow log ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,11 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string FlowLogName { get; set; }
 
         /// <summary>
-        /// <para>The version of the IP address. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>IPV4</b>: the IPv4 address.</description></item>
-        /// <item><description><b>DualStack</b>: includes IPv4 and IPv6 address</description></item>
-        /// </list>
+        /// <para>The IP address version of the traffic captured by the flow log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
@@ -65,6 +61,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
         public string IpVersion { get; set; }
+
+        [NameInMap("LogFormat")]
+        [Validation(Required=false)]
+        public string LogFormat { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -75,8 +75,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the flow log is created.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the flow log.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

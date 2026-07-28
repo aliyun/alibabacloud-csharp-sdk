@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateEnhancedVpnGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the enhanced VPN gateway.</para>
+        /// <para>The name of the VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MYVPN</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the enhanced VPN gateway instance.</para>
+        /// <para>The instance ID of the enhanced VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-uf68lxhgr7ftbqr3p****</para>

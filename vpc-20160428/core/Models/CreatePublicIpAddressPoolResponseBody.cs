@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreatePublicIpAddressPoolResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the IP address pool.</para>
+        /// <para>The instance ID of the IPAM pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pippool-6wetvn6fumkgycssx****</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ID of the IP address pool.</para>
+        /// <para>The instance ID of the IPAM pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pippool-6wetvn6fumkgycssx****</para>

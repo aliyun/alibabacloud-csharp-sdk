@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query is required.</description></item>
         /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
@@ -127,12 +127,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The association status of the prefix list. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Created</b>: The association is created.</description></item>
-            /// <item><description><b>ModifyFailed</b>: The association is not updated to the latest version.</description></item>
-            /// <item><description><b>Creating</b>: The association is being created.</description></item>
-            /// <item><description><b>Modifying</b>: The association is being modified.</description></item>
-            /// <item><description><b>Deleting</b>: The association is being deleted.</description></item>
-            /// <item><description><b>Deleted</b>: The association is deleted.</description></item>
+            /// <item><description><b>Created</b>: succeeded.</description></item>
+            /// <item><description><b>ModifyFailed</b>: not associated with the latest version.</description></item>
+            /// <item><description><b>Creating</b>: being created.</description></item>
+            /// <item><description><b>Modifying</b>: being modified.</description></item>
+            /// <item><description><b>Deleting</b>: being deleted.</description></item>
+            /// <item><description><b>Deleted</b>: deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

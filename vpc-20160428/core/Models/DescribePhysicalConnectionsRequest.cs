@@ -30,20 +30,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The filter condition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PhysicalConnectionId</b>: the Express Connect circuit ID.</para>
+            /// <item><description><para><b>PhysicalConnectionId</b>: the ID of the Express Connect circuit.</para>
             /// </description></item>
-            /// <item><description><para><b>AccessPointId</b>: the access point ID.</para>
+            /// <item><description><para><b>AccessPointId</b>: the ID of the access point.</para>
             /// </description></item>
-            /// <item><description><para><b>Type</b>: the Express Connect circuit type. This filter condition supports only the value <b>VPC</b>.</para>
+            /// <item><description><para><b>Type</b>: the type of the Express Connect circuit. This filter condition supports only the value <b>VPC</b>.</para>
             /// </description></item>
             /// <item><description><para><b>LineOperator</b>: the carrier of the Express Connect circuit. This filter condition supports the following values:</para>
             /// <list type="bullet">
             /// <item><description><b>CT</b>: China Telecom.</description></item>
             /// <item><description><b>CU</b>: China Unicom.</description></item>
             /// <item><description><b>CM</b>: China Mobile.</description></item>
-            /// <item><description><b>CO</b>: other carriers in China.</description></item>
+            /// <item><description><b>CO</b>: Other carriers in China. </description></item>
             /// <item><description><b>Equinix</b>: Equinix.</description></item>
-            /// <item><description><b>Other</b>: other carriers outside China.</description></item>
+            /// <item><description><b>Other</b>: Other carriers outside China.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para><b>Spec</b>: the specification of the Express Connect circuit. This filter condition supports the following values:</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <item><description><b>10G</b>.</description></item>
             /// <item><description><b>40G</b>.</description></item>
             /// <item><description><b>100G</b>.<remarks>
-            /// <para> The <b>40G</b> and <b>100G</b> specifications are not available by default. Only users who have committed an application to their account manager and received approval can use these values.</para>
+            /// <para> The <b>40G</b> and <b>100G</b> specifications are not available by default. Only users who have submitted an application to their account manager and received approval can use these values.</para>
             /// </remarks>
             /// </description></item>
             /// </list>
@@ -60,23 +60,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <item><description><para><b>Status</b>: the status of the Express Connect circuit. This filter condition supports the following values:</para>
             /// <list type="bullet">
             /// <item><description><b>Initial</b>: pending application.</description></item>
-            /// <item><description><b>Approved</b>: approved.</description></item>
-            /// <item><description><b>Allocating</b>: allocating resources.</description></item>
-            /// <item><description><b>Allocated</b>: under construction.</description></item>
-            /// <item><description><b>Confirmed</b>: pending user confirmation.</description></item>
+            /// <item><description><b>Approved</b>: application approved.</description></item>
+            /// <item><description><b>Allocating</b>: resources are being allocated.</description></item>
+            /// <item><description><b>Allocated</b>: under construction.   </description></item>
+            /// <item><description><b>Confirmed</b>: pending user confirmation.   </description></item>
             /// <item><description><b>Enabled</b>: enabled.</description></item>
             /// <item><description><b>Rejected</b>: application denied.</description></item>
             /// <item><description><b>Canceled</b>: canceled.</description></item>
             /// <item><description><b>Allocation Failed</b>: resource allocation failed.</description></item>
-            /// <item><description><b>Terminating</b>: stopping.</description></item>
-            /// <item><description><b>Terminated</b>: stopped.</description></item>
+            /// <item><description><b>Terminating</b>: being terminated.</description></item>
+            /// <item><description><b>Terminated</b>: terminated.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para><b>Name</b>: the name of the Express Connect circuit.</para>
             /// </description></item>
-            /// <item><description><para><b>ProductType</b>: the circuit type. Valid values:</para>
+            /// <item><description><para><b>ProductType</b>: the type of the Express Connect circuit. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>VirtualPhysicalConnection</b>: shared Express Connect circuit.</description></item>
+            /// <item><description><b>VirtualPhysicalConnection</b>: shared Express Connect circuits.</description></item>
             /// <item><description><b>PhysicalConnection</b>: dedicated Express Connect circuit.</description></item>
             /// </list>
             /// </description></item>
@@ -103,11 +103,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to return data of orders that have not taken effect. Valid values:</para>
+        /// <para>Specifies whether to return order data that has not taken effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Returns data of orders that have not taken effect.</para>
+        /// <item><description><para><b>true</b>: Returns order data that has not taken effect.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): Does not return data of orders that have not taken effect.</para>
+        /// <item><description><para><b>false</b> (default): Does not return order data that has not taken effect.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class DescribePhysicalConnectionsRequestTags : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

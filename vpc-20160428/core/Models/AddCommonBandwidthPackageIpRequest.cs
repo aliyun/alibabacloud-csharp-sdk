@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The client token used to ensure the idempotence of the request.</para>
-        /// <para>Generate a unique value for this parameter from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> is different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Performs a dry run without actually executing the operation.</para>
+        /// <para>Specifies whether to perform a dry run without actually executing the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the EIP instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> API to query the ID of the EIP instance.</para>
+        /// <para>The ID of the EIP instance. </para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> to query the ID of the EIP instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP type. Valid value: <b>EIP</b>, which indicates that an EIP is added to the Internet Shared Bandwidth instance.</para>
+        /// <para>The IP type. Valid values: <b>EIP</b>, which indicates that an EIP is added to the Internet Shared Bandwidth instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EIP</para>
@@ -75,8 +75,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Internet Shared Bandwidth instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> API to obtain the region ID.</para>
+        /// <para>The region ID of the Internet Shared Bandwidth instance. </para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

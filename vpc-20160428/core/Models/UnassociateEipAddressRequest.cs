@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The instance ID of the cloud resource from which to disassociate the EIP.
-        /// You can enter the instance ID of a NAT gateway, Classic Load Balancer (CLB) instance, ECS instance, secondary elastic network interface controller (NIC), high availability virtual IP address instance, or an IP address.</para>
+        /// You can enter the instance ID of a NAT gateway, Classic Load Balancer (CLB) instance, ECS instance, secondary elastic network interface controller (NIC), high-availability virtual IP address, or an IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-hp3akk9irtd69jad****</para>
@@ -66,13 +66,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <list type="bullet">
         /// <item><description><para><b>EcsInstance</b> (default): an ECS instance in a virtual private cloud (VPC).   </para>
         /// </description></item>
-        /// <item><description><para><b>SlbInstance</b>: a load balancing instance in a virtual private cloud (VPC).   </para>
+        /// <item><description><para><b>SlbInstance</b>: an SLB instance in a virtual private cloud (VPC).   </para>
         /// </description></item>
         /// <item><description><para><b>NetworkInterface</b>: a secondary elastic network interface controller (NIC) in a virtual private cloud (VPC).</para>
         /// </description></item>
         /// <item><description><para><b>Nat</b>: a NAT gateway.  </para>
         /// </description></item>
-        /// <item><description><para><b>HaVip</b>: a high availability virtual IP address.</para>
+        /// <item><description><para><b>HaVip</b>: a high-availability virtual IP address.</para>
         /// </description></item>
         /// <item><description><para><b>IpAddress</b>: an IP address.</para>
         /// </description></item>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the ECS instance or secondary elastic network interface controller (NIC) instance from which to disassociate the EIP.</para>
+        /// <para>The private IP address of the ECS instance or secondary elastic network interface controller (NIC) from which to disassociate the EIP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.XX.XX.2</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the EIP to disassociate.
-        ///  You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</para>
+        ///  You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

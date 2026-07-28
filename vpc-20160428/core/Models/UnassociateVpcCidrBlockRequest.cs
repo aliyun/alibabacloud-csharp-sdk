@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateVpcCidrBlockRequest : TeaModel {
         /// <summary>
-        /// <para>The secondary IPv6 CIDR block to be deleted.</para>
+        /// <para>The secondary IPv6 CIDR block to delete.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>You must set one of the Ipv6CidrBlock and SecondaryCidrBlock parameters.</description></item>
-        /// </list>
+        /// <para>You must specify either <b>Ipv6CidrBlock</b> or <b>SecondaryCidrBlock</b>, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,8 +31,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPC to which the secondary CIDR block to be deleted belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the VPC from which you want to delete a secondary CIDR block. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,11 +51,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The secondary IPv4 CIDR block to be deleted.</para>
+        /// <para>The secondary IPv4 CIDR block to delete.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>You must set one of the SecondaryCidrBlock and Ipv6CidrBlock parameters.</description></item>
-        /// </list>
+        /// <para>You must specify either <b>SecondaryCidrBlock</b> or <b>Ipv6CidrBlock</b>, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

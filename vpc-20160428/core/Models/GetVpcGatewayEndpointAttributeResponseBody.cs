@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVpcGatewayEndpointAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the gateway endpoint was created. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-27T01:58:37Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EndpointDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway endpoint.</para>
+        /// <para>The endpoint instance ID of the gateway endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpce-bp1w1dmdqjpwul0v3****</para>
@@ -52,12 +52,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the gateway endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Creating</b></description></item>
-        /// <item><description><b>Created</b></description></item>
-        /// <item><description><b>Modifying</b></description></item>
-        /// <item><description><b>Associating</b></description></item>
-        /// <item><description><b>Dissociating</b></description></item>
-        /// <item><description><b>Deleting</b></description></item>
+        /// <item><description><para><b>Creating</b>: being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>Created</b>: created and in a normal state.</para>
+        /// </description></item>
+        /// <item><description><para><b>Modifying</b>: being modified.</para>
+        /// </description></item>
+        /// <item><description><para><b>Associating</b>: being associated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Dissociating</b>: being disassociated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleting</b>: being deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,14 +104,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table associated with the gateway endpoint.</para>
+        /// <para>The IDs of the route tables associated with the gateway endpoint.</para>
         /// </summary>
         [NameInMap("RouteTables")]
         [Validation(Required=false)]
         public List<string> RouteTables { get; set; }
 
         /// <summary>
-        /// <para>The name of the endpoint service.</para>
+        /// <para>The service name of the endpoint service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>com.aliyun.cn-hangzhou.oss</para>
@@ -115,14 +121,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The tag list.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetVpcGatewayEndpointAttributeResponseBodyTags> Tags { get; set; }
         public class GetVpcGatewayEndpointAttributeResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The key of tag N added to the resource.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -132,7 +138,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N added to the resource.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -144,7 +150,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.</para>
+        /// <para>The ID of the VPC to which the gateway endpoint belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1nh86rugg01zol0****</para>

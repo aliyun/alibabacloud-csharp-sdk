@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateGlobalAccelerationInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ga-bp1fi6sq7npnicmjj****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GlobalAccelerationInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the GA instance.</para>
+        /// <para>The public IP address of the Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// <para>If <b>BandwidthType</b> is set to <b>Sharing</b>, this parameter is not returned.</para>
         /// 
         /// <b>Example:</b>

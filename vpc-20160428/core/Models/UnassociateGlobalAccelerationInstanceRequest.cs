@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateGlobalAccelerationInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GlobalAccelerationInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The backend server type. Valid values:</para>
+        /// <para>The type of the instance to disassociate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RemoteEcsInstance</b>: Elastic Compute Service (ECS) instance</description></item>
-        /// <item><description><b>RemoteSlbInstance</b>: Server Load Balancer (SLB) instance</description></item>
-        /// <item><description><b>RemoteEniInstance</b>: elastic network interface (ENI)</description></item>
+        /// <item><description><para><b>RemoteEcsInstance</b>: ECS instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>RemoteSlbInstance</b>: load balancing instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>RemoteEniInstance</b>: network interface controller (NIC) instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,8 +47,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the GA instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region where the Alibaba Cloud Global Accelerator (GA) instance is deployed. </para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

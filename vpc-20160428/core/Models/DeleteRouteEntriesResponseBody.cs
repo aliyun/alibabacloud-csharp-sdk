@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the route entry that failed to be deleted.</para>
+        /// <para>The information about the route entries that failed to be deleted.</para>
         /// </summary>
         [NameInMap("FailedRouteEntries")]
         [Validation(Required=false)]
         public List<DeleteRouteEntriesResponseBodyFailedRouteEntries> FailedRouteEntries { get; set; }
         public class DeleteRouteEntriesResponseBodyFailedRouteEntries : TeaModel {
             /// <summary>
-            /// <para>The destination CIDR block of the route entry that failed to be deleted. IPv4 and IPv6 CIDR blocks are supported.</para>
+            /// <para>The destination CIDR block of the route entry that failed to be deleted. IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix list CIDR blocks are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.100.XX.XX/24</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DstCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The error code.</para>
+            /// <para>The error code returned for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC_ROUTER_ENTRY_NOT_EXIST</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string FailedCode { get; set; }
 
             /// <summary>
-            /// <para>The error message.</para>
+            /// <para>The error message returned for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vRouterEntry not exists</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string FailedMessage { get; set; }
 
             /// <summary>
-            /// <para>The ID of the next hop that failed to be deleted.</para>
+            /// <para>The instance ID of the next hop that failed to be deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-j6c2fp57q8rr4jlu****</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of route entries that were deleted.</para>
+        /// <para>The number of route entries that were successfully deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

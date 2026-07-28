@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table that is automatically created by the system after the VPC is created.</para>
+        /// <para>The ID of the route table that is automatically created when the VPC is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-bp145q7glnuzdv****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vRouter that is automatically created by the system after the VPC is created.</para>
+        /// <para>The ID of the vRouter that is automatically created when the VPC is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vrt-bp1lhl0taikrteen8****</para>

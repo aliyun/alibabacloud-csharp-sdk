@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnCrossAccountAuthorizationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of cross-account authorization information for the IPsec-VPN connection.</para>
+        /// <para>The list of cross-account authorization information of the IPsec-VPN connection.</para>
         /// </summary>
         [NameInMap("CrossAccountAuthorizations")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the CEN instance to which the IPsec-VPN connection authorization is granted.</para>
+            /// <para>The instance ID of the CEN instance to which the IPsec-VPN connection grants authorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-vv8h0t3klfpaae****</para>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? BindUid { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the cross-account authorization was created for the IPsec-VPN connection.</para>
-            /// <para>The timestamp is in the UNIX format and represents the total number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the cross-account authorization was created.</para>
+            /// <para>The timestamp when the cross-account authorization of the IPsec-VPN connection was created.</para>
+            /// <para>The timestamp is in the UNIX format and represents the total number of seconds that have elapsed since January 1, 1970, 00:00:00 (UTC) to the time when the cross-account authorization was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1658201810000</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query.</para>
+        /// <para>The number of entries per page when paging is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVcoRouteEntriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The page number of the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page for paging queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E18980E8-C8C2-31BD-8156-AE2BBDEC87E1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of route entries.</para>
+        /// <para>The list of routes.</para>
         /// </summary>
         [NameInMap("VcoRouteEntries")]
         [Validation(Required=false)]
         public List<DescribeVcoRouteEntriesResponseBodyVcoRouteEntries> VcoRouteEntries { get; set; }
         public class DescribeVcoRouteEntriesResponseBodyVcoRouteEntries : TeaModel {
             /// <summary>
-            /// <para>The list of autonomous system (AS) numbers that the BGP route goes through.</para>
+            /// <para>The list of autonomous system (AS) numbers that the BGP route passes through.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[12000]</para>
@@ -77,8 +77,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Community { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the route was created.</para>
-            /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp when the destination route was created.</para>
+            /// <para>The timestamp is in the Unix format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1658217008000</para>
@@ -98,11 +98,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NextHop { get; set; }
 
             /// <summary>
-            /// <para>The list of next hops.</para>
+            /// <para>The list of next-hop tunnels.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>This parameter is returned only by dual-tunnel IPsec connections.</description></item>
-            /// <item><description>This parameter is returned only when the tunnel status is <b>Phase 2 Negotiation Successful</b>.</description></item>
+            /// <item><description>This information is returned only for IPsec-VPN connections in dual-tunnel mode.</description></item>
+            /// <item><description>Tunnel information is returned only when the tunnel status is <b>Phase 2 negotiations succeeded</b>.</description></item>
             /// </list>
             /// </remarks>
             /// </summary>
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RouteDest { get; set; }
 
             /// <summary>
-            /// <para>The route type. Valid values:</para>
+            /// <para>The type of the route. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>custom</b>: a destination-based route</description></item>
-            /// <item><description><b>bgp</b>: a BGP route</description></item>
+            /// <item><description><b>custom</b>: destination route.</description></item>
+            /// <item><description><b>bgp</b>: BGP route.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -137,8 +137,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The source of the BGP route. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CLOUD</b>: indicates that the current BGP route is learned by the IPsec-VPN connection from the transit router.</description></item>
-            /// <item><description><b>VPN_BGP</b>: indicates that the current BGP route is learned by the IPsec-VPN connection from the data center.</description></item>
+            /// <item><description><b>CLOUD</b>: The BGP route is learned by the IPsec-VPN connection from the transit router.</description></item>
+            /// <item><description><b>VPN_BGP</b>: The BGP route is learned by the IPsec-VPN connection from the on-premises data center.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,10 +149,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The status of the route.</para>
+            /// <para>The status of the route. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>published</b>: indicates that the current route is advertised to the transit router.</description></item>
-            /// <item><description><b>Active</b>: indicates that the current BGP route is available.</description></item>
+            /// <item><description><b>published</b>: The destination route is published to the transit router instance.</description></item>
+            /// <item><description><b>Active</b>: The BGP route is available.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -173,9 +173,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string VpnConnectionId { get; set; }
 
             /// <summary>
-            /// <para>The weight of the destination-based route.</para>
+            /// <para>The weight of the destination route.</para>
             /// <remarks>
-            /// <para> The current parameter has no effect.</para>
+            /// <para>This parameter is not in use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -188,9 +188,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The information on route entries of the dual-tunnel IPsec connection.</para>
+        /// <para>The route statistics of the IPsec-VPN connection in dual-tunnel mode.</para>
         /// <remarks>
-        /// <para> This parameter is returned only for IPsec connections in dual-tunnel mode.</para>
+        /// <para>This information is returned only for IPsec-VPN connections in dual-tunnel mode.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("VpnRouteCounts")]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeVcoRouteEntriesResponseBodyVpnRouteCounts> VpnRouteCounts { get; set; }
         public class DescribeVcoRouteEntriesResponseBodyVpnRouteCounts : TeaModel {
             /// <summary>
-            /// <para>The number of route entries.</para>
+            /// <para>The number of routes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -208,9 +208,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? RouteCount { get; set; }
 
             /// <summary>
-            /// <para>The route type. Valid values:</para>
+            /// <para>The type of the route. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>custom</b>: destination-based route.</description></item>
+            /// <item><description><b>custom</b>: destination route.</description></item>
             /// <item><description><b>bgp</b>: BGP route.</description></item>
             /// </list>
             /// 
@@ -224,8 +224,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The source of the BGP route. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CLOUD</b>: The current BGP route is learned by the IPsec connection from the transit router.</description></item>
-            /// <item><description><b>VPN_BGP</b>: The current BGP route is learned by the IPsec connection from the data center.</description></item>
+            /// <item><description><b>CLOUD</b>: The BGP route is learned by the IPsec-VPN connection from the transit router.</description></item>
+            /// <item><description><b>VPN_BGP</b>: The BGP route is learned by the IPsec-VPN connection from the on-premises data center.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

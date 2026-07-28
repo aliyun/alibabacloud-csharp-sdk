@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreatePhysicalConnectionOccupancyOrderRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic payments. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes Make sure that you have a sufficient balance in your account. Otherwise, your order becomes invalid and is automatically canceled.</description></item>
-        /// <item><description><b>false</b>: disables automatic payment. This is the default value.</description></item>
+        /// <item><description><b>true</b>: enables automatic payment. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated and can only be canceled.</description></item>
+        /// <item><description><b>false</b> (default): generates an order without charging.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable auto-renewal. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (<b>default</b>): disable auto-renewal.</description></item>
-        /// <item><description><b>true</b>: enable auto-renewal.</description></item>
+        /// <item><description><b>false</b> (default): disables auto-renewal.</description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal duration. Unit: months. Valid values: <b>0</b> to <b>2147483647</b>. Default Value: <b>1</b>.</para>
+        /// <para>The auto-renewal duration. Unit: months. Valid values: <b>0</b> to <b>2147483647</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
+        /// <para>The client generates the value. The value must be unique among different requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBCE910E-D396-4944</para>
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Set the value to</para>
-        /// <para><b>PrePaid</b>, which specifies the subscription billing method. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</para>
+        /// <para>The billing method of the instance. Valid values:</para>
+        /// <para><b>PrePaid</b>: subscription. If you select this billing method, make sure that your Alibaba Cloud account supports balance payment or credit payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -80,8 +80,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The subscription duration.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>PricingCycle</b> is set to <b>Month</b>, set <b>Period</b> to a value from <b>1 to 9</b>.</description></item>
-        /// <item><description>If <b>PricingCycle</b> is set to <b>Year</b>, set <b>Period</b> to a value from <b>1 to 5</b>.</description></item>
+        /// <item><description>If <b>PricingCycle</b> is set to <b>Month</b>, valid values of <b>Period</b> are <b>1 to 9</b>.</description></item>
+        /// <item><description>If <b>PricingCycle</b> is set to <b>Year</b>, valid values of <b>Period</b> are <b>1 to 5</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Express Connect circuit.</para>
+        /// <para>The instance ID of the Express Connect circuit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,8 +105,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The billing cycle of the subscription. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b> (default)</description></item>
-        /// <item><description><b>Year</b></description></item>
+        /// <item><description><b>Month</b> (default): billed on a monthly basis.</description></item>
+        /// <item><description><b>Year</b>: billed on a yearly basis.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,8 +117,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Express Connect circuit.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Express Connect circuit. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

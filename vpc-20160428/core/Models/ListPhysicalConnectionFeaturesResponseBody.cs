@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListPhysicalConnectionFeaturesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of Express Connect circuit features.</para>
+        /// <para>The list of Express Connect circuit attributes.</para>
         /// </summary>
         [NameInMap("PhysicalConnectionFeatures")]
         [Validation(Required=false)]
         public List<ListPhysicalConnectionFeaturesResponseBodyPhysicalConnectionFeatures> PhysicalConnectionFeatures { get; set; }
         public class ListPhysicalConnectionFeaturesResponseBodyPhysicalConnectionFeatures : TeaModel {
             /// <summary>
-            /// <para>The feature key of the Express Connect circuit. Valid values:</para>
+            /// <para>The attribute key of the Express Connect circuit. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SubifRateLimit</b>: subinterface throttling</description></item>
-            /// <item><description><b>BFD Capability</b>: Bidirectional Forwarding Detection (BFD)</description></item>
-            /// <item><description><b>DualStack</b>: Dual stack</description></item>
-            /// <item><description><b>CEN</b>: When a virtual border router (VBR) is attached to a Cloud Enterprise Network (CEN) instance and BGP routes are advertised on the user side, attributes such as <b>as-path</b> and <b>community</b> are carried.</description></item>
-            /// <item><description><b>CENv6</b>: When a VBR is attached to an IPv6 CEN instance and BGP routes are advertised on the user side, attributes such as <b>as-path</b> and <b>community</b> are carried.</description></item>
-            /// <item><description><b>QOS</b>: The device supports configuring QOS policies on physical ports.</description></item>
-            /// <item><description><b>MSHA</b>: The device supports fast switching groups between two VBRs.</description></item>
-            /// <item><description><b>MULTI_MS_HA</b>: The device supports a maximum of eight VBRs that can be added to the same ECR.</description></item>
+            /// <item><description><b>SubifRateLimit</b>: sub-interface rate limiting.</description></item>
+            /// <item><description><b>BFD能力</b>: Bidirectional Forwarding Detection (BFD) capability.</description></item>
+            /// <item><description><b>DualStack</b>: the capability to support both IPv4 and IPv6.</description></item>
+            /// <item><description><b>CEN</b>: when a Virtual Border Router (VBR) is attached to a Cloud Enterprise Network (CEN) instance, the original route attributes such as <b>as-path</b> and <b>community</b> can be carried when advertising BGP routes to the user side.</description></item>
+            /// <item><description><b>CENv6</b>: when a VBR is attached to an IPv6-enabled CEN instance, the original route attributes such as <b>as-path</b> and <b>community</b> can be carried when advertising BGP routes to the user side.</description></item>
+            /// <item><description><b>QOS</b>: the device supports configuring QoS policies on physical ports.</description></item>
+            /// <item><description><b>MSHA</b>: the device supports configuring a fast failover group between two VBRs.</description></item>
+            /// <item><description><b>MULTI_MS_HA</b>: the device supports configuring a fast failover group among up to 8 VBRs. These VBRs must be added to the same Express Connect Router (ECR).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string FeatureKey { get; set; }
 
             /// <summary>
-            /// <para>The feature value of the Express Connect circuit. Valid values:</para>
+            /// <para>The attribute value of the Express Connect circuit. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>OK</b>: Supported</description></item>
-            /// <item><description><b>NOK</b>: Not supported</description></item>
+            /// <item><description><b>OK</b>: Supported.</description></item>
+            /// <item><description><b>NOK</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

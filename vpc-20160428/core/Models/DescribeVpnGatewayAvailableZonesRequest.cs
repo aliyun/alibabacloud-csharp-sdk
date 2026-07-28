@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnGatewayAvailableZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The language in which the returned results are displayed. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh-CN</b>: Chinese.</description></item>
         /// <item><description><b>en-US</b> (default): English.</description></item>
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The VPN gateway type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Traditional</b>: Returns zone information for creating traditional VPN gateways.</description></item>
-        /// <item><description><b>Enhanced.SiteToSite</b>: Returns zone information for creating enhanced site-to-cloud VPN gateways.</description></item>
-        /// <item><description><b>Default value</b>: Returns zone information for creating all types of VPN gateways.</description></item>
+        /// <item><description><b>Traditional</b>: Returns zone information for zones where traditional VPN gateways can be created.</description></item>
+        /// <item><description><b>Enhanced.SiteToSite</b>: Returns zone information for zones where enhanced site-to-cloud VPN gateways can be created.</description></item>
+        /// <item><description><b>Default value</b>: Returns zone information for zones where all types of VPN gateways can be created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description>If the IPsec-VPN connection is associated with a VPN gateway instance, this parameter specifies the bandwidth specification of the VPN gateway instance.</description></item>
         /// <item><description>If the IPsec-VPN connection is associated with a transit router, this parameter specifies the expected bandwidth specification that the IPsec-VPN connection can support.</description></item>
         /// </list>
-        /// <para>Different bandwidth specifications may affect the zone information returned. Valid values:</para>
+        /// <para>Different bandwidth specifications may affect the returned zone information. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>5M</b></description></item>
         /// <item><description><b>10M</b></description></item>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>100M</b></description></item>
         /// <item><description><b>200M</b></description></item>
         /// <item><description><b>500M</b></description></item>
-        /// <item><description><b>1000M</b>.</description></item>
+        /// <item><description><b>1000M</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

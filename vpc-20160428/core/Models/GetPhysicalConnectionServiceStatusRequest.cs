@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region for which you want to query the status of outbound data transfer billing.</para>
+        /// <para>The ID of the region for which you want to query whether outbound traffic billing is enabled. </para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateRouterInterfaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order number. This parameter is returned if InstanceChargeType is set to PrePaid.</para>
+        /// <para>The order ID. This parameter is returned when the subscription billing method is selected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20210101123456</para>

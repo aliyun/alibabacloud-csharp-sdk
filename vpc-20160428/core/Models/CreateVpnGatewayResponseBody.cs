@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The order ID.</para>
         /// <para>&lt;props=&quot;china&quot;&gt;If you did not enable automatic payment for the VPN gateway bill, go to <a href="https://usercenter2.aliyun.com/home">Expenses and Costs</a> to complete the payment.
-        /// &lt;props=&quot;intl&quot;&gt;If you did not enable automatic payment for the VPN gateway bill, go to <a href="https://usercenter2-intl.aliyun.com/billing/#/account/overview">Expenses and Costs</a> to complete the payment..</para>
+        /// &lt;props=&quot;intl&quot;&gt;If you did not enable automatic payment for the VPN gateway bill, go to <a href="https://usercenter2-intl.aliyun.com/billing/#/account/overview">Expenses and Costs</a> to complete the payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>208240895400460</para>

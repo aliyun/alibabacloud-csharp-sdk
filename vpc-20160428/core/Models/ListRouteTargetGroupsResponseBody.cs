@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListRouteTargetGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Token for the next query. Value: If NextToken is empty, it indicates there is no next query. If NextToken has a return value, it indicates the token for the next query.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. If a value is returned for NextToken, the value indicates the token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>DE77A7F3-3B74-41C0-A5BC-CAFD188C28B6</para>
@@ -40,16 +40,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of route target groups.</para>
+        /// <para>The list of route target groups.</para>
         /// </summary>
         [NameInMap("RouteTargetGroups")]
         [Validation(Required=false)]
         public List<ListRouteTargetGroupsResponseBodyRouteTargetGroups> RouteTargetGroups { get; set; }
         public class ListRouteTargetGroupsResponseBodyRouteTargetGroups : TeaModel {
             /// <summary>
-            /// <para>The configuration mode of the route target group. Supported modes are as follows:</para>
+            /// <para>The configuration mode of the route target group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Active-Standby</b>: Active-standby mode.</description></item>
+            /// <item><description><b>Active-Standby</b>: active/standby mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The region ID of the VPC to which the route target group belongs.</para>
-            /// <para>You can obtain the region ID by calling the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> interface.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Description of the route target group.</para>
+            /// <para>The description of the route target group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>myRouteTargetGroupDescription</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RouteTargetGroupDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route target group instance.</para>
+            /// <para>The routing target group instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rtg-xxxx</para>
@@ -121,19 +121,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RouteTargetGroupName { get; set; }
 
             /// <summary>
-            /// <para>The list of route target group members.</para>
+            /// <para>The list of members in the route target group.</para>
             /// </summary>
             [NameInMap("RouteTargetMemberList")]
             [Validation(Required=false)]
             public List<ListRouteTargetGroupsResponseBodyRouteTargetGroupsRouteTargetMemberList> RouteTargetMemberList { get; set; }
             public class ListRouteTargetGroupsResponseBodyRouteTargetGroupsRouteTargetMemberList : TeaModel {
                 /// <summary>
-                /// <para>The enable status of the route target group member. Values:</para>
+                /// <para>The enable status of the route target group member. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Enable</b>: Enabled.</description></item>
                 /// <item><description><b>Disable</b>: Disabled.</description></item>
                 /// </list>
-                /// <para>Only disabled route target group members can be modified to other instances. Enabled route target group members cannot be modified.</para>
+                /// <para>Only members in the Disable state can be modified to other instances. Members in the Enable state cannot be modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enable</para>
@@ -143,10 +143,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string EnableStatus { get; set; }
 
                 /// <summary>
-                /// <para>The health check status of the route target group member. Values:</para>
+                /// <para>The health check status of the route target group member. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Normal</b>: Normal</description></item>
-                /// <item><description><b>Abnormal</b>: Abnormal</description></item>
+                /// <item><description><b>Normal</b>: Normal.</description></item>
+                /// <item><description><b>Abnormal</b>: Abnormal.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string HealthCheckStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the route target group member instance.</para>
+                /// <para>The routing target group member instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ep-xxxx</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string MemberId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the route target group member.</para>
+                /// <para>The member type of the route target group.</para>
                 /// <para>Currently supported types:</para>
                 /// <list type="bullet">
                 /// <item><description><b>GatewayLoadBalancerEndpoint</b></description></item>
@@ -181,12 +181,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string MemberType { get; set; }
 
                 /// <summary>
-                /// <para>The weight value of the route target group member. Values:</para>
+                /// <para>The weight of the route target group member. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>100</b>: Indicates that the member is the primary instance.</description></item>
-                /// <item><description><b>0</b>: Indicates that the member is the backup instance.</description></item>
+                /// <item><description><b>100</b>: The member is the active instance.</description></item>
+                /// <item><description><b>0</b>: The member is the standby instance.</description></item>
                 /// </list>
-                /// <para>The weight value can only be set during creation and cannot be modified.</para>
+                /// <para>The weight can only be set during creation and cannot be modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -198,16 +198,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>Status of the route target group. Values:</para>
+            /// <para>The status of the routing target group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Recovering</b>: Active-Standby rollback in progress</description></item>
-            /// <item><description><b>Switched</b>: Active-Standby switched</description></item>
-            /// <item><description><b>Available</b>: Available</description></item>
-            /// <item><description><b>Abnormal</b>: Standby instance abnormal</description></item>
-            /// <item><description><b>Pending</b>: Creating</description></item>
-            /// <item><description><b>Switching</b>: Active-Standby switching in progress</description></item>
-            /// <item><description><b>Deleting</b>: Deleting</description></item>
-            /// <item><description><b>Unavailable</b>: Both primary and standby instances are abnormal</description></item>
+            /// <item><description><b>Recovering</b>: The active/standby switchback is in progress.</description></item>
+            /// <item><description><b>Switched</b>: The active/standby switchover is complete.</description></item>
+            /// <item><description><b>Available</b>: Available.</description></item>
+            /// <item><description><b>Abnormal</b>: The standby instance has instance failures.</description></item>
+            /// <item><description><b>Pending</b>: Being created.</description></item>
+            /// <item><description><b>Switching</b>: The active/standby switchover is in progress.</description></item>
+            /// <item><description><b>Deleting</b>: Being deleted.</description></item>
+            /// <item><description><b>Unavailable</b>: Both primary and secondary instances have instance failures.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -218,15 +218,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag values. A maximum of 20 tag values are supported. If you need to pass this value, you can input an empty string.</para>
-            /// <para>A maximum of 128 characters are supported. The value cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListRouteTargetGroupsResponseBodyRouteTargetGroupsTags> Tags { get; set; }
             public class ListRouteTargetGroupsResponseBodyRouteTargetGroupsTags : TeaModel {
                 /// <summary>
-                /// <para>The key of the resource tag.</para>
+                /// <para>The tag key of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>image/upload/cbbec42e0be33abb27babefcbe0397f0</para>
@@ -236,7 +236,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the resource tag. Up to 20 tag values are supported. If you need to pass this value, you can input an empty string. A maximum of 128 characters is allowed. The value cannot start with <c>aliyun</c> or <c>acs:</c>, and it must not contain <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+                /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -260,7 +261,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Number of items in the list.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

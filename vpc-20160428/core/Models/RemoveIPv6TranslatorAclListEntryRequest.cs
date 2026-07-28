@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class RemoveIPv6TranslatorAclListEntryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ACL entry to be deleted.</para>
+        /// <para>The ID of the access control policy entry that you want to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclEntryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ACL to which the ACL entry belongs.</para>
+        /// <para>The ID of the access control policy group to which the access control policy entry belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region of the ACL.</para>
+        /// <para>The region of the access control policy group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

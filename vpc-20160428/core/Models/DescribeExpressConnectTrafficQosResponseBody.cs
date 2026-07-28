@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeExpressConnectTrafficQosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Count { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: 20.</para>
+        /// <para>The number of entries per page for paginated queries. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</description></item>
+        /// <item><description><para>Leave this parameter empty for the first query or if no subsequent query is required.</para>
+        /// </description></item>
+        /// <item><description><para>If a next query is to be sent, set the value to the <b>NextToken</b> value returned in the previous API call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,21 +46,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The information about QoS policies.</para>
+        /// <para>The list of QoS policies.</para>
         /// </summary>
         [NameInMap("QosList")]
         [Validation(Required=false)]
         public List<DescribeExpressConnectTrafficQosResponseBodyQosList> QosList { get; set; }
         public class DescribeExpressConnectTrafficQosResponseBodyQosList : TeaModel {
             /// <summary>
-            /// <para>The information about the instances to which the QoS policy is associated.</para>
+            /// <para>The list of associated instances.</para>
             /// </summary>
             [NameInMap("AssociatedInstanceList")]
             [Validation(Required=false)]
             public List<DescribeExpressConnectTrafficQosResponseBodyQosListAssociatedInstanceList> AssociatedInstanceList { get; set; }
             public class DescribeExpressConnectTrafficQosResponseBodyQosListAssociatedInstanceList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the instance to which the QoS policy is associated.</para>
+                /// <para>The ID of the associated instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pc-bp159zj8zujwy3p07****</para>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The configuration progress of the instance to which the QoS policy is associated. Valid values: <b>0</b> to <b>100</b>.</para>
+                /// <para>The configuration progress of the associated instance. Valid values: <b>0</b> to <b>100</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -78,11 +80,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public int? InstanceProgressing { get; set; }
 
                 /// <summary>
-                /// <para>The state of the instance to which the QoS policy is associated. Valid values:</para>
+                /// <para>The status of the associated instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Normal</b>: The instance is available.</description></item>
-                /// <item><description><b>Configuring</b>: The instance is being configured.</description></item>
-                /// <item><description><b>Deleting</b>: The instance is being deleted.</description></item>
+                /// <item><description><para><b>Normal</b>: available.</para>
+                /// </description></item>
+                /// <item><description><para><b>Configuring</b>: being configured.</para>
+                /// </description></item>
+                /// <item><description><para><b>Deleting</b>: being deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -93,7 +98,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string InstanceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The type of the instance to which the QoS policy is associated. Only <b>PHYSICALCONNECTION</b> is returned.</para>
+                /// <para>The type of the associated instance. Valid values: <b>PHYSICALCONNECTION</b>: Express Connect circuit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PHYSICALCONNECTION</para>
@@ -105,7 +110,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The configuration progress of the QoS policy. Valid values: <b>0</b> to <b>100</b>.</para>
+            /// <para>The overall configuration progress of the QoS policy. Valid values: <b>0</b> to <b>100</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -115,8 +120,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? Progressing { get; set; }
 
             /// <summary>
-            /// <para>The description of the QoS policy.</para>
-            /// <para>The description can be up to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The description of the QoS policy. </para>
+            /// <para>The description is <b>0</b> to <b>256</b> characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qos-test</para>
@@ -126,7 +131,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string QosDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the QoS policy.</para>
+            /// <para>The QoS policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qos-pksbqfmotl5hzq****</para>
@@ -136,8 +141,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string QosId { get; set; }
 
             /// <summary>
-            /// <para>The name of the QoS policy.</para>
-            /// <para>The name can be up to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The name of the QoS policy. </para>
+            /// <para>The name is <b>0</b> to <b>128</b> characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qos-test</para>
@@ -147,17 +152,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string QosName { get; set; }
 
             /// <summary>
-            /// <para>The information about the QoS queues.</para>
+            /// <para>The list of QoS queues.</para>
             /// </summary>
             [NameInMap("QueueList")]
             [Validation(Required=false)]
             public List<DescribeExpressConnectTrafficQosResponseBodyQosListQueueList> QueueList { get; set; }
             public class DescribeExpressConnectTrafficQosResponseBodyQosListQueueList : TeaModel {
                 /// <summary>
-                /// <para>The percentage of bandwidth allocated to a QoS queue.</para>
+                /// <para>The bandwidth percentage of the QoS queue.</para>
                 /// <list type="bullet">
-                /// <item><description>If QueueType is set to <b>Medium</b>, this parameter is required. Valid values: <b>1</b> to <b>100</b>.</description></item>
-                /// <item><description>If QueueType is set to <b>Default</b>, a value of - is returned.</description></item>
+                /// <item><description><para>When the QoS queue type is <b>Medium</b>, this parameter is required. Valid values: <b>1</b> to <b>100</b>.</para>
+                /// </description></item>
+                /// <item><description><para>When the QoS queue type is <b>Default</b>, this parameter is set to &quot;-&quot;.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -168,7 +175,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string BandwidthPercent { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the QoS policy.</para>
+                /// <para>The QoS policy ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qos-pksbqfmotl5hzq****</para>
@@ -179,7 +186,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 /// <summary>
                 /// <para>The description of the QoS queue.</para>
-                /// <para>The description can be up to <b>256</b> characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The description is <b>0</b> to <b>256</b> characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qos-queue-test</para>
@@ -189,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string QueueDescription { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the QoS queue.</para>
+                /// <para>The QoS queue ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qos-queue-9nyx2u7n71s2rc****</para>
@@ -200,7 +207,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 /// <summary>
                 /// <para>The name of the QoS queue.</para>
-                /// <para>The name can be up to <b>128</b> characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The name is <b>0</b> to <b>128</b> characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qos-queue-test</para>
@@ -210,14 +217,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string QueueName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the QoS queue. Valid values:</para>
+                /// <para>The QoS queue type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>High</b>: high-priority queue.</description></item>
-                /// <item><description><b>Medium</b>: standard queue.</description></item>
-                /// <item><description><b>Default</b>: default queue.</description></item>
+                /// <item><description><para><b>High</b>: high-priority queue.</para>
+                /// </description></item>
+                /// <item><description><para><b>Medium</b>: medium-priority queue.</para>
+                /// </description></item>
+                /// <item><description><para><b>Default</b>: default-priority queue.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>You cannot create a default queue.</para>
+                /// <para>The default-priority queue cannot be created.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -228,11 +238,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string QueueType { get; set; }
 
                 /// <summary>
-                /// <para>The state of the QoS queue. Valid values:</para>
+                /// <para>The status of the QoS queue. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Normal</b>: The QoS queue is available.</description></item>
-                /// <item><description><b>Configuring</b>: The QoS queue is being configured.</description></item>
-                /// <item><description><b>Deleting</b>: The QoS queue is being deleted.</description></item>
+                /// <item><description><para><b>Normal</b>: available.</para>
+                /// </description></item>
+                /// <item><description><para><b>Configuring</b>: being configured.</para>
+                /// </description></item>
+                /// <item><description><para><b>Deleting</b>: being deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -245,7 +258,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmz7vtyl4f***</para>
@@ -255,13 +268,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The state of the QoS policy. Valid values:</para>
+            /// <para>The status of the QoS policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: The QoS policy is available.</description></item>
-            /// <item><description><b>Configuring</b>: The QoS policy is being configured.</description></item>
+            /// <item><description><para><b>Normal</b>: available.</para>
+            /// </description></item>
+            /// <item><description><para><b>Configuring</b>: being configured.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>If a QoS policy is in the Configuring state, you cannot perform most of the operations to create, update, or delete QoS policies, QoS queues, or QoS rules.</para>
+            /// <para>A QoS policy in the Configuring state restricts most create, update, and delete operations on QoS policies, QoS queues, and QoS rules.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -272,14 +287,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag list.</para>
+            /// <para>The tags of the resource.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeExpressConnectTrafficQosResponseBodyQosListTags> Tags { get; set; }
             public class DescribeExpressConnectTrafficQosResponseBodyQosListTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The tag key of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinanceDept</para>
@@ -289,7 +304,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The tag value of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinanceJoshua</para>
@@ -313,7 +328,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of returned entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

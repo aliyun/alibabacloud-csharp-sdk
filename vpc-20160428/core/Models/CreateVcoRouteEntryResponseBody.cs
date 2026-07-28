@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVcoRouteEntryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The UNIX timestamp when the destination-based route entry was created. Unit: milliseconds.  </para>
-        /// <para>The timestamp follows the Unix time format, which represents the total number of milliseconds elapsed since 00:00:00 UTC on January 1, 1970, until the destination-based route entry was created.</para>
+        /// <para>The timestamp when the destination route entry was created. Unit: milliseconds.</para>
+        /// <para>The timestamp follows the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1658387202664</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The description of the destination-based route entry.</para>
+        /// <para>The description of the destination route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The next hop of the destination-based route entry.</para>
+        /// <para>The next hop of the destination route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vco-p0w2jpkhi2eeop6q6****</para>
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The tunnel protocol.  </para>
-        /// <para>Valid value: <b>Ipsec</b>, which indicates the IPsec tunnel protocol.</para>
+        /// <para>The tunneling protocol.</para>
+        /// <para>The value is <b>Ipsec</b>, which specifies the IPsec tunneling protocol.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ipsec</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The description of the destination-based route.</para>
+        /// <para>The destination CIDR block of the destination route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.10.0/24</para>
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteDest { get; set; }
 
         /// <summary>
-        /// <para>The publish status of the destination-based route entry.  </para>
-        /// <para>Valid value: <b>published</b>, which indicates that the route entry has been published to the transit router instance.</para>
+        /// <para>The publish status of the destination route entry.</para>
+        /// <para>The value is <b>published</b>, which indicates that the route entry is published to the transit router instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>published</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the IPsec-VPN connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vco-p0w2jpkhi2eeop6q6****</para>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The weight of the destination-based route entry.  </para>
+        /// <para>The weight of the destination route entry.</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: indicates low priority.  </description></item>
-        /// <item><description><b>100</b>: indicates high priority.</description></item>
+        /// <item><description><b>0</b>: low priority.</description></item>
+        /// <item><description><b>100</b>: high priority.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

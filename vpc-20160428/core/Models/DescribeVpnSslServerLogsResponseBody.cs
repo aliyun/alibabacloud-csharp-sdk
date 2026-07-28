@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the log is accurate. Valid values:</para>
+        /// <para>Indicates whether the queried logs are accurate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: accurate</description></item>
-        /// <item><description><b>false</b>: inaccurate</description></item>
+        /// <item><description><para><b>true</b>: Accurate.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Not accurate.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? IsCompleted { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DEDAC5B1-9292-5BF7-BDDF-61BA58CFB2FB</para>

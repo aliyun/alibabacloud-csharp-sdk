@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ModifyVpcAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The new IPv4 CIDR block of the VPC.</para>
-        /// <para>You can specify a larger or smaller IPv4 CIDR block than the IPv4 CIDR block of the VPC. The subnet mask must be 8 to 28 bits in length. If you specify a smaller IPv4 CIDR block and existing IP addresses do not fall within the CIDR block, the modification fails.</para>
+        /// <para>You can expand or shrink the CIDR block within the original IPv4 CIDR block of the VPC. The recommended subnet mask is 16 to 28 bits. If you shrink the IPv4 CIDR block of the VPC and IP addresses that are already in use fall outside the target CIDR block, the modification fails.</para>
         /// <remarks>
-        /// <para> If you modify the CIDR block of a VPC, your existing services are not affected.</para>
+        /// <para>Modifying the IPv4 CIDR block of a VPC does not affect existing services.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The new description of the VPC.</para>
-        /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is my VPC.</para>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable the DNS hostname feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): disabled.</description></item>
-        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b> (default): Disabled.</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableDnsHostname { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable IPv6 CIDR blocks. Valid values:</para>
+        /// <para>Specifies whether to enable IPv6. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>false</b> (default): Disabled.</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableIPv6 { get; set; }
 
         /// <summary>
-        /// <para>The IPv6 CIDR block of the VPC.</para>
+        /// <para>The IPv6 CIDR block of the VPC.
+        /// When you enable IPv6 for a VPC, the system will assign an IPv6 CIDR block. To specify an IPv6 CIDR block, invoke the <a href="https://help.aliyun.com/document_detail/448916.html">AllocateVpcIpv6Cidr</a> operation to reserve a specific IPv6 CIDR block first, and then pass it in.</para>
+        /// <remarks>
+        /// <para>For a VPC that already has IPv6 enabled, you cannot modify the IPv6 CIDR block by passing in this parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2408:XXXX:0:6a::/56</para>
@@ -73,15 +77,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The type of IPv6 CIDR block. Valid values:</para>
+        /// <para>The type of the IPv6 CIDR block of the VPC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BGP</b> (default)</description></item>
-        /// <item><description><b>ChinaMobile</b></description></item>
-        /// <item><description><b>ChinaUnicom</b></description></item>
-        /// <item><description><b>ChinaTelecom</b></description></item>
+        /// <item><description><b>BGP</b> (default): Alibaba Cloud BGP IPv6.</description></item>
+        /// <item><description><b>ChinaMobile</b>: China Mobile (single ISP).</description></item>
+        /// <item><description><b>ChinaUnicom</b>: China Unicom (single ISP).</description></item>
+        /// <item><description><b>ChinaTelecom</b>: China Telecom (single ISP).</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to <b>ChinaTelecom</b>, <b>ChinaUnicom</b>, or <b>ChinaMobile</b>.</para>
+        /// <para>If you are a user who has the single-ISP bandwidth whitelist enabled, you can set this parameter to <b>ChinaTelecom</b> (China Telecom), <b>ChinaUnicom</b> (China Unicom), or <b>ChinaMobile</b> (China Mobile).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

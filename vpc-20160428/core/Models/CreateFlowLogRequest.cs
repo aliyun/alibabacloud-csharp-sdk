@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string IpVersion { get; set; }
 
+        [NameInMap("LogFormat")]
+        [Validation(Required=false)]
+        public string LogFormat { get; set; }
+
         /// <summary>
         /// <para>The name of the Logstore that stores the captured traffic.</para>
         /// <list type="bullet">
@@ -111,7 +115,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource from which to capture traffic.</para>
+        /// <para>The ID of the resource whose traffic you want to capture.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,7 +134,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource from which to capture traffic. Valid values:</para>
+        /// <para>The type of the resource whose traffic you want to capture. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>NetworkInterface</b>: network interface controller (NIC).</para>
         /// </description></item>
@@ -156,8 +160,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateFlowLogRequestTag> Tag { get; set; }
         public class CreateFlowLogRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string.</para>
+            /// <para>A tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -167,8 +171,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. You can specify an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

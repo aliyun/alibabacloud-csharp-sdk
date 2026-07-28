@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public List<DescribeExpressConnectTrafficQosQueueResponseBodyQueueListRuleList> RuleList { get; set; }
             public class DescribeExpressConnectTrafficQosQueueResponseBodyQueueListRuleList : TeaModel {
                 /// <summary>
-                /// <para>The destination IP address IPv4 CIDR block that is used for traffic matching by the QoS rule.</para>
+                /// <para>The destination IP address IPv4 CIDR block that the QoS rule matches for traffic.</para>
                 /// <remarks>
                 /// <para>You cannot specify this parameter together with <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b>.</para>
                 /// </remarks>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DstCidr { get; set; }
 
                 /// <summary>
-                /// <para>The destination IP address IPv6 CIDR block that is used for traffic matching by the QoS rule.</para>
+                /// <para>The destination IP address IPv6 CIDR block that the QoS rule matches for traffic.</para>
                 /// <remarks>
                 /// <para>You cannot specify this parameter together with <b>SrcCidr</b> or <b>DstCidr</b>.</para>
                 /// </remarks>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DstIPv6Cidr { get; set; }
 
                 /// <summary>
-                /// <para>The destination port range that is used for traffic matching by the QoS rule. Valid values: <b>0</b> to <b>65535</b>. A value of -1 indicates that no port is matched. Only a single port number is supported. The start and end port numbers must be the same. The destination port range is fixed for each protocol type. Valid values:</para>
+                /// <para>The destination port range that the QoS rule matches. Valid values: <b>0</b> to <b>65535</b>. A value of -1 indicates that no match is applied. Only a single port number can be specified. The start and end port numbers must be the same. The destination port range is fixed for different protocol types. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para><b>ALL</b>: -1/-1, not editable.</para>
                 /// </description></item>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DstPortRange { get; set; }
 
                 /// <summary>
-                /// <para>The DSCP value that is used for traffic matching by the QoS rule. Valid values: <b>0</b> to <b>63</b>. A value of -1 indicates that no DSCP value is matched.</para>
+                /// <para>The DSCP value that the QoS rule matches. Valid values: <b>0</b> to <b>63</b>. A value of -1 indicates that no match is applied.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public int? MatchDscp { get; set; }
 
                 /// <summary>
-                /// <para>The priority of the QoS rule. Valid values: <b>1</b> to <b>9000</b>. A larger value indicates a higher priority. The priority of each QoS rule must be unique within the same QoS policy.</para>
+                /// <para>The priority of the QoS rule. Valid values: <b>1</b> to <b>9000</b>. A larger value indicates a higher priority. QoS rule priorities must be unique within the same QoS policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// </description></item>
                 /// <item><description><para><b>PostgreSQL</b></para>
                 /// </description></item>
-                /// <item><description><para><b>Redis</b>.</para>
+                /// <item><description><para><b>Redis</b></para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string QueueId { get; set; }
 
                 /// <summary>
-                /// <para>The new DSCP value to remark in the traffic. Valid values: <b>0</b> to <b>63</b>. A value of -1 indicates that the DSCP value is not modified.</para>
+                /// <para>The remarked DSCP value in the traffic. Valid values: <b>0</b> to <b>63</b>. A value of -1 indicates that the DSCP value is not modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The source IPv4 CIDR block that is used for traffic matching by the QoS rule.</para>
+                /// <para>The source IPv4 CIDR block that the QoS rule matches.</para>
                 /// <remarks>
                 /// <para>You cannot specify this parameter together with <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b>.</para>
                 /// </remarks>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string SrcCidr { get; set; }
 
                 /// <summary>
-                /// <para>The source IPv6 CIDR block that is used for traffic matching by the QoS rule.</para>
+                /// <para>The source IPv6 CIDR block that the QoS rule matches.</para>
                 /// <remarks>
                 /// <para>You cannot specify this parameter together with <b>SrcCidr</b> or <b>DstCidr</b>.</para>
                 /// </remarks>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string SrcIPv6Cidr { get; set; }
 
                 /// <summary>
-                /// <para>The source port range that is used for traffic matching by the QoS rule. Valid values: <b>0</b> to <b>65535</b>. A value of -1 indicates that no port is matched. Only a single port number is supported. The start and end port numbers must be the same.</para>
+                /// <para>The source port range that the QoS rule matches. Valid values: <b>0</b> to <b>65535</b>. A value of -1 indicates that no match is applied. Only a single port number can be specified. The start and end port numbers must be the same.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1/-1</para>

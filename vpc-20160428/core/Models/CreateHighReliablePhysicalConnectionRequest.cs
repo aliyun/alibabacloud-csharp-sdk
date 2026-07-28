@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateHighReliablePhysicalConnectionRequestApList> ApList { get; set; }
         public class CreateHighReliablePhysicalConnectionRequestApList : TeaModel {
             /// <summary>
-            /// <para>The ID of the access point for the Express Connect circuit.</para>
+            /// <para>The ID of the access point where the Express Connect circuit is located.</para>
             /// <remarks>
-            /// <para>When <b>HighReliableType</b> is set to <b>MultiApMultiDevice</b> or <b>MultiApSingleDevice</b>, you must specify two different access points. When <b>HighReliableType</b> is set to <b>SingleApMultiDevice</b> or <b>SingleApMultiConnection</b>, you must specify one access point.</para>
+            /// <para>When <b>HighReliableType</b> is set to <b>MultiApMultiDevice</b> or <b>MultiApSingleDevice</b>, two different access points are required. When <b>HighReliableType</b> is set to <b>SingleApMultiDevice</b> or <b>SingleApMultiConnection</b>, one access point is required.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The description of the Express Connect circuit.</para>
-            /// <para>The description must be 2 to 256 characters in length and must start with a letter or Chinese character, but cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The description must be 2 to 256 characters in length. It must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description</para>
@@ -86,11 +86,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </description></item>
             /// <item><description><para><b>CM</b>: China Mobile.</para>
             /// </description></item>
-            /// <item><description><para><b>CO</b>: other Chinese carriers. </para>
+            /// <item><description><para><b>CO</b>: Other Chinese providers. </para>
             /// </description></item>
             /// <item><description><para><b>Equinix</b>: Equinix.</para>
             /// </description></item>
-            /// <item><description><para><b>Other</b>: other carriers outside the Chinese mainland.</para>
+            /// <item><description><para><b>Other</b>: Other providers outside the Chinese mainland.</para>
             /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The name of the Express Connect circuit.  </para>
-            /// <para>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-), but cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The name must be 2 to 128 characters in length. It must start with a letter or Chinese character and can contain digits, underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -114,30 +114,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The optical module model supported by the access point of the Express Connect circuit. Valid values:</para>
+            /// <para>The supported optical module models for the Express Connect circuit access point. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1000Base-LX: <list type="bullet">
+            /// <item><description>1000Base-LX : <list type="bullet">
             /// <item><description><c>SFP-GE-LR-SM1310,10KM</c></description></item>
             /// <item><description><c>SFP-GE-ER-SM1310,40KM</c></description></item>
             /// <item><description><c>SFP-GE-ZR-SM1550,80KM</c></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>10GBase-LR: <list type="bullet">
+            /// <item><description>10GBase-LR : <list type="bullet">
             /// <item><description><c>SFP-10G-LR-SM1310,10KM</c></description></item>
             /// <item><description><c>SFP-10G-ER-SM1550,40KM</c> </description></item>
             /// <item><description><c>SFP-10G-ZR-SM1550,80KM</c></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>40GBase-LR: <list type="bullet">
+            /// <item><description>40GBase-LR ： <list type="bullet">
             /// <item><description><c>QSFP-40G-LR4-WDM1300,10KM</c></description></item>
             /// <item><description><c>QSFP-40G-ER4-WDM1300,40KM</c></description></item>
             /// <item><description><c>QSFP-40G-ZR4-WDM1300,80KM</c></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>100GBase-LR: <list type="bullet">
+            /// <item><description>100GBase-LR ： <list type="bullet">
             /// <item><description><c>QSFP28-100G-LR4-WDM1300,10KM</c></description></item>
             /// <item><description><c>QSFP28-100G-ER4-WDM1300,40KM</c></description></item>
-            /// <item><description><c>QSFP28-100G-ZR4-WDM1300,80KM</c>.</description></item>
+            /// <item><description><c>QSFP28-100G-ZR4-WDM1300,80KM</c></description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -194,10 +194,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>The client token used to ensure the idempotence of the request.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -217,9 +217,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run without creating the instance. The system checks the required parameters, request format, and instance status. If the check fails, the error code <c>DRYRUN.FAIL</c> is returned along with the corresponding error list. If the check succeeds, the code <c>DRYRUN.SUCCESS</c> is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run without creating the instance. The system checks required parameters, request format, and instance status. If the check fails, the error code <c>DRYRUN.FAIL</c> is returned along with the corresponding error list. If the check passes, the code <c>DRYRUN.SUCCESS</c> is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends the request. After the request passes the check, the instance is created.</para>
+        /// <item><description><para><b>false</b> (default): sends a normal request. After the check passes, the instance is created.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -231,12 +231,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DryRun { get; set; }
 
         /// <summary>
-        /// <para>The zone-redundancy mode. Valid values:</para>
+        /// <para>The zone redundancy mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MultiApMultiDevice</b>: maximum disaster recovery. This mode supports two different access points and two different devices, providing maximum disaster recovery.</description></item>
-        /// <item><description><b>MultiApSingleDevice</b>: enhanced disaster recovery. This mode supports two different access points and one device, providing enhanced disaster recovery.</description></item>
-        /// <item><description><b>SingleApMultiDevice</b>: development and testing. This mode supports one access point and two devices. This mode is recommended only for development and testing of non-critical workloads.</description></item>
-        /// <item><description><b>SingleApMultiConnection</b>: high-bandwidth load balancing. This mode is available only to users in the whitelist. It supports one access point, one device, and multiple physical ports. To use this mode, contact your account manager.</description></item>
+        /// <item><description><b>MultiApMultiDevice</b>: Maximum disaster recovery. This mode supports two different access points and two different devices, providing maximum disaster recovery.</description></item>
+        /// <item><description><b>MultiApSingleDevice</b>: Enhanced disaster recovery. This mode supports two different access points and one device, providing enhanced disaster recovery.</description></item>
+        /// <item><description><b>SingleApMultiDevice</b>: Development and testing. This mode supports one access point and two devices. It is recommended only for development and testing of non-critical workloads.</description></item>
+        /// <item><description><b>SingleApMultiConnection</b>: High-bandwidth load balancing. This mode is available only to users in the whitelist. It supports one access point, one device, and multiple physical ports. Contact your account manager if needed.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>40GBase-LR and 100GBase-LR are subject to the actual port availability. For information about port availability, contact your account manager.</para>
+        /// <para>40GBase-LR and 100GBase-LR are subject to actual backend port availability. Contact your account manager for details.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -317,7 +317,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class CreateHighReliablePhysicalConnectionRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and must start with a letter or Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key can be up to 64 characters in length. It must start with a letter or Chinese character and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and must start with a letter or Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length. It must start with a letter or Chinese character and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

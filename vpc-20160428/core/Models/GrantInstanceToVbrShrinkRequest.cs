@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GrantInstanceToVbrShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The scope of VBR instances that accept the authorization. Valid values:</para>
+        /// <para>The scope of VBR instances to be granted authorization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b>: Grants authorization of the VPC instance to all VBR instances in the specified region under the specified Alibaba Cloud account. In this case, the <b>VbrInstanceIds</b> parameter can be left empty.</description></item>
-        /// <item><description><b>Specify</b>: Grants authorization of the VPC instance to the specified VBR instances. In this case, the <b>VbrInstanceIds</b> parameter is required.</description></item>
+        /// <item><description><b>All</b>: Grants authorization of the VPC-connected instance to all VBR instances in the specified region under the specified Alibaba Cloud account. In this case, the <b>VbrInstanceIds</b> parameter can be left empty.</description></item>
+        /// <item><description><b>Specify</b>: Grants authorization of the VPC-connected instance to the specified VBR instances. In this case, the <b>VbrInstanceIds</b> parameter is required.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GrantType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC instance for which authorization is to be granted.</para>
+        /// <para>The ID of the VPC-connected instance for which to grant authorization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPC instance for which authorization is to be granted.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
+        /// <para>The region ID of the VPC-connected instance for which to grant authorization.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

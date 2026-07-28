@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ACL ID.</para>
+        /// <para>The ID of the access control policy group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6transacl-bp1de2****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ACL.</para>
+        /// <para>The name of the access control policy group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acl1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclName { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

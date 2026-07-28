@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnAttachmentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned by the current operation. <b>200</b> indicates that the operation is successful.</para>
+        /// <para>The status code returned by the current task. <b>200</b> indicates that the task is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.</para>
-        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp when the IPsec-VPN connection was created. Unit: milliseconds.</para>
+        /// <para>The timestamp follows the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1658201810000</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The information returned by the current operation.</para>
+        /// <para>The message returned by the current task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current operation is successful.</para>
+        /// <para>Indicates whether the current task is successfully executed.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Successfully executed.</description></item>
+        /// <item><description><b>false</b>: Failed to execute.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IPsec-VPN connection.</para>
+        /// <para>The IPsec-VPN connection ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vco-p0wb09rama8qwwgfn****</para>

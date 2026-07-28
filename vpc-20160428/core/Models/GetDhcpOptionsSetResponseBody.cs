@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetDhcpOptionsSetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the virtual private cloud (VPC) that is associated with the DHCP options set.</para>
+        /// <para>The information about the VPCs associated with the DHCP options set.</para>
         /// </summary>
         [NameInMap("AssociateVpcs")]
         [Validation(Required=false)]
         public List<GetDhcpOptionsSetResponseBodyAssociateVpcs> AssociateVpcs { get; set; }
         public class GetDhcpOptionsSetResponseBodyAssociateVpcs : TeaModel {
             /// <summary>
-            /// <para>The status of the VPC that is associated with the DHCP options set. Valid values:</para>
+            /// <para>The status of the VPC associated with the DHCP options set. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>InUse</b>: in use</description></item>
-            /// <item><description><b>Pending</b>: being configured</description></item>
+            /// <item><description><para><b>InUse</b>: in use.</para>
+            /// </description></item>
+            /// <item><description><para><b>Pending</b>: being configured.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +33,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string AssociateStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC that is associated with the DHCP options set.</para>
+            /// <para>The ID of the VPC associated with the DHCP options set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-eb3b54r6otues4tjj****</para>
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>create time</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-08-21 ***</para>
@@ -53,14 +55,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>The configuration information about the DHCP options set.</para>
+        /// <para>The DHCP options configuration.</para>
         /// </summary>
         [NameInMap("DhcpOptions")]
         [Validation(Required=false)]
         public GetDhcpOptionsSetResponseBodyDhcpOptions DhcpOptions { get; set; }
         public class GetDhcpOptionsSetResponseBodyDhcpOptions : TeaModel {
             /// <summary>
-            /// <para>The suffix of the hostname.</para>
+            /// <para>The hostname suffix.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -80,10 +82,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DomainNameServers { get; set; }
 
             /// <summary>
-            /// <para>The lease time of the IPv6 addresses for the DHCP options set.</para>
+            /// <para>The lease time of the IPv6 DHCP options set.</para>
             /// <list type="bullet">
-            /// <item><description>If you use hours as the unit, Valid values are <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</description></item>
-            /// <item><description>If you use days as the unit, Valid values are <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</description></item>
+            /// <item><description><para>When the lease time is set in hours: Unit: h. Valid values: <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>24h</b>.</para>
+            /// </description></item>
+            /// <item><description><para>When the lease time is set in days: Unit: d. Valid values: <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>1d</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,11 +98,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Ipv6LeaseTime { get; set; }
 
             /// <summary>
-            /// <para>The lease time of the IPv4 addresses for the DHCP options set.</para>
+            /// <para>The lease time of the IPv4 DHCP options set.</para>
             /// <list type="bullet">
-            /// <item><description><para>If you use hours as the unit, valid values are <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</para>
+            /// <item><description><para>When the lease time is set in hours: Unit: h. Valid values: <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</para>
             /// </description></item>
-            /// <item><description><para>If you use days as the unit, valid values are <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</para>
+            /// <item><description><para>When the lease time is set in days: Unit: d. Valid values: <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -142,7 +146,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DhcpOptionsSetName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the DHCP options set belongs.</para>
+        /// <para>The Alibaba Cloud account ID to which the DHCP options set belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>283117732402483989</para>
@@ -152,7 +156,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</para>
@@ -162,7 +166,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the resource group to which the DHCP options set belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph****</para>
@@ -174,10 +178,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the DHCP options set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Available</b>: available</description></item>
-        /// <item><description><b>InUse</b>: in use</description></item>
-        /// <item><description><b>Deleted</b>: deleted</description></item>
-        /// <item><description><b>Pending</b>: being configured</description></item>
+        /// <item><description><para><b>Available</b>: available.</para>
+        /// </description></item>
+        /// <item><description><para><b>InUse</b>: in use.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleted</b>: deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>Pending</b>: being configured.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -188,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tag list.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListGatewayRouteTableEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>The destination CIDR block of the route entry in the gateway route table that you want to query.</para>
+        /// <para>The destination CIDR block of the route entry in the gateway route table to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.5</para>

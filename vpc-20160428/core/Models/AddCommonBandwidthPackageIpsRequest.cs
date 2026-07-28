@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AddCommonBandwidthPackageIpsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Internet Shared Bandwidth instance.</para>
+        /// <para>The instance ID of the Internet Shared Bandwidth instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The list of EIPs that you want to associate with the Internet Shared Bandwidth instance.</para>
-        /// <para>You can specify at most 10 EIP IDs at a time.</para>
+        /// <para>The list of EIP instance IDs to be added.</para>
+        /// <para>You can add up to 10 EIP instance IDs at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IpInstanceIds")]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> IpInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The IP type. Set the value to <b>EIP</b>, which indicates that an EIP is added to the Shared Bandwidth.</para>
+        /// <para>The IP type. Set the value to <b>EIP</b>, which specifies that EIPs are added to the Internet Shared Bandwidth instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EIP</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Internet Shared Bandwidth instance.</para>
+        /// <para>The region ID of the Internet Shared Bandwidth instance. </para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 

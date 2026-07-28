@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully delete the Internet Shared Bandwidth instance. Valid values:</para>
+        /// <para>Specifies whether to forcibly delete the Internet Shared Bandwidth instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): deletes the Internet Shared Bandwidth instance only when no EIPs are associated with the Internet Shared Bandwidth instance.</description></item>
-        /// <item><description><b>true</b>: disassociates all EIPs from the Internet Shared Bandwidth instance and deletes the Internet Shared Bandwidth instance.</description></item>
+        /// <item><description><para><b>false</b> (default): The Internet Shared Bandwidth instance is deleted only if it does not contain elastic IP addresses (EIPs).</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: All EIPs are removed from the Internet Shared Bandwidth instance, and then the instance is deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,8 +45,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Internet Shared Bandwidth instance is created.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region where the Internet Shared Bandwidth instance resides. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

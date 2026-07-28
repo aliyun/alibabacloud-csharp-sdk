@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListEnhanhcedNatGatewayAvailableZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8AE6F367-52EA-535D-9A3D-EF23D70527C8</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<ListEnhanhcedNatGatewayAvailableZonesResponseBodyZones> Zones { get; set; }
         public class ListEnhanhcedNatGatewayAvailableZonesResponseBodyZones : TeaModel {
             /// <summary>
-            /// <para>The name of the zone.</para>
+            /// <para>The zone name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>中东1 可用区A</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone where the instance is deployed.</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>me-east-1a</para>

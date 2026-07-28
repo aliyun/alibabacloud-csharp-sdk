@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListFullNatEntriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the FULLNAT entries that are queried.</para>
+        /// <para>The list of FULLNAT entries.</para>
         /// </summary>
         [NameInMap("FullNatEntries")]
         [Validation(Required=false)]
         public List<ListFullNatEntriesResponseBodyFullNatEntries> FullNatEntries { get; set; }
         public class ListFullNatEntriesResponseBodyFullNatEntries : TeaModel {
             /// <summary>
-            /// <para>The backend domain name for FULLNAT address translation in a FULLNAT entry.</para>
+            /// <para>The backend domain name for FULLNAT address translation in the FULLNAT entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx.com</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string AccessDomain { get; set; }
 
             /// <summary>
-            /// <para>The backend IP address that is used for FULLNAT address translation in FULLNAT entries.</para>
+            /// <para>The backend IP address for FULLNAT address translation in the FULLNAT entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string AccessIp { get; set; }
 
             /// <summary>
-            /// <para>The backend port that is used for port mapping in FULLNAT entries. Valid values: <b>1</b> to <b>65535</b>.</para>
+            /// <para>The backend port for port mapping in the FULLNAT entry. Valid values: <b>1</b> to <b>65535</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The IP resolved from the backend domain name for address translation in the FULLNAT entry.</para>
+            /// <para>The IP address resolved from the backend domain name for address translation in the FULLNAT entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The description of the FULLNAT entry.</para>
-            /// <para>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The description must be 2 to 128 characters in length, and must start with a letter or Chinese character. The description cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The name of the FULLNAT entry.</para>
-            /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
+            /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). The name must start with a letter or Chinese character.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the FULLNAT entry. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Pending</b></description></item>
-            /// <item><description><b>Available</b></description></item>
-            /// <item><description><b>Deleting</b></description></item>
-            /// <item><description><b>Deleted</b></description></item>
+            /// <item><description><b>Pending</b>: being configured.</description></item>
+            /// <item><description><b>Available</b>: available.</description></item>
+            /// <item><description><b>Deleting</b>: being deleted.</description></item>
+            /// <item><description><b>Deleted</b>: deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,10 +125,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string FullNatTableId { get; set; }
 
             /// <summary>
-            /// <para>The protocol of the packets that are forwarded. Valid values:</para>
+            /// <para>The forwarding protocol type. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description><b>TCP</b></description></item>
-            /// <item><description><b>UDP</b></description></item>
+            /// <item><description><b>TCP</b>: forwards TCP packets. </description></item>
+            /// <item><description><b>UDP</b>: forwards UDP packets.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IpProtocol { get; set; }
 
             /// <summary>
-            /// <para>The NAT IP address that is used for address translation in FULLNAT entries.</para>
+            /// <para>The NAT IP address that provides address translation in the FULLNAT entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NatIp { get; set; }
 
             /// <summary>
-            /// <para>The frontend port that is used for port mapping in FULLNAT entries. Valid values: <b>1</b> to <b>65535</b>.</para>
+            /// <para>The frontend port for port mapping in the FULLNAT entry. Valid values: <b>1</b> to <b>65535</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NatIpPort { get; set; }
 
             /// <summary>
-            /// <para>The ID of the elastic network interface (ENI).</para>
+            /// <para>The elastic network interface (ENI) ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-gw80wedm8pq0tpr2****</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the ENI. The value is set to <b>Endpoint</b>, which indicates a reverse endpoint.</para>
+            /// <para>The type of the elastic network interface (ENI). The value is <b>Endpoint</b> (reverse endpoint).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Endpoint</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC NAT gateway.</para>
+        /// <para>The instance ID of the VPC NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-gw8054kn57y3hq3bv****</para>
@@ -211,10 +211,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the token for the next query exists. Valid values:</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of <b>NextToken</b> is empty, no next queries are sent.</description></item>
-        /// <item><description>If the value of <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of FULLNAT entries returned.</para>
+        /// <para>The total number of FULLNAT entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

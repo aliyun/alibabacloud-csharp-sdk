@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetPublicIpAddressPoolServiceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the IP address pool feature is enabled. Valid values:</para>
+        /// <para>Indicates whether the IP address pool feature is activated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> You can call OpenPublicIpAddressPoolService to enable the IP address pool feature.</description></item>
+        /// <item><description><para><b>true</b>: activated.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: not activated. You can call the OpenPublicIpAddressPoolService operation to activate the IP address pool feature.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListVpcEndpointServicesByEndUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for <b>NextToken</b>, no next queries are sent.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value is the token that is used for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0AB1129F-32C1-5E4D-9E22-E4A859CA46EB</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of entries returned.</para>
+        /// <para>The list of available endpoint services.</para>
         /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DefaultPolicyDocument { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the cloud service to which the endpoint service belongs.</para>
+            /// <para>The domain name of the cloud service associated with the endpoint service in the queried region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss-admin.aliyuncs.com</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ServiceDomain { get; set; }
 
             /// <summary>
-            /// <para>The ID of the endpoint service.</para>
+            /// <para>The instance ID of the endpoint service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpces-m5enwdmilo210aibo9****</para>
@@ -91,10 +91,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>Indicate whether the endpoint service supports the access policy. Valid values:</para>
+            /// <para>Indicates whether the endpoint service supports access policies. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>false</b></description></item>
-            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b>: Access policies are not supported.</description></item>
+            /// <item><description><b>true</b>: Access policies are supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

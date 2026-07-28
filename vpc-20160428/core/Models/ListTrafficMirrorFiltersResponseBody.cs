@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListTrafficMirrorFiltersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The number of entries returned in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of entries queried in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is the token that is used for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the filters.</para>
+        /// <para>The details of traffic mirror filters.</para>
         /// </summary>
         [NameInMap("TrafficMirrorFilters")]
         [Validation(Required=false)]
         public List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters> TrafficMirrorFilters { get; set; }
         public class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters : TeaModel {
             /// <summary>
-            /// <para>The time when the filter is created.</para>
+            /// <para>The time when the traffic mirror filter was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-05T15:26Z</para>
@@ -81,17 +81,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The information about the outbound rules.</para>
+            /// <para>The details of outbound rules.</para>
             /// </summary>
             [NameInMap("EgressRules")]
             [Validation(Required=false)]
             public List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersEgressRules> EgressRules { get; set; }
             public class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersEgressRules : TeaModel {
                 /// <summary>
-                /// <para>The action of the outbound rule. Valid values:</para>
+                /// <para>The collection policy of the outbound rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>accept</b></description></item>
-                /// <item><description><b>drop</b></description></item>
+                /// <item><description><b>accept</b>: collects network traffic.</description></item>
+                /// <item><description><b>drop</b>: does not collect network traffic.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>The destination CIDR block of the outbound traffic.</para>
+                /// <para>The destination CIDR block of network traffic for the outbound rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.0.0.0/24</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DestinationCidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>The destination port range of the outbound traffic.</para>
+                /// <para>The destination port range of network traffic for the outbound rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22/40</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DestinationPortRange { get; set; }
 
                 /// <summary>
-                /// <para>The version of IP protocol.</para>
+                /// <para>The IP version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IPv4</para>
@@ -142,12 +142,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The protocol that is used by the outbound traffic to be mirrored. Valid values:</para>
+                /// <para>The protocol type used by the outbound network traffic to be mirrored. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ALL</b></description></item>
-                /// <item><description><b>ICMP</b></description></item>
-                /// <item><description><b>TCP</b></description></item>
-                /// <item><description><b>UDP</b></description></item>
+                /// <item><description><b>ALL</b>: all protocols.</description></item>
+                /// <item><description><b>ICMP</b>: Internet Control Message Protocol.</description></item>
+                /// <item><description><b>TCP</b>: Transmission Control Protocol.</description></item>
+                /// <item><description><b>UDP</b>: User Datagram Protocol.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The source CIDR block of the outbound traffic.</para>
+                /// <para>The source CIDR block of network traffic for the outbound rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.0.0.0/24</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string SourceCidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>The source port range of the outbound traffic.</para>
+                /// <para>The source port range of network traffic for the outbound rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22/40</para>
@@ -178,10 +178,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string SourcePortRange { get; set; }
 
                 /// <summary>
-                /// <para>The direction of the network traffic. Valid values:</para>
+                /// <para>The direction of network traffic. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>egress</b></description></item>
-                /// <item><description><b>ingress</b></description></item>
+                /// <item><description><para><b>egress</b>: outbound.</para>
+                /// </description></item>
+                /// <item><description><para><b>ingress</b>: inbound.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -192,7 +194,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string TrafficDirection { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the filter associated with the outbound rule.</para>
+                /// <para>The instance ID of the traffic mirror filter associated with the outbound rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tmf-j6cmls82xnc86vtpe****</para>
@@ -202,7 +204,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string TrafficMirrorFilterId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the outbound rule.</para>
+                /// <para>The instance ID of the outbound rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tmr-j6c89rzmtd3hhdugq****</para>
@@ -214,10 +216,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The status of the outbound rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Creating</b></description></item>
-                /// <item><description><b>Created</b></description></item>
-                /// <item><description><b>Modifying</b></description></item>
-                /// <item><description><b>Deleting</b></description></item>
+                /// <item><description><para><b>Creating</b>: being created.</para>
+                /// </description></item>
+                /// <item><description><para><b>Created</b>: created.</para>
+                /// </description></item>
+                /// <item><description><para><b>Modifying</b>: being modified.</para>
+                /// </description></item>
+                /// <item><description><para><b>Deleting</b>: being deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -230,17 +236,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The information about the inbound rules.</para>
+            /// <para>The details of inbound rules.</para>
             /// </summary>
             [NameInMap("IngressRules")]
             [Validation(Required=false)]
             public List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersIngressRules> IngressRules { get; set; }
             public class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersIngressRules : TeaModel {
                 /// <summary>
-                /// <para>The action of the inbound rule. Valid values:</para>
+                /// <para>The collection policy of the inbound rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>accept</b></description></item>
-                /// <item><description><b>drop</b></description></item>
+                /// <item><description><b>accept</b>: collects network traffic.</description></item>
+                /// <item><description><b>drop</b>: does not collect network traffic.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -251,7 +257,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>The destination CIDR block of the inbound traffic.</para>
+                /// <para>The destination CIDR block of network traffic for the inbound rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0.0.0/0</para>
@@ -261,7 +267,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DestinationCidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>The destination port range of the inbound traffic.</para>
+                /// <para>The destination port range of network traffic for the inbound rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1/-1</para>
@@ -271,7 +277,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string DestinationPortRange { get; set; }
 
                 /// <summary>
-                /// <para>The version of IP protocol.</para>
+                /// <para>The IP version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IPv4</para>
@@ -291,12 +297,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The protocol that is used by the inbound traffic to be mirrored. Valid values:</para>
+                /// <para>The protocol type used by the inbound network traffic to be mirrored. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ALL</b></description></item>
-                /// <item><description><b>ICMP</b></description></item>
-                /// <item><description><b>TCP</b></description></item>
-                /// <item><description><b>UDP</b></description></item>
+                /// <item><description><b>ALL</b>: all protocols.</description></item>
+                /// <item><description><b>ICMP</b>: Internet Control Message Protocol.</description></item>
+                /// <item><description><b>TCP</b>: Transmission Control Protocol.</description></item>
+                /// <item><description><b>UDP</b>: User Datagram Protocol.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -307,7 +313,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The source CIDR block of the inbound traffic.</para>
+                /// <para>The source CIDR block of network traffic for the inbound rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0.0.0/0</para>
@@ -317,7 +323,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string SourceCidrBlock { get; set; }
 
                 /// <summary>
-                /// <para>The destination port range of the inbound traffic.</para>
+                /// <para>The destination port range of network traffic for the inbound rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1/-1</para>
@@ -327,10 +333,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string SourcePortRange { get; set; }
 
                 /// <summary>
-                /// <para>The direction of the network traffic. Valid values:</para>
+                /// <para>The direction of network traffic. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>egress</b></description></item>
-                /// <item><description><b>ingress</b></description></item>
+                /// <item><description><para><b>egress</b>: outbound.</para>
+                /// </description></item>
+                /// <item><description><para><b>ingress</b>: inbound.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -341,7 +349,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string TrafficDirection { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the filter associated with the inbound rule.</para>
+                /// <para>The instance ID of the traffic mirror filter associated with the inbound rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tmf-j6cmls82xnc86vtpe****</para>
@@ -351,7 +359,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string TrafficMirrorFilterId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the inbound rule.</para>
+                /// <para>The instance ID of the inbound rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tmr-j6cezu8e68rnpepet****</para>
@@ -363,10 +371,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The status of the inbound rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Creating</b></description></item>
-                /// <item><description><b>Created</b></description></item>
-                /// <item><description><b>Modifying</b></description></item>
-                /// <item><description><b>Deleting</b></description></item>
+                /// <item><description><para><b>Creating</b>: being created.</para>
+                /// </description></item>
+                /// <item><description><para><b>Created</b>: created.</para>
+                /// </description></item>
+                /// <item><description><para><b>Modifying</b>: being modified.</para>
+                /// </description></item>
+                /// <item><description><para><b>Deleting</b>: being deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -379,7 +391,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the traffic mirror session belongs.</para>
+            /// <para>The ID of the resource group to which the traffic mirroring filter belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-bp67acfmxazb4ph****</para>
@@ -389,7 +401,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The tag list.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -418,7 +430,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The description of the filter.</para>
+            /// <para>The description of the traffic mirror filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is a filter.</para>
@@ -428,7 +440,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string TrafficMirrorFilterDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the filter.</para>
+            /// <para>The instance ID of the traffic mirror filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tmf-j6cmls82xnc86vtpe****</para>
@@ -438,7 +450,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string TrafficMirrorFilterId { get; set; }
 
             /// <summary>
-            /// <para>The filter name.</para>
+            /// <para>The name of the traffic mirror filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -448,12 +460,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string TrafficMirrorFilterName { get; set; }
 
             /// <summary>
-            /// <para>The status of the filter. Valid values:</para>
+            /// <para>The status of the traffic mirror filter. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b></description></item>
-            /// <item><description><b>Created</b></description></item>
-            /// <item><description><b>Modifying</b></description></item>
-            /// <item><description><b>Deleting</b></description></item>
+            /// <item><description><para><b>Creating</b>: being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Created</b>: created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Modifying</b>: being modified.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleting</b>: being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

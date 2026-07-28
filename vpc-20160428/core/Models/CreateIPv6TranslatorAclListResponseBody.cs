@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIPv6TranslatorAclListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ACL ID.</para>
+        /// <para>The ID of the access control policy group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6transacl-bp1de2xxxx</para>

@@ -10,13 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateEipSegmentAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum bandwidth of the contiguous EIP group. Unit: Mbit/s.</para>
+        /// <para>The maximum bandwidth of the EIP. Unit: Mbit/s.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when <b>InstanceChargeType</b> is set to <b>PostPaid</b> and <b>InternetChargeType</b> is set to <b>PayByBandwidth</b>: <b>1</b> to <b>500</b>.****</description></item>
-        /// <item><description>Valid values when <b>InstanceChargeType</b> is set to <b>PostPaid</b> and <b>InternetChargeType</b> is set to <b>PayByTraffic</b>: <b>1</b> to <b>200</b>.****</description></item>
-        /// <item><description>Valid values when <b>InstanceChargeType</b> is set to <b>PrePaid</b>: <b>1</b> to <b>1000</b>.****</description></item>
+        /// <item><description><para>If <b>InternetChargeType</b> is set to <b>PayByBandwidth</b>, valid values of <b>Bandwidth</b> are <b>1</b> to <b>500</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>InternetChargeType</b> is set to <b>PayByTraffic</b>, valid values of <b>Bandwidth</b> are <b>1</b> to <b>200</b>.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <b>5</b>. Unit: Mbit/s.</para>
+        /// <para>Default value: <b>5</b> Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -27,9 +28,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate a token, but you must make sure that the token is unique among different requests. <b>ClientToken</b> can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,16 +41,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The subnet mask of the contiguous EIP group. Valid values:</para>
+        /// <para>The subnet mask of the contiguous EIPs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>28</b>: applies for 16 contiguous EIPs in each call.</description></item>
-        /// <item><description><b>27</b>: applies for 32 contiguous EIPs in each call.</description></item>
-        /// <item><description><b>26</b>: applies for 64 contiguous EIPs in each call.</description></item>
-        /// <item><description><b>25</b>: applies for 128 contiguous EIPs in each call.</description></item>
-        /// <item><description><b>24</b>: applies for 256 contiguous EIPs in each call.</description></item>
+        /// <item><description><para><b>28</b>: The system allocates 16 contiguous EIPs per call.</para>
+        /// </description></item>
+        /// <item><description><para><b>27</b>: The system allocates 32 contiguous EIPs per call.</para>
+        /// </description></item>
+        /// <item><description><para><b>26</b>: The system allocates 64 contiguous EIPs per call.</para>
+        /// </description></item>
+        /// <item><description><para><b>25</b>: The system allocates 128 contiguous EIPs per call.</para>
+        /// </description></item>
+        /// <item><description><para><b>24</b>: The system allocates 256 contiguous EIPs per call.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Some IP address are reserved for specific purposes. Therefore, the actual number of the contiguous EIPs may be one, three, or four less than the expected number.</para>
+        /// <para>Due to IP address reservation, the actual number of contiguous EIPs may be 1, 3, or 4 fewer than expected.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,10 +67,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EipMask { get; set; }
 
         /// <summary>
-        /// <para>The metering method of contiguous EIPs. Valid values:</para>
+        /// <para>The billable methods of the contiguous EIPs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PayByBandwidth</b> (default)</description></item>
-        /// <item><description><b>PayByTraffic</b></description></item>
+        /// <item><description><para><b>PayByBandwidth</b> (default): pay-by-bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para><b>PayByTraffic</b>: pay-by-data-transfer.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,20 +85,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The line type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BGP</b> (default): BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.</description></item>
-        /// <item><description><b>BGP_PRO</b>: BGP (Multi-ISP) Pro line BGP (Multi-ISP) Pro line is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</description></item>
+        /// <item><description><b>BGP</b> (default): BGP (multi-ISP) line. All regions support BGP (multi-ISP) EIPs.</description></item>
+        /// <item><description><b>BGP_PRO</b>: BGP (multi-ISP) premium line. Only Hong Kong (China), Singapore, Tokyo (Japan), Kuala Lumpur (Malaysia), Manila (Philippines), Jakarta (Indonesia), and Bangkok (Thailand) regions support BGP (multi-ISP) premium EIPs.</description></item>
         /// </list>
-        /// <para>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</para>
-        /// <para>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</para>
+        /// <para>For more information about BGP (multi-ISP) lines and BGP (multi-ISP) premium lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</para>
+        /// <para>If you are a whitelist user of single-ISP bandwidth, you can also select the following types:</para>
         /// <list type="bullet">
-        /// <item><description><b>ChinaTelecom</b></description></item>
-        /// <item><description><b>ChinaUnicom</b></description></item>
-        /// <item><description><b>ChinaMobile</b></description></item>
-        /// <item><description><b>ChinaTelecom_L2</b></description></item>
-        /// <item><description><b>ChinaUnicom_L2</b></description></item>
-        /// <item><description><b>ChinaMobile_L2</b></description></item>
+        /// <item><description><b>ChinaTelecom</b>: China Telecom</description></item>
+        /// <item><description><b>ChinaUnicom</b>: China Unicom</description></item>
+        /// <item><description><b>ChinaMobile</b>: China Mobile</description></item>
+        /// <item><description><b>ChinaTelecom_L2</b>: China Telecom L2</description></item>
+        /// <item><description><b>ChinaUnicom_L2</b>: China Unicom L2</description></item>
+        /// <item><description><b>ChinaMobile_L2</b>: China Mobile L2</description></item>
         /// </list>
-        /// <para>If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to <b>BGP_FinanceCloud</b>.</para>
+        /// <para>If you are an Alibaba Finance Cloud user, this parameter is required. Set the value to <b>BGP_FinanceCloud</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BGP</para>
@@ -100,7 +108,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>The network type. Set the value to <b>public</b>, which specifies the public network type.</para>
+        /// <para>The network type. Set the value to <b>public</b>, which specifies the public network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>public</para>
@@ -118,7 +126,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the contiguous EIP group resides.</para>
+        /// <para>The region ID of the contiguous EIPs.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 

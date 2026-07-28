@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListVpnCertificateAssociationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If <b>NextToken</b> is not empty, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, no next query exists.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>NextToken</b> is returned, the value indicates the token for the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of associations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -54,15 +56,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The association information.</para>
+        /// <para>The list of associations.</para>
         /// </summary>
         [NameInMap("VpnCertificateRelations")]
         [Validation(Required=false)]
         public List<ListVpnCertificateAssociationsResponseBodyVpnCertificateRelations> VpnCertificateRelations { get; set; }
         public class ListVpnCertificateAssociationsResponseBodyVpnCertificateRelations : TeaModel {
             /// <summary>
-            /// <para>The time when the Anycast EIP was associated.</para>
-            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the association was created.</para>
+            /// <para>The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-29T09:30:29Z</para>
@@ -82,10 +84,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CertificateId { get; set; }
 
             /// <summary>
-            /// <para>The type of the certificate.</para>
+            /// <para>The certificate type.</para>
             /// <list type="bullet">
-            /// <item><description><b>Encryption</b></description></item>
-            /// <item><description><b>Signature</b></description></item>
+            /// <item><description><para><b>Encryption</b>: encryption certificate.</para>
+            /// </description></item>
+            /// <item><description><para><b>Signature</b>: signing certificate.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,7 +100,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CertificateType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the VPN gateway is created.</para>
+            /// <para>The region ID of the VPN gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -106,7 +110,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPN gateway.</para>
+            /// <para>The VPN gateway instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpn-bp1usbiorilk51760****</para>

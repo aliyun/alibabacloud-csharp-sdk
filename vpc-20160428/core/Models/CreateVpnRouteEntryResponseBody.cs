@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateVpnRouteEntryResponseBody : TeaModel {
         /// <summary>
         /// <para>The timestamp when the destination route was created. Unit: milliseconds.</para>
-        /// <para>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the destination route was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1492747187000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b> (IPsec tunneling protocol).</para>
+        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b> (IPsec tunneling).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ipsec</para>
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The publish status of the destination route.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>published</b>: The destination route has been published to the route table of the VPC.</para>
+        /// <item><description><para><b>published</b>: The destination route is published to the VPC route table.</para>
         /// </description></item>
-        /// <item><description><para><b>normal</b>: The destination route has not been published to the route table of the VPC.</para>
+        /// <item><description><para><b>normal</b>: The destination route is not published to the VPC route table.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIPv6TranslatorAclListsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ACL.</para>
+        /// <para>The ID of the access control policy group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6transacl-bp1de2****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ACL.</para>
+        /// <para>The name of the access control policy group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acl1</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region of the ACL.</para>
+        /// <para>The region of the access control policy group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

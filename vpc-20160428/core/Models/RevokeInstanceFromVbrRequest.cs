@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class RevokeInstanceFromVbrRequest : TeaModel {
         /// <summary>
-        /// <para>The VBRs for which you want to revoke permissions on the VPC. Valid values:</para>
+        /// <para>The scope of VBR instances for which the VPC-connected instance authorization is being revoked. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL</b>: Permissions on the VPC are revoked for all VBRs in the specified region. <b>VbrInstanceIds</b> can be left empty.</description></item>
-        /// <item><description><b>Specify</b>: Permissions on the VPC are revoked for the specified VBRs. <b>VbrInstanceIds</b> must be assigned a value.</description></item>
+        /// <item><description><para><b>ALL</b>: Revokes the VPC-connected instance authorization for all VBR instances in the specified region. In this case, the <b>VbrInstanceIds</b> parameter can be left empty.</para>
+        /// </description></item>
+        /// <item><description><para><b>Specify</b>: Revokes the VPC-connected instance authorization for the specified VBR instances. In this case, the <b>VbrInstanceIds</b> parameter is required.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GrantType { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The instance ID of the VPC-connected instance for which you want to revoke the authorization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,8 +38,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VPC is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the VPC-connected instance for which you want to revoke the authorization.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,14 +50,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the VBRs for which you want to revoke the permissions.</para>
+        /// <para>The list of VBR instance IDs for which the VPC-connected instance authorization is being revoked.</para>
         /// </summary>
         [NameInMap("VbrInstanceIds")]
         [Validation(Required=false)]
         public List<string> VbrInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the VBR belongs.</para>
+        /// <para>The Alibaba Cloud account ID of the VBR instance for which the authorization is being revoked.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VbrOwnerUid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VBR is deployed.</para>
+        /// <para>The region ID of the VBR instance for which the VPC-connected instance authorization is being revoked.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

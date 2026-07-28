@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateIpsecServerResponseBody : TeaModel {
         /// <summary>
         /// <para>The time when the IPsec server was created.</para>
-        /// <para>T is used as a delimiter. Z indicates that the time is in UTC.</para>
+        /// <para>T is the separator and Z indicates UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-02-22T03:24:28Z</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>The IPsec server ID.</para>
+        /// <para>The ID of the IPsec server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iss-bp1jougp8cfsbo8y9****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpsecServerId { get; set; }
 
         /// <summary>
-        /// <para>The IPsec server name.</para>
+        /// <para>The name of the IPsec server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpsecServerName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VPN gateway is deployed.</para>
+        /// <para>The region ID of the VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-bp17lofy9fd0dnvzv****</para>

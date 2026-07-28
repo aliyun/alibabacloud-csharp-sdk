@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateExpressCloudConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the ECC instance.</para>
+        /// <para>The instance ID of the Express Cloud Connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecc-jg************</para>

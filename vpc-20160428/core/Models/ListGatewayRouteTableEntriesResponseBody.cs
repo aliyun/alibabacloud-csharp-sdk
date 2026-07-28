@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListGatewayRouteTableEntriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of route entries in the gateway route table.</para>
+        /// <para>The details of the route entries in the gateway route table.</para>
         /// </summary>
         [NameInMap("GatewayRouteEntryModels")]
         [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <para>The next hop type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Instance</b> (default): ECS instance.</description></item>
-                /// <item><description><b>HaVip</b>: high-availability virtual IP address (HaVip).</description></item>
+                /// <item><description><b>HaVip</b>: high-availability virtual IP address.</description></item>
                 /// <item><description><b>VpnGateway</b>: VPN gateway.</description></item>
                 /// <item><description><b>NatGateway</b>: NAT gateway.</description></item>
                 /// <item><description><b>NetworkInterface</b>: secondary elastic network interfaces (ENIs).</description></item>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The status of the route entry.</para>
+            /// <para>The status of the route entry. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Pending</b>: being configured.</description></item>
             /// <item><description><b>Available</b>: available.</description></item>

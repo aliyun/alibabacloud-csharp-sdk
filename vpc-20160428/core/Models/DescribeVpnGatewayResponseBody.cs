@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the routing automatic propagation feature is enabled for the VPN gateway. Valid values:</para>
+        /// <para>Indicates whether automatic propagation is enabled for the VPN gateway. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: enabled.</para>
         /// </description></item>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The timestamp when the VPN gateway was created. Unit: milliseconds.</para>
-        /// <para>The timestamp follows the UNIX time format, which represents the total number of milliseconds elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp follows the UNIX format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1495382400000</para>
@@ -114,8 +114,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableBgp { get; set; }
 
         /// <summary>
-        /// <para>The expiration timestamp of the VPN gateway. Unit: milliseconds.</para>
-        /// <para>The timestamp follows the UNIX time format, which represents the total number of milliseconds elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp when the VPN gateway expires. Unit: milliseconds.</para>
+        /// <para>The timestamp follows the UNIX format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1544666102000</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the IPsec-VPN feature is enabled. Valid values:</para>
+        /// <para>Indicates whether IPsec-VPN is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>enable</b>: enabled.</para>
         /// </description></item>
@@ -225,8 +225,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public DescribeVpnGatewayResponseBodyReservationData ReservationData { get; set; }
         public class DescribeVpnGatewayResponseBodyReservationData : TeaModel {
             /// <summary>
-            /// <para>If the pending order type is <b>TEMP_UPGRADE</b> (temporary upgrade), this parameter indicates the revert time for the temporary upgrade.</para>
-            /// <para>If the pending order type is <b>RENEWCHANGE</b> (renewal with specification change) or <b>RENEW</b> (renewal), this parameter indicates the effective period when the renewal or renewal with specification change takes effect.</para>
+            /// <para>If the pending order type is <b>TEMP_UPGRADE</b> (temporary upgrade), this parameter indicates the revert time of the temporary upgrade.</para>
+            /// <para>If the pending order type is <b>RENEWCHANGE</b> (renewal with Upgrade/Downgrade) or <b>RENEW</b> (renewal), this parameter indicates the effective period when the renewal or renewal with specification change takes effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-07-20T16:00:00Z</para>
@@ -308,9 +308,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the pending order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: The renewal or renewal with specification change order has not taken effect.</para>
+            /// <item><description><para><b>1</b>: the renewal or renewal with specification change order has not taken effect.</para>
             /// </description></item>
-            /// <item><description><para><b>2</b>: The temporary upgrade order has taken effect. After the restoration time is reached, the system restores the VPN gateway to the specification before the temporary upgrade. In this case, <b>ReservationIpsec</b>, <b>ReservationMaxConnections</b>, <b>ReservationSpec</b>, and <b>ReservationSsl</b> indicate the specifications before the temporary upgrade.</para>
+            /// <item><description><para><b>2</b>: the temporary upgrade order has taken effect. After the restoration time is reached, the system restores the VPN gateway to the specification before the temporary upgrade. In this case, <b>ReservationIpsec</b>, <b>ReservationMaxConnections</b>, <b>ReservationSpec</b>, and <b>ReservationSsl</b> indicate the specification before the temporary upgrade.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The IP address of the SSL-VPN connection.</para>
-        /// <para>This parameter is returned only when the SSL-VPN feature is enabled on a VPN gateway instance of the public network type that supports creating dual-tunnel IPsec-VPN connections.</para>
+        /// <para>This parameter is returned only when the SSL-VPN feature is enabled on a VPN gateway instance that has a public network type and supports creating dual-tunnel IPsec-VPN connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.74.XX.XX</para>
@@ -404,33 +404,33 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The labels automatically generated by the system for the VPN gateway.</para>
+        /// <para>The system-generated labels of the VPN gateway.</para>
         /// <list type="bullet">
         /// <item><description><b>VpnEnableBgp</b>: indicates whether the VPN gateway supports the BGP feature.<list type="bullet">
-        /// <item><description><b>true</b>: Supported.</description></item>
-        /// <item><description><b>false</b>: Not supported.</description></item>
+        /// <item><description><b>true</b>: supported.</description></item>
+        /// <item><description><b>false</b>: not supported.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>VisuallySsl</b>: indicates whether the VPN gateway supports viewing connection information of SSL clients.<list type="bullet">
-        /// <item><description><b>true</b>: Supported.</description></item>
-        /// <item><description><b>false</b>: Not supported.</description></item>
+        /// <item><description><b>VisuallySsl</b>: indicates whether the VPN gateway supports viewing SSL client connection information.<list type="bullet">
+        /// <item><description><b>true</b>: supported.</description></item>
+        /// <item><description><b>false</b>: not supported.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>PbrPriority</b>: indicates whether the VPN gateway supports configuring policy priority for policy-based routing.<list type="bullet">
-        /// <item><description><b>true</b>: Supported.</description></item>
-        /// <item><description><b>false</b>: Not supported.</description></item>
+        /// <item><description><b>true</b>: supported.</description></item>
+        /// <item><description><b>false</b>: not supported.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>VpnNewImage</b>: indicates whether the VPN gateway is a new-generation VPN gateway.<list type="bullet">
-        /// <item><description><b>true</b>: Yes.</description></item>
-        /// <item><description><b>false</b>: No.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>description</b>: the description of the VPN gateway, which is used only for internal system purposes.</description></item>
         /// <item><description><b>VpnVersion</b>: the version number of the VPN gateway.</description></item>
         /// <item><description><b>IDaaSNewVersion</b>: indicates whether the VPN gateway supports attaching to an EIAM 2.0 instance.<list type="bullet">
-        /// <item><description><b>true</b>: Supported.</description></item>
-        /// <item><description><b>false</b>: Not supported.</description></item>
+        /// <item><description><b>true</b>: supported.</description></item>
+        /// <item><description><b>false</b>: not supported.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -499,10 +499,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <list type="bullet">
         /// <item><description><para><b>Normal</b>: standard.</para>
         /// </description></item>
-        /// <item><description><para><b>NationalStandard</b>: Chinese SM algorithm-based.</para>
+        /// <item><description><para><b>NationalStandard</b>: Chinese SM-based.</para>
         /// </description></item>
         /// </list>
-        /// <para>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>

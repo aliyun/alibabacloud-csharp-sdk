@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeEipAddressesRequestFilter> Filter { get; set; }
         public class DescribeEipAddressesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter key used to query resources. Set the value to <b>CreationStartTime</b>, which specifies the time when the system started to create the resource.</para>
+            /// <para>The filter key for querying resources. Set the value to <b>CreationStartTime</b>, which specifies the start time when the resource was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CreationStartTime</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value used to query resources. Specify the time in the ISO 8601 standard in the <c>YYYY-MM-DDThh:mmZ</c> format. The time must be in Coordinated Universal Time (UTC).</para>
+            /// <para>The filter value for querying resources. Specify the value in UTC. Format: <c>YYYY-MM-DDThh:mmZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-01T01:00Z</para>
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the EIP that you want to query.</para>
-        /// <para>You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>The ID of the EIP instance to query. </para>
+        /// <para>You can specify up to 50 EIP instance IDs. Separate multiple instance IDs with commas (,).</para>
         /// <remarks>
-        /// <para> If both <b>EipAddress</b> and <b>AllocationId</b> are specified, you can specify up to 50 EIP IDs for <b>AllocationId</b>, and specify up to 50 EIPs for <b>EipAddress</b>.</para>
+        /// <para>If you specify both <b>EipAddress</b> and <b>AllocationId</b>, you can specify up to 50 EIP instance IDs for <b>AllocationId</b> and up to 50 EIP IP addresses for <b>EipAddress</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AllocationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance associated with the EIP.</para>
+        /// <para>The instance ID of the cloud resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-2zebb08phyccdvf****</para>
@@ -60,17 +60,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AssociatedInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud resource with which you want to associate the EIP. Valid values:</para>
+        /// <para>The type of the cloud resource instance to attach. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>EcsInstance</b> (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).</description></item>
+        /// <item><description><b>EcsInstance</b> (default): an ECS instance in a VPC.</description></item>
         /// <item><description><b>SlbInstance</b>: a CLB instance in a VPC.</description></item>
         /// <item><description><b>Nat</b>: a NAT gateway.</description></item>
-        /// <item><description><b>HaVip</b>: an HAVIP.</description></item>
-        /// <item><description><b>NetworkInterface</b>: a secondary ENI.</description></item>
+        /// <item><description><b>HaVip</b>: a high-availability virtual IP address. </description></item>
+        /// <item><description><b>NetworkInterface</b>: a secondary elastic network interface (ENI).</description></item>
         /// <item><description><b>IpAddress</b>: an IP address.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Each ECS instance, CLB instance, HAVIP, and IP address can be associated with only one EIP. A NAT gateway can be associated with multiple EIPs. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see <a href="https://help.aliyun.com/document_detail/72125.html">Associate EIPs with and disassociate EIPs from cloud resources</a>.</para>
+        /// <para>Each ECS instance, CLB instance, high-availability virtual IP address, and IP address can be attached with only one EIP at a time. A NAT gateway can be attached with multiple EIPs. The number of EIPs that can be attached to a secondary elastic network interface (ENI) depends on the EIP association pattern. For more information, see <a href="https://help.aliyun.com/document_detail/72125.html">EIP overview</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,10 +95,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,10 +111,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The EIP that you want to query.</para>
-        /// <para>You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).</para>
+        /// <para>The IP address of the EIP to query.</para>
+        /// <para>You can specify up to 50 EIP addresses. Separate multiple IP addresses with commas (,).</para>
         /// <remarks>
-        /// <para> If both <b>EipAddress</b> and <b>AllocationId</b> are specified, you can specify up to 50 EIPs for <b>EipAddress</b>, and specify up to 50 EIP IDs for <b>AllocationId</b>.</para>
+        /// <para>If you specify both <b>EipAddress</b> and <b>AllocationId</b>, you can specify up to 50 EIP IP addresses for <b>EipAddress</b> and up to 50 EIP instance IDs for <b>AllocationId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the EIP.</para>
-        /// <para>The name must be 1 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name must be 1 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>EIP-01</para>
@@ -136,20 +138,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The line type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BGP</b> (default): Border Gateway Protocol (BGP) (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.</description></item>
-        /// <item><description><b>BGP_PRO</b>: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</description></item>
+        /// <item><description><b>BGP</b> (default): BGP (multi-ISP) line. All regions support BGP (multi-ISP) EIPs.</description></item>
+        /// <item><description><b>BGP_PRO</b>: BGP (multi-ISP) Pro line. Only Hong Kong (China), Singapore, Tokyo (Japan), Kuala Lumpur (Malaysia), Manila (Philippines), Jakarta (Indonesia), and Bangkok (Thailand) regions support BGP (multi-ISP) Pro EIPs.</description></item>
         /// </list>
-        /// <para>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the <a href="https://help.aliyun.com/document_detail/32321.html">Line types</a> section of the &quot;What is EIP?&quot; topic.</para>
-        /// <para>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</para>
+        /// <para>For more information about BGP (multi-ISP) and BGP (multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</para>
+        /// <para>If you are a whitelist user of single-ISP bandwidth, you can also specify the following values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ChinaTelecom</b></description></item>
-        /// <item><description><b>ChinaUnicom</b></description></item>
-        /// <item><description><b>ChinaMobile</b></description></item>
-        /// <item><description><b>ChinaTelecom_L2</b></description></item>
-        /// <item><description><b>ChinaUnicom_L2</b></description></item>
-        /// <item><description><b>ChinaMobile_L2</b></description></item>
+        /// <item><description><b>ChinaTelecom</b>: China Telecom</description></item>
+        /// <item><description><b>ChinaUnicom</b>: China Unicom</description></item>
+        /// <item><description><b>ChinaMobile</b>: China Mobile</description></item>
+        /// <item><description><b>ChinaTelecom_L2</b>: China Telecom L2</description></item>
+        /// <item><description><b>ChinaUnicom_L2</b>: China Unicom L2</description></item>
+        /// <item><description><b>ChinaMobile_L2</b>: China Mobile L2</description></item>
         /// </list>
-        /// <para>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <b>BGP_FinanceCloud</b>.</para>
+        /// <para>If you are a user of Alibaba Finance Cloud in the China (Hangzhou) region, this parameter is required. Set the value to <b>BGP_FinanceCloud</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BGP</para>
@@ -159,10 +161,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ISP { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return information about pending orders. Valid values:</para>
+        /// <para>Specifies whether to include pending order data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default)</description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b> (default): Does not include pending order data.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: Includes pending order data.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -173,10 +177,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? IncludeReservationData { get; set; }
 
         /// <summary>
-        /// <para>The reason why the EIP is locked. Valid values:</para>
+        /// <para>The lock type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>financial</b>: The EIP is locked due to overdue payments.</description></item>
-        /// <item><description><b>security</b>: The EIP is locked for security reasons.</description></item>
+        /// <item><description><para><b>financial</b>: locked due to overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para><b>security</b>: locked for security reasons.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -195,7 +201,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -205,7 +211,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -215,7 +221,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The IP address pool to which the EIP that you want to query belongs.</para>
+        /// <para>The ID of the IP address pool to which the EIP belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pippool-2vc0kxcedhquybdsz****</para>
@@ -255,10 +261,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to activate Anti-DDoS Pro/Premium. Valid values:</para>
+        /// <para>Indicates whether Anti-DDoS (Enhanced) is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b>: not enabled.</description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -269,7 +275,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? SecurityProtectionEnabled { get; set; }
 
         /// <summary>
-        /// <para>The ID of the contiguous EIP group.</para>
+        /// <para>The instance ID of the contiguous EIP group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eipsg-t4nr90yik5oy38xdy****</para>
@@ -279,12 +285,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SegmentInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance is managed. Valid values:</para>
+        /// <para>Specifies whether the instance is a managed instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no.</description></item>
+        /// <item><description><b>true</b>: a managed instance.</description></item>
+        /// <item><description><b>false</b>: not a managed instance.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, all instances are queried.</para>
+        /// <para>If you leave this parameter empty, all instances are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -294,13 +300,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? ServiceManaged { get; set; }
 
         /// <summary>
-        /// <para>The state of the EIP. Valid values:</para>
+        /// <para>The status of the EIP. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Associating</b></description></item>
-        /// <item><description><b>Unassociating</b></description></item>
-        /// <item><description><b>InUse</b></description></item>
-        /// <item><description><b>Available</b></description></item>
-        /// <item><description><b>Releasing</b></description></item>
+        /// <item><description><para><b>Associating</b>: being associated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Unassociating</b>: being disassociated.</para>
+        /// </description></item>
+        /// <item><description><para><b>InUse</b>: allocated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Available</b>: available.</para>
+        /// </description></item>
+        /// <item><description><para><b>Releasing</b>: being released.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -318,8 +329,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeEipAddressesRequestTag> Tag { get; set; }
         public class DescribeEipAddressesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -329,8 +340,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

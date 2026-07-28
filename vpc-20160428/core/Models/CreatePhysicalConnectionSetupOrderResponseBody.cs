@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Express Connect circuit.</para>
+        /// <para>The Express Connect circuit ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2zegmc02v7ss4****</para>

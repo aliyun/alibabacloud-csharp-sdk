@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId value as the ClientToken value. The RequestId value may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The QoS queue IDs.</para>
+        /// <para>The collection of QoS queue IDs.</para>
         /// </summary>
         [NameInMap("QueueIdList")]
         [Validation(Required=false)]
         public List<string> QueueIdList { get; set; }
 
         /// <summary>
-        /// <para>The QoS queue names.</para>
+        /// <para>The collection of QoS queue names.</para>
         /// </summary>
         [NameInMap("QueueNameList")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the QoS policy.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

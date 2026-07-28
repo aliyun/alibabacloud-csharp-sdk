@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>The CA certificate of the peer when an IPsec-VPN connection is created with a Chinese SM VPN gateway.</para>
+        /// <para>The peer CA certificate when the IPsec-VPN connection is created with a China CA VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</para>
@@ -98,9 +98,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the tunnel.</para>
         /// <list type="bullet">
-        /// <item><description><b>active</b>: available.</description></item>
-        /// <item><description><b>updating</b>: being updated.</description></item>
-        /// <item><description><b>deleting</b>: being deleted.</description></item>
+        /// <item><description><b>active</b>: The tunnel is available.</description></item>
+        /// <item><description><b>updating</b>: The tunnel is being updated.</description></item>
+        /// <item><description><b>deleting</b>: The tunnel is being deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -235,8 +235,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The IKE negotiation mode.</para>
             /// <list type="bullet">
-            /// <item><description><b>main</b>: main mode. This mode offers high security during negotiations.</description></item>
-            /// <item><description><b>aggressive</b>: aggressive mode. This mode supports fast negotiations and a higher success rate.</description></item>
+            /// <item><description><b>main</b>: main mode. The negotiation process is more secure.</description></item>
+            /// <item><description><b>aggressive</b>: aggressive mode. The negotiation is faster and has a higher success rate.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IkeVersion { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the local end of the tunnel. It supports FQDN and IP formats. Default value: the IP address of the current tunnel.</para>
+            /// <para>The identifier of the local end of the tunnel. The value supports FQDN and IP formats. Default value: the IP address of the current tunnel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.XX.XX.87</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Psk { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the peer end of the tunnel. It supports FQDN and IP formats. Default value: the IP address of the customer gateway instance associated with the tunnel.</para>
+            /// <para>The identifier of the peer end of the tunnel. The value supports FQDN and IP formats. Default value: the IP address of the customer gateway instance associated with the tunnel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.XX.XX.207</para>

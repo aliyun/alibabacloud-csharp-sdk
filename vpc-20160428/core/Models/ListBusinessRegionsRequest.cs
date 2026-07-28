@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListBusinessRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>zh-CN</b> (default): Chinese</description></item>
-        /// <item><description><b>en-US</b>: English.</description></item>
+        /// <item><description><para><b>zh-CN</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en-US</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

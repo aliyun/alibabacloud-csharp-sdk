@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class MoveVpnResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the resource.</para>
+        /// <para>The resource instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,12 +63,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>VpnGateway</b>: VPN gateway instance.</para>
-        /// <para>After you change the resource group of a VPN gateway instance, the resource group of the IPsec server, SSL server, SSL client certificate, and IPsec-VPN connections (IPsec-VPN connections associated with the VPN gateway instance) under the VPN gateway instance is also changed.</para>
+        /// <para>After you change the resource group of a VPN gateway instance, the resource group of the IPsec server, SSL server, SSL client certificate, and IPsec-VPN connection (an IPsec-VPN connection associated with the VPN gateway instance) under the VPN gateway instance is also changed.</para>
         /// </description></item>
         /// <item><description><para><b>CustomerGateway</b>: customer gateway instance.</para>
         /// </description></item>
         /// <item><description><para><b>VpnAttachment</b>: IPsec-VPN connection instance.</para>
-        /// <para>This refers to IPsec-VPN connections associated with a transit router instance or IPsec-VPN connections that are not associated with any resource.</para>
+        /// <para>This refers to an IPsec-VPN connection associated with a transit router instance or an IPsec-VPN connection that is not associated with any resource.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

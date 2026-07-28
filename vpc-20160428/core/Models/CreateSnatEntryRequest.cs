@@ -11,9 +11,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateSnatEntryRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>client token</c> can contain only ASCII characters.</para>
-        /// <para>**</para>
-        /// <para><b>Description</b> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>ClientToken</c> value can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44****</para>
@@ -23,10 +24,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to only precheck this request. Values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Sends a precheck request and does not create an SNAT entry. The precheck includes verifying if the AccessKey is valid, checking the RAM user\&quot;s authorization, and ensuring that all required parameters are filled out. If the precheck fails, the corresponding error is returned. If the precheck passes, the error code <c>DryRunOperation</c> is returned.</description></item>
-        /// <item><description><b>false</b> (default): Sends a normal request. After passing the precheck, it returns a 2xx HTTP status code and creates an SNAT entry.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run without creating the SNAT entry. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): sends a Normal request, and the SNAT entry is created after the check succeeds. A 2xx HTTP status code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,11 +42,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable EIP affinity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><para><b>0</b> (default): disables EIP affinity.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: enables EIP affinity.</para>
+        /// </description></item>
         /// </list>
-        /// <para>**</para>
-        /// <para><b>Description</b> After you enable EIP affinity, if multiple EIPs are associated with an SNAT entry, each client uses one EIP to access the Internet. If EIP affinity is disabled, each client uses a random EIP to access the Internet.</para>
+        /// <remarks>
+        /// <para>After EIP affinity is enabled, if the SNAT entry is bindded with multiple EIPs or NAT IP addresses, the same client uses the same EIP or NAT IP address to access the same destination IP address. Otherwise, the client randomly selects an EIP or NAT IP address from the bindded ones.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -53,9 +59,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? EipAffinity { get; set; }
 
         /// <summary>
-        /// <para>Elastic Network Interface ID.  </para>
+        /// <para>The ID of the elastic network interface (ENI).</para>
         /// <remarks>
-        /// <para>The IPv4 address set of the elastic network interface will be used as the SNAT address.</para>
+        /// <para>The IPv4 address set of the ENI is used as the SNAT address.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,22 +80,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the NAT gateway.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>ap-northeast-2-pop</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>ap-northeast-2-pop</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The region ID of the NAT gateway. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +101,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the SNAT entry.</para>
-        /// <para>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SnatEntry-1</para>
@@ -119,14 +111,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SnatEntryName { get; set; }
 
         /// <summary>
+        /// <para>When you add an SNAT entry for an Internet NAT gateway:</para>
         /// <list type="bullet">
-        /// <item><description>The EIPs in the SNAT entry when you add an SNAT entry to an Internet NAT gateway. Separate EIPs with commas (,).</description></item>
+        /// <item><description><para>The SnatIp parameter is required.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter specifies the EIPs in the SNAT entry. Separate multiple EIPs with commas (,).</para>
+        /// </description></item>
+        /// <item><description><para>If SnatIp specifies only one public IP address, the ECS instance uses the specified public IP address to access the Internet.</para>
+        /// </description></item>
+        /// <item><description><para>If SnatIp specifies multiple public IP addresses, the ECS instance randomly uses one of the public IP addresses in SnatIp to access the Internet.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you specify multiple EIPs in the SNAT IP address pool, the service connection is allocated to multiple EIPs by using the hashing algorithm. The traffic of each EIP may be different. Therefore, we recommend that you associate the EIPs with an Internet Shared Bandwidth instance to prevent service interruptions caused by bandwidth exhaustion.</para>
+        /// <para>If you specify multiple EIPs to configure an SNAT IP IPAM pool, connections are allocated to multiple EIPs by using a hash algorithm. Because the traffic of each connection varies, service traffic may be unevenly distributed among the EIPs. Add each EIP to the same Internet Shared Bandwidth instance to prevent service interruptions caused by bandwidth exhaustion on a single EIP.</para>
         /// </remarks>
+        /// <para>When you add an SNAT entry for a VPC NAT gateway:</para>
         /// <list type="bullet">
-        /// <item><description>When you add SNAT entries for a VPC NAT gateway, this parameter specifies the NAT IP addresses in the SNAT entry. Separate multiple NAT IP addresses with commas (,).</description></item>
+        /// <item><description><para>This parameter specifies the NAT IP addresses in the SNAT entry. Separate multiple NAT IP addresses with commas (,).</para>
+        /// </description></item>
+        /// <item><description><para>You must specify one of the SnatIp and NetworkInterfaceId parameters, but you cannot specify both.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -148,17 +152,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SnatTableId { get; set; }
 
         /// <summary>
-        /// <para>You can specify the CIDR block of a VPC, a vSwitch, or an ECS instance or enter a custom CIDR block.</para>
-        /// <para>You can specify an SNAT entry in the following ways:</para>
+        /// <para>The CIDR block of a VPC, vSwitch, or ECS instance. You can also specify a custom CIDR block.</para>
+        /// <para>SNAT entries support the following granularities: </para>
         /// <list type="bullet">
-        /// <item><description>You can specify the CIDR block of the VPC where the NAT gateway is deployed. Then, all ECS instances in the VPC can access the Internet or external networks by using SNAT.</description></item>
-        /// <item><description>You can specify the CIDR block of a vSwitch, for example, 192.168.1.0/24. Then, the ECS instances in the vSwitch can access the Internet or external networks by using SNAT.</description></item>
-        /// <item><description>You can specify the IP address of an ECS instance, for example, 192.168.1.1/32. Then, the ECS instance can access the Internet or external networks by using SNAT.</description></item>
-        /// <item><description>You can specify a custom CIDR block. Then, all ECS instances within the specified CIDR block can access the Internet or external networks by using SNAT.</description></item>
+        /// <item><description><para>VPC granularity: the CIDR block of the VPC to which the NAT gateway belongs. All ECS instances in the VPC can access the Internet or external networks by using the SNAT rule.</para>
+        /// </description></item>
+        /// <item><description><para>vSwitch granularity: the CIDR block of a specified vSwitch (such as 192.168.1.0/24). ECS instances in the vSwitch can access the Internet or external networks by using the SNAT rule.</para>
+        /// </description></item>
+        /// <item><description><para>ECS granularity: the IP address of a specified ECS instance (such as 192.168.1.1/32). The ECS instance can access the Internet or external networks by using the SNAT rule.</para>
+        /// </description></item>
+        /// <item><description><para>Custom CIDR block: all ECS instances in the specified CIDR block can access the Internet or external networks by using the SNAT service.</para>
+        /// </description></item>
         /// </list>
-        /// <para>When you add an SNAT entry to an Internet NAT gateway, if <b>SnatIp</b> is set to an EIP, the ECS instance uses the specified EIP to access the Internet.</para>
-        /// <para>If <b>SnatIp</b> is set to multiple EIPs, the ECS instance randomly selects an EIP specified in the <b>SnatIp</b> parameter to access the Internet.</para>
-        /// <para>You cannot specify this parameter and <b>SourceVSwtichId</b> at the same time. If <b>SourceVSwitchId</b> is specified, you cannot specify <b>SourceCIDR</b>. If <b>SourceCIDR</b> is specified, you cannot specify <b>SourceVSwitchId</b>.</para>
+        /// <remarks>
+        /// <para>You must specify one of the <b>SourceCIDR</b> and <b>SourceVSwitchId</b> parameters, but you cannot specify both.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10.1.1.0/24</para>
@@ -170,9 +178,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the vSwitch.</para>
         /// <list type="bullet">
-        /// <item><description>When you add an SNAT entry to an Internet NAT gateway, this parameter specifies that ECS instances in the vSwitch can use the SNAT entry to access the Internet. If you select multiple elastic IP addresses (EIPs) to create an SNAT address pool, connections are hashed to these EIPs. Network traffic may not be evenly distributed to the EIPs because the amount of traffic that passes through each connection varies. We recommend that you associate these EIPs with the same EIP bandwidth plan to prevent service interruptions due to the bandwidth limits on individual EIPs.</description></item>
-        /// <item><description>When you add an SNAT entry to a VPC NAT gateway, this parameter specifies that ECS instances in the vSwitch can use the SNAT entry to access external networks.</description></item>
+        /// <item><description><para>When you add an SNAT entry for an Internet NAT gateway, this parameter specifies that ECS instances in the vSwitch can access the Internet by using the SNAT rule. If you specify multiple EIPs to configure an SNAT IP IPAM pool, connections are allocated to multiple EIPs by using a hash algorithm. Because the traffic of each connection varies, service traffic may be unevenly distributed among the EIPs. Add each EIP to the same Internet Shared Bandwidth instance to prevent service interruptions caused by bandwidth exhaustion on a single EIP.</para>
+        /// </description></item>
+        /// <item><description><para>When you add an SNAT entry for a VPC NAT gateway, this parameter specifies that ECS instances in the vSwitch can access external networks by using the SNAT rule.</para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>You must specify one of the <b>SourceCIDR</b> and <b>SourceVSwitchId</b> parameters, but you cannot specify both.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1nhx2s9ui5o****</para>

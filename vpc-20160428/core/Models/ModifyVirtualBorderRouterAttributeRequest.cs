@@ -10,13 +10,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyVirtualBorderRouterAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the Express Connect circuit associated with the VBR, including the following parameters:</para>
+        /// <para>The list of Express Connect circuits associated with the VBR, which contains the following parameters:</para>
         /// <list type="bullet">
-        /// <item><description><b>CircuitCode</b>: the circuit code provided by the connectivity provider for the Express Connect circuit.</description></item>
-        /// <item><description><b>LocalGatewayIp</b>: the IP address of the gateway device on the Alibaba Cloud side.</description></item>
-        /// <item><description><b>PeerGatewayIp</b>: the IP address of the gateway device on the customer side.</description></item>
-        /// <item><description><b>PeeringSubnetMask</b>: the subnet mask for the IP addresses of gateway devices on the Alibaba Cloud side and the customer side.</description></item>
-        /// <item><description><b>PhysicalConnectionId</b>: the ID of the Express Connect circuit.</description></item>
+        /// <item><description><b>VlanId</b>: The VLAN ID of the VBR instance.</description></item>
+        /// <item><description><b>CircuitCode</b>: The circuit encoding provided by the carrier for the Express Connect circuit.</description></item>
+        /// <item><description><b>LocalGatewayIp</b>: The Alibaba Cloud-side IP address of the VBR instance.</description></item>
+        /// <item><description><b>PeerGatewayIp</b>: The client-side IP address of the VBR instance.</description></item>
+        /// <item><description><b>PeeringSubnetMask</b>: The subnet mask for the Alibaba Cloud-side and client-side IP addresses of the VBR instance.</description></item>
+        /// <item><description><b>LocalIpv6GatewayIp</b>: The Alibaba Cloud-side IPv6 address of the VBR instance.</description></item>
+        /// <item><description><b>PeerIpv6GatewayIp</b>: The client-side IPv6 address of the VBR instance.</description></item>
+        /// <item><description><b>PeeringIpv6SubnetMask</b>: The subnet mask for the Alibaba Cloud-side and client-side IPv6 addresses of the VBR instance.</description></item>
+        /// <item><description><b>ipv6Enable</b>: Enables IPv6.</description></item>
+        /// <item><description><b>PhysicalConnectionId</b>: The Express Connect circuit instance ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,9 +55,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</para>
+        /// <para>The circuit code provided by the carrier for the Express Connect circuit. </para>
         /// <remarks>
-        /// <para> Only the owner of the Express Connect circuit can set this property.</para>
+        /// <para>Only the owner of the Express Connect circuit can specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,9 +69,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,7 +83,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the VBR.</para>
-        /// <para>It must be 2 to 256 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 2 to 256 characters in length and must start with a letter or Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -88,7 +93,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of dropped packets that is allowed by the receiver when the initiator transmits packets. This value can be used to check whether a connection works as expected.</para>
+        /// <para>The detection multiplier, which specifies the maximum number of consecutive packet losses allowed by the receiver from the sender. This parameter is used to detect whether the link is normal.</para>
         /// <para>Valid values: <b>3 to 10</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -101,8 +106,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable IPv6. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,8 +120,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableIpv6 { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the VBR.</para>
-        /// <para>Only the owner of the VBR can set or modify this parameter.</para>
+        /// <para>The Alibaba Cloud-side IP address of the VBR instance.</para>
+        /// <para>This property can be specified or modified only by the VBR owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -124,7 +131,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LocalGatewayIp { get; set; }
 
         /// <summary>
-        /// <para>The IPv6 address of the VBR.</para>
+        /// <para>The Alibaba Cloud-side IPv6 address of the VBR instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2001:XXXX:3c4d:0015:0000:0000:0000:1a2b</para>
@@ -134,7 +141,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LocalIpv6GatewayIp { get; set; }
 
         /// <summary>
-        /// <para>The time interval to receive BFD packets. Valid values: <b>200 to 1000</b>. Unit: milliseconds.</para>
+        /// <para>The receive interval of BFD packets. Valid values: <b>200 to 1000</b>. Unit: ms.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -144,7 +151,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? MinRxInterval { get; set; }
 
         /// <summary>
-        /// <para>The time interval to send BFD packets. Valid values: <b>200 to 1000</b>. Unit: milliseconds.</para>
+        /// <para>The alert interval for sending Bidirectional Forwarding Detection (BFD) packets. Valid values: <b>200 to 1000</b>. Unit: ms.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -154,8 +161,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? MinTxInterval { get; set; }
 
         /// <summary>
-        /// <para>The MTU value supported by the VBR. Valid values: 1500 and 8500.</para>
-        /// <para>This value can be set only when the VBR is attached to an ECR. The value also affects all other VBRs and VPCs in the same ECR.</para>
+        /// <para>The MTU value supported by the VBR. Valid values: 1500 and 8500.
+        /// This value can be set only when the VBR is attached to an Express Connect Router (ECR). This value also affects all other VBRs and VPCs within the same ECR.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1500</para>
@@ -166,7 +173,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the VBR.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VBR</para>
@@ -184,8 +191,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the gateway device in the data center.</para>
-        /// <para>Only the owner of the VBR can set or modify this parameter.</para>
+        /// <para>The client-side IP address of the VBR instance.</para>
+        /// <para>This property can be specified or modified only by the VBR owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.X</para>
@@ -195,10 +202,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PeerGatewayIp { get; set; }
 
         /// <summary>
-        /// <para>The IPv6 address of the gateway device in the data center.</para>
+        /// <para>The client-side IPv6 address of the VBR instance.</para>
         /// <list type="bullet">
-        /// <item><description>Only the owner of the VBR can set or modify this property.</description></item>
-        /// <item><description>This property is required when you create a VBR for the owner of the Express Connect circuit. You can ignore this property when you create a VBR for another Alibaba Cloud account.</description></item>
+        /// <item><description><para>This property can be specified or modified only by the VBR owner.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is required when the Express Connect circuit owner creates a VBR instance. It is not required when creating a VBR instance for another account.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -209,8 +218,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PeerIpv6GatewayIp { get; set; }
 
         /// <summary>
-        /// <para>The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.</para>
-        /// <para>The two IPv6 addresses must fall within the same subnet.</para>
+        /// <para>The subnet mask for the Alibaba Cloud-side and client-side IPv6 addresses of the VBR instance.</para>
+        /// <para>The two IPv6 addresses must be in the same subnet.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2408:4004:cc:400::/56</para>
@@ -220,8 +229,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PeeringIpv6SubnetMask { get; set; }
 
         /// <summary>
-        /// <para>The subnet mask for the IP addresses of the gateway devices on the Alibaba Cloud side and on the customer side. Only the owner of the VBR can set or modify this parameter.</para>
-        /// <para>The two IP addresses must fall within the same subnet.</para>
+        /// <para>The subnet mask for the Alibaba Cloud-side and client-side IP addresses of the VBR instance. This property can be specified or modified only by the VBR owner.</para>
+        /// <para>The two IP addresses must be in the same subnet.</para>
         /// 
         /// <b>Example:</b>
         /// <para>255.255.255.252</para>
@@ -232,7 +241,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the VBR.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -251,10 +260,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to allow service access between data centers. Valid values:</para>
+        /// <para>Specifies whether to allow inter-IDC service access. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para>true: Allowed.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): Not allowed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -265,7 +276,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? SitelinkEnable { get; set; }
 
         /// <summary>
-        /// <para>The VBR ID.</para>
+        /// <para>The VBR instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -276,9 +287,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VbrId { get; set; }
 
         /// <summary>
-        /// <para>The VLAN ID of the VBR. Valid values: <b>0 to 2999</b>.</para>
+        /// <para>The VLAN ID of the VBR. Valid values: <b>0 to 2999</b>. </para>
         /// <remarks>
-        /// <para> This parameter is available only to Express Connect owners. The VLAN IDs of VBRs on the same Express Connect circuit must be unique.</para>
+        /// <para>Only the owner of the Express Connect circuit can specify this parameter. The VLAN IDs of two VBRs on the same Express Connect circuit must be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

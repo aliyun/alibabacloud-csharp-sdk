@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateFailoverTestJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the failover test.</para>
+        /// <para>The ID of the failover test job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ftj-bp1yh6mvi13aq3g8w****</para>

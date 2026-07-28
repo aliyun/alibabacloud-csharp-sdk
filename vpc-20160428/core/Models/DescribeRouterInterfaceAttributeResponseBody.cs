@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AccessPointId { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth of the router interface. Unit: Mbit/s.</para>
+        /// <para>The bandwidth of the router interface. Unit: Mbps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,11 +30,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The status of the router interface. Valid values:</para>
+        /// <para>The business status of the router interface. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b></description></item>
-        /// <item><description><b>FinancialLocked</b></description></item>
-        /// <item><description><b>SecurityLocked</b></description></item>
+        /// <item><description><para><b>Normal</b>: Normal.</para>
+        /// </description></item>
+        /// <item><description><para><b>FinancialLocked</b>: locked due to overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para><b>SecurityLocked</b>: locked due to security risk control.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,8 +50,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AfterPay</b>: pay-as-you-go</description></item>
-        /// <item><description><b>PrePaid</b>: subscription</description></item>
+        /// <item><description><b>AfterPay</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>PrePaid</b>: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,8 +94,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Indicates whether the connection is a cross-border connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b>: The connection is not a cross-border connection.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: The connection is a cross-border connection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +118,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which data was queried.</para>
+        /// <para>The end time of the data retrieval.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2999-09-08T16:00:00Z</para>
@@ -123,18 +128,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:</para>
+        /// <para>Indicates whether the router interface on the VBR was created in fast link mode. Fast link mode allows the router interfaces on the VBR and VPC to be automatically connected after they are created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b>: The router interface was created in fast link mode.</description></item>
+        /// <item><description><b>false</b> (default): The router interface was not created in fast link mode.</description></item>
         /// </list>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter takes effect only when <b>RouterType</b> is set to <b>VBR</b> and <b>OppositeRouterType</b> is set to <b>VRouter</b>.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter takes effect only when <b>RouterType</b> is set to <b>VBR</b> and <b>OppositeRouterType</b> is set to <b>VRouter</b>.</para>
-        /// </description></item>
-        /// <item><description><para>When <b>FastLinkMode</b> is set to <b>true</b>, <b>Role</b> must be set to <b>InitiatingSide</b>. <b>AccessPointId</b>, <b>OppositeRouterType</b>, <b>OpppsiteRouterId</b>, and <b>OppositeInterfaceOwnerId</b> are required.</para>
-        /// </description></item>
+        /// <item><description>When <b>FastLinkMode</b> is set to <b>true</b>, <b>Role</b> must be set to <b>InitiatingSide</b>, and <b>AccessPointId</b>, <b>OppositeRouterType</b>, <b>OpppsiteRouterId</b>, and <b>OppositeInterfaceOwnerId</b> are required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,7 +150,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string FastLinkMode { get; set; }
 
         /// <summary>
-        /// <para>The time when the router interface was modified.</para>
+        /// <para>The time when the router interface was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-28T10:02:12Z</para>
@@ -155,10 +160,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether renewal data is included. Valid values:</para>
+        /// <para>Indicates whether renewal data exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b>: No renewal data exists.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: Renewal data exists.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -169,7 +176,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string HasReservationData { get; set; }
 
         /// <summary>
-        /// <para>The rate of health checks. Unit: seconds. The value indicates the interval at which probe packets are sent during a health check.</para>
+        /// <para>The health check rate. Unit: seconds. This value indicates the interval between consecutive probe packets sent during a health check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -179,7 +186,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? HcRate { get; set; }
 
         /// <summary>
-        /// <para>The healthy threshold. This value indicates the number of probe packets that are sent during a health check. Unit: packets.</para>
+        /// <para>The health check threshold. This value indicates the number of probe packets sent during a health check. Unit: packets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -189,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? HcThreshold { get; set; }
 
         /// <summary>
-        /// <para>The source IP address that is used for the health check.</para>
+        /// <para>The source IP address of the health check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.XX.XX</para>
@@ -199,12 +206,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string HealthCheckSourceIp { get; set; }
 
         /// <summary>
-        /// <para>The status of the health check. Valid values:</para>
+        /// <para>The health check status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Abnormal</b></description></item>
-        /// <item><description><b>Normal</b></description></item>
-        /// <item><description><b>NoRedundantRoute</b></description></item>
-        /// <item><description><b>NoHealthCheckConfig</b></description></item>
+        /// <item><description><b>Abnormal</b>: abnormal.</description></item>
+        /// <item><description><b>Normal</b>: Normal.</description></item>
+        /// <item><description><b>NoRedundantRoute</b>: no redundant route configured.</description></item>
+        /// <item><description><b>NoHealthCheckConfig</b>: no health check configured.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -215,7 +222,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string HealthCheckStatus { get; set; }
 
         /// <summary>
-        /// <para>The destination IP address that is used for the health check.</para>
+        /// <para>The target IP address of the health check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.2.XX.XX</para>
@@ -225,7 +232,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string HealthCheckTargetIp { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -255,7 +262,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OppositeAccessPointId { get; set; }
 
         /// <summary>
-        /// <para>The maximum bandwidth of the peer router interface. Unit: Mbit/s.</para>
+        /// <para>The bandwidth of the peer router interface. Unit: Mbps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -265,11 +272,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? OppositeBandwidth { get; set; }
 
         /// <summary>
-        /// <para>The service status of the peer router interface. Valid values:</para>
+        /// <para>The business status of the peer router interface. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b></description></item>
-        /// <item><description><b>FinancialLocked</b></description></item>
-        /// <item><description><b>SecurityLocked</b></description></item>
+        /// <item><description><b>Normal</b>: Normal.</description></item>
+        /// <item><description><b>FinancialLocked</b>: locked due to overdue payment.</description></item>
+        /// <item><description><b>SecurityLocked</b>: locked due to security risk control.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -290,7 +297,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OppositeInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the peer router interface belongs.</para>
+        /// <para>The ID of the account to which the peer router interface belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1321932713****</para>
@@ -302,19 +309,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The specification of the peer router interface. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Mini.2</b>: 2 Mbit/s</description></item>
-        /// <item><description><b>Mini.5</b>: 5 Mbit/s</description></item>
-        /// <item><description><b>Small.1</b>: 10 Mbit/s</description></item>
-        /// <item><description><b>Small.2</b>: 20 Mbit/s</description></item>
-        /// <item><description><b>Small.5</b>: 50 Mbit/s</description></item>
-        /// <item><description><b>Middle.1</b>: 100 Mbit/s</description></item>
-        /// <item><description><b>Middle.2</b>: 200 Mbit/s</description></item>
-        /// <item><description><b>Middle.5</b>: 500 Mbit/s</description></item>
-        /// <item><description><b>Large.1</b>: 1,000 Mbit/s</description></item>
-        /// <item><description><b>Large.2</b>: 2,000 Mbit/s</description></item>
-        /// <item><description><b>Large.5</b>: 5,000 Mbit/s</description></item>
-        /// <item><description><b>Xlarge.1</b>: 10,000 Mbit/s</description></item>
-        /// <item><description><b>Negative</b>: not applicable</description></item>
+        /// <item><description><b>Mini.2</b>: 2 Mbps</description></item>
+        /// <item><description><b>Mini.5</b>: 5 Mbps</description></item>
+        /// <item><description><b>Small.1</b>: 10 Mbps</description></item>
+        /// <item><description><b>Small.2</b>: 20 Mbps</description></item>
+        /// <item><description><b>Small.5</b>: 50 Mbps</description></item>
+        /// <item><description><b>Middle.1</b>: 100 Mbps</description></item>
+        /// <item><description><b>Middle.2</b>: 200 Mbps</description></item>
+        /// <item><description><b>Middle.5</b>: 500 Mbps</description></item>
+        /// <item><description><b>Large.1</b>: 1000 Mbps</description></item>
+        /// <item><description><b>Large.2</b>: 2000 Mbps</description></item>
+        /// <item><description><b>Large.5</b>: 5000 Mbps</description></item>
+        /// <item><description><b>Xlarge.1</b>: 10000 Mbps</description></item>
+        /// <item><description><b>Negative</b>: no specification involved.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -327,16 +334,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the peer router interface. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Idle</b></description></item>
-        /// <item><description><b>AcceptingConnecting</b></description></item>
-        /// <item><description><b>Connecting</b></description></item>
-        /// <item><description><b>Activating</b></description></item>
-        /// <item><description><b>Active</b></description></item>
-        /// <item><description><b>Modifying</b></description></item>
-        /// <item><description><b>Deactivating</b></description></item>
-        /// <item><description><b>Inactive</b></description></item>
-        /// <item><description><b>Deleting</b></description></item>
-        /// <item><description><b>Deleted</b></description></item>
+        /// <item><description><b>Idle</b>: not connected.</description></item>
+        /// <item><description><b>AcceptingConnecting</b>: accepting a connection.</description></item>
+        /// <item><description><b>Connecting</b>: connecting.</description></item>
+        /// <item><description><b>Activating</b>: being activated.</description></item>
+        /// <item><description><b>Active</b>: activated.</description></item>
+        /// <item><description><b>Modifying</b>: being modified.</description></item>
+        /// <item><description><b>Deactivating</b>: being frozen.</description></item>
+        /// <item><description><b>Inactive</b>: frozen.</description></item>
+        /// <item><description><b>Deleting</b>: being deleted.</description></item>
+        /// <item><description><b>Deleted</b>: deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -369,8 +376,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the router to which the peer router interface belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VRouter</b></description></item>
-        /// <item><description><b>VBR</b></description></item>
+        /// <item><description><b>VRouter</b>: vRouter of a VPC.</description></item>
+        /// <item><description><b>VBR</b>: Virtual Border Router.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -401,7 +408,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The time when the renewal takes effect.</para>
+        /// <para>The renewal active time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-11T16:00:00Z</para>
@@ -411,7 +418,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ReservationActiveTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.</para>
+        /// <para>The renewal bandwidth. Unit: Mbps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -421,7 +428,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ReservationBandwidth { get; set; }
 
         /// <summary>
-        /// <para>The metering method that is used after the renewal takes effect. Valid values: If <b>PayByBandwidth</b> is returned, it indicates that the Express Connect circuit is billed on a pay-by-bandwidth basis.</para>
+        /// <para>The renewal billing type. Valid values: <b>PayByBandwidth</b>, which indicates pay-by-bandwidth.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayByBandwidth</para>
@@ -431,7 +438,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ReservationInternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The type of the renewal order. Only <b>RENEW</b> may be returned, which indicates that the order is placed for service renewal.</para>
+        /// <para>The type of the renewal order. Valid values: <b>RENEW</b>, which indicates a renewal order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RENEW</para>
@@ -442,7 +449,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The resource group ID.</para>
-        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></para>
+        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph6aiy****</para>
@@ -452,7 +459,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The role of the router interface in the peering connection.</para>
+        /// <para>The role in the peering connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InitiatingSide</para>
@@ -484,8 +491,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the router to which the route table belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VRouter</b></description></item>
-        /// <item><description><b>VBR</b></description></item>
+        /// <item><description><para><b>VRouter</b>: vRouter of a VPC.</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: Virtual Border Router.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -498,18 +507,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The specification of the router interface. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Mini.2</b>: 2 Mbit/s</description></item>
-        /// <item><description><b>Mini.5</b>: 5 Mbit/s</description></item>
-        /// <item><description><b>Small.1</b>: 10 Mbit/s</description></item>
-        /// <item><description><b>Small.2</b>: 20 Mbit/s</description></item>
-        /// <item><description><b>Small.5</b>: 50 Mbit/s</description></item>
-        /// <item><description><b>Middle.1</b>: 100 Mbit/s</description></item>
-        /// <item><description><b>Middle.2</b>: 200 Mbit/s</description></item>
-        /// <item><description><b>Middle.5</b>: 500 Mbit/s</description></item>
-        /// <item><description><b>Large.1</b>: 1,000 Mbit/s</description></item>
-        /// <item><description><b>Large.2</b>: 2,000 Mbit/s</description></item>
-        /// <item><description><b>Large.5</b>: 5,000 Mbit/s</description></item>
-        /// <item><description><b>Xlarge.1</b>: 10,000 Mbit/s</description></item>
+        /// <item><description><b>Mini.2</b>: 2 Mbps</description></item>
+        /// <item><description><b>Mini.5</b>: 5 Mbps</description></item>
+        /// <item><description><b>Small.1</b>: 10 Mbps</description></item>
+        /// <item><description><b>Small.2</b>: 20 Mbps</description></item>
+        /// <item><description><b>Small.5</b>: 50 Mbps</description></item>
+        /// <item><description><b>Middle.1</b>: 100 Mbps</description></item>
+        /// <item><description><b>Middle.2</b>: 200 Mbps</description></item>
+        /// <item><description><b>Middle.5</b>: 500 Mbps</description></item>
+        /// <item><description><b>Large.1</b>: 1000 Mbps</description></item>
+        /// <item><description><b>Large.2</b>: 2000 Mbps</description></item>
+        /// <item><description><b>Large.5</b>: 5000 Mbps</description></item>
+        /// <item><description><b>Xlarge.1</b>: 10000 Mbps</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -522,15 +531,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the router interface. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Idle</b></description></item>
-        /// <item><description><b>AcceptingConnecting</b></description></item>
-        /// <item><description><b>Connecting</b></description></item>
-        /// <item><description><b>Activating</b></description></item>
-        /// <item><description><b>Active</b></description></item>
-        /// <item><description><b>Modifying</b></description></item>
-        /// <item><description><b>Deactivating</b></description></item>
-        /// <item><description><b>Inactive</b></description></item>
-        /// <item><description><b>Deleting</b></description></item>
+        /// <item><description><b>Idle</b>: not connected.</description></item>
+        /// <item><description><b>AcceptingConnecting</b>: accepting a connection.</description></item>
+        /// <item><description><b>Connecting</b>: connecting.</description></item>
+        /// <item><description><b>Activating</b>: being activated.</description></item>
+        /// <item><description><b>Active</b>: activated.</description></item>
+        /// <item><description><b>Modifying</b>: being modified.</description></item>
+        /// <item><description><b>Deactivating</b>: being frozen.</description></item>
+        /// <item><description><b>Inactive</b>: frozen.</description></item>
+        /// <item><description><b>Deleting</b>: being deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -541,7 +550,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -571,7 +580,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the router interface belongs.</para>
+        /// <para>The ID of the virtual private cloud (VPC) to which the routing interface belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1b49rqrybk45nio****</para>

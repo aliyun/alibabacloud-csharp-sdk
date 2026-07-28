@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateVpcIpv6CidrResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IPv6 CIDR block that is reserved.</para>
+        /// <para>The reserved IPv6 CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2408:XXXX:0:a600::/56</para>

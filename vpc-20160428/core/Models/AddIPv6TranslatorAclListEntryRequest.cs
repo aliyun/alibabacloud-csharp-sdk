@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AddIPv6TranslatorAclListEntryRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks of the ACL entry.</para>
-        /// <para>It must be 2 to 100 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The description of the access control policy group entry.</para>
+        /// <para>The description must be 2 to 100 characters in length and must start with an uppercase letter, lowercase letter, or Chinese character. It can contain digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>clientIP1</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclEntryComment { get; set; }
 
         /// <summary>
-        /// <para>The IPv6 address or IPv6 CIDR block that you want to add to the ACL entry, for example, 12XX:0:0:XXXX::0102 or 12XX:0:0:XXXX::/60.</para>
+        /// <para>The IPv6 address or IPv6 CIDR block to add to the access control policy group entry. Example: 12XX:0:0:XXXX::0102 or 12XX:0:0:XXXX::/60.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AclEntryIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ACL to which you want to add the IP entry.</para>
+        /// <para>The ID of the access control policy group to which the IP entry belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ACL.</para>
+        /// <para>The region ID of the access control policy group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

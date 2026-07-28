@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The bandwidth percentage of the QoS queue.</para>
         /// <list type="bullet">
-        /// <item><description>When the QoS queue type is <b>Medium</b>, this parameter is required. Valid values: 1 to 100.</description></item>
-        /// <item><description>When the QoS queue type is <b>Default</b>, this parameter is set to &quot;-&quot;.</description></item>
+        /// <item><description>If the QoS queue type is <b>Medium</b>, this parameter is required. Valid values: 1 to 100.</description></item>
+        /// <item><description>If the QoS queue type is <b>Default</b>, this parameter is set to &quot;-&quot;.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the QoS policy.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

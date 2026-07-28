@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateEipAddressProResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the Elastic IP Address (EIP).</para>
+        /// <para>The ID of the EIP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip-25877c70gddh****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AllocationId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the EIP. This parameter is returned only when <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
+        /// <para>The IP address assigned to the specified EIP. This parameter is returned only when <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The order ID.
-        /// &lt;props=&quot;china&quot;&gt;This parameter is returned when <c>InstanceChargeType</c> is set to <c>PrePaid</c> (subscription). If <c>AutoPay</c> is set to <c>false</c>, go to the <a href="https://usercenter2.aliyun.com/order/list">Order Center</a> to complete the payment.
-        /// &lt;props=&quot;intl&quot;&gt;This parameter is returned when <c>InstanceChargeType</c> is set to <c>PrePaid</c> (subscription). If <c>AutoPay</c> is set to <c>false</c>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</para>
+        /// &lt;props=&quot;china&quot;&gt;This parameter is returned when InstanceChargeType (the billing method of the EIP) is set to PrePaid (subscription). If AutoPay is set to false, which means automatic payment is not enabled, go to the <a href="https://usercenter2.aliyun.com/order/list">Order Center</a> to complete the payment.
+        /// &lt;props=&quot;intl&quot;&gt;This parameter is returned when InstanceChargeType (the billing method of the EIP) is set to PrePaid (subscription). If AutoPay is set to false, which means automatic payment is not enabled, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20190000</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. This parameter is returned only when <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
+        /// <para>The resource group ID. This parameter is returned only when <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-resourcegroup****</para>

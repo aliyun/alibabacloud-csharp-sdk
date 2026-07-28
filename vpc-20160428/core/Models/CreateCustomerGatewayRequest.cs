@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateCustomerGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The autonomous system number (ASN) of the gateway device in your data center. This parameter is required If you want to use Border Gateway Protocol (BGP) for the IPsec-VPN connection. Valid values: 1 to 4294967295. 45104 is not supported.</para>
-        /// <para><b>Asn</b> is a 4-byte number. You can enter it in two segments and separate the first 16 bits from the following 16 bits with a period (.). Enter the number in each segment in decimal format.</para>
-        /// <para>For example, if you enter 123.456, the ASN is 8061384. The ASN is calculated by using the following formula: 123 × 65536 + 456 = 8061384.</para>
+        /// <para>The Autonomous System Number (ASN) of the gateway device in the on-premises data center. This parameter is required if you plan to enable Border Gateway Protocol (BGP) dynamic routing for the IPsec-VPN connection. Valid values: 1 to 4294967295. The value 45104 is not supported.</para>
+        /// <para><b>Asn</b> is a 4-byte number that can be entered in the two-segment format: the first 16 bits.the last 16 bits. Each segment is entered in decimal notation.</para>
+        /// <para>For example, if you enter 123.456, the ASN is 123 × 65536 + 456 = 8061384.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>We recommend that you use a private ASN to establish BGP connections to Alibaba Cloud. For information about the range of private ASNs, see the relevant documentation.</description></item>
-        /// <item><description>45104 is a unique identifier assigned by IANA to Alibaba Cloud. It is used to identify Alibaba Cloud during route selection and data transmission over the Internet.</description></item>
+        /// <item><description>Use a private ASN to establish a BGP connection with Alibaba Cloud. For more information about the range of private ASNs, refer to the relevant documentation.</description></item>
+        /// <item><description>45104 is a unique identity allocated to Alibaba Cloud Computing Co., Ltd. by the Internet Assigned Numbers Authority (IANA). It is used to identify Alibaba Cloud in global Internet routing and data transmission.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Asn { get; set; }
 
         /// <summary>
-        /// <para>The authentication key of the BGP routing protocol for the gateway device in the data center.</para>
-        /// <para>The key must be 1 to 64 characters in length. It can contain only ASCII characters and cannot contain spaces or question marks (?).</para>
+        /// <para>The authentication key of the BGP routing protocol for the gateway device in the on-premises data center.</para>
+        /// <para>The key must be 1 to 64 characters in length and can contain only ASCII characters. Spaces, Chinese characters, and half-width question marks (?) are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AuthKey****</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the customer gateway.</para>
-        /// <para>The description must be 1 to 100 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the customer gateway.  </para>
+        /// <para>The description must be 1 to 100 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -64,18 +64,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The static IP address of the gateway device in the data center.</para>
+        /// <para>The static IP address of the gateway device in the on-premises data center.</para>
         /// <list type="bullet">
-        /// <item><description>If you want to create a public IPsec-VPN connection, enter a public IP address.</description></item>
-        /// <item><description>If you want to create a private IPsec-VPN connection, enter a private IP address.</description></item>
+        /// <item><description><para>If you want to create an IPsec-VPN connection that uses the public network type, enter a public IP address.</para>
+        /// </description></item>
+        /// <item><description><para>If you want to create an IPsec-VPN connection that uses the private network type, enter a private IP address.</para>
+        /// </description></item>
         /// </list>
-        /// <para>You cannot use the following IP addresses. Otherwise, a IPsec-VPN connection cannot be established:</para>
+        /// <para>The following IP addresses are not supported. If you use these IP addresses, the IPsec-VPN connection cannot be established:</para>
         /// <list type="bullet">
-        /// <item><description>100.64.0.0~100.127.255.255</description></item>
-        /// <item><description>127.0.0.0~127.255.255.255</description></item>
-        /// <item><description>169.254.0.0~169.254.255.255</description></item>
-        /// <item><description>224.0.0.0~239.255.255.255</description></item>
-        /// <item><description>255.0.0.0~255.255.255.255</description></item>
+        /// <item><description>100.64.0.0 to 100.127.255.255</description></item>
+        /// <item><description>127.0.0.0 to 127.255.255.255</description></item>
+        /// <item><description>169.254.0.0 to 169.254.255.255</description></item>
+        /// <item><description>224.0.0.0 to 239.255.255.255</description></item>
+        /// <item><description>255.0.0.0 to 255.255.255.255</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -87,8 +89,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpAddress { get; set; }
 
         /// <summary>
-        /// <para>The name of the customer gateway.</para>
-        /// <para>The name must be 1 to 100 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the customer gateway.  </para>
+        /// <para>The name must be 1 to 100 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -106,8 +108,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the customer gateway.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the customer gateway. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,10 +122,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the resource group to which the customer gateway belongs.</para>
         /// <list type="bullet">
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group list.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not specify a resource group, the customer gateway will belong to the default resource group after being created.</para>
-        /// </description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group ID.</description></item>
+        /// <item><description>If you do not specify a resource group, the customer gateway is added to the default resource group after it is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,18 +142,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tag value.</para>
-        /// <para>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
-        /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.</para>
+        /// <para>The list of tags to add to the customer gateway.</para>
+        /// <para>You can add up to 20 tags to a customer gateway at a time.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateCustomerGatewayRequestTags> Tags { get; set; }
         public class CreateCustomerGatewayRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key. The tag key cannot be an empty string.</para>
-            /// <para>It can be at most 64 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
-            /// <para>You can specify at most 20 tag keys in each call.</para>
+            /// <para>The tag key. If you specify this parameter, the value cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey</para>
@@ -164,8 +163,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value.</para>
-            /// <para>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</para>
+            /// <para>The tag value can be up to 128 characters in length and can be an empty string. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>

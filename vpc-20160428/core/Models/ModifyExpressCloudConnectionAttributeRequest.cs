@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyExpressCloudConnectionAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The BGP autonomous system number (ASN) to be configured for the Smart Access Gateway (SAG) device.</para>
+        /// <para>The local BGP autonomous system (AS) number to be configured on the Smart Access Gateway device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag-ejfge***</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BgpAs { get; set; }
 
         /// <summary>
-        /// <para>The peer IP address when the SAG device is connected to the cloud.</para>
+        /// <para>The cloud-side IP address used for peering with the Smart Access Gateway device.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>172.16.**.**</c></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CeIp { get; set; }
 
         /// <summary>
-        /// <para>Descriptions of ECC.</para>
+        /// <para>The description of the Express Cloud Connection instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECC</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ECC instance.</para>
+        /// <para>The instance ID of the Express Cloud Connection instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EccId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ECC instance.</para>
+        /// <para>The name of the Express Cloud Connection instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>doctest</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The on-premises IP address when the SAG device is connected to the cloud.</para>
+        /// <para>The local IP address of the Smart Access Gateway device used for peering with the cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>10.10.**.**</c></para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PeIp { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ECC instance.</para>
+        /// <para>The region ID of the Express Cloud Connection instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

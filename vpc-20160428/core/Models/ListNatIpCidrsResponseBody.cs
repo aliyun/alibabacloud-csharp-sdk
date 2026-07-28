@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListNatIpCidrsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The CIDR blocks of the NAT gateway.</para>
+        /// <para>The list of NAT CIDR blocks.</para>
         /// </summary>
         [NameInMap("NatIpCidrs")]
         [Validation(Required=false)]
         public List<ListNatIpCidrsResponseBodyNatIpCidrs> NatIpCidrs { get; set; }
         public class ListNatIpCidrsResponseBodyNatIpCidrs : TeaModel {
             /// <summary>
-            /// <para>The time when the CIDR block was created.</para>
+            /// <para>The time when the NAT CIDR block was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-28T20:50Z</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the CIDR block is the default CIDR block of the NAT gateway. Valid values:</para>
+            /// <para>Indicates whether the NAT CIDR block is the default NAT CIDR block. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The CIDR block is the default CIDR block of the NAT gateway.</description></item>
-            /// <item><description><b>false</b>: The CIDR block is not the default CIDR block of the NAT gateway.</description></item>
+            /// <item><description><b>true</b>: The NAT CIDR block is the default NAT CIDR block.</description></item>
+            /// <item><description><b>false</b>: The NAT CIDR block is not the default NAT CIDR block.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC NAT gateway.</para>
+            /// <para>The instance ID of the VPC NAT gateway to which the NAT CIDR block belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-gw8v16wgvtq26vh59****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
-            /// <para>The CIDR block of the NAT gateway.</para>
+            /// <para>The NAT CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.16.0.0/24</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NatIpCidr { get; set; }
 
             /// <summary>
-            /// <para>The description of the CIDR block of the NAT gateway.</para>
+            /// <para>The description of the NAT CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NatIpCidrDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the CIDR block of the NAT gateway.</para>
+            /// <para>The instance ID of the NAT CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpcnatcidr-gw8ov42ei6xh1jys2****</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NatIpCidrId { get; set; }
 
             /// <summary>
-            /// <para>The name of the CIDR block of the NAT gateway.</para>
+            /// <para>The name of the NAT CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Name</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NatIpCidrName { get; set; }
 
             /// <summary>
-            /// <para>The status of the CIDR block of the NAT gateway. If <b>Available</b> is returned, it indicates that the CIDR block is available.</para>
+            /// <para>The status of the NAT CIDR block. The value is <b>Available</b>, which indicates that the NAT CIDR block is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Available</para>
@@ -103,10 +103,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of <b>NextToken</b> is not returned, it indicates that no next query is to be sent.</description></item>
-        /// <item><description>If the value of <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent requests exist.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7479A224-4A28-4895-9604-11F48BCE6A88</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of CIDR blocks that are returned.</para>
+        /// <para>The total number of NAT CIDR block entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

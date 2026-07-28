@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ModifyVpnPbrRouteEntryAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The new weight of the policy-based route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as the active link.</description></item>
-        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as the standby link.</description></item>
+        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</description></item>
+        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</description></item>
         /// </list>
         /// <para>If you do not specify this parameter, the weight of the policy-based route is not modified.</para>
         /// <remarks>
@@ -143,8 +143,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The original weight of the policy-based route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as the active link.</description></item>
-        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as the standby link.</description></item>
+        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</description></item>
+        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

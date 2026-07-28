@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string HaVipId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the ECS instance to attach to the HaVip.</para>
+        /// <para>The ID of the ECS instance to attach to the HaVip.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <list type="bullet">
         /// <item><description><para><b>EcsInstance</b>: ECS instance.</para>
         /// </description></item>
-        /// <item><description><para><b>NetworkInterface</b>: network interface controller (NIC) instance. If the instance to attach to the HaVip is a network interface controller (NIC), this parameter is required.</para>
+        /// <item><description><para><b>NetworkInterface</b>: elastic network interface (ENI). If the instance to attach to the HaVip is an ENI, this parameter is required.</para>
         /// </description></item>
         /// </list>
         /// 

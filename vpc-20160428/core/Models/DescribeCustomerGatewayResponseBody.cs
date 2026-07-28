@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeCustomerGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The autonomous system number (ASN) of the gateway device in the data center.</para>
+        /// <para>The autonomous system number of the on-premises data center gateway device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>65535</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? Asn { get; set; }
 
         /// <summary>
-        /// <para>The authentication key of the Border Gateway Protocol (BGP) routing protocol for the gateway device in the data center.</para>
+        /// <para>The authentication key of the BGP routing protocol for the on-premises data center gateway device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AuthKey****</para>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AuthKey { get; set; }
 
         /// <summary>
-        /// <para>The timestamp generated when the customer gateway was created. Unit: milliseconds.</para>
-        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp when the customer gateway was created. Unit: milliseconds.</para>
+        /// <para>The timestamp is in the UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the customer gateway was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1492747187000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the customer gateway.</para>
+        /// <para>The instance ID of the customer gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cgw-bp1pvpl9r9adju6l5****</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the gateway device in the data center.</para>
+        /// <para>The IP address of the on-premises data center gateway device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>139.32.XX.XX</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the resource group to which the customer gateway belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>

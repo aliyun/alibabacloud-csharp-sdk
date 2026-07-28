@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeHighDefinitionMonitorLogAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance whose fine-grained monitoring configurations you want to query.</para>
+        /// <para>The instance ID for which high-precision second-level monitoring is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip-wz9fi6qboho9fwgx7****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of instance for which you want to query fine-grained monitoring. Only <b>EIP</b> may be returned.</para>
+        /// <para>The type of the instance for which high-precision second-level monitoring is queried. The value is <b>EIP</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EIP</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.</para>
+        /// <para>The name of the LogProject.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hdmonitor-cn-shenzhen-1658206966225390</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LogProject { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore.</para>
+        /// <para>The name of the LogStore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hdmonitor</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is performed. Valid values:</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

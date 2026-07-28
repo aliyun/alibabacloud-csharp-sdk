@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListPublicIpAddressPoolCidrBlocksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> was not returned, it indicates that no additional results exist.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value is the token that is used for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The list of CIDR blocks in the IP address pool.</para>
         /// </summary>
         [NameInMap("PublicIpPoolCidrBlockList")]
         [Validation(Required=false)]
         public List<ListPublicIpAddressPoolCidrBlocksResponseBodyPublicIpPoolCidrBlockList> PublicIpPoolCidrBlockList { get; set; }
         public class ListPublicIpAddressPoolCidrBlocksResponseBodyPublicIpPoolCidrBlockList : TeaModel {
             /// <summary>
-            /// <para>The ID of the IP address pool.</para>
+            /// <para>The CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.0.XX.XX/24</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The CIDR blocks.</para>
+            /// <para>The time when the CIDR block was created. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-10T01:37:38Z</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The information about the CIDR blocks.</para>
+            /// <para>The instance ID of the IPAM pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pippool-6wetvn6fumkgycssx****</para>
@@ -61,7 +61,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string PublicIpAddressPoolId { get; set; }
 
             /// <summary>
-            /// <para>The time when the CIDR block was created. The time is displayed in <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+            /// <para>The status of the CIDR block in the IP address pool. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Created</b>: available.</description></item>
+            /// <item><description><b>Deleting</b>: being deleted.</description></item>
+            /// <item><description><b>Modifying</b>: being modified.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Created</para>
@@ -71,7 +76,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The total number of available IP addresses in the CIDR block.</para>
+            /// <para>The total number of available IP addresses in the CIDR block of the IP address pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -81,12 +86,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? TotalIpNum { get; set; }
 
             /// <summary>
-            /// <para>The status of the CIDR block in the IP address pool. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>Created</b>: available</description></item>
-            /// <item><description><b>Deleting</b>: being deleted</description></item>
-            /// <item><description><b>Modifying</b>: being modified</description></item>
-            /// </list>
+            /// <para>The number of used IP addresses in the CIDR block of the IP address pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned. Valid values: <b>10</b> to <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSnatTableEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the NAT gateway.</para>
+        /// <para>The ID of the NAT gateway to query.</para>
         /// <remarks>
-        /// <para> You must specify at least one of <b>SnatTableId</b> and <b>NatGatewayId</b>.</para>
+        /// <para>You must specify at least one of <b>SnatTableId</b> and <b>NatGatewayId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the elastic network interface to be queried.</para>
+        /// <para>The IDs of the elastic network interfaces (ENIs) to query.</para>
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where you want to create the NAT gateway.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the NAT gateway.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the SNAT entry.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>SnatEntry-1</para>
@@ -100,8 +100,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>When you query SNAT entries of Internet NAT gateways, this parameter specifies the EIP in an SNAT entry.</description></item>
-        /// <item><description>When you query SNAT entries of VPC NAT gateways, this parameter specifies the NAT IP address in an SNAT entry.</description></item>
+        /// <item><description><para>When you query SNAT entries of an Internet NAT gateway, this parameter specifies the elastic IP address (EIP) in the SNAT entry.</para>
+        /// </description></item>
+        /// <item><description><para>When you query SNAT entries of a VPC NAT gateway, this parameter specifies the NAT IP address in the SNAT entry.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,9 +114,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SnatIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SNAT table.</para>
+        /// <para>The ID of the SNAT table. </para>
         /// <remarks>
-        /// <para> You must specify at least one of <b>SnatTableId</b> and <b>NatGatewayId</b>.</para>
+        /// <para>You must specify at least one of <b>SnatTableId</b> and <b>NatGatewayId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -125,7 +127,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SnatTableId { get; set; }
 
         /// <summary>
-        /// <para>The source CIDR block specified in the SNAT entry.</para>
+        /// <para>The source CIDR block of the SNAT entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>116.22.XX.XX/24</para>
@@ -137,8 +139,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the vSwitch.</para>
         /// <list type="bullet">
-        /// <item><description>When you query SNAT entries of Internet NAT gateways, this parameter specifies that Elastic Compute Service (ECS) instances in the vSwitch can use SNAT entries to access the Internet.</description></item>
-        /// <item><description>When you query SNAT entries of virtual private cloud (VPC) NAT gateways, this parameter specifies that ECS instances in the vSwitch can use SNAT entries to access external networks.</description></item>
+        /// <item><description><para>When you query SNAT entries of an Internet NAT gateway, this parameter specifies the vSwitch whose ECS instances can access the Internet by using the SNAT rule.</para>
+        /// </description></item>
+        /// <item><description><para>When you query SNAT entries of a VPC NAT gateway, this parameter specifies the vSwitch whose ECS instances can access external networks by using the SNAT rule.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

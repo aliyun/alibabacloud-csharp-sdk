@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string IpVersion { get; set; }
 
+                [NameInMap("LogFormat")]
+                [Validation(Required=false)]
+                public string LogFormat { get; set; }
+
                 [NameInMap("LogStoreName")]
                 [Validation(Required=false)]
                 public string LogStoreName { get; set; }
@@ -134,7 +138,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of items per page in a paginated query.</para>
+        /// <para>The number of entries per page in paging queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -154,9 +158,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
@@ -168,7 +172,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The number of entries in the queried flow log list.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

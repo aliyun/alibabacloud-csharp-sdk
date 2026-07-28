@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVSwitchCidrReservationUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of reserved CIDR blocks that are in use.</para>
+        /// <para>The list of allocated reserved CIDR blocks for a vSwitch.</para>
         /// </summary>
         [NameInMap("CidrReservationUsages")]
         [Validation(Required=false)]
         public List<GetVSwitchCidrReservationUsageResponseBodyCidrReservationUsages> CidrReservationUsages { get; set; }
         public class GetVSwitchCidrReservationUsageResponseBodyCidrReservationUsages : TeaModel {
             /// <summary>
-            /// <para>The CIDR block allocated to the ENI from the reserved CIDR block.</para>
+            /// <para>The prefix CIDR block allocated from the current reserved CIDR block for a vSwitch to an elastic network interface (ENI).</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.64/28</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IpPrefixCidr { get; set; }
 
             /// <summary>
-            /// <para>The ID of the reserved CIDR block.</para>
+            /// <para>The instance ID of the reserved CIDR block allocated by prefix.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vcr-bp1m12saqteraw3rp****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IpPrefixId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the elastic network interface (ENI) whose CIDR block is allocated from the reserved CIDR block.</para>
+            /// <para>The instance ID of the elastic network interface (ENI) allocated from the reserved CIDR block for a vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-bp14v2sdd3v8htln****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource to which a CIDR block is allocated from the reserved CIDR block. Only <b>NetworkInterface</b> may be returned, which indicates an ENI.</para>
+            /// <para>The instance type allocated from the reserved CIDR block for a vSwitch. Valid values: <b>NetworkInterface</b>, which indicates an elastic network interface (ENI).</para>
             /// 
             /// <b>Example:</b>
             /// <para>NetworkInterface</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the reserved CIDR block.</para>
+            /// <para>The instance ID of the reserved CIDR block for a vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vcr-bp1m12saqteraw3rp****</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is the token that determines the start point of the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

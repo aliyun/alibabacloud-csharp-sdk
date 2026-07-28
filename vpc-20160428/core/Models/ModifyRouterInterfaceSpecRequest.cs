@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ModifyRouterInterfaceSpecRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may vary for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the router interface is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region where the router interface is located.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouterInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The specification of the router interface. The following table describes the available specifications and the corresponding bandwidths:</para>
+        /// <para>The specification of the router interface. The following specifications and their corresponding bandwidths are available:</para>
         /// <list type="bullet">
         /// <item><description><para><b>Mini.2</b>: 2 Mbps</para>
         /// </description></item>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If <b>Role</b> is set to <b>AcceptingSide</b> (accepter), set <b>Spec</b> to <b>Negative</b>.</para>
+        /// <para>If <b>Role</b> is set to <b>AcceptingSide</b> (accepter VPC), set <b>Spec</b> to <b>Negative</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

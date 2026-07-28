@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVSwitchesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,12 +24,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query vSwitches with IPv6 enabled in the region. Valid values:</para>
+        /// <para>Specifies whether to query vSwitches that have IPv6 CIDR blocks enabled in the specified region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: queries vSwitches that have IPv6 CIDR blocks enabled in the specified region.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: does not query vSwitches that have IPv6 CIDR blocks enabled in the specified region.</para>
+        /// </description></item>
         /// </list>
-        /// <para>If you do not set this parameter, the system queries all vSwitches in the specified region by default.</para>
+        /// <para>If you do not specify this parameter, the system queries all vSwitches in the specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -42,12 +44,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableIpv6 { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the default vSwitches in the specified region. Valid values:</para>
+        /// <para>Specifies whether to query the default vSwitch in the specified region. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: queries the default vSwitch in the specified region.  </para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: does not query the default vSwitch in the specified region.</para>
+        /// </description></item>
         /// </list>
-        /// <para>If you do not set this parameter, the system queries all vSwitches in the specified region by default.</para>
+        /// <para>If you do not specify this parameter, the system queries all vSwitches in the specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page when using paging. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -85,9 +89,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the vSwitch. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region to which the vSwitch belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <remarks>
-        /// <para> You must set at least one of <b>RegionId</b> and <b>VpcId</b>.</para>
+        /// <para>Specify at least one of the <b>RegionId</b> and <b>VpcId</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -126,15 +130,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tags of the resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeVSwitchesRequestTag> Tag { get; set; }
         public class DescribeVSwitchesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -144,8 +148,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -157,7 +161,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the vSwitch that you want to query.</para>
+        /// <para>The ID of the vSwitch to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-23dscddcffvf3****</para>
@@ -167,8 +171,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The exact name of the vSwitch that you want to query. Fuzzy match is not supported.</para>
-        /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the vSwitch.</para>
+        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vSwitch</para>
@@ -178,7 +182,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the vSwitch belongs.</para>
+        /// <para>The Alibaba Cloud account ID of the resource ownership.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2546073170691****</para>
@@ -188,9 +192,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? VSwitchOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the vSwitches belong.</para>
+        /// <para>The ID of the VPC to which the vSwitch belongs. </para>
         /// <remarks>
-        /// <para> You must set at least one of <b>RegionId</b> and <b>VpcId</b>.</para>
+        /// <para>Specify at least one of the <b>RegionId</b> and <b>VpcId</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -201,7 +205,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone to which the vSwitches belong. You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// <para>The ID of the zone to which the vSwitch belongs. You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-d</para>

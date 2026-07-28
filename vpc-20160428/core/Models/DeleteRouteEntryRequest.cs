@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <para><b>true</b>: performs a dry run without deleting the route. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</para>
-        /// <para><b>false</b> (default): sends a normal request. After the check succeeds, a 2xx HTTP status code is returned and the route is deleted.</para>
+        /// <para><b>false</b> (default): sends a Normal request. If the check succeeds, a 2xx HTTP status code is returned and the route entry is deleted.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the next hop instance.</para>
         /// <list type="bullet">
-        /// <item><description>To delete a non-ECMP route, specify <b>NextHopId</b>. Do not specify <b>NextHopList</b>.</description></item>
-        /// <item><description>To delete an ECMP route, specify <b>NextHopList</b>. Do not specify <b>NextHopId</b>.</description></item>
+        /// <item><description>To delete a non-ECMP route, specify <b>NextHopId</b>. You do not need to specify <b>NextHopList</b>.</description></item>
+        /// <item><description>To delete an ECMP route, specify <b>NextHopList</b>. You do not need to specify <b>NextHopId</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

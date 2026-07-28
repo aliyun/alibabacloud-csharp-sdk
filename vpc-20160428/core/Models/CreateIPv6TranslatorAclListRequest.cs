@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIPv6TranslatorAclListRequest : TeaModel {
         /// <summary>
-        /// <para>The ACL name.</para>
+        /// <para>The name of the access control policy group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The region of the IPv6 Translation Service instance. You can call the DescribeRegions operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

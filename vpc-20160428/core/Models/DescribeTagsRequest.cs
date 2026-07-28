@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>If this is the first query or no subsequent query exists, leave this parameter empty.</description></item>
-        /// <item><description>If a subsequent query exists, set this parameter to the NextToken value returned by the previous API call.</description></item>
+        /// <item><description>If a subsequent query exists, set the value to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The order ID for creating the IPv6 Translation Service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202303300940739</para>

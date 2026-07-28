@@ -11,7 +11,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ModifyExpressConnectTrafficQosRuleRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
@@ -21,9 +24,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The destination IPv4 CIDR block that matches the QoS rule traffic.</para>
+        /// <para>The destination IP address IPv4 CIDR block for traffic matching in the QoS rule.</para>
         /// <remarks>
-        /// <para>When this parameter is unavailable, specify <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b>.</para>
+        /// <para>This parameter cannot be specified together with <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,9 +37,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DstCidr { get; set; }
 
         /// <summary>
-        /// <para>The destination IPv6 CIDR block that matches the QoS rule traffic.</para>
+        /// <para>The destination IP address IPv6 CIDR block for traffic matching in the QoS rule.</para>
         /// <remarks>
-        /// <para>When this parameter is unavailable, specify <b>SrcCidr</b> or <b>DstCidr</b>.</para>
+        /// <para>This parameter cannot be specified together with <b>SrcCidr</b> or <b>DstCidr</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,24 +50,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DstIPv6Cidr { get; set; }
 
         /// <summary>
-        /// <para>The range of destination ports that match the QoS rule traffic. Valid values: <b>0</b> to <b>65535</b>. If the traffic does not match, the value is -1. You can specify only one port. The start port number must be the same as the end port number. Different protocols correspond to different ports. Valid values:</para>
+        /// <para>The destination port range for traffic matching in the QoS rule. Valid values: <b>0</b> to <b>65535</b>. Set the value to -1 if no matching is required. Currently, only a single port number can be specified. The start and end port numbers must be the same. The destination port range is fixed for each protocol type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL</b> (uneditable): -1/-1.</description></item>
-        /// <item><description><b>ICMP(IPv4)</b> (uneditable): -1/-1.</description></item>
-        /// <item><description><b>ICMPv6(IPv6)</b> (uneditable): -1/-1.</description></item>
-        /// <item><description><b>TCP</b> (editable): -1/-1.</description></item>
-        /// <item><description><b>UDP</b> (editable): -1/-1.</description></item>
-        /// <item><description><b>GRE</b> (uneditable): -1/-1.</description></item>
-        /// <item><description><b>SSH</b> (uneditable): 22/22.</description></item>
-        /// <item><description><b>Telnet</b> (uneditable): 23/23.</description></item>
-        /// <item><description><b>HTTP</b> (uneditable): 80/80.</description></item>
-        /// <item><description><b>HTTPS</b> (uneditable): 443/443.</description></item>
-        /// <item><description><b>MS SQL</b> (uneditable): 1443/1443.</description></item>
-        /// <item><description><b>Oracle</b> (uneditable): 1521/1521.</description></item>
-        /// <item><description><b>MySql</b> (uneditable): 3306/3306.</description></item>
-        /// <item><description><b>RDP</b> (uneditable): 3389/3389.</description></item>
-        /// <item><description><b>PostgreSQL</b> (uneditable): 5432/5432.</description></item>
-        /// <item><description><b>Redis</b> (uneditable): 6379/6379.</description></item>
+        /// <item><description><para><b>ALL</b>: -1/-1. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>ICMP(IPv4)</b>: -1/-1. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>ICMPv6(IPv6)</b>: -1/-1. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>TCP</b>: -1/-1. Editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>UDP</b>: -1/-1. Editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>GRE</b>: -1/-1. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>SSH</b>: 22/22. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>Telnet</b>: 23/23. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>HTTP</b>: 80/80. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>HTTPS</b>: 443/443. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>MS SQL</b>: 1443/1443. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b>: 1521/1521. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>MySql</b>: 3306/3306. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>RDP</b>: 3389/3389. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b>: 5432/5432. Not editable.</para>
+        /// </description></item>
+        /// <item><description><para><b>Redis</b>: 6379/6379. Not editable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DstPortRange { get; set; }
 
         /// <summary>
-        /// <para>The DSCP value that matches the QoS rule traffic. Valid values: <b>0</b> to <b>63</b>. If no value is matched, the value is -1.</para>
+        /// <para>The DSCP value for traffic matching in the QoS rule. Valid values: <b>0</b> to <b>63</b>. Set the value to -1 if no matching is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -93,7 +112,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The priority of the QoS rule. Valid values: <b>1</b> to <b>9000</b>. A larger value indicates a higher priority. The priority of each QoS rule must be unique in the same QoS policy.</para>
+        /// <para>The priority of the QoS rule. Valid values: <b>1</b> to <b>9000</b>. A larger value indicates a higher priority. The priority of each QoS rule must be unique within the same QoS policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -103,24 +122,40 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The protocol of the QoS rule. Valid values:</para>
+        /// <para>The protocol type of the QoS rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL</b></description></item>
-        /// <item><description><b>ICMP(IPv4)</b></description></item>
-        /// <item><description><b>ICMPv6(IPv6)</b></description></item>
-        /// <item><description><b>TCP</b></description></item>
-        /// <item><description><b>UDP</b></description></item>
-        /// <item><description><b>GRE</b></description></item>
-        /// <item><description><b>SSH</b></description></item>
-        /// <item><description><b>Telnet</b></description></item>
-        /// <item><description><b>HTTP</b></description></item>
-        /// <item><description><b>HTTPS</b></description></item>
-        /// <item><description><b>MS SQL</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
-        /// <item><description><b>MySql</b></description></item>
-        /// <item><description><b>RDP</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>Redis</b></description></item>
+        /// <item><description><para><b>ALL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ICMP(IPv4)</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ICMPv6(IPv6)</b></para>
+        /// </description></item>
+        /// <item><description><para><b>TCP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>UDP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>GRE</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SSH</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Telnet</b></para>
+        /// </description></item>
+        /// <item><description><para><b>HTTP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>HTTPS</b></para>
+        /// </description></item>
+        /// <item><description><para><b>MS SQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
+        /// <item><description><para><b>MySql</b></para>
+        /// </description></item>
+        /// <item><description><para><b>RDP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Redis</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,7 +166,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS policy.</para>
+        /// <para>The QoS policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -142,7 +177,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS queue.</para>
+        /// <para>The QoS queue ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -154,7 +189,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the QoS policy.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -165,7 +200,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The new DSCP value. Valid values: <b>0</b> to <b>63</b>. If you do not change the value, set the value to -1.</para>
+        /// <para>The new DSCP value to remark in the traffic. Valid values: <b>0</b> to <b>63</b>. Set the value to -1 if no remarking is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -190,7 +225,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RuleDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS rule.</para>
+        /// <para>The QoS rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -212,9 +247,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The source IPv4 CIDR block that matches the QoS rule traffic.</para>
+        /// <para>The source IPv4 CIDR block for traffic matching in the QoS rule.</para>
         /// <remarks>
-        /// <para>When this parameter is unavailable, specify <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b>.</para>
+        /// <para>This parameter cannot be specified together with <b>SrcIPv6Cidr</b> or <b>DstIPv6Cidr</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -225,9 +260,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SrcCidr { get; set; }
 
         /// <summary>
-        /// <para>The source IPv6 CIDR block that matches the QoS rule traffic.</para>
+        /// <para>The source IPv6 CIDR block for traffic matching in the QoS rule.</para>
         /// <remarks>
-        /// <para>When this parameter is unavailable, specify <b>SrcCidr</b> or <b>DstCidr</b>.</para>
+        /// <para>This parameter cannot be specified together with <b>SrcCidr</b> or <b>DstCidr</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -238,7 +273,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SrcIPv6Cidr { get; set; }
 
         /// <summary>
-        /// <para>The range of source ports that match the QoS rule traffic. Valid values: <b>0</b> to <b>65535</b>. If the traffic does not match, the value is -1. You can specify only one port. The start port number must be the same as the end port number.</para>
+        /// <para>The source port range for traffic matching in the QoS rule. Valid values: <b>0</b> to <b>65535</b>. Set the value to -1 if no matching is required. Currently, only a single port number can be specified. The start and end port numbers must be the same.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1/-1</para>

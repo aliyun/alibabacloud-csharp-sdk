@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the GA instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region where the Alibaba Cloud Global Accelerator (GA) instance resides. </para>
+        /// <para>You can invoke <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,10 +49,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ServerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the backend service instance. Valid values:</para>
+        /// <para>The type of the backend service instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>EcsInstance</b> (default): Elastic Compute Service (ECS)</description></item>
-        /// <item><description><b>SlbInstance</b>: Server Load Balancer (SLB)</description></item>
+        /// <item><description><para><b>EcsInstance</b> (default): ECS instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>SlbInstance</b>: load balancing instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

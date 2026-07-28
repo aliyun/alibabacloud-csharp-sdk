@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyCommonBandwidthPackageSpecRequest : TeaModel {
         /// <summary>
-        /// <para>The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </para>
+        /// <para>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>If the billing method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the default value range of <b>Bandwidth</b> is <b>2</b> to <b>20000</b>.</description></item>
         /// <item><description>If the billing method of the Internet Shared Bandwidth instance is pay-by-95th-percentile-bandwidth, the default value range of <b>Bandwidth</b> is <b>200</b> to <b>20000</b>.</description></item>
-        /// <item><description>If the billing method of the Internet Shared Bandwidth instance is pay-by-traffic, the default value range of <b>Bandwidth</b> is <b>1</b> to <b>2000</b>.</description></item>
+        /// <item><description>If the billing method of the Internet Shared Bandwidth instance is pay-by-predominant-traffic, the default value range of <b>Bandwidth</b> is <b>1</b> to <b>2000</b>.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;Valid values: <b>1</b> to <b>1000</b>.</para>
         /// <para>This parameter is required.</para>

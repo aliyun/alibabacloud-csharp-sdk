@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpcGatewayEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the gateway endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the gateway endpoint was created. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-27T01:58:37Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway endpoint.</para>
+        /// <para>The endpoint instance ID of the gateway endpoint instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpce-bp1w1dmdqjpwul0v3****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the endpoint service.</para>
+        /// <para>The service name of the endpoint service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>com.aliyun.cn-hangzhou.oss</para>

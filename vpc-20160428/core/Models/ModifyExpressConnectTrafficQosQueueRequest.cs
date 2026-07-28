@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyExpressConnectTrafficQosQueueRequest : TeaModel {
         /// <summary>
-        /// <para>The percentage of bandwidth allocated to the QoS queue.</para>
+        /// <para>The bandwidth percentage of the QoS queue.</para>
         /// <list type="bullet">
-        /// <item><description>If QueueType is set to <b>Medium</b>, this parameter is required. Valid values: 1 to 100.</description></item>
-        /// <item><description>If QueueType is set to <b>Default</b>, a value of - is returned.</description></item>
+        /// <item><description>If the QoS queue type is <b>Medium</b>, this parameter is required. Valid values: 1 to 100.</description></item>
+        /// <item><description>If the QoS queue type is <b>Default</b>, this parameter is set to &quot;-&quot;.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the system uses <b>RequestId</b> as <b>ClientToken</b>. <b>RequestId</b> might be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the QoS policy.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

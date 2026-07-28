@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paged query. Paging is used to return results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of ACLs in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

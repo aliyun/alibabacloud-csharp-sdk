@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListPublicIpAddressPoolsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is used to retrieve a new page of results.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent request is to be sent.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,17 +24,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The IP address pools.</para>
+        /// <para>The list of IP address pool instances.</para>
         /// </summary>
         [NameInMap("PublicIpAddressPoolList")]
         [Validation(Required=false)]
         public List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList> PublicIpAddressPoolList { get; set; }
         public class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList : TeaModel {
             /// <summary>
-            /// <para>The service type of the IP address pool.</para>
+            /// <para>The business type of the IP address pool.</para>
             /// <list type="bullet">
-            /// <item><description><b>CloudBox</b> Only cloud box users can select this type.</description></item>
-            /// <item><description><b>Default</b> (default)</description></item>
+            /// <item><description><b>CloudBox</b>: CloudBox. Only CloudBox users support this type.</description></item>
+            /// <item><description><b>Default</b> (default): default, indicating a non-special type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string BizType { get; set; }
 
             /// <summary>
-            /// <para>The status of the IP address pool.</para>
+            /// <para>The business status of the IP address pool instance.</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b></description></item>
-            /// <item><description><b>FinancialLocked</b></description></item>
+            /// <item><description><b>Normal</b>: normal.</description></item>
+            /// <item><description><b>FinancialLocked</b>: locked.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string BusinessStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the IP address pool was created. The time is displayed in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+            /// <para>The creation time, in the format of <c>YYYY-MM-DDThh:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-10T01:37:38Z</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the IP address pool.</para>
+            /// <para>The description of the IP address pool instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AddressPoolDescription</para>
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether idle IP addresses exist.</para>
+            /// <para>Indicates whether idle IP addresses are available.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: yes.</description></item>
+            /// <item><description><b>false</b>: no.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,20 +95,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The line type.</para>
             /// <list type="bullet">
-            /// <item><description><b>BGP</b>: BGP (Multi-ISP)</description></item>
-            /// <item><description><b>BGP_PRO</b>: BGP (Multi-ISP) Pro</description></item>
+            /// <item><description><para><b>BGP</b>: BGP (multi-ISP) line.</para>
+            /// </description></item>
+            /// <item><description><para><b>BGP_PRO</b>: BGP (multi-ISP) Pro line.</para>
+            /// </description></item>
             /// </list>
-            /// <para>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</para>
-            /// <para>If you are allowed to use single-ISP bandwidth, one of the following values may be returned:</para>
+            /// <para>For more information about BGP (multi-ISP) lines and BGP (multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</para>
+            /// <para>If you are a whitelist user of single-ISP bandwidth, the returned type may also be:</para>
             /// <list type="bullet">
-            /// <item><description><b>ChinaTelecom</b></description></item>
-            /// <item><description><b>ChinaUnicom</b></description></item>
-            /// <item><description><b>ChinaMobile</b></description></item>
-            /// <item><description><b>ChinaTelecom_L2</b></description></item>
-            /// <item><description><b>ChinaUnicom_L2</b></description></item>
-            /// <item><description><b>ChinaMobile_L2</b></description></item>
+            /// <item><description><b>ChinaTelecom</b>: China Telecom</description></item>
+            /// <item><description><b>ChinaUnicom</b>: China Unicom</description></item>
+            /// <item><description><b>ChinaMobile</b>: China Mobile</description></item>
+            /// <item><description><b>ChinaTelecom_L2</b>: China Telecom L2</description></item>
+            /// <item><description><b>ChinaUnicom_L2</b>: China Unicom L2</description></item>
+            /// <item><description><b>ChinaMobile_L2</b>: China Mobile L2</description></item>
             /// </list>
-            /// <para>If your services are deployed in China East 1 Finance, <b>BGP_FinanceCloud</b> is returned.</para>
+            /// <para>If you are a China (Hangzhou) Finance Cloud user, <b>BGP_FinanceCloud</b> is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BGP</para>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Isp { get; set; }
 
             /// <summary>
-            /// <para>The name of the IP address pool.</para>
+            /// <para>The name of the IP address pool instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AddressPoolName</para>
@@ -138,7 +140,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? OwnerId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IP address pool.</para>
+            /// <para>The instance ID of the IP address pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pippool-6wetvn6fumkgycssx****</para>
@@ -168,10 +170,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The edition of Anti-DDoS.</para>
+            /// <para>The security protection level.</para>
             /// <list type="bullet">
-            /// <item><description>If you do not set this parameter, Anti-DDoS Origin Basic is used.</description></item>
-            /// <item><description>If the value is set to <b>AntiDDoS_Enhanced</b>, Anti-DDoS Pro/Premium is used.</description></item>
+            /// <item><description><para>If this parameter is empty, the default value is Anti-DDoS Basic.</para>
+            /// </description></item>
+            /// <item><description><para>If the value is <b>AntiDDoS_Enhanced</b>, it indicates Anti-DDoS (Enhanced).</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("SecurityProtectionTypes")]
@@ -181,8 +185,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The sharing type of the IP address pool.</para>
             /// <list type="bullet">
-            /// <item><description>If <b>Shared</b> is returned, the IP address pool is shared.</description></item>
-            /// <item><description>If an empty value is returned, the IP address pool is not shared.</description></item>
+            /// <item><description><b>Shared</b>: The IP address pool is a shared IP address pool.</description></item>
+            /// <item><description>Empty: The IP address pool is not a shared IP address pool.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -193,11 +197,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ShareType { get; set; }
 
             /// <summary>
-            /// <para>The status of the IP address pool.</para>
+            /// <para>The instance status of the IPAM pool.</para>
             /// <list type="bullet">
-            /// <item><description><b>Created</b></description></item>
-            /// <item><description><b>Deleting</b></description></item>
-            /// <item><description><b>Modifying</b></description></item>
+            /// <item><description><b>Created</b>: active.</description></item>
+            /// <item><description><b>Deleting</b>: being deleted.</description></item>
+            /// <item><description><b>Modifying</b>: being modified.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,14 +212,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag list.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags> Tags { get; set; }
             public class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags : TeaModel {
                 /// <summary>
-                /// <para>The key of tag N.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinanceDept</para>
@@ -225,7 +229,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag N.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinanceDept</para>
@@ -257,10 +261,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? UsedIpNum { get; set; }
 
             /// <summary>
-            /// <para>The user type. Valid values:</para>
+            /// <para>The type of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>admin</b>: An administrator can delete, modify, and query IP address pools, and can assign elastic IP addresses (EIPs) to the pool.</description></item>
-            /// <item><description><b>user</b>: A user can only assign EIPs to the IP address pool and query the IP address pool, but cannot modify or delete the IP address pool.</description></item>
+            /// <item><description><b>admin</b>: administrator. An administrator can delete, modify, and query IP address pools, and allocate elastic IP addresses (EIPs) from IP address pools.</description></item>
+            /// <item><description><b>user</b>: regular user. A regular user can only allocate EIPs from IP address pools and query IP address pools, but cannot modify or delete IP address pools.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -271,7 +275,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string UserType { get; set; }
 
             /// <summary>
-            /// <para>The zone of the IP address pool. This parameter is returned only when the service type of the IP address pool is CloudBox.</para>
+            /// <para>The zones of the IP address pool.
+            /// This parameter is returned only when the business type of the IP address pool is CloudBox.</para>
             /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
@@ -290,7 +295,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries returned under the current request conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

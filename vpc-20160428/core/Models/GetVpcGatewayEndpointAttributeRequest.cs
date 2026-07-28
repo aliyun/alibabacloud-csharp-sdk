@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVpcGatewayEndpointAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the gateway endpoint.</para>
+        /// <para>The endpoint instance ID of the gateway endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

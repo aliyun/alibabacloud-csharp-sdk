@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeEcGrantRelationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID of the instance for which you want to query authorization relationships.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>InstanceType</b> to <b>VBR</b>, specify a VBR ID.</description></item>
-        /// <item><description>If you set <b>InstanceType</b> to <b>VPC</b>, specify a VPC ID.</description></item>
+        /// <item><description><para>If <b>InstanceType</b> is set to <b>VBR</b>, set this parameter to the VBR instance ID.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>InstanceType</b> is set to <b>VPC</b>, set this parameter to the VPC-connected instance ID.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,10 +27,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of instance. Valid values:</para>
+        /// <para>The type of instance for which you want to query authorization relationships. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VBR</b>: queries the permissions that are granted to a VBR.</description></item>
-        /// <item><description><b>VPC</b>: queries the permissions that are granted from a VPC.</description></item>
+        /// <item><description><b>VBR</b>: Virtual Border Router (VBR) instance. Queries the VPC-connected instances that have granted authorization to the VBR instance.</description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC) instance. Queries the VBR instances to which the VPC-connected instance has granted authorization.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,10 +62,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance is deployed.</para>
+        /// <para>The region ID of the VBR instance for which you want to query authorization relationships.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>InstanceType</b> is set to <b>VBR</b>, this parameter is required.</description></item>
-        /// <item><description>If <b>InstanceType</b> is set to <b>VPC</b>, you can ignore this parameter.</description></item>
+        /// <item><description><para>If <b>InstanceType</b> is set to <b>VBR</b>, this parameter is required.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>InstanceType</b> is set to <b>VPC</b>, this parameter is not required.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

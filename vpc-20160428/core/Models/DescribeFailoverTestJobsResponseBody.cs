@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The list of failover tests.</para>
+        /// <para>The list of failover test jobs.</para>
         /// </summary>
         [NameInMap("FailoverTestJobList")]
         [Validation(Required=false)]
         public List<DescribeFailoverTestJobsResponseBodyFailoverTestJobList> FailoverTestJobList { get; set; }
         public class DescribeFailoverTestJobsResponseBodyFailoverTestJobList : TeaModel {
             /// <summary>
-            /// <para>The description of the failover test.</para>
-            /// <para>The description must be 0 to 256 characters in length and cannot start with \<em>\<em>http:// <b>or</b> https://\</em>\</em>.</para>
+            /// <para>The description of the failover test job.</para>
+            /// <para>The description is 0 to 256 characters in length and cannot start with <b>http://</b> or <b>https://</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The duration of the failover test. Unit: minutes. Valid values: <b>1 to 4320</b>.</para>
+            /// <para>The test duration. Unit: minutes. Valid values: <b>1 to 4320</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string JobDuration { get; set; }
 
             /// <summary>
-            /// <para>The ID of the failover test.</para>
+            /// <para>The failover test job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ftj-bp1yh6mvi13aq3g8w****</para>
@@ -58,10 +58,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the failover test is performed immediately. Valid values:</para>
+            /// <para>The failover test type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>StartNow</b></description></item>
-            /// <item><description><b>StartLater</b></description></item>
+            /// <item><description><para><b>StartNow</b>: The test starts immediately after the failover test job is created.</para>
+            /// </description></item>
+            /// <item><description><para><b>StartLater</b>: Only the test job is created. The test is not started.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,8 +74,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string JobType { get; set; }
 
             /// <summary>
-            /// <para>The name of the failover test.</para>
-            /// <para>The name must be 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The name of the failover test job.</para>
+            /// <para>The name is 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -83,14 +85,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the failover test resources.</para>
+            /// <para>The list of failover test resource IDs.</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public List<string> ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the failover test resource. Only <b>PHYSICALCONNECTION</b> is returned.</para>
+            /// <para>The failover test resource type. Valid values: <b>PHYSICALCONNECTION</b>: Express Connect circuit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PHYSICALCONNECTION</para>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the fault drill task. The time must be in UTC. Specify the time in the ISO 8601 standard in <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+            /// <para>The start time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format based on the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-21T14:00:00Z</para>
@@ -110,13 +112,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the failover test. Valid values:</para>
+            /// <para>The status of the failover test job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Init</b></description></item>
-            /// <item><description><b>Starting</b></description></item>
-            /// <item><description><b>Testing</b></description></item>
-            /// <item><description><b>Stopping</b></description></item>
-            /// <item><description><b>Stopped</b></description></item>
+            /// <item><description><para><b>Init</b>: Pending.</para>
+            /// </description></item>
+            /// <item><description><para><b>Starting</b>: Starting.</para>
+            /// </description></item>
+            /// <item><description><para><b>Testing</b>: In progress.</para>
+            /// </description></item>
+            /// <item><description><para><b>Stopping</b>: Stopping.</para>
+            /// </description></item>
+            /// <item><description><para><b>Stopped</b>: Completed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,7 +134,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The end of the fault drill task. The time must be in UTC. Specify the time in the ISO 8601 standard in <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+            /// <para>The end time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format based on the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-21T15:00:00Z</para>
@@ -139,7 +146,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: 20.</para>
+        /// <para>The number of entries per page for paginated queries. Valid values: <b>1 to 100</b>. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -149,10 +156,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for <b>NextToken</b>, no next queries are sent.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is used to retrieve a new page of results.</description></item>
+        /// <item><description><para>Leave this parameter empty for the first query or if no next query exists.</para>
+        /// </description></item>
+        /// <item><description><para>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -173,7 +182,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListDhcpOptionsSetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the DHCP options sets.</para>
+        /// <para>The list of DHCP options sets.</para>
         /// </summary>
         [NameInMap("DhcpOptionsSets")]
         [Validation(Required=false)]
         public List<ListDhcpOptionsSetsResponseBodyDhcpOptionsSets> DhcpOptionsSets { get; set; }
         public class ListDhcpOptionsSetsResponseBodyDhcpOptionsSets : TeaModel {
             /// <summary>
-            /// <para>The number of VPCs with which the DHCP options set is associated.</para>
+            /// <para>The number of VPCs associated with the DHCP options set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public int? AssociateVpcCount { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the DHCP options sets.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-21 ***</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The details of DHCP options.</para>
+            /// <para>The DHCP options configuration.</para>
             /// </summary>
             [NameInMap("DhcpOptions")]
             [Validation(Required=false)]
             public ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions DhcpOptions { get; set; }
             public class ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions : TeaModel {
                 /// <summary>
-                /// <para>The suffix of the hostname.</para>
+                /// <para>The hostname suffix.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example.com</para>
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The lease time of the IPv6 DHCP options set.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If you use hours as the unit, Unit: h. Valid values are <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>24h</b>.</para>
+                /// <item><description><para>If the lease time is in hours, the unit is h. Valid values: <b>24h</b> to <b>1176h</b> and <b>87600h</b> to <b>175200h</b>. Default value: <b>24h</b>.</para>
                 /// </description></item>
-                /// <item><description><para>If you use days as the unit, Unit: d. Valid values are <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>1d</b>.</para>
+                /// <item><description><para>If the lease time is in days, the unit is d. Valid values: <b>1d</b> to <b>49d</b> and <b>3650d</b> to <b>7300d</b>. Default value: <b>1d</b>.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -80,10 +80,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Ipv6LeaseTime { get; set; }
 
                 /// <summary>
-                /// <para>The lease time of the IPv4 addresses for the DHCP options set.</para>
+                /// <para>The lease time of the IPv4 DHCP options set.</para>
                 /// <list type="bullet">
-                /// <item><description>If you use hours as the unit, valid values are <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</description></item>
-                /// <item><description>If you use days as the unit, valid values are <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</description></item>
+                /// <item><description><para>If the lease time is in hours, the unit is h. Valid values: <b>24h</b> to <b>1176h</b> and <b>87600h</b> to <b>175200h</b>. Default value: <b>87600h</b>.</para>
+                /// </description></item>
+                /// <item><description><para>If the lease time is in days, the unit is d. Valid values: <b>1d</b> to <b>49d</b> and <b>3650d</b> to <b>7300d</b>. Default value: <b>3650d</b>.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -126,7 +128,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DhcpOptionsSetName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the DHCP options set belongs.</para>
+            /// <para>The Alibaba Cloud account ID to which the DHCP options set belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>253460731706911258</para>
@@ -148,10 +150,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the DHCP options set. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Available</b></description></item>
-            /// <item><description><b>InUse</b></description></item>
-            /// <item><description><b>Pending</b></description></item>
-            /// <item><description><b>Deleted</b></description></item>
+            /// <item><description><para><b>Available</b>: available.</para>
+            /// </description></item>
+            /// <item><description><para><b>InUse</b>: in use.</para>
+            /// </description></item>
+            /// <item><description><para><b>Pending</b>: being configured.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleted</b>: deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -162,14 +168,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag list.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsTags> Tags { get; set; }
             public class ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsTags : TeaModel {
                 /// <summary>
-                /// <para>The key of tag N added to the resource.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinanceDept</para>
@@ -179,7 +185,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag N added to the resource.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinanceJoshua</para>
@@ -193,10 +199,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is used to retrieve a new page of results.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -217,7 +223,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

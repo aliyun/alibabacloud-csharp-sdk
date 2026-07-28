@@ -17,21 +17,31 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeRouterInterfacesRequestFilter> Filter { get; set; }
         public class DescribeRouterInterfacesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:</para>
+            /// <para>The filter condition. You can specify up to 5 filter conditions. The following filter conditions are supported:</para>
             /// <list type="bullet">
-            /// <item><description><b>RouterInterfaceId</b>: the ID of the router interface.</description></item>
-            /// <item><description><b>RouterId</b>: the ID of the router.</description></item>
-            /// <item><description><b>RouterType</b>: the router type. Valid values: <b>VRouter</b> and <b>VBR</b>.</description></item>
-            /// <item><description><b>RouterInterfaceOwnerId</b>: the ID of the Alibaba Cloud account to which the router interface belongs.</description></item>
-            /// <item><description><b>OppositeInterfaceId</b>: the ID of the peer router interface.</description></item>
-            /// <item><description><b>OppositeRouterType</b>: the type of the peer router interface. Valid values: <b>VRouter</b> and <b>VBR</b>.</description></item>
-            /// <item><description><b>OppositeRouterId</b>: the ID of the peer router.</description></item>
-            /// <item><description><b>OppositeInterfaceOwnerId</b>: the ID of the Alibaba Cloud account to which the peer router interface belongs.</description></item>
-            /// <item><description><b>Status</b>: the status of the router interface.</description></item>
-            /// <item><description><b>Name</b>: the name of the router interface.</description></item>
+            /// <item><description><para><b>RouterInterfaceId</b>: the router interface ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>RouterId</b>: the router ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>RouterType</b>: the router type. Valid values: <b>VRouter</b> and <b>VBR</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>RouterInterfaceOwnerId</b>: the ID of the account that owns the router interface.</para>
+            /// </description></item>
+            /// <item><description><para><b>OppositeInterfaceId</b>: the peer router interface ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>OppositeRouterType</b>: the peer router interface type. Valid values: <b>VRouter</b> and <b>VBR</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>OppositeRouterId</b>: the peer router interface ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>OppositeInterfaceOwnerId</b>: the ID of the account that owns the peer router interface.</para>
+            /// </description></item>
+            /// <item><description><para><b>Status</b>: the router interface status.</para>
+            /// </description></item>
+            /// <item><description><para><b>Name</b>: the router interface name.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> The logical operator among multiple values in a filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator among filter conditions is AND. Only routers that meet all the filter conditions are queried.</para>
+            /// <para>Multiple values for a filter condition are evaluated by using the OR operator. A result is returned if any of the values match. Filter conditions are evaluated by using the AND operator. A result is returned only if all filter conditions are matched.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -42,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Specifies the value in the filter condition based on the key. You can specify multiple filter values for one key. The logical operator among filter values is OR. If one filter value is matched, the filter condition is matched.</para>
+            /// <para>The filter value based on the specified Key. You can specify multiple filter values for a Key. Multiple filter values are evaluated by using the OR operator. A result is returned if any of the filter values match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Filter.1.Active 1</para>
@@ -54,10 +64,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether renewal data is included. Valid values:</para>
+        /// <para>Specifies whether to include renewal data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for paging queries. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -93,7 +105,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the router interface.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,8 +116,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource Group ID.</para>
-        /// <para>For more information about resource groups, please refer to <a href="https://help.aliyun.com/document_detail/94475.html">What is a Resource Group?</a></para>
+        /// <para>The resource group ID.</para>
+        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph6aiy****</para>
@@ -130,8 +142,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeRouterInterfacesRequestTags> Tags { get; set; }
         public class DescribeRouterInterfacesRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.</para>
-            /// <para>A tag key can support up to 128 characters, cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</para>
+            /// <para>The tag key of the resource. You must specify at least 1 tag key and can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -141,8 +153,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.</para>
-            /// <para>A maximum of 128 characters are supported, it cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and it cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

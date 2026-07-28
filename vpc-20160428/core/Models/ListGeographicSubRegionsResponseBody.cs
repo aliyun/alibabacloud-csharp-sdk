@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListGeographicSubRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries.</para>
+        /// <para>The number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The region list.</para>
+        /// <para>The list of regions to query.</para>
         /// </summary>
         [NameInMap("GeographicSubRegions")]
         [Validation(Required=false)]

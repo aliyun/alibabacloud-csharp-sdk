@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpconnFromVbrRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: sends a check request without transforming the shared Express Connect circuits mode. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check succeeds, the request ID is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a Normal request and transforms the shared Express Connect circuits mode after the check succeeds.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The payer for the shared Express Connect circuit. Valid values:</para>
+        /// <para>The payer of the shared Express Connect circuits. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PayByPhysicalConnectionOwner</b>: the owner of the shared Express Connect circuit</description></item>
-        /// <item><description><b>PayByVirtualPhysicalConnectionOwner</b>: the owner of the hosted connection</description></item>
+        /// <item><description><b>PayByPhysicalConnectionOwner</b>: The owner of the Express Connect circuit associated with the shared Express Connect circuits pays the fee.</description></item>
+        /// <item><description><b>PayByVirtualPhysicalConnectionOwner</b>: The owner of the shared Express Connect circuits pays the fee.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OrderMode { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the hosted connection.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the shared Express Connect circuits.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token must be unique among different requests. The maximum length is 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBCE910E-D396-4944-8****</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Token { get; set; }
 
         /// <summary>
-        /// <para>The ID of the associated VBR.</para>
+        /// <para>The instance ID of the cross-account VBR.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

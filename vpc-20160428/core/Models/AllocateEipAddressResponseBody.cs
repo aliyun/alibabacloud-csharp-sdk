@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateEipAddressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The EIP ID.</para>
+        /// <para>The ID of the EIP instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip-25877c70gddh****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AllocationId { get; set; }
 
         /// <summary>
-        /// <para>The EIP that is allocated. This parameter is returned only when <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
+        /// <para>The allocated EIP. This parameter is returned only if <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -30,7 +30,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EipAddress { get; set; }
 
         /// <summary>
-        /// <para>The order ID. This parameter is returned only when <b>InstanceChargeType</b> is set to <b>PrePaid</b>.</para>
+        /// <para>The order ID. &lt;props=&quot;china&quot;&gt;This parameter is returned if InstanceChargeType (the billing method of the EIP) is set to PrePaid (subscription). If AutoPay (automatic payment) is not enabled, go to the <a href="https://usercenter2.aliyun.com/order/list">Order Center</a> to complete the payment.
+        /// &lt;props=&quot;intl&quot;&gt;This parameter is returned if InstanceChargeType (the billing method of the EIP) is set to PrePaid (subscription). If AutoPay (automatic payment) is not enabled, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. This parameter is returned only when <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
+        /// <para>The resource group ID. This parameter is returned only if <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazfdgdg****</para>

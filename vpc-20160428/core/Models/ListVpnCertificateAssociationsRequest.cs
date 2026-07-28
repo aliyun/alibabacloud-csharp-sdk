@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ListVpnCertificateAssociationsRequest : TeaModel {
         /// <summary>
         /// <para>The list of certificate IDs.</para>
-        /// <para>You can query the association between at most 20 SSL certificates and VPN gateways.</para>
+        /// <para>You can query the associations between up to 20 SSL certificates and VPN gateway instances at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6bfe4218-ea1d****</para>
@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The certificate type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Encryption</b></description></item>
-        /// <item><description><b>Signature</b></description></item>
+        /// <item><description><para><b>Encryption</b>: encryption certificate.</para>
+        /// </description></item>
+        /// <item><description><para><b>Signature</b>: signing certificate.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CertificateType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>20</b>. Default value: <b>1</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>20</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -45,10 +47,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</description></item>
+        /// <item><description><para>If this is the first query or no next query exists, leave this parameter empty.</para>
+        /// </description></item>
+        /// <item><description><para>If a next query exists, set this parameter to the <b>NextToken</b> value returned by the previous API call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the VPN gateway.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,8 +75,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of VPN gateway IDs.</para>
-        /// <para>You can query the association between at most 20 VPN gateways and SSL certificates.</para>
+        /// <para>The list of VPN gateway instance IDs.</para>
+        /// <para>You can query the associations between up to 20 VPN gateway instances and SSL certificates at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-bp1q8bgx4xnkm****</para>

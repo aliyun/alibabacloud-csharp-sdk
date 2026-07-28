@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateEipSegmentAddressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the contiguous EIP group.</para>
+        /// <para>The instance ID of the contiguous EIP group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eipsg-2zett8ba055tbsxme****</para>

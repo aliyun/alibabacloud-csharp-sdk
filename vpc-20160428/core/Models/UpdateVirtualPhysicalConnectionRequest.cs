@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Performs a dry run to check for required parameters, the request format, and the instance status. The VLAN ID of the virtual physical connection is not modified. If the check fails, an error message is returned. If it passes, the request ID is returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): Sends the request. If the check passes, the VLAN ID of the virtual physical connection is modified.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: performs a dry run without modifying the VLAN ID of the shared Express Connect circuit. The system checks whether required parameters are specified, whether the request format is valid, and whether the instance status is valid. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. After the request passes the check, the VLAN ID of the shared Express Connect circuit is modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,17 +24,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The expected bandwidth of the virtual physical connection. The new bandwidth takes effect only after the payment is complete.</para>
+        /// <para>The expected bandwidth value of the shared Express Connect circuit. The bandwidth value takes effect only after payment is completed.</para>
         /// <para>Valid values: <b>50M</b>, <b>100M</b>, <b>200M</b>, <b>300M</b>, <b>400M</b>, <b>500M</b>, <b>1G</b>, <b>2G</b>, <b>5G</b>, <b>8G</b>, and <b>10G</b>.</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <remarks>
-        /// <para>Bandwidth settings of <b>2G</b>, <b>5G</b>, <b>8G</b>, and <b>10G</b> are not enabled by default. To use these settings, contact your account manager.</para>
+        /// <para>The bandwidth values <b>2G</b>, <b>5G</b>, <b>8G</b>, and <b>10G</b> are not available by default. To use these values, contact your account manager.</para>
         /// </remarks>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>Bandwidth settings of <b>2G</b>, <b>5G</b>, <b>8G</b>, and <b>10G</b> are not enabled by default. To use these settings, contact your account manager.</para>
+        /// <para>The bandwidth values <b>2G</b>, <b>5G</b>, <b>8G</b>, and <b>10G</b> are not available by default. To use these values, contact your account manager.</para>
         /// </remarks>
-        /// <para>Units: <b>M</b> indicates Mbps and <b>G</b> indicates Gbps.</para>
+        /// <para>Unit: <b>M</b> indicates Mbit/s and <b>G</b> indicates Gbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50M</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ExpectSpec { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual physical connection instance.</para>
+        /// <para>The instance ID of the shared Express Connect circuit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,8 +55,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the virtual physical connection is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain region IDs.</para>
+        /// <para>The region ID of the shared Express Connect circuit.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,10 +67,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The client token that ensures the idempotence of the request.</para>
-        /// <para>A client-generated value that must be unique across requests. The client token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> is different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,12 +81,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Token { get; set; }
 
         /// <summary>
-        /// <para>The VLAN ID of the virtual physical connection. Valid values: <b>0</b> to <b>2999</b>.</para>
+        /// <para>The VLAN ID of the shared Express Connect circuit. Valid values: <b>0</b> to <b>2999</b>.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set the VLAN ID to <b>0</b>, the physical switch port of the Virtual Border Router (VBR) operates in Layer 3 routed interface mode. In this mode, one physical connection corresponds to one VBR.</para>
-        /// </description></item>
-        /// <item><description><para>If you set the VLAN ID to a value from <b>1</b> to <b>2999</b>, the physical switch port of the VBR uses a VLAN-based Layer 3 subinterface. In this mode, each VLAN ID corresponds to one VBR. The physical connection can be attached to VPCs that belong to different accounts. VBRs in different VLANs are isolated at Layer 2 and cannot communicate with each other.</para>
-        /// </description></item>
+        /// <item><description>If the VLAN ID is <b>0</b>, the physical vSwitch port of the Virtual Border Router (VBR) does not use VLAN mode but uses Layer 3 vRouter interface mode. In Layer 3 vRouter interface mode, each Express Connect circuit corresponds to one VBR.</description></item>
+        /// <item><description>If the VLAN ID is <b>1</b> to <b>2999</b>, the physical vSwitch port of the VBR uses VLAN-based Layer 3 subinterfaces. In Layer 3 subinterface mode, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can connect to VPCs under multiple accounts. VBRs in different VLANs have network isolation at Layer 2 and cannot communicate with each other.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

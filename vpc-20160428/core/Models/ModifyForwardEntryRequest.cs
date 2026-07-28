@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without modifying the DNAT entry. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the DNAT entry is modified.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without modifying the DNAT entry. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. After the check succeeds, an HTTP 2xx status code is returned and the DNAT entry is modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <list type="bullet">
         /// <item><description><para>If you modify a DNAT entry of an Internet NAT gateway, this parameter specifies the public IP address used to provide public network access.</para>
         /// </description></item>
-        /// <item><description><para>If you modify a DNAT entry of a VPC NAT gateway, this parameter specifies the NAT IP address accessed by the external network.</para>
+        /// <item><description><para>If you modify a DNAT entry of a VPC NAT gateway, this parameter specifies the NAT IP address accessed by external networks.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description>If you modify both <b>ExternalPort</b> and <b>InternalPort</b>, and <b>ExternalPort</b> is set to a port range, <b>InternalPort</b> must also be set to a port range with the same number of ports. For example, if <b>ExternalPort</b> is set to <c>10/20</c>, <b>InternalPort</b> must be set to <c>80/90</c>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>If you modify a DNAT entry of a VPC NAT gateway, this parameter specifies the port accessed by the external network. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <item><description><para>If you modify a DNAT entry of a VPC NAT gateway, this parameter specifies the port accessed by external networks. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ExternalPort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DNAT entry to be modified.</para>
+        /// <para>The ID of the DNAT entry that you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The new name of the DNAT entry.</para>
-        /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

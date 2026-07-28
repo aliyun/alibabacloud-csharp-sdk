@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIpv6GatewayAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the IPv6 gateway. Valid values:</para>
+        /// <para>The business status of the IPv6 gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b></description></item>
-        /// <item><description><b>FinancialLocked</b></description></item>
-        /// <item><description><b>SecurityLocked</b></description></item>
+        /// <item><description><para><b>Normal</b>: Normal.</para>
+        /// </description></item>
+        /// <item><description><para><b>FinancialLocked</b>: financial lock.</para>
+        /// </description></item>
+        /// <item><description><para><b>SecurityLocked</b>: security lock.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the IPv6 gateway expires.</para>
+        /// <para>The expiration time of the IPv6 gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-1-05T09:21:35Z</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the gateway route table associated with the IPv6 gateway.</para>
         /// <remarks>
-        /// <para> This parameter is available only when the IPv6 gateway is associated with a gateway route table.</para>
+        /// <para>This parameter is displayed only for IPv6 gateways that are associated with a gateway route table.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -68,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GatewayRouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The metering method of the IPv6 gateway.</para>
+        /// <para>The billing method of the IPv6 gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -78,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IPv6 gateway.</para>
+        /// <para>The instance ID of the IPv6 gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6gw-hp3y0l3ln89j8cdvf****</para>
@@ -98,9 +101,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the IPv6 gateway belongs.</para>
+        /// <para>The Alibaba Cloud account ID of the IPv6 gateway owner.</para>
         /// <remarks>
-        /// <para> This value is of the Long type. In some languages, the precision may be lost. Use this value with caution.</para>
+        /// <para>Notice: This value is of the Long type. Precision loss may occur in certain programming languages. Use this value with caution.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the IPv6 gateway is deployed.</para>
+        /// <para>The region ID of the IPv6 gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-huhehaote</para>
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0ED8D006-F706-4D23-88ED-E11ED28DCAC</para>
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph6aiy****</para>
@@ -143,8 +146,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the IPv6 gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Pending</b></description></item>
-        /// <item><description><b>Available</b></description></item>
+        /// <item><description><para><b>Pending</b>: being configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>Available</b>: active.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -175,7 +180,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the IPv6 gateway belongs.</para>
+        /// <para>The ID of the VPC to which the IPv6 gateway belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-123sedrfswd23****</para>

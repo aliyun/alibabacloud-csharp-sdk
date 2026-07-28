@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnAttachmentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page when paging is used.</para>
+        /// <para>The number of entries per page in paging queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of IPsec-VPN connections that are associated with transit router instances.</para>
+        /// <para>The list of IPsec-VPN connections associated with transit router instances.</para>
         /// </summary>
         [NameInMap("VpnAttachments")]
         [Validation(Required=false)]
         public List<DescribeVpnAttachmentsResponseBodyVpnAttachments> VpnAttachments { get; set; }
         public class DescribeVpnAttachmentsResponseBodyVpnAttachments : TeaModel {
             /// <summary>
-            /// <para>The type of resource to which the IPsec-VPN connection is attached. The value is <b>CEN</b>, which indicates that the IPsec-VPN connection is associated with a transit router instance.</para>
+            /// <para>The type of resource to which the IPsec-VPN connection is associated. The value is <b>CEN</b>, which indicates that the IPsec-VPN connection is associated with a transit router instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CEN</para>
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>Indicates whether the IPsec-VPN connection is associated with a transit router instance that belongs to a different Alibaba Cloud account.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes.</description></item>
-            /// <item><description><b>false</b>: no.</description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,11 +112,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The system tags of the IPsec-VPN connection.</para>
-            /// <para>You can use system tags to check whether the IPsec-VPN connection supports BGP. You do not need to pay attention to other properties.</para>
+            /// <para>You can use system tags to check whether the IPsec-VPN connection supports BGP. You can ignore other properties.</para>
             /// <para><b>BGPSupport</b>: indicates whether the IPsec-VPN connection supports BGP.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: supported.</description></item>
-            /// <item><description><b>false</b>: not supported.</description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>The list of tags that are attached to the IPsec-VPN connection.</para>
+            /// <para>The list of tags associated with the IPsec-VPN connection.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The ID of the transit routing instance to which the IPsec-VPN connection is attached.</para>
+            /// <para>The instance ID of the forward routing vRouter to which the IPsec-VPN connection is attached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-p0wkh4yryb1dnanqw****</para>
@@ -177,8 +177,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The bandwidth specification of a single VPN tunnel. Valid values:
-            /// Standard (default): standard. The default bandwidth is 1 Gbit/s.
-            /// Large: large. The default bandwidth is 3 Gbit/s.</para>
+            /// Standard (default): standard. The default bandwidth is 1 Gbps.
+            /// Large: large. The default bandwidth is 3 Gbps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Standard</para>

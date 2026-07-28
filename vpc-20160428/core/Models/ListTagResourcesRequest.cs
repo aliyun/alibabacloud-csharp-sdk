@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this is the first query or no next query exists, you do not need to set this parameter.</para>
+        /// <item><description><para>Leave this parameter empty for the first request or if no subsequent query exists.</para>
         /// </description></item>
-        /// <item><description><para>If a next query exists, set the value to the <b>NextToken</b> value returned in the previous API call.</para>
+        /// <item><description><para>If a subsequent query exists, set this parameter to the <b>NextToken</b> value returned by the previous API call.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resources. You can specify up to 50 resource IDs.</para>
+        /// <para>The resource ID. You can specify up to 50 resource IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp16qjewdsunr41m1****</para>
@@ -74,22 +74,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: VPC instance.</description></item>
-        /// <item><description><b>VSWITCH</b>: vSwitch instance.</description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC) instance.</description></item>
+        /// <item><description><b>VSWITCH</b>: virtual switch instance.</description></item>
         /// <item><description><b>ROUTETABLE</b>: route table instance.</description></item>
-        /// <item><description><b>EIP</b>: Elastic IP Address (EIP) instance.</description></item>
+        /// <item><description><b>EIP</b>: elastic IP address (EIP) instance.</description></item>
         /// <item><description><b>VPNGATEWAY</b>: VPN gateway instance.</description></item>
         /// <item><description><b>NATGATEWAY</b>: NAT gateway instance.</description></item>
-        /// <item><description><b>COMMONBANDWIDTHPACKAGE</b>: EIP bandwidth plan instance.</description></item>
+        /// <item><description><b>COMMONBANDWIDTHPACKAGE</b>: Internet Shared Bandwidth instance.</description></item>
         /// <item><description><b>PREFIXLIST</b>: prefix list instance.</description></item>
-        /// <item><description><b>PUBLICIPADDRESSPOOL</b>: IP address pool instance.</description></item>
+        /// <item><description><b>PUBLICIPADDRESSPOOL</b>: IP IPAM pool instance.</description></item>
         /// <item><description><b>IPV4GATEWAY</b>: IPv4 gateway instance.</description></item>
         /// <item><description><b>IPV6GATEWAY</b>: IPv6 gateway instance.</description></item>
         /// <item><description><b>NETWORKACL</b>: network ACL instance.</description></item>
-        /// <item><description><b>TRAFFICMIRRORFILTER</b>: traffic mirroring filter instance.</description></item>
-        /// <item><description><b>TRAFFICMIRRORSESSION</b>: traffic mirroring session instance.</description></item>
+        /// <item><description><b>TRAFFICMIRRORFILTER</b>: traffic mirror filter instance.</description></item>
+        /// <item><description><b>TRAFFICMIRRORSESSION</b>: traffic mirror session instance.</description></item>
         /// <item><description><b>FLOWLOG</b>: flow log instance.</description></item>
         /// <item><description><b>HAVIP</b>: high-availability virtual IP address (HAVIP) instance.</description></item>
         /// <item><description><b>DHCPOPTIONSSET</b>: DHCP options set instance.</description></item>
@@ -119,10 +119,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. You can specify up to 20 tag keys.</para>
-            /// <para>The tag key can be up to 128 characters in length. It cannot be an empty string. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot be an empty string or start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <remarks>
-            /// <para>You must specify at least one of the <b>ResourceId.N</b> and <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>) parameters.</para>
+            /// <para>Specify at least <b>ResourceId.N</b> or <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -133,10 +133,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. You can specify up to 20 tag values.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values.</para>
             /// <para>The tag value can be up to 128 characters in length and can be an empty string. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <remarks>
-            /// <para>You must specify at least one of the <b>ResourceId.N</b> and <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>) parameters.</para>
+            /// <para>Specify at least <b>ResourceId.N</b> or <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

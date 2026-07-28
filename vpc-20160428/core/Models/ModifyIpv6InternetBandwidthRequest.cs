@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The Internet bandwidth of the IPv6 address. Unit: Mbit/s.</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If the billing method is pay-by-data-transfer, the Internet bandwidth ranges from <b>1</b> to <b>1000</b>.</description></item>
-        /// <item><description>If the billing method is pay-by-bandwidth, the Internet bandwidth ranges from <b>1</b> to <b>2000</b>.</description></item>
-        /// <item><description>If the billing method is traditional 95th percentile, the Internet bandwidth ranges from <b>1</b> to <b>2000</b>.</description></item>
+        /// <item><description>If the billing method is pay-by-data-transfer, the Internet bandwidth value range is <b>1</b> to <b>1000</b>.</description></item>
+        /// <item><description>If the billing method is pay-by-bandwidth, the Internet bandwidth value range is <b>1</b> to <b>2000</b>.</description></item>
+        /// <item><description>If the billing method is traditional 95th percentile, the Internet bandwidth value range is <b>1</b> to <b>2000</b>.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If the billing method is pay-by-data-transfer, the Internet bandwidth ranges from <b>1</b> to <b>1000</b>.</description></item>
-        /// <item><description>If the billing method is pay-by-bandwidth, the Internet bandwidth ranges from <b>1</b> to <b>2000</b>.</description></item>
+        /// <item><description>If the billing method is pay-by-data-transfer, the Internet bandwidth value range is <b>1</b> to <b>1000</b>.</description></item>
+        /// <item><description>If the billing method is pay-by-bandwidth, the Internet bandwidth value range is <b>1</b> to <b>2000</b>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without creating an IPv4 gateway. The system checks the required parameters, request syntax, and business limits. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the IPv4 gateway is created.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without creating the IPv4 gateway. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and then sends the request. If the check succeeds, an HTTP 2xx status code is returned and the IPv4 gateway is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

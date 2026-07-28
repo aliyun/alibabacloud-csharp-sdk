@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the route table to query.</para>
         /// <remarks>
-        /// <para>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</para>
+        /// <para>You must specify at least one of the following parameters: <b>VRouterId</b>, <b>RouteTableId</b>, <b>RouterId</b>, and <b>RouteTableName</b>. You cannot specify both <b>VRouterId</b> and <b>RouterId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -81,9 +81,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the route table to query.</para>
-        /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// <remarks>
-        /// <para>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</para>
+        /// <para>You must specify at least one of the following parameters: <b>VRouterId</b>, <b>RouteTableId</b>, <b>RouterId</b>, and <b>RouteTableName</b>. You cannot specify both <b>VRouterId</b> and <b>RouterId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the router to which the route table belongs.</para>
         /// <remarks>
-        /// <para>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</para>
+        /// <para>You must specify at least one of the following parameters: <b>VRouterId</b>, <b>RouteTableId</b>, <b>RouterId</b>, and <b>RouteTableName</b>. You cannot specify both <b>VRouterId</b> and <b>RouterId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouterType { get; set; }
 
         /// <summary>
-        /// <para>The destination type of the route to query. Valid values:</para>
+        /// <para>The type of the route entry to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Custom</b>: custom route.</description></item>
         /// <item><description><b>System</b>: system route.</description></item>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the vRouter to query.</para>
         /// <remarks>
-        /// <para>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</para>
+        /// <para>You must specify at least one of the following parameters: <b>VRouterId</b>, <b>RouteTableId</b>, <b>RouterId</b>, and <b>RouteTableName</b>. You cannot specify both <b>VRouterId</b> and <b>RouterId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

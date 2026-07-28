@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeNetworkAclAttributesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the network ACLs.</para>
+        /// <para>The details of the network ACL.</para>
         /// </summary>
         [NameInMap("NetworkAclAttribute")]
         [Validation(Required=false)]
@@ -153,7 +153,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NetworkAclName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the network ACL belongs.</para>
+            /// <para>The Alibaba Cloud account ID to which the network ACL belongs.</para>
+            /// <remarks>
+            /// <para>Notice: This value is of the Long type. Precision loss may occur in certain languages. Use this value with caution.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>2546073170691****</para>
@@ -197,10 +200,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The association status of the resource. Valid values:</para>
+            /// <para>The status of the associated resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Available</b></description></item>
-            /// <item><description><b>Modifying</b></description></item>
+            /// <item><description><para><b>Available</b>: available.</para>
+            /// </description></item>
+            /// <item><description><para><b>Modifying</b>: being modified.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -231,7 +236,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The ID of the VPC to which the network ACL belongs.</para>
+            /// <para>The ID of the VPC associated with the network ACL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-a2d33rfpl72k5defr****</para>

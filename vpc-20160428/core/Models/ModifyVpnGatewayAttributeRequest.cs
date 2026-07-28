@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>Specifies whether to enable routing automatic propagation for the VPN gateway. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: enabled.</para>
-        /// <para>  After routing automatic propagation is enabled, the VPN gateway instance performs automatic learning of system routes from the system route table of the VPC-connected instance and automatically propagates routes of the on-premises data center to the system route table of the VPC-connected instance.</para>
+        /// <para>  After routing automatic propagation is enabled, the VPN gateway instance performs automatic learning of system routes in the system route table of the VPC-connected instance and automatically propagates routes of the on-premises data center to the system route table of the VPC-connected instance.</para>
         /// </description></item>
         /// <item><description><para><b>false</b>: disabled.</para>
         /// <para>  Before you disable routing automatic propagation, make sure that the BGP dynamic route feature is disabled for all IPsec-VPN connections under the VPN gateway.</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The new name of the VPN gateway.  </para>
-        /// <para>The name must be 2 to 100 characters in length and cannot start with <c>http://</c> or <c>https://</c>. It must start with an uppercase or lowercase letter and can contain uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). Other special characters are not supported.</para>
+        /// <para>The name must be 2 to 100 characters in length. It cannot start with <c>http://</c> or <c>https://</c>. It must start with an uppercase or lowercase letter and can contain uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). Other special characters are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myvpn</para>

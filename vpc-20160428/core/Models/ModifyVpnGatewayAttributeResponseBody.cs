@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyVpnGatewayAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether BGP routes are automatically propagated to the VPC. Valid values:</para>
+        /// <para>Indicates whether routing automatic propagation is enabled for BGP routes to the VPC. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>true</b>: automatic propagation is enabled.</para>
         /// </description></item>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? AutoPropagate { get; set; }
 
         /// <summary>
-        /// <para>The billing status of the VPN gateway instance. Valid values:</para>
+        /// <para>The payment status of the VPN gateway instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Normal</b>: Normal.</description></item>
         /// <item><description><b>FinancialLocked</b>: locked due to overdue payment.</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The timestamp when the VPN gateway instance was created. Unit: milliseconds.</para>
-        /// <para>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the VPN gateway instance was created.</para>
+        /// <para>The timestamp is in the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1492753580000</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The second IP address assigned by the system to the VPN gateway instance for creating IPsec-VPN connections.</para>
-        /// <para>This parameter is returned only for VPN gateway instances that support dual-tunnel IPsec-VPN connections.</para>
+        /// <para>This parameter is returned only for VPN gateway instances that support creating dual-tunnel IPsec-VPN connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>116.11.XX.XX</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the second vSwitch associated with the VPN gateway instance.</para>
-        /// <para>This parameter is returned only for VPN gateway instances that support dual-tunnel IPsec-VPN connections.</para>
+        /// <para>This parameter is returned only for VPN gateway instances that support creating dual-tunnel IPsec-VPN connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-p0w95ql6tmr2ludkt****</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The timestamp when the VPN gateway instance expires. Unit: milliseconds.</para>
-        /// <para>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the VPN gateway instance expires.</para>
+        /// <para>The timestamp is in the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1495382400000</para>
@@ -111,10 +111,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If the VPN gateway instance supports single-tunnel IPsec-VPN connections, this address is the IP address of the VPN gateway instance and can be used to create IPsec-VPN connections or SSL-VPN connections.</para>
+        /// <item><description><para>If the VPN gateway instance supports creating single-tunnel IPsec-VPN connections, this address is the IP address of the VPN gateway instance and can be used to create IPsec-VPN connections or SSL-VPN connections.</para>
         /// </description></item>
-        /// <item><description><para>If the VPN gateway instance supports dual-tunnel IPsec-VPN connections, this address is the first IP address used to create IPsec-VPN connections and cannot be used to create SSL-VPN connections.</para>
-        /// <para>  If the VPN gateway instance supports dual-tunnel IPsec-VPN connections, the system assigns two IPsec IP addresses to the VPN gateway instance for creating dual-tunnel IPsec-VPN connections.</para>
+        /// <item><description><para>If the VPN gateway instance supports creating dual-tunnel IPsec-VPN connections, this address is the first IP address used to create IPsec-VPN connections and cannot be used to create SSL-VPN connections.</para>
+        /// <para>  If the VPN gateway instance supports creating dual-tunnel IPsec-VPN connections, the system assigns two IPsec IP addresses to the VPN gateway instance for creating dual-tunnel IPsec-VPN connections.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the vSwitch occupied by the system when the VPN gateway instance was deployed.</para>
+        /// <para>The private IP address of the vSwitch occupied by the system when deploying the VPN gateway instance.</para>
         /// <para>This parameter is returned only for VPN gateway instances that support single-tunnel IPsec-VPN connections and have the IPsec-VPN feature enabled.</para>
         /// 
         /// <b>Example:</b>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The IP address of the SSL-VPN connection.</para>
-        /// <para>This parameter is returned only when the SSL-VPN feature is enabled for a VPN gateway instance that supports dual-tunnel IPsec-VPN connections and uses the public network type.</para>
+        /// <para>This parameter is returned only when the SSL-VPN feature is enabled for a VPN gateway instance that supports creating dual-tunnel IPsec-VPN connections and uses the public network type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>116.33.XX.XX</para>

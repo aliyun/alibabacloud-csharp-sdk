@@ -11,8 +11,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DescribeForwardTableEntriesRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The elastic IP addresses (EIPs) that can be accessed over the Internet when you query DNAT entries of Internet NAT gateways.</description></item>
-        /// <item><description>The NAT IP addresses that can be accessed by external networks when you query DNAT entries of Virtual Private Cloud (VPC) NAT gateways.</description></item>
+        /// <item><description><para>If you query DNAT entries of an Internet NAT gateway, this parameter specifies the elastic IP address (EIP) that provides public network access in the DNAT entry.</para>
+        /// </description></item>
+        /// <item><description><para>If you query DNAT entries of a VPC NAT gateway, this parameter specifies the NAT IP address that is accessed by external networks.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +26,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>The external port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.</para>
+        /// <item><description><para>If you query DNAT entries of an Internet NAT gateway, this parameter specifies the external port or port range used for port forwarding.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: <b>1</b> to <b>65535</b>.</description></item>
-        /// <item><description>If you want to query a port range, separate the first port and last port with a forward slash (/), such as <c>10/20</c>.</description></item>
-        /// <item><description>If you set <b>ExternalPort</b> to a port range, you must also set <b>InternalPort</b> to a port range, and the number of ports specified by these parameters must be the same. For example, if you set <b>ExternalPort</b> to <c>10/20</c>, you can set <b>InternalPort</b> to <c>80/90</c>.</description></item>
+        /// <item><description>The port range must be within <b>1</b> to <b>65535</b>.</description></item>
+        /// <item><description>To query a port range, separate the start and end ports with a forward slash (/), such as <c>10/20</c>.</description></item>
+        /// <item><description>If <b>ExternalPort</b> is set to a port range, <b>InternalPort</b> must also be set to a port range with the same number of ports. For example, if <b>ExternalPort</b> is set to <c>10/20</c>, <b>InternalPort</b> must be set to <c>80/90</c>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>The port that is used when the NAT IP address can be accessed by external networks when you query DNAT entries of VPC NAT gateways. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// <item><description><para>If you query DNAT entries of a VPC NAT gateway, this parameter specifies the port on the NAT IP address that is accessed by external networks. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the DNAT entry.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ForwardEntry-1</para>
@@ -64,9 +66,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ForwardEntryName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DNAT table.</para>
-        /// <para>**</para>
-        /// <para><b>Description</b> You must specify at least one of <b>ForwardTableId</b> and <b>NatGatewayId</b>.</para>
+        /// <para>The ID of the DNAT table. </para>
+        /// <remarks>
+        /// <para>You must specify at least one of <b>ForwardTableId</b> and <b>NatGatewayId</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ftb-bp1mbjubq34hlcqpa****</para>
@@ -78,8 +81,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The private IP address.</para>
         /// <list type="bullet">
-        /// <item><description>The private IP address of the ECS instance that uses DNAT entries to communicate with the Internet when you query DNAT entries of Internet NAT gateways.</description></item>
-        /// <item><description>The private IP address that uses DNAT entries for communication when you query DNAT entries of VPC NAT gateways.</description></item>
+        /// <item><description><para>If you query DNAT entries of an Internet NAT gateway, this parameter specifies the private IP address of the ECS instance that communicates with the Internet through the DNAT entry.</para>
+        /// </description></item>
+        /// <item><description><para>If you query DNAT entries of a VPC NAT gateway, this parameter specifies the private IP address that needs to communicate through the DNAT rule.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,8 +96,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The internal port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways. Valid values: <b>1</b> to <b>65535</b>.</description></item>
-        /// <item><description>The port of the destination ECS instance to be mapped when you query DNAT entries of VPC NAT gateways. Valid values: <b>1</b> to <b>65535</b>.</description></item>
+        /// <item><description><para>If you query DNAT entries of an Internet NAT gateway, this parameter specifies the internal port or port range used for port forwarding. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If you query DNAT entries of a VPC NAT gateway, this parameter specifies the port of the destination ECS instance to be mapped. Valid values: <b>1</b> to <b>65535</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,11 +110,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternalPort { get; set; }
 
         /// <summary>
-        /// <para>The protocol. Valid values:</para>
+        /// <para>The protocol type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TCP</b></description></item>
-        /// <item><description><b>UDP</b></description></item>
-        /// <item><description><b>Any</b></description></item>
+        /// <item><description><para><b>tcp</b>: forwards TCP packets.</para>
+        /// </description></item>
+        /// <item><description><para><b>udp</b>: forwards UDP packets.</para>
+        /// </description></item>
+        /// <item><description><para><b>any</b>: forwards packets of all protocols.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,9 +128,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT gateway.</para>
-        /// <para>**</para>
-        /// <para><b>Description</b> You must specify at least one of <b>ForwardTableId</b> and <b>NatGatewayId</b>.</para>
+        /// <para>The ID of the NAT gateway to query.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of <b>ForwardTableId</b> and <b>NatGatewayId</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-bp1uewa15k4iy5770****</para>
@@ -138,7 +149,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -148,7 +159,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -158,8 +169,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where you want to create the NAT gateway.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the NAT gateway.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

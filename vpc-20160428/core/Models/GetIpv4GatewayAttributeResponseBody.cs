@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Indicates whether the IPv4 gateway is activated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The IPv4 gateway is activated.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The IPv4 gateway is not activated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The description of the IPv4 gateway.</para>
+        /// <para>The description of the IPv4 gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>new</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv4GatewayDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IPv4 gateway.</para>
+        /// <para>The instance ID of the IPv4 gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv4gw-5tsnc6s4ogsedtp3k****</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv4GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The name of the IPv4 gateway.</para>
+        /// <para>The name of the IPv4 gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv4GatewayName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table associated with the IPv4 gateway.</para>
+        /// <para>The ID of the route table associated with the IPv4 gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-5ts0ohchwkp3dydt2****</para>
@@ -94,14 +96,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the IPv4 gateway. Valid values:</para>
+        /// <para>The status of the IPv4 gateway instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Creating</b></description></item>
-        /// <item><description><b>Created</b></description></item>
-        /// <item><description><b>Modifying</b></description></item>
-        /// <item><description><b>Deleting</b></description></item>
-        /// <item><description><b>Deleted</b></description></item>
-        /// <item><description><b>Activating</b></description></item>
+        /// <item><description><para><b>Creating</b>: The IPv4 gateway is being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>Created</b>: The IPv4 gateway is created and available.</para>
+        /// </description></item>
+        /// <item><description><para><b>Modifying</b>: The IPv4 gateway is being modified.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleting</b>: The IPv4 gateway is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleted</b>: The IPv4 gateway is deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>Activating</b>: The IPv4 gateway is being activated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +127,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<GetIpv4GatewayAttributeResponseBodyTags> Tags { get; set; }
         public class GetIpv4GatewayAttributeResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The key of tag N added to the resource.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -129,7 +137,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N added to the resource.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -141,7 +149,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the VPC with which the IPv4 gateway is associated.</para>
+        /// <para>The ID of the VPC associated with the IPv4 gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-5tsrxlw7dv074gci4****</para>

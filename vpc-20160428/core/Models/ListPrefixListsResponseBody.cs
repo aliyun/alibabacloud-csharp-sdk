@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListPrefixListsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page for a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value indicates the token that is used for the next request to retrieve a new page of results.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<ListPrefixListsResponseBodyPrefixLists> PrefixLists { get; set; }
         public class ListPrefixListsResponseBodyPrefixLists : TeaModel {
             /// <summary>
-            /// <para>The CIDR block specified in the prefix list.</para>
+            /// <para>The Classless Inter-Domain Routing (CIDR) block information of the prefix list.</para>
             /// </summary>
             [NameInMap("CidrBlocks")]
             [Validation(Required=false)]
@@ -60,8 +60,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The IP version of the prefix list. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>IPV4</b></description></item>
-            /// <item><description><b>IPV6</b></description></item>
+            /// <item><description><b>IPV4</b>: IPv4.</description></item>
+            /// <item><description><b>IPV6</b>: IPv6.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of CIDR blocks that you can specify in the prefix list.</para>
+            /// <para>The maximum number of entries for Classless Inter-Domain Routing (CIDR) blocks in the prefix list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -124,12 +124,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the prefix list. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Created</b></description></item>
-            /// <item><description><b>Deleted</b></description></item>
-            /// <item><description><b>Modifying</b></description></item>
+            /// <item><description><b>Created</b>: Created.</description></item>
+            /// <item><description><b>Deleted</b>: Deleted.</description></item>
+            /// <item><description><b>Modifying</b>: Being modified.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is the same as the <b>Status</b> parameter.</para>
+            /// <para>This parameter has the same meaning and valid values as <b>Status</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -170,10 +170,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the prefix list is shared. Valid values:</para>
+            /// <para>The sharing type of the prefix list. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Shared</b>: The prefix list is shared.</description></item>
-            /// <item><description>If an empty value is returned, the prefix list is not shared.</description></item>
+            /// <item><description><b>Shared</b>: The prefix list is a shared prefix list.</description></item>
+            /// <item><description>Empty: The prefix list is not a shared prefix list.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,9 +186,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the prefix list. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Created</b></description></item>
-            /// <item><description><b>Deleted</b></description></item>
-            /// <item><description><b>Modifying</b></description></item>
+            /// <item><description><b>Created</b>: Created.</description></item>
+            /// <item><description><b>Deleted</b>: Deleted.</description></item>
+            /// <item><description><b>Modifying</b>: Being modified.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

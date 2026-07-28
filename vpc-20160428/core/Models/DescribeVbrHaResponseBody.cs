@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the VBR failover group.</para>
-        /// <para>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the other VBR in the VBR failover group.</para>
+        /// <para>The instance ID of the other VBR in the VBR failover group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vbr-bp12mw1f8k3jgygk9****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PeerVbrId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the VBR is deployed.</para>
+        /// <para>The region ID of the VBR.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -71,10 +71,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the VBR failover group.</para>
+        /// <para>The status of the VBR failover group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Creating</b></description></item>
-        /// <item><description><b>Active</b></description></item>
+        /// <item><description><para><b>Creating</b>: being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>Active</b>: Normal.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VBR failover group.</para>
+        /// <para>The VBR failover group instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vbrha-sa1sxheuxtd98****</para>
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VbrHaId { get; set; }
 
         /// <summary>
-        /// <para>The VBR ID.</para>
+        /// <para>The VBR instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vbr-bp1jcg5cmxjbl9xgc****</para>

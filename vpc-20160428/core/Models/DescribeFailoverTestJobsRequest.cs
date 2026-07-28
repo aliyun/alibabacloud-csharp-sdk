@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DescribeFailoverTestJobsRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,17 +31,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeFailoverTestJobsRequestFilter> Filter { get; set; }
         public class DescribeFailoverTestJobsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter key. Valid values:</para>
+            /// <para>The filter condition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>JobId</b></description></item>
-            /// <item><description><b>JobName</b></description></item>
-            /// <item><description><b>JobStatus</b></description></item>
-            /// <item><description><b>ResourceId</b></description></item>
-            /// <item><description><b>ResourceName</b></description></item>
-            /// <item><description><b>ResourceType</b></description></item>
+            /// <item><description><para><b>JobId</b>: the failover test job ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>JobName</b>: the failover test job name.</para>
+            /// </description></item>
+            /// <item><description><para><b>JobStatus</b>: the failover test job status.</para>
+            /// </description></item>
+            /// <item><description><para><b>ResourceId</b>: the failover test resource ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>ResourceName</b>: the failover test resource name.</para>
+            /// </description></item>
+            /// <item><description><para><b>ResourceType</b>: the failover test resource type.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>You can specify at most five different filter keys. If you specify ResourceId or ResourceName, you must also specify ResourceType. The logical operator among the filter keys is AND. Results that meet all specified filter keys are returned.</para>
+            /// <para>Specify up to 5 unique filter conditions. If you specify a resource ID or resource name, you must also specify the resource type. All filter conditions must be met to return accurate query results.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -52,9 +58,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the filter key.</para>
+            /// <para>The filter values that correspond to the filter condition.</para>
             /// <remarks>
-            /// <para>You can specify at most five filter values for each filter key. The logical operator among filter values is OR. If a filter value is matched, the filter key is considered matched.</para>
+            /// <para>Each filter condition can contain up to 5 filter values. These filter values have an OR relationship. A record is considered a match if it matches any one of the filter values.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Value")]
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: 20.</para>
+        /// <para>The number of entries per page for paginated queries. Valid values: <b>1 to 100</b>. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -74,10 +80,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the value of <b>NextToken</b> is not returned, it indicates that no next query is to be sent.</description></item>
-        /// <item><description>If a value of <b>NextToken</b> is returned, the value is the token that is used for the subsequent query.</description></item>
+        /// <item><description><para>Leave this parameter empty for the first query or if no next query exists.</para>
+        /// </description></item>
+        /// <item><description><para>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,8 +104,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where you want to perform the failover test.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region where the failover test jobs reside.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

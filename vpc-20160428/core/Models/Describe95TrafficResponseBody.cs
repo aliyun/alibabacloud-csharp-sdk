@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth statistics for Internet Shared Bandwidth billed by enhanced 95th percentile.</para>
+        /// <para>The bandwidth statistics information of the Internet Shared Bandwidth instance that uses the enhanced 95th percentile billing method.</para>
         /// </summary>
         [NameInMap("Traffic95Summary")]
         [Validation(Required=false)]
         public Describe95TrafficResponseBodyTraffic95Summary Traffic95Summary { get; set; }
         public class Describe95TrafficResponseBodyTraffic95Summary : TeaModel {
             /// <summary>
-            /// <para>The peak bandwidth of the Internet Shared Bandwidth instance on the queried date. Unit: Mbps.</para>
+            /// <para>The peak bandwidth of the Internet Shared Bandwidth instance on the queried date. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20000.0</para>
@@ -37,9 +37,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The daily peak bandwidth. Unit: Mbps.</para>
-            /// <para>&lt;props=&quot;china&quot;&gt;</para>
-            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/89729.html">Daily peak bandwidth</a>.</para>
+            /// <para>The daily peak bandwidth. Unit: Mbit/s.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/document_detail/89729.html">Daily peak bandwidth</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1064.244837773641</para>
@@ -59,14 +58,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the Internet Shared Bandwidth instance on the queried date. Valid values:</para>
+            /// <para>The billable methods of the Internet Shared Bandwidth instance on the queried date. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PayBy95</b>: pay-by-enhanced-95th-percentile</para>
-            /// </description></item>
-            /// <item><description><para><b>PayByBandwidth</b>: pay-by-bandwidth</para>
-            /// </description></item>
-            /// <item><description><para><b>PayByDominantTraffic</b>: pay-by-dominant-traffic</para>
-            /// </description></item>
+            /// <item><description><b>PayBy95</b>: enhanced 95th percentile billing.</description></item>
+            /// <item><description><b>PayByBandwidth</b>: pay-by-bandwidth.</description></item>
+            /// <item><description><b>PayByDominantTraffic</b>: pay-by-dominant-traffic.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,7 +73,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>The minimum bandwidth commitment of the Internet Shared Bandwidth instance on the queried date. Unit: Mbps.</para>
+            /// <para>The minimum guaranteed bandwidth of the Internet Shared Bandwidth instance on the queried date. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0</para>

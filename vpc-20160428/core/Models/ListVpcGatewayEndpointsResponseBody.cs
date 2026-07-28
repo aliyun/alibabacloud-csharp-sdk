@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<ListVpcGatewayEndpointsResponseBodyEndpoints> Endpoints { get; set; }
         public class ListVpcGatewayEndpointsResponseBodyEndpoints : TeaModel {
             /// <summary>
-            /// <para>The ID of the route table associated with the gateway endpoint.</para>
+            /// <para>The IDs of the route tables associated with the gateway endpoint.</para>
             /// </summary>
             [NameInMap("AssociatedRouteTables")]
             [Validation(Required=false)]
             public List<string> AssociatedRouteTables { get; set; }
 
             /// <summary>
-            /// <para>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the gateway endpoint was created. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-09-08T08:43:04Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string EndpointDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the gateway endpoint.</para>
+            /// <para>The endpoint instance ID of the gateway endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpce-bp1i1212ss2whuwyw****</para>
@@ -66,12 +66,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the gateway endpoint. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b></description></item>
-            /// <item><description><b>Created</b></description></item>
-            /// <item><description><b>Modifying</b></description></item>
-            /// <item><description><b>Associating</b></description></item>
-            /// <item><description><b>Dissociating</b></description></item>
-            /// <item><description><b>Deleting</b></description></item>
+            /// <item><description><b>Creating</b>: being created.</description></item>
+            /// <item><description><b>Created</b>: created and in a normal state.</description></item>
+            /// <item><description><b>Modifying</b>: being modified.</description></item>
+            /// <item><description><b>Associating</b>: being associated.</description></item>
+            /// <item><description><b>Dissociating</b>: being disassociated.</description></item>
+            /// <item><description><b>Deleting</b>: being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The access policy for the cloud service.</para>
-            /// <para>For more information about the syntax and structure of the access policy, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy syntax and structure</a>.</para>
+            /// <para>For more information about the syntax and structure of access policies, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy structure and syntax</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\n  \&quot;Version\&quot;: \&quot;1\&quot;,\n  \&quot;Statement\&quot;: [\n    {\n      \&quot;Effect\&quot;: \&quot;Allow\&quot;,\n      \&quot;Action\&quot;: \&quot;<em>\&quot;,\n      \&quot;Principal\&quot;: \&quot;</em>\&quot;,\n      \&quot;Resource\&quot;: \&quot;*\&quot;\n    }\n  ]\n}</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the endpoint service.</para>
+            /// <para>The service name of the endpoint service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.aliyun.cn-hangzhou.oss</para>
@@ -113,14 +113,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The tag list.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListVpcGatewayEndpointsResponseBodyEndpointsTags> Tags { get; set; }
             public class ListVpcGatewayEndpointsResponseBodyEndpointsTags : TeaModel {
                 /// <summary>
-                /// <para>The key of tag N added to the resource.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinanceDept</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag N added to the resource.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinanceJoshua</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.</para>
+            /// <para>The ID of the VPC to which the gateway endpoint belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1gsk7h12ew7oegk****</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -164,10 +164,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>Indicates whether a next query token is available. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for <b>NextToken</b>, no next queries are sent.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no more results are available.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

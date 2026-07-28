@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateEnhancedVpnGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>A client token used to ensure request idempotence.</para>
-        /// <para>You can generate this token from your client. Make sure that the token is unique for each request. The client token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. Each request may have a different <b>RequestId</b>.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,13 +24,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the second vSwitch to associate with the enhanced VPN gateway for high availability.</para>
+        /// <para>The second vSwitch associated with the enhanced VPN VPC-connected instance.</para>
         /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description><para>For zone-level disaster recovery, the two vSwitches must be in different availability zones within the same VPC.</para>
-        /// </description></item>
-        /// <item><description><para>In regions with only one availability zone, zone-level disaster recovery is not supported. To ensure high availability, specify two different vSwitches from that zone. You can also specify the same vSwitch for both the <b>VSwitchId</b> and <b>DisasterRecoveryVSwitchId</b> parameters.</para>
-        /// </description></item>
+        /// <item><description>This parameter is required.</description></item>
+        /// <item><description>You must specify two vSwitches in different zones within the VPC associated with the enhanced VPN VPC-connected instance to implement zone-level disaster recovery for IPsec-VPN connections.</description></item>
+        /// <item><description>For regions that support only one zone, zone-level disaster recovery is not supported. Specify two different vSwitches in the same zone to achieve high availability for IPsec-VPN connections. You can also specify the same vSwitch.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,9 +39,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DisasterRecoveryVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The type of the enhanced VPN gateway. Valid value:</para>
+        /// <para>The type of the enhanced VPN gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enhanced.SiteToSite</b>: an enhanced site-to-site VPN gateway that supports only the IPsec feature.</description></item>
+        /// <item><description><b>Enhanced.SiteToSite</b>: enhanced site-to-cloud VPN that covers only IPsec functionality.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,8 +53,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The name of the enhanced VPN gateway. If you do not specify this parameter, the gateway ID is used as the name.</para>
-        /// <para>The name must be 2 to 100 characters long, start with a letter, and not start with http\:// or https\://. It can contain only letters, digits, underscores (_), hyphens (-), and periods (.).</para>
+        /// <para>The name of the enhanced VPN gateway. The default value is the ID of the enhanced VPN gateway.</para>
+        /// <para>The name must be 2 to 100 characters in length. It cannot start with http:// or https://. It must start with an uppercase or lowercase letter and can contain uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). Other special characters are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MYVPN</para>
@@ -66,9 +64,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The network type of the VPN gateway. Valid value:</para>
+        /// <para>The network type of the VPN gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>public</b> (default): a public VPN gateway.</description></item>
+        /// <item><description><b>public</b> (default): public VPN gateway.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,8 +85,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where you want to create the enhanced VPN gateway.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to get the region ID.</para>
+        /// <para>The region ID of the enhanced VPN gateway.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,14 +97,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which you want to assign the enhanced VPN gateway.</para>
+        /// <para>The ID of the resource group to which the enhanced VPN gateway belongs.</para>
         /// <list type="bullet">
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group IDs.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, the enhanced VPN gateway is added to the Default Resource Group.</para>
-        /// </description></item>
-        /// <item><description><para>Associated IPsec connections are automatically added to the same resource group as the enhanced VPN gateway. You cannot directly change the resource group of an IPsec connection. If you change the resource group of the gateway, the resource group of its associated IPsec connections is also updated.</para>
-        /// </description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group IDs.</description></item>
+        /// <item><description>If you do not specify a resource group ID, the enhanced VPN gateway belongs to the default resource group after it is created.</description></item>
+        /// <item><description>After the enhanced VPN gateway is created, if you create IPsec-VPN connections under the enhanced VPN gateway (IPsec-VPN connections that are associated with the enhanced VPN gateway), these resources belong to the same resource group as the enhanced VPN gateway and cannot be modified independently. If you change the resource group of the enhanced VPN gateway, the resource group of the preceding resources is also changed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,9 +120,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch to associate with the enhanced VPN gateway.</para>
+        /// <para>The vSwitch associated with the enhanced VPN gateway instance.</para>
         /// <list type="bullet">
-        /// <item><description></description></item>
+        /// <item><description>You must specify a vSwitch and also specify the <b>DisasterRecoveryVSwitchId</b> parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,7 +133,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC where you want to create the enhanced VPN gateway.</para>
+        /// <para>The ID of the VPC to which the enhanced VPN gateway belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -149,9 +144,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The type of the enhanced VPN gateway. Valid value:</para>
+        /// <para>The type of the enhanced VPN gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b> (default): standard type.</description></item>
+        /// <item><description><b>Normal</b> (default): standard.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

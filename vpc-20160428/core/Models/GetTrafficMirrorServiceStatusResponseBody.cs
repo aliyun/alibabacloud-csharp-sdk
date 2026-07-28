@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetTrafficMirrorServiceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the traffic mirror feature is enabled. Valid values:</para>
+        /// <para>Indicates whether the traffic mirroring feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Not enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

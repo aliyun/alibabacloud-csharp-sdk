@@ -10,16 +10,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateCommonBandwidthPackageRequest : TeaModel {
         /// <summary>
-        /// <para>The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </para>
+        /// <para>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </para>
         /// <para>&lt;props=&quot;intl&quot;&gt;<ph>Default value range: <b>1</b> to <b>1000</b>. Default value: <b>1</b>.</ph></para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByBandwidth</b>, which indicates that the billable method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the default value range of <b>Bandwidth</b> is <b>2</b> to <b>20000</b>.</description></item>
-        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayBy95</b>, which indicates that the billable method of the Internet Shared Bandwidth instance is pay-by-enhanced-95th-percentile, the default value range of <b>Bandwidth</b> is <b>200</b> to <b>20000</b>.</description></item>
-        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByDominantTraffic</b>, which indicates that the billable method of the Internet Shared Bandwidth instance is pay-by-dominant-traffic, the default value range of <b>Bandwidth</b> is <b>1</b> to <b>2000</b>.</description></item>
+        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByBandwidth</b>, which indicates that the billing method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the default value range of <b>Bandwidth</b> is <b>2</b> to <b>20000</b>.</description></item>
+        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayBy95</b>, which indicates that the billing method of the Internet Shared Bandwidth instance is enhanced 95th percentile billing, the default value range of <b>Bandwidth</b> is <b>200</b> to <b>20000</b>.</description></item>
+        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByDominantTraffic</b>, which indicates that the billing method of the Internet Shared Bandwidth instance is pay-by-dominant-traffic, the default value range of <b>Bandwidth</b> is <b>1</b> to <b>2000</b>.</description></item>
         /// </list>
-        /// <para> Default value: <b>1000</b>.
-        /// .</para>
+        /// <para> Default value: <b>1000</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
@@ -57,8 +56,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The line type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BGP</b> (default): BGP (multi-ISP) lines. All regions support BGP (multi-ISP) lines.</description></item>
-        /// <item><description><b>BGP_PRO</b>: BGP (multi-ISP) premium lines. Currently, only the Hong Kong (China), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions support BGP (multi-ISP) premium Internet Shared Bandwidth instances.</description></item>
+        /// <item><description><b>BGP</b> (default): BGP (multi-ISP) lines. BGP (multi-ISP) lines are supported in all regions.</description></item>
+        /// <item><description><b>BGP_PRO</b>: BGP (multi-ISP) premium lines. Currently, BGP (multi-ISP) premium Internet Shared Bandwidth instances are supported only in the Hong Kong (China), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</description></item>
         /// </list>
         /// <para>If you are a single-ISP bandwidth whitelist user, you can also select the following types:</para>
         /// <list type="bullet">
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>ChinaUnicom_L2</b>: China Unicom L2</description></item>
         /// <item><description><b>ChinaMobile_L2</b>: China Mobile L2</description></item>
         /// </list>
-        /// <para>If you are a Finance Cloud user in the China (Hangzhou) region, this parameter is required. Set the value to <b>BGP_FinanceCloud</b>.</para>
+        /// <para>If you are an Alibaba Finance Cloud user in Hangzhou, this parameter is required. Set the value to <b>BGP_FinanceCloud</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BGP</para>
@@ -79,14 +78,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ISP { get; set; }
 
         /// <summary>
-        /// <para>The billable method of the Internet Shared Bandwidth instance. Valid values:
+        /// <para>The billing method of the Internet Shared Bandwidth instance. Valid values:
         /// &lt;props=&quot;intl&quot;&gt;<b>PayByTraffic</b> (pay-by-data-transfer).</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description><b>PayByBandwidth</b> (default): pay-by-bandwidth.</description></item>
         /// <item><description><b>PayBy95</b>: pay-by-enhanced-95th-percentile.</description></item>
-        /// <item><description><b>PayByDominantTraffic</b>: pay-by-dominant-traffic.
-        /// .</description></item>
+        /// <item><description><b>PayByDominantTraffic</b>: pay-by-dominant-traffic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -160,15 +158,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The security protection level.</para>
+        /// <para>The edition of Anti-DDoS.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not set this parameter, Anti-DDoS Origin Basic is used by default.</para>
+        /// <item><description><para>If you leave this parameter empty, Anti-DDoS Origin Basic is used by default.</para>
         /// </description></item>
         /// <item><description><para>If you set this parameter to <b>AntiDDoS_Enhanced</b>, Anti-DDoS Origin Enhanced is used.</para>
         /// </description></item>
         /// </list>
         /// <para>&lt;props=&quot;china&quot;&gt;<ph>You can set this parameter when <b>InternetChargeType</b> is set to <b>PayBy95</b>.</ph></para>
-        /// <para>You can specify up to 10 security protection levels.</para>
+        /// <para>You can add up to 10 security protection levels.</para>
         /// <remarks>
         /// <para>This parameter is deprecated.</para>
         /// </remarks>
@@ -189,7 +187,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class CreateCommonBandwidthPackageRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>A tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -213,7 +211,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The zone of the Internet Shared Bandwidth instance.
-        /// This parameter is required when you create an Internet Shared Bandwidth instance for a CloudBox.</para>
+        /// This parameter is required when you create an Internet Shared Bandwidth instance for a cloud box.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ap-southeast-1-lzdvn-cb</para>

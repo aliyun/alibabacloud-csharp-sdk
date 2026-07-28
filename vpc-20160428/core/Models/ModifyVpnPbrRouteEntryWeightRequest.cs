@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> value as the <b>ClientToken</b> value. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The new weight of the policy-based route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</description></item>
-        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</description></item>
+        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</description></item>
+        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The tunneling protocol. The value is set to <b>Ipsec</b>, which indicates the IPsec tunneling protocol.</para>
+        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b> (IPsec tunneling protocol).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ipsec</para>
@@ -68,13 +68,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The priority of the policy-based route.</para>
+        /// <para>Policy priority of the policy-based route.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the route was not assigned a priority, this parameter is optional.</para>
+        /// <item><description><para>If no priority was previously configured for the policy-based route, you do not need to specify this parameter.</para>
         /// </description></item>
-        /// <item><description><para>If the route was assigned a priority, this parameter is optional.</para>
-        /// <pre><c>If you specify this parameter, set the value to the priority that was assigned to the policy-based route. Otherwise, the operation fails.
-        /// </c></pre>
+        /// <item><description><para>If a priority was previously configured for the policy-based route, this parameter is optional.</para>
+        /// <para> If you specify this parameter, enter policy priority that was previously configured for the policy-based route. If you enter a different value, the operation fails.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -86,7 +85,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VPN gateway is created. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the VPN gateway instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,7 +126,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteSource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -140,8 +139,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The original weight of the policy-based route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</description></item>
-        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</description></item>
+        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</description></item>
+        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

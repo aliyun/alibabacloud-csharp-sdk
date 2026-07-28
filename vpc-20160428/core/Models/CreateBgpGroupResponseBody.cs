@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateBgpGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the BGP group.</para>
+        /// <para>The ID of the created BGP group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bgpg-bp1k25cyp26cllath****</para>

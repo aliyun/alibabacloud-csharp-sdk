@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateEipAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EIP that you want to associate with an instance.</para>
+        /// <para>The ID of the EIP to be associated with the cloud resource instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance with which you want to associate the EIP.</para>
-        /// <para>You can enter the ID of a NAT gateway, CLB instance, ECS instance, secondary ENI, HAVIP, or IP address.</para>
+        /// <para>The instance ID of the instance to be associated with the EIP.</para>
+        /// <para>You can enter the instance ID of a NAT gateway, a Classic Load Balancer (CLB) instance, an Elastic Compute Service (ECS) instance, a secondary elastic network interface controller (NIC) instance, a high-availability virtual IP address instance, or an IP address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance with which you want to associate the EIP resides.</para>
+        /// <para>The region ID of the instance to be associated with the EIP.</para>
         /// <remarks>
-        /// <para> This parameter is required only when the EIP is added to a shared Global Accelerator (GA) instance.</para>
+        /// <para>This parameter is required only after the EIP is added to a shared-bandwidth Global Accelerator (GA) instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,17 +60,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance with which you want to associate the EIP. Valid values:</para>
+        /// <para>The type of the instance to be associated with the EIP. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Nat</b>: NAT gateway</description></item>
-        /// <item><description><b>SlbInstance</b>: CLB instance</description></item>
-        /// <item><description><b>EcsInstance</b> (default): ECS instance</description></item>
-        /// <item><description><b>NetworkInterface</b>: secondary ENI</description></item>
-        /// <item><description><b>HaVip</b>: HAVIP</description></item>
-        /// <item><description><b>IpAddress</b>: IP address</description></item>
+        /// <item><description><para><b>Nat</b>: NAT gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>SlbInstance</b>: Classic Load Balancer (CLB).</para>
+        /// </description></item>
+        /// <item><description><para><b>EcsInstance</b> (default): Elastic Compute Service (ECS).</para>
+        /// </description></item>
+        /// <item><description><para><b>NetworkInterface</b>: secondary elastic network interface controller (NIC).</para>
+        /// </description></item>
+        /// <item><description><para><b>HaVip</b>: high-availability virtual IP address. </para>
+        /// </description></item>
+        /// <item><description><para><b>IpAddress</b>: IP address.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The default value is <b>EcsInstance</b>. If the instance with which you want to associate the EIP is not an ECS instance, this parameter is required.</para>
+        /// <para>The default instance type is <b>EcsInstance</b>. If the instance type is not <b>EcsInstance</b>, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,12 +89,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The association mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NAT</b> (default): NAT mode</description></item>
-        /// <item><description><b>MULTI_BINDED</b>: multi-EIP-to-ENI mode</description></item>
-        /// <item><description><b>BINDED</b>: cut-network interface controller mode</description></item>
+        /// <item><description><para><b>NAT</b> (default): NAT mode (standard mode).</para>
+        /// </description></item>
+        /// <item><description><para><b>MULTI_BINDED</b>: multi-EIP-to-ENI mode.</para>
+        /// </description></item>
+        /// <item><description><para><b>BINDED</b>: EIP-to-ENI mode.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required only when <b>InstanceType</b> is set to <b>NetworkInterface</b>.</para>
+        /// <para>This parameter is required only when <b>InstanceType</b> is set to <b>NetworkInterface</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,8 +116,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IP address in the CIDR block of the vSwitch.</para>
-        /// <para>If you leave this parameter empty, the system allocates a private IP address based on the VPC ID and vSwitch ID.</para>
+        /// <para>An IP address in the vSwitch CIDR block.</para>
+        /// <para>If you do not specify this parameter, the system automatically assigns a private IP address based on the VPC ID and vSwitch ID.</para>
+        /// <remarks>
+        /// <para>If <b>InstanceType</b> is set to <b>NetworkInterface</b>, this parameter is required. Enter the private IP address to be associated.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -118,7 +130,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the EIP belongs.</para>
+        /// <para>The region ID of the EIP to be associated with the cloud resource instance.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
@@ -137,10 +149,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC in which an IPv4 gateway is created. The VPC and the EIP must be in the same region.</para>
-        /// <para>When you associate an EIP with an IP address, the system can enable the IP address to access the Internet based on VPC route configurations.</para>
+        /// <para>The ID of the VPC that has the IPv4 gateway feature enabled and is in the same region as the EIP.</para>
+        /// <para>When the EIP is associated with an IP address, the system can use the route configuration of the VPC to enable public network access for the associated IP address.</para>
         /// <remarks>
-        /// <para> This parameter is required if <b>InstanceType</b> is set to <b>IpAddress</b>, which indicates that the EIP is to be associated with an IP address.</para>
+        /// <para>This parameter is required when <b>InstanceType</b> is set to <b>IpAddress</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

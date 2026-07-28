@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AllocateIpv6InternetBandwidthResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the Internet bandwidth associated with the IPv6 gateway after Internet bandwidth is allocated.</para>
+        /// <para>The instance ID of the Internet bandwidth associated with the IPv6 gateway after Internet bandwidth is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6bw-uf6hcyzu65v98v3du****</para>

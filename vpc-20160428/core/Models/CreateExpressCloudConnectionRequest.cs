@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateExpressCloudConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The bandwidth for ECC, which corresponds to the bandwidth for the underlying circuit.</para>
+        /// <para>The bandwidth of the Express Cloud Connection instance, which corresponds to the bandwidth of the underlying physical connection.</para>
         /// <para>Unit: Mbit/s.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The email address of the contact who applies for ECC.</para>
+        /// <para>The email address of the contact person for the Express Cloud Connection application.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:XX@example.com">XX@example.com</a></para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ContactMail { get; set; }
 
         /// <summary>
-        /// <para>The phone number of the contact who applies for ECC.</para>
+        /// <para>The phone number of the contact person for the Express Cloud Connection application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>132*********</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ContactTel { get; set; }
 
         /// <summary>
-        /// <para>The description of ECC.</para>
-        /// <para>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the Express Cloud Connection instance.</para>
+        /// <para>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character, but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>高速上云服务</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID card number of the contact who applies for ECC.</para>
+        /// <para>The ID card number of the contact person for the Express Cloud Connection application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32*****************</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IDCardNo { get; set; }
 
         /// <summary>
-        /// <para>The Internet service provider (ISP) for the data center.</para>
+        /// <para>The network service provider of the IDC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IdcSP { get; set; }
 
         /// <summary>
-        /// <para>The name of the ECC instance.</para>
-        /// <para>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the Express Cloud Connection instance.</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-), but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>doctest</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The city where the data center is located.</para>
+        /// <para>The city where the on-premises IDC is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>杭州</para>
@@ -103,9 +103,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PeerCity { get; set; }
 
         /// <summary>
-        /// <para>The geographical location of the data center.</para>
+        /// <para>The geographic location of the on-premises data center.</para>
         /// <remarks>
-        /// <para>It must be accurate to house number-floor-room number-server rack number.</para>
+        /// <para>The location must be accurate to the street number, floor, room number, and rack number.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -117,13 +117,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PeerLocation { get; set; }
 
         /// <summary>
-        /// <para>The port of the Express Connect circuit. Valid values:</para>
+        /// <para>The port type of the Express Connect circuit. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>100Base-T</description></item>
-        /// <item><description>1000Base-T</description></item>
-        /// <item><description>1000Base-LX</description></item>
-        /// <item><description>10GBase-T</description></item>
-        /// <item><description>10GBase-LR</description></item>
+        /// <item><description><para>100Base-T: 100M Ethernet port</para>
+        /// </description></item>
+        /// <item><description><para>1000Base-T (default): GE electrical port</para>
+        /// </description></item>
+        /// <item><description><para>1000Base-LX: GE single-mode optical port (10 km)</para>
+        /// </description></item>
+        /// <item><description><para>10GBase-T: 10 GE electrical port</para>
+        /// </description></item>
+        /// <item><description><para>10GBase-LR: 10 GE single-mode optical port (10 km)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,7 +139,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PortType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the standby Express Connect circuit.</para>
+        /// <para>The instance ID of the redundant Express Cloud Connection circuit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecc-d****</para>
@@ -144,7 +149,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RedundantEccId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ECC instance.</para>
+        /// <para>The region ID of the Express Cloud Connection instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

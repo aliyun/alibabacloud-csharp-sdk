@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreatePhysicalConnectionSetupOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the access point.</para>
+        /// <para>The access point ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AccessPointId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic payments. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>false</b> (default): disables automatic payment.</description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>true</b>: enables automatic payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may vary for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,14 +49,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The connectivity provider of the Express Connect circuit. Valid values:</para>
+        /// <para>The carrier that provides the physical connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CT</b>: China Telecom</description></item>
-        /// <item><description><b>CU</b>: China Unicom</description></item>
-        /// <item><description><b>CM</b>: China Mobile</description></item>
-        /// <item><description><b>CO</b>: other connectivity providers in the Chinese mainland</description></item>
-        /// <item><description><b>Equinix</b>: Equinix</description></item>
-        /// <item><description><b>Other</b>: other connectivity providers outside the Chinese mainland</description></item>
+        /// <item><description><para><b>CT</b>: China Telecom</para>
+        /// </description></item>
+        /// <item><description><para><b>CU</b>: China Unicom</para>
+        /// </description></item>
+        /// <item><description><para><b>CM</b>: China Mobile</para>
+        /// </description></item>
+        /// <item><description><para><b>CO</b>: other carriers in the Chinese mainland</para>
+        /// </description></item>
+        /// <item><description><para><b>Equinix</b>: Equinix</para>
+        /// </description></item>
+        /// <item><description><para><b>Other</b>: other carriers outside the Chinese mainland</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,16 +84,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The port type of the Express Connect circuit. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>100Base-T</b>: 100 Mbit/s copper Ethernet port</description></item>
-        /// <item><description><b>1000Base-T</b> (default): 1,000 Mbit/s copper Ethernet port</description></item>
-        /// <item><description><b>1000Base-LX</b>: 1,000 Mbit/s single-mode optical port (10 km)</description></item>
-        /// <item><description><b>10GBase-T</b>: 10,000 Mbit/s copper Ethernet port</description></item>
-        /// <item><description><b>10GBase-LR</b>: 10,000 Mbit/s single-mode optical port (10 km)</description></item>
-        /// <item><description><b>40GBase-LR</b>: 40,000 Mbit/s single-mode optical port</description></item>
-        /// <item><description><b>100GBase-LR</b>: 100,000 Mbit/s single-mode optical port</description></item>
+        /// <item><description><para><b>100Base-T</b>: 100M Ethernet port.</para>
+        /// </description></item>
+        /// <item><description><para><b>1000Base-T</b> (default): 1 GE port.</para>
+        /// </description></item>
+        /// <item><description><para><b>1000Base-LX</b>: GE single-mode optical port (10 km).</para>
+        /// </description></item>
+        /// <item><description><para><b>10GBase-T</b>: 10 GE port.</para>
+        /// </description></item>
+        /// <item><description><para><b>10GBase-LR</b>: 10 GE single-mode optical port (10 km).</para>
+        /// </description></item>
+        /// <item><description><para><b>40GBase-LR</b>: 40 GE single-mode optical port.</para>
+        /// </description></item>
+        /// <item><description><para><b>100GBase-LR</b>: 100 GE single-mode optical port.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Whether 40GBase-LR and 100GBase-LR ports can be created depends on resource supplies. For more information, contact your account manager.</para>
+        /// <para>40GBase-LR and 100GBase-LR ports are created based on the actual port availability. Contact your account manager for details.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,7 +111,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PortType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the redundant physical connection. The redundant physical connection must be in the <b>Allocated</b>, <b>Confirmed</b>, or <b>Enabled</b> state.</para>
+        /// <para>The ID of the redundant Express Connect circuit. The circuit must be in the <b>Allocated</b>, <b>Confirmed</b>, or <b>Enabled</b> state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-bp10zsv5ntp****</para>
@@ -108,8 +121,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RedundantPhysicalConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Express Connect circuit.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Express Connect circuit. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

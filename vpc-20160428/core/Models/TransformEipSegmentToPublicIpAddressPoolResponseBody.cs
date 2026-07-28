@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID of the IP address pool.</para>
+        /// <para>The ID of the resource group to which the IP address pool belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4pcdvf****</para>

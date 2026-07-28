@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeTagKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The tag keys.</para>
+        /// <para>The tag key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>keyword</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResult { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first query or no next query is to be sent, ignore this parameter.</description></item>
-        /// <item><description>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</description></item>
+        /// <item><description>If this is the first query or no subsequent query exists, leave this parameter empty.</description></item>
+        /// <item><description>If a subsequent query exists, set the value to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the resource.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. You can specify up to 20 resource IDs.</para>
+        /// <para>The resource ID. You can specify up to 50 resource IDs.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -81,13 +81,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-        /// <item><description><b>VSWITCH</b>: vSwitch</description></item>
-        /// <item><description><b>ROUTETABLE</b>: route table</description></item>
-        /// <item><description><b>EIP</b>: elastic IP address (EIP)</description></item>
-        /// <item><description><b>VpnGateway</b>: VPN gateway</description></item>
-        /// <item><description><b>NATGATEWAY</b>: NAT gateway</description></item>
-        /// <item><description><b>COMMONBANDWIDTHPACKAGE</b>: EIP bandwidth plan</description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC) instance.</description></item>
+        /// <item><description><b>VSWITCH</b>: vSwitch instance.</description></item>
+        /// <item><description><b>ROUTETABLE</b>: route table instance.</description></item>
+        /// <item><description><b>EIP</b>: Elastic IP Address (EIP) instance.</description></item>
+        /// <item><description><b>VpnGateWay</b>: VPN gateway instance.</description></item>
+        /// <item><description><b>NATGATEWAY</b>: NAT gateway instance.</description></item>
+        /// <item><description><b>COMMONBANDWIDTHPACKAGE</b>: Internet Shared Bandwidth instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

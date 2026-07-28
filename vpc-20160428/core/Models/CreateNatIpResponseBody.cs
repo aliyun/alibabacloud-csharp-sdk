@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv4Prefix { get; set; }
 
         /// <summary>
-        /// <para>The created NAT IP address.</para>
+        /// <para>The NAT IP address that is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.34</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIp { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the created NAT IP address.</para>
+        /// <para>The instance ID of the NAT IP address that is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpcnatip-gw8y7q3cpk3fggs8****</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatIpId { get; set; }
 
         /// <summary>
-        /// <para>The NAT IP address information returned after the NAT IP address is created. When you create a NAT IP address by using an IPv4 prefix, all NAT IP address information is returned. When you create a single NAT IP address, we recommend that you use this parameter to obtain the NAT IP address information.</para>
+        /// <para>The NAT IP address information returned after creation. When you create NAT IP addresses by using an IPv4 prefix, all NAT IP address information is returned. When you create a single NAT IP address, we recommend that you use this parameter to obtain the NAT IP address information.</para>
         /// </summary>
         [NameInMap("NatIps")]
         [Validation(Required=false)]
         public List<CreateNatIpResponseBodyNatIps> NatIps { get; set; }
         public class CreateNatIpResponseBodyNatIps : TeaModel {
             /// <summary>
-            /// <para>The IPv4 prefix in the list of NAT IP addresses created by using an IPv4 prefix.</para>
+            /// <para>The IPv4 prefix in the NAT IP address list returned when an IPv4 prefix is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.128/28</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Ipv4Prefix { get; set; }
 
             /// <summary>
-            /// <para>The NAT IP address in the list of NAT IP addresses created by using an IPv4 prefix.</para>
+            /// <para>The NAT IP address in the NAT IP address list returned when an IPv4 prefix is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.2.128</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NatIp { get; set; }
 
             /// <summary>
-            /// <para>The NAT IP address ID in the list of NAT IP addresses created by using an IPv4 prefix.</para>
+            /// <para>The ID of the NAT IP address in the NAT IP address list returned when an IPv4 prefix is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpcnatip-xxxxxxxx</para>

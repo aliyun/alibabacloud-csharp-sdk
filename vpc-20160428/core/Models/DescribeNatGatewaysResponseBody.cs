@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the NAT gateway list.</para>
+        /// <para>The total number of NAT gateway entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

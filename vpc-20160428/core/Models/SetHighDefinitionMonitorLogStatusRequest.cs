@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class SetHighDefinitionMonitorLogStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance for which you want to configure fine-grained monitoring.</para>
+        /// <para>The instance ID of the instance for which you want to configure high-definition second-level monitoring.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Set the value to <b>EIP</b>.</para>
+        /// <para>The type of the instance. Set the value to <b>EIP</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EIP</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The name of the Simple Log Service (SLS) project.</para>
+        /// <para>The name of the LogProject in Simple Log Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LogProject { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore.</para>
+        /// <para>The name of the LogStore in Simple Log Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of fine-grained monitoring. Valid values:</para>
+        /// <para>The high-definition second-level monitoring status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b></description></item>
-        /// <item><description><b>OFF</b></description></item>
+        /// <item><description><b>ON</b>: Enables high-definition second-level monitoring.</description></item>
+        /// <item><description><b>OFF</b>: Disables high-definition second-level monitoring.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListIpsecServerLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The beginning of the time range to query. The value must be a UNIX timestamp. For example, 1671003744 specifies 15:42:24 (UTC+8) on December 14, 2022.</para>
+        /// <para>The start time of the log. Only UNIX timestamps in seconds are supported. For example, 1671003744 represents 2022-12-14 15:42:24.</para>
         /// <remarks>
-        /// <para> If you specify <b>From</b>, you must also specify <b>To</b> or <b>MinutePeriod</b>.</para>
+        /// <para>If you specify <b>From</b>, you must also specify <b>To</b> or <b>MinutePeriod</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpsecServerId { get; set; }
 
         /// <summary>
-        /// <para>The interval at which log data is queried. Valid values: <b>1</b> to <b>10</b>. Unit: minutes.</para>
+        /// <para>The log period. Valid values: <b>1</b> to <b>10</b>. Unit: minutes.</para>
         /// <remarks>
-        /// <para> If both <b>From</b> and <b>To</b> are not specified, you must specify <b>MinutePeriod</b>.</para>
+        /// <para>If you do not specify <b>From</b> or <b>To</b>, you must specify <b>MinutePeriod</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MinutePeriod { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the IPsec server is created.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>The region ID of the IPsec server.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,9 +79,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value must be a unix timestamp. For example, 1671004344 specifies 15:52:24 (UTC+8) on December 14, 2022.</para>
+        /// <para>The end time of the log. Only UNIX timestamps in seconds are supported. For example, 1671004344 represents 2022-12-14 15:52:24.</para>
         /// <remarks>
-        /// <para> If you specify <b>To</b>, you must also specify <b>From</b> or <b>MinutePeriod</b>.</para>
+        /// <para>If you specify <b>To</b>, you must also specify <b>From</b> or <b>MinutePeriod</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

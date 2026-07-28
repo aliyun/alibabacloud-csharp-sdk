@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyExpressCloudConnectionBandwidthRequest : TeaModel {
         /// <summary>
-        /// <para>The bandwidth of the ECC instance.</para>
+        /// <para>The bandwidth of the Express Cloud Connection (ECC) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ECC instance.</para>
+        /// <para>The instance ID of the Express Cloud Connection (ECC) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

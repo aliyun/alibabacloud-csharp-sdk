@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListIpsecServerLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of log entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>Log information list.</para>
+        /// <para>The list of log entries.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<string> Data { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the log is accurate. Valid values:</para>
+        /// <para>Indicates whether the queried logs are accurate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: accurate</description></item>
-        /// <item><description><b>false</b>: inaccurate</description></item>
+        /// <item><description><b>true</b>: Accurate.</description></item>
+        /// <item><description><b>false</b>: Not accurate.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? IsCompleted { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DEDAC5B1-9292-5BF7-BDDF-61BA58CFB2FB</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIpsecServerRequest : TeaModel {
         /// <summary>
-        /// <para>The client CIDR block from which an IP address is allocated to the virtual network interface controller (NIC) of the client.</para>
+        /// <para>The client CIDR block, which is the address range used to assign IP addresses to virtual network interface controllers (NICs) of clients.</para>
         /// <remarks>
-        /// <para> The client CIDR block must not overlap with the CIDR blocks of the VPC.</para>
+        /// <para>The client CIDR block cannot conflict with the VPC-side CIDR block.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only precheck this request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: prechecks the request without creating the IPsec server. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends the request. This is the default value. If the request passes the precheck, the system creates the IPsec server.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run without creating the IPsec server. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error message is returned. If the check succeeds, <c>DryRunOperation</c> is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): sends the request. After the request passes the check, the IPsec server is created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,10 +54,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specify whether to start connection negotiations immediately. Valid values:</para>
+        /// <para>Specifies whether the configuration takes effect immediately. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: immediately initiates negotiations after the configuration is complete.</description></item>
-        /// <item><description><b>false</b> (default): initiates negotiations when inbound traffic is detected. This is the default value.</description></item>
+        /// <item><description><para><b>true</b>: Negotiation starts immediately after the configuration is complete.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Negotiation starts when inbound traffic is detected.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,16 +70,24 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EffectImmediately { get; set; }
 
         /// <summary>
-        /// <para>The configuration of Phase 1 negotiation. Valid values:</para>
+        /// <para>The Phase 1 negotiation parameter settings. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IkeVersion</b>: the IKE version. Valid values: <b>ikev1</b> and <b>ikev2</b>. Default value: <b>ikev2</b>.</description></item>
-        /// <item><description><b>IkeMode</b>: the IKE negotiation mode. Default value: <b>main</b>.</description></item>
-        /// <item><description><b>IkeEncAlg</b>: the encryption algorithm that is used in Phase 1 negotiation. Default value: <b>aes</b>.</description></item>
-        /// <item><description><b>IkeAuthAlg</b>: the authentication algorithm that is used in Phase 1 negotiation. Default value: <b>sha1</b>.</description></item>
-        /// <item><description><b>IkePfs</b>: the Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiation. Default value: <b>group2</b>.</description></item>
-        /// <item><description><b>IkeLifetime</b>: the security association (SA) lifetime determined by Phase 1 negotiation. Unit: seconds. Valid values: <b>0</b> to <b>86400</b>. Default value: <b>86400</b>.</description></item>
-        /// <item><description><b>LocalId</b>: the identifier of the IPsec server. The value can be a fully qualified domain name (FQDN) or an IP address. The default value is the public IP address of the VPN gateway.</description></item>
-        /// <item><description><b>RemoteId</b>: the peer identifier. The value can be an FQDN or an IP address. The default value is empty.</description></item>
+        /// <item><description><para><b>IkeVersion</b>: The version of the IKE protocol. Valid values: <b>ikev1</b> and <b>ikev2</b>. Default value: <b>ikev2</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IkeMode</b>: The negotiation pattern of the IKE version. Default value: <b>main</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IkeEncAlg</b>: The encryption algorithm used in Phase 1 negotiations. Default value: <b>aes</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IkeAuthAlg</b>: The authentication algorithm used in Phase 1 negotiations. Default value: <b>sha1</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IkePfs</b>: The Diffie-Hellman key exchange algorithm used in Phase 1 negotiations. Default value: <b>group2</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IkeLifetime</b>: The epoch of the security association (SA) negotiated in Phase 1. Unit: seconds. Valid values: <b>0</b> to <b>86400</b>. Default value: <b>86400</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>LocalId</b>: The identity of the IPsec server. The FQDN and IP address formats are supported. Default value: the public IP address of the VPN gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>RemoteId</b>: The identity of the peer. The FQDN and IP address formats are supported. Default value: empty.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,12 +109,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpSecServerName { get; set; }
 
         /// <summary>
-        /// <para>The configuration of Phase 2 negotiation. Valid values:</para>
+        /// <para>The Phase 2 negotiation parameter settings. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IpsecEncAlg</b>: the encryption algorithm that is used in Phase 2 negotiation. Default value: <b>aes</b>.</description></item>
-        /// <item><description><b>IpsecAuthAlg</b>: the authentication algorithm that is used in Phase 2 negotiation. Default value: <b>sha1</b>.</description></item>
-        /// <item><description><b>IpsecPfs</b>: forwards packets of all protocols. The Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiation. Default value: <b>group2</b>.</description></item>
-        /// <item><description><b>IpsecLifetime</b>: the SA lifetime determined by Phase 2 negotiation. Unit: seconds. Valid values: <b>0</b> to <b>86400</b>. Default value: <b>86400</b>.</description></item>
+        /// <item><description><para><b>IpsecEncAlg</b>: The encryption algorithm used in Phase 2 negotiations. Default value: <b>aes</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IpsecAuthAlg</b>: The authentication algorithm used in Phase 2 negotiations. Default value: <b>sha1</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IpsecPfs</b>: Forward all protocol packets. The Diffie-Hellman key exchange algorithm used in Phase 2 negotiations. Default value: <b>group2</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>IpsecLifetime</b>: The epoch of the SA negotiated in Phase 2. Unit: seconds. Valid values: <b>0</b> to <b>86400</b>. Default value: <b>86400</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,8 +129,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpsecConfig { get; set; }
 
         /// <summary>
-        /// <para>The local CIDR blocks, which are the CIDR blocks of the virtual private cloud (VPC) for the client to access.</para>
-        /// <para>Multiple CIDR blocks are separated with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.</para>
+        /// <para>The local CIDR block, which is the VPC-side CIDR block that needs to communicate with the client CIDR block.</para>
+        /// <para>Separate multiple CIDR blocks with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -126,10 +142,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The pre-shared key.</para>
-        /// <para>The pre-shared key that is used for authentication between the IPsec-VPN server and the client. It must be 1 to 100 characters in length.</para>
-        /// <para>If you do not specify a pre-shared key, the system randomly generates a 16-bit string as the pre-shared key. You can call <a href="https://help.aliyun.com/document_detail/2794120.html">ListIpsecServers</a> to query keys generated by the system.</para>
+        /// <para>The pre-shared key is used for identity authentication between the IPsec server and the client. The key must be 1 to 100 characters in length.</para>
+        /// <para>If you do not specify a pre-shared key, the system randomly generates a 16-character string as the pre-shared key. You can call the <a href="https://help.aliyun.com/document_detail/2794120.html">ListIpsecServers</a> operation to query the pre-shared key generated by the system.</para>
         /// <remarks>
-        /// <para>The pre-shared key of the IPsec server key must be the same as that of the client. Otherwise, the connection between the IPsec server and the client cannot be established.</para>
+        /// <para>The pre-shared key of the IPsec server must be the same as the authentication key of the client. Otherwise, a connection cannot be established between the IPsec server and the client.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -140,9 +156,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Psk { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether pre-shared key authentication is enabled. If you set the value to <b>true</b>, pre-shared key authentication is enabled.</para>
+        /// <para>Specifies whether to enable pre-shared key authentication. Valid values: <b>true</b>, which indicates that pre-shared key authentication is enabled.</para>
         /// <remarks>
-        /// <para> This parameter is required.</para>
+        /// <para>This parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -153,7 +169,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? PskEnabled { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VPN gateway is deployed.</para>
+        /// <para>The region ID of the VPN gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -164,7 +180,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateGlobalAccelerationInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum bandwidth of the GA instance. Set the value to <b>10</b>. Unit: Mbit/s.</para>
+        /// <para>The peak bandwidth of the Alibaba Cloud Global Accelerator (GA) instance. Unit: Mbit/s. Valid value: <b>10</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth type. Valid values:</para>
+        /// <para>The bandwidth type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Sharing</b></description></item>
-        /// <item><description><b>Exclusive</b></description></item>
+        /// <item><description><para><b>Sharing</b>: shared bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para><b>Exclusive</b>: dedicated bandwidth.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,8 +37,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BandwidthType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. </para>
+        /// <para>The client generates the value of this parameter. Ensure that the value is unique among different requests. The value can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
@@ -46,8 +48,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the GA instance.</para>
-        /// <para>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the Alibaba Cloud Global Accelerator (GA) instance. </para>
+        /// <para>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character, but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>My GA</para>
@@ -57,8 +59,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the GA instance.</para>
-        /// <para>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the Alibaba Cloud Global Accelerator (GA) instance.  </para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-), but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GA-1</para>
@@ -76,8 +78,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the GA instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region where the Alibaba Cloud Global Accelerator (GA) instance resides. </para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,12 +98,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The acceleration area. Valid values:</para>
+        /// <para>The area where the accelerated service resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>china-mainland</b></description></item>
-        /// <item><description><b>north-america</b></description></item>
-        /// <item><description><b>asia-pacific</b></description></item>
-        /// <item><description><b>europe</b></description></item>
+        /// <item><description><para><b>china-mainland</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>north-america</b>: North America.</para>
+        /// </description></item>
+        /// <item><description><para><b>asia-pacific</b>: Asia-Pacific.</para>
+        /// </description></item>
+        /// <item><description><para><b>europe</b>: Europe.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

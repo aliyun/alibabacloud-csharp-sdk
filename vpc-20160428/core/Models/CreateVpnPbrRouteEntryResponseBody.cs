@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnPbrRouteEntryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The timestamp generated when the policy-based route was created. Unit: milliseconds.</para>
-        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp when the policy-based route was created. Unit: milliseconds.</para>
+        /// <para>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1492747187000</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The description of the route.</para>
+        /// <para>The description of the policy-based route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The tunneling protocol. The value is <b>Ipsec</b>.</para>
+        /// <para>The next hop of the policy-based route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vco-bp15oes1py4i66rmd****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The tunneling protocol. The value is set to <b>Ipsec</b>, which indicates the IPsec tunneling protocol.</para>
+        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b> (IPsec tunneling protocol).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ipsec</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OverlayMode { get; set; }
 
         /// <summary>
-        /// <para>The priority of the policy-based route.</para>
+        /// <para>The policy priority of the policy-based routing entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The priority of the policy-based route.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The VPN gateway ID.</para>
+        /// <para>The destination CIDR block of the policy-based route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.0.0/24</para>
@@ -91,10 +91,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteSource { get; set; }
 
         /// <summary>
-        /// <para>The status of the policy-based route.</para>
+        /// <para>The publish status of the policy-based route.</para>
         /// <list type="bullet">
-        /// <item><description><b>published</b>: advertised to the VPC route table.</description></item>
-        /// <item><description><b>normal</b>: not advertised to the VPC route table.</description></item>
+        /// <item><description><para><b>published</b>: The policy-based route has been published to the VPC route table.</para>
+        /// </description></item>
+        /// <item><description><para><b>normal</b>: The policy-based route has not been published to the VPC route table.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-bp1cmw7jh1nfe43m9****</para>
@@ -115,7 +117,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The source CIDR block of the policy-based route.</para>
+        /// <para>The weight of the policy-based route.</para>
+        /// <list type="bullet">
+        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as the active link.</description></item>
+        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as the standby link.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

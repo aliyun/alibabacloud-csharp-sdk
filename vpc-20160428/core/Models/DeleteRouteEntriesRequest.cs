@@ -10,11 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without performing the actual request. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
-        /// </list>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para><b>true</b>: performs a dry run without deleting routes. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <para><b>false</b> (default): sends a normal request. If the check passes, a 2xx HTTP status code is returned and the routes are deleted.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -29,8 +27,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the route table.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the route table resides.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,16 +47,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The information about the routes that you want to delete.</para>
+        /// <para>The information about the route entries to delete.</para>
         /// </summary>
         [NameInMap("RouteEntries")]
         [Validation(Required=false)]
         public List<DeleteRouteEntriesRequestRouteEntries> RouteEntries { get; set; }
         public class DeleteRouteEntriesRequestRouteEntries : TeaModel {
             /// <summary>
-            /// <para>The destination CIDR block of the route that you want to delete. IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.</para>
+            /// <para>The destination CIDR block of the route entry to delete. IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix list CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.</para>
             /// <remarks>
-            /// <para> If <b>RouteEntryId</b> is not specified, <b>DstCidrBlock</b> and <b>NextHop</b> are required.</para>
+            /// <para>If the <b>RouteEntryId</b> parameter is not specified, the <b>DstCidrBlock</b> and <b>NextHop</b> parameters are required.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -69,9 +67,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DstCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The ID of the next hop that you want to delete. You can specify up to 50 next hop IDs.</para>
+            /// <para>The ID of the next hop instance to delete. You can specify up to 50 instance IDs.</para>
             /// <remarks>
-            /// <para> If <b>RouteEntryId</b> is not specified, <b>DstCidrBlock</b> and <b>NextHop</b> are required.</para>
+            /// <para>If the <b>RouteEntryId</b> parameter is not specified, the <b>DstCidrBlock</b> and <b>NextHop</b> parameters are required.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -82,9 +80,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NextHop { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route that you want to delete. You can specify up to 50 route IDs.</para>
+            /// <para>The ID of the route entry to delete. You can specify up to 50 route entry IDs.</para>
             /// <remarks>
-            /// <para> If <b>RouteEntryId</b> is not specified, <b>DstCidrBlock</b> and <b>NextHop</b> are required.</para>
+            /// <para>If the <b>RouteEntryId</b> parameter is not specified, the <b>DstCidrBlock</b> and <b>NextHop</b> parameters are required.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -95,7 +93,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RouteEntryId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route table to which the routes to be deleted belongs. You can specify up to 50 route table IDs.</para>
+            /// <para>The ID of the route table that contains the route entry to delete. You can specify up to 50 route table IDs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

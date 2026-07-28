@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class OpenTrafficMirrorServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information returned after traffic mirror is enabled.</para>
+        /// <para>The message returned after the traffic mirroring feature is activated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

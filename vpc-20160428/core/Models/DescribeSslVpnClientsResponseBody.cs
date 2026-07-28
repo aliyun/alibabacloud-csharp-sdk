@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeSslVpnClientsResponseBodyClientInfoList> ClientInfoList { get; set; }
         public class DescribeSslVpnClientsResponseBodyClientInfoList : TeaModel {
             /// <summary>
-            /// <para>The SSL client certificate used by the client to establish the SSL-VPN connection to Alibaba Cloud.</para>
+            /// <para>The SSL client certificate used when the client establishes an SSL-VPN connection to Alibaba Cloud.</para>
             /// <remarks>
-            /// <para>If the client uses two-factor identity authentication to establish the SSL-VPN connection to Alibaba Cloud, the value of this parameter is the username of the client.</para>
+            /// <para>If the client uses two-factor identity authentication to establish an SSL-VPN connection to Alibaba Cloud, the value of this parameter is the username of the client.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the client established the SSL-VPN connection to Alibaba Cloud. Unit: milliseconds.</para>
-            /// <para>The timestamp is in the UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the SSL-VPN connection was established.</para>
+            /// <para>The timestamp when the client establishes an SSL-VPN connection to Alibaba Cloud. Unit: milliseconds.</para>
+            /// <para>The timestamp is in the UNIX format and represents the total duration from 00:00:00 on January 1, 1970 (UTC) to the time when the SSL-VPN connection is established.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1670985008000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? ConnectedTime { get; set; }
 
             /// <summary>
-            /// <para>The public IP address that the client used to establish the SSL-VPN connection to Alibaba Cloud.</para>
+            /// <para>The public IP address that the client uses when establishing an SSL-VPN connection to Alibaba Cloud.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.XX.XX.15</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The port number that the client used to establish the SSL-VPN connection to Alibaba Cloud.</para>
+            /// <para>The port number that the client uses when establishing an SSL-VPN connection to Alibaba Cloud.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4****</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The private IP address that the VPN gateway assigned to the client when the client established an SSL-VPN connection to Alibaba Cloud.</para>
+            /// <para>The private IP address that the VPN gateway assigns to the client when the client establishes an SSL-VPN connection to Alibaba Cloud.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.10.10.10</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string PrivateIp { get; set; }
 
             /// <summary>
-            /// <para>The traffic that the VPN gateway received from the client over the SSL-VPN connection. Unit: bytes.</para>
+            /// <para>The traffic that the VPN gateway receives from the client over the SSL-VPN connection. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60782</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? ReceiveBytes { get; set; }
 
             /// <summary>
-            /// <para>The traffic that the VPN gateway sent to the client over the SSL-VPN connection. Unit: bytes.</para>
+            /// <para>The traffic that the VPN gateway sends to the client over the SSL-VPN connection. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>57144</para>

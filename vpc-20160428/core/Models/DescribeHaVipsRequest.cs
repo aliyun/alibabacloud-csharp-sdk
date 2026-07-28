@@ -10,23 +10,29 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeHaVipsRequest : TeaModel {
         /// <summary>
-        /// <para>The details of the filter condition.</para>
+        /// <para>The filter conditions.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeHaVipsRequestFilter> Filter { get; set; }
         public class DescribeHaVipsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter keys. You can specify at most five filter keys. Valid values of <b>N</b>: <b>1 to 5</b>. The following filter keys are supported:</para>
+            /// <para>The filter condition. You can specify up to 5 filter conditions. Valid values of <b>N</b>: <b>1 to 5</b>.</para>
+            /// <para>The following filter conditions are supported:</para>
             /// <list type="bullet">
-            /// <item><description><b>VpcId</b>: virtual private cloud (VPC) ID</description></item>
-            /// <item><description><b>VSwitchId</b>: vSwitch ID</description></item>
-            /// <item><description><b>Status</b>: HaVip status</description></item>
-            /// <item><description><b>HaVipId</b>: HaVip ID</description></item>
-            /// <item><description><b>HaVipAddress</b>: HaVip IP address</description></item>
+            /// <item><description><para><b>VpcId</b>: the virtual private cloud (VPC) ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>VSwitchId</b>: the vSwitch ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>Status</b>: the HaVip status.</para>
+            /// </description></item>
+            /// <item><description><para><b>HaVipId</b>: the HaVip ID.</para>
+            /// </description></item>
+            /// <item><description><para><b>HaVipAddress</b>: the IP address of the HaVip.</para>
+            /// </description></item>
             /// </list>
-            /// <para>You can specify multiple values for each filter key. The logical operator among multiple values is OR. If one value is matched, the filter key is matched.</para>
-            /// <para>The logical operator among multiple filter keys is AND. HaVips can be queried only if all filter keys are matched.</para>
+            /// <para>Each filter condition (Filter Key) can have multiple values. The values have an OR relationship, which means that a match on any value satisfies the filter condition.</para>
+            /// <para>Different filter conditions (Filter Keys) have an AND relationship, which means that all parameter filter conditions must be met for a record to be returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HaVipId</para>
@@ -36,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the filter key. Valid values of <b>N</b>: <b>1 to 5</b>.</para>
+            /// <para>The values of the specified filter condition. Valid values of <b>N</b>: <b>1 to 5</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>havip-bp19o63nequs01i8d****</para>
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the returned page. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -66,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -77,7 +83,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the HaVip.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,15 +112,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tag list.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeHaVipsRequestTags> Tags { get; set; }
         public class DescribeHaVipsRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -124,8 +130,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

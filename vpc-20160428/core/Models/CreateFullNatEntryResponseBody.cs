@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateFullNatEntryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The FULLNAT entry ID.</para>
+        /// <para>The ID of the FULLNAT entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fullnat-gw8fz23jezpbblf1j****</para>

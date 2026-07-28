@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the peer gateway device.</para>
+        /// <para>The configuration of the peer gateway device of the IPsec-VPN connection.</para>
         /// </summary>
         [NameInMap("VpnConnectionConfig")]
         [Validation(Required=false)]
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The configurations of Phase 1 negotiations.</para>
+            /// <para>The configuration of Phase 1 negotiation.</para>
             /// </summary>
             [NameInMap("IkeConfig")]
             [Validation(Required=false)]
             public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig IkeConfig { get; set; }
             public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig : TeaModel {
                 /// <summary>
-                /// <para>The authentication algorithm in the IKE phase.</para>
+                /// <para>The IKE phase authentication algorithm.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sha1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeAuthAlg { get; set; }
 
                 /// <summary>
-                /// <para>The encryption algorithm in the IKE phase.</para>
+                /// <para>The IKE phase encryption algorithm.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aes</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeEncAlg { get; set; }
 
                 /// <summary>
-                /// <para>The lifetime in the IKE phase. Unit: seconds.</para>
+                /// <para>The IKE phase lifetime. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86400</para>
@@ -102,8 +102,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <summary>
                 /// <para>The IKE negotiation mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>main</b>: This mode offers higher security during negotiations.</description></item>
-                /// <item><description><b>aggressive</b>: This mode is faster and has a higher success rate.</description></item>
+                /// <item><description><b>main</b>: Main mode. This mode provides high security during negotiation.</description></item>
+                /// <item><description><b>aggressive</b>: Aggressive mode. This mode supports fast negotiation and a higher success rate.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkePfs { get; set; }
 
                 /// <summary>
-                /// <para>The IKE version.</para>
+                /// <para>The version of the IKE protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ikev2</para>
@@ -166,14 +166,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The configurations of Phase 2 negotiations.</para>
+            /// <para>The configuration of Phase 2 negotiation.</para>
             /// </summary>
             [NameInMap("IpsecConfig")]
             [Validation(Required=false)]
             public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig IpsecConfig { get; set; }
             public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig : TeaModel {
                 /// <summary>
-                /// <para>The authentication algorithm in the IPsec phase.</para>
+                /// <para>The IPsec phase authentication algorithm.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sha1</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IpsecAuthAlg { get; set; }
 
                 /// <summary>
-                /// <para>The encryption algorithm in the IPsec phase.</para>
+                /// <para>The IPsec phase encryption algorithm.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aes</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IpsecEncAlg { get; set; }
 
                 /// <summary>
-                /// <para>The lifetime in the IPsec phase. Unit: seconds.</para>
+                /// <para>The IPsec phase lifetime. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86400</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Local { get; set; }
 
             /// <summary>
-            /// <para>The CIDR block on the data center side.</para>
+            /// <para>The CIDR block on the on-premises data center side.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.0.0/8</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Remote { get; set; }
 
             /// <summary>
-            /// <para>The CIDR block on the virtual private cloud (VPC) side.</para>
+            /// <para>The CIDR block on the VPC side.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/16</para>
@@ -262,184 +262,78 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public List<DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig> TunnelConfig { get; set; }
                 public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig : TeaModel {
-                    /// <summary>
-                    /// <para>第一阶段协商的配置信息。</para>
-                    /// </summary>
                     [NameInMap("IkeConfig")]
                     [Validation(Required=false)]
                     public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig IkeConfig { get; set; }
                     public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig : TeaModel {
-                        /// <summary>
-                        /// <para>IKE阶段认证算法。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>sha1</para>
-                        /// </summary>
                         [NameInMap("IkeAuthAlg")]
                         [Validation(Required=false)]
                         public string IkeAuthAlg { get; set; }
 
-                        /// <summary>
-                        /// <para>IKE阶段加密算法。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>aes</para>
-                        /// </summary>
                         [NameInMap("IkeEncAlg")]
                         [Validation(Required=false)]
                         public string IkeEncAlg { get; set; }
 
-                        /// <summary>
-                        /// <para>IKE阶段生存时间。单位：秒。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>86400</para>
-                        /// </summary>
                         [NameInMap("IkeLifetime")]
                         [Validation(Required=false)]
                         public long? IkeLifetime { get; set; }
 
-                        /// <summary>
-                        /// <para>IKE协商模式。</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>main</b>：主模式，协商过程安全性高。</description></item>
-                        /// <item><description><b>aggressive</b>：野蛮模式，协商快速且协商成功率高。</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>main</para>
-                        /// </summary>
                         [NameInMap("IkeMode")]
                         [Validation(Required=false)]
                         public string IkeMode { get; set; }
 
-                        /// <summary>
-                        /// <para>IKE阶段DH分组。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>group2</para>
-                        /// </summary>
                         [NameInMap("IkePfs")]
                         [Validation(Required=false)]
                         public string IkePfs { get; set; }
 
-                        /// <summary>
-                        /// <para>IKE协议的版本。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>ikev2</para>
-                        /// </summary>
                         [NameInMap("IkeVersion")]
                         [Validation(Required=false)]
                         public string IkeVersion { get; set; }
 
-                        /// <summary>
-                        /// <para>本地IDC侧隧道的标识。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>47.21.XX.XX</para>
-                        /// </summary>
                         [NameInMap("LocalId")]
                         [Validation(Required=false)]
                         public string LocalId { get; set; }
 
-                        /// <summary>
-                        /// <para>预共享密钥。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>pgw6dy7d1i8i****</para>
-                        /// </summary>
                         [NameInMap("Psk")]
                         [Validation(Required=false)]
                         public string Psk { get; set; }
 
-                        /// <summary>
-                        /// <para>阿里云侧隧道的标识。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>47.24.XX.XX</para>
-                        /// </summary>
                         [NameInMap("RemoteId")]
                         [Validation(Required=false)]
                         public string RemoteId { get; set; }
 
                     }
 
-                    /// <summary>
-                    /// <para>第二阶段协商的配置信息。</para>
-                    /// </summary>
                     [NameInMap("IpsecConfig")]
                     [Validation(Required=false)]
                     public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig IpsecConfig { get; set; }
                     public class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig : TeaModel {
-                        /// <summary>
-                        /// <para>IPsec阶段认证算法。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>sha1</para>
-                        /// </summary>
                         [NameInMap("IpsecAuthAlg")]
                         [Validation(Required=false)]
                         public string IpsecAuthAlg { get; set; }
 
-                        /// <summary>
-                        /// <para>IPsec阶段加密算法。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>aes</para>
-                        /// </summary>
                         [NameInMap("IpsecEncAlg")]
                         [Validation(Required=false)]
                         public string IpsecEncAlg { get; set; }
 
-                        /// <summary>
-                        /// <para>IPsec阶段生存时间。单位：秒。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>86400</para>
-                        /// </summary>
                         [NameInMap("IpsecLifetime")]
                         [Validation(Required=false)]
                         public long? IpsecLifetime { get; set; }
 
-                        /// <summary>
-                        /// <para>IPsec阶段DH分组。</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>group2</para>
-                        /// </summary>
                         [NameInMap("IpsecPfs")]
                         [Validation(Required=false)]
                         public string IpsecPfs { get; set; }
 
                     }
 
-                    /// <summary>
-                    /// <para>本地IDC侧隧道的标识。</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>47.21.XX.XX</para>
-                    /// </summary>
                     [NameInMap("Local")]
                     [Validation(Required=false)]
                     public string Local { get; set; }
 
-                    /// <summary>
-                    /// <para>阿里云侧隧道的标识。</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>47.24.XX.XX</para>
-                    /// </summary>
                     [NameInMap("Remote")]
                     [Validation(Required=false)]
                     public string Remote { get; set; }
 
-                    /// <summary>
-                    /// <para>隧道ID。</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>tun-opsqc4d97wni27****</para>
-                    /// </summary>
                     [NameInMap("TunnelId")]
                     [Validation(Required=false)]
                     public string TunnelId { get; set; }

@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyVpcPrefixListRequest : TeaModel {
         /// <summary>
-        /// <para>The information about CIDR blocks to be added to the prefix list.</para>
+        /// <para>The list of Classless Inter-Domain Routing blocks to add to the prefix list instance.</para>
         /// </summary>
         [NameInMap("AddPrefixListEntry")]
         [Validation(Required=false)]
         public List<ModifyVpcPrefixListRequestAddPrefixListEntry> AddPrefixListEntry { get; set; }
         public class ModifyVpcPrefixListRequestAddPrefixListEntry : TeaModel {
             /// <summary>
-            /// <para>The CIDR block to be added to the prefix list.</para>
+            /// <para>The Classless Inter-Domain Routing block to add to the prefix list instance.</para>
             /// <remarks>
-            /// <para> If the CIDR block already exists in the prefix list, you can only modify the description of the CIDR block by setting the <b>AddPrefixListEntry.N.Description</b> parameter.</para>
+            /// <para>If the Classless Inter-Domain Routing block already exists in the prefix list, only the value of <b>AddPrefixListEntry.N.Description</b> is modified, which means only the description of the Classless Inter-Domain Routing block is updated.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Cidr { get; set; }
 
             /// <summary>
-            /// <para>The description of the CIDR block to be added to the prefix list.</para>
-            /// <para>The description must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The description of the Classless Inter-Domain Routing block to add to the prefix list instance.</para>
+            /// <para>The description must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>newcidr</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system uses <b>RequestId</b> as <b>ClientToken</b>. <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only precheck the request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without modifying the prefix list configuration. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the prefix list configuration is modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of CIDR blocks supported by the prefix list after the configuration of the prefix list is modified.</para>
+        /// <para>The new maximum number of Classless Inter-Domain Routing block entries in the prefix list instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The new description of the prefix list.</para>
-        /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>newdescription</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PrefixListDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the prefix list.</para>
+        /// <para>The instance ID of the prefix list that you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The new name of the prefix list.</para>
-        /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name must be 1 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>newname</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PrefixListName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the prefix list.</para>
+        /// <para>The region ID of the prefix list that you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The information about CIDR blocks to be deleted to the prefix list.</para>
+        /// <para>The list of Classless Inter-Domain Routing blocks to delete from the prefix list instance.</para>
         /// </summary>
         [NameInMap("RemovePrefixListEntry")]
         [Validation(Required=false)]
         public List<ModifyVpcPrefixListRequestRemovePrefixListEntry> RemovePrefixListEntry { get; set; }
         public class ModifyVpcPrefixListRequestRemovePrefixListEntry : TeaModel {
             /// <summary>
-            /// <para>The CIDR block that you want to delete from the prefix list.</para>
+            /// <para>The Classless Inter-Domain Routing block to delete from the prefix list instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/16</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Cidr { get; set; }
 
             /// <summary>
-            /// <para>The description of the CIDR block that you want to delete.</para>
+            /// <para>The description of the Classless Inter-Domain Routing block to delete from the prefix list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cidr</para>

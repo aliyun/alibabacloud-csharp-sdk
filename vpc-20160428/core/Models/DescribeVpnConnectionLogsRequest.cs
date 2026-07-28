@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnConnectionLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The start time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start time of the log. Only UNIX timestamps in seconds are supported. For example, 1671003744 represents 2022-12-14 15:42:24.</para>
         /// <remarks>
-        /// <para> If you specify <b>From</b>, you must specify <b>To</b> or <b>MinutePeriod</b>.</para>
+        /// <para>If you specify <b>From</b>, you must also specify <b>To</b> or <b>MinutePeriod</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? From { get; set; }
 
         /// <summary>
-        /// <para>The interval at which log data is collected. Valid values: <b>1</b> to <b>10</b>. Unit: minutes.</para>
+        /// <para>The log period. Valid values: <b>1</b> to <b>10</b>. Unit: minutes.</para>
         /// <remarks>
-        /// <para> If you do not specify <b>From</b> and <b>To</b>, you must specify <b>MinutePeriod</b>.</para>
+        /// <para>If you do not specify <b>From</b> or <b>To</b>, you must specify <b>MinutePeriod</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for paging. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the IPsec-VPN connection.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,9 +84,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end time of the log. Only UNIX timestamps in seconds are supported. For example, 1671004344 represents 2022-12-14 15:52:24.</para>
         /// <remarks>
-        /// <para> If you specify <b>To</b>, you must specify <b>From</b> or <b>MinutePeriod</b>.</para>
+        /// <para>If you specify <b>To</b>, you must also specify <b>From</b> or <b>MinutePeriod</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -97,8 +97,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? To { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IPsec-VPN connection.</para>
-        /// <para>This parameter is available only for a dual-tunnel IPsec-VPN connection.</para>
+        /// <para>The tunnel ID of the IPsec-VPN connection.</para>
+        /// <para>This parameter is supported only for IPsec-VPN connections in dual-tunnel mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tun-opsqc4d97wni27****</para>

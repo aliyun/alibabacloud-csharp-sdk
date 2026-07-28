@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeFailoverTestJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The failover test.</para>
+        /// <para>The failover test job.</para>
         /// </summary>
         [NameInMap("FailoverTestJobModel")]
         [Validation(Required=false)]
         public DescribeFailoverTestJobResponseBodyFailoverTestJobModel FailoverTestJobModel { get; set; }
         public class DescribeFailoverTestJobResponseBodyFailoverTestJobModel : TeaModel {
             /// <summary>
-            /// <para>The description of the failover test.</para>
-            /// <para>The description must be 0 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The description of the failover test job.</para>
+            /// <para>The description is 0 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The duration of the failover test. Unit: minutes. Valid values: <b>1 to 4320</b>.</para>
+            /// <para>The failover test duration. Unit: minutes. Valid values: <b>1 to 4320</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string JobDuration { get; set; }
 
             /// <summary>
-            /// <para>The ID of the failover test.</para>
+            /// <para>The ID of the failover test job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ftj-bp1yh6mvi13aq3g8w****</para>
@@ -48,10 +48,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the failover test is performed immediately. Valid values:</para>
+            /// <para>The failover test type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>StartNow</b></description></item>
-            /// <item><description><b>StartLater</b></description></item>
+            /// <item><description><para><b>StartNow</b>: starts immediately. The failover test starts immediately after the job is created.</para>
+            /// </description></item>
+            /// <item><description><para><b>StartLater</b>: starts later. Only the job is created without starting the test.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,8 +64,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string JobType { get; set; }
 
             /// <summary>
-            /// <para>The name of the failover test.</para>
-            /// <para>The name must be 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The name of the failover test job.</para>
+            /// <para>The name is 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -73,14 +75,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The IDs of failover test resources.</para>
+            /// <para>The list of failover test resource IDs.</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
             public List<string> ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of failover test resource. Only <b>PHYSICALCONNECTION</b> is returned.</para>
+            /// <para>The resource type for the failover test. Valid values: <b>PHYSICALCONNECTION</b>: Express Connect circuit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PHYSICALCONNECTION</para>
@@ -90,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the failover test. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The start time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-21T14:00:00Z</para>
@@ -100,13 +102,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the failover test. Valid values:</para>
+            /// <para>The status of the failover test job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Init</b></description></item>
-            /// <item><description><b>Starting</b></description></item>
-            /// <item><description><b>Testing</b></description></item>
-            /// <item><description><b>Stopping</b></description></item>
-            /// <item><description><b>Stopped</b></description></item>
+            /// <item><description><para><b>Init</b>: pending.</para>
+            /// </description></item>
+            /// <item><description><para><b>Starting</b>: starting.</para>
+            /// </description></item>
+            /// <item><description><para><b>Testing</b>: in progress.</para>
+            /// </description></item>
+            /// <item><description><para><b>Stopping</b>: stopping.</para>
+            /// </description></item>
+            /// <item><description><para><b>Stopped</b>: completed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The end time of the failover test. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The end time of the failover test job. The time is displayed in UTC in the YYYY-MM-DDThh:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-21T15:00:00Z</para>

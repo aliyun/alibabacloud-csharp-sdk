@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeIpv6EgressOnlyRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the IPv6 address for which the IPv6 egress-only rule is configured.</para>
+        /// <para>The ID of the IPv6 address for which an IPv6 egress-only rule is configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6-bp12uzwhac8tv3xx6****</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

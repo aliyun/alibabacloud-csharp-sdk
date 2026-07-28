@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnSslServerLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The beginning of the time range to query. The value must be a unix timestamp. For example, 1600738962 specifies 09:42:42 (UTC+8) on September 22, 2020.</para>
+        /// <para>The start time of the log. Only UNIX timestamps in seconds are supported. For example, 1600738962 represents 2020-09-22 09:42:42.</para>
         /// <remarks>
-        /// <para> If you specify <b>From</b>, you must also specify <b>To</b> or <b>MinutePeriod</b>.</para>
+        /// <para>If you specify <b>From</b>, you must also specify <b>To</b> or <b>MinutePeriod</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? From { get; set; }
 
         /// <summary>
-        /// <para>The interval at which log data is queried. Unit: minutes.</para>
+        /// <para>The log period. Unit: minutes.</para>
         /// <remarks>
-        /// <para> If both <b>From</b> and <b>To</b> are not specified, you must specify <b>MinutePeriod</b>.</para>
+        /// <para>If you do not specify <b>From</b> or <b>To</b>, you must specify <b>MinutePeriod</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SSL server is created. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the SSL server. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,9 +93,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SslVpnClientCertId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value must be a unix timestamp. For example, 1600738962 specifies 09:42:42 (UTC+8) on September 22, 2020.</para>
+        /// <para>The end time of the log. Only UNIX timestamps in seconds are supported. For example, 1600738962 represents 2020-09-22 09:42:42.</para>
         /// <remarks>
-        /// <para> If you specify <b>To</b>, you must also specify <b>From</b> or <b>MinutePeriod</b>.</para>
+        /// <para>If you specify <b>To</b>, you must also specify <b>From</b> or <b>MinutePeriod</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

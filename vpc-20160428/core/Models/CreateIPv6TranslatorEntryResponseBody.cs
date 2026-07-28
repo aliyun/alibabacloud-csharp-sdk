@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateIPv6TranslatorEntryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the IPv6 Translation Service instance.</para>
+        /// <para>The instance ID of the IPv6 Translation Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6transentry-xxxxxxxx</para>

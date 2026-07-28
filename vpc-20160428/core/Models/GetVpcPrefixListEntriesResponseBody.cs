@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value indicates the token that is used for the next request to retrieve a new page of results.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query is required.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<GetVpcPrefixListEntriesResponseBodyPrefixListEntry> PrefixListEntry { get; set; }
         public class GetVpcPrefixListEntriesResponseBodyPrefixListEntry : TeaModel {
             /// <summary>
-            /// <para>The CIDR blocks specified in the prefix list.</para>
+            /// <para>The Classless Inter-Domain Routing (CIDR) block of the prefix list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/16</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the prefix list.</para>
+            /// <para>The instance ID of the prefix list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pl-0b7hwu67****</para>

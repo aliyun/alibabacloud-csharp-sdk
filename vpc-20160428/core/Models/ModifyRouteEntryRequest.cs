@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The IPv4 CIDR block of the route entry. IPv4 and IPv6 CIDR blocks are supported.</para>
         /// <remarks>
         /// <para>If the <b>RouteEntryId</b> parameter is not specified, the <b>DestinationCidrBlock</b> and <b>RouteTableId</b> parameters are required.
-        /// To change the IPv4 CIDR block of a route to a <b>prefix list</b>, specify the <b>RouteEntryId</b> parameter. The <b>DestinationCidrBlock</b> parameter does not support prefix list CIDR blocks or prefix list instance IDs.</para>
+        /// To change the IPv4 CIDR block of a route to a <b>prefix list</b>, you must specify the <b>RouteEntryId</b> parameter. The <b>DestinationCidrBlock</b> parameter does not support prefix list CIDR blocks or prefix list instance IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,15 +36,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
-        /// <para><b>true</b>: sends the request without modifying the route. The system checks whether the AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</para>
-        /// <para><b>false</b> (default): sends a Normal request. After the request passes the check, a 2xx HTTP status code is returned and the route is modified.</para>
+        /// <para><b>true</b>: performs a dry run without modifying the route. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <para><b>false</b> (default): sends a Normal request. If the check succeeds, a 2xx HTTP status code is returned and the route is modified.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The new next hop instance ID of the route.</para>
+        /// <para>The new next hop instance ID of the route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-bp17y37ytsenqyim****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NewNextHopId { get; set; }
 
         /// <summary>
-        /// <para>The new next hop type of the route. Valid values:</para>
+        /// <para>The new next hop type of the route entry. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>Instance</b>: ECS instance.</para>
         /// </description></item>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// <item><description><para><b>RouterInterface</b>: vRouter interface.</para>
         /// </description></item>
-        /// <item><description><para><b>NetworkInterface</b>: elastic network interface (ENI).</para>
+        /// <item><description><para><b>NetworkInterface</b>: elastic network interfaces (ENIs).</para>
         /// </description></item>
         /// <item><description><para><b>VpnGateway</b>: VPN gateway.</para>
         /// </description></item>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// <item><description><para><b>NatGateway</b>: NAT gateway.</para>
         /// </description></item>
-        /// <item><description><para><b>Attachment</b>: transit router.</para>
+        /// <item><description><para><b>Attachment</b>: forward router.</para>
         /// </description></item>
         /// <item><description><para><b>VpcPeer</b>: VPC peering connection.</para>
         /// </description></item>
@@ -81,6 +81,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><para><b>Ecr</b>: Express Connect Router (ECR).</para>
         /// </description></item>
         /// <item><description><para><b>GatewayLoadBalancerEndpoint</b>: Gateway Load Balancer endpoint (GWLBe).</para>
+        /// </description></item>
+        /// <item><description><para><b>RouteTargetGroup</b>: route target group.</para>
         /// </description></item>
         /// </list>
         /// 

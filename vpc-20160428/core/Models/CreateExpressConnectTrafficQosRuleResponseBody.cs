@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateExpressConnectTrafficQosRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the QoS policy.</para>
+        /// <para>The QoS policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-2giu0a6vd5x0mv****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS queue.</para>
+        /// <para>The QoS queue ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-queue-9nyx2u7n71s2rc****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS rule.</para>
+        /// <para>The QoS rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-rule-iugg0l9x27f2no****</para>

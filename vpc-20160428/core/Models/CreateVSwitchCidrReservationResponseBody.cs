@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the reserved CIDR block.</para>
+        /// <para>The instance ID of the reserved CIDR block for a vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vcr-bp1m12saqteraw3rp****</para>

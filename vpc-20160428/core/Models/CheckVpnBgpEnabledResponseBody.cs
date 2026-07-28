@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CheckVpnBgpEnabledResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the region supports BGP.</para>
+        /// <para>Indicates whether the current region supports the BGP feature.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Supported.</description></item>
+        /// <item><description><b>false</b>: Not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
