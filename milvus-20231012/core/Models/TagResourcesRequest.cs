@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The IDs of the resources. You can specify up to 50 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The tags to add to the resources. You can add up to 20 tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>k1</para>
             /// </summary>
@@ -52,6 +58,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v1</para>
             /// </summary>

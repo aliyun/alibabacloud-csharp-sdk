@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class ChangeResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>AccessDeniedDetail</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The data returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Instance.NotFound</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Failed to find instance c-123xxx</para>
         /// </summary>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABCD-1234-5678-EFGH</para>
         /// </summary>
@@ -60,6 +70,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

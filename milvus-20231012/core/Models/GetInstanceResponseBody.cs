@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class GetInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABCD-1234-5678-EFGH</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The instance details.</para>
+        /// </summary>
         [NameInMap("instance")]
         [Validation(Required=false)]
         public InstanceDetail Instance { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

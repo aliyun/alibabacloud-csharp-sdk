@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class ListAclGroupsRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-123xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>

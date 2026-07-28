@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class CreateAclGroupRequest : TeaModel {
         /// <summary>
+        /// <para>Specify one or more CIDR blocks, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>140.205.11.0/24,140.205.11.2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Cidrs { get; set; }
 
         /// <summary>
+        /// <para>The name of the ACL group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string GroupName { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-xxxx</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

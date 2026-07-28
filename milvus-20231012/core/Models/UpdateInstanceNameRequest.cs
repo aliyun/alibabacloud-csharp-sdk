@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class UpdateInstanceNameRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

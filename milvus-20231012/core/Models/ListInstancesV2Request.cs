@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class ListInstancesV2Request : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-123xxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The cluster name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>milvus-test</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of records to retrieve in a single request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next request (not currently enabled).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>None</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-123xxx</para>
         /// </summary>
@@ -73,11 +89,16 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags in JSON format.</para>
+        /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
         public List<ListInstancesV2RequestTag> Tag { get; set; }
         public class ListInstancesV2RequestTag : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>k1</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v1</para>
             /// </summary>

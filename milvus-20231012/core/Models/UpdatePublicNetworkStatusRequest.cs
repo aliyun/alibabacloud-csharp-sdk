@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class UpdatePublicNetworkStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The CIDR blocks.</para>
+        /// <para>The CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>192.168.**.**</c>/24,<c>172.1.**.**</c>/16</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Cidr { get; set; }
 
         /// <summary>
-        /// <para>The component type. Valid values:</para>
+        /// <para>The component type. Valid value:</para>
         /// <list type="bullet">
         /// <item><description>Proxy</description></item>
         /// </list>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ComponentType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Enable /disable the Internet.</para>
+        /// <para>Specifies whether to enable public network access.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

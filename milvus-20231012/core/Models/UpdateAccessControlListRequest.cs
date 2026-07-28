@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class UpdateAccessControlListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of public network access control</para>
+        /// <para>The public access control ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acl-123xxx</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string AclId { get; set; }
 
         /// <summary>
-        /// <para>The CIDR blocks.</para>
+        /// <para>The CIDR block.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.1.0/24,172.16.0.0/16</para>
+        /// <para><c>192.168.**.**</c>/24,<c>172.1.**.**</c>/16</para>
         /// </summary>
         [NameInMap("Cidr")]
         [Validation(Required=false)]
         public string Cidr { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-123xxx</para>

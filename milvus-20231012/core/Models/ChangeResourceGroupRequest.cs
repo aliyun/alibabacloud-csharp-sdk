@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The new resource group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-123xxx</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The resource ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-xxx</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>instance</para>
         /// </summary>

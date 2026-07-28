@@ -18,7 +18,19 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"eu-central-1", "milvus.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "milvus.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "milvus.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "milvus.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "milvus.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "milvus.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "milvus.cn-hangzhou.aliyuncs.com"},
+                {"cn-beijing", "milvus.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-1", "milvus.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("milvus", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +51,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -101,7 +113,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -163,7 +175,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -182,7 +194,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -201,7 +213,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建白名单分组</para>
+        /// <para>Creates an ACL group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -259,7 +271,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建白名单分组</para>
+        /// <para>Creates an ACL group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -317,7 +329,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建白名单分组</para>
+        /// <para>Creates an ACL group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -336,7 +348,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建白名单分组</para>
+        /// <para>Creates an ACL group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -355,7 +367,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a service role for Milvus to access other cloud products</para>
+        /// <para>Creates the server role required by Milvus to access other cloud products.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -391,7 +403,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a service role for Milvus to access other cloud products</para>
+        /// <para>Creates the server role required by Milvus to access other cloud products.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -427,7 +439,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a service role for Milvus to access other cloud products</para>
+        /// <para>Creates the server role required by Milvus to access other cloud products.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -442,7 +454,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a service role for Milvus to access other cloud products</para>
+        /// <para>Creates the server role required by Milvus to access other cloud products.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -457,7 +469,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates a cluster instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -609,7 +621,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates a cluster instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -761,7 +773,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates a cluster instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -780,7 +792,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates a cluster instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -799,7 +811,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -849,7 +861,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -899,7 +911,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -918,7 +930,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1197,7 +1209,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1247,7 +1259,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1297,7 +1309,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1316,7 +1328,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1335,7 +1347,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the details of an instance.</para>
+        /// <para>Retrieves the details of a single instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1381,7 +1393,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the details of an instance.</para>
+        /// <para>Retrieves the details of a single instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1427,7 +1439,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the details of an instance.</para>
+        /// <para>Retrieves the details of a single instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1446,7 +1458,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the details of an instance.</para>
+        /// <para>Retrieves the details of a single instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1465,7 +1477,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户下的分组信息和内容</para>
+        /// <para>Retrieves one or more access control list (ACL) groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1515,7 +1527,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户下的分组信息和内容</para>
+        /// <para>Retrieves one or more access control list (ACL) groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1565,7 +1577,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户下的分组信息和内容</para>
+        /// <para>Retrieves one or more access control list (ACL) groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1584,7 +1596,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户下的分组信息和内容</para>
+        /// <para>Retrieves one or more access control list (ACL) groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1603,7 +1615,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the list of Milvus instances under the current account.</para>
+        /// <para>Retrieves a list of Milvus instances in the current account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1679,7 +1691,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the list of Milvus instances under the current account.</para>
+        /// <para>Retrieves a list of Milvus instances in the current account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1755,7 +1767,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the list of Milvus instances under the current account.</para>
+        /// <para>Retrieves a list of Milvus instances in the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1774,7 +1786,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the list of Milvus instances under the current account.</para>
+        /// <para>Retrieves a list of Milvus instances in the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1793,7 +1805,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID或者名称搜索集群</para>
+        /// <para>Searches for clusters by cluster ID or name.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1877,7 +1889,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID或者名称搜索集群</para>
+        /// <para>Searches for clusters by cluster ID or name.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1961,7 +1973,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID或者名称搜索集群</para>
+        /// <para>Searches for clusters by cluster ID or name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1980,7 +1992,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据集群ID或者名称搜索集群</para>
+        /// <para>Searches for clusters by cluster ID or name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1999,7 +2011,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the configuration parameters of each component of Milvus.</para>
+        /// <para>Modifies the configuration parameters for Milvus components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2053,7 +2065,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the configuration parameters of each component of Milvus.</para>
+        /// <para>Modifies the configuration parameters for Milvus components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2107,7 +2119,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the configuration parameters of each component of Milvus.</para>
+        /// <para>Modifies the configuration parameters for Milvus components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2126,7 +2138,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the configuration parameters of each component of Milvus.</para>
+        /// <para>Modifies the configuration parameters for Milvus components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2145,7 +2157,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2203,7 +2215,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2261,7 +2273,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2280,7 +2292,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2299,7 +2311,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标签</para>
+        /// <para>Remove resource tags.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2371,7 +2383,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标签</para>
+        /// <para>Remove resource tags.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2443,7 +2455,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标签</para>
+        /// <para>Remove resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2462,7 +2474,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标签</para>
+        /// <para>Remove resource tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2481,7 +2493,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure Public IP Address Whitelist</para>
+        /// <para>Sets the IP address whitelist for public access to a Milvus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2535,7 +2547,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure Public IP Address Whitelist</para>
+        /// <para>Sets the IP address whitelist for public access to a Milvus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2589,7 +2601,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure Public IP Address Whitelist</para>
+        /// <para>Sets the IP address whitelist for public access to a Milvus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2608,7 +2620,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configure Public IP Address Whitelist</para>
+        /// <para>Sets the IP address whitelist for public access to a Milvus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2627,7 +2639,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改分组内的白名单</para>
+        /// <para>Modifies the CIDR blocks in a specified allow list group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2681,7 +2693,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改分组内的白名单</para>
+        /// <para>Modifies the CIDR blocks in a specified allow list group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2735,7 +2747,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改分组内的白名单</para>
+        /// <para>Modifies the CIDR blocks in a specified allow list group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2754,7 +2766,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改分组内的白名单</para>
+        /// <para>Modifies the CIDR blocks in a specified allow list group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2773,7 +2785,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2853,7 +2865,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2933,7 +2945,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2952,7 +2964,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2971,7 +2983,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of an instance.</para>
+        /// <para>Changes the name of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3021,7 +3033,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of an instance.</para>
+        /// <para>Changes the name of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3071,7 +3083,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of an instance.</para>
+        /// <para>Changes the name of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3090,7 +3102,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of an instance.</para>
+        /// <para>Changes the name of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3109,7 +3121,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable or disable Internet access for Milvus.</para>
+        /// <para>Enables or disables public network access for a Milvus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3167,7 +3179,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable or disable Internet access for Milvus.</para>
+        /// <para>Enables or disables public network access for a Milvus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3225,7 +3237,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable or disable Internet access for Milvus.</para>
+        /// <para>Enables or disables public network access for a Milvus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3244,7 +3256,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable or disable Internet access for Milvus.</para>
+        /// <para>Enables or disables public network access for a Milvus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

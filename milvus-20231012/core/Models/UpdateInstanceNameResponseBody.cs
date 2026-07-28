@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class UpdateInstanceNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed information about the failed permission verification.</para>
+        /// <para>Details about the access denied error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance.NotFound</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABCD-1234-5678-EFGH</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

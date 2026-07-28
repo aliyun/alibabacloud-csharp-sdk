@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class TagResourcesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABCD-1234-5678-EFGH</para>
         /// </summary>
