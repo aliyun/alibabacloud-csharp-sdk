@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class CreateServiceLinkedRoleForSelectDBResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F203FA74-3041-589F-BE66-E570793A0C91</para>
         /// </summary>

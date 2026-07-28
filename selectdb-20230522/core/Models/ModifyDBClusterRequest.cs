@@ -28,6 +28,23 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ClusterNodeType { get; set; }
 
         /// <summary>
+        /// <para>The instance class of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>selectdb.xlarge</b>: 4 cores, 32 GB memory.</para>
+        /// </description></item>
+        /// <item><description><para><b>selectdb.2xlarge</b>: 8 cores, 64 GB memory.</para>
+        /// </description></item>
+        /// <item><description><para><b>selectdb.4xlarge</b>: 16 cores, 128 GB memory.</para>
+        /// </description></item>
+        /// <item><description><para><b>selectdb.8xlarge</b>: 32 cores, 256 GB memory.</para>
+        /// </description></item>
+        /// <item><description><para><b>selectdb.16xlarge</b>: 16 cores, 512 GB memory.</para>
+        /// </description></item>
+        /// <item><description><para><b>selectdb.24xlarge</b>: 24 cores, 768 GB memory.</para>
+        /// </description></item>
+        /// <item><description><para><b>selectdb.32xlarge</b>: 32 cores, 1024 GB memory.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +55,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBClusterClass { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +66,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +77,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance. Set the value to selectdb.</para>
+        /// <para>The database type. The value is fixed to selectdb.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb</para>
@@ -68,6 +87,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string Engine { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

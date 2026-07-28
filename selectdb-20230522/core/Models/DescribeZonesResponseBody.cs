@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeZonesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of results.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeZonesResponseBodyItems> Items { get; set; }
         public class DescribeZonesResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The zone ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-i</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
+        /// <para>The number of entries per page for a paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page of results. If this parameter is empty, all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40831b4f-d91d-4796-9589-ad306ec528d5</para>
         /// </summary>

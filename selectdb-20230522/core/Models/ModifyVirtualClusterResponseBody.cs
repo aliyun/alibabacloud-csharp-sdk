@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifyVirtualClusterResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyVirtualClusterResponseBodyData Data { get; set; }
         public class ModifyVirtualClusterResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>selectdb-vcg-b****-be</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DbClusterId { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-7213cjv****</para>
             /// </summary>
@@ -32,7 +39,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06758CAB-1204-5852-A471-29C87D5C1D0F</para>

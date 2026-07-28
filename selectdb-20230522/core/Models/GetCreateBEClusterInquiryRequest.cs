@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class GetCreateBEClusterInquiryRequest : TeaModel {
         /// <summary>
-        /// <para>The size of the elastic cache.</para>
+        /// <para>The elastic cache space.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -21,11 +21,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         /// <summary>
         /// <para>The billing method.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PREPAY: subscription</description></item>
-        /// <item><description>POSTPAY: pay-as-you-go</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,13 +32,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         /// <summary>
         /// <para>The commodity code.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>selectdb_pre_public_intl: subscription commodity on the international site (alibabacloud.com)</description></item>
-        /// <item><description>selectdb_go_public_cn: pay-as-you-go commodity on the China site (aliyun.com)</description></item>
-        /// <item><description>selectdb_go_public_intl: pay-as-you-go commodity on the international site (alibabacloud.com)</description></item>
-        /// <item><description>selectdb_pre_public_cn: subscription commodity on the China site (aliyun.com).</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb_go_public_cn</para>
@@ -53,7 +41,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The number of elastic CPU cores.</para>
+        /// <para>The elastic computing resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -74,7 +62,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The size of the reserved cache.</para>
+        /// <para>The reserved cache space.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -84,7 +72,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? PreCacheSize { get; set; }
 
         /// <summary>
-        /// <para>The number of reserved CPU cores.</para>
+        /// <para>The reserved computing resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -95,14 +83,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         /// <summary>
         /// <para>The billing cycle.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
-        /// <item><description>Minute</description></item>
-        /// <item><description>Hour</description></item>
-        /// <item><description>Day</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -121,7 +101,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string PromotionOptionNo { get; set; }
 
         /// <summary>
-        /// <para>The number of clusters to be created.</para>
+        /// <para>The quantity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

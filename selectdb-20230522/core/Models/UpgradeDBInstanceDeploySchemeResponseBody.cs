@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class UpgradeDBInstanceDeploySchemeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ADF42B18-43FD-5100-83A9-BE81AB70C863</para>
         /// </summary>

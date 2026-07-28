@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBClusterConfigChangeLogsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>failed</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The information returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -28,13 +30,15 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>selectdb-cn-wny3li00g02-be</para>
+            /// <para>selectdb-cn-7213c8****-be</para>
             /// </summary>
             [NameInMap("DbClusterId")]
             [Validation(Required=false)]
             public string DbClusterId { get; set; }
 
             /// <summary>
+            /// <para>The numeric ID of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6585</para>
             /// </summary>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>selectdb-cn-wny3li00g02</para>
+            /// <para>selectdb-cn-7213c8****</para>
             /// </summary>
             [NameInMap("DbInstanceName")]
             [Validation(Required=false)]
@@ -60,6 +64,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public List<DescribeDBClusterConfigChangeLogsResponseBodyDataParamChangeLogs> ParamChangeLogs { get; set; }
             public class DescribeDBClusterConfigChangeLogsResponseBodyDataParamChangeLogs : TeaModel {
                 /// <summary>
+                /// <para>The time when the task was created. The time is in GMT.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-11T08:53:32Z</para>
                 /// </summary>
@@ -68,6 +74,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
+                /// <para>The time when the task was last modified. The time is in GMT.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-03-08T10:08Z</para>
                 /// </summary>
@@ -76,7 +84,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the change log.</para>
+                /// <para>The ID of the change record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>617975</para>
@@ -86,7 +94,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the modification has taken effect.</para>
+                /// <para>Indicates whether the configuration has taken effect.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -96,7 +104,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public bool? IsApplied { get; set; }
 
                 /// <summary>
-                /// <para>The parameter name.</para>
+                /// <para>The name of the configuration item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cumulative_compaction_rounds_for_each_base_compaction_round</para>
@@ -106,6 +114,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The new parameter value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
                 /// </summary>
@@ -114,6 +124,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string NewValue { get; set; }
 
                 /// <summary>
+                /// <para>The original parameter value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -136,7 +148,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>The dynamic code. This parameter is not returned.</para>
+        /// <para>The dynamic code. This parameter is not used. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -146,7 +158,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not returned.</para>
+        /// <para>The dynamic message. This parameter is not used. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>An error occurred while processing your request.</para>
@@ -156,6 +168,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F8900A96-67F7-5274-A41B-7722E1ECF8C9</para>
         /// </summary>

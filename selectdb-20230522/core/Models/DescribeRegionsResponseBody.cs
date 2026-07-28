@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public class DescribeRegionsResponseBodyRegionModelListZones : TeaModel {
                 /// <summary>
                 /// <para>The zone description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>北京H可用区</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -62,6 +65,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
                 /// <summary>
                 /// <para>The zone name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Beijing H</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]

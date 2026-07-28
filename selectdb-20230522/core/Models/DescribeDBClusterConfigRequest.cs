@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The configuration file to be modified.</para>
         /// <list type="bullet">
-        /// <item><description>For a compute cluster, set the value to be.conf.</description></item>
-        /// <item><description>For a frontend (FE) cluster, set the value to fe.conf.</description></item>
+        /// <item><description><para>For a compute cluster, set the value to be.conf.</para>
+        /// </description></item>
+        /// <item><description><para>For a frontend (FE) cluster, set the value to fe.conf.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

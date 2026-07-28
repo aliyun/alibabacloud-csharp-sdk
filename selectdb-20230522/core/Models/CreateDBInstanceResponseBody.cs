@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class CreateDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

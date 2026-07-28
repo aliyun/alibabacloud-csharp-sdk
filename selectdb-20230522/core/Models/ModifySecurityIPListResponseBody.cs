@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
     public class ModifySecurityIPListResponseBody : TeaModel {
         /// <summary>
         /// <para>The name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Instance test</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]

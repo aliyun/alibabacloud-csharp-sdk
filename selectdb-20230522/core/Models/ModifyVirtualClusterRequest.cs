@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifyVirtualClusterRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the primary cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>selectdb-o2yg***-be</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ActiveClusterId { get; set; }
 
         /// <summary>
+        /// <para>The virtual cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the standby cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>selectdb-pu6y****-be</para>
         /// </summary>

@@ -8,49 +8,46 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
-    public class ChangeResourceGroupRequest : TeaModel {
+    public class DescribeTableSchemaRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-shenzhen</para>
+        /// <para>selectdb-cn-7213cjv****</para>
+        /// </summary>
+        [NameInMap("DBInstanceId")]
+        [Validation(Required=false)]
+        public string DBInstanceId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test_db</para>
+        /// </summary>
+        [NameInMap("Database")]
+        [Validation(Required=false)]
+        public string Database { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The destination resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test_resource_group</para>
+        /// <para>test_tb</para>
         /// </summary>
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("Table")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the instance you want to move.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>selectdb-cn-7213cjv****</para>
-        /// </summary>
-        [NameInMap("ResourceId")]
-        [Validation(Required=false)]
-        public string ResourceId { get; set; }
-
-        /// <summary>
-        /// <para>The type of the resource. Default value: <c>DBInstance</c>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>DBInstance</para>
-        /// </summary>
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
+        public string Table { get; set; }
 
     }
 

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DeleteDBInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BD0D0B17-C145-5B91-BFC2-6791927EE973</para>
         /// </summary>

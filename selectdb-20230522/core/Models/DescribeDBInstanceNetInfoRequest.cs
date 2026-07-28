@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBInstanceNetInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeAllDBInstanceClassRequest : TeaModel {
         /// <summary>
+        /// <para>Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

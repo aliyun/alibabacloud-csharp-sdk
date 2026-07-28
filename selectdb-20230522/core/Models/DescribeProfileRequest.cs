@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
-    public class UpgradeDBInstanceDeploySchemeShrinkRequest : TeaModel {
+    public class DescribeProfileRequest : TeaModel {
         /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
@@ -21,15 +21,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A list of multi-zone configurations.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The query ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sq202510231018sh3b69ad10014154</para>
         /// </summary>
-        [NameInMap("MultiZone")]
+        [NameInMap("QueryId")]
         [Validation(Required=false)]
-        public string MultiZoneShrink { get; set; }
+        public string QueryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,10 +40,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
 
     }
 

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class StopBEClusterRequest : TeaModel {
         /// <summary>
+        /// <para>Cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

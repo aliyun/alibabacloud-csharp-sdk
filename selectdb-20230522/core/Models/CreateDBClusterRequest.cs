@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class CreateDBClusterRequest : TeaModel {
         /// <summary>
+        /// <para>The reserved cache size.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string CacheSize { get; set; }
 
         /// <summary>
+        /// <para>The billing method of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
+        /// </description></item>
+        /// <item><description><para><b>Prepaid</b>: subscription.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +46,23 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ClusterNodeType { get; set; }
 
         /// <summary>
+        /// <para>The instance type of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>selectdb.xlarge</b>: 4 cores, 32 GB.</para>
+        /// </description></item>
+        /// <item><description><para><b>selectdb.2xlarge</b>: 8 cores, 64 GB.</para>
+        /// </description></item>
+        /// <item><description><para><b>selectdb.4xlarge</b>: 16 cores, 128 GB.</para>
+        /// </description></item>
+        /// <item><description><para><b>selectdb.8xlarge</b>: 32 cores, 256 GB.</para>
+        /// </description></item>
+        /// <item><description><para><b>selectdb.16xlarge</b>: 64 cores, 512 GB.</para>
+        /// </description></item>
+        /// <item><description><para><b>selectdb.24xlarge</b>: 96 cores, 768 GB.</para>
+        /// </description></item>
+        /// <item><description><para><b>selectdb.32xlarge</b>: 128 cores, 1024 GB.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +73,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBClusterClass { get; set; }
 
         /// <summary>
+        /// <para>The description of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +84,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>代表资源一级ID的资源属性字段</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +95,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance.</para>
+        /// <para>The database engine type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb</para>
@@ -79,6 +105,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string Engine { get; set; }
 
         /// <summary>
+        /// <para>The database engine version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,6 +116,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
+        /// <para>The billing cycle of the subscription cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Year</b>: The cluster is billed on a yearly basis.</para>
+        /// </description></item>
+        /// <item><description><para><b>Month</b>: The cluster is billed on a monthly basis.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is required and takes effect only when <b>ChargeType</b> is set to <b>Prepaid</b>.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>Month</para>
         /// </summary>
@@ -97,6 +135,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string Period { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -119,6 +158,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public double? ScaleMin { get; set; }
 
         /// <summary>
+        /// <para>The subscription duration of the subscription cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>If Period is set to Year, valid values for UsedTime are 1, 2, 3, and 5.</para>
+        /// </description></item>
+        /// <item><description><para>If Period is set to Month, the value of UsedTime can be an integer from 1 to 9.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is required and takes effect only when ChargeType is set to Prepaid.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -127,6 +177,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string UsedTime { get; set; }
 
         /// <summary>
+        /// <para>The vSwitch ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -137,7 +188,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>VPC ID.</para>
+        /// <para>The VPC ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,6 +199,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string VpcId { get; set; }
 
         /// <summary>
+        /// <para>The zone ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

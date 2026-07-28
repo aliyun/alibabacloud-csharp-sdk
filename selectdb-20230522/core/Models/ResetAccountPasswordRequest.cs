@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
         /// <summary>
-        /// <para>The database account of the instance.</para>
+        /// <para>The database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The password of the database account. Requirements:</para>
+        /// <para>The password of the database account. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
-        /// <item><description>The following special characters can be used: ! @ # $ % ^ &amp; \* ( ) _ + - =</description></item>
+        /// <item><description>The password must consist of at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
+        /// <item><description>The special characters are !@#$%^&amp;\*()_+-=.</description></item>
         /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

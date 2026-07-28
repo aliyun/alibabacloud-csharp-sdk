@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifyBEClusterAttributeResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>58E21E11-90FF-50F8-A615-8DEB193676E0</para>
         /// </summary>

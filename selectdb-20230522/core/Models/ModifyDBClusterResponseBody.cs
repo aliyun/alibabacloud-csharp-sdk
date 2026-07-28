@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifyDBClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>代表资源一级ID的资源属性字段</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb-cn-7213cjv****</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyDBClusterResponseBodyData Data { get; set; }
         public class ModifyDBClusterResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-7213cjv****</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-7213cjv****</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DBInstanceId { get; set; }
 
             /// <summary>
+            /// <para>The order ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>219396937240838</para>
             /// </summary>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0BF61F90-ACED-55DF-A6FE-56714B2BFCF6</para>
         /// </summary>

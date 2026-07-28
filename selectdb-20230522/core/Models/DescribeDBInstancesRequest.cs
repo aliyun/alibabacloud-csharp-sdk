@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
     public class DescribeDBInstancesRequest : TeaModel {
         /// <summary>
         /// <para>The description of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>New instance test</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
@@ -29,12 +32,18 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The state of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CREATING</b>: The instance is being created.</description></item>
-        /// <item><description><b>ACTIVATION</b>: The instance is running.</description></item>
-        /// <item><description><b>RESOURCE_CHANGING</b>: The resource configuration of the instance is being changed.</description></item>
-        /// <item><description><b>ORDER_PREPARING</b>: The order is being confirmed.</description></item>
-        /// <item><description><b>READONLY_RESOURCE_CHANGING</b>: The resource configuration of the instance is being changed and the instance is write-locked.</description></item>
-        /// <item><description><b>DELETING</b>: The instance is being deleted.</description></item>
+        /// <item><description><para><b>CREATING</b>: The instance is being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>ACTIVATION</b>: The instance is running.</para>
+        /// </description></item>
+        /// <item><description><para><b>RESOURCE_CHANGING</b>: The instance is being upgraded or downgraded.</para>
+        /// </description></item>
+        /// <item><description><para><b>ORDER_PREPARING</b>: The order is being confirmed.</para>
+        /// </description></item>
+        /// <item><description><para><b>READONLY_RESOURCE_CHANGING</b>: The instance configuration is being changed, and the instance is write-locked.</para>
+        /// </description></item>
+        /// <item><description><para><b>DELETING</b>: The instance is being deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,11 +64,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of entries to return on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +82,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +93,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-4690g37929****</para>
@@ -94,11 +106,16 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags of instances.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDBInstancesRequestTag> Tag { get; set; }
         public class DescribeDBInstancesRequestTag : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testKey</para>
             /// </summary>
@@ -107,6 +124,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testValue</para>
             /// </summary>

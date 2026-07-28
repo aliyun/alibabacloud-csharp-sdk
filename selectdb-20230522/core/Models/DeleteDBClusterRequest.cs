@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DeleteDBClusterRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>代表资源一级ID的资源属性字段</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +32,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>代表资源组的资源属性字段</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-4690g37929****</para>

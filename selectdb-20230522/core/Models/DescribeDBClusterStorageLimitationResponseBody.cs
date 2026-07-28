@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBClusterStorageLimitationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details of the access denial. This field is returned only when the RAM verification fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>failed</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDBClusterStorageLimitationResponseBodyData Data { get; set; }
         public class DescribeDBClusterStorageLimitationResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of cache specifications.</para>
+            /// </summary>
             [NameInMap("ClassCodeList")]
             [Validation(Required=false)]
             public List<DescribeDBClusterStorageLimitationResponseBodyDataClassCodeList> ClassCodeList { get; set; }
             public class DescribeDBClusterStorageLimitationResponseBodyDataClassCodeList : TeaModel {
                 /// <summary>
+                /// <para>The specification code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>selectdb.xlarge</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string ClassCode { get; set; }
 
                 /// <summary>
+                /// <para>The number of vCPU cores.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? CpuCores { get; set; }
 
                 /// <summary>
+                /// <para>The default cache size in GB.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? DefaultStorageInGB { get; set; }
 
                 /// <summary>
+                /// <para>The maximum cache size in GB.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? MaxStorageInGB { get; set; }
 
                 /// <summary>
+                /// <para>The memory size in GB.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? MemoryInGB { get; set; }
 
                 /// <summary>
+                /// <para>The minimum cache size in GB.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? MinStorageInGB { get; set; }
 
                 /// <summary>
+                /// <para>The cache step size in GB.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
+        /// <para>The dynamic code. This parameter is not used. Ignore this parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -94,6 +118,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>The dynamic message. This parameter is not used. Ignore this parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>An error occurred while processing your request.</para>
         /// </summary>
@@ -102,6 +128,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4773E4EC-025D-509F-AEA9-D53123FDFB0F</para>
         /// </summary>

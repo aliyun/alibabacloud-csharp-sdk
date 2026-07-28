@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeVSwitchesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of results.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeVSwitchesResponseBodyItems> Items { get; set; }
         public class DescribeVSwitchesResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The vSwitch ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1usf8eabhvibkkfde96</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
+            /// <para>The vSwitch name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>subnet</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string VSwitchName { get; set; }
 
             /// <summary>
+            /// <para>The zone ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-i</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token that is used to start the next query. If this parameter is empty, all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>459a0909c0315bfbe0b5e8707e68181f</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -72,7 +89,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4773E4EC-025D-509F-AEA9-D53123FDFB0F</para>
@@ -82,6 +99,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15</para>
         /// </summary>

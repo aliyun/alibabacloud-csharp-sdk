@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class UpgradeDBInstanceDeploySchemeRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>A list of multi-zone configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MultiZone")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public List<UpgradeDBInstanceDeploySchemeRequestMultiZone> MultiZone { get; set; }
         public class UpgradeDBInstanceDeploySchemeRequestMultiZone : TeaModel {
             /// <summary>
+            /// <para>The vSwitch ID.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
+            /// <para>The zone ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -46,6 +50,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
+        /// <para>The ID of the region where the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

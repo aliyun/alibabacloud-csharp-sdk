@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The instance parameter to be modified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MaintainTime</b>: Modify the maintenance window of the instance in the hh:mm-hh:mm format.</description></item>
-        /// <item><description><b>DBInstanceDescription</b>: Modify the description of the instance.</description></item>
+        /// <item><description><para><b>MaintainTime</b>: Modify the maintenance window of the instance in the hh:mm-hh:mm format.</para>
+        /// </description></item>
+        /// <item><description><para><b>DBInstanceDescription</b>: Modify the description of the instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,8 +55,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The new value of the instance parameter to be modified. Examples:</para>
         /// <list type="bullet">
-        /// <item><description>If InstanceAttributeType is set to MaintainTime, you can set Value to 00:00-06:00.</description></item>
-        /// <item><description>If InstanceAttributeType is set to DBInstanceDescription, you can set Value to testdb.</description></item>
+        /// <item><description><para>If InstanceAttributeType is set to MaintainTime, you can set Value to 00:00-06:00.</para>
+        /// </description></item>
+        /// <item><description><para>If InstanceAttributeType is set to DBInstanceDescription, you can set Value to testdb.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

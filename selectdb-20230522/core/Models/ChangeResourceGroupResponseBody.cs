@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ChangeResourceGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FCEEA97F-85CA-5A9F-932F-B4BAEA170896</para>
         /// </summary>

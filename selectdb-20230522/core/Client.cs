@@ -18,7 +18,35 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "selectdb.us-west-1.aliyuncs.com"},
+                {"us-east-1", "selectdb.us-east-1.aliyuncs.com"},
+                {"na-south-1", "selectdb.na-south-1.aliyuncs.com"},
+                {"eu-west-1", "selectdb.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "selectdb.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "selectdb.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "selectdb.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "selectdb.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "selectdb.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "selectdb.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "selectdb.cn-qingdao.aliyuncs.com"},
+                {"cn-huhehaote", "selectdb.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "selectdb.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "selectdb.aliyuncs.com"},
+                {"cn-hangzhou", "selectdb.aliyuncs.com"},
+                {"cn-guangzhou", "selectdb.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "selectdb.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "selectdb.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-7", "selectdb.aliyuncs.com"},
+                {"ap-southeast-6", "selectdb.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "selectdb.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "selectdb.aliyuncs.com"},
+                {"ap-southeast-1", "selectdb.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "selectdb.aliyuncs.com"},
+                {"ap-northeast-1", "selectdb.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("selectdb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -191,7 +219,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Moves a specified database instance to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -245,7 +273,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Moves a specified database instance to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -299,7 +327,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Moves a specified database instance to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -317,7 +345,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Moves a specified database instance to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -335,7 +363,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a precheck before an ApsaraDB for SelectDB instance is created.</para>
+        /// <para>Performs a precheck on the resources required to create an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -441,7 +469,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a precheck before an ApsaraDB for SelectDB instance is created.</para>
+        /// <para>Performs a precheck on the resources required to create an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -547,7 +575,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a precheck before an ApsaraDB for SelectDB instance is created.</para>
+        /// <para>Performs a precheck on the resources required to create an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -565,7 +593,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a precheck before an ApsaraDB for SelectDB instance is created.</para>
+        /// <para>Performs a precheck on the resources required to create an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -581,11 +609,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             return await CheckCreateDBInstanceWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>判断指定 IP 是否已经存在于网络白名单组</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// CheckIpExistsInSecurityIpListRequest
         /// </param>
@@ -619,11 +642,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             return TeaModel.ToObject<CheckIpExistsInSecurityIpListResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>判断指定 IP 是否已经存在于网络白名单组</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// CheckIpExistsInSecurityIpListRequest
         /// </param>
@@ -657,11 +675,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             return TeaModel.ToObject<CheckIpExistsInSecurityIpListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>判断指定 IP 是否已经存在于网络白名单组</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// CheckIpExistsInSecurityIpListRequest
         /// </param>
@@ -675,11 +688,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             return CheckIpExistsInSecurityIpListWithOptions(request, runtime);
         }
 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>判断指定 IP 是否已经存在于网络白名单组</para>
-        /// </summary>
-        /// 
         /// <param name="request">
         /// CheckIpExistsInSecurityIpListRequest
         /// </param>
@@ -695,7 +703,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the service-linked role of ApsaraDB for SelectDB.</para>
+        /// <para>Call this operation to check the service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -741,7 +749,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the service-linked role of ApsaraDB for SelectDB.</para>
+        /// <para>Call this operation to check the service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -787,7 +795,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the service-linked role of ApsaraDB for SelectDB.</para>
+        /// <para>Call this operation to check the service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -805,7 +813,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the service-linked role of ApsaraDB for SelectDB.</para>
+        /// <para>Call this operation to check the service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -823,13 +831,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Creates a cluster for a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>: For an instance that uses the pay-as-you-go billing method, you can create only pay-as-you-go clusters. For an instance that uses the subscription billing method, you can create pay-as-you-go or subscription clusters.</para>
+        /// <para>Warning: 
+        /// Pay-as-you-go instances support only pay-as-you-go clusters. Subscription instances support both pay-as-you-go and subscription clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -942,13 +951,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Creates a cluster for a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>: For an instance that uses the pay-as-you-go billing method, you can create only pay-as-you-go clusters. For an instance that uses the subscription billing method, you can create pay-as-you-go or subscription clusters.</para>
+        /// <para>Warning: 
+        /// Pay-as-you-go instances support only pay-as-you-go clusters. Subscription instances support both pay-as-you-go and subscription clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1061,13 +1071,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Creates a cluster for a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>: For an instance that uses the pay-as-you-go billing method, you can create only pay-as-you-go clusters. For an instance that uses the subscription billing method, you can create pay-as-you-go or subscription clusters.</para>
+        /// <para>Warning: 
+        /// Pay-as-you-go instances support only pay-as-you-go clusters. Subscription instances support both pay-as-you-go and subscription clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1086,13 +1097,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Creates a cluster for a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>: For an instance that uses the pay-as-you-go billing method, you can create only pay-as-you-go clusters. For an instance that uses the subscription billing method, you can create pay-as-you-go or subscription clusters.</para>
+        /// <para>Warning: 
+        /// Pay-as-you-go instances support only pay-as-you-go clusters. Subscription instances support both pay-as-you-go and subscription clusters.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1294,6 +1306,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522
         /// <para>Creates an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscription instances cannot be deleted.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// CreateDBInstanceRequest
         /// </param>
@@ -1447,6 +1464,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522
         /// <summary>
         /// <para>Creates an ApsaraDB for SelectDB instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscription instances cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDBInstanceRequest
@@ -1602,6 +1624,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522
         /// <para>Creates an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscription instances cannot be deleted.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateDBInstanceRequest
         /// </param>
@@ -1620,6 +1647,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522
         /// <para>Creates an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscription instances cannot be deleted.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateDBInstanceRequest
         /// </param>
@@ -1635,7 +1667,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled scaling rule.</para>
+        /// <para>Creates a time-based scaling rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1701,7 +1733,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled scaling rule.</para>
+        /// <para>Creates a time-based scaling rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1767,7 +1799,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled scaling rule.</para>
+        /// <para>Creates a time-based scaling rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1785,7 +1817,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled scaling rule.</para>
+        /// <para>Creates a time-based scaling rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1803,7 +1835,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role for ApsaraDB for SelectDB.</para>
+        /// <para>Call this operation to create a service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1849,7 +1881,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role for ApsaraDB for SelectDB.</para>
+        /// <para>Call this operation to create a service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1895,7 +1927,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role for ApsaraDB for SelectDB.</para>
+        /// <para>Call this operation to create a service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1913,7 +1945,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role for ApsaraDB for SelectDB.</para>
+        /// <para>Call this operation to create a service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1931,8 +1963,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建虚拟集群</para>
+        /// <para>Creates a virtual cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is supported only for instances that use zone-redundant storage. The following conditions must also be met:</para>
+        /// <list type="bullet">
+        /// <item><description>The minor engine version of the instance is 4.0.7 or later.</description></item>
+        /// <item><description>The primary and standby clusters are in different zones.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateVirtualClusterRequest
@@ -1989,8 +2030,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建虚拟集群</para>
+        /// <para>Creates a virtual cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is supported only for instances that use zone-redundant storage. The following conditions must also be met:</para>
+        /// <list type="bullet">
+        /// <item><description>The minor engine version of the instance is 4.0.7 or later.</description></item>
+        /// <item><description>The primary and standby clusters are in different zones.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateVirtualClusterRequest
@@ -2047,8 +2097,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建虚拟集群</para>
+        /// <para>Creates a virtual cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is supported only for instances that use zone-redundant storage. The following conditions must also be met:</para>
+        /// <list type="bullet">
+        /// <item><description>The minor engine version of the instance is 4.0.7 or later.</description></item>
+        /// <item><description>The primary and standby clusters are in different zones.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateVirtualClusterRequest
@@ -2065,8 +2124,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建虚拟集群</para>
+        /// <para>Creates a virtual cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is supported only for instances that use zone-redundant storage. The following conditions must also be met:</para>
+        /// <list type="bullet">
+        /// <item><description>The minor engine version of the instance is 4.0.7 or later.</description></item>
+        /// <item><description>The primary and standby clusters are in different zones.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateVirtualClusterRequest
@@ -2383,8 +2451,13 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an ApsaraDB for SelectDB instance.</para>
+        /// <para>Deletes a specified ApsaraDB SelectDB instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscription instances cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDBInstanceRequest
@@ -2435,8 +2508,13 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an ApsaraDB for SelectDB instance.</para>
+        /// <para>Deletes a specified ApsaraDB SelectDB instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscription instances cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDBInstanceRequest
@@ -2487,8 +2565,13 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an ApsaraDB for SelectDB instance.</para>
+        /// <para>Deletes a specified ApsaraDB SelectDB instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscription instances cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDBInstanceRequest
@@ -2505,8 +2588,13 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an ApsaraDB for SelectDB instance.</para>
+        /// <para>Deletes a specified ApsaraDB SelectDB instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscription instances cannot be deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDBInstanceRequest
@@ -2683,8 +2771,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除虚拟集群</para>
+        /// <para>Deletes a virtual cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation deletes only the virtual cluster. It <b>does not</b> delete the attached primary or secondary cluster.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteVirtualClusterRequest
@@ -2733,8 +2830,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除虚拟集群</para>
+        /// <para>Deletes a virtual cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation deletes only the virtual cluster. It <b>does not</b> delete the attached primary or secondary cluster.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteVirtualClusterRequest
@@ -2783,8 +2889,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除虚拟集群</para>
+        /// <para>Deletes a virtual cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation deletes only the virtual cluster. It <b>does not</b> delete the attached primary or secondary cluster.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteVirtualClusterRequest
@@ -2801,8 +2916,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除虚拟集群</para>
+        /// <para>Deletes a virtual cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation deletes only the virtual cluster. It <b>does not</b> delete the attached primary or secondary cluster.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteVirtualClusterRequest
@@ -2819,7 +2943,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about all instance specifications.</para>
+        /// <para>Retrieves all instance type information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2865,7 +2989,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about all instance specifications.</para>
+        /// <para>Retrieves all instance type information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2911,7 +3035,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about all instance specifications.</para>
+        /// <para>Retrieves all instance type information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2929,7 +3053,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about all instance specifications.</para>
+        /// <para>Retrieves all instance type information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3091,7 +3215,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration change logs of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Queries the change logs for cluster configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3153,7 +3277,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration change logs of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Queries the change logs for cluster configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3215,7 +3339,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration change logs of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Queries the change logs for cluster configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3233,7 +3357,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration change logs of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Queries the change logs for cluster configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3251,7 +3375,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群的各规格缓存限制</para>
+        /// <para>Queries the cache limits for each cluster specification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3301,7 +3425,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群的各规格缓存限制</para>
+        /// <para>Queries the cache limits for each cluster specification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3351,7 +3475,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群的各规格缓存限制</para>
+        /// <para>Queries the cache limits for each cluster specification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3369,7 +3493,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群的各规格缓存限制</para>
+        /// <para>Queries the cache limits for each cluster specification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3387,7 +3511,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about an ApsaraDB for SelectDB instance.</para>
+        /// <para>Gets the details of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3437,7 +3561,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about an ApsaraDB for SelectDB instance.</para>
+        /// <para>Gets the details of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3487,7 +3611,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about an ApsaraDB for SelectDB instance.</para>
+        /// <para>Gets the details of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3505,7 +3629,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about an ApsaraDB for SelectDB instance.</para>
+        /// <para>Gets the details of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3523,7 +3647,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information about an ApsaraDB for SelectDB instance.</para>
+        /// <para>Queries the network information of a specified ApsaraDB SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3573,7 +3697,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information about an ApsaraDB for SelectDB instance.</para>
+        /// <para>Queries the network information of a specified ApsaraDB SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3623,7 +3747,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information about an ApsaraDB for SelectDB instance.</para>
+        /// <para>Queries the network information of a specified ApsaraDB SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3641,7 +3765,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network information about an ApsaraDB for SelectDB instance.</para>
+        /// <para>Queries the network information of a specified ApsaraDB SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3659,7 +3783,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about ApsaraDB for SelectDB instances.</para>
+        /// <para>Queries instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3739,7 +3863,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about ApsaraDB for SelectDB instances.</para>
+        /// <para>Queries instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3819,7 +3943,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about ApsaraDB for SelectDB instances.</para>
+        /// <para>Queries instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3837,7 +3961,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about ApsaraDB for SelectDB instances.</para>
+        /// <para>Queries instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3963,6 +4087,338 @@ namespace AlibabaCloud.SDK.Selectdb20230522
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeElasticRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Profile analysis for a query.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>We recommend using the visual interface to run a query and obtain its QueryID. For more information, see <a href="https://help.aliyun.com/zh/selectdb/audit-queries">query audit</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Version limitations</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Version 3.0 is not supported.</description></item>
+        /// <item><description>This feature is not available for instances created before 2025-08-01. To enable this feature for an older instance, please submit a ticket.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeProfileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProfileResponse
+        /// </returns>
+        public DescribeProfileResponse DescribeProfileWithOptions(DescribeProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryId))
+            {
+                query["QueryId"] = request.QueryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeProfile",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeProfileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Profile analysis for a query.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>We recommend using the visual interface to run a query and obtain its QueryID. For more information, see <a href="https://help.aliyun.com/zh/selectdb/audit-queries">query audit</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Version limitations</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Version 3.0 is not supported.</description></item>
+        /// <item><description>This feature is not available for instances created before 2025-08-01. To enable this feature for an older instance, please submit a ticket.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeProfileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProfileResponse
+        /// </returns>
+        public async Task<DescribeProfileResponse> DescribeProfileWithOptionsAsync(DescribeProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryId))
+            {
+                query["QueryId"] = request.QueryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeProfile",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeProfileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Profile analysis for a query.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>We recommend using the visual interface to run a query and obtain its QueryID. For more information, see <a href="https://help.aliyun.com/zh/selectdb/audit-queries">query audit</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Version limitations</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Version 3.0 is not supported.</description></item>
+        /// <item><description>This feature is not available for instances created before 2025-08-01. To enable this feature for an older instance, please submit a ticket.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeProfileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProfileResponse
+        /// </returns>
+        public DescribeProfileResponse DescribeProfile(DescribeProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeProfileWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Profile analysis for a query.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>We recommend using the visual interface to run a query and obtain its QueryID. For more information, see <a href="https://help.aliyun.com/zh/selectdb/audit-queries">query audit</a>.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Version limitations</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Version 3.0 is not supported.</description></item>
+        /// <item><description>This feature is not available for instances created before 2025-08-01. To enable this feature for an older instance, please submit a ticket.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeProfileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeProfileResponse
+        /// </returns>
+        public async Task<DescribeProfileResponse> DescribeProfileAsync(DescribeProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeProfileWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution plan (Explain) for a query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQueryExplainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQueryExplainResponse
+        /// </returns>
+        public DescribeQueryExplainResponse DescribeQueryExplainWithOptions(DescribeQueryExplainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryId))
+            {
+                query["QueryId"] = request.QueryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeQueryExplain",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeQueryExplainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution plan (Explain) for a query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQueryExplainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQueryExplainResponse
+        /// </returns>
+        public async Task<DescribeQueryExplainResponse> DescribeQueryExplainWithOptionsAsync(DescribeQueryExplainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryId))
+            {
+                query["QueryId"] = request.QueryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeQueryExplain",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeQueryExplainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution plan (Explain) for a query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQueryExplainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQueryExplainResponse
+        /// </returns>
+        public DescribeQueryExplainResponse DescribeQueryExplain(DescribeQueryExplainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeQueryExplainWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution plan (Explain) for a query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeQueryExplainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeQueryExplainResponse
+        /// </returns>
+        public async Task<DescribeQueryExplainResponse> DescribeQueryExplainAsync(DescribeQueryExplainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeQueryExplainWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4215,7 +4671,311 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeVSwitches</para>
+        /// <para>Retrieve slow query statistics for a time range.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlowQueryStatsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlowQueryStatsResponse
+        /// </returns>
+        public DescribeSlowQueryStatsResponse DescribeSlowQueryStatsWithOptions(DescribeSlowQueryStatsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdMs))
+            {
+                query["ThresholdMs"] = request.ThresholdMs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopN))
+            {
+                query["TopN"] = request.TopN;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSlowQueryStats",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSlowQueryStatsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve slow query statistics for a time range.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlowQueryStatsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlowQueryStatsResponse
+        /// </returns>
+        public async Task<DescribeSlowQueryStatsResponse> DescribeSlowQueryStatsWithOptionsAsync(DescribeSlowQueryStatsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThresholdMs))
+            {
+                query["ThresholdMs"] = request.ThresholdMs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopN))
+            {
+                query["TopN"] = request.TopN;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSlowQueryStats",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSlowQueryStatsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve slow query statistics for a time range.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlowQueryStatsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlowQueryStatsResponse
+        /// </returns>
+        public DescribeSlowQueryStatsResponse DescribeSlowQueryStats(DescribeSlowQueryStatsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSlowQueryStatsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve slow query statistics for a time range.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSlowQueryStatsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSlowQueryStatsResponse
+        /// </returns>
+        public async Task<DescribeSlowQueryStatsResponse> DescribeSlowQueryStatsAsync(DescribeSlowQueryStatsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSlowQueryStatsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取表结构</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTableSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTableSchemaResponse
+        /// </returns>
+        public DescribeTableSchemaResponse DescribeTableSchemaWithOptions(DescribeTableSchemaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Database))
+            {
+                query["Database"] = request.Database;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Table))
+            {
+                query["Table"] = request.Table;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTableSchema",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTableSchemaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取表结构</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTableSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTableSchemaResponse
+        /// </returns>
+        public async Task<DescribeTableSchemaResponse> DescribeTableSchemaWithOptionsAsync(DescribeTableSchemaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Database))
+            {
+                query["Database"] = request.Database;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Table))
+            {
+                query["Table"] = request.Table;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTableSchema",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTableSchemaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取表结构</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTableSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTableSchemaResponse
+        /// </returns>
+        public DescribeTableSchemaResponse DescribeTableSchema(DescribeTableSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTableSchemaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取表结构</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTableSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTableSchemaResponse
+        /// </returns>
+        public async Task<DescribeTableSchemaResponse> DescribeTableSchemaAsync(DescribeTableSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTableSchemaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries vSwitches in a specified zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4281,7 +5041,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeVSwitches</para>
+        /// <para>Queries vSwitches in a specified zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4347,7 +5107,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeVSwitches</para>
+        /// <para>Queries vSwitches in a specified zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4365,7 +5125,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeVSwitches</para>
+        /// <para>Queries vSwitches in a specified zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4383,7 +5143,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeZones</para>
+        /// <para>Describes the available zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4433,7 +5193,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeZones</para>
+        /// <para>Describes the available zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4483,7 +5243,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeZones</para>
+        /// <para>Describes the available zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4501,7 +5261,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeZones</para>
+        /// <para>Describes the available zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4679,7 +5439,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing for creating a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Queries pricing information for creating a new cluster in a SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4717,7 +5477,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing for creating a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Queries pricing information for creating a new cluster in a SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4755,7 +5515,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing for creating a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Queries pricing information for creating a new cluster in a SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4773,7 +5533,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing for creating a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Queries pricing information for creating a new cluster in a SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4791,7 +5551,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing for changing the specifications of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Retrieves the pricing information for creating a new cluster in a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4829,7 +5589,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing for changing the specifications of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Retrieves the pricing information for creating a new cluster in a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4867,7 +5627,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing for changing the specifications of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Retrieves the pricing information for creating a new cluster in a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4885,7 +5645,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing for changing the specifications of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Retrieves the pricing information for creating a new cluster in a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4903,7 +5663,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Modifies the cluster name of an ApsaraDB SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4965,7 +5725,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Modifies the cluster name of an ApsaraDB SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5027,7 +5787,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Modifies the cluster name of an ApsaraDB SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5045,7 +5805,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Modifies the cluster name of an ApsaraDB SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5063,7 +5823,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Scales out or in a specified ApsaraDB for SelectDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5145,7 +5905,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Scales out or in a specified ApsaraDB for SelectDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5227,7 +5987,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Scales out or in a specified ApsaraDB for SelectDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5245,7 +6005,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Scales out or in a specified ApsaraDB for SelectDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5263,7 +6023,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Modifies the cluster configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5329,7 +6089,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Modifies the cluster configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5395,7 +6155,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Modifies the cluster configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5413,7 +6173,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Modifies the cluster configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5927,8 +6687,21 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改虚拟集群</para>
+        /// <para>Modifies a virtual cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can modify the primary cluster independently.</description></item>
+        /// <item><description>You can modify the standby cluster independently.</description></item>
+        /// <item><description>You can switch between the primary and standby clusters.<remarks>
+        /// <para>Warning: 
+        /// You cannot modify both the primary and standby clusters in the same operation.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyVirtualClusterRequest
@@ -5985,8 +6758,21 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改虚拟集群</para>
+        /// <para>Modifies a virtual cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can modify the primary cluster independently.</description></item>
+        /// <item><description>You can modify the standby cluster independently.</description></item>
+        /// <item><description>You can switch between the primary and standby clusters.<remarks>
+        /// <para>Warning: 
+        /// You cannot modify both the primary and standby clusters in the same operation.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyVirtualClusterRequest
@@ -6043,8 +6829,21 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改虚拟集群</para>
+        /// <para>Modifies a virtual cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can modify the primary cluster independently.</description></item>
+        /// <item><description>You can modify the standby cluster independently.</description></item>
+        /// <item><description>You can switch between the primary and standby clusters.<remarks>
+        /// <para>Warning: 
+        /// You cannot modify both the primary and standby clusters in the same operation.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyVirtualClusterRequest
@@ -6061,8 +6860,21 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改虚拟集群</para>
+        /// <para>Modifies a virtual cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can modify the primary cluster independently.</description></item>
+        /// <item><description>You can modify the standby cluster independently.</description></item>
+        /// <item><description>You can switch between the primary and standby clusters.<remarks>
+        /// <para>Warning: 
+        /// You cannot modify both the primary and standby clusters in the same operation.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyVirtualClusterRequest
@@ -6223,7 +7035,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of an account for an ApsaraDB for SelectDB instance.</para>
+        /// <para>Resets the password for a database account in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6261,7 +7073,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of an account for an ApsaraDB for SelectDB instance.</para>
+        /// <para>Resets the password for a database account in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6299,7 +7111,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of an account for an ApsaraDB for SelectDB instance.</para>
+        /// <para>Resets the password for a database account in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6317,7 +7129,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of an account for an ApsaraDB for SelectDB instance.</para>
+        /// <para>Resets the password for a database account in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6335,7 +7147,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Restarts the cluster of a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6399,7 +7211,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Restarts the cluster of a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6463,7 +7275,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Restarts the cluster of a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6481,7 +7293,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Restarts the cluster of a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6499,7 +7311,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Starts a specified ApsaraDB SelectDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6553,7 +7365,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Starts a specified ApsaraDB SelectDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6607,7 +7419,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Starts a specified ApsaraDB SelectDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6625,7 +7437,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Starts a specified ApsaraDB SelectDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6643,7 +7455,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Stops a specified ApsaraDB SelectDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6697,7 +7509,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Stops a specified ApsaraDB SelectDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6751,7 +7563,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Stops a specified ApsaraDB SelectDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6769,7 +7581,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a cluster in an ApsaraDB for SelectDB instance.</para>
+        /// <para>Stops a specified ApsaraDB SelectDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6787,7 +7599,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源打用户标签</para>
+        /// <para>Adds tags to one or more instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6841,7 +7653,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源打用户标签</para>
+        /// <para>Adds tags to one or more instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6895,7 +7707,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源打用户标签</para>
+        /// <para>Adds tags to one or more instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6913,7 +7725,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源打用户标签</para>
+        /// <para>Adds tags to one or more instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6931,7 +7743,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源去除用户标签</para>
+        /// <para>Removes tags from instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6989,7 +7801,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源去除用户标签</para>
+        /// <para>Removes tags from instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7047,7 +7859,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源去除用户标签</para>
+        /// <para>Removes tags from instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7065,7 +7877,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源去除用户标签</para>
+        /// <para>Removes tags from instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7083,8 +7895,19 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpgradeDBInstanceDeployScheme</para>
+        /// <para>Upgrades a locally redundant instance to a zone-redundant instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When an instance is upgraded to a zone-redundant architecture, its storage is also upgraded to be zone-redundant. The unit price for storage changes. For more information, see <a href="https://help.aliyun.com/zh/selectdb/product-overview/billing-item-new-version">Billing items and pricing</a>.</para>
+        /// <remarks>
+        /// <para>Version requirements</para>
+        /// <list type="bullet">
+        /// <item><description>The minor version of the instance must be 4.0.4 or later.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpgradeDBInstanceDeploySchemeRequest
@@ -7143,8 +7966,19 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpgradeDBInstanceDeployScheme</para>
+        /// <para>Upgrades a locally redundant instance to a zone-redundant instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When an instance is upgraded to a zone-redundant architecture, its storage is also upgraded to be zone-redundant. The unit price for storage changes. For more information, see <a href="https://help.aliyun.com/zh/selectdb/product-overview/billing-item-new-version">Billing items and pricing</a>.</para>
+        /// <remarks>
+        /// <para>Version requirements</para>
+        /// <list type="bullet">
+        /// <item><description>The minor version of the instance must be 4.0.4 or later.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpgradeDBInstanceDeploySchemeRequest
@@ -7203,8 +8037,19 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpgradeDBInstanceDeployScheme</para>
+        /// <para>Upgrades a locally redundant instance to a zone-redundant instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When an instance is upgraded to a zone-redundant architecture, its storage is also upgraded to be zone-redundant. The unit price for storage changes. For more information, see <a href="https://help.aliyun.com/zh/selectdb/product-overview/billing-item-new-version">Billing items and pricing</a>.</para>
+        /// <remarks>
+        /// <para>Version requirements</para>
+        /// <list type="bullet">
+        /// <item><description>The minor version of the instance must be 4.0.4 or later.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradeDBInstanceDeploySchemeRequest
@@ -7221,8 +8066,19 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpgradeDBInstanceDeployScheme</para>
+        /// <para>Upgrades a locally redundant instance to a zone-redundant instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When an instance is upgraded to a zone-redundant architecture, its storage is also upgraded to be zone-redundant. The unit price for storage changes. For more information, see <a href="https://help.aliyun.com/zh/selectdb/product-overview/billing-item-new-version">Billing items and pricing</a>.</para>
+        /// <remarks>
+        /// <para>Version requirements</para>
+        /// <list type="bullet">
+        /// <item><description>The minor version of the instance must be 4.0.4 or later.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradeDBInstanceDeploySchemeRequest
@@ -7239,7 +8095,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the database engine version of an ApsaraDB for SelectDB instance.</para>
+        /// <para>Upgrades the database version of a specified ApsaraDB SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7301,7 +8157,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the database engine version of an ApsaraDB for SelectDB instance.</para>
+        /// <para>Upgrades the database version of a specified ApsaraDB SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7363,7 +8219,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the database engine version of an ApsaraDB for SelectDB instance.</para>
+        /// <para>Upgrades the database version of a specified ApsaraDB SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7381,7 +8237,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the database engine version of an ApsaraDB for SelectDB instance.</para>
+        /// <para>Upgrades the database version of a specified ApsaraDB SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

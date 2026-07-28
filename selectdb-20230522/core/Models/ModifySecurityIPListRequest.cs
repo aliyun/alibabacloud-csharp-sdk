@@ -34,9 +34,12 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The mode in which you want to modify the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: overwrites the IP addresses in the whitelist.</description></item>
-        /// <item><description><b>1</b>: adds IP addresses to the whitelist.</description></item>
-        /// <item><description><b>2</b>: removes IP addresses from the whitelist.</description></item>
+        /// <item><description><para><b>0</b>: overwrites the IP addresses in the whitelist.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: adds IP addresses to the whitelist.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: removes IP addresses from the whitelist.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

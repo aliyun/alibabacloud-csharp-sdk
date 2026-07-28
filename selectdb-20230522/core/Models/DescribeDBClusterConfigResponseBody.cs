@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>selectdb-cn-wny3li00g02-be</para>
+            /// <para>selectdb-cn-wny3li0****-be</para>
             /// </summary>
             [NameInMap("DbClusterId")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>selectdb-cn-wny3li00g02</para>
+            /// <para>selectdb-cn-wny3li0****</para>
             /// </summary>
             [NameInMap("DbInstanceName")]
             [Validation(Required=false)]
@@ -65,6 +65,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public class DescribeDBClusterConfigResponseBodyDataParams : TeaModel {
                 /// <summary>
                 /// <para>The comments on the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>存储引擎并发扫描硬盘的线程数。采用线程池统一管理。</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
@@ -122,6 +125,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
                 /// <summary>
                 /// <para>The category of the parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Query</para>
                 /// </summary>
                 [NameInMap("ParamCategory")]
                 [Validation(Required=false)]

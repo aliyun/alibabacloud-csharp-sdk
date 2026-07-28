@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class StopBEClusterResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BC854513-E85E-54F3-9842-B9CCD3308CDD</para>
         /// </summary>

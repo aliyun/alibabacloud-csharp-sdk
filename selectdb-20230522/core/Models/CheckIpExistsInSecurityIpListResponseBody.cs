@@ -24,8 +24,6 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>4773E4EC-025D-509F-AEA9-D53123FDFB0F</para>
         /// </summary>

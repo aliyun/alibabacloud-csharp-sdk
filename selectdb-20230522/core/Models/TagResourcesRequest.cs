@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>An array of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>An array of tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -44,6 +48,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test_key</para>
             /// </summary>
@@ -52,6 +58,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test_value</para>
             /// </summary>

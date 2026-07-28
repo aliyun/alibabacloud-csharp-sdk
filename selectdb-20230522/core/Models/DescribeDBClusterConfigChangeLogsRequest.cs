@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBClusterConfigChangeLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration file that you want to modify. For a compute cluster, set the value to be.conf. For a frontend (FE) cluster, set the value to fe.conf.</para>
+        /// <para>The configuration file that was modified. The value is \<c>be.conf\\</c> for a compute cluster and \<c>fe.conf\\</c> for an FE cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>be.conf</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>selectdb-cn-7213c8yvv09-be</para>
+        /// <para>selectdb-cn-7213c8****-be</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -35,24 +35,25 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>selectdb-cn-jia3ma3b003</para>
+        /// <para>selectdb-cn-7213c8****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end time to query change logs. The format is \<c>yyyy-MM-dd HH:mm:ss\\</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-05-08T15:59:59Z</para>
+        /// <para>2023-05-08 15:59:59</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,11 +64,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Format: yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start time to query change logs. The format is \<c>yyyy-MM-dd HH:mm:ss\\</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-04-25T09:48:23Z</para>
+        /// <para>2023-04-25 09:48:23</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

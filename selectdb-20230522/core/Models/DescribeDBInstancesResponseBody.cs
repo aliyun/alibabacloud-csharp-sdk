@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about each instance returned.</para>
+        /// <para>The list of instance details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDBInstancesResponseBodyItems> Items { get; set; }
         public class DescribeDBInstancesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The edition of the instance. Default value: basic.</para>
+            /// <para>The instance edition. The default value is basic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>basic</para>
@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-            /// <item><description><b>Prepaid</b>: subscription.</description></item>
+            /// <item><description><para><b>Postpaid</b>: pay-as-you-go</para>
+            /// </description></item>
+            /// <item><description><para><b>Prepaid</b>: subscription</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,19 +62,34 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string DBInstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The deployment mode of the instance:</para>
+            /// <list type="bullet">
+            /// <item><description><para>multi_az: zone-redundant storage.</para>
+            /// </description></item>
+            /// <item><description><para>single_az: locally redundant storage.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>single_az</para>
+            /// </summary>
             [NameInMap("DeployScheme")]
             [Validation(Required=false)]
             public string DeployScheme { get; set; }
 
             /// <summary>
             /// <para>The description of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>New instance test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The database engine of the instance.</para>
+            /// <para>The database type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb</para>
@@ -81,12 +98,18 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string Engine { get; set; }
 
+            /// <summary>
+            /// <para>The minor engine version of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4.0.4</para>
+            /// </summary>
             [NameInMap("EngineMinorVersion")]
             [Validation(Required=false)]
             public string EngineMinorVersion { get; set; }
 
             /// <summary>
-            /// <para>The database engine version of the instance.</para>
+            /// <para>The database version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.4</para>
@@ -96,9 +119,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the cluster expires.</para>
+            /// <para>The expiration time of the cluster.</para>
             /// <remarks>
-            /// <para> A specific value is returned only for subscription clusters whose billing method is <b>Prepaid</b>. For pay-as-you-go clusters whose billing method is <b>Postpaid</b>, no value is returned.</para>
+            /// <para>This parameter is returned only for <b>Prepaid</b> (subscription) clusters. For <b>Postpaid</b> (pay-as-you-go) clusters, this parameter is empty.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -108,8 +131,34 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
 
+            [NameInMap("FEClusterList")]
+            [Validation(Required=false)]
+            public List<DescribeDBInstancesResponseBodyItemsFEClusterList> FEClusterList { get; set; }
+            public class DescribeDBInstancesResponseBodyItemsFEClusterList : TeaModel {
+                [NameInMap("DbClusterId")]
+                [Validation(Required=false)]
+                public string DbClusterId { get; set; }
+
+                [NameInMap("NodeCount")]
+                [Validation(Required=false)]
+                public long? NodeCount { get; set; }
+
+                [NameInMap("SingleNodeCpuCores")]
+                [Validation(Required=false)]
+                public long? SingleNodeCpuCores { get; set; }
+
+                [NameInMap("SingleNodeMemoryInGB")]
+                [Validation(Required=false)]
+                public long? SingleNodeMemoryInGB { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
             /// <summary>
-            /// <para>The time when the task was created. The time is displayed in UTC.</para>
+            /// <para>The time when the task was created (GMT).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-12T04:14Z</para>
@@ -119,7 +168,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was last modified. The time is displayed in UTC.</para>
+            /// <para>The time when the task was last modified (GMT).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-12T19:05Z</para>
@@ -129,7 +178,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The type of the instance.</para>
+            /// <para>The instance usage type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Instance</para>
@@ -141,8 +190,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>Indicates whether the instance is deleted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: The instance is deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The instance is not deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -173,41 +224,65 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string LockReason { get; set; }
 
             /// <summary>
-            /// <para>The end timestamp of the maintenance window.</para>
+            /// <para>The timestamp that indicates the end of the maintenance window.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Reserved parameter. Not returned.</para>
             /// </summary>
             [NameInMap("MaintainEndTimeStr")]
             [Validation(Required=false)]
             public string MaintainEndTimeStr { get; set; }
 
             /// <summary>
-            /// <para>The end time of the instance maintenance window.</para>
+            /// <para>The end time of the maintenance window for the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Reserved parameter. Not returned.</para>
             /// </summary>
             [NameInMap("MaintainEndtime")]
             [Validation(Required=false)]
             public string MaintainEndtime { get; set; }
 
             /// <summary>
-            /// <para>The start timestamp of the maintenance window.</para>
+            /// <para>The timestamp that indicates the start of the maintenance window.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Reserved parameter. Not returned.</para>
             /// </summary>
             [NameInMap("MaintainStartTimeStr")]
             [Validation(Required=false)]
             public string MaintainStartTimeStr { get; set; }
 
             /// <summary>
-            /// <para>The start time of the instance maintenance window.</para>
+            /// <para>The start time of the maintenance window for the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Reserved parameter. Not returned.</para>
             /// </summary>
             [NameInMap("MaintainStarttime")]
             [Validation(Required=false)]
             public string MaintainStarttime { get; set; }
 
+            /// <summary>
+            /// <para>The multi-zone configuration.</para>
+            /// </summary>
             [NameInMap("MultiZone")]
             [Validation(Required=false)]
             public List<DescribeDBInstancesResponseBodyItemsMultiZone> MultiZone { get; set; }
             public class DescribeDBInstancesResponseBodyItemsMultiZone : TeaModel {
+                /// <summary>
+                /// <para>The list of vSwitch IDs.</para>
+                /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
                 public List<string> VSwitchIds { get; set; }
 
+                /// <summary>
+                /// <para>The zone ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-beijing-k</para>
+                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
@@ -215,7 +290,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             }
 
             /// <summary>
-            /// <para>The storage capacity of the instance. Unit: GB.</para>
+            /// <para>The instance storage size. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -225,7 +300,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? ObjectStoreSize { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Reserved parameter. Not returned.</para>
             /// </summary>
             [NameInMap("ParentInstance")]
             [Validation(Required=false)]
@@ -242,7 +320,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores of the instance.</para>
+            /// <para>The allocated CPU for the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -252,14 +330,17 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? ResourceCpu { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Reserved parameter. Not returned.</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The memory capacity of the instance.</para>
+            /// <para>The memory size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>64</para>
@@ -269,7 +350,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? ResourceMemory { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of RCUs.</para>
+            /// <para>The maximum number of RDS Capacity Units (RCUs) for the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -279,7 +360,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? ScaleMax { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of RDS capacity units (RCUs).</para>
+            /// <para>The minimum number of RDS Capacity Units (RCUs) for the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -289,12 +370,21 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? ScaleMin { get; set; }
 
             /// <summary>
-            /// <para>This parameter is not returned.</para>
+            /// <para>This field is redundant.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>空</para>
             /// </summary>
             [NameInMap("ScaleReplica")]
             [Validation(Required=false)]
             public long? ScaleReplica { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the instance is a serverless instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("Serverless")]
             [Validation(Required=false)]
             public bool? Serverless { get; set; }
@@ -302,12 +392,18 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>The state of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CREATING</b>: The instance is being created.</description></item>
-            /// <item><description><b>ACTIVATION</b>: The instance is running.</description></item>
-            /// <item><description><b>RESOURCE_CHANGING</b>: The resource configuration of the instance is being changed.</description></item>
-            /// <item><description><b>ORDER_PREPARING</b>: The order is being confirmed.</description></item>
-            /// <item><description><b>READONLY_RESOURCE_CHANGING</b>: The resource configuration of the instance is being changed and the instance is write-locked.</description></item>
-            /// <item><description><b>DELETING</b>: The instance is being deleted.</description></item>
+            /// <item><description><para><b>CREATING</b>: The instance is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>ACTIVATION</b>: The instance is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>RESOURCE_CHANGING</b>: The instance is being upgraded or downgraded.</para>
+            /// </description></item>
+            /// <item><description><para><b>ORDER_PREPARING</b>: The order is being confirmed.</para>
+            /// </description></item>
+            /// <item><description><para><b>READONLY_RESOURCE_CHANGING</b>: The instance configuration is being changed, and the instance is write-locked.</para>
+            /// </description></item>
+            /// <item><description><para><b>DELETING</b>: The instance is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -318,7 +414,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The cache size.</para>
+            /// <para>The storage capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -328,7 +424,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public long? StorageSize { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the instance.</para>
+            /// <para>The storage class of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_essd</para>
@@ -338,13 +434,15 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The details about each tag returned.</para>
+            /// <para>The list of tags of the instance.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeDBInstancesResponseBodyItemsTags> Tags { get; set; }
             public class DescribeDBInstancesResponseBodyItemsTags : TeaModel {
                 /// <summary>
+                /// <para>The tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>testKey</para>
                 /// </summary>
@@ -353,6 +451,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
+                /// <para>The tag value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>testValue</para>
                 /// </summary>
@@ -363,28 +463,37 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             }
 
             /// <summary>
-            /// <para>The ID of the cluster that is monitored by Managed Service for Prometheus.</para>
+            /// <para>The ID of the Prometheus monitoring cluster.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Reserved parameter. Not returned.</para>
             /// </summary>
             [NameInMap("TenantClusterId")]
             [Validation(Required=false)]
             public string TenantClusterId { get; set; }
 
             /// <summary>
-            /// <para>The token that is used to access Managed Service for Prometheus.</para>
+            /// <para>The token for connecting to Prometheus monitoring.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Reserved parameter. Not returned.</para>
             /// </summary>
             [NameInMap("TenantToken")]
             [Validation(Required=false)]
             public string TenantToken { get; set; }
 
             /// <summary>
-            /// <para>The ID of the account that uses Managed Service for Prometheus.</para>
+            /// <para>The user account label for Prometheus monitoring.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Reserved parameter. Not returned.</para>
             /// </summary>
             [NameInMap("TenantUserId")]
             [Validation(Required=false)]
             public string TenantUserId { get; set; }
 
             /// <summary>
-            /// <para>The virtual private cloud (VPC) ID.</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp175iuvg8nxqraf2****</para>
@@ -414,7 +523,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string ZoneId { get; set; }
 
             /// <summary>
-            /// <para>The connection string of the instance.</para>
+            /// <para>The connection address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Not applicable.</para>
             /// </summary>
             [NameInMap("connectionString")]
             [Validation(Required=false)]
@@ -423,11 +535,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of entries to return per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b> (default value)</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -438,7 +553,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -458,7 +573,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

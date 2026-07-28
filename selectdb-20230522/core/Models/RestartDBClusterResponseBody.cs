@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class RestartDBClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information returned.</para>
+        /// <para>The returned information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-7213cjv****</para>

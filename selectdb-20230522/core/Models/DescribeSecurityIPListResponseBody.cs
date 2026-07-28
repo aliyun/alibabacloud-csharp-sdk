@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             /// <summary>
             /// <para>The IP address type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ipv4</description></item>
-            /// <item><description>ipv6 (not supported)</description></item>
+            /// <item><description><para>ipv4</para>
+            /// </description></item>
+            /// <item><description><para>ipv6 (not supported)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

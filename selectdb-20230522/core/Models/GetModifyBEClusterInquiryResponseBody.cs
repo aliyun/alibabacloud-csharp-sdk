@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class GetModifyBEClusterInquiryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>通用优惠券可抵扣100</para>
+                /// <para>General coupon deducts 100</para>
                 /// </summary>
                 [NameInMap("PromotionDesc")]
                 [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>通用优惠券</para>
+                /// <para>General coupon</para>
                 /// </summary>
                 [NameInMap("PromotionName")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public Dictionary<string, string> PricingRules { get; set; }
 
             /// <summary>
-            /// <para>The estimated refund amount when the subscription cluster of a subscription instance is changed to a pay-as-you-go cluster.</para>
+            /// <para>The estimated refund amount when you change the billing method of a subscription cluster to pay-as-you-go.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-100</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string RefundAmount { get; set; }
 
             /// <summary>
-            /// <para>The amount of money.</para>
+            /// <para>The amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.76</para>

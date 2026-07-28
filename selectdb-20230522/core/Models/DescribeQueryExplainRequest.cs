@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
-    public class UpgradeDBInstanceDeploySchemeShrinkRequest : TeaModel {
+    public class DescribeQueryExplainRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The database instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,27 +21,35 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A list of multi-zone configurations.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The Explain mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BASIC</para>
         /// </summary>
-        [NameInMap("MultiZone")]
+        [NameInMap("Mode")]
         [Validation(Required=false)]
-        public string MultiZoneShrink { get; set; }
+        public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The query ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40e8a568-d2a2-4f7e-a3f8-cec554ce5143</para>
+        /// </summary>
+        [NameInMap("QueryId")]
+        [Validation(Required=false)]
+        public string QueryId { get; set; }
+
+        /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-beijing</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("SecurityToken")]
-        [Validation(Required=false)]
-        public string SecurityToken { get; set; }
 
     }
 

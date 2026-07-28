@@ -60,8 +60,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <para>Specifies whether to enable the scheduled scaling policy.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

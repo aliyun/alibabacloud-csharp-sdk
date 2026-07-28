@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class GetCreateBEClusterInquiryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public Dictionary<string, string> PricingRules { get; set; }
 
             /// <summary>
-            /// <para>The amount of money.</para>
+            /// <para>The amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.76</para>
