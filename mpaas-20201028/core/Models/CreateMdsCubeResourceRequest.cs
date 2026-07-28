@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string FileUrl { get; set; }
 
+        [NameInMap("HarmonyMaxVersion")]
+        [Validation(Required=false)]
+        public string HarmonyMaxVersion { get; set; }
+
+        [NameInMap("HarmonyMinVersion")]
+        [Validation(Required=false)]
+        public string HarmonyMinVersion { get; set; }
+
         [NameInMap("IosMaxVersion")]
         [Validation(Required=false)]
         public string IosMaxVersion { get; set; }

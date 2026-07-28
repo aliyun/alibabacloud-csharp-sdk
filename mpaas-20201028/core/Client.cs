@@ -4264,6 +4264,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             {
                 body["FileUrl"] = request.FileUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HarmonyMaxVersion))
+            {
+                body["HarmonyMaxVersion"] = request.HarmonyMaxVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HarmonyMinVersion))
+            {
+                body["HarmonyMinVersion"] = request.HarmonyMinVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IosMaxVersion))
             {
                 body["IosMaxVersion"] = request.IosMaxVersion;
@@ -4360,6 +4368,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
             {
                 body["FileUrl"] = request.FileUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HarmonyMaxVersion))
+            {
+                body["HarmonyMaxVersion"] = request.HarmonyMaxVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HarmonyMinVersion))
+            {
+                body["HarmonyMinVersion"] = request.HarmonyMinVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IosMaxVersion))
             {
