@@ -344,6 +344,178 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Initiates a streaming conversation with an AI Agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatAiAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChatAiAgentHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatAiAgentResponse
+        /// </returns>
+        public ChatAiAgentResponse ChatAiAgentWithOptions(string namespace_, ChatAiAgentRequest request, ChatAiAgentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HitlDecisions))
+            {
+                body["hitlDecisions"] = request.HitlDecisions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Refs))
+            {
+                body["refs"] = request.Refs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMessage))
+            {
+                body["userMessage"] = request.UserMessage;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChatAiAgent",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/advisor/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/ai-agent/stream/agent/v2/chat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChatAiAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a streaming conversation with an AI Agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatAiAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// ChatAiAgentHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatAiAgentResponse
+        /// </returns>
+        public async Task<ChatAiAgentResponse> ChatAiAgentWithOptionsAsync(string namespace_, ChatAiAgentRequest request, ChatAiAgentHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HitlDecisions))
+            {
+                body["hitlDecisions"] = request.HitlDecisions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Refs))
+            {
+                body["refs"] = request.Refs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMessage))
+            {
+                body["userMessage"] = request.UserMessage;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChatAiAgent",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/advisor/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/ai-agent/stream/agent/v2/chat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChatAiAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a streaming conversation with an AI Agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatAiAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatAiAgentResponse
+        /// </returns>
+        public ChatAiAgentResponse ChatAiAgent(string namespace_, ChatAiAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ChatAiAgentHeaders headers = new ChatAiAgentHeaders();
+            return ChatAiAgentWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a streaming conversation with an AI Agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatAiAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatAiAgentResponse
+        /// </returns>
+        public async Task<ChatAiAgentResponse> ChatAiAgentAsync(string namespace_, ChatAiAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ChatAiAgentHeaders headers = new ChatAiAgentHeaders();
+            return await ChatAiAgentWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a deployment.</para>
         /// </summary>
         /// 
@@ -5044,6 +5216,142 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the Autopilot tuning configuration. Returns the enabled status and full configuration. Does not affect the existing V2 configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutopilotPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetAutopilotPolicyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutopilotPolicyResponse
+        /// </returns>
+        public GetAutopilotPolicyResponse GetAutopilotPolicyWithOptions(string namespace_, string deploymentId, GetAutopilotPolicyRequest request, GetAutopilotPolicyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAutopilotPolicy",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentId) + "/autopilotpolicy-describe",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAutopilotPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Autopilot tuning configuration. Returns the enabled status and full configuration. Does not affect the existing V2 configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutopilotPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetAutopilotPolicyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutopilotPolicyResponse
+        /// </returns>
+        public async Task<GetAutopilotPolicyResponse> GetAutopilotPolicyWithOptionsAsync(string namespace_, string deploymentId, GetAutopilotPolicyRequest request, GetAutopilotPolicyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAutopilotPolicy",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentId) + "/autopilotpolicy-describe",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAutopilotPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Autopilot tuning configuration. Returns the enabled status and full configuration. Does not affect the existing V2 configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutopilotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutopilotPolicyResponse
+        /// </returns>
+        public GetAutopilotPolicyResponse GetAutopilotPolicy(string namespace_, string deploymentId, GetAutopilotPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetAutopilotPolicyHeaders headers = new GetAutopilotPolicyHeaders();
+            return GetAutopilotPolicyWithOptions(namespace_, deploymentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Autopilot tuning configuration. Returns the enabled status and full configuration. Does not affect the existing V2 configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutopilotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutopilotPolicyResponse
+        /// </returns>
+        public async Task<GetAutopilotPolicyResponse> GetAutopilotPolicyAsync(string namespace_, string deploymentId, GetAutopilotPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetAutopilotPolicyHeaders headers = new GetAutopilotPolicyHeaders();
+            return await GetAutopilotPolicyWithOptionsAsync(namespace_, deploymentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of a specified catalog or all catalogs.</para>
         /// </summary>
         /// 
@@ -8650,6 +8958,186 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the Autopilot tuning history records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAutopilotTuningHistoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListAutopilotTuningHistoriesHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAutopilotTuningHistoriesResponse
+        /// </returns>
+        public ListAutopilotTuningHistoriesResponse ListAutopilotTuningHistoriesWithOptions(string namespace_, string deploymentId, ListAutopilotTuningHistoriesRequest request, ListAutopilotTuningHistoriesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AcceptLanguage))
+            {
+                realHeaders["Accept-Language"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AcceptLanguage);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAutopilotTuningHistories",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentId) + "/tuninghistories",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAutopilotTuningHistoriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Autopilot tuning history records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAutopilotTuningHistoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListAutopilotTuningHistoriesHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAutopilotTuningHistoriesResponse
+        /// </returns>
+        public async Task<ListAutopilotTuningHistoriesResponse> ListAutopilotTuningHistoriesWithOptionsAsync(string namespace_, string deploymentId, ListAutopilotTuningHistoriesRequest request, ListAutopilotTuningHistoriesHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AcceptLanguage))
+            {
+                realHeaders["Accept-Language"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AcceptLanguage);
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAutopilotTuningHistories",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentId) + "/tuninghistories",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAutopilotTuningHistoriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Autopilot tuning history records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAutopilotTuningHistoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAutopilotTuningHistoriesResponse
+        /// </returns>
+        public ListAutopilotTuningHistoriesResponse ListAutopilotTuningHistories(string namespace_, string deploymentId, ListAutopilotTuningHistoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListAutopilotTuningHistoriesHeaders headers = new ListAutopilotTuningHistoriesHeaders();
+            return ListAutopilotTuningHistoriesWithOptions(namespace_, deploymentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the Autopilot tuning history records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAutopilotTuningHistoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAutopilotTuningHistoriesResponse
+        /// </returns>
+        public async Task<ListAutopilotTuningHistoriesResponse> ListAutopilotTuningHistoriesAsync(string namespace_, string deploymentId, ListAutopilotTuningHistoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListAutopilotTuningHistoriesHeaders headers = new ListAutopilotTuningHistoriesHeaders();
+            return await ListAutopilotTuningHistoriesWithOptionsAsync(namespace_, deploymentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Obtains a list of existing custom connectors.</para>
         /// </summary>
         /// 
@@ -12218,6 +12706,162 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             SubmitSqlPreviewHeaders headers = new SubmitSqlPreviewHeaders();
             return await SubmitSqlPreviewWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an Autopilot tuning policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAutopilotPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// UpdateAutopilotPolicyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAutopilotPolicyResponse
+        /// </returns>
+        public UpdateAutopilotPolicyResponse UpdateAutopilotPolicyWithOptions(string namespace_, string deploymentId, UpdateAutopilotPolicyRequest request, UpdateAutopilotPolicyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyConfig))
+            {
+                body["policyConfig"] = request.PolicyConfig;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAutopilotPolicy",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentId) + "/autopilotpolicy-update",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAutopilotPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an Autopilot tuning policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAutopilotPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// UpdateAutopilotPolicyHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAutopilotPolicyResponse
+        /// </returns>
+        public async Task<UpdateAutopilotPolicyResponse> UpdateAutopilotPolicyWithOptionsAsync(string namespace_, string deploymentId, UpdateAutopilotPolicyRequest request, UpdateAutopilotPolicyHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyConfig))
+            {
+                body["policyConfig"] = request.PolicyConfig;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAutopilotPolicy",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(deploymentId) + "/autopilotpolicy-update",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAutopilotPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an Autopilot tuning policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAutopilotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAutopilotPolicyResponse
+        /// </returns>
+        public UpdateAutopilotPolicyResponse UpdateAutopilotPolicy(string namespace_, string deploymentId, UpdateAutopilotPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateAutopilotPolicyHeaders headers = new UpdateAutopilotPolicyHeaders();
+            return UpdateAutopilotPolicyWithOptions(namespace_, deploymentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an Autopilot tuning policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAutopilotPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAutopilotPolicyResponse
+        /// </returns>
+        public async Task<UpdateAutopilotPolicyResponse> UpdateAutopilotPolicyAsync(string namespace_, string deploymentId, UpdateAutopilotPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateAutopilotPolicyHeaders headers = new UpdateAutopilotPolicyHeaders();
+            return await UpdateAutopilotPolicyWithOptionsAsync(namespace_, deploymentId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
