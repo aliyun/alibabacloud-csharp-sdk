@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class DeleteStackResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C7070EC3-DF66-58BA-A1DD-A8574FF53143</para>
         /// </summary>

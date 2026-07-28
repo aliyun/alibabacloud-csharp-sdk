@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListParameterSetRelationRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the resource. For ModuleVersion, concatenate <moduleId>-<versionId>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The type of the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Module</description></item>
+        /// <item><description>ModuleVersion</description></item>
+        /// <item><description>Task</description></item>
+        /// <item><description>SceneTestingTask</description></item>
+        /// <item><description>Stack.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

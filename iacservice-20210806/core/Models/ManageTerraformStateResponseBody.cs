@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ManageTerraformStateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job-5fd38c9xxxxx</para>
         /// </summary>

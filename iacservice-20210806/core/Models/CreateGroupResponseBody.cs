@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>g-4267dcfbf1b6d128c87adf0e95f</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E2D0E863-1651-5E58-823F-B451C8C24615</para>
         /// </summary>

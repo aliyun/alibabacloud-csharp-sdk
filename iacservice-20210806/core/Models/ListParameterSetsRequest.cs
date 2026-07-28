@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListParameterSetsRequest : TeaModel {
         /// <summary>
+        /// <para>The keyword for exact match search. The search is case-insensitive.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>key</para>
+        /// <para>vpc</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

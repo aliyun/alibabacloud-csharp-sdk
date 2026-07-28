@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class UpdateDetectConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>valueA</para>
         /// </summary>

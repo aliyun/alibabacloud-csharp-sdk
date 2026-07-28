@@ -8,17 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
-    public class CancelResourceExportTaskRequest : TeaModel {
-        /// <summary>
-        /// <para>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>a65451293e64979ba7a4b573950217fe</para>
-        /// </summary>
-        [NameInMap("clientToken")]
+    public class GetProviderDocumentRequest : TeaModel {
+        [NameInMap("providerVersion")]
         [Validation(Required=false)]
-        public string ClientToken { get; set; }
+        public string ProviderVersion { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("terraformResourceType")]
+        [Validation(Required=false)]
+        public string TerraformResourceType { get; set; }
 
     }
 

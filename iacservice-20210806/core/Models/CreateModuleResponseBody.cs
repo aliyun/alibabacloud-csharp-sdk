@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateModuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mod-518855d9a058cfffcc446d8fe3c99</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ModuleId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0D797DC3-FF04-5C21-81EB-92C7799512E3</para>
         /// </summary>

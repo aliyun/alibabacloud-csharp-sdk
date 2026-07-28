@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateDetectConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>Drift detection configuration ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dc-xxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string DetectConfigId { get; set; }
 
         /// <summary>
+        /// <para>request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>String</para>
         /// </summary>

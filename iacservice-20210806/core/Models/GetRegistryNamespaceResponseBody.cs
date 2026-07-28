@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class GetRegistryNamespaceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The workspace information.</para>
+        /// </summary>
         [NameInMap("namespace")]
         [Validation(Required=false)]
         public GetRegistryNamespaceResponseBodyNamespace Namespace { get; set; }
         public class GetRegistryNamespaceResponseBodyNamespace : TeaModel {
             /// <summary>
+            /// <para>The permissions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>private</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Acl { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-03-20T02:18:29Z</para>
             /// </summary>
@@ -30,14 +37,18 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The description of the workspace.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>demo</para>
+            /// <para>description</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The name of the administrator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>admin</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Maintainer { get; set; }
 
             /// <summary>
+            /// <para>The number of Registry templates in the workspace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>21</para>
             /// </summary>
@@ -54,18 +67,25 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public int? Modules { get; set; }
 
             /// <summary>
+            /// <para>The name of the workspace.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>test_namespace</para>
+            /// <para>NamespaceName</para>
             /// </summary>
             [NameInMap("namespaceName")]
             [Validation(Required=false)]
             public string NamespaceName { get; set; }
 
+            /// <summary>
+            /// <para>The list of shared accounts.</para>
+            /// </summary>
             [NameInMap("sharedAccounts")]
             [Validation(Required=false)]
             public List<long?> SharedAccounts { get; set; }
 
             /// <summary>
+            /// <para>The type of the workspace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>share</para>
             /// </summary>
@@ -76,6 +96,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>26684763-5BAB-58C8-BA4F-9D622AB7AD14</para>
         /// </summary>

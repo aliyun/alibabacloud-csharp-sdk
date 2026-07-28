@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateParameterSetRequest : TeaModel {
         /// <summary>
+        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,30 +21,38 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The description of the parameter set. Maximum length: 1024 characters.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>This is parameterSet</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The name of the parameter set. Maximum length: 128 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>demo</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The list of parameters.</para>
+        /// </summary>
         [NameInMap("parameters")]
         [Validation(Required=false)]
         public List<CreateParameterSetRequestParameters> Parameters { get; set; }
         public class CreateParameterSetRequestParameters : TeaModel {
             /// <summary>
+            /// <para>The parameter name.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>test1121</para>
+            /// <para>region</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -54,6 +63,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public bool? Secret { get; set; }
 
             /// <summary>
+            /// <para>The parameter set status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>HAS_VALUE (default): Defines a specific value.</description></item>
+            /// <item><description>EXPLICIT_NULL: Explicitly sets the value to null.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>HAS_VALUE</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The parameter type. Valid values: string, number, bool, map(string), and list(string).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>string</para>
             /// </summary>
@@ -70,8 +87,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>The parameter value. Use JSON for complex types.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]

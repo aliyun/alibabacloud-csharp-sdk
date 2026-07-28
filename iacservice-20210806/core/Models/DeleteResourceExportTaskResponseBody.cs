@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class DeleteResourceExportTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>136B3926-DD90-5DB2-96EC-8BAD6407D1C9</para>
         /// </summary>

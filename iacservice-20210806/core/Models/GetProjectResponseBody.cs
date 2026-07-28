@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class GetProjectResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The project details.</para>
+        /// </summary>
         [NameInMap("project")]
         [Validation(Required=false)]
         public GetProjectResponseBodyProject Project { get; set; }
         public class GetProjectResponseBodyProject : TeaModel {
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-09-06T06:11:27Z</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The project description. Length: 0 to 1024 characters.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>abc</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The project name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>abc</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>p-433aead7560572f8d95b25775c</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The number of tasks.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7FA0FF4A-ABD4-54F6-BEAC-B4273EBA10A2</para>
         /// </summary>

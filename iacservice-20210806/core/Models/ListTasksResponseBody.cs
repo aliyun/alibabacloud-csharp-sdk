@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListTasksResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>98610149-488B-5E48-B981-8D4CE1AF77CD</para>
         /// </summary>
@@ -33,15 +39,26 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of tasks.</para>
+        /// </summary>
         [NameInMap("tasks")]
         [Validation(Required=false)]
         public List<ListTasksResponseBodyTasks> Tasks { get; set; }
         public class ListTasksResponseBodyTasks : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether the task is automatically executed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("autoApply")]
             [Validation(Required=false)]
             public bool? AutoApply { get; set; }
 
             /// <summary>
+            /// <para>The time when the task was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-07-11T15:09:53Z</para>
             /// </summary>
@@ -50,6 +67,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The job ID of the current task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>job-123asd</para>
             /// </summary>
@@ -58,6 +77,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CurrentJobId { get; set; }
 
             /// <summary>
+            /// <para>The current job status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Pending</para>
             /// </summary>
@@ -65,15 +86,26 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string CurrentJobStatus { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether deletion protection is enabled. Deletion protection is automatically enabled when managed resources are included.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("deletionProtection")]
             [Validation(Required=false)]
             public bool? DeletionProtection { get; set; }
 
+            /// <summary>
+            /// <para>The task group information.</para>
+            /// </summary>
             [NameInMap("groupInfo")]
             [Validation(Required=false)]
             public ListTasksResponseBodyTasksGroupInfo GroupInfo { get; set; }
             public class ListTasksResponseBodyTasksGroupInfo : TeaModel {
                 /// <summary>
+                /// <para>The group ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>g-4267dcfbf1b6d1e0652bfbbe995</para>
                 /// </summary>
@@ -82,6 +114,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string GroupId { get; set; }
 
                 /// <summary>
+                /// <para>The group name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
                 /// </summary>
@@ -90,6 +124,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
+                /// <para>The project ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>p-433aead7560571cf1b2bfbbe92b</para>
                 /// </summary>
@@ -98,6 +134,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string ProjectId { get; set; }
 
                 /// <summary>
+                /// <para>The project name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
                 /// </summary>
@@ -107,11 +145,19 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 
             }
 
+            /// <summary>
+            /// <para>The latest version of the module.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v3</para>
+            /// </summary>
             [NameInMap("latestModuleVersion")]
             [Validation(Required=false)]
             public string LatestModuleVersion { get; set; }
 
             /// <summary>
+            /// <para>The module ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mod-518855d9a058c331e9c60bc0ce</para>
             /// </summary>
@@ -119,11 +165,19 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string ModuleId { get; set; }
 
+            /// <summary>
+            /// <para>The module name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mod-name</para>
+            /// </summary>
             [NameInMap("moduleName")]
             [Validation(Required=false)]
             public string ModuleName { get; set; }
 
             /// <summary>
+            /// <para>The module version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v1</para>
             /// </summary>
@@ -132,14 +186,22 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ModuleVersion { get; set; }
 
             /// <summary>
+            /// <para>The task name.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>abc</para>
+            /// <para>TaskName</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The task status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Available: The task is available, and no job is running.</description></item>
+            /// <item><description>Running: The task is running, and the current job is in progress.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Running</para>
             /// </summary>
@@ -147,22 +209,49 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The list of task tags.</para>
+            /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<ListTasksResponseBodyTasksTags> Tags { get; set; }
             public class ListTasksResponseBodyTasksTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key of the task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>name</para>
+                /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag key of the module.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>name</para>
+                /// </summary>
                 [NameInMap("tagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
+                /// <summary>
+                /// <para>The tag value of the task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>iac-demo</para>
+                /// </summary>
                 [NameInMap("tagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }
 
+                /// <summary>
+                /// <para>The tag value of the task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>iac-demo</para>
+                /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -170,6 +259,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             }
 
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>task-1525e992f1b621b0ca51647876e</para>
             /// </summary>
@@ -180,8 +271,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>5</para>
+        /// <para>55</para>
         /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]

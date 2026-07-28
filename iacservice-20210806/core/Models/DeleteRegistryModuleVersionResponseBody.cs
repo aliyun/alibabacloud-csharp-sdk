@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class DeleteRegistryModuleVersionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>491A1E2E-EA1E-5F90-958A-A53EB67780FC</para>
         /// </summary>

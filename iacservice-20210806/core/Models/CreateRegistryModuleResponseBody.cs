@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateRegistryModuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C896FE0A-1BEA-5D01-BFF4-B03B82B9CA3D</para>
         /// </summary>
@@ -18,8 +20,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The template source, which is a concatenation of \<namespaceName>/\<ModuleName>.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>test_namespace/RegistryModule-test</para>
+        /// <para>namespaceName/ModuleName</para>
         /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]

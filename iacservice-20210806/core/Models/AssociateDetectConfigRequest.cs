@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class AssociateDetectConfigRequest : TeaModel {
         /// <summary>
+        /// <para>Drift detection configuration ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string DetectConfigId { get; set; }
 
         /// <summary>
+        /// <para>Target ID to associate. StackId or TaskId</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string TargetId { get; set; }
 
         /// <summary>
+        /// <para>Target type to associate  </para>
+        /// <list type="bullet">
+        /// <item><description>Task: orchestration job  </description></item>
+        /// <item><description>Stack: resource stack</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

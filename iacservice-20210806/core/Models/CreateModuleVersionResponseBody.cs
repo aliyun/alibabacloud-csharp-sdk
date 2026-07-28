@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateModuleVersionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The template version number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ModuleVersion { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B6ED9F71-7FA8-598E-B64D-4606FB3FCCC9</para>
         /// </summary>

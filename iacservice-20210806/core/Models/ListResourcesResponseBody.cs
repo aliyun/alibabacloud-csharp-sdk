@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListResourcesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The resource information.</para>
+        /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<ListResourcesResponseBodyResources> Resources { get; set; }
         public class ListResourcesResponseBodyResources : TeaModel {
             /// <summary>
+            /// <para>The Alibaba Cloud account ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>365845</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string AccountId { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-05-03T02:22:59Z</para>
             /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The dependent resources.</para>
+            /// </summary>
             [NameInMap("dependsOnResourceIds")]
             [Validation(Required=false)]
             public List<string> DependsOnResourceIds { get; set; }
 
             /// <summary>
+            /// <para>The product code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ECS</para>
             /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ProductCode { get; set; }
 
             /// <summary>
+            /// <para>The resource properties.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public Dictionary<string, object> Properties { get; set; }
 
             /// <summary>
+            /// <para>The property variables.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public Dictionary<string, object> PropertyVariables { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The resource ARN.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acs:vpc:cn-hangzhou:12345:test</para>
             /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ResourceArn { get; set; }
 
             /// <summary>
+            /// <para>The resource group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rg-aekzyqyghofqbxy</para>
             /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// <para>The resource ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>i-efegsewrttfd</para>
             /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ResourceId { get; set; }
 
             /// <summary>
+            /// <para>The resource name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -97,11 +123,19 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string ResourceName { get; set; }
 
+            /// <summary>
+            /// <para>The URL of the resources page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>https:://ecs.aliyncs.com</para>
+            /// </summary>
             [NameInMap("resourcePageUrl")]
             [Validation(Required=false)]
             public string ResourcePageUrl { get; set; }
 
             /// <summary>
+            /// <para>The resource type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Task</para>
             /// </summary>
@@ -110,6 +144,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ResourceType { get; set; }
 
             /// <summary>
+            /// <para>The status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>enable</para>
             /// </summary>
@@ -117,11 +153,16 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The tags.</para>
+            /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<ListResourcesResponseBodyResourcesTags> Tags { get; set; }
             public class ListResourcesResponseBodyResourcesTags : TeaModel {
                 /// <summary>
+                /// <para>The tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -130,6 +171,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
+                /// <para>The tag value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -160,6 +203,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string TerraformCode { get; set; }
 
             /// <summary>
+            /// <para>The zone ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-a</para>
             /// </summary>
@@ -170,6 +215,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -178,6 +225,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -186,6 +235,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>67585D9B-EFA5-5E51-BAB1-8FF07DA1B36F</para>
         /// </summary>
@@ -194,6 +245,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9</para>
         /// </summary>

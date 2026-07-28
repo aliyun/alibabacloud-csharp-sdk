@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class DetectTerraformStateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the detection task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job-dcsdxxxxxx</para>
         /// </summary>

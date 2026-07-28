@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListParameterSetRelationResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of parameter sets.</para>
+        /// </summary>
         [NameInMap("parameterSets")]
         [Validation(Required=false)]
         public List<ListParameterSetRelationResponseBodyParameterSets> ParameterSets { get; set; }
         public class ListParameterSetRelationResponseBodyParameterSets : TeaModel {
             /// <summary>
+            /// <para>The time when the parameter set was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-05-14T10:05:19Z</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123111</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The name of the parameter set.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alb_enable_ipv6_4.2</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The ID of the parameter set.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pts-kw1b11jlssrabb638ptums</para>
             /// </summary>
@@ -45,6 +56,9 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string ParameterSetId { get; set; }
 
+            /// <summary>
+            /// <para>The content of the parameter set.</para>
+            /// </summary>
             [NameInMap("parameters")]
             [Validation(Required=false)]
             public Dictionary<string, string> Parameters { get; set; }
@@ -52,6 +66,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2F24E990-E8D3-5C18-ABEA-C7A3F1831C57</para>
         /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

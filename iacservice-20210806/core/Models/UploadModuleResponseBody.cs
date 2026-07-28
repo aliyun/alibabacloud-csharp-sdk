@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class UploadModuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0DDD8773-5756-5508-BE36-D03DE43E2450</para>
         /// </summary>
@@ -17,6 +19,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>If ResourceType is set to ModuleVersion, this parameter takes effect and returns the version ID after publishing.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v1</para>
+        /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]
         public string Version { get; set; }

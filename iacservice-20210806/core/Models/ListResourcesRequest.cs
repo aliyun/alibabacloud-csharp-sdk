@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,15 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The type of the resource source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>ExportTaskId: resource export ID</para>
+        /// </description></item>
+        /// <item><description><para>TaskId: Module execution task ID</para>
+        /// </description></item>
+        /// <item><description><para>StatePath: the OSS path where the resource state is stored.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +49,15 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string SourceType { get; set; }
 
         /// <summary>
+        /// <para>The specific value of the resource source.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If sourceType is set to ExportTaskId, the format is ExportTaskId:Version.</para>
+        /// </description></item>
+        /// <item><description><para>If sourceType is set to TaskId, the format is TaskId.</para>
+        /// </description></item>
+        /// <item><description><para>If sourceType is set to StatePath, the format is the download URL of the State file.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +68,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string SourceValue { get; set; }
 
         /// <summary>
+        /// <para>The specification that resource properties follow in the response. Valid values: CloudSpec, Terraform.
+        /// Default value: CloudSpec.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

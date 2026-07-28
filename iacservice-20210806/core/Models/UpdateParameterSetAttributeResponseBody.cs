@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class UpdateParameterSetAttributeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>81CF7E18-D318-5670-9A4D-C08476BC4899</para>
         /// </summary>

@@ -10,22 +10,28 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class JobsStatusDetailValue : TeaModel {
         /// <summary>
+        /// <para>备注</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>comment</para>
         /// </summary>
         [NameInMap("comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>作业执行结果</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>Apply complete! Resources: 0 added, 0 changed, 0 destroyed.</para>
         /// </summary>
         [NameInMap("jobResult")]
         [Validation(Required=false)]
         public string JobResult { get; set; }
 
         /// <summary>
+        /// <para>到达状态时间</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-06-13 17:11:34</para>
         /// </summary>

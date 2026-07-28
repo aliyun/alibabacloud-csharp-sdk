@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ExecuteRegistryModuleRequest : TeaModel {
         /// <summary>
+        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The set of parameters used by the template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;region\&quot;: \&quot;cn-hangzhou\&quot;, \&quot;vpcId\&quot;: \&quot;vpc-bp145sc90s26q0qbkfb6i\&quot;, \&quot;functionName\&quot;: \&quot;filemgr-cn-hangzhou-063fd4aead\&quot;, \&quot;mountPointsServerAddr\&quot;: \&quot;063fd4aead-dex50.cn-hangzhou.nas.aliyuncs.com\&quot;}</para>
         /// </summary>

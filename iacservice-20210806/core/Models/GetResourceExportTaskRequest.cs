@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class GetResourceExportTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The export version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v3</para>
         /// </summary>

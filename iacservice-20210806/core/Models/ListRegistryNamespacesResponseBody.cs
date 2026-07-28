@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListRegistryNamespacesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>53</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public long? Count { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of records returned at a time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>24</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The list of workspaces.</para>
+        /// </summary>
         [NameInMap("namespaces")]
         [Validation(Required=false)]
         public List<ListRegistryNamespacesResponseBodyNamespaces> Namespaces { get; set; }
         public class ListRegistryNamespacesResponseBodyNamespaces : TeaModel {
             /// <summary>
+            /// <para>The permissions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>private</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Acl { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-01-15T02:16:58Z</para>
             /// </summary>
@@ -46,14 +57,18 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The workspace description.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>dd</para>
+            /// <para>description</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The administrator name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>admin</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Maintainer { get; set; }
 
             /// <summary>
+            /// <para>The number of Registry templates in the workspace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>21</para>
             /// </summary>
@@ -70,18 +87,25 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public int? Modules { get; set; }
 
             /// <summary>
+            /// <para>The workspace name.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>test_namespace</para>
+            /// <para>NamespaceName</para>
             /// </summary>
             [NameInMap("namespaceName")]
             [Validation(Required=false)]
             public string NamespaceName { get; set; }
 
+            /// <summary>
+            /// <para>The list of shared accounts.</para>
+            /// </summary>
             [NameInMap("sharedAccounts")]
             [Validation(Required=false)]
             public List<long?> SharedAccounts { get; set; }
 
             /// <summary>
+            /// <para>The workspace type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>shared</para>
             /// </summary>
@@ -92,14 +116,18 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
+        /// <para>The token for the next page. A value of null indicates that no more pages are available.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>IPTL1Zpr1andEF4lQ3XAYFTgtpI04QQpc5dyKpESXBc=</para>
+        /// <para>IPTL1XAYFTgtpI04QQpc5dyKpESXBc=</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5FFB0033-A016-5A9D-9283-C123AAA7F71D</para>
         /// </summary>

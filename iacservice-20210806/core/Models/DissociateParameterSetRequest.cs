@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class DissociateParameterSetRequest : TeaModel {
         /// <summary>
+        /// <para>The list of parameter set IDs to be associated with the resource. Maximum length: 5.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("parameterSetIds")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<string> ParameterSetIds { get; set; }
 
         /// <summary>
+        /// <para>The resource ID. If the resource type is ModuleVersion, the value is a combination of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,13 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Module: template</description></item>
+        /// <item><description>ModuleVersion: template version</description></item>
+        /// <item><description>Task: node</description></item>
+        /// <item><description>Stack: resource stack.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -8,26 +8,25 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
-    public class ExecuteRegistryModuleResponseBody : TeaModel {
+    public class GetProviderDocumentResponseBody : TeaModel {
+        [NameInMap("document")]
+        [Validation(Required=false)]
+        public string Document { get; set; }
+
+        [NameInMap("providerVersion")]
+        [Validation(Required=false)]
+        public string ProviderVersion { get; set; }
+
         /// <summary>
         /// <para>Id of the request</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>79284133-D4BA-56B3-954C-D538256F7EAA</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The state file ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>task-xxxx</para>
-        /// </summary>
-        [NameInMap("stateId")]
+        [NameInMap("terraformResourceType")]
         [Validation(Required=false)]
-        public string StateId { get; set; }
+        public string TerraformResourceType { get; set; }
 
     }
 

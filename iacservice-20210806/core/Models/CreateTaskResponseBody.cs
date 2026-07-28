@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CD478792-6952-5A1C-9F57-78932BF0FAC6</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The node ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>task-433aead756057fffeaba4828f5195</para>
         /// </summary>

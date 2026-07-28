@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListDetectConfigRelationsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of associations</para>
+        /// </summary>
         [NameInMap("detectConfigRelations")]
         [Validation(Required=false)]
         public List<ListDetectConfigRelationsResponseBodyDetectConfigRelations> DetectConfigRelations { get; set; }
         public class ListDetectConfigRelationsResponseBodyDetectConfigRelations : TeaModel {
             /// <summary>
+            /// <para>Association time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-04-08T08:53:07.000+00:00</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string AttachDate { get; set; }
 
             /// <summary>
+            /// <para>Drift detection configuration ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dc-xxxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string DetectConfigId { get; set; }
 
             /// <summary>
+            /// <para>Whether enabled</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Enabled { get; set; }
 
             /// <summary>
+            /// <para>Target ID. StackId or TaskId</para>
+            /// 
             /// <b>Example:</b>
             /// <para>stack-xxxx</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string TargetId { get; set; }
 
             /// <summary>
+            /// <para>Target name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>stack-name-xxx</para>
             /// </summary>
@@ -54,6 +67,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string TargetName { get; set; }
 
             /// <summary>
+            /// <para>Target type  </para>
+            /// <list type="bullet">
+            /// <item><description>Task: orchestration job  </description></item>
+            /// <item><description>Stack: resource stack</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Stack</para>
             /// </summary>
@@ -64,7 +83,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0D797DC3-FF04-5C21-81EB-XXXXXXXXX</para>
@@ -74,6 +93,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ExecuteResourceExportTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The resource export ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ex-3b6cb9fa4751a6e645ad8365e6</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ExportTaskId { get; set; }
 
         /// <summary>
+        /// <para>The resource export version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ExportVersion { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0B0A7C19-9077-5975-ACBD-DEE718787992</para>
         /// </summary>

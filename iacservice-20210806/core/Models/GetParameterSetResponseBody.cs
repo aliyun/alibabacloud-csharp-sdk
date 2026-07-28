@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class GetParameterSetResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The parameter set details.</para>
+        /// </summary>
         [NameInMap("parameterSet")]
         [Validation(Required=false)]
         public GetParameterSetResponseBodyParameterSet ParameterSet { get; set; }
         public class GetParameterSetResponseBodyParameterSet : TeaModel {
             /// <summary>
+            /// <para>The time when the parameter set was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-01-30T02:14:16Z</para>
             /// </summary>
@@ -22,22 +27,28 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The description of the parameter set.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>OK</para>
+            /// <para>This is parameterSet</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The name of the parameter set.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>abc</para>
+            /// <para>demo</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The ID of the parameter set.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pts-3b6cb9fa4751afff9c5e4e01624b9</para>
             /// </summary>
@@ -45,13 +56,18 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string ParameterSetId { get; set; }
 
+            /// <summary>
+            /// <para>The parameters in the parameter set.</para>
+            /// </summary>
             [NameInMap("parameters")]
             [Validation(Required=false)]
             public List<GetParameterSetResponseBodyParameterSetParameters> Parameters { get; set; }
             public class GetParameterSetResponseBodyParameterSetParameters : TeaModel {
                 /// <summary>
+                /// <para>The name of the parameter.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>test1121</para>
+                /// <para>region</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -62,6 +78,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public bool? Secret { get; set; }
 
                 /// <summary>
+                /// <para>The status of the parameter. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>HAS_VALUE (default): A specific value is defined.</description></item>
+                /// <item><description>EXPLICIT_NULL: The value is explicitly set to null.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HAS_VALUE</para>
                 /// </summary>
@@ -70,6 +92,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>The type of the parameter. Valid values: string, number, bool, map(string), and list(string).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
                 /// </summary>
@@ -78,8 +102,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Type { get; set; }
 
                 /// <summary>
+                /// <para>The value of the parameter.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>vpc-2ze83xrka9ktxy0pnaxn5</para>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
@@ -87,11 +113,16 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 
             }
 
+            /// <summary>
+            /// <para>The association relationships.</para>
+            /// </summary>
             [NameInMap("relationList")]
             [Validation(Required=false)]
             public List<GetParameterSetResponseBodyParameterSetRelationList> RelationList { get; set; }
             public class GetParameterSetResponseBodyParameterSetRelationList : TeaModel {
                 /// <summary>
+                /// <para>The time when the parameter set was created.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2022-04-24T22:58:50Z</para>
                 /// </summary>
@@ -100,6 +131,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>The resource ID. When the resource type is ModuleVersion, the ID is a concatenation of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>mod-433aead756057101546eb5d50c1</para>
                 /// </summary>
@@ -108,6 +141,13 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
+                /// <para>The resource type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Module: template</description></item>
+                /// <item><description>ModuleVersion: template version</description></item>
+                /// <item><description>Task: task.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Module</para>
                 /// </summary>
@@ -120,6 +160,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>99905C7C-1320-5E7F-A798-3071482EB08E</para>
         /// </summary>

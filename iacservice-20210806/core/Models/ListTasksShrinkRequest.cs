@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListTasksShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>g-59d8d22e78792ffe3d3eb6154d727</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The keyword for fuzzy search by task ID or task name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>key</para>
         /// </summary>
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
+        /// <para>The module ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mod-1525e992f1b62139d1c437d64ae</para>
         /// </summary>
@@ -42,6 +48,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ModuleId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +58,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -58,6 +68,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>p-433aead7560572f8d95b25775c</para>
         /// </summary>
@@ -65,15 +77,34 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
+        /// <summary>
+        /// <para>The job status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Planning: The job is in the Plan execution phase.</description></item>
+        /// <item><description>Planned: The job has completed the Plan execution.</description></item>
+        /// <item><description>PlannedAndFinished: After the Plan execution is completed, no diff is found, and the job enters the final state.</description></item>
+        /// <item><description>Applying: The job is in the Apply execution phase.</description></item>
+        /// <item><description>Applied: The job has completed the Apply execution.</description></item>
+        /// <item><description>Errored: The job execution encountered errors and entered the final state.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Errored</para>
+        /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The list of task tags.</para>
+        /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
         public string TagShrink { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>task-433aead756057fffeaba4828f5195</para>
         /// </summary>

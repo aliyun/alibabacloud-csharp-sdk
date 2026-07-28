@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class AssociateGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a65451293e64979ba7a4b573950217fe</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>p-433aead7560571a87349d054b4</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The list of resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("resourceIds")]
@@ -33,6 +38,13 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SceneTestingTask: scenario-based testing task.</description></item>
+        /// <item><description>Task: regular task.</description></item>
+        /// <item><description>Module: template.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Task</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListRegistryModuleVersionsRequest : TeaModel {
         /// <summary>
+        /// <para>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,26 +20,30 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The Registry template name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ecs-rds</para>
+        /// <para>ModuleName</para>
         /// </summary>
         [NameInMap("moduleName")]
         [Validation(Required=false)]
         public string ModuleName { get; set; }
 
         /// <summary>
+        /// <para>The workspace name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>terraform-alicloud-modules</para>
+        /// <para>MamespaceName</para>
         /// </summary>
         [NameInMap("namespaceName")]
         [Validation(Required=false)]
         public string NamespaceName { get; set; }
 
         /// <summary>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TRkuCaTw/VsEHrnCZgrBA0ftQSEJU/lzo2ei7MJjplg=</para>
         /// </summary>

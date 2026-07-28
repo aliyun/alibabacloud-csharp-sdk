@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class RemoveSharedAccountsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8294F4ED-8DBA-5441-B3F2-61C3C5374990</para>
         /// </summary>

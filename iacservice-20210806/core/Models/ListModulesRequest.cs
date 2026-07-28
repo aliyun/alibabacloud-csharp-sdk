@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListModulesRequest : TeaModel {
+        /// <summary>
+        /// <para>The group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>g-kw1a50tj8rk7cki2q8bbat</para>
+        /// </summary>
         [NameInMap("groupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The search keyword. Fuzzy match is supported for template names.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>key</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ModuleName { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -41,18 +53,39 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>p-al1c58tb2lu9oej36kclvf</para>
+        /// </summary>
         [NameInMap("projectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }
 
+        /// <summary>
+        /// <para>The list of template tags.</para>
+        /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
         public List<ListModulesRequestTag> Tag { get; set; }
         public class ListModulesRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
+            /// </summary>
             [NameInMap("tagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
+            /// <summary>
+            /// <para>The tag value of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
+            /// </summary>
             [NameInMap("tagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }
