@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstancesSSLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The RDS Supabase instances whose SSL settings are modified.</para>
+        /// <para>The list of instance IDs of AI applications that were successfully modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("SSLExpiredTime")]
+        [Validation(Required=false)]
+        public string SSLExpiredTime { get; set; }
 
     }
 

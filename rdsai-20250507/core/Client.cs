@@ -4185,7 +4185,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -4243,7 +4243,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -4301,7 +4301,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -4327,7 +4327,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engine</h3>
+        /// <h3>Supported engine</h3>
         /// <para>RDS PostgreSQL</para>
         /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
@@ -9512,14 +9512,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SSL settings of RDS Supabase instances in batches.</para>
+        /// <para>Batch modifies the SSL configurations of RDS AI application instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -9588,14 +9588,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SSL settings of RDS Supabase instances in batches.</para>
+        /// <para>Batch modifies the SSL configurations of RDS AI application instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -9664,14 +9664,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SSL settings of RDS Supabase instances in batches.</para>
+        /// <para>Batch modifies the SSL configurations of RDS AI application instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -9690,14 +9690,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SSL settings of RDS Supabase instances in batches.</para>
+        /// <para>Batch modifies the SSL configurations of RDS AI application instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 

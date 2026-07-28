@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SSLExpiredTime")]
+        [Validation(Required=false)]
+        public string SSLExpiredTime { get; set; }
+
     }
 
 }

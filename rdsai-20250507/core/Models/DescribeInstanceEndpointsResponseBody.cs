@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string ConnectionString { get; set; }
 
+            [NameInMap("Domain")]
+            [Validation(Required=false)]
+            public string Domain { get; set; }
+
             /// <summary>
             /// <para>The IP address.</para>
             /// 

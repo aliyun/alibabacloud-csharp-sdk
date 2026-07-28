@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstancesSSLRequest : TeaModel {
         /// <summary>
-        /// <para>The certificate type. Only <b>custom</b> is supported.</para>
+        /// <para>The certificate type. Currently, only <b>custom</b> is supported, which indicates a custom certificate.</para>
         /// <remarks>
-        /// <para> This parameter is required if <b>SSLEnabled</b> is set to <b>1</b>.</para>
+        /// <para>This parameter is required when <b>SSLEnabled</b> is set to <b>1</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string CAType { get; set; }
 
         /// <summary>
-        /// <para>The information about the RDS Supabase instances that you want to configure. You can specify up to 10 instances.</para>
+        /// <para>The list of instance IDs of AI applications. A maximum of 10 instance IDs are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Enables or disables SSL. Valid values:</para>
+        /// <para>Specifies whether to enable or disable SSL. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enable</description></item>
-        /// <item><description><b>0</b>: disable</description></item>
+        /// <item><description><b>1</b>: Enable.</description></item>
+        /// <item><description><b>0</b>: Disable.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? SSLEnabled { get; set; }
 
         /// <summary>
-        /// <para>The content of the custom certificate.</para>
+        /// <para>The custom certificate content.</para>
         /// <remarks>
-        /// <para> This parameter is required if <b>CAType</b> is set to <b>custom</b>.</para>
+        /// <para>This parameter is required when <b>CAType</b> is set to <b>custom</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <summary>
         /// <para>The private key of the certificate.</para>
         /// <remarks>
-        /// <para> This parameter is required if <b>CAType</b> is set to <b>custom</b>.</para>
+        /// <para>This parameter is required when <b>CAType</b> is set to <b>custom</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

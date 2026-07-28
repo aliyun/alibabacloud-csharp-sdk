@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <summary>
         /// <para>Specifies whether to enable or disable SSL. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Enable SSL.</description></item>
-        /// <item><description><b>0</b>: Disable SSL.</description></item>
+        /// <item><description><b>1</b>: Enable.</description></item>
+        /// <item><description><b>0</b>: Disable.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? SSLEnabled { get; set; }
 
         /// <summary>
-        /// <para>The content of the custom certificate.</para>
+        /// <para>The custom certificate content.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>CAType</b> is set to <b>custom</b>.</para>
         /// </remarks>
