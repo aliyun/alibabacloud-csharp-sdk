@@ -18,7 +18,16 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shenzhen", "adbai.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "adbai.cn-shanghai.aliyuncs.com"},
+                {"cn-hangzhou", "adbai.cn-hangzhou.aliyuncs.com"},
+                {"cn-beijing", "adbai.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-1", "adbai.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "adbai.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("adbai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +48,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建指标平台</para>
+        /// <para>Creates a metric analysis platform.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -99,7 +108,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建指标平台</para>
+        /// <para>Creates a metric analysis platform.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -159,7 +168,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建指标平台</para>
+        /// <para>Creates a metric analysis platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -177,7 +186,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建指标平台</para>
+        /// <para>Creates a metric analysis platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -195,8 +204,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建具身智能平台</para>
+        /// <para>Creates an embodied intelligence multimodal data platform.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the actual resource amount corresponding to the backend of the instance ontology count.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateEmbodiedAIPlatformRequest
@@ -271,8 +285,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建具身智能平台</para>
+        /// <para>Creates an embodied intelligence multimodal data platform.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the actual resource amount corresponding to the backend of the instance ontology count.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateEmbodiedAIPlatformRequest
@@ -347,8 +366,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建具身智能平台</para>
+        /// <para>Creates an embodied intelligence multimodal data platform.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the actual resource amount corresponding to the backend of the instance ontology count.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateEmbodiedAIPlatformRequest
@@ -365,8 +389,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建具身智能平台</para>
+        /// <para>Creates an embodied intelligence multimodal data platform.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the actual resource amount corresponding to the backend of the instance ontology count.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateEmbodiedAIPlatformRequest
@@ -383,7 +412,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指标平台</para>
+        /// <para>Deletes a metrics platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -433,7 +462,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指标平台</para>
+        /// <para>Deletes a metrics platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -483,7 +512,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指标平台</para>
+        /// <para>Deletes a metrics platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -501,7 +530,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指标平台</para>
+        /// <para>Deletes a metrics platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -519,7 +548,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除具身智能平台</para>
+        /// <para>Deletes an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -569,7 +598,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除具身智能平台</para>
+        /// <para>Deletes an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -619,7 +648,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除具身智能平台</para>
+        /// <para>Deletes an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -637,7 +666,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除具身智能平台</para>
+        /// <para>Deletes an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -655,8 +684,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对ADB-MySQL提供产品RAG检索和实例分析、运维诊断</para>
+        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChatMessageRequest
@@ -684,6 +718,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             {
                 query["SessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skill))
+            {
+                query["Skill"] = request.Skill;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
             {
                 query["Timezone"] = request.Timezone;
@@ -709,8 +747,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对ADB-MySQL提供产品RAG检索和实例分析、运维诊断</para>
+        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChatMessageRequest
@@ -738,6 +781,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             {
                 query["SessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skill))
+            {
+                query["Skill"] = request.Skill;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
             {
                 query["Timezone"] = request.Timezone;
@@ -763,8 +810,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对ADB-MySQL提供产品RAG检索和实例分析、运维诊断</para>
+        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChatMessageRequest
@@ -781,8 +833,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对ADB-MySQL提供产品RAG检索和实例分析、运维诊断</para>
+        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries multi-turn conversations for instance kernel diagnostics.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeChatMessageRequest
@@ -799,8 +856,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询具身智能平台设备资源分配方案</para>
+        /// <para>Query the resource allocation plan for Embodied Intelligence platform devices</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Used to view the actual resource amount corresponding to the backend of the instance ontology count</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEapDeviceResourceAllocationRequest
@@ -849,8 +911,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询具身智能平台设备资源分配方案</para>
+        /// <para>Query the resource allocation plan for Embodied Intelligence platform devices</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Used to view the actual resource amount corresponding to the backend of the instance ontology count</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEapDeviceResourceAllocationRequest
@@ -899,8 +966,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询具身智能平台设备资源分配方案</para>
+        /// <para>Query the resource allocation plan for Embodied Intelligence platform devices</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Used to view the actual resource amount corresponding to the backend of the instance ontology count</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEapDeviceResourceAllocationRequest
@@ -917,8 +989,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询具身智能平台设备资源分配方案</para>
+        /// <para>Query the resource allocation plan for Embodied Intelligence platform devices</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Used to view the actual resource amount corresponding to the backend of the instance ontology count</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEapDeviceResourceAllocationRequest
@@ -935,7 +1012,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询具身智能平台</para>
+        /// <para>Queries embodied intelligence multimodal data platforms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1013,7 +1090,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询具身智能平台</para>
+        /// <para>Queries embodied intelligence multimodal data platforms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1091,7 +1168,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询具身智能平台</para>
+        /// <para>Queries embodied intelligence multimodal data platforms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1109,7 +1186,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询具身智能平台</para>
+        /// <para>Queries embodied intelligence multimodal data platforms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1127,7 +1204,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询具身智能平台资源用量</para>
+        /// <para>Queries the resource usage information of an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1185,7 +1262,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询具身智能平台资源用量</para>
+        /// <para>Queries the resource usage information of an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1243,7 +1320,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询具身智能平台资源用量</para>
+        /// <para>Queries the resource usage information of an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1261,7 +1338,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询具身智能平台资源用量</para>
+        /// <para>Queries the resource usage information of an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1279,7 +1356,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解锁具身智能平台</para>
+        /// <para>Locks an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1329,7 +1406,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解锁具身智能平台</para>
+        /// <para>Locks an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1379,7 +1456,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解锁具身智能平台</para>
+        /// <para>Locks an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1397,7 +1474,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解锁具身智能平台</para>
+        /// <para>Locks an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1415,7 +1492,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改变配指标平台</para>
+        /// <para>Upgrades or downgrades the specifications of a metric platform.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1475,7 +1552,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改变配指标平台</para>
+        /// <para>Upgrades or downgrades the specifications of a metric platform.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1535,7 +1612,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改变配指标平台</para>
+        /// <para>Upgrades or downgrades the specifications of a metric platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1553,7 +1630,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改变配指标平台</para>
+        /// <para>Upgrades or downgrades the specifications of a metric platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1571,7 +1648,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配具身智能平台</para>
+        /// <para>Modifies the specifications of an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1647,7 +1724,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配具身智能平台</para>
+        /// <para>Modifies the specifications of an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1723,7 +1800,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配具身智能平台</para>
+        /// <para>Modifies the specifications of an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1741,7 +1818,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配具身智能平台</para>
+        /// <para>Modifies the specifications of an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1759,7 +1836,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置具身智能平台密码</para>
+        /// <para>Resets the admin password for the embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1813,7 +1890,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置具身智能平台密码</para>
+        /// <para>Resets the admin password for the embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1867,7 +1944,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置具身智能平台密码</para>
+        /// <para>Resets the admin password for the embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1885,7 +1962,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置具身智能平台密码</para>
+        /// <para>Resets the admin password for the embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1903,7 +1980,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解锁具身智能平台</para>
+        /// <para>Unlocks an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1953,7 +2030,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解锁具身智能平台</para>
+        /// <para>Unlocks an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2003,7 +2080,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解锁具身智能平台</para>
+        /// <para>Unlocks an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2021,7 +2098,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解锁具身智能平台</para>
+        /// <para>Unlocks an embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <param name="request">

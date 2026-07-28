@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class DescribeEmbodiedAIPlatformsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Use the paged query parameters PageSize, PageNumber, and TotalCount for paging.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -18,14 +20,18 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Use the paged query parameters PageSize, PageNumber, and TotalCount for paging.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>298a7d5473b128dfe0b5e8707e******</para>
+        /// <para>9c3158c2e8acf616501bd5ee05******</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The list of embodied intelligence multimodal data platforms.</para>
+        /// </summary>
         [NameInMap("Platforms")]
         [Validation(Required=false)]
         public List<DescribeEmbodiedAIPlatformsResponseBodyPlatforms> Platforms { get; set; }
         public class DescribeEmbodiedAIPlatformsResponseBodyPlatforms : TeaModel {
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-12-01 14:55:36</para>
             /// </summary>
@@ -53,11 +66,16 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The webserver configuration of the platform.</para>
+            /// </summary>
             [NameInMap("EapConfig")]
             [Validation(Required=false)]
             public DescribeEmbodiedAIPlatformsResponseBodyPlatformsEapConfig EapConfig { get; set; }
             public class DescribeEmbodiedAIPlatformsResponseBodyPlatformsEapConfig : TeaModel {
                 /// <summary>
+                /// <para>The public network access address of the platform webserver.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://amv-2z******-***-roboto.ads.example.com:80">http://amv-2z******-***-roboto.ads.example.com:80</a></para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string WebserverAddress { get; set; }
 
                 /// <summary>
+                /// <para>The webserver specification of the platform.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>large</para>
                 /// </summary>
@@ -76,6 +96,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             }
 
             /// <summary>
+            /// <para>The lake storage name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>adb-lake-cn-beijing-5q1w******</para>
             /// </summary>
@@ -84,6 +106,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string OssBucketName { get; set; }
 
             /// <summary>
+            /// <para>The platform name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>platform1</para>
             /// </summary>
@@ -91,11 +115,20 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             [Validation(Required=false)]
             public string PlatformName { get; set; }
 
+            /// <summary>
+            /// <para>The Ray specification information of the platform.</para>
+            /// </summary>
             [NameInMap("RayConfig")]
             [Validation(Required=false)]
             public DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayConfig RayConfig { get; set; }
             public class DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayConfig : TeaModel {
                 /// <summary>
+                /// <para>The Ray cluster type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>BASIC: basic type without high availability.</description></item>
+                /// <item><description>HIGH_AVAILABILITY: high-availability type.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>BASIC</para>
                 /// </summary>
@@ -104,6 +137,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string Category { get; set; }
 
                 /// <summary>
+                /// <para>The disk size of the head node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100G</para>
                 /// </summary>
@@ -112,6 +147,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string HeadDiskCapacity { get; set; }
 
                 /// <summary>
+                /// <para>The node specifications of the head node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>large</para>
                 /// </summary>
@@ -120,6 +157,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string HeadSpec { get; set; }
 
                 /// <summary>
+                /// <para>The resource type of the head node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>CPU</para>
                 /// </summary>
@@ -128,6 +167,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string HeadSpecType { get; set; }
 
                 /// <summary>
+                /// <para>The Ray cluster address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://ray-cluster-address.example.com">http://ray-cluster-address.example.com</a></para>
                 /// </summary>
@@ -136,6 +177,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string RayClusterAddress { get; set; }
 
                 /// <summary>
+                /// <para>The Ray Dashboard address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://ray-dashboard-address.example.com">http://ray-dashboard-address.example.com</a></para>
                 /// </summary>
@@ -144,6 +187,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string RayDashboardAddress { get; set; }
 
                 /// <summary>
+                /// <para>The Ray Grafana address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://ray-grafana-address.example.com">http://ray-grafana-address.example.com</a></para>
                 /// </summary>
@@ -151,11 +196,16 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 [Validation(Required=false)]
                 public string RayGrafanaAddress { get; set; }
 
+                /// <summary>
+                /// <para>The list of Ray worker group configurations.</para>
+                /// </summary>
                 [NameInMap("WorkerGroups")]
                 [Validation(Required=false)]
                 public List<DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayConfigWorkerGroups> WorkerGroups { get; set; }
                 public class DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayConfigWorkerGroups : TeaModel {
                     /// <summary>
+                    /// <para>The allocation unit.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -164,6 +214,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                     public string AllocateUnit { get; set; }
 
                     /// <summary>
+                    /// <para>The name of the worker group.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>worker1</para>
                     /// </summary>
@@ -172,6 +224,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                     public string GroupName { get; set; }
 
                     /// <summary>
+                    /// <para>The maximum number of workers.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
                     /// </summary>
@@ -180,6 +234,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                     public int? MaxWorkerQuantity { get; set; }
 
                     /// <summary>
+                    /// <para>The minimum number of workers.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -188,6 +244,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                     public int? MinWorkerQuantity { get; set; }
 
                     /// <summary>
+                    /// <para>The disk size of each worker.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>100G</para>
                     /// </summary>
@@ -196,6 +254,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                     public string WorkerDiskCapacity { get; set; }
 
                     /// <summary>
+                    /// <para>The worker resource model.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>large</para>
                     /// </summary>
@@ -204,6 +264,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                     public string WorkerSpecName { get; set; }
 
                     /// <summary>
+                    /// <para>The Ray worker resource type.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>CPU</para>
                     /// </summary>
@@ -288,6 +350,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             }
 
             /// <summary>
+            /// <para>The running status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>running</para>
             /// </summary>
@@ -298,6 +362,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B47EED99-BFA5-529D-8D85-A6642421D390</para>
         /// </summary>
@@ -306,6 +372,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of platforms.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>

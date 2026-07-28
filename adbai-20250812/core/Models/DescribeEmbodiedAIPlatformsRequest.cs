@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class DescribeEmbodiedAIPlatformsRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The end time of platform creation, used to filter query results. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -29,15 +31,29 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <para>Use PageSize and PageNumber for pagination.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>Use PageSize and PageNumber for pagination.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>298a7d5473b128dfe0b5e8707e******</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -46,6 +62,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page in a paged query. Default value: 30.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -54,6 +72,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The name of the embodied intelligence multimodal data platform.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>platform1</para>
         /// </summary>
@@ -62,6 +82,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string PlatformName { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
+        /// <remarks>
+        /// <para>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +96,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The start time of platform creation, used to filter query results. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -82,6 +107,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The running status of the platform.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>running</para>
         /// </summary>

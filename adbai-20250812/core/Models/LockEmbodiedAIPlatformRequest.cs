@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class LockEmbodiedAIPlatformRequest : TeaModel {
         /// <summary>
+        /// <para>The instance cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The name of the embodied intelligence multimodal data platform.</para>
+        /// <remarks>
+        /// <para>The name can contain lowercase letters, digits, and underscores. It must start with a letter and end with a letter or digit. The name can be up to 16 characters in length.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +35,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string PlatformName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

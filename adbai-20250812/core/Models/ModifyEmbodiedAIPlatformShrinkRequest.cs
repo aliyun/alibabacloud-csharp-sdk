@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class ModifyEmbodiedAIPlatformShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string DeviceCount { get; set; }
 
         /// <summary>
+        /// <para>The name of the embodied intelligence multimodal data platform.</para>
+        /// <remarks>
+        /// <para>The name can contain lowercase letters, digits, and underscores (_). It must start with a letter and end with a letter or digit. The name can be up to 16 characters in length.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,6 +38,9 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [Validation(Required=false)]
         public string PlatformName { get; set; }
 
+        /// <summary>
+        /// <para>The Ray specification information of the platform.</para>
+        /// </summary>
         [NameInMap("RayConfig")]
         [Validation(Required=false)]
         public string RayConfigShrink { get; set; }
@@ -42,6 +50,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string RayTrainConfigShrink { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +64,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The Webserver specification of the platform.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>large</para>
         /// </summary>

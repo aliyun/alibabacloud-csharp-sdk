@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class ModifyAgentPlatformRequest : TeaModel {
+        /// <summary>
+        /// <para>The parameters required for upgrading or downgrading the metric platform.</para>
+        /// </summary>
         [NameInMap("AiPlatformConfig")]
         [Validation(Required=false)]
         public ModifyAgentPlatformRequestAiPlatformConfig AiPlatformConfig { get; set; }
         public class ModifyAgentPlatformRequestAiPlatformConfig : TeaModel {
             /// <summary>
+            /// <para>The API key of the model for the inference service that the metric analysis platform depends on.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3760d3**************************</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string ServeApiKey { get; set; }
 
             /// <summary>
+            /// <para>The endpoint of the embedding model for the inference service that the metric analysis platform depends on.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://111.xx.xx.xx:8100/inferenceservice/emb">http://111.xx.xx.xx:8100/inferenceservice/emb</a></para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string ServeEmbeddingEndpoint { get; set; }
 
             /// <summary>
+            /// <para>The name of the embedding model for the inference service that the metric analysis platform depends on.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Qwen3-Embedding-8B</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string ServeEmbeddingModelName { get; set; }
 
             /// <summary>
+            /// <para>The endpoint of the base model for the inference service that the metric analysis platform depends on.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://111.xx.xx.xx:8100/inferenceservice/base">http://111.xx.xx.xx:8100/inferenceservice/base</a></para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string ServeEndpoint { get; set; }
 
             /// <summary>
+            /// <para>The name of the base model for the inference service that the metric analysis platform depends on.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Qwen3-235B-A22B-Instruct-2507</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string ServeModelName { get; set; }
 
             /// <summary>
+            /// <para>The specification of the metric analysis platform.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>large</para>
             /// </summary>
@@ -64,6 +79,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         }
 
         /// <summary>
+        /// <para>The instance cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +90,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The name of the metric platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,6 +101,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

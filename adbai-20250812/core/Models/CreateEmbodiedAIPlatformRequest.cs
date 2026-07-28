@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class CreateEmbodiedAIPlatformRequest : TeaModel {
         /// <summary>
+        /// <para>The instance cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The ontology count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -28,6 +31,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public int? DeviceCount { get; set; }
 
         /// <summary>
+        /// <para>The name of the embodied intelligence multimodal data platform.</para>
+        /// <remarks>
+        /// <para>The name can contain lowercase letters, digits, and underscores. It must start with a letter and end with a letter or digit. The name can be up to 16 characters in length.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,11 +44,22 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [Validation(Required=false)]
         public string PlatformName { get; set; }
 
+        /// <summary>
+        /// <para>The Ray specification information of the platform.</para>
+        /// </summary>
         [NameInMap("RayConfig")]
         [Validation(Required=false)]
         public CreateEmbodiedAIPlatformRequestRayConfig RayConfig { get; set; }
         public class CreateEmbodiedAIPlatformRequestRayConfig : TeaModel {
             /// <summary>
+            /// <para>The Ray cluster type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>BASIC: basic type, non-high-availability.</para>
+            /// </description></item>
+            /// <item><description><para>HIGH_AVAILABILITY: high-availability type.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>BASIC</para>
             /// </summary>
@@ -50,6 +68,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string Category { get; set; }
 
             /// <summary>
+            /// <para>The node specifications of the head node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xlarge</para>
             /// </summary>
@@ -57,11 +77,16 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             [Validation(Required=false)]
             public string HeadSpec { get; set; }
 
+            /// <summary>
+            /// <para>The list of Ray worker group configurations.</para>
+            /// </summary>
             [NameInMap("WorkerGroups")]
             [Validation(Required=false)]
             public List<CreateEmbodiedAIPlatformRequestRayConfigWorkerGroups> WorkerGroups { get; set; }
             public class CreateEmbodiedAIPlatformRequestRayConfigWorkerGroups : TeaModel {
                 /// <summary>
+                /// <para>The allocation unit.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -70,6 +95,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string AllocateUnit { get; set; }
 
                 /// <summary>
+                /// <para>The name of the worker group.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -78,6 +105,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
+                /// <para>The maximum number of workers.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -86,6 +115,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public int? MaxWorkerQuantity { get; set; }
 
                 /// <summary>
+                /// <para>The minimum number of workers.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -94,6 +125,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public int? MinWorkerQuantity { get; set; }
 
                 /// <summary>
+                /// <para>The disk size of the worker node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100G</para>
                 /// </summary>
@@ -102,6 +135,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string WorkerDiskCapacity { get; set; }
 
                 /// <summary>
+                /// <para>The node specifications of the worker node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xlarge</para>
                 /// </summary>
@@ -110,6 +145,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string WorkerSpecName { get; set; }
 
                 /// <summary>
+                /// <para>The resource type of the worker node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>CPU</para>
                 /// </summary>
@@ -121,19 +158,30 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 
         }
 
+        /// <summary>
+        /// <para>The development and training resource configuration.</para>
+        /// </summary>
         [NameInMap("RayTrainConfig")]
         [Validation(Required=false)]
         public CreateEmbodiedAIPlatformRequestRayTrainConfig RayTrainConfig { get; set; }
         public class CreateEmbodiedAIPlatformRequestRayTrainConfig : TeaModel {
+            /// <summary>
+            /// <para>The number of CPU ACUs to purchase.</para>
+            /// </summary>
             [NameInMap("CpuAcu")]
             [Validation(Required=false)]
             public long? CpuAcu { get; set; }
 
+            /// <summary>
+            /// <para>The list of GPU model specifications to purchase.</para>
+            /// </summary>
             [NameInMap("GpuSpecs")]
             [Validation(Required=false)]
             public List<CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs> GpuSpecs { get; set; }
             public class CreateEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs : TeaModel {
                 /// <summary>
+                /// <para>The allocation unit.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>&quot;1&quot;</para>
                 /// </summary>
@@ -142,6 +190,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public string AllocateUnit { get; set; }
 
                 /// <summary>
+                /// <para>The number of GPU cards.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -150,6 +200,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                 public long? Count { get; set; }
 
                 /// <summary>
+                /// <para>The GPU model.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ADB.MLGrand.4</para>
                 /// </summary>
@@ -159,15 +211,23 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 
             }
 
+            /// <summary>
+            /// <para>The development machine configuration.</para>
+            /// </summary>
             [NameInMap("TerminalConfig")]
             [Validation(Required=false)]
             public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig TerminalConfig { get; set; }
             public class CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig : TeaModel {
+                /// <summary>
+                /// <para>The image repository configuration.</para>
+                /// </summary>
                 [NameInMap("AcrConfig")]
                 [Validation(Required=false)]
                 public CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig AcrConfig { get; set; }
                 public class CreateEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig : TeaModel {
                     /// <summary>
+                    /// <para>The instance ID of the image repository.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cri-***</para>
                     /// </summary>
@@ -175,11 +235,16 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                     [Validation(Required=false)]
                     public string InstanceId { get; set; }
 
+                    /// <summary>
+                    /// <para>The list of namespaces.</para>
+                    /// </summary>
                     [NameInMap("Namespaces")]
                     [Validation(Required=false)]
                     public List<string> Namespaces { get; set; }
 
                     /// <summary>
+                    /// <para>The address of the image repository instance.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>example-vpc.example-region.cr.aliyuncs.com</para>
                     /// </summary>
@@ -194,6 +259,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -204,6 +273,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The webserver specification of the platform.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>large</para>
         /// </summary>

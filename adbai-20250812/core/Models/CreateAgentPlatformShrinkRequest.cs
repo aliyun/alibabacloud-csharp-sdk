@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class CreateAgentPlatformShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The parameters required to create the metric analysis platform.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AiPlatformConfig")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string AiPlatformConfigShrink { get; set; }
 
         /// <summary>
+        /// <para>The instance cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The name of the metric analysis platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +40,11 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>

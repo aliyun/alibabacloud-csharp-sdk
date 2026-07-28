@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class DescribeEapDeviceResourceAllocationResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of specification recommendations.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeEapDeviceResourceAllocationResponseBodyItems> Items { get; set; }
         public class DescribeEapDeviceResourceAllocationResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>Total number of devices</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public int? DeviceCount { get; set; }
 
             /// <summary>
+            /// <para>Total ACU count for the Ray Cluster Head of the Embodied Intelligence platform</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2.0</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public double? HeadAcu { get; set; }
 
             /// <summary>
+            /// <para>Number of vCPU cores for the Ray Cluster Head node on the Intelligent Embodiment platform</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public int? HeadCpu { get; set; }
 
             /// <summary>
+            /// <para>Ray Cluster Head specification of the Embodied Intelligence platform</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;medium&quot;</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string HeadSpecName { get; set; }
 
             /// <summary>
+            /// <para>Total number of ACUs actually deployed on the Intelligent Embodiment platform</para>
+            /// 
             /// <b>Example:</b>
             /// <para>26</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public double? TotalAcu { get; set; }
 
             /// <summary>
+            /// <para>Total number of vCPU cores actually deployed on the Intelligent Embodiment platform</para>
+            /// 
             /// <b>Example:</b>
             /// <para>26</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public int? TotalDeployedCpu { get; set; }
 
             /// <summary>
+            /// <para>Total target number of vCPU cores</para>
+            /// 
             /// <b>Example:</b>
             /// <para>24</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public int? TotalTargetCpu { get; set; }
 
             /// <summary>
+            /// <para>Total ACU count for the Embodied Intelligence platform</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8.0</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public double? WebserverAcu { get; set; }
 
             /// <summary>
+            /// <para>Total number of vCPU cores for the Embodied Intelligence platform</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public int? WebserverCpu { get; set; }
 
             /// <summary>
+            /// <para>Webserver specification of the Embodied Intelligence platform.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;xlarge&quot;</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public string WebserverSpecName { get; set; }
 
             /// <summary>
+            /// <para>Total ACU count per Ray Cluster Worker of the Embodied Intelligence platform</para>
+            /// 
             /// <b>Example:</b>
             /// <para>16.0</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public double? WorkerAcu { get; set; }
 
             /// <summary>
+            /// <para>Total number of Ray Cluster Worker nodes on the Intelligent Embodiment platform</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public int? WorkerCount { get; set; }
 
             /// <summary>
+            /// <para>Number of vCPU cores per Ray Cluster Worker of the Embodied Intelligence platform</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
             public int? WorkerCpu { get; set; }
 
             /// <summary>
+            /// <para>Ray Cluster Worker specification of the Embodied Intelligence platform</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;xlarge&quot;</para>
             /// </summary>

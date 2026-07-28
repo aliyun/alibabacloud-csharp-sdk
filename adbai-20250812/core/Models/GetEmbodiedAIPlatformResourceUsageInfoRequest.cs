@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class GetEmbodiedAIPlatformResourceUsageInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The instance cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range for querying network resource usage. Format: yyyy-MM-ddTHH:mmZ.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the embodied intelligence platform.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>platform1</para>
         /// </summary>
@@ -38,6 +42,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string PlatformName { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
+        /// <remarks>
+        /// <para>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +56,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The start of the time range for querying network resource usage. Format: yyyy-MM-ddTHH:mmZ.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>

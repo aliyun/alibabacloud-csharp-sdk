@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class CreateEmbodiedAIPlatformResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>19E994DC-A816-56DB-9F90-5F8E403DD19D</para>
         /// </summary>
