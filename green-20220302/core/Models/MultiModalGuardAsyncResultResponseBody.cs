@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class MultiModalGuardAsyncResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the response.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public MultiModalGuardAsyncResultResponseBodyData Data { get; set; }
         public class MultiModalGuardAsyncResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The audio moderation result.</para>
+            /// <para>The audio moderation segment results.</para>
             /// </summary>
             [NameInMap("AudioResult")]
             [Validation(Required=false)]
             public MultiModalGuardAsyncResultResponseBodyDataAudioResult AudioResult { get; set; }
             public class MultiModalGuardAsyncResultResponseBodyDataAudioResult : TeaModel {
                 /// <summary>
-                /// <para>Details for each audio slice.</para>
+                /// <para>The segment details.</para>
                 /// </summary>
                 [NameInMap("SliceDetails")]
                 [Validation(Required=false)]
                 public List<MultiModalGuardAsyncResultResponseBodyDataAudioResultSliceDetails> SliceDetails { get; set; }
                 public class MultiModalGuardAsyncResultResponseBodyDataAudioResultSliceDetails : TeaModel {
                     /// <summary>
-                    /// <para>Detection details for the audio slice.</para>
+                    /// <para>The moderation details.</para>
                     /// </summary>
                     [NameInMap("Detail")]
                     [Validation(Required=false)]
@@ -50,14 +50,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         /// <summary>
                         /// <para>The risk level. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><c>high</c>: High risk. If the content matches an entry in a custom keyword library, the risk level defaults to high.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>medium</c>: Medium risk.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>low</c>: Low risk.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>none</c>: No risk detected.</para>
-                        /// </description></item>
+                        /// <item><description>high: High risk. If a custom keyword library is hit, the risk level defaults to high.</description></item>
+                        /// <item><description>medium: Medium risk.</description></item>
+                        /// <item><description>low: Low risk.</description></item>
+                        /// <item><description>none: No risk detected.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -68,14 +64,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string Level { get; set; }
 
                         /// <summary>
-                        /// <para>A list of detection results.</para>
+                        /// <para>The list of moderation results.</para>
                         /// </summary>
                         [NameInMap("Result")]
                         [Validation(Required=false)]
                         public List<MultiModalGuardAsyncResultResponseBodyDataAudioResultSliceDetailsDetailResult> Result { get; set; }
                         public class MultiModalGuardAsyncResultResponseBodyDataAudioResultSliceDetailsDetailResult : TeaModel {
                             /// <summary>
-                            /// <para>The confidence score, ranging from 0 to 100, accurate to two decimal places.</para>
+                            /// <para>The confidence score, ranging from 0 to 100, rounded to two decimal places.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>90</para>
@@ -85,17 +81,17 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public float? Confidence { get; set; }
 
                             /// <summary>
-                            /// <para>The description of the label.</para>
+                            /// <para>The label description.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>毒品</para>
+                            /// <para>drugs.</para>
                             /// </summary>
                             [NameInMap("Description")]
                             [Validation(Required=false)]
                             public string Description { get; set; }
 
                             /// <summary>
-                            /// <para>Additional information about the detection result.</para>
+                            /// <para>The extended information of the moderation result.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>{}</para>
@@ -105,7 +101,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public object Ext { get; set; }
 
                             /// <summary>
-                            /// <para>The label of the detection result.</para>
+                            /// <para>The label.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>drug</para>
@@ -117,14 +113,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             /// <summary>
                             /// <para>The risk level. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description><para><c>high</c>: High risk. If the content matches an entry in a custom keyword library, the risk level defaults to high.</para>
-                            /// </description></item>
-                            /// <item><description><para><c>medium</c>: Medium risk.</para>
-                            /// </description></item>
-                            /// <item><description><para><c>low</c>: Low risk.</para>
-                            /// </description></item>
-                            /// <item><description><para><c>none</c>: No risk detected.</para>
-                            /// </description></item>
+                            /// <item><description>high: High risk. If a custom keyword library is hit, the risk level defaults to high.</description></item>
+                            /// <item><description>medium: Medium risk.</description></item>
+                            /// <item><description>low: Low risk.</description></item>
+                            /// <item><description>none: No risk detected.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -139,14 +131,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         /// <summary>
                         /// <para>The recommended action. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><c>block</c>: Block the content.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>pass</c>: Pass the content.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>watch</c>: The content requires review.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>mask</c>: Mask the content.</para>
-                        /// </description></item>
+                        /// <item><description>block: Block the content.</description></item>
+                        /// <item><description>pass: Allow the content.</description></item>
+                        /// <item><description>watch: Manually review the content.</description></item>
+                        /// <item><description>mask: Mask the content.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -157,18 +145,13 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string Suggestion { get; set; }
 
                         /// <summary>
-                        /// <para>The detection type. Valid values:</para>
+                        /// <para>The moderation type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><c>contentModeration</c>: Content moderation.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>promptAttack</c>: Prompt attack detection.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>sensitiveData</c>: Sensitive data detection.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>modelHallucination</c>: Model hallucination.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>maliciousFile</c>: Malicious file detection.</para>
-                        /// </description></item>
+                        /// <item><description>contentModeration: content compliance moderation</description></item>
+                        /// <item><description>promptAttack: prompt attack detection</description></item>
+                        /// <item><description>sensitiveData: sensitive content detection</description></item>
+                        /// <item><description>modelHallucination: model hallucination detection</description></item>
+                        /// <item><description>maliciousFile: malicious file detection</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -181,7 +164,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     }
 
                     /// <summary>
-                    /// <para>The end time of the audio slice, in seconds.</para>
+                    /// <para>The end time of the segment, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
@@ -191,7 +174,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public long? EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The start time of the audio slice, in seconds.</para>
+                    /// <para>The start time of the segment, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -203,14 +186,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <summary>
                     /// <para>The recommended action. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><c>block</c>: Block the content.</para>
-                    /// </description></item>
-                    /// <item><description><para><c>pass</c>: Pass the content.</para>
-                    /// </description></item>
-                    /// <item><description><para><c>watch</c>: The content requires review.</para>
-                    /// </description></item>
-                    /// <item><description><para><c>mask</c>: Mask the content.</para>
-                    /// </description></item>
+                    /// <item><description>block: Block the content.</description></item>
+                    /// <item><description>pass: Allow the content.</description></item>
+                    /// <item><description>watch: Manually review the content.</description></item>
+                    /// <item><description>mask: Mask the content.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -221,17 +200,17 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string Suggestion { get; set; }
 
                     /// <summary>
-                    /// <para>The speech-to-text transcript of the audio slice.</para>
+                    /// <para>The transcribed text of the audio segment.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>今天天气真不错</para>
+                    /// <para>The weather is really nice today.</para>
                     /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
                     public string Text { get; set; }
 
                     /// <summary>
-                    /// <para>The temporary URL of the audio slice.</para>
+                    /// <para>The temporary URL of the audio segment file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://xxxx.abc.wav">http://xxxx.abc.wav</a></para>
@@ -243,7 +222,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 }
 
                 /// <summary>
-                /// <para>The slice count.</para>
+                /// <para>The number of segments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -253,7 +232,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public int? SliceNum { get; set; }
 
                 /// <summary>
-                /// <para>The overall recommended action for the audio content.</para>
+                /// <para>The recommended action.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pass</para>
@@ -265,7 +244,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>The value of the <c>dataId</c> parameter from the request. This field is omitted if <c>dataId</c> was not provided.</para>
+            /// <para>The value of dataId passed in the API request. This field is not returned if dataId was not specified in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>data1234</para>
@@ -275,37 +254,33 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string DataId { get; set; }
 
             /// <summary>
-            /// <para>The video frame moderation result.</para>
+            /// <para>The list of video frame capture results.</para>
             /// </summary>
             [NameInMap("FrameResult")]
             [Validation(Required=false)]
             public MultiModalGuardAsyncResultResponseBodyDataFrameResult FrameResult { get; set; }
             public class MultiModalGuardAsyncResultResponseBodyDataFrameResult : TeaModel {
                 /// <summary>
-                /// <para>The moderation results for video frames.</para>
+                /// <para>The frame moderation results.</para>
                 /// </summary>
                 [NameInMap("Frames")]
                 [Validation(Required=false)]
                 public List<MultiModalGuardAsyncResultResponseBodyDataFrameResultFrames> Frames { get; set; }
                 public class MultiModalGuardAsyncResultResponseBodyDataFrameResultFrames : TeaModel {
                     /// <summary>
-                    /// <para>A list of detection results.</para>
+                    /// <para>The list of moderation results.</para>
                     /// </summary>
                     [NameInMap("Detail")]
                     [Validation(Required=false)]
                     public List<MultiModalGuardAsyncResultResponseBodyDataFrameResultFramesDetail> Detail { get; set; }
                     public class MultiModalGuardAsyncResultResponseBodyDataFrameResultFramesDetail : TeaModel {
                         /// <summary>
-                        /// <para>The risk level. Valid values include:</para>
+                        /// <para>The risk level. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para>high: High risk. If a match is found in a custom dictionary, the risk level defaults to high.</para>
-                        /// </description></item>
-                        /// <item><description><para>medium: Medium risk.</para>
-                        /// </description></item>
-                        /// <item><description><para>low: Low risk.</para>
-                        /// </description></item>
-                        /// <item><description><para>none: No risk detected.</para>
-                        /// </description></item>
+                        /// <item><description>high: High risk. If a custom keyword library is hit, the risk level defaults to high.</description></item>
+                        /// <item><description>medium: Medium risk.</description></item>
+                        /// <item><description>low: Low risk.</description></item>
+                        /// <item><description>none: No risk detected.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -316,14 +291,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string Level { get; set; }
 
                         /// <summary>
-                        /// <para>A list of detection results.</para>
+                        /// <para>The moderation result.</para>
                         /// </summary>
                         [NameInMap("Result")]
                         [Validation(Required=false)]
                         public List<MultiModalGuardAsyncResultResponseBodyDataFrameResultFramesDetailResult> Result { get; set; }
                         public class MultiModalGuardAsyncResultResponseBodyDataFrameResultFramesDetailResult : TeaModel {
                             /// <summary>
-                            /// <para>The confidence score, ranging from 0 to 100, accurate to two decimal places.</para>
+                            /// <para>The confidence score, ranging from 0 to 100, rounded to two decimal places.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>80</para>
@@ -333,17 +308,17 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public float? Confidence { get; set; }
 
                             /// <summary>
-                            /// <para>The description of the label.</para>
+                            /// <para>The label description.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>广告</para>
+                            /// <para>advertisement.</para>
                             /// </summary>
                             [NameInMap("Description")]
                             [Validation(Required=false)]
                             public string Description { get; set; }
 
                             /// <summary>
-                            /// <para>Additional information about the detection result.</para>
+                            /// <para>The extended information of the moderation result.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>{}</para>
@@ -353,7 +328,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public object Ext { get; set; }
 
                             /// <summary>
-                            /// <para>The label of the detection result.</para>
+                            /// <para>The label.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>ad</para>
@@ -365,14 +340,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             /// <summary>
                             /// <para>The risk level. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description><para><c>high</c>: High risk. If the content matches an entry in a custom keyword library, the risk level defaults to high.</para>
-                            /// </description></item>
-                            /// <item><description><para><c>medium</c>: Medium risk.</para>
-                            /// </description></item>
-                            /// <item><description><para><c>low</c>: Low risk.</para>
-                            /// </description></item>
-                            /// <item><description><para><c>none</c>: No risk detected.</para>
-                            /// </description></item>
+                            /// <item><description>high: High risk. If a custom keyword library is hit, the risk level defaults to high.</description></item>
+                            /// <item><description>medium: Medium risk.</description></item>
+                            /// <item><description>low: Low risk.</description></item>
+                            /// <item><description>none: No risk detected.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -385,16 +356,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         }
 
                         /// <summary>
-                        /// <para>Suggestion</para>
+                        /// <para>The recommended action. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para>block: A suggestion to block.</para>
-                        /// </description></item>
-                        /// <item><description><para>pass: A suggestion to pass.</para>
-                        /// </description></item>
-                        /// <item><description><para>watch: A suggestion to watch.</para>
-                        /// </description></item>
-                        /// <item><description><para>mask: A suggestion to mask.</para>
-                        /// </description></item>
+                        /// <item><description>block: Block the content.</description></item>
+                        /// <item><description>pass: Allow the content.</description></item>
+                        /// <item><description>watch: Manually review the content.</description></item>
+                        /// <item><description>mask: Mask the content.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -405,18 +372,13 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string Suggestion { get; set; }
 
                         /// <summary>
-                        /// <para>The detection type. Valid values:</para>
+                        /// <para>The moderation type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><c>contentModeration</c>: Content moderation.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>promptAttack</c>: Prompt attack detection.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>sensitiveData</c>: Sensitive data detection.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>modelHallucination</c>: Model hallucination.</para>
-                        /// </description></item>
-                        /// <item><description><para><c>maliciousFile</c>: Malicious file detection.</para>
-                        /// </description></item>
+                        /// <item><description>contentModeration: content compliance moderation</description></item>
+                        /// <item><description>promptAttack: prompt attack detection</description></item>
+                        /// <item><description>sensitiveData: sensitive content detection</description></item>
+                        /// <item><description>modelHallucination: model hallucination detection</description></item>
+                        /// <item><description>maliciousFile: malicious file detection</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -429,7 +391,27 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     }
 
                     /// <summary>
-                    /// <para>The time offset of the frame in the video, in seconds.</para>
+                    /// <para>The error code.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>401</para>
+                    /// </summary>
+                    [NameInMap("ErrorCode")]
+                    [Validation(Required=false)]
+                    public int? ErrorCode { get; set; }
+
+                    /// <summary>
+                    /// <para>The error message.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>parameter invalid</para>
+                    /// </summary>
+                    [NameInMap("ErrorMsg")]
+                    [Validation(Required=false)]
+                    public string ErrorMsg { get; set; }
+
+                    /// <summary>
+                    /// <para>The frame capture position.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.5</para>
@@ -441,14 +423,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <summary>
                     /// <para>The recommended action. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><c>block</c>: Block the content.</para>
-                    /// </description></item>
-                    /// <item><description><para><c>pass</c>: Pass the content.</para>
-                    /// </description></item>
-                    /// <item><description><para><c>watch</c>: The content requires review.</para>
-                    /// </description></item>
-                    /// <item><description><para><c>mask</c>: Mask the content.</para>
-                    /// </description></item>
+                    /// <item><description>block: Block the content.</description></item>
+                    /// <item><description>pass: Allow the content.</description></item>
+                    /// <item><description>watch: Manually review the content.</description></item>
+                    /// <item><description>mask: Mask the content.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -459,7 +437,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string Suggestion { get; set; }
 
                     /// <summary>
-                    /// <para>The absolute timestamp of the frame, in milliseconds.</para>
+                    /// <para>The absolute timestamp, in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1684559739000</para>
@@ -469,7 +447,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public long? Timestamp { get; set; }
 
                     /// <summary>
-                    /// <para>The temporary URL of the video frame.</para>
+                    /// <para>The temporary URL of the segment.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://xxx.jpeg">https://xxx.jpeg</a></para>
@@ -481,7 +459,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 }
 
                 /// <summary>
-                /// <para>The frame count.</para>
+                /// <para>The number of segments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -493,14 +471,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 /// <summary>
                 /// <para>The recommended action. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>block</c>: Block the content.</para>
-                /// </description></item>
-                /// <item><description><para><c>pass</c>: Pass the content.</para>
-                /// </description></item>
-                /// <item><description><para><c>watch</c>: The content requires review.</para>
-                /// </description></item>
-                /// <item><description><para><c>mask</c>: Mask the content.</para>
-                /// </description></item>
+                /// <item><description>block: Block the content.</description></item>
+                /// <item><description>pass: Allow the content.</description></item>
+                /// <item><description>watch: Manually review the content.</description></item>
+                /// <item><description>mask: Mask the content.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -513,7 +487,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>The unique identifier for the live stream.</para>
+            /// <para>The unique ID of the live stream.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveId</para>
@@ -525,14 +499,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             /// <summary>
             /// <para>The recommended action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>block</c>: Block the content.</para>
-            /// </description></item>
-            /// <item><description><para><c>pass</c>: Pass the content.</para>
-            /// </description></item>
-            /// <item><description><para><c>watch</c>: The content requires review.</para>
-            /// </description></item>
-            /// <item><description><para><c>mask</c>: Mask the content.</para>
-            /// </description></item>
+            /// <item><description>block: Block the content.</description></item>
+            /// <item><description>pass: Allow the content.</description></item>
+            /// <item><description>watch: Manually review the content.</description></item>
+            /// <item><description>mask: Mask the content.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -555,7 +525,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -565,7 +535,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

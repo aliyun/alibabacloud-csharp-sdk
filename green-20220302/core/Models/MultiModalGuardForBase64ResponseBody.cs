@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>未检测出风险</para>
+                    /// <para>No risk detected.</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <para>The extension information.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>json格式数据</para>
+                    /// <para>JSON format data.</para>
                     /// </summary>
                     [NameInMap("Ext")]
                     [Validation(Required=false)]

@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Document review results</para>
+        /// <para>Queries the document content moderation result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Document review results</para>
+        /// <para>Queries the document content moderation result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Document review results</para>
+        /// <para>Queries the document content moderation result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Document review results</para>
+        /// <para>Queries the document content moderation result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2597,12 +2597,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This AI Security Guardrail API retrieves asynchronous multimodal results from both audio and video.</para>
+        /// <para>Queries the asynchronous results of AI safety guardrail multimodal content moderation, supporting audio and video modalities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For APIs that incur charges, add the following sentence in bold at the beginning of the description: &quot;Before you use this API, make sure that you fully understand the billing methods and pricing of the XXX product.&quot; Link the word \&quot;pricing\&quot; to https\://www\.aliyun.com/price/product#/ecs/detail.</para>
+        /// <para>If the API incurs fees, add the following bold statement as the first sentence: <b>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of XXX.</b></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2648,12 +2648,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This AI Security Guardrail API retrieves asynchronous multimodal results from both audio and video.</para>
+        /// <para>Queries the asynchronous results of AI safety guardrail multimodal content moderation, supporting audio and video modalities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For APIs that incur charges, add the following sentence in bold at the beginning of the description: &quot;Before you use this API, make sure that you fully understand the billing methods and pricing of the XXX product.&quot; Link the word \&quot;pricing\&quot; to https\://www\.aliyun.com/price/product#/ecs/detail.</para>
+        /// <para>If the API incurs fees, add the following bold statement as the first sentence: <b>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of XXX.</b></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2699,12 +2699,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This AI Security Guardrail API retrieves asynchronous multimodal results from both audio and video.</para>
+        /// <para>Queries the asynchronous results of AI safety guardrail multimodal content moderation, supporting audio and video modalities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For APIs that incur charges, add the following sentence in bold at the beginning of the description: &quot;Before you use this API, make sure that you fully understand the billing methods and pricing of the XXX product.&quot; Link the word \&quot;pricing\&quot; to https\://www\.aliyun.com/price/product#/ecs/detail.</para>
+        /// <para>If the API incurs fees, add the following bold statement as the first sentence: <b>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of XXX.</b></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2722,12 +2722,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This AI Security Guardrail API retrieves asynchronous multimodal results from both audio and video.</para>
+        /// <para>Queries the asynchronous results of AI safety guardrail multimodal content moderation, supporting audio and video modalities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For APIs that incur charges, add the following sentence in bold at the beginning of the description: &quot;Before you use this API, make sure that you fully understand the billing methods and pricing of the XXX product.&quot; Link the word \&quot;pricing\&quot; to https\://www\.aliyun.com/price/product#/ecs/detail.</para>
+        /// <para>If the API incurs fees, add the following bold statement as the first sentence: <b>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of XXX.</b></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2745,7 +2745,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs synchronous multimodal content moderation. Supports base64-encoded image strings.</para>
+        /// <para>Performs synchronous multimodal content moderation. Supports image base64 strings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2767,6 +2767,10 @@ namespace AlibabaCloud.SDK.Green20220302
                 query["Service"] = request.Service;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileBase64Str))
+            {
+                body["FileBase64Str"] = request.FileBase64Str;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageBase64Str))
             {
                 body["ImageBase64Str"] = request.ImageBase64Str;
@@ -2797,7 +2801,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs synchronous multimodal content moderation. Supports base64-encoded image strings.</para>
+        /// <para>Performs synchronous multimodal content moderation. Supports image base64 strings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2819,6 +2823,10 @@ namespace AlibabaCloud.SDK.Green20220302
                 query["Service"] = request.Service;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileBase64Str))
+            {
+                body["FileBase64Str"] = request.FileBase64Str;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageBase64Str))
             {
                 body["ImageBase64Str"] = request.ImageBase64Str;
@@ -2849,7 +2857,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs synchronous multimodal content moderation. Supports base64-encoded image strings.</para>
+        /// <para>Performs synchronous multimodal content moderation. Supports image base64 strings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2867,7 +2875,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs synchronous multimodal content moderation. Supports base64-encoded image strings.</para>
+        /// <para>Performs synchronous multimodal content moderation. Supports image base64 strings.</para>
         /// </summary>
         /// 
         /// <param name="request">

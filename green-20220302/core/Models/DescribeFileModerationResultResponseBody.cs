@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeFileModerationResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code. A value of 200 indicates that the request was successful.</para>
+        /// <para>The return code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public DescribeFileModerationResultResponseBodyData Data { get; set; }
         public class DescribeFileModerationResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AccountId specified in the request.</para>
+            /// <para>The AccountId passed in by the customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>accountIdtest123</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data.</para>
+            /// <para>The data ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26769ada6e264e7ba9aa048241e12be9</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string DataId { get; set; }
 
             /// <summary>
-            /// <para>The document type. This parameter is optional.</para>
+            /// <para>Optional. The document type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>doc</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string DocType { get; set; }
 
             /// <summary>
-            /// <para>A list of moderation results.</para>
+            /// <para>The list of moderation results.</para>
             /// </summary>
             [NameInMap("PageResult")]
             [Validation(Required=false)]
             public List<DescribeFileModerationResultResponseBodyDataPageResult> PageResult { get; set; }
             public class DescribeFileModerationResultResponseBodyDataPageResult : TeaModel {
                 /// <summary>
-                /// <para>The image moderation results.</para>
+                /// <para>The image moderation result.</para>
                 /// </summary>
                 [NameInMap("ImageResult")]
                 [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>这个是标题</para>
+                    /// <para>This is a title.</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public List<DescribeFileModerationResultResponseBodyDataPageResultImageResultLabelResult> LabelResult { get; set; }
                     public class DescribeFileModerationResultResponseBodyDataPageResultImageResultLabelResult : TeaModel {
                         /// <summary>
-                        /// <para>The confidence score.</para>
+                        /// <para>The risk score.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>25.0</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         /// <para>The description.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>这个是标题</para>
+                        /// <para>This is a title.</para>
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public DescribeFileModerationResultResponseBodyDataPageResultImageResultLocation Location { get; set; }
                     public class DescribeFileModerationResultResponseBodyDataPageResultImageResultLocation : TeaModel {
                         /// <summary>
-                        /// <para>The height of the detected area.</para>
+                        /// <para>The H value of the coordinate point.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>44</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public int? H { get; set; }
 
                         /// <summary>
-                        /// <para>The width of the detected area.</para>
+                        /// <para>The W value of the coordinate point.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>33</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public int? W { get; set; }
 
                         /// <summary>
-                        /// <para>The X coordinate of the point.</para>
+                        /// <para>The X value of the coordinate point.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>11</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public int? X { get; set; }
 
                         /// <summary>
-                        /// <para>The Y-coordinate of the point.</para>
+                        /// <para>The Y value of the coordinate point.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>22</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string RiskLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The service that was called.</para>
+                    /// <para>The invoked service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>baselineCheck</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 }
 
                 /// <summary>
-                /// <para>The URL of the image.</para>
+                /// <para>The image URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.jpg">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.jpg</a></para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public int? PageNum { get; set; }
 
                 /// <summary>
-                /// <para>The text moderation results.</para>
+                /// <para>The text moderation result.</para>
                 /// </summary>
                 [NameInMap("TextResult")]
                 [Validation(Required=false)]
@@ -221,24 +221,24 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>这是一个标题</para>
+                    /// <para>This is a title.</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the label.</para>
+                    /// <para>The label descriptions.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>疑似广告内容</para>
+                    /// <para>Suspected advertising content.</para>
                     /// </summary>
                     [NameInMap("Descriptions")]
                     [Validation(Required=false)]
                     public string Descriptions { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the label.</para>
+                    /// <para>The label values.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>porn</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string RiskLevel { get; set; }
 
                     /// <summary>
-                    /// <para>Details about the hit risk.</para>
+                    /// <para>The details of the hit risks.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string RiskTips { get; set; }
 
                     /// <summary>
-                    /// <para>The risk keywords that were hit.</para>
+                    /// <para>The risk keywords that are hit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
@@ -291,14 +291,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <para>The text content.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>吧啦吧啦</para>
+                    /// <para>blah blah.</para>
                     /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
                     public string Text { get; set; }
 
                     /// <summary>
-                    /// <para>Information about the text segment.</para>
+                    /// <para>The text segment information.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[0,999]</para>
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public List<DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels> ImageLabels { get; set; }
                     public class DescribeFileModerationResultResponseBodyDataPageSummaryImageSummaryImageLabels : TeaModel {
                         /// <summary>
-                        /// <para>The description of the label.</para>
+                        /// <para>The label description.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>test</para>
@@ -396,6 +396,84 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public int? PageSum { get; set; }
 
+                [NameInMap("RiskSummary")]
+                [Validation(Required=false)]
+                public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummary RiskSummary { get; set; }
+                public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummary : TeaModel {
+                    [NameInMap("Ext")]
+                    [Validation(Required=false)]
+                    public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExt Ext { get; set; }
+                    public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExt : TeaModel {
+                        [NameInMap("AigcData")]
+                        [Validation(Required=false)]
+                        public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcData AigcData { get; set; }
+                        public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcData : TeaModel {
+                            [NameInMap("AIGC")]
+                            [Validation(Required=false)]
+                            public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcDataAIGC AIGC { get; set; }
+                            public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcDataAIGC : TeaModel {
+                                [NameInMap("ContentProducer")]
+                                [Validation(Required=false)]
+                                public string ContentProducer { get; set; }
+
+                                [NameInMap("ContentPropagator")]
+                                [Validation(Required=false)]
+                                public string ContentPropagator { get; set; }
+
+                                [NameInMap("Label")]
+                                [Validation(Required=false)]
+                                public string Label { get; set; }
+
+                                [NameInMap("ProduceID")]
+                                [Validation(Required=false)]
+                                public string ProduceID { get; set; }
+
+                                [NameInMap("PropagateID")]
+                                [Validation(Required=false)]
+                                public string PropagateID { get; set; }
+
+                                [NameInMap("ReservedCode1")]
+                                [Validation(Required=false)]
+                                public string ReservedCode1 { get; set; }
+
+                                [NameInMap("ReservedCode2")]
+                                [Validation(Required=false)]
+                                public string ReservedCode2 { get; set; }
+
+                            }
+
+                            [NameInMap("Explain")]
+                            [Validation(Required=false)]
+                            public string Explain { get; set; }
+
+                        }
+
+                    }
+
+                    [NameInMap("RiskLabels")]
+                    [Validation(Required=false)]
+                    public List<DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryRiskLabels> RiskLabels { get; set; }
+                    public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryRiskLabels : TeaModel {
+                        [NameInMap("Confidence")]
+                        [Validation(Required=false)]
+                        public float? Confidence { get; set; }
+
+                        [NameInMap("Description")]
+                        [Validation(Required=false)]
+                        public string Description { get; set; }
+
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
+                        public string Label { get; set; }
+
+                    }
+
+                    [NameInMap("RiskLevel")]
+                    [Validation(Required=false)]
+                    public string RiskLevel { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The text summary information.</para>
                 /// </summary>
@@ -421,10 +499,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public List<DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels> TextLabels { get; set; }
                     public class DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels : TeaModel {
                         /// <summary>
-                        /// <para>The description of the label.</para>
+                        /// <para>The label descriptions.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>未检测出风险</para>
+                        /// <para>No risk detected.</para>
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
@@ -467,7 +545,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The download URL for the file.</para>
+            /// <para>The file download URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf</a></para>
@@ -489,7 +567,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</para>

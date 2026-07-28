@@ -1,3 +1,10 @@
+2026-07-28 Version: 3.5.1
+- Update API DescribeFileModerationResult: add response parameters Body.Data.PageSummary.RiskSummary.
+- Update API MultiModalGuardAsyncResult: add response parameters Body.Data.FrameResult.Frames.$.ErrorCode.
+- Update API MultiModalGuardAsyncResult: add response parameters Body.Data.FrameResult.Frames.$.ErrorMsg.
+- Update API MultiModalGuardForBase64: add request parameters FileBase64Str.
+
+
 2026-07-15 Version: 3.5.0
 - Support API MultiModalAgentSSE.
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class MultiModalGuardAsyncResultRequest : TeaModel {
         /// <summary>
-        /// <para>The moderation service to run.</para>
+        /// <para>The moderation service type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>audio_security_check</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Service { get; set; }
 
         /// <summary>
-        /// <para>The parameters for the moderation service, provided as a JSON string.</para>
+        /// <para>The parameters required by the moderation service. The value is a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
