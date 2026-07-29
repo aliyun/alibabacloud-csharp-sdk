@@ -1970,13 +1970,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates resource control.</para>
+        /// <para>Binds a specified resource control rule to a user, database, query, or connection in a PolarDB for MySQL cluster. After the binding succeeds, the target object is subject to the CPU quota limit defined by the resource control rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation associates an agent (specified by <c>AgentId</c>) of PolarClaw (identified by <c>ApplicationId</c>) with a specified communication channel (<c>Channel</c>). You can also specify an account ID (<c>ChannelAccountId</c>) within the channel.</para>
+        /// <para>Resource Control limits the CPU resources that can be used by specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <h3>Before you begin</h3>
+        /// <list type="bullet">
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2034,13 +2041,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates resource control.</para>
+        /// <para>Binds a specified resource control rule to a user, database, query, or connection in a PolarDB for MySQL cluster. After the binding succeeds, the target object is subject to the CPU quota limit defined by the resource control rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation associates an agent (specified by <c>AgentId</c>) of PolarClaw (identified by <c>ApplicationId</c>) with a specified communication channel (<c>Channel</c>). You can also specify an account ID (<c>ChannelAccountId</c>) within the channel.</para>
+        /// <para>Resource Control limits the CPU resources that can be used by specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <h3>Before you begin</h3>
+        /// <list type="bullet">
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2098,13 +2112,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates resource control.</para>
+        /// <para>Binds a specified resource control rule to a user, database, query, or connection in a PolarDB for MySQL cluster. After the binding succeeds, the target object is subject to the CPU quota limit defined by the resource control rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation associates an agent (specified by <c>AgentId</c>) of PolarClaw (identified by <c>ApplicationId</c>) with a specified communication channel (<c>Channel</c>). You can also specify an account ID (<c>ChannelAccountId</c>) within the channel.</para>
+        /// <para>Resource Control limits the CPU resources that can be used by specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <h3>Before you begin</h3>
+        /// <list type="bullet">
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2122,13 +2143,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates resource control.</para>
+        /// <para>Binds a specified resource control rule to a user, database, query, or connection in a PolarDB for MySQL cluster. After the binding succeeds, the target object is subject to the CPU quota limit defined by the resource control rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation associates an agent (specified by <c>AgentId</c>) of PolarClaw (identified by <c>ApplicationId</c>) with a specified communication channel (<c>Channel</c>). You can also specify an account ID (<c>ChannelAccountId</c>) within the channel.</para>
+        /// <para>Resource Control limits the CPU resources that can be used by specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <h3>Before you begin</h3>
+        /// <list type="bullet">
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -5230,6 +5258,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAIDBClusterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a model service API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAIDBClusterApiKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAIDBClusterApiKeyResponse
+        /// </returns>
+        public CreateAIDBClusterApiKeyResponse CreateAIDBClusterApiKeyWithOptions(CreateAIDBClusterApiKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAIDBClusterApiKey",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAIDBClusterApiKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a model service API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAIDBClusterApiKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAIDBClusterApiKeyResponse
+        /// </returns>
+        public async Task<CreateAIDBClusterApiKeyResponse> CreateAIDBClusterApiKeyWithOptionsAsync(CreateAIDBClusterApiKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAIDBClusterApiKey",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAIDBClusterApiKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a model service API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAIDBClusterApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAIDBClusterApiKeyResponse
+        /// </returns>
+        public CreateAIDBClusterApiKeyResponse CreateAIDBClusterApiKey(CreateAIDBClusterApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAIDBClusterApiKeyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a model service API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAIDBClusterApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAIDBClusterApiKeyResponse
+        /// </returns>
+        public async Task<CreateAIDBClusterApiKeyResponse> CreateAIDBClusterApiKeyAsync(CreateAIDBClusterApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAIDBClusterApiKeyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15110,13 +15266,22 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set MaxCpu to specify the maximum CPU quota percentage that the rule can use, or set CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify one and only one of MaxCpu and CpuCount when creating a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to define and create a cron job. The cron job is triggered periodically based on a specified schedule and carries specific messages or instructions. Advanced options such as custom execution frequency, time zone settings, and alert mechanisms for failures are supported. You can also configure the message content, target channel, and recipients.</para>
+        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <h3>Before you begin</h3>
+        /// <list type="bullet">
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
+        /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
+        /// <item><description>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -15174,13 +15339,22 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set MaxCpu to specify the maximum CPU quota percentage that the rule can use, or set CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify one and only one of MaxCpu and CpuCount when creating a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to define and create a cron job. The cron job is triggered periodically based on a specified schedule and carries specific messages or instructions. Advanced options such as custom execution frequency, time zone settings, and alert mechanisms for failures are supported. You can also configure the message content, target channel, and recipients.</para>
+        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <h3>Before you begin</h3>
+        /// <list type="bullet">
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
+        /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
+        /// <item><description>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -15238,13 +15412,22 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set MaxCpu to specify the maximum CPU quota percentage that the rule can use, or set CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify one and only one of MaxCpu and CpuCount when creating a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to define and create a cron job. The cron job is triggered periodically based on a specified schedule and carries specific messages or instructions. Advanced options such as custom execution frequency, time zone settings, and alert mechanisms for failures are supported. You can also configure the message content, target channel, and recipients.</para>
+        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <h3>Before you begin</h3>
+        /// <list type="bullet">
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
+        /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
+        /// <item><description>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -15262,13 +15445,22 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource control.</para>
+        /// <para>Creates a resource control rule for a specified PolarDB for MySQL cluster. You can set MaxCpu to specify the maximum CPU quota percentage that the rule can use, or set CpuCount to specify the maximum number of CPU cores that the rule can use. You must specify one and only one of MaxCpu and CpuCount when creating a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to define and create a cron job. The cron job is triggered periodically based on a specified schedule and carries specific messages or instructions. Advanced options such as custom execution frequency, time zone settings, and alert mechanisms for failures are supported. You can also configure the message content, target channel, and recipients.</para>
+        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <h3>Before you begin</h3>
+        /// <list type="bullet">
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
+        /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
+        /// <item><description>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -15746,6 +15938,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAIDBClusterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an API key for a model service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAIDBClusterApiKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAIDBClusterApiKeyResponse
+        /// </returns>
+        public DeleteAIDBClusterApiKeyResponse DeleteAIDBClusterApiKeyWithOptions(DeleteAIDBClusterApiKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                query["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAIDBClusterApiKey",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAIDBClusterApiKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an API key for a model service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAIDBClusterApiKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAIDBClusterApiKeyResponse
+        /// </returns>
+        public async Task<DeleteAIDBClusterApiKeyResponse> DeleteAIDBClusterApiKeyWithOptionsAsync(DeleteAIDBClusterApiKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                query["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAIDBClusterApiKey",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAIDBClusterApiKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an API key for a model service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAIDBClusterApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAIDBClusterApiKeyResponse
+        /// </returns>
+        public DeleteAIDBClusterApiKeyResponse DeleteAIDBClusterApiKey(DeleteAIDBClusterApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAIDBClusterApiKeyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an API key for a model service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAIDBClusterApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAIDBClusterApiKeyResponse
+        /// </returns>
+        public async Task<DeleteAIDBClusterApiKeyResponse> DeleteAIDBClusterApiKeyAsync(DeleteAIDBClusterApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAIDBClusterApiKeyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -22866,14 +23186,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a resource control.</para>
+        /// <para>Deletes a resource control rule from a specified PolarDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>The cluster must be in the Running state. Otherwise, the operation fails.</para>
+        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the create, update, delete, attach, and detach operations for resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <h3>Limits</h3>
+        /// <list type="bullet">
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>In the cluster kernel parameter Settings, loose_enable_resource_control must be set to ON.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -22923,14 +23249,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a resource control.</para>
+        /// <para>Deletes a resource control rule from a specified PolarDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>The cluster must be in the Running state. Otherwise, the operation fails.</para>
+        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the create, update, delete, attach, and detach operations for resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <h3>Limits</h3>
+        /// <list type="bullet">
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>In the cluster kernel parameter Settings, loose_enable_resource_control must be set to ON.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -22980,14 +23312,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a resource control.</para>
+        /// <para>Deletes a resource control rule from a specified PolarDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>The cluster must be in the Running state. Otherwise, the operation fails.</para>
+        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the create, update, delete, attach, and detach operations for resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <h3>Limits</h3>
+        /// <list type="bullet">
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>In the cluster kernel parameter Settings, loose_enable_resource_control must be set to ON.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -23005,14 +23343,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a resource control.</para>
+        /// <para>Deletes a resource control rule from a specified PolarDB for MySQL cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>The cluster must be in the Running state. Otherwise, the operation fails.</para>
+        /// <para>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the create, update, delete, attach, and detach operations for resource control rules. Querying Resource Control CPU usage is not supported.</para>
+        /// <h3>Limits</h3>
+        /// <list type="bullet">
+        /// <item><description>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>In the cluster kernel parameter Settings, loose_enable_resource_control must be set to ON.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -23186,6 +23530,126 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteSQLRateLimitingRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the API key of a model service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterApiKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterApiKeysResponse
+        /// </returns>
+        public DescribeAIDBClusterApiKeysResponse DescribeAIDBClusterApiKeysWithOptions(DescribeAIDBClusterApiKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAIDBClusterApiKeys",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAIDBClusterApiKeysResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the API key of a model service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterApiKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterApiKeysResponse
+        /// </returns>
+        public async Task<DescribeAIDBClusterApiKeysResponse> DescribeAIDBClusterApiKeysWithOptionsAsync(DescribeAIDBClusterApiKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAIDBClusterApiKeys",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAIDBClusterApiKeysResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the API key of a model service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterApiKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterApiKeysResponse
+        /// </returns>
+        public DescribeAIDBClusterApiKeysResponse DescribeAIDBClusterApiKeys(DescribeAIDBClusterApiKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAIDBClusterApiKeysWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the API key of a model service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAIDBClusterApiKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAIDBClusterApiKeysResponse
+        /// </returns>
+        public async Task<DescribeAIDBClusterApiKeysResponse> DescribeAIDBClusterApiKeysAsync(DescribeAIDBClusterApiKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAIDBClusterApiKeysWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -68818,14 +69282,22 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies resource control.</para>
+        /// <para>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU percentage mode and the maximum CPU core count mode. You must specify one and only one of the MaxCpu and CpuCount parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</para>
+        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</para>
+        /// <h3>Before you begin</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
+        /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
+        /// <item><description>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -68883,14 +69355,22 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies resource control.</para>
+        /// <para>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU percentage mode and the maximum CPU core count mode. You must specify one and only one of the MaxCpu and CpuCount parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</para>
+        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</para>
+        /// <h3>Before you begin</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
+        /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
+        /// <item><description>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -68948,14 +69428,22 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies resource control.</para>
+        /// <para>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU percentage mode and the maximum CPU core count mode. You must specify one and only one of the MaxCpu and CpuCount parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</para>
+        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</para>
+        /// <h3>Before you begin</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
+        /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
+        /// <item><description>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -68973,14 +69461,22 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies resource control.</para>
+        /// <para>Modifies the CPU quota of an existing resource control rule in a specified PolarDB for MySQL cluster. You can modify the current quota value or switch between the maximum CPU percentage mode and the maximum CPU core count mode. You must specify one and only one of the MaxCpu and CpuCount parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
-        /// <para>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</para>
+        /// <para>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</para>
+        /// <h3>Before you begin</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.</description></item>
+        /// <item><description>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</description></item>
+        /// <item><description>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -75014,17 +75510,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a resource control.</para>
+        /// <para>Unbinds a specified resource control rule from a user, database, query, or connection in a PolarDB for MySQL cluster. After the unbinding is successful, the resource control rule no longer limits the CPU quota of the corresponding target object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
+        /// <para>Resource Control is used to limit the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release provides the capabilities to create, modify, delete, attach, and unbind resource control rules. It does not provide the capability to query Resource Control CPU usage.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Only the privileged user of a PolarDB for MySQL cluster can be reset.</description></item>
-        /// <item><description>If the privileged user encounters issues, such as permissions being unexpectedly revoked (REVOKE), you can reset the permissions of the privileged user to restore it to normal.</description></item>
-        /// </list>
+        /// <item><description>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -75082,17 +75581,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a resource control.</para>
+        /// <para>Unbinds a specified resource control rule from a user, database, query, or connection in a PolarDB for MySQL cluster. After the unbinding is successful, the resource control rule no longer limits the CPU quota of the corresponding target object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
+        /// <para>Resource Control is used to limit the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release provides the capabilities to create, modify, delete, attach, and unbind resource control rules. It does not provide the capability to query Resource Control CPU usage.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Only the privileged user of a PolarDB for MySQL cluster can be reset.</description></item>
-        /// <item><description>If the privileged user encounters issues, such as permissions being unexpectedly revoked (REVOKE), you can reset the permissions of the privileged user to restore it to normal.</description></item>
-        /// </list>
+        /// <item><description>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -75150,17 +75652,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a resource control.</para>
+        /// <para>Unbinds a specified resource control rule from a user, database, query, or connection in a PolarDB for MySQL cluster. After the unbinding is successful, the resource control rule no longer limits the CPU quota of the corresponding target object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
+        /// <para>Resource Control is used to limit the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release provides the capabilities to create, modify, delete, attach, and unbind resource control rules. It does not provide the capability to query Resource Control CPU usage.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Only the privileged user of a PolarDB for MySQL cluster can be reset.</description></item>
-        /// <item><description>If the privileged user encounters issues, such as permissions being unexpectedly revoked (REVOKE), you can reset the permissions of the privileged user to restore it to normal.</description></item>
-        /// </list>
+        /// <item><description>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -75178,17 +75683,20 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a resource control.</para>
+        /// <para>Unbinds a specified resource control rule from a user, database, query, or connection in a PolarDB for MySQL cluster. After the unbinding is successful, the resource control rule no longer limits the CPU quota of the corresponding target object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <remarks>
+        /// <para>Resource Control is used to limit the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release provides the capabilities to create, modify, delete, attach, and unbind resource control rules. It does not provide the capability to query Resource Control CPU usage.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Only the privileged user of a PolarDB for MySQL cluster can be reset.</description></item>
-        /// <item><description>If the privileged user encounters issues, such as permissions being unexpectedly revoked (REVOKE), you can reset the permissions of the privileged user to restore it to normal.</description></item>
-        /// </list>
+        /// <item><description>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</description></item>
+        /// <item><description>The cluster kernel parameter loose_enable_resource_control must be set to ON.<remarks>
+        /// <para>Notice: This is a notice.</notice></para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
