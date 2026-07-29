@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ObtainCredentialRequest : TeaModel {
         /// <summary>
+        /// <para>The identifier for the credential to obtain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

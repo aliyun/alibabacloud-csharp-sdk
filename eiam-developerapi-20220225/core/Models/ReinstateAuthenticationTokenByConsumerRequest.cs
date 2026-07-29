@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ReinstateAuthenticationTokenByConsumerRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the authentication token consumer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string ConsumerId { get; set; }
 
         /// <summary>
+        /// <para>The credential provider identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

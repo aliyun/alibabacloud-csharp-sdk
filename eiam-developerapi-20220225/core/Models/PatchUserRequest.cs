@@ -39,9 +39,12 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             /// <summary>
             /// <para>The operation to be performed on the field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>add</description></item>
-            /// <item><description>replace If you leave the value of the extended field empty, the replace operation is converted to an add operation.</description></item>
-            /// <item><description>remove</description></item>
+            /// <item><description><para>add</para>
+            /// </description></item>
+            /// <item><description><para>replace If you leave the value of the extended field empty, the replace operation is converted to an add operation.</para>
+            /// </description></item>
+            /// <item><description><para>remove</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

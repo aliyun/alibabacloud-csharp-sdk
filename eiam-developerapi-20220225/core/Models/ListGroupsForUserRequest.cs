@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ListGroupsForUserRequest : TeaModel {
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>nextToken</para>
+        /// <para>The token to retrieve the next page of results. Leave this parameter empty to query from the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxx</para>

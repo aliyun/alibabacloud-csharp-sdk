@@ -18,7 +18,16 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"eu-central-1", "eiam-developerapi.eu-central-1.aliyuncs.com"},
+                {"cn-hongkong", "eiam-developerapi.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "eiam-developerapi.cn-hangzhou.aliyuncs.com"},
+                {"ap-southeast-5", "eiam-developerapi.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-1", "eiam-developerapi.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "eiam-developerapi.ap-northeast-2.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("eiam-developerapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +48,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将账户加入多个组织</para>
+        /// <para>Adds an EIAM account to one or more EIAM organizations. These organizations serve as subordinate organizations for the account. If the account is already a member of a specified organization, no update is performed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -94,7 +103,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将账户加入多个组织</para>
+        /// <para>Adds an EIAM account to one or more EIAM organizations. These organizations serve as subordinate organizations for the account. If the account is already a member of a specified organization, no update is performed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -149,7 +158,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将账户加入多个组织</para>
+        /// <para>Adds an EIAM account to one or more EIAM organizations. These organizations serve as subordinate organizations for the account. If the account is already a member of a specified organization, no update is performed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -168,7 +177,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将账户加入多个组织</para>
+        /// <para>Adds an EIAM account to one or more EIAM organizations. These organizations serve as subordinate organizations for the account. If the account is already a member of a specified organization, no update is performed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -663,7 +672,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Employee Identity and Access Management (EIAM) account in an organizational unit.</para>
+        /// <para>Creates a new EIAM account in a specified organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -766,7 +775,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Employee Identity and Access Management (EIAM) account in an organizational unit.</para>
+        /// <para>Creates a new EIAM account in a specified organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -869,7 +878,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Employee Identity and Access Management (EIAM) account in an organizational unit.</para>
+        /// <para>Creates a new EIAM account in a specified organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -888,7 +897,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Employee Identity and Access Management (EIAM) account in an organizational unit.</para>
+        /// <para>Creates a new EIAM account in a specified organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -907,8 +916,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账户专属凭据。</para>
+        /// <para>Creates an account-specific credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+        /// Ensure that the Access Token you provide has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|credential:manage</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserExclusiveCredentialRequest
@@ -955,6 +973,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             {
                 body["description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCiphertext))
+            {
+                body["returnCiphertext"] = request.ReturnCiphertext;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -986,8 +1008,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账户专属凭据。</para>
+        /// <para>Creates an account-specific credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+        /// Ensure that the Access Token you provide has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|credential:manage</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserExclusiveCredentialRequest
@@ -1034,6 +1065,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             {
                 body["description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnCiphertext))
+            {
+                body["returnCiphertext"] = request.ReturnCiphertext;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1065,8 +1100,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账户专属凭据。</para>
+        /// <para>Creates an account-specific credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+        /// Ensure that the Access Token you provide has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|credential:manage</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserExclusiveCredentialRequest
@@ -1084,8 +1128,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建账户专属凭据。</para>
+        /// <para>Creates an account-specific credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+        /// Ensure that the Access Token you provide has the &quot;Manage Static Credentials&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|credential:manage</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserExclusiveCredentialRequest
@@ -1783,8 +1836,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>拉取一个有效的OAuth认证令牌。</para>
+        /// <para>Retrieves a valid OAuth authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
+        /// Ensure that the Access Token you provide has the function authorization to &quot;obtain authentication token&quot; for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// FetchOAuthAuthenticationTokenRequest
@@ -1806,6 +1868,14 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
             {
                 body["credentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomParameters))
+            {
+                body["customParameters"] = request.CustomParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceAuthentication))
+            {
+                body["forceAuthentication"] = request.ForceAuthentication;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
@@ -1842,8 +1912,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>拉取一个有效的OAuth认证令牌。</para>
+        /// <para>Retrieves a valid OAuth authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
+        /// Ensure that the Access Token you provide has the function authorization to &quot;obtain authentication token&quot; for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// FetchOAuthAuthenticationTokenRequest
@@ -1865,6 +1944,14 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialProviderIdentifier))
             {
                 body["credentialProviderIdentifier"] = request.CredentialProviderIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomParameters))
+            {
+                body["customParameters"] = request.CustomParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceAuthentication))
+            {
+                body["forceAuthentication"] = request.ForceAuthentication;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
             {
@@ -1901,8 +1988,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>拉取一个有效的OAuth认证令牌。</para>
+        /// <para>Retrieves a valid OAuth authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
+        /// Ensure that the Access Token you provide has the function authorization to &quot;obtain authentication token&quot; for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// FetchOAuthAuthenticationTokenRequest
@@ -1920,8 +2016,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>拉取一个有效的OAuth认证令牌。</para>
+        /// <para>Retrieves a valid OAuth authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
+        /// Ensure that the Access Token you provide has the function authorization to &quot;obtain authentication token&quot; for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// FetchOAuthAuthenticationTokenRequest
@@ -2069,8 +2174,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成一个有效的JWT认证令牌。</para>
+        /// <para>Generates a JSON Web Token (JWT) authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API performs identity authentication and authorization using the Access Token issued by IDaaS.
+        /// Ensure that the provided Access Token has the authorization to access the &quot;Obtain Authentication Token&quot; feature of the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateJwtAuthenticationTokenRequest
@@ -2148,8 +2262,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成一个有效的JWT认证令牌。</para>
+        /// <para>Generates a JSON Web Token (JWT) authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API performs identity authentication and authorization using the Access Token issued by IDaaS.
+        /// Ensure that the provided Access Token has the authorization to access the &quot;Obtain Authentication Token&quot; feature of the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateJwtAuthenticationTokenRequest
@@ -2227,8 +2350,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成一个有效的JWT认证令牌。</para>
+        /// <para>Generates a JSON Web Token (JWT) authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API performs identity authentication and authorization using the Access Token issued by IDaaS.
+        /// Ensure that the provided Access Token has the authorization to access the &quot;Obtain Authentication Token&quot; feature of the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateJwtAuthenticationTokenRequest
@@ -2246,8 +2378,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成一个有效的JWT认证令牌。</para>
+        /// <para>Generates a JSON Web Token (JWT) authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API performs identity authentication and authorization using the Access Token issued by IDaaS.
+        /// Ensure that the provided Access Token has the authorization to access the &quot;Obtain Authentication Token&quot; feature of the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateJwtAuthenticationTokenRequest
@@ -2265,12 +2406,88 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a token for accessing an application in an instance.</para>
+        /// <para>Generates an access token for an application in a specified IDaaS instance based on credential information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following authorization types are supported: authorization code, device code, refresh token, and client credentials.</para>
+        /// <para>The following methods are supported: Authorization Code, Device Flow, Refresh Token, Client Credentials, and Password.</para>
+        /// <h3>1. Authorization Code</h3>
+        /// <para>Scenario: This is the standard OAuth 2.0 authorization code flow, which is suitable for web applications with frontend interaction.
+        /// Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=authorization_code
+        /// &amp;code={authorization_code}
+        /// &amp;redirect_uri={redirect_uri}
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// </c></pre>
+        /// <para>Parameters:
+        /// ● code: The authorization code obtained from the authorization endpoint.
+        /// ● redirect_uri: Must be the same as the redirect_uri that was used to obtain the authorization code.</para>
+        /// <h3>1.1 Authorization Code for public clients</h3>
+        /// <para>Scenario: This scenario is suitable for applications that cannot securely store a secret, such as single-page applications (SPAs) or native applications. In this flow, a client_secret is not required, but you must use the Proof Key for Code Exchange (PKCE) mechanism. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=authorization_code
+        /// &amp;code={authorization_code}
+        /// &amp;redirect_uri={redirect_uri}
+        /// &amp;client_id={client_id}
+        /// &amp;code_verifier={code_verifier}
+        /// </c></pre>
+        /// <para>Parameters:
+        /// ● code_verifier: The code verifier for the PKCE mechanism. The client generates it when initiating an authorization request and uses it to derive the \<c>code_challenge\\</c>. When exchanging for a token, you must submit this value. It must be identical to the value used to generate the \<c>code_challenge\\</c>.
+        /// Java example for generating a code_verifier and code_challenge:</para>
+        /// <pre><code class="language-java">String codeVerifier = Base64.getUrlEncoder().withoutPadding().encodeToString(new SecureRandom().generateSeed(43));
+        /// String codeChallenge = Base64.getUrlEncoder().withoutPadding().encodeToString(java.security.MessageDigest.getInstance(&quot;SHA-256&quot;).digest(codeVerifier.getBytes()));
+        /// </c></pre>
+        /// <h3>2. Device Flow</h3>
+        /// <para>Scenario: This scenario is suitable for input-constrained devices, such as TVs and IoT devices. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=urn:ietf:params:oauth:grant-type:device_code
+        /// &amp;device_code={device_code}
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// </c></pre>
+        /// <para>To obtain the device code, first call <c>/oauth2/device/code</c> to retrieve the device_code and user_code.</para>
+        /// <h3>2.1 Device Flow for public clients</h3>
+        /// <para>Scenario: This scenario is used when interactive logon is not convenient and the client is a public client. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=urn:ietf:params:oauth:grant-type:device_code
+        /// &amp;device_code={device_code}
+        /// &amp;client_id={client_id}
+        /// </c></pre>
+        /// <h3>3. Refresh Token</h3>
+        /// <para>Scenario: This scenario uses a refresh_token to obtain a new access_token. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=refresh_token
+        /// &amp;refresh_token={refresh_token}
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// </c></pre>
+        /// <h3>4. Client Credentials</h3>
+        /// <para>Scenario: This scenario is for server-to-server authentication without user involvement. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=client_credentials
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// &amp;scope={scope}
+        /// </c></pre>
+        /// <h3>5. Password</h3>
+        /// <para>Scenario: This scenario uses traditional username and password authentication. Use this method with caution. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=password
+        /// &amp;username={username}
+        /// &amp;password={password}
+        /// &amp;client_id={client_id}
+        /// &amp;scope={scope}
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -2360,12 +2577,88 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a token for accessing an application in an instance.</para>
+        /// <para>Generates an access token for an application in a specified IDaaS instance based on credential information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following authorization types are supported: authorization code, device code, refresh token, and client credentials.</para>
+        /// <para>The following methods are supported: Authorization Code, Device Flow, Refresh Token, Client Credentials, and Password.</para>
+        /// <h3>1. Authorization Code</h3>
+        /// <para>Scenario: This is the standard OAuth 2.0 authorization code flow, which is suitable for web applications with frontend interaction.
+        /// Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=authorization_code
+        /// &amp;code={authorization_code}
+        /// &amp;redirect_uri={redirect_uri}
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// </c></pre>
+        /// <para>Parameters:
+        /// ● code: The authorization code obtained from the authorization endpoint.
+        /// ● redirect_uri: Must be the same as the redirect_uri that was used to obtain the authorization code.</para>
+        /// <h3>1.1 Authorization Code for public clients</h3>
+        /// <para>Scenario: This scenario is suitable for applications that cannot securely store a secret, such as single-page applications (SPAs) or native applications. In this flow, a client_secret is not required, but you must use the Proof Key for Code Exchange (PKCE) mechanism. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=authorization_code
+        /// &amp;code={authorization_code}
+        /// &amp;redirect_uri={redirect_uri}
+        /// &amp;client_id={client_id}
+        /// &amp;code_verifier={code_verifier}
+        /// </c></pre>
+        /// <para>Parameters:
+        /// ● code_verifier: The code verifier for the PKCE mechanism. The client generates it when initiating an authorization request and uses it to derive the \<c>code_challenge\\</c>. When exchanging for a token, you must submit this value. It must be identical to the value used to generate the \<c>code_challenge\\</c>.
+        /// Java example for generating a code_verifier and code_challenge:</para>
+        /// <pre><code class="language-java">String codeVerifier = Base64.getUrlEncoder().withoutPadding().encodeToString(new SecureRandom().generateSeed(43));
+        /// String codeChallenge = Base64.getUrlEncoder().withoutPadding().encodeToString(java.security.MessageDigest.getInstance(&quot;SHA-256&quot;).digest(codeVerifier.getBytes()));
+        /// </c></pre>
+        /// <h3>2. Device Flow</h3>
+        /// <para>Scenario: This scenario is suitable for input-constrained devices, such as TVs and IoT devices. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=urn:ietf:params:oauth:grant-type:device_code
+        /// &amp;device_code={device_code}
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// </c></pre>
+        /// <para>To obtain the device code, first call <c>/oauth2/device/code</c> to retrieve the device_code and user_code.</para>
+        /// <h3>2.1 Device Flow for public clients</h3>
+        /// <para>Scenario: This scenario is used when interactive logon is not convenient and the client is a public client. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=urn:ietf:params:oauth:grant-type:device_code
+        /// &amp;device_code={device_code}
+        /// &amp;client_id={client_id}
+        /// </c></pre>
+        /// <h3>3. Refresh Token</h3>
+        /// <para>Scenario: This scenario uses a refresh_token to obtain a new access_token. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=refresh_token
+        /// &amp;refresh_token={refresh_token}
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// </c></pre>
+        /// <h3>4. Client Credentials</h3>
+        /// <para>Scenario: This scenario is for server-to-server authentication without user involvement. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=client_credentials
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// &amp;scope={scope}
+        /// </c></pre>
+        /// <h3>5. Password</h3>
+        /// <para>Scenario: This scenario uses traditional username and password authentication. Use this method with caution. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=password
+        /// &amp;username={username}
+        /// &amp;password={password}
+        /// &amp;client_id={client_id}
+        /// &amp;scope={scope}
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -2455,12 +2748,88 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a token for accessing an application in an instance.</para>
+        /// <para>Generates an access token for an application in a specified IDaaS instance based on credential information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following authorization types are supported: authorization code, device code, refresh token, and client credentials.</para>
+        /// <para>The following methods are supported: Authorization Code, Device Flow, Refresh Token, Client Credentials, and Password.</para>
+        /// <h3>1. Authorization Code</h3>
+        /// <para>Scenario: This is the standard OAuth 2.0 authorization code flow, which is suitable for web applications with frontend interaction.
+        /// Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=authorization_code
+        /// &amp;code={authorization_code}
+        /// &amp;redirect_uri={redirect_uri}
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// </c></pre>
+        /// <para>Parameters:
+        /// ● code: The authorization code obtained from the authorization endpoint.
+        /// ● redirect_uri: Must be the same as the redirect_uri that was used to obtain the authorization code.</para>
+        /// <h3>1.1 Authorization Code for public clients</h3>
+        /// <para>Scenario: This scenario is suitable for applications that cannot securely store a secret, such as single-page applications (SPAs) or native applications. In this flow, a client_secret is not required, but you must use the Proof Key for Code Exchange (PKCE) mechanism. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=authorization_code
+        /// &amp;code={authorization_code}
+        /// &amp;redirect_uri={redirect_uri}
+        /// &amp;client_id={client_id}
+        /// &amp;code_verifier={code_verifier}
+        /// </c></pre>
+        /// <para>Parameters:
+        /// ● code_verifier: The code verifier for the PKCE mechanism. The client generates it when initiating an authorization request and uses it to derive the \<c>code_challenge\\</c>. When exchanging for a token, you must submit this value. It must be identical to the value used to generate the \<c>code_challenge\\</c>.
+        /// Java example for generating a code_verifier and code_challenge:</para>
+        /// <pre><code class="language-java">String codeVerifier = Base64.getUrlEncoder().withoutPadding().encodeToString(new SecureRandom().generateSeed(43));
+        /// String codeChallenge = Base64.getUrlEncoder().withoutPadding().encodeToString(java.security.MessageDigest.getInstance(&quot;SHA-256&quot;).digest(codeVerifier.getBytes()));
+        /// </c></pre>
+        /// <h3>2. Device Flow</h3>
+        /// <para>Scenario: This scenario is suitable for input-constrained devices, such as TVs and IoT devices. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=urn:ietf:params:oauth:grant-type:device_code
+        /// &amp;device_code={device_code}
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// </c></pre>
+        /// <para>To obtain the device code, first call <c>/oauth2/device/code</c> to retrieve the device_code and user_code.</para>
+        /// <h3>2.1 Device Flow for public clients</h3>
+        /// <para>Scenario: This scenario is used when interactive logon is not convenient and the client is a public client. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=urn:ietf:params:oauth:grant-type:device_code
+        /// &amp;device_code={device_code}
+        /// &amp;client_id={client_id}
+        /// </c></pre>
+        /// <h3>3. Refresh Token</h3>
+        /// <para>Scenario: This scenario uses a refresh_token to obtain a new access_token. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=refresh_token
+        /// &amp;refresh_token={refresh_token}
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// </c></pre>
+        /// <h3>4. Client Credentials</h3>
+        /// <para>Scenario: This scenario is for server-to-server authentication without user involvement. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=client_credentials
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// &amp;scope={scope}
+        /// </c></pre>
+        /// <h3>5. Password</h3>
+        /// <para>Scenario: This scenario uses traditional username and password authentication. Use this method with caution. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=password
+        /// &amp;username={username}
+        /// &amp;password={password}
+        /// &amp;client_id={client_id}
+        /// &amp;scope={scope}
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -2479,12 +2848,88 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a token for accessing an application in an instance.</para>
+        /// <para>Generates an access token for an application in a specified IDaaS instance based on credential information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following authorization types are supported: authorization code, device code, refresh token, and client credentials.</para>
+        /// <para>The following methods are supported: Authorization Code, Device Flow, Refresh Token, Client Credentials, and Password.</para>
+        /// <h3>1. Authorization Code</h3>
+        /// <para>Scenario: This is the standard OAuth 2.0 authorization code flow, which is suitable for web applications with frontend interaction.
+        /// Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=authorization_code
+        /// &amp;code={authorization_code}
+        /// &amp;redirect_uri={redirect_uri}
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// </c></pre>
+        /// <para>Parameters:
+        /// ● code: The authorization code obtained from the authorization endpoint.
+        /// ● redirect_uri: Must be the same as the redirect_uri that was used to obtain the authorization code.</para>
+        /// <h3>1.1 Authorization Code for public clients</h3>
+        /// <para>Scenario: This scenario is suitable for applications that cannot securely store a secret, such as single-page applications (SPAs) or native applications. In this flow, a client_secret is not required, but you must use the Proof Key for Code Exchange (PKCE) mechanism. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=authorization_code
+        /// &amp;code={authorization_code}
+        /// &amp;redirect_uri={redirect_uri}
+        /// &amp;client_id={client_id}
+        /// &amp;code_verifier={code_verifier}
+        /// </c></pre>
+        /// <para>Parameters:
+        /// ● code_verifier: The code verifier for the PKCE mechanism. The client generates it when initiating an authorization request and uses it to derive the \<c>code_challenge\\</c>. When exchanging for a token, you must submit this value. It must be identical to the value used to generate the \<c>code_challenge\\</c>.
+        /// Java example for generating a code_verifier and code_challenge:</para>
+        /// <pre><code class="language-java">String codeVerifier = Base64.getUrlEncoder().withoutPadding().encodeToString(new SecureRandom().generateSeed(43));
+        /// String codeChallenge = Base64.getUrlEncoder().withoutPadding().encodeToString(java.security.MessageDigest.getInstance(&quot;SHA-256&quot;).digest(codeVerifier.getBytes()));
+        /// </c></pre>
+        /// <h3>2. Device Flow</h3>
+        /// <para>Scenario: This scenario is suitable for input-constrained devices, such as TVs and IoT devices. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=urn:ietf:params:oauth:grant-type:device_code
+        /// &amp;device_code={device_code}
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// </c></pre>
+        /// <para>To obtain the device code, first call <c>/oauth2/device/code</c> to retrieve the device_code and user_code.</para>
+        /// <h3>2.1 Device Flow for public clients</h3>
+        /// <para>Scenario: This scenario is used when interactive logon is not convenient and the client is a public client. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=urn:ietf:params:oauth:grant-type:device_code
+        /// &amp;device_code={device_code}
+        /// &amp;client_id={client_id}
+        /// </c></pre>
+        /// <h3>3. Refresh Token</h3>
+        /// <para>Scenario: This scenario uses a refresh_token to obtain a new access_token. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=refresh_token
+        /// &amp;refresh_token={refresh_token}
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// </c></pre>
+        /// <h3>4. Client Credentials</h3>
+        /// <para>Scenario: This scenario is for server-to-server authentication without user involvement. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=client_credentials
+        /// &amp;client_id={client_id}
+        /// &amp;client_secret={client_secret}
+        /// &amp;scope={scope}
+        /// </c></pre>
+        /// <h3>5. Password</h3>
+        /// <para>Scenario: This scenario uses traditional username and password authentication. Use this method with caution. Example call:</para>
+        /// <pre><c>POST /v2/{instanceId}/{applicationId}/oauth2/token
+        /// Content-Type: application/x-www-form-urlencoded
+        /// grant_type=password
+        /// &amp;username={username}
+        /// &amp;password={password}
+        /// &amp;client_id={client_id}
+        /// &amp;scope={scope}
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -2503,7 +2948,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例级授权服务器 Token 端点</para>
+        /// <para>The token endpoint for an instance-level authorization server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2609,7 +3054,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例级授权服务器 Token 端点</para>
+        /// <para>The token endpoint for an instance-level authorization server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2715,7 +3160,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例级授权服务器 Token 端点</para>
+        /// <para>The token endpoint for an instance-level authorization server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2734,7 +3179,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例级授权服务器 Token 端点</para>
+        /// <para>The token endpoint for an instance-level authorization server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2753,16 +3198,16 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the synchronization scope of an application in an instance.</para>
+        /// <para>The GetApplicationProvisioningScope operation retrieves the synchronization scope of an application in a specific instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You can go to the Applications page in the IDaaS console to set the synchronization scope. After an application is created, the application has the permission to call this operation by default.</description></item>
+        /// <item><description>You can set the synchronization scope in Application Management in the IDaaS console. After you create an application, you have permission to call this API by default.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -2811,16 +3256,16 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the synchronization scope of an application in an instance.</para>
+        /// <para>The GetApplicationProvisioningScope operation retrieves the synchronization scope of an application in a specific instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You can go to the Applications page in the IDaaS console to set the synchronization scope. After an application is created, the application has the permission to call this operation by default.</description></item>
+        /// <item><description>You can set the synchronization scope in Application Management in the IDaaS console. After you create an application, you have permission to call this API by default.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -2869,16 +3314,16 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the synchronization scope of an application in an instance.</para>
+        /// <para>The GetApplicationProvisioningScope operation retrieves the synchronization scope of an application in a specific instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You can go to the Applications page in the IDaaS console to set the synchronization scope. After an application is created, the application has the permission to call this operation by default.</description></item>
+        /// <item><description>You can set the synchronization scope in Application Management in the IDaaS console. After you create an application, you have permission to call this API by default.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -2897,16 +3342,16 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the synchronization scope of an application in an instance.</para>
+        /// <para>The GetApplicationProvisioningScope operation retrieves the synchronization scope of an application in a specific instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You can go to the Applications page in the IDaaS console to set the synchronization scope. After an application is created, the application has the permission to call this operation by default.</description></item>
+        /// <item><description>You can set the synchronization scope in Application Management in the IDaaS console. After you create an application, you have permission to call this API by default.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -2925,7 +3370,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a group.</para>
+        /// <para>Retrieves the details of a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2974,7 +3419,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a group.</para>
+        /// <para>Retrieves the details of a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3023,7 +3468,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a group.</para>
+        /// <para>Retrieves the details of a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3042,7 +3487,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a group.</para>
+        /// <para>Retrieves the details of a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3061,7 +3506,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an organizational unit.</para>
+        /// <para>Retrieves the information about an organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3110,7 +3555,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an organizational unit.</para>
+        /// <para>Retrieves the information about an organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3159,7 +3604,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an organizational unit.</para>
+        /// <para>Retrieves the information about an organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3178,7 +3623,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an organizational unit.</para>
+        /// <para>Retrieves the information about an organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3361,7 +3806,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Employee Identity and Access Management (EIAM) account.</para>
+        /// <para>Retrieves the details of an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3410,7 +3855,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Employee Identity and Access Management (EIAM) account.</para>
+        /// <para>Retrieves the details of an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3459,7 +3904,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Employee Identity and Access Management (EIAM) account.</para>
+        /// <para>Retrieves the details of an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3478,7 +3923,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Employee Identity and Access Management (EIAM) account.</para>
+        /// <para>Retrieves the details of an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4105,7 +4550,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a user by using the user token.</para>
+        /// <para>Retrieves the information about a user by using the user token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4154,7 +4599,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a user by using the user token.</para>
+        /// <para>Retrieves the information about a user by using the user token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4203,7 +4648,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a user by using the user token.</para>
+        /// <para>Retrieves the information about a user by using the user token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4222,7 +4667,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a user by using the user token.</para>
+        /// <para>Retrieves the information about a user by using the user token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4241,8 +4686,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举认证令牌。</para>
+        /// <para>Lists authentication tokens.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+        /// Ensure that the Access Token you provide has the Query authentication tokens permission for the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|authentication_token:read</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAuthenticationTokensRequest
@@ -4316,8 +4770,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举认证令牌。</para>
+        /// <para>Lists authentication tokens.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+        /// Ensure that the Access Token you provide has the Query authentication tokens permission for the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|authentication_token:read</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAuthenticationTokensRequest
@@ -4391,8 +4854,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举认证令牌。</para>
+        /// <para>Lists authentication tokens.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+        /// Ensure that the Access Token you provide has the Query authentication tokens permission for the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|authentication_token:read</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAuthenticationTokensRequest
@@ -4410,8 +4882,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举认证令牌。</para>
+        /// <para>Lists authentication tokens.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an Access Token issued by IDaaS for identity authentication and authorization.
+        /// Ensure that the Access Token you provide has the Query authentication tokens permission for the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|authentication_token:read</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAuthenticationTokensRequest
@@ -4429,7 +4910,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Employee Identity and Access Management (EIAM) groups by page.</para>
+        /// <para>Retrieves information about Employee Identity and Access Management (EIAM) groups by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4492,7 +4973,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Employee Identity and Access Management (EIAM) groups by page.</para>
+        /// <para>Retrieves information about Employee Identity and Access Management (EIAM) groups by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4555,7 +5036,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Employee Identity and Access Management (EIAM) groups by page.</para>
+        /// <para>Retrieves information about Employee Identity and Access Management (EIAM) groups by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4574,7 +5055,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Employee Identity and Access Management (EIAM) groups by page.</para>
+        /// <para>Retrieves information about Employee Identity and Access Management (EIAM) groups by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4593,7 +5074,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账户关联组列表</para>
+        /// <para>Lists the groups that an EIAM user is a member of.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4652,7 +5133,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账户关联组列表</para>
+        /// <para>Lists the groups that an EIAM user is a member of.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4711,7 +5192,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账户关联组列表</para>
+        /// <para>Lists the groups that an EIAM user is a member of.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4730,7 +5211,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账户关联组列表</para>
+        /// <para>Lists the groups that an EIAM user is a member of.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4749,7 +5230,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of all the parent organizational units of an organizational unit.</para>
+        /// <para>Retrieves the information about all the parent organizational units of an organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4798,7 +5279,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of all the parent organizational units of an organizational unit.</para>
+        /// <para>Retrieves the information about all the parent organizational units of an organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4847,7 +5328,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of all the parent organizational units of an organizational unit.</para>
+        /// <para>Retrieves the information about all the parent organizational units of an organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4866,7 +5347,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of all the parent organizational units of an organizational unit.</para>
+        /// <para>Retrieves the information about all the parent organizational units of an organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4885,8 +5366,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of Employee Identity and Access Management (EIAM) organizational units by page.</para>
+        /// <para>Performs a paged query to retrieve organization information from EIAM.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To retrieve the direct child organizations of the root organization, set the request parameter as follows:</para>
+        /// <pre><c>{
+        ///   &quot;parentOrganizationalUnitId&quot;: &quot;ou_root&quot;
+        /// }
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListOrganizationalUnitsRequest
@@ -4948,8 +5438,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of Employee Identity and Access Management (EIAM) organizational units by page.</para>
+        /// <para>Performs a paged query to retrieve organization information from EIAM.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To retrieve the direct child organizations of the root organization, set the request parameter as follows:</para>
+        /// <pre><c>{
+        ///   &quot;parentOrganizationalUnitId&quot;: &quot;ou_root&quot;
+        /// }
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListOrganizationalUnitsRequest
@@ -5011,8 +5510,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of Employee Identity and Access Management (EIAM) organizational units by page.</para>
+        /// <para>Performs a paged query to retrieve organization information from EIAM.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To retrieve the direct child organizations of the root organization, set the request parameter as follows:</para>
+        /// <pre><c>{
+        ///   &quot;parentOrganizationalUnitId&quot;: &quot;ou_root&quot;
+        /// }
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListOrganizationalUnitsRequest
@@ -5030,8 +5538,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of Employee Identity and Access Management (EIAM) organizational units by page.</para>
+        /// <para>Performs a paged query to retrieve organization information from EIAM.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To retrieve the direct child organizations of the root organization, set the request parameter as follows:</para>
+        /// <pre><c>{
+        ///   &quot;parentOrganizationalUnitId&quot;: &quot;ou_root&quot;
+        /// }
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListOrganizationalUnitsRequest
@@ -5049,7 +5566,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of Employee Identity and Access Management (EIAM) accounts by page.</para>
+        /// <para>Performs a paged query for EIAM account information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5112,7 +5629,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of Employee Identity and Access Management (EIAM) accounts by page.</para>
+        /// <para>Performs a paged query for EIAM account information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5175,7 +5692,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of Employee Identity and Access Management (EIAM) accounts by page.</para>
+        /// <para>Performs a paged query for EIAM account information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5194,7 +5711,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of Employee Identity and Access Management (EIAM) accounts by page.</para>
+        /// <para>Performs a paged query for EIAM account information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5369,8 +5886,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云角色（CloudAccountRole）的临时访问凭证</para>
+        /// <para>Retrieves temporary access credentials for a cloud account role (CloudAccountRole).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
+        /// Ensure that the Access Token has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|cloud_account_role:obtain_access_credential</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ObtainCloudAccountRoleAccessCredentialRequest
@@ -5428,8 +5954,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云角色（CloudAccountRole）的临时访问凭证</para>
+        /// <para>Retrieves temporary access credentials for a cloud account role (CloudAccountRole).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
+        /// Ensure that the Access Token has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|cloud_account_role:obtain_access_credential</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ObtainCloudAccountRoleAccessCredentialRequest
@@ -5487,8 +6022,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云角色（CloudAccountRole）的临时访问凭证</para>
+        /// <para>Retrieves temporary access credentials for a cloud account role (CloudAccountRole).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
+        /// Ensure that the Access Token has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|cloud_account_role:obtain_access_credential</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ObtainCloudAccountRoleAccessCredentialRequest
@@ -5506,8 +6050,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云角色（CloudAccountRole）的临时访问凭证</para>
+        /// <para>Retrieves temporary access credentials for a cloud account role (CloudAccountRole).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API authenticates and authorizes requests based on an Access Token issued by IDaaS.
+        /// Ensure that the Access Token has the &quot;Obtain Cloud Role Access Credential&quot; permission for the IDaaS built-in PAM application (Privileged Access Management).</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|cloud_account_role:obtain_access_credential</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ObtainCloudAccountRoleAccessCredentialRequest
@@ -5525,8 +6078,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取凭据明文。</para>
+        /// <para>Retrieves the plaintext of a secret.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an access token from IDaaS for authentication and authorization.
+        /// The access token must have permissions to obtain static credentials for the built-in privileged access management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|credential:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ObtainCredentialRequest
@@ -5580,8 +6142,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取凭据明文。</para>
+        /// <para>Retrieves the plaintext of a secret.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an access token from IDaaS for authentication and authorization.
+        /// The access token must have permissions to obtain static credentials for the built-in privileged access management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|credential:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ObtainCredentialRequest
@@ -5635,8 +6206,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取凭据明文。</para>
+        /// <para>Retrieves the plaintext of a secret.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an access token from IDaaS for authentication and authorization.
+        /// The access token must have permissions to obtain static credentials for the built-in privileged access management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|credential:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ObtainCredentialRequest
@@ -5654,8 +6234,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取凭据明文。</para>
+        /// <para>Retrieves the plaintext of a secret.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an access token from IDaaS for authentication and authorization.
+        /// The access token must have permissions to obtain static credentials for the built-in privileged access management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|credential:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ObtainCredentialRequest
@@ -5673,8 +6262,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取JWT认证令牌明文。</para>
+        /// <para>Obtains a JWT authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API requires an access token issued by IDaaS for authentication and authorization.
+        /// The provided access token must have permission to obtain authentication tokens for the built-in privileged access management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ObtainJwtAuthenticationTokenRequest
@@ -5732,8 +6330,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取JWT认证令牌明文。</para>
+        /// <para>Obtains a JWT authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API requires an access token issued by IDaaS for authentication and authorization.
+        /// The provided access token must have permission to obtain authentication tokens for the built-in privileged access management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ObtainJwtAuthenticationTokenRequest
@@ -5791,8 +6398,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取JWT认证令牌明文。</para>
+        /// <para>Obtains a JWT authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API requires an access token issued by IDaaS for authentication and authorization.
+        /// The provided access token must have permission to obtain authentication tokens for the built-in privileged access management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ObtainJwtAuthenticationTokenRequest
@@ -5810,8 +6426,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取JWT认证令牌明文。</para>
+        /// <para>Obtains a JWT authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API requires an access token issued by IDaaS for authentication and authorization.
+        /// The provided access token must have permission to obtain authentication tokens for the built-in privileged access management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:obtain</c>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ObtainJwtAuthenticationTokenRequest
@@ -5829,7 +6454,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用派生短令牌查询对应的JWT认证令牌详情。</para>
+        /// <para>Obtain a JWT authentication token using a derived short token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5875,7 +6500,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用派生短令牌查询对应的JWT认证令牌详情。</para>
+        /// <para>Obtain a JWT authentication token using a derived short token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5921,7 +6546,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用派生短令牌查询对应的JWT认证令牌详情。</para>
+        /// <para>Obtain a JWT authentication token using a derived short token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5940,7 +6565,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用派生短令牌查询对应的JWT认证令牌详情。</para>
+        /// <para>Obtain a JWT authentication token using a derived short token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6507,8 +7132,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复一个认证令牌。</para>
+        /// <para>Reinstate an authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an IDaaS-issued Access Token for identity authentication and authorization.
+        /// Ensure that the Access Token you provide has the Manage authentication tokens permission for the IDaaS built-in Privileged Access Management (PAM) application.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// Only JWT authentication tokens support this operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReinstateAuthenticationTokenRequest
@@ -6566,8 +7202,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复一个认证令牌。</para>
+        /// <para>Reinstate an authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an IDaaS-issued Access Token for identity authentication and authorization.
+        /// Ensure that the Access Token you provide has the Manage authentication tokens permission for the IDaaS built-in Privileged Access Management (PAM) application.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// Only JWT authentication tokens support this operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReinstateAuthenticationTokenRequest
@@ -6625,8 +7272,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复一个认证令牌。</para>
+        /// <para>Reinstate an authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an IDaaS-issued Access Token for identity authentication and authorization.
+        /// Ensure that the Access Token you provide has the Manage authentication tokens permission for the IDaaS built-in Privileged Access Management (PAM) application.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// Only JWT authentication tokens support this operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReinstateAuthenticationTokenRequest
@@ -6644,8 +7302,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复一个认证令牌。</para>
+        /// <para>Reinstate an authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an IDaaS-issued Access Token for identity authentication and authorization.
+        /// Ensure that the Access Token you provide has the Manage authentication tokens permission for the IDaaS built-in Privileged Access Management (PAM) application.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// Only JWT authentication tokens support this operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReinstateAuthenticationTokenRequest
@@ -6663,8 +7332,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于使用者吊销认证令牌。</para>
+        /// <para>Reinstate an authentication token for a consumer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an access token issued by IDaaS to perform identity authentication and authorization.
+        /// Ensure that the provided access token is authorized to access the Manage Authentication Token feature in the IDaaS built-in PAM (Privileged Access Management) application.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// This operation supports only JWT-type authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReinstateAuthenticationTokenByConsumerRequest
@@ -6722,8 +7402,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于使用者吊销认证令牌。</para>
+        /// <para>Reinstate an authentication token for a consumer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an access token issued by IDaaS to perform identity authentication and authorization.
+        /// Ensure that the provided access token is authorized to access the Manage Authentication Token feature in the IDaaS built-in PAM (Privileged Access Management) application.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// This operation supports only JWT-type authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReinstateAuthenticationTokenByConsumerRequest
@@ -6781,8 +7472,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于使用者吊销认证令牌。</para>
+        /// <para>Reinstate an authentication token for a consumer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an access token issued by IDaaS to perform identity authentication and authorization.
+        /// Ensure that the provided access token is authorized to access the Manage Authentication Token feature in the IDaaS built-in PAM (Privileged Access Management) application.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// This operation supports only JWT-type authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReinstateAuthenticationTokenByConsumerRequest
@@ -6800,8 +7502,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于使用者吊销认证令牌。</para>
+        /// <para>Reinstate an authentication token for a consumer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an access token issued by IDaaS to perform identity authentication and authorization.
+        /// Ensure that the provided access token is authorized to access the Manage Authentication Token feature in the IDaaS built-in PAM (Privileged Access Management) application.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// This operation supports only JWT-type authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReinstateAuthenticationTokenByConsumerRequest
@@ -6819,7 +7532,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将账户从多个组织移除【不支持移除主组织】</para>
+        /// <para>Removes an EIAM account from one or more EIAM organizational units. The operation succeeds even if the account is not in the specified organizational units.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6874,7 +7587,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将账户从多个组织移除【不支持移除主组织】</para>
+        /// <para>Removes an EIAM account from one or more EIAM organizational units. The operation succeeds even if the account is not in the specified organizational units.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6929,7 +7642,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将账户从多个组织移除【不支持移除主组织】</para>
+        /// <para>Removes an EIAM account from one or more EIAM organizational units. The operation succeeds even if the account is not in the specified organizational units.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6948,7 +7661,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将账户从多个组织移除【不支持移除主组织】</para>
+        /// <para>Removes an EIAM account from one or more EIAM organizational units. The operation succeeds even if the account is not in the specified organizational units.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7115,8 +7828,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销一个认证令牌。</para>
+        /// <para>Revokes an authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an Access Token issued by IDaaS to perform identity authentication and authorization.
+        /// Ensure that the Access Token is authorized to access the &quot;Manage Authentication Tokens&quot; feature of the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// This operation currently supports only JWT authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// RevokeAuthenticationTokenRequest
@@ -7174,8 +7898,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销一个认证令牌。</para>
+        /// <para>Revokes an authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an Access Token issued by IDaaS to perform identity authentication and authorization.
+        /// Ensure that the Access Token is authorized to access the &quot;Manage Authentication Tokens&quot; feature of the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// This operation currently supports only JWT authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// RevokeAuthenticationTokenRequest
@@ -7233,8 +7968,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销一个认证令牌。</para>
+        /// <para>Revokes an authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an Access Token issued by IDaaS to perform identity authentication and authorization.
+        /// Ensure that the Access Token is authorized to access the &quot;Manage Authentication Tokens&quot; feature of the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// This operation currently supports only JWT authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// RevokeAuthenticationTokenRequest
@@ -7252,8 +7998,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销一个认证令牌。</para>
+        /// <para>Revokes an authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an Access Token issued by IDaaS to perform identity authentication and authorization.
+        /// Ensure that the Access Token is authorized to access the &quot;Manage Authentication Tokens&quot; feature of the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The corresponding scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// This operation currently supports only JWT authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// RevokeAuthenticationTokenRequest
@@ -7271,8 +8028,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于使用者吊销认证令牌。</para>
+        /// <para>Revokes an authentication token for a consumer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an access token issued by IDaaS to authenticate and authorize requests.
+        /// Make sure that the access token you provide has the \&quot;Manage authentication tokens\&quot; permission for the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// This operation can revoke only JWT authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// RevokeAuthenticationTokenByConsumerRequest
@@ -7330,8 +8098,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于使用者吊销认证令牌。</para>
+        /// <para>Revokes an authentication token for a consumer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an access token issued by IDaaS to authenticate and authorize requests.
+        /// Make sure that the access token you provide has the \&quot;Manage authentication tokens\&quot; permission for the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// This operation can revoke only JWT authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// RevokeAuthenticationTokenByConsumerRequest
@@ -7389,8 +8168,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于使用者吊销认证令牌。</para>
+        /// <para>Revokes an authentication token for a consumer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an access token issued by IDaaS to authenticate and authorize requests.
+        /// Make sure that the access token you provide has the \&quot;Manage authentication tokens\&quot; permission for the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// This operation can revoke only JWT authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// RevokeAuthenticationTokenByConsumerRequest
@@ -7408,8 +8198,19 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于使用者吊销认证令牌。</para>
+        /// <para>Revokes an authentication token for a consumer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API uses an access token issued by IDaaS to authenticate and authorize requests.
+        /// Make sure that the access token you provide has the \&quot;Manage authentication tokens\&quot; permission for the built-in Privileged Access Management (PAM) application in IDaaS.</para>
+        /// <remarks>
+        /// <para>The required scope is <c>urn:cloud:idaas:pam|authentication_token:manage</c>.
+        /// Notice: 
+        /// This operation can revoke only JWT authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// RevokeAuthenticationTokenByConsumerRequest
@@ -7581,7 +8382,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定组织设置为账户主组织，移除旧主组织，加入新主组织。</para>
+        /// <para>Sets the primary organization for an EIAM account. This operation removes the account from the old primary organization and adds it to the new one.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7636,7 +8437,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定组织设置为账户主组织，移除旧主组织，加入新主组织。</para>
+        /// <para>Sets the primary organization for an EIAM account. This operation removes the account from the old primary organization and adds it to the new one.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7691,7 +8492,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定组织设置为账户主组织，移除旧主组织，加入新主组织。</para>
+        /// <para>Sets the primary organization for an EIAM account. This operation removes the account from the old primary organization and adds it to the new one.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7710,7 +8511,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定组织设置为账户主组织，移除旧主组织，加入新主组织。</para>
+        /// <para>Sets the primary organization for an EIAM account. This operation removes the account from the old primary organization and adds it to the new one.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7729,7 +8530,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新账户密码</para>
+        /// <para>Updates the password for a specified EIAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7784,7 +8585,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新账户密码</para>
+        /// <para>Updates the password for a specified EIAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7839,7 +8640,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新账户密码</para>
+        /// <para>Updates the password for a specified EIAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7858,7 +8659,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新账户密码</para>
+        /// <para>Updates the password for a specified EIAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7877,8 +8678,16 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验认证令牌是否有效。</para>
+        /// <para>Validates an authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is supported only for JSON Web Token (JWT) authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ValidateAuthenticationTokenRequest
@@ -7927,8 +8736,16 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验认证令牌是否有效。</para>
+        /// <para>Validates an authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is supported only for JSON Web Token (JWT) authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ValidateAuthenticationTokenRequest
@@ -7977,8 +8794,16 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验认证令牌是否有效。</para>
+        /// <para>Validates an authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is supported only for JSON Web Token (JWT) authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ValidateAuthenticationTokenRequest
@@ -7996,8 +8821,16 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验认证令牌是否有效。</para>
+        /// <para>Validates an authentication token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is supported only for JSON Web Token (JWT) authentication tokens.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ValidateAuthenticationTokenRequest

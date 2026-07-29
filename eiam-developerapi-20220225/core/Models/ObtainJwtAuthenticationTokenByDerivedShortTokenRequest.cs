@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ObtainJwtAuthenticationTokenByDerivedShortTokenRequest : TeaModel {
         /// <summary>
+        /// <para>Derived short token for the JWT authentication token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

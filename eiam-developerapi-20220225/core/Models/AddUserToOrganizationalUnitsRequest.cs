@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class AddUserToOrganizationalUnitsRequest : TeaModel {
         /// <summary>
+        /// <para>A list of organization IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

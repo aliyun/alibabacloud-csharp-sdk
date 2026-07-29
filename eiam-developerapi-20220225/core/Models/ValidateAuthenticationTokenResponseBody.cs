@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ValidateAuthenticationTokenResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the authentication token is valid.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

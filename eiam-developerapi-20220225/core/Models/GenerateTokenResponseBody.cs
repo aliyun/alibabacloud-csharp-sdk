@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string AccessToken { get; set; }
 
         /// <summary>
-        /// <para>The time when the token expires. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The expiration time. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1653288641</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public long? ExpiresAt { get; set; }
 
         /// <summary>
-        /// <para>The remaining validity period of the token. Unit: seconds.</para>
+        /// <para>The validity period of the token in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1200</para>
@@ -60,7 +60,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string RefreshToken { get; set; }
 
         /// <summary>
-        /// <para>The type of the token. Valid values: Basic Bearer</para>
+        /// <para>The token type. Valid values:
+        /// Basic - Basic type
+        /// Bearer - Bearer type</para>
         /// 
         /// <b>Example:</b>
         /// <para>Bearer</para>

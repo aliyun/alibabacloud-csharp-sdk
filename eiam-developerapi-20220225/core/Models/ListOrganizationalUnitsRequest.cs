@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ListOrganizationalUnitsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Valid values: 1 to 100.</para>
+        /// <para>The number of records on each page. The default value is 20. The value can range from 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent organizational unit.</para>
+        /// <para>The parent organization ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

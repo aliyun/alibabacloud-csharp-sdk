@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class UpdateUserPasswordRequest : TeaModel {
         /// <summary>
+        /// <para>The new password. For the password requirements, see the password policy in the console.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>

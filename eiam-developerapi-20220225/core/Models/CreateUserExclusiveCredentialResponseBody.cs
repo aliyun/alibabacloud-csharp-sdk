@@ -9,7 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class CreateUserExclusiveCredentialResponseBody : TeaModel {
+        [NameInMap("credentialCiphertext")]
+        [Validation(Required=false)]
+        public string CredentialCiphertext { get; set; }
+
         /// <summary>
+        /// <para>The credential ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cred_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
         /// </summary>
@@ -18,7 +24,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialId { get; set; }
 
         /// <summary>
-        /// <para>凭据标识。</para>
+        /// <para>The credential identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>credential_identifier_test</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ObtainJwtAuthenticationTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the authentication token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string AuthenticationTokenId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the authentication token consumer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

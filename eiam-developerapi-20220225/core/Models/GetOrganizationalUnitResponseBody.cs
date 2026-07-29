@@ -82,10 +82,14 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         /// <summary>
         /// <para>The source type of the organizational unit. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>build_in: The organizational unit was created in Identity as a Service (IDaaS).</description></item>
-        /// <item><description>ding_talk: The organizational unit was imported from DingTalk.</description></item>
-        /// <item><description>ad: The organizational unit was imported from Microsoft Active Directory (AD).</description></item>
-        /// <item><description>ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</description></item>
+        /// <item><description><para>build_in: The organizational unit was created in Identity as a Service (IDaaS).</para>
+        /// </description></item>
+        /// <item><description><para>ding_talk: The organizational unit was imported from DingTalk.</para>
+        /// </description></item>
+        /// <item><description><para>ad: The organizational unit was imported from Microsoft Active Directory (AD).</para>
+        /// </description></item>
+        /// <item><description><para>ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

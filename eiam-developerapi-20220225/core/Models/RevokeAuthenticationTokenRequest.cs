@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class RevokeAuthenticationTokenRequest : TeaModel {
         /// <summary>
+        /// <para>Original authentication token.</para>
+        /// <remarks>
+        /// <para>You can pass either the original authentication token or a derived short token.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,12 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string Token { get; set; }
 
         /// <summary>
+        /// <para>Authentication token type hint.</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>Currently, no value is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>

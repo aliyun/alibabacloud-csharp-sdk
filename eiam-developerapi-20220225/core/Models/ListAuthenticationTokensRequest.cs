@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ListAuthenticationTokensRequest : TeaModel {
         /// <summary>
+        /// <para>ID of the authentication token consumer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string ConsumerId { get; set; }
 
         /// <summary>
+        /// <para>Credential provider identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialProviderIdentifier { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the authentication token is expired.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public bool? Expired { get; set; }
 
         /// <summary>
+        /// <para>Maximum number of records to return in this paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Token that marks the start of the next page in a paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the authentication token is revoked.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

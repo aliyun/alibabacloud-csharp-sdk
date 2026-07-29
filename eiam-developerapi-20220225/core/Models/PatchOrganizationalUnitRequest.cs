@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         /// <para>The description of the organizational unit.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test organizational unit</para>
+        /// <para>测试组织</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

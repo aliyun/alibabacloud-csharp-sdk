@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ListGroupsForUserResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data object.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListGroupsForUserResponseBodyData> Data { get; set; }
         public class ListGroupsForUserResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string GroupId { get; set; }
 
             /// <summary>
+            /// <para>The source ID of the group membership.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string GroupMemberRelationSourceId { get; set; }
 
             /// <summary>
+            /// <para>The source type of the group membership.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>build_in</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string GroupMemberRelationSourceType { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of entries returned on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token to retrieve the next page of results. If this parameter is not returned, all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NTxxx</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>

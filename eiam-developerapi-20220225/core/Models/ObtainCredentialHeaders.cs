@@ -14,6 +14,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
+        /// <para>Authentication information. The format is <c>Bearer ${access_token}</c>.</para>
+        /// <remarks>
+        /// <para>Use an access token issued by IDaaS.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ListAuthenticationTokensResponseBody : TeaModel {
         /// <summary>
-        /// <para>资源实体列表。</para>
+        /// <para>List of resource entities.</para>
         /// </summary>
         [NameInMap("entities")]
         [Validation(Required=false)]
         public List<ListAuthenticationTokensResponseBodyEntities> Entities { get; set; }
         public class ListAuthenticationTokensResponseBodyEntities : TeaModel {
             /// <summary>
+            /// <para>Authentication token ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>atntkn_01kqflm0sxxx8nmdc1cb5dskxxxxx</para>
             /// </summary>
@@ -25,6 +27,14 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string AuthenticationTokenId { get; set; }
 
             /// <summary>
+            /// <para>Authentication token type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>jwt: JWT authentication token</para>
+            /// </description></item>
+            /// <item><description><para>oauth_access_token: OAuth Access Token authentication token</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>jwt</para>
             /// </summary>
@@ -33,6 +43,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string AuthenticationTokenType { get; set; }
 
             /// <summary>
+            /// <para>ID of the authentication token consumer.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test_jwt_subject</para>
             /// </summary>
@@ -41,6 +53,14 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string ConsumerId { get; set; }
 
             /// <summary>
+            /// <para>Type of the authentication token consumer. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>application: Application</para>
+            /// </description></item>
+            /// <item><description><para>custom: Custom type</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>custom</para>
             /// </summary>
@@ -49,6 +69,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string ConsumerType { get; set; }
 
             /// <summary>
+            /// <para>Creation time of the authentication token, as a UNIX timestamp in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
             /// </summary>
@@ -57,6 +79,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
+            /// <para>ID of the authentication token creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>app_ngtkgrrxxxxktg5eao6z4xxxxx</para>
             /// </summary>
@@ -65,6 +89,11 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string CreatorId { get; set; }
 
             /// <summary>
+            /// <para>Type of the authentication token creator. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>application: Application</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>application</para>
             /// </summary>
@@ -73,6 +102,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string CreatorType { get; set; }
 
             /// <summary>
+            /// <para>Credential provider ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</para>
             /// </summary>
@@ -81,6 +112,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string CredentialProviderId { get; set; }
 
             /// <summary>
+            /// <para>Expiration time of the authentication token, as a UNIX timestamp in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1772693568000</para>
             /// </summary>
@@ -89,7 +122,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public long? ExpirationTime { get; set; }
 
             /// <summary>
-            /// <para>EIAM实例ID。</para>
+            /// <para>Instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -99,6 +132,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the authentication token is revoked.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -107,6 +142,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public bool? Revoked { get; set; }
 
             /// <summary>
+            /// <para>Last update time of the authentication token, as a UNIX timestamp in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
             /// </summary>
@@ -117,6 +154,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         }
 
         /// <summary>
+        /// <para>Maximum number of records returned in this query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -125,6 +164,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Token returned by this call. Use it for the next paged query to get the next page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
         /// </summary>
@@ -133,6 +174,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Total number of resource entities that match the query criteria.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

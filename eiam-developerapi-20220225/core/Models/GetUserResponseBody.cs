@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         /// <para>The description of the account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>测试账户</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -311,10 +311,14 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         /// <summary>
         /// <para>The source type of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>build_in: The account was created in IDaaS.</description></item>
-        /// <item><description>ding_talk: The account was imported from DingTalk.</description></item>
-        /// <item><description>ad: The account was imported from Microsoft Active Directory (AD).</description></item>
-        /// <item><description>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</description></item>
+        /// <item><description><para>build_in: The account was created in IDaaS.</para>
+        /// </description></item>
+        /// <item><description><para>ding_talk: The account was imported from DingTalk.</para>
+        /// </description></item>
+        /// <item><description><para>ad: The account was imported from Microsoft Active Directory (AD).</para>
+        /// </description></item>
+        /// <item><description><para>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

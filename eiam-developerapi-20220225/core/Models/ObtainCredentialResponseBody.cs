@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class ObtainCredentialResponseBody : TeaModel {
         /// <summary>
-        /// <para>云角色创建时间</para>
+        /// <para>The creation time of the credential, formatted as a Unix timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649830225000</para>
@@ -20,19 +20,24 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>凭据的内容。</para>
+        /// <para>The detailed content of the credential. The structure of this object depends on the value of <c>credentialType</c>.</para>
         /// </summary>
         [NameInMap("credentialContent")]
         [Validation(Required=false)]
         public ObtainCredentialResponseBodyCredentialContent CredentialContent { get; set; }
         public class ObtainCredentialResponseBodyCredentialContent : TeaModel {
+            /// <summary>
+            /// <para>Contains details for an API key credential. Returned only when <c>credentialType</c> is <c>api_key</c>.</para>
+            /// </summary>
             [NameInMap("apiKeyContent")]
             [Validation(Required=false)]
             public ObtainCredentialResponseBodyCredentialContentApiKeyContent ApiKeyContent { get; set; }
             public class ObtainCredentialResponseBodyCredentialContentApiKeyContent : TeaModel {
                 /// <summary>
+                /// <para>The API key value.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>nsklncmwizncxxxx</para>
+                /// <para>sk-nsklncmwizncxxxx</para>
                 /// </summary>
                 [NameInMap("apiKey")]
                 [Validation(Required=false)]
@@ -41,14 +46,14 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             }
 
             /// <summary>
-            /// <para>OAuth客户端认证凭证类型的凭据内容。</para>
+            /// <para>Contains details for an OAuth client credential. Returned only when <c>credentialType</c> is <c>oauth_client</c>.</para>
             /// </summary>
             [NameInMap("oauthClientContent")]
             [Validation(Required=false)]
             public ObtainCredentialResponseBodyCredentialContentOauthClientContent OauthClientContent { get; set; }
             public class ObtainCredentialResponseBodyCredentialContentOauthClientContent : TeaModel {
                 /// <summary>
-                /// <para>OAuth协议的client_id</para>
+                /// <para>The <c>client_id</c> for OAuth 2.0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dmvncmxersdxxxxxx</para>
@@ -58,6 +63,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
                 public string ClientId { get; set; }
 
                 /// <summary>
+                /// <para>The <c>client_secret</c> for OAuth 2.0.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>nsklnertyt5ddwizncxxxx</para>
                 /// </summary>
@@ -70,7 +77,13 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         }
 
         /// <summary>
-        /// <para>凭据的创建类型。</para>
+        /// <para>Indicates how the credential was created. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>system_init</c>: System-initiated.</para>
+        /// </description></item>
+        /// <item><description><para><c>user_custom</c>: User-created.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>user_custom</para>
@@ -84,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialExternalId { get; set; }
 
         /// <summary>
-        /// <para>凭据ID。</para>
+        /// <para>The credential ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cred_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -94,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialId { get; set; }
 
         /// <summary>
-        /// <para>凭据标识</para>
+        /// <para>The credential identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>credential_identifier_test</para>
@@ -104,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialIdentifier { get; set; }
 
         /// <summary>
-        /// <para>凭据名称</para>
+        /// <para>The credential name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>credential_name</para>
@@ -114,7 +127,13 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialName { get; set; }
 
         /// <summary>
-        /// <para>凭据的使用场景标签。</para>
+        /// <para>The usage scenario for the credential. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>llm</c>: For use with a large language model.</para>
+        /// </description></item>
+        /// <item><description><para><c>saas</c>: For use with a third-party SaaS application.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>llm</para>
@@ -124,7 +143,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialScenarioLabel { get; set; }
 
         /// <summary>
-        /// <para>凭据的共享范围。</para>
+        /// <para>The sharing scope of the credential, such as whether it is exclusive to a specific account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_exclusive</para>
@@ -134,7 +153,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialSharingScope { get; set; }
 
         /// <summary>
-        /// <para>凭据所属的主体ID。</para>
+        /// <para>The ID of the credential\&quot;s subject.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apt_werthgfdsasffxxxxx</para>
@@ -144,7 +163,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialSubjectId { get; set; }
 
         /// <summary>
-        /// <para>凭据所属的主体类型。</para>
+        /// <para>The credential\&quot;s subject type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>authentication_token_provider</c>: An authentication token provider.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>authentication_token_provider</para>
@@ -154,7 +176,13 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialSubjectType { get; set; }
 
         /// <summary>
-        /// <para>凭据类型。</para>
+        /// <para>The credential type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>api_key</c>: The credential is an API key.</para>
+        /// </description></item>
+        /// <item><description><para><c>oauth_client</c>: The credential represents an OAuth client.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>api_key</para>
@@ -164,7 +192,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialType { get; set; }
 
         /// <summary>
-        /// <para>描述</para>
+        /// <para>The credential description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>credential_description</para>
@@ -174,7 +202,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>凭据的专属账户ID。</para>
+        /// <para>The ID of the account that exclusively owns the credential. This field is present only when <c>credentialSharingScope</c> is <c>user_exclusive</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_xxx</para>
@@ -184,7 +212,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string ExclusiveUserId { get; set; }
 
         /// <summary>
-        /// <para>EIAM实例ID。</para>
+        /// <para>The EIAM instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -194,7 +222,13 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>凭据状态</para>
+        /// <para>The status of the credential. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>enabled</c>: The credential can be used.</para>
+        /// </description></item>
+        /// <item><description><para><c>disabled</c>: The credential cannot be used.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
@@ -204,7 +238,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>云角色更新时间</para>
+        /// <para>The last update time of the credential, formatted as a Unix timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649830227000</para>

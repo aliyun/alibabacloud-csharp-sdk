@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class GenerateJwtAuthenticationTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The \<c>aud\\</c> field of the JWT.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("audiences")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public List<string> Audiences { get; set; }
 
         /// <summary>
+        /// <para>Credential provider identity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -26,11 +28,20 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [Validation(Required=false)]
         public string CredentialProviderIdentifier { get; set; }
 
+        /// <summary>
+        /// <para>Custom claims.</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>Key-value pairs. Keys must be strings.</para>
+        /// </summary>
         [NameInMap("customClaims")]
         [Validation(Required=false)]
         public Dictionary<string, object> CustomClaims { get; set; }
 
         /// <summary>
+        /// <para>The validity period of the JWT, in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>900</para>
         /// </summary>
@@ -39,6 +50,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public int? Expiration { get; set; }
 
         /// <summary>
+        /// <para>Whether the generated JWT needs to include a &quot;derived short token&quot;.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -47,6 +60,8 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public bool? IncludeDerivedShortToken { get; set; }
 
         /// <summary>
+        /// <para>The \<c>iss\\</c> field of the JWT.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://test.issuer.com">https://test.issuer.com</a></para>
         /// </summary>
@@ -55,6 +70,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string Issuer { get; set; }
 
         /// <summary>
+        /// <para>The \<c>sub\\</c> field of the JWT.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

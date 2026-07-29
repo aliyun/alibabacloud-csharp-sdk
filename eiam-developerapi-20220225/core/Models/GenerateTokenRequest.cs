@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The client secret. This parameter is required if grant_type is set to client_credentials.</para>
+        /// <para>The client secret. This parameter is required when \<c>grant_type\\</c> is \<c>client_credentials\\</c> and the \<c>client_secret_post\\</c> method is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string ClientSecret { get; set; }
 
         /// <summary>
-        /// <para>The authorization code. This parameter is required if grant_type is set to authorization_code.</para>
+        /// <para>The authorization code. This parameter is required when \<c>grant_type\\</c> is \<c>authorization_code\\</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The verification code.</para>
+        /// <para>The code verifier. This is used in the authorization code grant type when PKCE is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CodeVerifier { get; set; }
 
         /// <summary>
-        /// <para>The device code. This parameter is required if grant_type is set to authorization_code.urn:ietf:params:oauth:grant-type:device_code.</para>
+        /// <para>The device code. This parameter is required when \<c>grant_type\\</c> is \<c>urn:ietf:params:oauth:grant-type:device_code\\</c> (device flow).</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string DeviceCode { get; set; }
 
         /// <summary>
-        /// <para>The excluded tags.</para>
+        /// <para>The excluded tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ATxxx</para>
@@ -70,13 +70,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string ExclusiveTag { get; set; }
 
         /// <summary>
-        /// <para>The supported authorization types are as follows:</para>
+        /// <para>The authorization grant type. The following types are supported:</para>
         /// <list type="bullet">
-        /// <item><description>client_credentials:Client credentials flow, requires client_id and client_secret.</description></item>
-        /// <item><description>refresh_token:Refresh token flow.</description></item>
-        /// <item><description>authorization_code:Authorization code flow.</description></item>
-        /// <item><description>urn:ietf:params:oauth:grant-type:device_code:Device authorization flow.</description></item>
-        /// <item><description>password:Password (Resource Owner Password Credentials) flow.</description></item>
+        /// <item><description><para>\<c>client_credentials\\</c>: Client credentials grant. Requires \<c>client_id\\</c> and \<c>client_secret\\</c>.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>refresh_token\\</c>: Refresh token grant.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>authorization_code\\</c>: Authorization code grant.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>urn:ietf:params:oauth:grant-type:device_code\\</c>: Device flow.</para>
+        /// </description></item>
+        /// <item><description><para>\<c>password\\</c>: Password grant.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -88,7 +93,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string GrantType { get; set; }
 
         /// <summary>
-        /// <para>The username. This parameter is required if grant_type is set to password. The password authentication type is not supported.</para>
+        /// <para>The username. This parameter is required for password mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxx</para>
@@ -98,7 +103,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The redirect URI. This parameter is required if grant_type is set to authorization_code. The value of this parameter must be the same as the redirect URI in the request to obtain the authorization code.</para>
+        /// <para>The redirection URI. This parameter is required for the authorization code grant type. It must match the redirection URI in the request to get the authorization code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -108,7 +113,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string RedirectUri { get; set; }
 
         /// <summary>
-        /// <para>The refreshed token. This parameter is required if grant_type is set to refresh_token.</para>
+        /// <para>The refresh token. This parameter is required when \<c>grant_type\\</c> is \<c>refresh_token\\</c> (refresh token grant).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ATxxx</para>
@@ -118,12 +123,17 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string RefreshToken { get; set; }
 
         /// <summary>
-        /// <para>The authorization scope. Valid values:</para>
+        /// <para>The scope. This parameter is optional. Multiple values are supported. Separate multiple values with spaces.
+        /// Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>openid</description></item>
-        /// <item><description>email</description></item>
-        /// <item><description>phone</description></item>
-        /// <item><description>profile</description></item>
+        /// <item><description><para>openid</para>
+        /// </description></item>
+        /// <item><description><para>email</para>
+        /// </description></item>
+        /// <item><description><para>phone</para>
+        /// </description></item>
+        /// <item><description><para>profile</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,7 +144,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The username. This parameter is required if grant_type is set to password. The password authentication type is not supported.</para>
+        /// <para>The username. This parameter is required for the password grant type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>uesrname_001</para>

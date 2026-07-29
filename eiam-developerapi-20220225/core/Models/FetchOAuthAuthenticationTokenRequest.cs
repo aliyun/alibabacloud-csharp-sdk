@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class FetchOAuthAuthenticationTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The credential provider identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,7 +20,23 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [Validation(Required=false)]
         public string CredentialProviderIdentifier { get; set; }
 
+        [NameInMap("customParameters")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> CustomParameters { get; set; }
+
+        [NameInMap("forceAuthentication")]
+        [Validation(Required=false)]
+        public bool? ForceAuthentication { get; set; }
+
         /// <summary>
+        /// <para>The scope in the OAuth protocol.</para>
+        /// <remarks>
+        /// <para>If not specified, the scope of the issued OAuth Access Token defaults to the Scope configuration of the corresponding credential provider.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>Notice: Multiple Scope values are separated by spaces.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>example:test_01 example:test_02</para>
         /// </summary>

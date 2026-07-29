@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 {
     public class RemoveUserFromOrganizationalUnitsRequest : TeaModel {
         /// <summary>
+        /// <para>The organizational unit IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
