@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeTrafficResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried traffic statistics.</para>
+        /// <para>The traffic statistics.</para>
         /// </summary>
         [NameInMap("FlowList")]
         [Validation(Required=false)]
         public List<DescribeTrafficResponseBodyFlowList> FlowList { get; set; }
         public class DescribeTrafficResponseBodyFlowList : TeaModel {
             /// <summary>
-            /// <para>The bandwidth of attack traffic. Unit: bit/s.</para>
+            /// <para>The bandwidth of attack traffic. Unit: bps.</para>
             /// <remarks>
-            /// <para> This parameter is returned only if attack traffic exists.</para>
+            /// <para>This field is returned only when attack traffic exists.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? AttackBps { get; set; }
 
             /// <summary>
-            /// <para>The packet forwarding rate of attack traffic. Unit: packets per second.</para>
+            /// <para>The packet forwarding rate of attack traffic. Unit: pps.</para>
             /// <remarks>
-            /// <para> This parameter is returned only if attack traffic exists.</para>
+            /// <para>This field is returned only when attack traffic exists.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The type of the traffic statistics. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>max</b>: the peak traffic within the specified interval</description></item>
-            /// <item><description><b>avg</b>: the average traffic within the specified interval</description></item>
+            /// <item><description><b>max</b>: the peak traffic within the statistical interval.</description></item>
+            /// <item><description><b>avg</b>: the average traffic within the statistical interval.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string FlowType { get; set; }
 
             /// <summary>
-            /// <para>The bandwidth of the total traffic. Unit: Kbit/s.</para>
+            /// <para>The bandwidth of total traffic. Unit: Kbps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>417</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public int? Kbps { get; set; }
 
             /// <summary>
-            /// <para>The ID of the traffic statistics.</para>
+            /// <para>The ID of the traffic statistics entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8e33f19e-5644-11eb-b5c1-d89d67182200</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The packet forwarding rate of the total traffic. Unit: packets per second.</para>
+            /// <para>The packet forwarding rate of total traffic. Unit: pps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>274</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public int? Pps { get; set; }
 
             /// <summary>
-            /// <para>The time when the traffic statistics are calculated. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time of the traffic statistics. Expressed as a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620951900</para>

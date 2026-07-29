@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The ID of the Anti-DDoS Origin instance to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> to query the IDs of all Anti-DDoS Origin instances.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member.</para>
+        /// <para>The UID of the member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>170858869679****</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of protected IP addresses to return on each page. The maximum value is 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,12 +66,16 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud asset to which the protected IP address to query belongs. Valid values:</para>
+        /// <para>The type of the cloud asset to which the protected IP address belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS</b>: an Elastic Compute Service (ECS) instance.</description></item>
-        /// <item><description><b>SLB</b>: a Classic Load Balancer (CLB) instance, originally called a Server Load Balancer (SLB) instance.</description></item>
-        /// <item><description><b>EIP</b>: an elastic IP address (EIP). An Internet-facing Application Load Balancer (ALB) instance uses an EIP. If the IP address belongs to the Internet-facing ALB instance, set this parameter to EIP.</description></item>
-        /// <item><description><b>WAF</b>: a Web Application Firewall (WAF) instance.</description></item>
+        /// <item><description><para><b>ECS</b>: an Elastic Compute Service (ECS) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>SLB</b>: a Classic Load Balancer (CLB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>EIP</b>: an Elastic IP Address (EIP) instance. Because Application Load Balancer (ALB) instances use EIPs, query the public IP address of an ALB instance using the EIP.</para>
+        /// </description></item>
+        /// <item><description><para><b>WAF</b>: a Web Application Firewall (WAF) instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,9 +86,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ProductName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Anti-DDoS Origin instance resides.</para>
+        /// <para>The region ID of the Anti-DDoS Origin instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query the IDs of all regions that Anti-DDoS Origin supports.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,7 +102,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// 
         /// <summary>
         /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</para>
-        /// <para>If you do not specify this parameter, the instance belongs to the default resource group.</para>
+        /// <para>If you do not set this parameter, the instance belongs to the default resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2pz25js****</para>

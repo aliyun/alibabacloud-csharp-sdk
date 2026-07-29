@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ModifyRemarkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Anti-DDoS Origin instance for which you want to add remarks.</para>
+        /// <para>The ID of the Anti-DDoS Origin instance for which you want to set a remark.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> to query the IDs of all Anti-DDoS Origin instances.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Anti-DDoS Origin instance resides.</para>
+        /// <para>The region ID of the Anti-DDoS Origin instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query all region IDs supported by Anti-DDoS Origin.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,8 +37,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The remarks for the Anti-DDoS Origin instance.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The remark for the Anti-DDoS Origin instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-remark</para>

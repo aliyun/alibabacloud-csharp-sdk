@@ -40,8 +40,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The sorting method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>desc</b>: the descending order. This is the default value.</description></item>
-        /// <item><description><b>asc</b>: the ascending order.</description></item>
+        /// <item><description><para><b>desc</b>: the descending order. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>asc</b>: the ascending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The ID of the region where the Anti-DDoS Origin instance to query resides.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,8 +89,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The protocol type of the IP address asset that is protected by the Anti-DDoS Origin instance to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Ipv4</b>: IPv4</description></item>
-        /// <item><description><b>Ipv6</b>: IPv6</description></item>
+        /// <item><description><para><b>Ipv4</b>: IPv4</para>
+        /// </description></item>
+        /// <item><description><para><b>Ipv6</b>: IPv6</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -102,8 +106,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The mitigation plan of the Anti-DDoS Origin instance to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: the Professional mitigation plan</description></item>
-        /// <item><description><b>1</b>: the Enterprise mitigation plan</description></item>
+        /// <item><description><para><b>0</b>: the Professional mitigation plan</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: the Enterprise mitigation plan</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -164,8 +170,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The mitigation plan of the Anti-DDoS Origin instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: the Professional mitigation plan.</description></item>
-            /// <item><description>1: the Enterprise mitigation plan.</description></item>
+            /// <item><description><para>0: the Professional mitigation plan.</para>
+            /// </description></item>
+            /// <item><description><para>1: the Enterprise mitigation plan.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

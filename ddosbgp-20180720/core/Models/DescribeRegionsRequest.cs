@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region. The default value is <b>cn-hangzhou</b>. If the default value is used, the regions of cloud assets that can be protected by Anti-DDoS Origin in the China (Hangzhou) region are queried.</para>
-        /// <para>If you want to specify another value for <b>RegionId</b>, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and Zones</a>.</para>
+        /// <para>The region ID to query. Default value: <b>ap-southeast-1</b>, which indicates that the regions of cloud assets that can be protected by the Anti-DDoS Origin instance in the China (Hangzhou) region are queried.</para>
+        /// <para>To query other region IDs, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> to obtain the corresponding <b>RegionId</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</para>
-        /// <para>For information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</para>
+        /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. By default, this parameter is empty, which indicates that the instance belongs to the default resource group.</para>
+        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2pz25js****</para>

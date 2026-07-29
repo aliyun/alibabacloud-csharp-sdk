@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The ID of the region in which the instance resides.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,8 +46,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The type of the asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>waf</b>: WAF instance</description></item>
-        /// <item><description><b>ga</b>: Global Accelerator (GA) instance</description></item>
+        /// <item><description><para><b>waf</b>: WAF instance</para>
+        /// </description></item>
+        /// <item><description><para><b>ga</b>: Global Accelerator (GA) instance</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

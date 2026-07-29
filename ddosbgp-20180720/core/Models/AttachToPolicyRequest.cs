@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class AttachToPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The protected objects.</para>
+        /// <para>The list of protection objects.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IpPortProtocolList")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public List<AttachToPolicyRequestIpPortProtocolList> IpPortProtocolList { get; set; }
         public class AttachToPolicyRequestIpPortProtocolList : TeaModel {
             /// <summary>
-            /// <para>The IP address of the protected object.</para>
+            /// <para>The IP address of the protection object.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The port number of the protected object.</para>
+            /// <para>The port number of the protection object.</para>
             /// <remarks>
-            /// <para> This parameter is available for only port-specific mitigation policies.</para>
+            /// <para>Only port-specific mitigation policies support this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -41,19 +41,28 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [Validation(Required=false)]
             public int? Port { get; set; }
 
+            /// <summary>
+            /// <para>The port range of the protection object.</para>
+            /// <remarks>
+            /// <para>Only port-specific mitigation policies support this parameter.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8*-9*</para>
+            /// </summary>
             [NameInMap("PortRange")]
             [Validation(Required=false)]
             public string PortRange { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the protected object. Valid values:</para>
+            /// <para>The protocol type of the protection object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>tcp</b></description></item>
-            /// <item><description><b>udp</b></description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> This parameter is available for only port-specific mitigation policies.</para>
+            /// <item><description><b>tcp</b>: Transmission Control Protocol.</description></item>
+            /// <item><description><b>udp</b>: User Datagram Protocol.<remarks>
+            /// <para>Only port-specific mitigation policies support this parameter.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>tcp</para>
@@ -75,6 +84,19 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        /// <summary>
+        /// <para>The version of the port-specific mitigation policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Not specified</b>: Associates the default surf anti-DDoS engine policy.</description></item>
+        /// <item><description><b>2</b>: Associates the new stream anti-DDoS engine policy.<remarks>
+        /// <para>Only port-specific mitigation policies support this parameter.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("PortVersion")]
         [Validation(Required=false)]
         public string PortVersion { get; set; }

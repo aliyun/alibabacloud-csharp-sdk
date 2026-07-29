@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <para>The name of the member.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test1</para>
+            /// <para>tes***</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <para>The Alibaba Cloud account ID of the member.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1960279802016267</para>
+            /// <para>196027980201****</para>
             /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]

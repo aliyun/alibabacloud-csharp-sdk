@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The ID of the Anti-DDoS Origin instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> to query the IDs of all Anti-DDoS Origin instances.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,11 +24,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses that you want to remove from the Anti-DDoS Origin instance. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</para>
+        /// <para>A list of IP addresses to remove from the protected objects of the Anti-DDoS Origin instance. Specify the list as a string that is a JSON array. Each element in the array is a struct that contains the following field:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ip</b>: required. The IP address that you want to remove. Data type: string.</para>
-        /// <para>**</para>
-        /// <para><b>Note</b> The IP addresses that you want to remove must be protected by the Anti-DDoS Origin instance.</para>
+        /// <item><description><para><b>ip</b>: The IP address to remove. This parameter is a string and is required.</para>
+        /// <remarks>
+        /// <para>The IP address must be in the protection list of the Anti-DDoS Origin instance.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -41,9 +42,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string IpList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Anti-DDoS Origin instance resides.</para>
+        /// <para>The region ID of the Anti-DDoS Origin instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query all regions that Anti-DDoS Origin supports.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,8 +57,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</para>
-        /// <para>For information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</para>
+        /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. If you leave this parameter empty, the instance belongs to the default resource group.</para>
+        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2pz25js****</para>

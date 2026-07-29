@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class AddIpRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Anti-DDoS Origin instance.</para>
+        /// <para>The ID of the Anti-DDoS Origin instance to manage.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> to query the IDs of all Anti-DDoS Origin instances.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,24 +24,26 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses that you want to add to the Anti-DDoS Origin instance. This parameter is a string consisting of JSON arrays. Each element in a JSON array is a JSON struct that includes the following fields:</para>
+        /// <para>The list of IP addresses to add to the Anti-DDoS Origin instance for protection. The value is a string that is converted from a JSON array. Each element in the JSON array is a struct that contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>ip</b>: required. The IP address that you want to add. Data type: string.</description></item>
-        /// <item><description><b>member_uid</b>: optional. The member to which the asset belongs. Data type: string. This field is required only if the asset of a member is queried. Example: [{&quot;ip&quot;:&quot;121.41.XX.XX&quot;,&quot;member_uid&quot;:&quot;120100811162\<em>\</em>\<em>\</em>&quot;}].</description></item>
+        /// <item><description><para><b>ip</b>: The IP address to add. This parameter is of the String type and is required.</para>
+        /// </description></item>
+        /// <item><description><para><b>member_uid</b>: The ID of the member account that owns the asset. This parameter is of the String type and is optional. Specify this parameter only when you add an asset that belongs to a member account. For example: [{&quot;ip&quot;:&quot;121.41.XX.XX&quot;,&quot;member_uid&quot;:&quot;120100811162\<em>\</em>\<em>\</em>&quot;}]</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;ip&quot;:&quot;1.XX.XX.1&quot;},{&quot;ip&quot;:&quot;2.XX.XX.2&quot;}]</para>
+        /// <para>[{&quot;ip&quot;:&quot;121.41.XX.XX&quot;},{&quot;ip&quot;:&quot;121.42.XX.XX&quot;}]</para>
         /// </summary>
         [NameInMap("IpList")]
         [Validation(Required=false)]
         public string IpList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Anti-DDoS Origin instance resides.</para>
+        /// <para>The region ID of the Anti-DDoS Origin instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query information about all regions that Anti-DDoS Origin supports.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,8 +56,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</para>
-        /// <para>For information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</para>
+        /// <para>The ID of the resource group in Resource Management to which the Anti-DDoS Origin instance belongs. If you leave this parameter empty, the instance is added to the default resource group.</para>
+        /// <para>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2pz25js****</para>

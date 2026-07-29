@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <para>The ID of the resource directory.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rd-x9bLhd</para>
+        /// <para>rd-x9bL**</para>
         /// </summary>
         [NameInMap("ResourceDirectoryId")]
         [Validation(Required=false)]

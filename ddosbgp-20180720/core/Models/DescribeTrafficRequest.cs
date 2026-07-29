@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeTrafficRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
-        /// <para>If you do not specify this parameter, the current system time is used as the end time.</para>
+        /// <para>The end time of the query. Specify a UNIX timestamp. Unit: seconds.</para>
+        /// <para>If you do not set this parameter, the current time is used as the end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1563445054</para>
@@ -21,16 +21,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the traffic statistics to query. Valid values:</para>
+        /// <para>The type of traffic statistics to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>max</b>: the peak traffic within the specified interval.</description></item>
-        /// <item><description><b>avg</b>: the average traffic within the specified interval.</description></item>
-        /// </list>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>all</description></item>
-        /// <item><description>avg</description></item>
-        /// <item><description>max</description></item>
+        /// <item><description><b>max</b>: the peak traffic within the statistical interval.</description></item>
+        /// <item><description><b>avg</b>: the average traffic within the statistical interval.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,9 +37,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The ID of the Anti-DDoS Origin instance to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> to query the IDs of all Anti-DDoS Origin instances.</para>
         /// </remarks>
-        /// <para>If you specify an on-demand instance, you must configure the <b>Interval</b> parameter.</para>
+        /// <para>If the instance specified here is used for traffic diversion, you must set the <b>Interval</b> request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ddosbgp-cn-n6w203qg****</para>
@@ -55,7 +49,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The interval at which the traffic statistics are calculated. Unit: seconds. Default value: <b>5</b>.</para>
+        /// <para>The time interval for traffic statistics. Unit: seconds. This parameter specifies the length of each interval for which traffic data is aggregated. Default value: <b>5</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -65,9 +59,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the asset to query. If you do not specify this parameter, the traffic statistics of all public IP addresses that are protected by the Anti-DDoS Origin instance are queried.</para>
+        /// <para>The assets that are assigned public IP addresses to query. If you do not specify this parameter in Settings, the traffic statistics of all assets that are assigned public IP addresses protected by the Anti-DDoS Origin instance are queried.</para>
         /// <remarks>
-        /// <para> The public IP address must be a protected object of the Anti-DDoS Origin instance. You can call the <a href="https://help.aliyun.com/document_detail/118701.html">DescribePackIpList</a> operation to query all protected objects of the Anti-DDoS Origin instance.</para>
+        /// <para>The assets that are assigned public IP addresses must have been added as protected objects of the Anti-DDoS Origin instance. You can invoke <a href="https://help.aliyun.com/document_detail/118701.html">DescribePackIpList</a> to query all protected objects of the Anti-DDoS Origin instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,7 +72,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// <para>The Classless Inter-Domain Routing (CIDR) block of the on-demand instance that you want to query.</para>
+        /// <para>The CIDR block used for traffic diversion to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>111.XX.XX.0/24</para>
@@ -88,9 +82,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Ipnet { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Anti-DDoS Origin instance resides.</para>
+        /// <para>The region ID of the Anti-DDoS Origin instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query all region IDs supported by Anti-DDoS Origin.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -102,7 +96,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</para>
-        /// <para>If you do not specify this parameter, the instance belongs to the default resource group.</para>
+        /// <para>If you do not set this parameter, the default resource group is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2pz25js****</para>
@@ -112,7 +106,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time of the query. Specify a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

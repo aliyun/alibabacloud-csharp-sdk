@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListPolicyAttachmentShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The protected objects.</para>
+        /// <para>The list of protected objects.</para>
         /// </summary>
         [NameInMap("IpPortProtocolList")]
         [Validation(Required=false)]
         public string IpPortProtocolListShrink { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// <para>The number of rows per page in a paging query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy.</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f38f6520-92b7-451e-b520-9ab3********</para>
@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The type of the policy. Valid values:</para>
+        /// <para>The policy type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b>: the default mitigation policies.</description></item>
-        /// <item><description><b>l3</b>: IP-specific mitigation policies.</description></item>
-        /// <item><description><b>l4</b>: port-specific mitigation policies.</description></item>
+        /// <item><description><b>default</b>: default mitigation policy.</description></item>
+        /// <item><description><b>l3</b>: IP-specific mitigation policy.</description></item>
+        /// <item><description><b>l4</b>: port-specific mitigation policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,6 +61,16 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [Validation(Required=false)]
         public string PolicyType { get; set; }
 
+        /// <summary>
+        /// <para>The version of the port-specific mitigation policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Not specified</b>: queries the policy associations that attach to the default surf DPI engine.</description></item>
+        /// <item><description><b>2</b>: queries the policy associations that attach to the new stream DPI engine.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("PortVersion")]
         [Validation(Required=false)]
         public string PortVersion { get; set; }

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeDdosOriginInstanceBillResponseBody : TeaModel {
         /// <summary>
-        /// <para>The asset status.</para>
+        /// <para>The asset status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: No asset is added to the instance for protection.</description></item>
-        /// <item><description><b>1</b>: Assets are added to the instance for protection.</description></item>
+        /// <item><description><b>0</b>: No assets have been associated with the current instance.</description></item>
+        /// <item><description><b>1</b>: Assets have been associated with the current instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? AssetStatus { get; set; }
 
         /// <summary>
-        /// <para>The payment status. Valid values:</para>
+        /// <para>The overdue payment status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The payment is not overdue.</description></item>
-        /// <item><description><b>1</b>: The payment is overdue.</description></item>
+        /// <item><description><b>0</b>: No overdue payment.</description></item>
+        /// <item><description><b>1</b>: Overdue payment exists.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,24 +38,24 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? DebtStatus { get; set; }
 
         /// <summary>
-        /// <para>The details about the traffic of EIPs with Anti-DDoS (Enhanced) enabled.</para>
+        /// <para>The IP Traffic details of EIPs with Anti-DDoS (Enhanced) enabled.</para>
         /// </summary>
         [NameInMap("FlowList")]
         [Validation(Required=false)]
         public List<DescribeDdosOriginInstanceBillResponseBodyFlowList> FlowList { get; set; }
         public class DescribeDdosOriginInstanceBillResponseBodyFlowList : TeaModel {
             /// <summary>
-            /// <para>The traffic distribution by region. The JSON struct contains the following fields:</para>
+            /// <para>The traffic distribution by area. The JSON structure contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>bytes</b>: the traffic volume of EIPs with Anti-DDoS (Enhanced) enabled in a region. Unit: bytes.</description></item>
-            /// <item><description><b>memberUid</b>: the owner account.</description></item>
-            /// <item><description><b>instanceId</b>: the ID of the pay-as-you-go instance that protects the EIPs with Anti-DDoS (Enhanced) enabled.</description></item>
-            /// <item><description><b>ip</b>: the EIPs with Anti-DDoS (Enhanced) enabled.</description></item>
-            /// <item><description><b>region</b>: the region.</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> If the memberUid field in the JSON struct is empty, the information about the current account is returned. The value of the bytes parameter in the outermost level of the JSON struct indicates the total traffic, and the values of the bytes parameters in inner levels indicate the traffic of the account.</para>
+            /// <item><description><b>bytes</b>: the traffic of the EIP with Anti-DDoS (Enhanced) enabled in the corresponding region. Unit: bytes.</description></item>
+            /// <item><description><b>memberUid</b>: the account to which the traffic belongs.</description></item>
+            /// <item><description><b>instanceId</b>: the instance ID of the global pay-as-you-go instance associated with the EIP with Anti-DDoS (Enhanced) enabled.</description></item>
+            /// <item><description><b>ip</b>: the corresponding elastic IP addresses (EIPs) with Anti-DDoS Proxy Enabled.</description></item>
+            /// <item><description><b>region</b>: the area.<remarks>
+            /// <para>If memberUid is empty in the JSON, it indicates the current account information. The bytes field at the outermost level of the JSON represents the total traffic, and the inner bytes field represents the traffic for the corresponding account.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;bytes\&quot;:79282719,\&quot;memberUid\&quot;:\&quot;\&quot;,\&quot;regionFlows\&quot;:{\&quot;cn-hangzhou\&quot;:[{\&quot;bytes\&quot;:79282719,\&quot;instanceId\&quot;:\&quot;ddosorigin_cn-u7c3lcr9r02\&quot;,\&quot;ip\&quot;:\&quot;47.118.168.57\&quot;,\&quot;region\&quot;:\&quot;cn-hangzhou\&quot;}]}}]</para>
@@ -65,12 +65,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string MemberFlow { get; set; }
 
             /// <summary>
-            /// <para>The traffic distribution by region. The JSON struct contains the following fields:</para>
+            /// <para>The traffic distribution by area. The JSON structure contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>bytes</b>: the traffic volume of EIPs with Anti-DDoS (Enhanced) enabled in a region. Unit: bytes.</description></item>
-            /// <item><description><b>instanceId</b>: the ID of the pay-as-you-go instance that protects the EIPs with Anti-DDoS (Enhanced) enabled.</description></item>
-            /// <item><description><b>ip</b>: the EIPs with Anti-DDoS (Enhanced) enabled.</description></item>
-            /// <item><description><b>region</b>: the region.</description></item>
+            /// <item><description><b>bytes</b>: the traffic of the EIP with Anti-DDoS (Enhanced) enabled in the corresponding region. Unit: bytes.</description></item>
+            /// <item><description><b>instanceId</b>: the instance ID of the global pay-as-you-go instance associated with the EIP with Anti-DDoS (Enhanced) enabled.</description></item>
+            /// <item><description><b>ip</b>: the corresponding elastic IP addresses (EIPs) with Anti-DDoS Proxy Enabled.</description></item>
+            /// <item><description><b>region</b>: the area.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? Time { get; set; }
 
             /// <summary>
-            /// <para>The total IP traffic of regular Alibaba Cloud services.</para>
+            /// <para>The total traffic of Regular Alibaba Cloud service IP addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6302081067</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? TotalBillFlow { get; set; }
 
             /// <summary>
-            /// <para>The traffic of EIPs with Anti-DDoS (Enhanced) enabled. Unit: bytes.</para>
+            /// <para>The IP Traffic of EIPs with Anti-DDoS (Enhanced) enabled. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6302081067</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// <para>The traffic distribution of EIPs with Anti-DDoS (Enhanced) enabled by region.</para>
+        /// <para>The regional traffic distribution information of EIPs with Anti-DDoS (Enhanced) enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;cn-hongkong\&quot;: 166491566}</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public Dictionary<string, object> FlowRegion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Anti-DDoS Origin (Pay-as-you-go) instance to query.</para>
+        /// <para>The instance ID of the pay-as-you-go Anti-DDoS Origin instance to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ddosorigin_cn-u7c3lcr9r02</para>
@@ -143,18 +143,18 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? IpCount { get; set; }
 
         /// <summary>
-        /// <para>The protected IP addresses and enabled features.</para>
+        /// <para>The details of the protected IP address count and feature activation list.</para>
         /// </summary>
         [NameInMap("IpCountOrFunctionList")]
         [Validation(Required=false)]
         public List<DescribeDdosOriginInstanceBillResponseBodyIpCountOrFunctionList> IpCountOrFunctionList { get; set; }
         public class DescribeDdosOriginInstanceBillResponseBodyIpCountOrFunctionList : TeaModel {
             /// <summary>
-            /// <para>The application scope of the instance. Valid values:</para>
+            /// <para>The protected asset region. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>only_mainland_china</b>: regions in the Chinese mainland.</description></item>
-            /// <item><description><b>global</b>: all regions.</description></item>
-            /// <item><description><b>international_and_hmt</b>: regions outside the Chinese mainland.</description></item>
+            /// <item><description><b>only_mainland_china</b>: the Chinese mainland only.</description></item>
+            /// <item><description><b>global</b>: global.</description></item>
+            /// <item><description><b>international_and_hmt</b>: outside the Chinese mainland, including international regions and Hong Kong (China), Macao (China), and Taiwan (China).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string Coverage { get; set; }
 
             /// <summary>
-            /// <para>The number of IP addresses protected by the pay-as-you-go instance in the Chinese mainland.</para>
+            /// <para>The number of pay-as-you-go protected IP addresses in the Chinese mainland.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? IpCntCn { get; set; }
 
             /// <summary>
-            /// <para>The number of IP addresses protected by the pay-as-you-go instance outside the Chinese mainland.</para>
+            /// <para>The number of pay-as-you-go protected IP addresses outside the Chinese mainland.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -185,17 +185,17 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? IpCntOv { get; set; }
 
             /// <summary>
-            /// <para>The bill distribution by account. The JSON struct contains the following fields:</para>
+            /// <para>The account distribution of the bill. The JSON struct contains the following fields:</para>
             /// <list type="bullet">
             /// <item><description><b>eipCnIpCount</b>: the number of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland.</description></item>
             /// <item><description><b>eipOvIpCount</b>: the number of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland.</description></item>
-            /// <item><description><b>memberUid</b>: the owner account.</description></item>
-            /// <item><description><b>standardAssetsCnIpCount</b>: the number of IP addresses of regular Alibaba Cloud services in the Chinese mainland.</description></item>
-            /// <item><description><b>standardAssetsOvIpCount</b>: the number of IP addresses of regular Alibaba Cloud services outside the Chinese mainland.</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> If the memberUid field in the JSON struct is empty, the information about the current account is returned.</para>
+            /// <item><description><b>memberUid</b>: the account to which the IP addresses belong.</description></item>
+            /// <item><description><b>standardAssetsCnIpCount</b>: the number of Regular Alibaba Cloud service IP addresses in the Chinese mainland.</description></item>
+            /// <item><description><b>standardAssetsOvIpCount</b>: the number of Regular Alibaba Cloud service IP addresses outside the Chinese mainland.<remarks>
+            /// <para>If memberUid is empty in the JSON, it indicates the current account information.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;eipCnIpCount\&quot;:3,\&quot;eipOvIpCount\&quot;:18,\&quot;memberUid\&quot;:\&quot;\&quot;,\&quot;standardAssetsCnIpCount\&quot;:2,\&quot;standardAssetsOvIpCount\&quot;:0},{\&quot;eipCnIpCount\&quot;:3,\&quot;eipOvIpCount\&quot;:0,\&quot;memberUid\&quot;:\&quot;1776997906319249\&quot;,\&quot;standardAssetsCnIpCount\&quot;:0,\&quot;standardAssetsOvIpCount\&quot;:0}]</para>
@@ -217,12 +217,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// <para>The IP address distribution. The JSON struct contains the following fields:</para>
+        /// <para>The IP distribution details. The JSON structure contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>eipCnIpCount</b>: the number of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland.</description></item>
-        /// <item><description><b>eipOvIpCount</b>: the number of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland.</description></item>
-        /// <item><description><b>standardAssetsCnIpCount</b>: the number of IP addresses of regular Alibaba Cloud services in the Chinese mainland.</description></item>
-        /// <item><description><b>standardAssetsOvIpCount</b>: the number of IP addresses of regular Alibaba Cloud services outside the Chinese mainland.</description></item>
+        /// <item><description><b>eipCnIpCount</b>: the number of elastic IP addresses (EIPs) with Anti-DDoS Proxy Enabled in the Chinese mainland.</description></item>
+        /// <item><description><b>eipOvIpCount</b>: the number of elastic IP addresses (EIPs) with Anti-DDoS Proxy Enabled outside the Chinese mainland.</description></item>
+        /// <item><description><b>standardAssetsCnIpCount</b>: the number of Regular Alibaba Cloud service IP addresses in the Chinese mainland.</description></item>
+        /// <item><description><b>standardAssetsOvIpCount</b>: the number of Regular Alibaba Cloud service IP addresses outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -233,14 +233,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string IpInfo { get; set; }
 
         /// <summary>
-        /// <para>The information about the monthly summary bills.</para>
+        /// <para>The monthly summary information list.</para>
         /// </summary>
         [NameInMap("MonthlySummaryList")]
         [Validation(Required=false)]
         public List<DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList> MonthlySummaryList { get; set; }
         public class DescribeDdosOriginInstanceBillResponseBodyMonthlySummaryList : TeaModel {
             /// <summary>
-            /// <para>The number of days that the instance is activated.</para>
+            /// <para>The number of days the service has been activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The total number of protected IP addresses in the Chinese mainland.</para>
             /// <remarks>
-            /// <para> The total number of protected IP addresses is the sum of the daily numbers of protected IP addresses in a month.</para>
+            /// <para>The daily count of protected IP addresses is accumulated.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The total number of protected IP addresses outside the Chinese mainland.</para>
             /// <remarks>
-            /// <para> The total number of protected IP addresses is the sum of the daily numbers of protected IP addresses in a month.</para>
+            /// <para>The daily count of protected IP addresses is accumulated.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public int? IpCountIntl { get; set; }
 
             /// <summary>
-            /// <para>The ID of the member.</para>
+            /// <para>The UID of the member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>112873971277****</para>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string MemberUid { get; set; }
 
             /// <summary>
-            /// <para>The total traffic of regular Alibaba Cloud services in the Chinese mainland. Unit: bytes.</para>
+            /// <para>The total traffic of Regular Alibaba Cloud services in the Chinese mainland. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -316,7 +316,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? StandardAssetsFlowCn { get; set; }
 
             /// <summary>
-            /// <para>The total traffic of regular Alibaba Cloud services outside the Chinese mainland. Unit: bytes.</para>
+            /// <para>The total traffic of Regular Alibaba Cloud services outside the Chinese mainland. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -326,7 +326,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? StandardAssetsFlowIntl { get; set; }
 
             /// <summary>
-            /// <para>The ID of the administrator account.</para>
+            /// <para>The UID of the management account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>102518028277****</para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for this request. You can use it to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>72155560-F343-55C8-82FE-ED4D7E4AA97E</para>
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details about the traffic of regular Alibaba Cloud services.</para>
+        /// <para>The traffic information of Regular Alibaba Cloud services.</para>
         /// </summary>
         [NameInMap("StandardAssetsFlowList")]
         [Validation(Required=false)]
@@ -357,15 +357,15 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The traffic distribution by region. The JSON struct contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>bytes</b>: the traffic volume of regular Alibaba Cloud services in a region. Unit: bytes.</description></item>
-            /// <item><description><b>memberUid</b>: the owner account.</description></item>
-            /// <item><description><b>instanceId</b>: the ID of the pay-as-you-go instance that protects the regular Alibaba Cloud services.</description></item>
-            /// <item><description><b>ip</b>: the IP address of the regular Alibaba Cloud service protected by the Anti-DDoS Origin instance.</description></item>
-            /// <item><description><b>region</b>: the region.</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> If the memberUid field in the JSON struct is empty, the information about the current account is returned. The value of the bytes parameter in the outermost level of the JSON struct indicates the total traffic, and the values of the bytes parameters in inner levels indicate the traffic of the account.</para>
+            /// <item><description><b>bytes</b>: the traffic of the Regular Alibaba Cloud service in the corresponding region. Unit: bytes.</description></item>
+            /// <item><description><b>memberUid</b>: the account to which the traffic belongs.</description></item>
+            /// <item><description><b>instanceId</b>: the ID of the global pay-as-you-go instance associated with the Regular Alibaba Cloud service.</description></item>
+            /// <item><description><b>ip</b>: the instance ID associated with the Regular Alibaba Cloud service.</description></item>
+            /// <item><description><b>region</b>: the region.<remarks>
+            /// <para>If memberUid is empty in the JSON, it indicates the current account information. The bytes field at the outermost level of the JSON represents the total traffic, and the inner bytes field represents the traffic for the corresponding account.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;bytes\&quot;:79282719,\&quot;memberUid\&quot;:\&quot;\&quot;,\&quot;regionFlows\&quot;:{\&quot;cn-hangzhou\&quot;:[{\&quot;bytes\&quot;:79282719,\&quot;instanceId\&quot;:\&quot;ddosorigin_cn-u7c3lcr9r02\&quot;,\&quot;ip\&quot;:\&quot;47.118.168.57\&quot;,\&quot;region\&quot;:\&quot;cn-hangzhou\&quot;}]}}]</para>
@@ -377,9 +377,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The traffic distribution by region. The JSON struct contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>bytes</b>: the traffic volume of regular Alibaba Cloud services in a region. Unit: bytes.</description></item>
-            /// <item><description><b>instanceId</b>: the ID of the pay-as-you-go instance that protects the regular Alibaba Cloud services.</description></item>
-            /// <item><description><b>ip</b>: the IP address protected by the Anti-DDoS Origin instance.</description></item>
+            /// <item><description><b>bytes</b>: the traffic of the Regular Alibaba Cloud service in the corresponding region. Unit: bytes.</description></item>
+            /// <item><description><b>instanceId</b>: the ID of the global pay-as-you-go instance associated with the Regular Alibaba Cloud service.</description></item>
+            /// <item><description><b>ip</b>: the instance ID associated with the Anti-DDoS Origin instance.</description></item>
             /// <item><description><b>region</b>: the region.</description></item>
             /// </list>
             /// 
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? Time { get; set; }
 
             /// <summary>
-            /// <para>The traffic of regular Alibaba Cloud services. Unit: bytes.</para>
+            /// <para>The traffic of Regular Alibaba Cloud services. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6302081067</para>
@@ -413,7 +413,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// <para>The traffic distribution of regular Alibaba Cloud services by region.</para>
+        /// <para>The regional traffic distribution information of Regular Alibaba Cloud services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;cn-hongkong\&quot;: 166491566}</para>
@@ -423,7 +423,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public Dictionary<string, object> StandardAssetsFlowRegion { get; set; }
 
         /// <summary>
-        /// <para>The total traffic of regular Alibaba Cloud services in the Chinese mainland in the current month.</para>
+        /// <para>The total traffic of Regular Alibaba Cloud services in the Chinese mainland for the current month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -433,7 +433,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? StandardAssetsTotalFlowCn { get; set; }
 
         /// <summary>
-        /// <para>The total traffic of regular Alibaba Cloud services outside the Chinese mainland in the current month.</para>
+        /// <para>The total traffic of Regular Alibaba Cloud services outside the Chinese mainland for the current month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -443,11 +443,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? StandardAssetsTotalFlowOv { get; set; }
 
         /// <summary>
-        /// <para>The instance status. Valid values:</para>
+        /// <para>The activation status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: normal</description></item>
-        /// <item><description><b>2</b>: expired</description></item>
-        /// <item><description><b>3</b>: released</description></item>
+        /// <item><description><b>1</b>: Normal.</description></item>
+        /// <item><description><b>2</b>: Expired.</description></item>
+        /// <item><description><b>3</b>: Released.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -458,7 +458,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? Status { get; set; }
 
         /// <summary>
-        /// <para>The total traffic of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland in the current month. Unit: bytes.</para>
+        /// <para>The total traffic of EIPs with Anti-DDoS (Enhanced) enabled in the Chinese mainland for the current month. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6302081067</para>
@@ -468,7 +468,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? TotalFlowCn { get; set; }
 
         /// <summary>
-        /// <para>The total traffic of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland in the current month. Unit: bytes.</para>
+        /// <para>The total traffic of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland for the current month. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6204918019</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ModifyPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request, which can be used for troubleshooting and diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B4B379C2-9319-4C6B-B579-FE36831****</para>

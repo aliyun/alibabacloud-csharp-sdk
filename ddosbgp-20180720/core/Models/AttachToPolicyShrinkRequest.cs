@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class AttachToPolicyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The protected objects.</para>
+        /// <para>The list of protection objects.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IpPortProtocolList")]
@@ -28,6 +28,19 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         [Validation(Required=false)]
         public string PolicyId { get; set; }
 
+        /// <summary>
+        /// <para>The version of the port-specific mitigation policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Not specified</b>: Associates the default surf anti-DDoS engine policy.</description></item>
+        /// <item><description><b>2</b>: Associates the new stream anti-DDoS engine policy.<remarks>
+        /// <para>Only port-specific mitigation policies support this parameter.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("PortVersion")]
         [Validation(Required=false)]
         public string PortVersion { get; set; }

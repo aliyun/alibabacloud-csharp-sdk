@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>Indicates whether Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.</description></item>
-        /// <item><description><b>0</b>: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.</description></item>
+        /// <item><description><para><b>1</b>: Anti-DDoS Origin is authorized to obtain information about the assets within the current Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Anti-DDoS Origin is not authorized to obtain information about the assets within the current Alibaba Cloud account.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

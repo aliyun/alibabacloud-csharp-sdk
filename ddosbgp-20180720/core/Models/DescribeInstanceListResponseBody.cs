@@ -19,9 +19,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The event that triggers automatic association. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>any</b>: The instance is automatically associated with an object based on traffic scrubbing events or blackhole filtering events.</description></item>
-            /// <item><description><b>clean</b>: The instance is automatically associated with an object based on traffic scrubbing events.</description></item>
-            /// <item><description><b>blackhole</b>: The instance is automatically associated with an object based on blackhole filtering events.</description></item>
+            /// <item><description><para><b>any</b>: The instance is automatically associated with an object based on traffic scrubbing events or blackhole filtering events.</para>
+            /// </description></item>
+            /// <item><description><para><b>clean</b>: The instance is automatically associated with an object based on traffic scrubbing events.</para>
+            /// </description></item>
+            /// <item><description><para><b>blackhole</b>: The instance is automatically associated with an object based on blackhole filtering events.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("AutoProtectCondition")]
@@ -50,8 +53,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The type of the instance.</para>
             /// <list type="bullet">
-            /// <item><description><b>ddos_ddosorigin_public_cn</b>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the China site (aliyun.com).</description></item>
-            /// <item><description><b>ddos_ddosorigin_public_intl</b>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the International site (alibabacloud.com).</description></item>
+            /// <item><description><para><b>ddos_ddosorigin_public_cn</b>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>ddos_ddosorigin_public_intl</b>: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the International site (alibabacloud.com).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,8 +79,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>Indicates whether overdue payments exist. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Overdue payments do not exist.</description></item>
-            /// <item><description><b>1</b>: Overdue payments exist.</description></item>
+            /// <item><description><para><b>0</b>: Overdue payments do not exist.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Overdue payments exist.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,8 +115,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The mitigation plan of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: the Professional mitigation plan</description></item>
-            /// <item><description><b>1</b>: the Enterprise mitigation plan</description></item>
+            /// <item><description><para><b>0</b>: the Professional mitigation plan</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: the Enterprise mitigation plan</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,7 +131,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The number of protected public IP addresses for which blackhole filtering is triggered.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118692.html">DeleteBlackhole</a> operation to deactivate blackhole filtering for a protected IP address.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/118692.html">DeleteBlackhole</a> operation to deactivate blackhole filtering for a protected IP address.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -135,10 +144,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The application scope of the instance.</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The instance supports public IP addresses in all regions.</description></item>
-            /// <item><description><b>2</b>: The instance supports public IP addresses in regions in the Chinese mainland.</description></item>
-            /// <item><description><b>3</b>: The instance supports public IP addresses in regions outside the Chinese mainland.</description></item>
-            /// <item><description><b>4</b>: The instance supports public IP addresses in a region in or outside the Chinese mainland.</description></item>
+            /// <item><description><para><b>1</b>: The instance supports public IP addresses in all regions.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: The instance supports public IP addresses in regions in the Chinese mainland.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: The instance supports public IP addresses in regions outside the Chinese mainland.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: The instance supports public IP addresses in a region in or outside the Chinese mainland.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -172,8 +185,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <para>The type of the cloud service that is associated with the Anti-DDoS Origin instance By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>gamebox</b>: The Anti-DDoS Origin instance is created by using Game Security Box.</description></item>
-            /// <item><description><b>eip</b>: The Anti-DDoS Origin instance is created by using an elastic IP address (EIP) for which Anti-DDoS (Enhanced Edition) is enabled.</description></item>
+            /// <item><description><para><b>gamebox</b>: The Anti-DDoS Origin instance is created by using Game Security Box.</para>
+            /// </description></item>
+            /// <item><description><para><b>eip</b>: The Anti-DDoS Origin instance is created by using an elastic IP address (EIP) for which Anti-DDoS (Enhanced Edition) is enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -196,8 +211,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>Indicates whether auto-renewal is enabled for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

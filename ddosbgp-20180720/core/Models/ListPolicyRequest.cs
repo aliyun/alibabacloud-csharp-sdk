@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test**</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>Settings the page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,16 +40,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The service type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>ecs</b>: Elastic Compute Service (ECS).</description></item>
-        /// <item><description><b>slb</b>: Server Load Balancer (SLB).</description></item>
-        /// <item><description><b>eip</b>: Elastic IP Address (EIP).</description></item>
-        /// <item><description><b>gf-eip</b>: EIP with Anti-DDoS (Enhanced) enabled.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> This parameter is available only if Type is set to <c>default</c>.</para>
-        /// </remarks>
+        /// <para>The applicable product type. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -59,12 +50,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The type of the policy. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>default</b>: the default mitigation policy.</description></item>
-        /// <item><description><b>l3</b>: IP-specific mitigation policies.</description></item>
-        /// <item><description><b>l4</b>: port-specific mitigation policies.</description></item>
-        /// </list>
+        /// <para>The policy type. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>l3</para>
