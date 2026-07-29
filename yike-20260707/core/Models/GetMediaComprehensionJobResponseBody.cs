@@ -9,6 +9,56 @@ using Tea;
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetMediaComprehensionJobResponseBody : TeaModel {
+        [NameInMap("Job")]
+        [Validation(Required=false)]
+        public GetMediaComprehensionJobResponseBodyJob Job { get; set; }
+        public class GetMediaComprehensionJobResponseBodyJob : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>200</para>
+            /// </summary>
+            [NameInMap("ErrorCode")]
+            [Validation(Required=false)]
+            public string ErrorCode { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>The specified product does not exist.</para>
+            /// </summary>
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
+            [NameInMap("MediaIds")]
+            [Validation(Required=false)]
+            public List<string> MediaIds { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>&quot;{\&quot;source_video_url\&quot;:\&quot;<a href="http://xxx.mp4%5C%5C%22,%5C%5C%22narrative_overview%5C%5C%22:%7B******%7D%7D">http://xxx.mp4\\&quot;,\\&quot;narrative_overview\\&quot;:{******}}</a>&quot;</para>
+            /// </summary>
+            [NameInMap("Result")]
+            [Validation(Required=false)]
+            public string Result { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Executing</para>
+            /// </summary>
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></para>
+            /// </summary>
+            [NameInMap("UserData")]
+            [Validation(Required=false)]
+            public string UserData { get; set; }
+
+        }
+
         [NameInMap("MediaComprehensionJob")]
         [Validation(Required=false)]
         public GetMediaComprehensionJobResponseBodyMediaComprehensionJob MediaComprehensionJob { get; set; }

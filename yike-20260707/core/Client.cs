@@ -2259,9 +2259,17 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
             {
                 query["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
+            {
+                query["JobType"] = request.JobType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
@@ -2311,9 +2319,17 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                query["Input"] = request.Input;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
             {
                 query["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
+            {
+                query["JobType"] = request.JobType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
