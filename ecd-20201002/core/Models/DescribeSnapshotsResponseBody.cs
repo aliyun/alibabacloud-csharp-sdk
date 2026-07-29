@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             /// <para>The name of the restore point.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Data Disk Backup</para>
+            /// <para>Data disk backup</para>
             /// </summary>
             [NameInMap("RestorePointName")]
             [Validation(Required=false)]

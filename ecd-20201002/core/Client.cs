@@ -19,6 +19,33 @@ namespace AlibabaCloud.SDK.Ecd20201002
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "ecd.us-west-1.aliyuncs.com"},
+                {"us-east-1", "ecd.us-east-1.aliyuncs.com"},
+                {"me-east-1", "ecd.me-east-1.aliyuncs.com"},
+                {"me-central-1", "ecd.me-central-1.aliyuncs.com"},
+                {"eu-west-1", "ecd.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "ecd.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "ecd.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "ecd.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "ecd.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "ecd.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "ecd.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "ecd.cn-qingdao.aliyuncs.com"},
+                {"cn-nanjing", "ecd.cn-nanjing.aliyuncs.com"},
+                {"cn-hongkong", "ecd.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou-finance", "ecd.cn-hangzhou-finance.aliyuncs.com"},
+                {"cn-hangzhou", "ecd.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "ecd.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "ecd.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "ecd.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-7", "ecd.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "ecd.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "ecd.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-1", "ecd.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "ecd.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ecd", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -811,14 +838,14 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of cloud computers. Currently, only the region corresponding to the Chinese mainland can be queried (excluding: Nanjing-local region-shutting down).</para>
+        /// <para>Query detailed information about cloud desktops across multiple regions. You can query only regions in the Chinese mainland (excluding Nanjing – Local Region – Shutting Down).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This API is a centralized domain name. The endpoint is in the China (Shanghai) region. You cannot call this API operation in other regions.</para>
         /// <list type="bullet">
-        /// <item><description>The cloud computer status information in this interface has a delay of 1 to 3 seconds from the actual value.</description></item>
+        /// <item><description>This API uses a centralized domain name with its endpoint in Shanghai. You cannot call this API from other regions.</description></item>
+        /// <item><description>The cloud desktop status returned by this API may be delayed by 1 to 3 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -937,14 +964,14 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of cloud computers. Currently, only the region corresponding to the Chinese mainland can be queried (excluding: Nanjing-local region-shutting down).</para>
+        /// <para>Query detailed information about cloud desktops across multiple regions. You can query only regions in the Chinese mainland (excluding Nanjing – Local Region – Shutting Down).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This API is a centralized domain name. The endpoint is in the China (Shanghai) region. You cannot call this API operation in other regions.</para>
         /// <list type="bullet">
-        /// <item><description>The cloud computer status information in this interface has a delay of 1 to 3 seconds from the actual value.</description></item>
+        /// <item><description>This API uses a centralized domain name with its endpoint in Shanghai. You cannot call this API from other regions.</description></item>
+        /// <item><description>The cloud desktop status returned by this API may be delayed by 1 to 3 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1063,14 +1090,14 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of cloud computers. Currently, only the region corresponding to the Chinese mainland can be queried (excluding: Nanjing-local region-shutting down).</para>
+        /// <para>Query detailed information about cloud desktops across multiple regions. You can query only regions in the Chinese mainland (excluding Nanjing – Local Region – Shutting Down).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This API is a centralized domain name. The endpoint is in the China (Shanghai) region. You cannot call this API operation in other regions.</para>
         /// <list type="bullet">
-        /// <item><description>The cloud computer status information in this interface has a delay of 1 to 3 seconds from the actual value.</description></item>
+        /// <item><description>This API uses a centralized domain name with its endpoint in Shanghai. You cannot call this API from other regions.</description></item>
+        /// <item><description>The cloud desktop status returned by this API may be delayed by 1 to 3 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1089,14 +1116,14 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of cloud computers. Currently, only the region corresponding to the Chinese mainland can be queried (excluding: Nanjing-local region-shutting down).</para>
+        /// <para>Query detailed information about cloud desktops across multiple regions. You can query only regions in the Chinese mainland (excluding Nanjing – Local Region – Shutting Down).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This API is a centralized domain name. The endpoint is in the China (Shanghai) region. You cannot call this API operation in other regions.</para>
         /// <list type="bullet">
-        /// <item><description>The cloud computer status information in this interface has a delay of 1 to 3 seconds from the actual value.</description></item>
+        /// <item><description>This API uses a centralized domain name with its endpoint in Shanghai. You cannot call this API from other regions.</description></item>
+        /// <item><description>The cloud desktop status returned by this API may be delayed by 1 to 3 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1115,7 +1142,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries office networks.</para>
+        /// <para>Query the details of an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1169,7 +1196,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries office networks.</para>
+        /// <para>Query the details of an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1223,7 +1250,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries office networks.</para>
+        /// <para>Query the details of an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1241,7 +1268,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries office networks.</para>
+        /// <para>Query the details of an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1543,12 +1570,12 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user resources.</para>
+        /// <para>Queries the list of resources owned by a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, verify supported resource and service types in Alibaba Cloud Workspace.</para>
+        /// <para>Make sure that you are familiar with the resource types and product types of WUYING before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1698,12 +1725,12 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user resources.</para>
+        /// <para>Queries the list of resources owned by a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, verify supported resource and service types in Alibaba Cloud Workspace.</para>
+        /// <para>Make sure that you are familiar with the resource types and product types of WUYING before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1853,12 +1880,12 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user resources.</para>
+        /// <para>Queries the list of resources owned by a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, verify supported resource and service types in Alibaba Cloud Workspace.</para>
+        /// <para>Make sure that you are familiar with the resource types and product types of WUYING before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1876,12 +1903,12 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user resources.</para>
+        /// <para>Queries the list of resources owned by a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, verify supported resource and service types in Alibaba Cloud Workspace.</para>
+        /// <para>Make sure that you are familiar with the resource types and product types of WUYING before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2067,7 +2094,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the logon tokens for enterprise drives.</para>
+        /// <para>Obtain the logon credential for Enterprise File Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2125,7 +2152,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the logon tokens for enterprise drives.</para>
+        /// <para>Obtain the logon credential for Enterprise File Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2183,7 +2210,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the logon tokens for enterprise drives.</para>
+        /// <para>Obtain the logon credential for Enterprise File Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2201,7 +2228,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the logon tokens for enterprise drives.</para>
+        /// <para>Obtain the logon credential for Enterprise File Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2219,12 +2246,12 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the credential that is used to connect to a cloud computer.</para>
+        /// <para>Obtains a connection ticket for a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The first time you call this operation, the system returns a task ID in the <c>TaskID</c> parameter. Use the task ID indicated in the <c>TaskID</c> parameter to continue calling this operation until the value of the <c>TaskStatus</c> parameter becomes <c>FINISHED</c> or <c>FAILED</c>. When <c>TaskStatus</c> becomes <c>FINISHED</c>, the value of the <c>Ticket</c> parameter is the ticket that is used to connect the client to the cloud computer.</para>
+        /// <para>The first time you call this operation, it returns a <c>TaskID</c>. You can use this <c>TaskID</c> to call the operation again until <c>TaskStatus</c> changes to <c>FINISHED</c> or <c>FAILED</c>. If <c>TaskStatus</c> is <c>FINISHED</c>, the <c>Ticket</c> value is the connection ticket that the client uses to connect to the cloud computer.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2330,12 +2357,12 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the credential that is used to connect to a cloud computer.</para>
+        /// <para>Obtains a connection ticket for a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The first time you call this operation, the system returns a task ID in the <c>TaskID</c> parameter. Use the task ID indicated in the <c>TaskID</c> parameter to continue calling this operation until the value of the <c>TaskStatus</c> parameter becomes <c>FINISHED</c> or <c>FAILED</c>. When <c>TaskStatus</c> becomes <c>FINISHED</c>, the value of the <c>Ticket</c> parameter is the ticket that is used to connect the client to the cloud computer.</para>
+        /// <para>The first time you call this operation, it returns a <c>TaskID</c>. You can use this <c>TaskID</c> to call the operation again until <c>TaskStatus</c> changes to <c>FINISHED</c> or <c>FAILED</c>. If <c>TaskStatus</c> is <c>FINISHED</c>, the <c>Ticket</c> value is the connection ticket that the client uses to connect to the cloud computer.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2441,12 +2468,12 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the credential that is used to connect to a cloud computer.</para>
+        /// <para>Obtains a connection ticket for a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The first time you call this operation, the system returns a task ID in the <c>TaskID</c> parameter. Use the task ID indicated in the <c>TaskID</c> parameter to continue calling this operation until the value of the <c>TaskStatus</c> parameter becomes <c>FINISHED</c> or <c>FAILED</c>. When <c>TaskStatus</c> becomes <c>FINISHED</c>, the value of the <c>Ticket</c> parameter is the ticket that is used to connect the client to the cloud computer.</para>
+        /// <para>The first time you call this operation, it returns a <c>TaskID</c>. You can use this <c>TaskID</c> to call the operation again until <c>TaskStatus</c> changes to <c>FINISHED</c> or <c>FAILED</c>. If <c>TaskStatus</c> is <c>FINISHED</c>, the <c>Ticket</c> value is the connection ticket that the client uses to connect to the cloud computer.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2464,12 +2491,12 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the credential that is used to connect to a cloud computer.</para>
+        /// <para>Obtains a connection ticket for a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The first time you call this operation, the system returns a task ID in the <c>TaskID</c> parameter. Use the task ID indicated in the <c>TaskID</c> parameter to continue calling this operation until the value of the <c>TaskStatus</c> parameter becomes <c>FINISHED</c> or <c>FAILED</c>. When <c>TaskStatus</c> becomes <c>FINISHED</c>, the value of the <c>Ticket</c> parameter is the ticket that is used to connect the client to the cloud computer.</para>
+        /// <para>The first time you call this operation, it returns a <c>TaskID</c>. You can use this <c>TaskID</c> to call the operation again until <c>TaskStatus</c> changes to <c>FINISHED</c> or <c>FAILED</c>. If <c>TaskStatus</c> is <c>FINISHED</c>, the <c>Ticket</c> value is the connection ticket that the client uses to connect to the cloud computer.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2487,7 +2514,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains logon credentials.</para>
+        /// <para>Retrieves logon credentials.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2611,7 +2638,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains logon credentials.</para>
+        /// <para>Retrieves logon credentials.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2735,7 +2762,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains logon credentials.</para>
+        /// <para>Retrieves logon credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2753,7 +2780,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains logon credentials.</para>
+        /// <para>Retrieves logon credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2767,142 +2794,6 @@ namespace AlibabaCloud.SDK.Ecd20201002
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetLoginTokenWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Verifies whether the client\&quot;s logon session is still active.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// IsKeepAliveRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// IsKeepAliveResponse
-        /// </returns>
-        public IsKeepAliveResponse IsKeepAliveWithOptions(IsKeepAliveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
-            {
-                query["ClientId"] = request.ClientId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "IsKeepAlive",
-                Version = "2020-10-02",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "Anonymous",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<IsKeepAliveResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Verifies whether the client\&quot;s logon session is still active.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// IsKeepAliveRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// IsKeepAliveResponse
-        /// </returns>
-        public async Task<IsKeepAliveResponse> IsKeepAliveWithOptionsAsync(IsKeepAliveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
-            {
-                query["ClientId"] = request.ClientId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "IsKeepAlive",
-                Version = "2020-10-02",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "Anonymous",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<IsKeepAliveResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Verifies whether the client\&quot;s logon session is still active.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// IsKeepAliveRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// IsKeepAliveResponse
-        /// </returns>
-        public IsKeepAliveResponse IsKeepAlive(IsKeepAliveRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return IsKeepAliveWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Verifies whether the client\&quot;s logon session is still active.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// IsKeepAliveRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// IsKeepAliveResponse
-        /// </returns>
-        public async Task<IsKeepAliveResponse> IsKeepAliveAsync(IsKeepAliveRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await IsKeepAliveWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3043,7 +2934,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restart cloud computers.</para>
+        /// <para>You can restart one or more cloud desktops.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3125,7 +3016,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restart cloud computers.</para>
+        /// <para>You can restart one or more cloud desktops.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3207,7 +3098,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restart cloud computers.</para>
+        /// <para>You can restart one or more cloud desktops.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3225,7 +3116,7 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restart cloud computers.</para>
+        /// <para>You can restart one or more cloud desktops.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3241,6 +3132,16 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return await RebootDesktopsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purge the logon credential.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The validity period of a logon credential (LoginToken) is 8 hours. If the end user does not log off from the client within 8 hours, the client must purge the logon credential.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RefreshLoginTokenRequest
         /// </param>
@@ -3302,6 +3203,16 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return TeaModel.ToObject<RefreshLoginTokenResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purge the logon credential.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The validity period of a logon credential (LoginToken) is 8 hours. If the end user does not log off from the client within 8 hours, the client must purge the logon credential.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RefreshLoginTokenRequest
         /// </param>
@@ -3363,6 +3274,16 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return TeaModel.ToObject<RefreshLoginTokenResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purge the logon credential.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The validity period of a logon credential (LoginToken) is 8 hours. If the end user does not log off from the client within 8 hours, the client must purge the logon credential.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RefreshLoginTokenRequest
         /// </param>
@@ -3376,6 +3297,16 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return RefreshLoginTokenWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Purge the logon credential.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The validity period of a logon credential (LoginToken) is 8 hours. If the end user does not log off from the client within 8 hours, the client must purge the logon credential.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RefreshLoginTokenRequest
         /// </param>
@@ -3533,6 +3464,11 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return await ReportEdsAgentInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Report session status.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReportSessionStatusRequest
         /// </param>
@@ -3590,6 +3526,11 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return TeaModel.ToObject<ReportSessionStatusResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Report session status.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReportSessionStatusRequest
         /// </param>
@@ -3647,6 +3588,11 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return TeaModel.ToObject<ReportSessionStatusResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Report session status.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReportSessionStatusRequest
         /// </param>
@@ -3660,6 +3606,11 @@ namespace AlibabaCloud.SDK.Ecd20201002
             return ReportSessionStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Report session status.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReportSessionStatusRequest
         /// </param>
@@ -4867,12 +4818,12 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops cloud computers.</para>
+        /// <para>Stops one or more cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</para>
+        /// <para>You can stop only cloud computers that are in the Running state. After you call this operation, their state changes to Stopped.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4954,12 +4905,12 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops cloud computers.</para>
+        /// <para>Stops one or more cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</para>
+        /// <para>You can stop only cloud computers that are in the Running state. After you call this operation, their state changes to Stopped.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5041,12 +4992,12 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops cloud computers.</para>
+        /// <para>Stops one or more cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</para>
+        /// <para>You can stop only cloud computers that are in the Running state. After you call this operation, their state changes to Stopped.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5064,12 +5015,12 @@ namespace AlibabaCloud.SDK.Ecd20201002
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops cloud computers.</para>
+        /// <para>Stops one or more cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</para>
+        /// <para>You can stop only cloud computers that are in the Running state. After you call this operation, their state changes to Stopped.</para>
         /// </description>
         /// 
         /// <param name="request">

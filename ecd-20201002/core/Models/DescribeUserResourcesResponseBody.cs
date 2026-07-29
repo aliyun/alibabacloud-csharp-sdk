@@ -9,8 +9,92 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class DescribeUserResourcesResponseBody : TeaModel {
+        [NameInMap("AgentBriefSummary")]
+        [Validation(Required=false)]
+        public DescribeUserResourcesResponseBodyAgentBriefSummary AgentBriefSummary { get; set; }
+        public class DescribeUserResourcesResponseBodyAgentBriefSummary : TeaModel {
+            [NameInMap("AgentBriefs")]
+            [Validation(Required=false)]
+            public List<DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs> AgentBriefs { get; set; }
+            public class DescribeUserResourcesResponseBodyAgentBriefSummaryAgentBriefs : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ENTERPRISE_JVS</para>
+                /// </summary>
+                [NameInMap("AgentPlatform")]
+                [Validation(Required=false)]
+                public string AgentPlatform { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>OpenClaw</para>
+                /// </summary>
+                [NameInMap("AgentProvider")]
+                [Validation(Required=false)]
+                public string AgentProvider { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="https://xxx.png">https://xxx.png</a></para>
+                /// </summary>
+                [NameInMap("AvatarNoResourceUrl")]
+                [Validation(Required=false)]
+                public string AvatarNoResourceUrl { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="https://abc.com/efg.png">https://abc.com/efg.png</a></para>
+                /// </summary>
+                [NameInMap("AvatarUrl")]
+                [Validation(Required=false)]
+                public string AvatarUrl { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("Count")]
+                [Validation(Required=false)]
+                public int? Count { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>JVS Claw</para>
+                /// </summary>
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
+                public string DisplayName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Intelligent Evolution, Happy Shrimp Farming.</para>
+                /// </summary>
+                [NameInMap("SubTitle")]
+                [Validation(Required=false)]
+                public string SubTitle { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="https://test.png">https://test.png</a></para>
+                /// </summary>
+                [NameInMap("Url")]
+                [Validation(Required=false)]
+                public string Url { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+
+        }
+
         /// <summary>
-        /// <para>返回最大数量。</para>
+        /// <para>The maximum number of results returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token used to start the next query. An empty NextToken indicates that there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>
@@ -30,14 +114,14 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource types that failed to be queried.</para>
+        /// <para>The list of resource types that failed to be queried.</para>
         /// </summary>
         [NameInMap("QueryFailedResourceTypes")]
         [Validation(Required=false)]
         public List<string> QueryFailedResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The version number of the ranking data.</para>
+        /// <para>The ranking data version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1732869815062</para>
@@ -57,7 +141,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resources.</para>
+        /// <para>The list of resource details.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
@@ -65,12 +149,6 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public class DescribeUserResourcesResponseBodyResources : TeaModel {
             /// <summary>
             /// <para>The access type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>INTERNET: access over the Internet.</description></item>
-            /// <item><description>VPC: access over an enterprise VPC.</description></item>
-            /// <item><description>ANY: access over the Internet or an enterprise VPC.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>INTERNET</para>
@@ -80,7 +158,15 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string AccessType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <b>Example:</b>
+            /// <para><a href="https://wuying.aliyun.com/OpenIM/chat?desktopId=ecd-xxxxx">https://wuying.aliyun.com/OpenIM/chat?desktopId=ecd-xxxxx</a></para>
+            /// </summary>
+            [NameInMap("AgentImUrl")]
+            [Validation(Required=false)]
+            public string AgentImUrl { get; set; }
+
+            /// <summary>
+            /// <para>The Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>194101959****</para>
@@ -90,7 +176,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The app ID. This parameter is for apps only.</para>
+            /// <para>The application ID. This parameter is specific to resources of the App type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-0001</para>
@@ -100,13 +186,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The authorization mode of the cloud app.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>App: authorizes access to apps.</description></item>
-            /// <item><description>AppInstanceGroup: authorizes access to delivery groups.</description></item>
-            /// <item><description>Session: authorizes access to sessions.</description></item>
-            /// </list>
+            /// <para>The cloud application authorization mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>App</para>
@@ -116,7 +196,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string AuthMode { get; set; }
 
             /// <summary>
-            /// <para>The level-2 resource category. This parameter is for apps only.</para>
+            /// <para>The secondary category of the resource. This parameter is specific to resources of the App type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -126,7 +206,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public int? CategoryId { get; set; }
 
             /// <summary>
-            /// <para>The level-1 resource category. This parameter is for apps only.</para>
+            /// <para>The primary category of the resource. This parameter is specific to resources of the App type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -136,7 +216,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public int? CategoryType { get; set; }
 
             /// <summary>
-            /// <para>The drive name. This parameter is for enterprise drives only.</para>
+            /// <para>The cloud drive name. This parameter is specific to resources of the CloudDrive type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai+cds-695277****</para>
@@ -146,7 +226,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string CdsName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the centralized resource.</para>
+            /// <para>The centralized resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecds-0****</para>
@@ -157,11 +237,6 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
             /// <summary>
             /// <para>The billing method.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Postpaid (default): pay-as-you-go.</description></item>
-            /// <item><description>PrePaid: subscription.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
@@ -171,7 +246,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The client types supported by resources.</para>
+            /// <para>The list of client types supported by the resource.</para>
             /// </summary>
             [NameInMap("Clients")]
             [Validation(Required=false)]
@@ -188,12 +263,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string ClientType { get; set; }
 
                 /// <summary>
-                /// <para>The status.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>OFF</description></item>
-                /// <item><description>ON</description></item>
-                /// </list>
+                /// <para>The support status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ON</para>
@@ -205,7 +275,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             }
 
             /// <summary>
-            /// <para>The connection attributes in JSON format. The client does not need to process the attributes; they are directly passed to the resource management center when the app resource is created.</para>
+            /// <para>The connection properties in JSON string format. The client does not need to parse the content. The value is passed directly to the central resource management service when the application resource establishes a connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;authMode&quot;:&quot;App&quot;}</para>
@@ -225,14 +295,14 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer plans.</para>
+            /// <para>The list of cloud desktop package information.</para>
             /// </summary>
             [NameInMap("DesktopDurationList")]
             [Validation(Required=false)]
             public List<DescribeUserResourcesResponseBodyResourcesDesktopDurationList> DesktopDurationList { get; set; }
             public class DescribeUserResourcesResponseBodyResourcesDesktopDurationList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the instance order.</para>
+                /// <para>The order instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mdp-0bxls4qpi6bl6****</para>
@@ -242,7 +312,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string OrderInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the package was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-01-17T07:01Z</para>
@@ -252,7 +322,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string PackageCreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the package.</para>
+                /// <para>The expiration time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-02-17T15:59Z</para>
@@ -272,7 +342,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string PackageId { get; set; }
 
                 /// <summary>
-                /// <para>The package status.</para>
+                /// <para>The status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Available</para>
@@ -282,14 +352,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string PackageStatus { get; set; }
 
                 /// <summary>
-                /// <para>The package type.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>FREE_PACKAGE: a free package.</description></item>
-                /// <item><description>NORMAL_PACKAGE: a paid package (120-hour computing plan).</description></item>
-                /// <item><description>POSTPAID_PACKAGE: a pay-as-you-go package (200-hour computing plan).</description></item>
-                /// <item><description>Duration: an hourly package.</description></item>
-                /// </list>
+                /// <para>The duration package type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL_PACKAGE</para>
@@ -299,12 +362,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string PackageType { get; set; }
 
                 /// <summary>
-                /// <para>The policy for the cloud computer status once the monthly package quota is exhausted.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Shutdown: The cloud computer enters the Stopped or Hibernated state.</description></item>
-                /// <item><description>PostPaid: The cloud computer continues providing services that are billed on the pay-as-you-go basis.</description></item>
-                /// </list>
+                /// <para>The cloud desktop status policy after the monthly quota of the plan is used up.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Postpaid</para>
@@ -314,7 +372,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string PackageUsedUpStrategy { get; set; }
 
                 /// <summary>
-                /// <para>The package\&quot;s effective end time for the current month.</para>
+                /// <para>The end time of the current monthly package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-02-17T15:59Z</para>
@@ -324,7 +382,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string PeriodEndTime { get; set; }
 
                 /// <summary>
-                /// <para>The package\&quot;s effective start time for the current month.</para>
+                /// <para>The start time of the current monthly package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-01-17T07:01Z</para>
@@ -334,10 +392,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string PeriodStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The maximum fee for the package in the second phase.</para>
-                /// <remarks>
-                /// <para> This parameter is returned if you set ResourceType to <c>POSTPAID_PACKAG</c> or <c>FREE_PACKAGE</c>.</para>
-                /// </remarks>
+                /// <para>The cap amount for the second-phase package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>199</para>
@@ -357,7 +412,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public long? TotalDuration { get; set; }
 
                 /// <summary>
-                /// <para>The subscription duration consumed.</para>
+                /// <para>The used duration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16850</para>
@@ -369,14 +424,14 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             }
 
             /// <summary>
-            /// <para>The scheduled tasks for cloud computers.</para>
+            /// <para>The list of Cloud Desktop scheduled task settings.</para>
             /// </summary>
             [NameInMap("DesktopTimers")]
             [Validation(Required=false)]
             public List<DescribeUserResourcesResponseBodyResourcesDesktopTimers> DesktopTimers { get; set; }
             public class DescribeUserResourcesResponseBodyResourcesDesktopTimers : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether to allow end users to configure scheduled tasks on clients.</para>
+                /// <para>Indicates whether the client is allowed to configure this setting.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -386,7 +441,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string AllowClientSetting { get; set; }
 
                 /// <summary>
-                /// <para>The cron expression specified in the scheduled task.</para>
+                /// <para>The cron expression of the scheduled task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 30 13 ? * 1-7</para>
@@ -396,7 +451,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether to forcibly execute the scheduled task.</para>
+                /// <para>Indicates whether the task is forcibly executed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -406,7 +461,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public bool? Enforce { get; set; }
 
                 /// <summary>
-                /// <para>The time when the scheduled task is executed.</para>
+                /// <para>The execution time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-01-21T11:37Z</para>
@@ -416,7 +471,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string ExecutionTime { get; set; }
 
                 /// <summary>
-                /// <para>The interval at which the scheduled task is executed.</para>
+                /// <para>The interval of the scheduled task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15</para>
@@ -426,7 +481,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public int? Interval { get; set; }
 
                 /// <summary>
-                /// <para>The type of the scheduled action.</para>
+                /// <para>The operation type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hibernate</para>
@@ -436,7 +491,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string OperationType { get; set; }
 
                 /// <summary>
-                /// <para>The reset option.</para>
+                /// <para>The reset type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RESET_TYPE_SYSTEM</para>
@@ -458,7 +513,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             }
 
             /// <summary>
-            /// <para>The expiration time of the subscription resource.</para>
+            /// <para>The expiration time of subscription resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-02-22T16:00:00Z</para>
@@ -468,7 +523,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the external domain. This parameter is for enterprise drives only.</para>
+            /// <para>The external domain ID. This parameter is specific to resources of the CloudDrive type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stg114510</para>
@@ -478,7 +533,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string ExternalDomainId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the external user. This parameter is for enterprise drives only.</para>
+            /// <para>The external user ID. This parameter is specific to resources of the CloudDrive type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test001</para>
@@ -488,7 +543,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string ExternalUserId { get; set; }
 
             /// <summary>
-            /// <para>The update info of the cloud computer.</para>
+            /// <para>The cloud desktop upgrade information.</para>
             /// </summary>
             [NameInMap("FotaUpdate")]
             [Validation(Required=false)]
@@ -505,7 +560,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string Channel { get; set; }
 
                 /// <summary>
-                /// <para>The current version number of the cloud computer\&quot;s image.</para>
+                /// <para>The version number of the current image on the cloud desktop.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.7.0-R-20250122.154826</para>
@@ -515,7 +570,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string CurrentAppVersion { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to implement a forced update.</para>
+                /// <para>Indicates whether the upgrade is mandatory.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -525,7 +580,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public bool? Force { get; set; }
 
                 /// <summary>
-                /// <para>The target version number of the cloud computer\&quot;s image.</para>
+                /// <para>The version number available for upgrade on the cloud desktop.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.7.0-R-20250125.154826</para>
@@ -535,7 +590,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string NewAppVersion { get; set; }
 
                 /// <summary>
-                /// <para>The latest version available for updating the component disk.</para>
+                /// <para>The component disk version number available for upgrade.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.6.9-R-20250123.153415</para>
@@ -555,37 +610,37 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>The version description of the cloud computer\&quot;s image.</para>
+                /// <para>The release note for the available upgrade version.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>up</para>
+                /// <para>New version.</para>
                 /// </summary>
                 [NameInMap("ReleaseNote")]
                 [Validation(Required=false)]
                 public string ReleaseNote { get; set; }
 
                 /// <summary>
-                /// <para>The English release note for the new image version.</para>
+                /// <para>The English release note for the available upgrade version.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>up</para>
+                /// <para>new version</para>
                 /// </summary>
                 [NameInMap("ReleaseNoteEn")]
                 [Validation(Required=false)]
                 public string ReleaseNoteEn { get; set; }
 
                 /// <summary>
-                /// <para>The Japanese release note for the new image version.</para>
+                /// <para>The Japanese release note for the available upgrade version.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>up</para>
+                /// <para>新バージョン.</para>
                 /// </summary>
                 [NameInMap("ReleaseNoteJp")]
                 [Validation(Required=false)]
                 public string ReleaseNoteJp { get; set; }
 
                 /// <summary>
-                /// <para>The size of the update package for the cloud computer image. Unit: KB.</para>
+                /// <para>The installation package size of the available upgrade version. Unit: KB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>474981930</para>
@@ -597,7 +652,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether cross-region access is supported. This parameter is for enterprise drives only.</para>
+            /// <para>Indicates whether cross-region access is supported. This parameter is specific to resources of the CloudDrive type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -607,7 +662,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public bool? GlobalStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an update exists.</para>
+            /// <para>Indicates whether an update is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -617,12 +672,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public bool? HasUpgrade { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is a beta version of the hibernation feature.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
+            /// <para>Indicates whether the resource is a hibernation beta version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -632,7 +682,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public bool? HibernationBeta { get; set; }
 
             /// <summary>
-            /// <para>The resource icon. This parameter is for apps only.</para>
+            /// <para>The resource icon URL. This parameter is specific to resources of the App type.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://example.com/icon.png">http://example.com/icon.png</a></para>
@@ -642,7 +692,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string Icon { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was last started.</para>
+            /// <para>The last time the resource was started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-24T03:12:04Z</para>
@@ -653,13 +703,16 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
             /// <summary>
             /// <para>The region name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Singapore.</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>The management status.</para>
+            /// <para>The list of management statuses.</para>
             /// </summary>
             [NameInMap("ManagementStatuses")]
             [Validation(Required=false)]
@@ -677,13 +730,6 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
             /// <summary>
             /// <para>The order status.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Ceased: Your account has an overdue payment.</description></item>
-            /// <item><description>Released: The order is closed.</description></item>
-            /// <item><description>Expired: The subscription resource has expired.</description></item>
-            /// <item><description>Normal: The order is normal.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -693,7 +739,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string OrderStatus { get; set; }
 
             /// <summary>
-            /// <para>The OS platform.</para>
+            /// <para>The operating system platform information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Windows Server 2022</para>
@@ -703,20 +749,17 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string Os { get; set; }
 
             /// <summary>
-            /// <para>The description of the OS platform.</para>
+            /// <para>The operating system platform description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Windows Genuine License.</para>
             /// </summary>
             [NameInMap("OsDescription")]
             [Validation(Required=false)]
             public string OsDescription { get; set; }
 
             /// <summary>
-            /// <para>The OS type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Linux</description></item>
-            /// <item><description>Windows</description></item>
-            /// <item><description>Android</description></item>
-            /// </list>
+            /// <para>The operating system type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Windows</para>
@@ -726,14 +769,14 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The update info of the OS.</para>
+            /// <para>The operating system upgrade information.</para>
             /// </summary>
             [NameInMap("OsUpdate")]
             [Validation(Required=false)]
             public DescribeUserResourcesResponseBodyResourcesOsUpdate OsUpdate { get; set; }
             public class DescribeUserResourcesResponseBodyResourcesOsUpdate : TeaModel {
                 /// <summary>
-                /// <para>The ID of the check task.</para>
+                /// <para>The check ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>wua-1740652957251743***</para>
@@ -743,7 +786,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string CheckId { get; set; }
 
                 /// <summary>
-                /// <para>The patch numbers.</para>
+                /// <para>The patch number list information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KB2267***</para>
@@ -753,7 +796,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string KbListString { get; set; }
 
                 /// <summary>
-                /// <para>The number of packets.</para>
+                /// <para>The number of packages.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -763,7 +806,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public int? PackageCount { get; set; }
 
                 /// <summary>
-                /// <para>The patch packages.</para>
+                /// <para>The list of patch package information.</para>
                 /// </summary>
                 [NameInMap("Packages")]
                 [Validation(Required=false)]
@@ -771,6 +814,9 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public class DescribeUserResourcesResponseBodyResourcesOsUpdatePackages : TeaModel {
                     /// <summary>
                     /// <para>The patch description.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Install this update to modify the files that are used to detect viruses, spyware, and other potentially unwanted software. Once installed, this item cannot be removed.</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -788,6 +834,9 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
                     /// <summary>
                     /// <para>The patch title.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Patch for ****.</para>
                     /// </summary>
                     [NameInMap("Title")]
                     [Validation(Required=false)]
@@ -796,7 +845,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 }
 
                 /// <summary>
-                /// <para>The update categorization URL.</para>
+                /// <para>The update catalog URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://catalog.update.microsoft.com/home.aspx">https://catalog.update.microsoft.com/home.aspx</a></para>
@@ -808,14 +857,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             }
 
             /// <summary>
-            /// <para>The service type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CloudDesktop: regular cloud computers or cloud computer shares.</description></item>
-            /// <item><description>CloudApp: App Streaming</description></item>
-            /// <item><description>CloudBrowser: Cloud Browser.</description></item>
-            /// <item><description>AndroidCloud: Cloud Phone.</description></item>
-            /// </list>
+            /// <para>The product type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AndroidCloud</para>
@@ -826,11 +868,6 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
             /// <summary>
             /// <para>The protocol type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>HDX</description></item>
-            /// <item><description>ASP</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ASP</para>
@@ -840,7 +877,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// <para>The real ID of the cloud computer (from a share). This parameter is returned only when the cloud computer share has ongoing sessions.</para>
+            /// <para>The real cloud desktop ID of the shared cloud desktop. This value exists only when the shared cloud desktop has an active session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-0001</para>
@@ -860,12 +897,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The geographical location.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Mainland: regions in the Chinese mainland.</description></item>
-            /// <item><description>Overseas: regions outside the Chinese mainland, including China (Hong Kong).</description></item>
-            /// </list>
+            /// <para>The region location.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Mainland</para>
@@ -896,11 +928,6 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
             /// <summary>
             /// <para>The resource level.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Center: a centralized resource.</description></item>
-            /// <item><description>Region: a unit resource.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Center</para>
@@ -921,12 +948,6 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
             /// <summary>
             /// <para>The session status.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Unknown</description></item>
-            /// <item><description>Connected</description></item>
-            /// <item><description>Disconnected</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Connected</para>
@@ -937,20 +958,6 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
             /// <summary>
             /// <para>The resource status.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Unknown: The resource status is unknown.</description></item>
-            /// <item><description>Stopped: The resource is stopped.</description></item>
-            /// <item><description>Failed: The resource failed to be created.</description></item>
-            /// <item><description>Starting: The resource is being started.</description></item>
-            /// <item><description>Rebuilding: The resource is changing.</description></item>
-            /// <item><description>Running: The resource is running.</description></item>
-            /// <item><description>Stopping: The resource is being stopped.</description></item>
-            /// <item><description>FotaUpdating: The image is being updated.</description></item>
-            /// <item><description>Pending: The resource is still being prepared.</description></item>
-            /// <item><description>Deleting: The resource is being deleted.</description></item>
-            /// <item><description>Unavailable: The resource is unavailable.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -961,13 +968,6 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
             /// <summary>
             /// <para>The resource type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>App: cloud apps including App Streaming, Cloud Phone, and Cloud Browser.</description></item>
-            /// <item><description>Desktop: cloud computers.</description></item>
-            /// <item><description>DesktopGroup: cloud computer shares.</description></item>
-            /// <item><description>CloudDrive: enterprise drives.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Desktop</para>
@@ -978,11 +978,6 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
             /// <summary>
             /// <para>The session type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>SINGLE_SESSION</description></item>
-            /// <item><description>MULTIPLE_SESSION</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>SINGLE_SESSION</para>
@@ -992,14 +987,18 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string SessionType { get; set; }
 
             /// <summary>
-            /// <para>The sessions established between users and resources.</para>
+            /// <para>The list of resource user session information.</para>
             /// </summary>
             [NameInMap("Sessions")]
             [Validation(Required=false)]
             public List<DescribeUserResourcesResponseBodyResourcesSessions> Sessions { get; set; }
             public class DescribeUserResourcesResponseBodyResourcesSessions : TeaModel {
+                [NameInMap("LastClientIp")]
+                [Validation(Required=false)]
+                public string LastClientIp { get; set; }
+
                 /// <summary>
-                /// <para>用户的昵称。</para>
+                /// <para>The nickname of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-001</para>
@@ -1009,7 +1008,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string NickName { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the resource session was established.</para>
+                /// <para>The time when the resource session was connected.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-01-22T11:03:36Z</para>
@@ -1019,7 +1018,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string ResourceSessionStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The username used to log on to the resource.</para>
+                /// <para>The username logged on to the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user001</para>
@@ -1029,7 +1028,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// <para>The User Principal Name (UPN) of the resource-bound user (if applicable). This parameter is returned only when you query the current user\&quot;s sessions.</para>
+                /// <para>The User Principal Name (UPN) of the user bound to the resource, if available. This value is populated only for the session of the currently queried user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:benchmark_test@test.shenzhen">benchmark_test@test.shenzhen</a></para>
@@ -1042,11 +1041,6 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
             /// <summary>
             /// <para>The sub-billing method.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>monthPackage: monthly subscription.</description></item>
-            /// <item><description>PrePaid: hourly plans.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
@@ -1055,13 +1049,12 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             [Validation(Required=false)]
             public string SubPayType { get; set; }
 
+            [NameInMap("SupportAgentIm")]
+            [Validation(Required=false)]
+            public bool? SupportAgentIm { get; set; }
+
             /// <summary>
             /// <para>Indicates whether hibernation is supported.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1071,14 +1064,14 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public bool? SupportHibernation { get; set; }
 
             /// <summary>
-            /// <para>The supported actions. This parameter is returned only for cloud computers or phones.</para>
+            /// <para>The list of supported action types. Currently supported only for cloud phones and cloud desktops (including shared cloud desktops).</para>
             /// </summary>
             [NameInMap("SupportedActions")]
             [Validation(Required=false)]
             public List<string> SupportedActions { get; set; }
 
             /// <summary>
-            /// <para>The theme color of the resource. This parameter is for apps only.</para>
+            /// <para>The resource theme color. This parameter is specific to resources of the App type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>#FFFFFF</para>
@@ -1088,14 +1081,20 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string ThemeColor { get; set; }
 
             /// <summary>
-            /// <para>The custom name of the resource.</para>
+            /// <para>The user-defined name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>My cloud desktop</para>
             /// </summary>
             [NameInMap("UserCustomName")]
             [Validation(Required=false)]
             public string UserCustomName { get; set; }
 
             /// <summary>
-            /// <para>The resource version. This parameter is for apps only.</para>
+            /// <para>The resource version. This parameter is specific to resources of the App type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Resource version.</para>
             /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
@@ -1104,7 +1103,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         }
 
         /// <summary>
-        /// <para>总数。</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

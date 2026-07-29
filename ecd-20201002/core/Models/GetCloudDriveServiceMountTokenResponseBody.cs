@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class GetCloudDriveServiceMountTokenResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DC27288A-F9E1-5092-9B5B-71C27D15****</para>
         /// </summary>
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public GetCloudDriveServiceMountTokenResponseBodyToken Token { get; set; }
         public class GetCloudDriveServiceMountTokenResponseBodyToken : TeaModel {
             /// <summary>
+            /// <para>Enterprise File Gateway domain name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>h****</para>
             /// </summary>
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string DomainId { get; set; }
 
             /// <summary>
+            /// <para>Expiration Time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-10-10T04:41:35Z</para>
             /// </summary>
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string ExpiredAfter { get; set; }
 
             /// <summary>
+            /// <para>Current status of the Enterprise File Gateway user.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
             /// </summary>
@@ -69,6 +77,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public long? TotalSize { get; set; }
 
             /// <summary>
+            /// <para>Used capacity. Unit: GiB.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>605089</para>
             /// </summary>

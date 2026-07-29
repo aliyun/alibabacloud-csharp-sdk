@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class ReportSessionStatusRequest : TeaModel {
         /// <summary>
+        /// <para>End user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>liming</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string EndUserId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Duration of the session change.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public long? SessionChangeTime { get; set; }
 
         /// <summary>
+        /// <para>Session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +64,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>Session status.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class GetLoginTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The email address of the user. The system returns the email address in the return value of the LoginToken parameter after the user logs on to the client.</para>
+        /// <para>The email address of the user. This value is returned with the LoginToken after logon.    </para>
         /// <list type="bullet">
-        /// <item><description>For a convenience user, the return value is the email address specified when the administrator creates the convenience user.</description></item>
-        /// <item><description>For an AD user, the return value is in the following format: <c>Username@Name of the AD domain</c>.</description></item>
+        /// <item><description>For a convenience user, the email address specified when the convenience user was created is returned.</description></item>
+        /// <item><description>For an AD user, the value is returned in the format of <c>username@AD domain name</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>The account of the convenience user or the AD user.</para>
+        /// <para>The convenience account username or AD username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This is a parameter only for internal use.</para>
+        /// <para>This is an internal field and is not available for public use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string Industry { get; set; }
 
         /// <summary>
-        /// <para>The token used to keep the user logged on. After the user logs on to the client and select the Keep Logon option, <c>KeepAliveToken</c> is returned when you call the operation. If the user does not select the Keep Logon option, null is returned.</para>
+        /// <para>The token used to keep the logon session alive. After a successful logon with the keep-alive option enabled, the operation returns a <c>KeepAliveToken</c>. If the keep-alive option is not enabled, an empty value is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>006YwvYMsesWWsDBZnVB+Wq9AvJDVIqOY3YCktvtb7+KxMb3ClnNlV8+l/knhZYrXUmeP06IzkjF+IgcZ3vZKOyMprDyFHjCy1r27FRE/U7+geWCl8iQ+yF8GaCRHfJEkC2+ROs93HkT4tfHxyY1J8W7O7ZQGUC/cdCvm+cCP6FIy73IUuPuVR6PcKYXIpEZPW</para>
@@ -56,17 +56,17 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string KeepAliveToken { get; set; }
 
         /// <summary>
-        /// <para>The attribute of the convenience user. For an AD user, null is returned.</para>
+        /// <para>The property of the convenience user. If the user is an AD user, an empty value is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test:sample</para>
+        /// <para>test:wuying</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The logon token.</para>
+        /// <para>The logon credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v18101ac6a9e69c66b04a163031680463660b4b216cd758f34b60b9ad6a7c7f7334b83dd8f75eef4209c68f9f1080b****</para>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string LoginToken { get; set; }
 
         /// <summary>
-        /// <para>The next stage that is expected to enter. For example, an administrator enables MFA in the EDS console. When an end user enters the password, that is, the end user completes the <c>ADPassword</c> stage, this parameter returns <c>MFAVerify</c>. This indicates that MFA is required.</para>
+        /// <para>The expected next stage. For example, if the administrator has enabled MFA authentication in the Elastic Desktop Service console, after the username and password authentication is passed (the <c>ADPassword</c> stage), this parameter returns <c>MFAVerify</c>, indicating that MFA authentication is required.</para>
         /// <remarks>
-        /// <para> For more information about the authentication stages, see the <c>CurrentStage</c> parameter.</para>
+        /// <para>For more information about each authentication stage, see the parameter description of the <c>CurrentStage</c> request parameter of this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,9 +92,17 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         [Validation(Required=false)]
         public string NickName { get; set; }
 
+        [NameInMap("OfficeSiteId")]
+        [Validation(Required=false)]
+        public string OfficeSiteId { get; set; }
+
+        [NameInMap("OfficeSiteName")]
+        [Validation(Required=false)]
+        public string OfficeSiteName { get; set; }
+
         /// <summary>
         /// <remarks>
-        /// <para>This is a parameter only for internal use.</para>
+        /// <para>This is an internal field and is not available for public use.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("PasswordStrategy")]
@@ -103,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public class GetLoginTokenResponseBodyPasswordStrategy : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This is a parameter only for internal use.</para>
+            /// <para>This is an internal field and is not available for public use.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("TenantAlternativeChars")]
@@ -112,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This is a parameter only for internal use.</para>
+            /// <para>This is an internal field and is not available for public use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -125,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         }
 
         /// <summary>
-        /// <para>Enter the mobile number of the convenience user. For an AD user, null is returned.</para>
+        /// <para>The phone number of the convenience user. If the user is an AD user, an empty value is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1381111****</para>
@@ -136,7 +144,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This is a parameter only for internal use.</para>
+        /// <para>This is an internal field and is not available for public use.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Props")]
@@ -144,9 +152,9 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public Dictionary<string, string> Props { get; set; }
 
         /// <summary>
-        /// <para>The QR code that is generated when the virtual MFA device is bound. The value is encoded in Base64. This parameter can be empty. This parameter is required only when the CurrentStage parameter is set to <c>MFABind</c>.</para>
+        /// <para>The QR code of the secret key used when attaching a virtual MFA device. The value uses Base64 encoding. This value can be empty and is used in the <c>MFABind</c> stage.</para>
         /// <remarks>
-        /// <para>For more information about each authentication stage, see the parameter description of the request parameter <c>CurrentStage</c>.</para>
+        /// <para>For more information about each authentication stage, see the parameter description of the <c>CurrentStage</c> request parameter of this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -158,7 +166,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This is a parameter only for internal use.</para>
+        /// <para>This is an internal field and is not available for public use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -169,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -179,14 +187,14 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Risk identification information regarding the signin process.</para>
+        /// <para>The logon risk identification information.</para>
         /// </summary>
         [NameInMap("RiskVerifyInfo")]
         [Validation(Required=false)]
         public GetLoginTokenResponseBodyRiskVerifyInfo RiskVerifyInfo { get; set; }
         public class GetLoginTokenResponseBodyRiskVerifyInfo : TeaModel {
             /// <summary>
-            /// <para>The email used for authentication.</para>
+            /// <para>The email address used for identity verification when risk verification is triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:user@example.com">user@example.com</a></para>
@@ -196,7 +204,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The duration of the lock.</para>
+            /// <para>The account lockout duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1713749778</para>
@@ -206,7 +214,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public long? LastLockDuration { get; set; }
 
             /// <summary>
-            /// <para>Whether the account is locked or not.</para>
+            /// <para>Indicates whether the account is locked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -216,10 +224,10 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
             public string Locked { get; set; }
 
             /// <summary>
-            /// <para>The mobile number used for authentication.</para>
+            /// <para>The phone number used for identity verification when risk verification is triggered.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1388888****</para>
+            /// <para>1381111****</para>
             /// </summary>
             [NameInMap("Phone")]
             [Validation(Required=false)]
@@ -228,9 +236,9 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         }
 
         /// <summary>
-        /// <para>The key that is generated when you bind the virtual MFA device. This parameter is required when the CurrentStage parameter is set to <c>MFABind</c>.</para>
+        /// <para>The secret key used when attaching a virtual MFA device. This value is used in the <c>MFABind</c> stage.</para>
         /// <remarks>
-        /// <para>For more information about each authentication stage, see the parameter description of the request parameter <c>CurrentStage</c>.</para>
+        /// <para>For more information about each authentication stage, see the parameter description of the <c>CurrentStage</c> request parameter of this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -241,9 +249,9 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string Secret { get; set; }
 
         /// <summary>
-        /// <para>The ID of the session. The ID is returned the first time you call the <c>GetLoginToken</c> operation in the session. If MFA is required, you must specify this parameter in subsequent stages.</para>
+        /// <para>The session ID. This value is returned only when <c>GetLoginToken</c> is invoked for the first time within the same session. For subsequent stages that require multiple authentications, pass in this parameter.</para>
         /// <remarks>
-        /// <para>For more information about each authentication stage, see the parameter description of the request parameter <c>CurrentStage</c>.</para>
+        /// <para>For more information about each authentication stage, see the parameter description of the <c>CurrentStage</c> request parameter of this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -254,7 +262,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. The ID is used for hardware client authentication.</para>
+        /// <para>The Alibaba Cloud account ID. This value is used for hardware terminal identification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>166353906220****</para>
@@ -265,7 +273,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This is a parameter only for internal use.</para>
+        /// <para>This is an internal field and is not available for public use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

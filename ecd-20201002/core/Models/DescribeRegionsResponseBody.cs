@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The regions.</para>
+        /// <para>The region object.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// <para>The region endpoint.</para>
+            /// <para>The endpoint of the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd.cn-hangzhou.aliyuncs.com</para>

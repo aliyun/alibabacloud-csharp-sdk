@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>liming</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20201002.Models
         /// <para>The phone number of the user.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1827912****</para>
+        /// <para>138****1111</para>
         /// </summary>
         [NameInMap("phone")]
         [Validation(Required=false)]
