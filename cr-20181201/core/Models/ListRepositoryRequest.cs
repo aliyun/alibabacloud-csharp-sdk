@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepositoryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Container Registry instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         /// <summary>
         /// <para>The page number.</para>
@@ -31,7 +39,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100. If you specify a value larger than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</para>
+        /// <para>The number of entries per page. The maximum value is 100. If the specified value exceeds 100, the system returns a parameter error or uses 100 as the actual maximum number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -41,7 +49,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the repository.</para>
+        /// <para>The repository name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>repo-test</para>
@@ -51,7 +59,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace to which the repository belongs.</para>
+        /// <para>The repository namespace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>repo-namespace-test</para>
@@ -61,11 +69,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoNamespaceName { get; set; }
 
         /// <summary>
-        /// <para>Repository status. Valid values:</para>
+        /// <para>The repository status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><c>NORMAL</c>: Normal.</para>
         /// </description></item>
-        /// <item><description><para><c>DELETING</c>: Deleting.</para>
+        /// <item><description><para><c>DELETING</c>: Being deleted.</para>
         /// </description></item>
         /// <item><description><para><c>DELETED</c>: Deleted.</para>
         /// </description></item>

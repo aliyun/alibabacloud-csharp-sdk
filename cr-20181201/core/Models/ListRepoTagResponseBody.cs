@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoTagResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return value.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The images.</para>
+        /// <para>The image list.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
         public List<ListRepoTagResponseBodyImages> Images { get; set; }
         public class ListRepoTagResponseBodyImages : TeaModel {
             /// <summary>
-            /// <para>The digest of the image.</para>
+            /// <para>The digest value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>67bfbcc12b67936ec7f867927817cbb071832b873dbcaed312a1930ba5f1****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ImageCreate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image.</para>
+            /// <para>The image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>45023655bf39c382e26a8607d057c27871dee163c1ecf48cc1ebf2a1****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The size of the image.</para>
+            /// <para>The image size, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27107966</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? ImageSize { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was last updated.</para>
+            /// <para>The time when the image was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572875608000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ImageUpdate { get; set; }
 
             /// <summary>
-            /// <para>The status of the image.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag of the image.</para>
+            /// <para>The image tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v0.1</para>
@@ -108,8 +108,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,7 +127,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -129,7 +137,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>031572FA-7D8F-4C05-B790-1071E0E05DE6</para>
@@ -139,7 +147,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

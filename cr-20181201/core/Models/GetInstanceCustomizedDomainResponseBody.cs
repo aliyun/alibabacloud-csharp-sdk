@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetInstanceCustomizedDomainResponseBody : TeaModel {
         /// <summary>
+        /// <para>The certificate ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>24858802</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string CertId { get; set; }
 
         /// <summary>
+        /// <para>The return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1571926439000</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The custom domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>docker-images.qu-in.club</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Domain { get; set; }
 
         /// <summary>
+        /// <para>The domain type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>USER</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string DomainType { get; set; }
 
         /// <summary>
+        /// <para>The custom endpoint type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>internet</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string EndpointType { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cri-4ec5xvj4j0l****</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
+        /// <para>The modification time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1638259914000</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? ModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The custom module name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Chart</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ModuleName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</para>
         /// </summary>

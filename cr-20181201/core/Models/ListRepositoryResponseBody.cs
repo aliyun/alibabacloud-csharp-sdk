@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The page number.</para>
         /// 
@@ -40,7 +48,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -50,14 +58,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The information about the repositories.</para>
+        /// <para>The list of repositories.</para>
         /// </summary>
         [NameInMap("Repositories")]
         [Validation(Required=false)]
         public List<ListRepositoryResponseBodyRepositories> Repositories { get; set; }
         public class ListRepositoryResponseBodyRepositories : TeaModel {
             /// <summary>
-            /// <para>The time when the repository was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1564153576000</para>
@@ -67,7 +75,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Container Registry instance to which the repository belongs.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-kmsiwlxxdcv****</para>
@@ -77,7 +85,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the repository was last modified.</para>
+            /// <para>The last modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1564153576000</para>
@@ -87,10 +95,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The type of the repository building. Valid values:</para>
+            /// <para>The repository build type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>AUTO</c>: The repository is automatically built.</description></item>
-            /// <item><description><c>MANUAL</c>: The repository is manually built.</description></item>
+            /// <item><description><para><c>AUTO</c>: Automatically triggered build.</para>
+            /// </description></item>
+            /// <item><description><para><c>MANUAL</c>: Manually triggered build.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +111,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoBuildType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the repository.</para>
+            /// <para>The repository ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crr-03cuozrsqhkw****</para>
@@ -111,7 +121,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoId { get; set; }
 
             /// <summary>
-            /// <para>The name of the repository.</para>
+            /// <para>The repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -121,7 +131,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace to which the repository belongs.</para>
+            /// <para>The repository namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -131,7 +141,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoNamespaceName { get; set; }
 
             /// <summary>
-            /// <para>The status of the repository.</para>
+            /// <para>The repository status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -141,10 +151,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the repository. Valid values:</para>
+            /// <para>The repository type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PUBLIC</c></description></item>
-            /// <item><description><c>PRIVATE</c></description></item>
+            /// <item><description><para><c>PUBLIC</c>: Public.</para>
+            /// </description></item>
+            /// <item><description><para><c>PRIVATE</c>: Private.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -155,7 +167,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string RepoType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the repository belongs.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfm4n5kzyfxxxx</para>
@@ -165,7 +177,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The summary of the repository.</para>
+            /// <para>The summary information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test OK</para>
@@ -175,7 +187,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Summary { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the feature of image tag immutability is enabled for the repository.</para>
+            /// <para>The image tag immutability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -197,7 +209,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of the queried image repositories.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

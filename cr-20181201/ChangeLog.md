@@ -1,3 +1,14 @@
+2026-07-29 Version: 2.2.1
+- Update API ListRepoTag: add request parameters MaxResults.
+- Update API ListRepoTag: add request parameters NextToken.
+- Update API ListRepoTag: add response parameters Body.MaxResults.
+- Update API ListRepoTag: add response parameters Body.NextToken.
+- Update API ListRepository: add request parameters MaxResults.
+- Update API ListRepository: add request parameters NextToken.
+- Update API ListRepository: add response parameters Body.MaxResults.
+- Update API ListRepository: add response parameters Body.NextToken.
+
+
 2026-07-09 Version: 2.2.0
 - Support API CreateInstanceCustomizedDomain.
 - Support API DeleteInstanceCustomizedDomain.

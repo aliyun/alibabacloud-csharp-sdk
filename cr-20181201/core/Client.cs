@@ -59,9 +59,7 @@ namespace AlibabaCloud.SDK.Cr20181201
                 {"ap-southeast-6", "cr.ap-southeast-6.aliyuncs.com"},
                 {"ap-southeast-5", "cr.ap-southeast-5.aliyuncs.com"},
                 {"ap-southeast-3", "cr.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-2", "cr.ap-southeast-2.aliyuncs.com"},
                 {"ap-southeast-1", "cr.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "cr.ap-south-1.aliyuncs.com"},
                 {"ap-northeast-2", "cr.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "cr.ap-northeast-1.aliyuncs.com"},
             };
@@ -5601,7 +5599,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例自定义域名</para>
+        /// <para>Deletes a custom domain name from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5651,7 +5649,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例自定义域名</para>
+        /// <para>Deletes a custom domain name from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5701,7 +5699,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例自定义域名</para>
+        /// <para>Deletes a custom domain name from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5719,7 +5717,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例自定义域名</para>
+        /// <para>Deletes a custom domain name from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8627,6 +8625,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await GetInstanceCountWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the custom domain name of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceCustomizedDomainRequest
         /// </param>
@@ -8672,6 +8675,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetInstanceCustomizedDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the custom domain name of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceCustomizedDomainRequest
         /// </param>
@@ -8717,6 +8725,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetInstanceCustomizedDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the custom domain name of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceCustomizedDomainRequest
         /// </param>
@@ -8730,6 +8743,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return GetInstanceCustomizedDomainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the custom domain name of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetInstanceCustomizedDomainRequest
         /// </param>
@@ -13445,7 +13463,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image tags in a repository.</para>
+        /// <para>Queries the list of image versions (tags).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13465,6 +13483,14 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -13499,7 +13525,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image tags in a repository.</para>
+        /// <para>Queries the list of image versions (tags).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13519,6 +13545,14 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -13553,7 +13587,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image tags in a repository.</para>
+        /// <para>Queries the list of image versions (tags).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13571,7 +13605,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries image tags in a repository.</para>
+        /// <para>Queries the list of image versions (tags).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13917,7 +13951,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the image repository list.</para>
+        /// <para>Queries a list of image repositories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13937,6 +13971,14 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -13979,7 +14021,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the image repository list.</para>
+        /// <para>Queries a list of image repositories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13999,6 +14041,14 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -14041,7 +14091,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the image repository list.</para>
+        /// <para>Queries a list of image repositories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14059,7 +14109,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the image repository list.</para>
+        /// <para>Queries a list of image repositories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16173,7 +16223,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例自定义域名</para>
+        /// <para>Updates the custom domain name of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16231,7 +16281,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例自定义域名</para>
+        /// <para>Updates the custom domain name of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16289,7 +16339,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例自定义域名</para>
+        /// <para>Updates the custom domain name of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16307,7 +16357,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例自定义域名</para>
+        /// <para>Updates the custom domain name of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
