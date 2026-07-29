@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryAiCallDetailPageRequest : TeaModel {
         /// <summary>
-        /// <para>The batch ID. You can find this ID by clicking Details on the <b>Call Task Management</b> page.</para>
+        /// <para>The batch ID. On the <b>Call Task Management</b> page, click Details to view the batch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1183**************</para>
@@ -22,36 +22,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>CALL_FORWARDING: Call Forwarding.</para>
-        /// </description></item>
-        /// <item><description><para>INCOMING_CALL_BARRED: Incoming Call Barred.</para>
-        /// </description></item>
-        /// <item><description><para>CALL_REJECTED: Call Rejected.</para>
-        /// </description></item>
-        /// <item><description><para>ANSWERED: Answered.</para>
-        /// </description></item>
-        /// <item><description><para>USER_BUSY: User Busy.</para>
-        /// </description></item>
-        /// <item><description><para>POWERED_OFF: Powered Off.</para>
-        /// </description></item>
-        /// <item><description><para>NO_USER_RESPONSE: No User Response.</para>
-        /// </description></item>
-        /// <item><description><para>OPERATOR_BLOCK: Operator Block.</para>
-        /// </description></item>
-        /// <item><description><para>OTHERS: Others.</para>
-        /// </description></item>
-        /// <item><description><para>SUSPEND: Suspend.</para>
-        /// </description></item>
-        /// <item><description><para>CANCEL: Canceled by the caller.</para>
-        /// </description></item>
-        /// <item><description><para>INVALID_NUMBER: Invalid Number.</para>
-        /// </description></item>
-        /// <item><description><para>UNAVAILABLE: Unavailable.</para>
-        /// </description></item>
-        /// <item><description><para>NETWORK_BUSY: Network Busy.</para>
-        /// </description></item>
-        /// <item><description><para>NO_ANSWER: No Answer.</para>
-        /// </description></item>
+        /// <item><description>CALL_FORWARDING: call forwarding.</description></item>
+        /// <item><description>INCOMING_CALL_BARRED: incoming call barred.</description></item>
+        /// <item><description>CALL_REJECTED: call rejected.</description></item>
+        /// <item><description>ANSWERED: answered.</description></item>
+        /// <item><description>USER_BUSY: user busy.</description></item>
+        /// <item><description>POWERED_OFF: powered off.</description></item>
+        /// <item><description>NO_USER_RESPONSE: out of service area.</description></item>
+        /// <item><description>OPERATOR_BLOCK: blocked by carrier.</description></item>
+        /// <item><description>OTHERS: other status.</description></item>
+        /// <item><description>SUSPEND: suspended.</description></item>
+        /// <item><description>CANCEL: canceled by caller.</description></item>
+        /// <item><description>INVALID_NUMBER: invalid number.</description></item>
+        /// <item><description>UNAVAILABLE: temporarily unavailable.</description></item>
+        /// <item><description>NETWORK_BUSY: network busy.</description></item>
+        /// <item><description>NO_ANSWER: no answer.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,17 +57,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CalledNumber { get; set; }
 
         /// <summary>
-        /// <para>A list of up to 100 detail IDs.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Sample value Sample value</para>
+        /// <para>The list of task detail IDs. A maximum of 100 IDs can be specified.</para>
         /// </summary>
         [NameInMap("DetailIds")]
         [Validation(Required=false)]
         public List<long?> DetailIds { get; set; }
 
         /// <summary>
-        /// <para>The encryption method. Valid values: 0 (None), 1 (MD5), 2 (SHA256), and 3 (SM3).</para>
+        /// <para>The encryption type. Valid values: 0: no encryption. 1: MD5. 2: SHA256. 3: SM3.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -92,7 +74,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? EncryptionType { get; set; }
 
         /// <summary>
-        /// <para>The end of the call time range. This value is a timestamp in milliseconds.</para>
+        /// <para>The end calling time. This is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748948749000</para>
@@ -102,7 +84,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? EndCallingTime { get; set; }
 
         /// <summary>
-        /// <para>The end of the import time range. This value is a timestamp in milliseconds.</para>
+        /// <para>The end import time. This is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748948749000</para>
@@ -112,7 +94,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? EndImportedTime { get; set; }
 
         /// <summary>
-        /// <para>The major intent. You can find this intent by clicking Agent Details on the <a href="https://aiccs.console.aliyun.com/agent/customize">Communication Agent Management</a> page.</para>
+        /// <para>The major intent. On the <a href="https://aiccs.console.aliyun.com/agent/customize">Communication Agent Management</a> page, click agent details to view the major intent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A</para>
@@ -122,7 +104,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string MajorIntent { get; set; }
 
         /// <summary>
-        /// <para>The maximum conversation duration, in minutes.</para>
+        /// <para>The maximum conversation duration. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -132,7 +114,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? MaxConversationDuration { get; set; }
 
         /// <summary>
-        /// <para>The minimum conversation duration, in minutes.</para>
+        /// <para>The minimum conversation duration. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -142,7 +124,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? MinConversationDuration { get; set; }
 
         /// <summary>
-        /// <para>A custom ID provided by the caller. This ID is returned in the receipt message for request tracking.</para>
+        /// <para>The ID reserved for the caller. This ID is returned to the caller in the receipt message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94ba739b-c01a-ef91-335d-4be006c34899</para>
@@ -156,7 +138,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be greater than <b>0</b>. The default value is <b>1</b>.</para>
+        /// <para>The current page number. The value must be greater than <b>0</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -166,7 +148,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The default value is <b>10</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -184,7 +166,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start of the call time range. This value is a timestamp in milliseconds.</para>
+        /// <para>The start calling time. This is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748948749000</para>
@@ -194,7 +176,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? StartCallingTime { get; set; }
 
         /// <summary>
-        /// <para>The start of the import time range. This value is a timestamp in milliseconds.</para>
+        /// <para>The start import time. This is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748948749000</para>
@@ -206,11 +188,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: Pending.</para>
+        /// <item><description><para>0: pending.</para>
         /// </description></item>
-        /// <item><description><para>1: Completed.</para>
+        /// <item><description><para>1: completed.</para>
         /// </description></item>
-        /// <item><description><para>2: Failed.</para>
+        /// <item><description><para>2: failed.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

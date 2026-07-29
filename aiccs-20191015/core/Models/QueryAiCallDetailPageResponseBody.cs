@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryAiCallDetailPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The reason why the access request was denied.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryAiCallDetailPageResponseBodyData Data { get; set; }
         public class QueryAiCallDetailPageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of task details.</para>
+            /// <para>The list of task detail data.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -54,6 +54,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string BatchId { get; set; }
 
                 /// <summary>
+                /// <para>The branch ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>49</para>
                 /// </summary>
@@ -62,14 +64,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? BranchId { get; set; }
 
                 /// <summary>
+                /// <para>The branch name.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>example</para>
+                /// <para>Default branch.</para>
                 /// </summary>
                 [NameInMap("BranchName")]
                 [Validation(Required=false)]
                 public string BranchName { get; set; }
 
                 /// <summary>
+                /// <para>The version ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>9</para>
                 /// </summary>
@@ -78,10 +84,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? BranchVersionId { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>29</para>
+                /// </summary>
+                [NameInMap("CallExpireTime")]
+                [Validation(Required=false)]
+                public long? CallExpireTime { get; set; }
+
+                /// <summary>
+                /// <para>The call ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123<em><b><b>456^123</b></b></em>456</para>
+                /// </summary>
+                [NameInMap("CallId")]
+                [Validation(Required=false)]
+                public string CallId { get; set; }
+
+                /// <summary>
                 /// <para>The call result.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>用户接通</para>
+                /// <para>Answered.</para>
                 /// </summary>
                 [NameInMap("CallResult")]
                 [Validation(Required=false)]
@@ -98,7 +122,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string CalledNumber { get; set; }
 
                 /// <summary>
-                /// <para>The call time, formatted as a timestamp in milliseconds.</para>
+                /// <para>The calling time. This is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1748948749000</para>
@@ -108,7 +132,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? CallingTime { get; set; }
 
                 /// <summary>
-                /// <para>The conversation duration, in seconds.</para>
+                /// <para>The conversation duration. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -118,11 +142,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? ConversationDuration { get; set; }
 
                 /// <summary>
-                /// <para>The conversation record, formatted as a chronologically sorted JSON array. Each object has the following structure:</para>
+                /// <para>The chat record information. The structure is a JSON array, sorted in chronological order. The format is as follows:</para>
                 /// <pre><code class="language-json">[
                 ///     {
-                ///         &quot;content&quot;:&quot;The content of the message.&quot;,
-                ///         &quot;role&quot;:&quot;The role of the speaker.&quot;, // Valid values: user, assistant
+                ///         &quot;content&quot;:&quot;Chat content&quot;,
+                ///         &quot;role&quot;:&quot;Role&quot;,//Valid values: user, assistant (bot)
                 ///     }
                 /// ]
                 /// </c></pre>
@@ -184,7 +208,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string ConversationRecord { get; set; }
 
                 /// <summary>
-                /// <para>The conversation turn count.</para>
+                /// <para>The number of conversation turns.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -204,7 +228,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string DetailId { get; set; }
 
                 /// <summary>
-                /// <para>The encryption type. Valid values are: 0 (no encryption), 1 (MD5), 2 (SHA256), and 3 (SM3).</para>
+                /// <para>The encryption type. Valid values: 0: no encryption. 1: MD5. 2: SHA256. 3: SM3.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -214,17 +238,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? EncryptionType { get; set; }
 
                 /// <summary>
-                /// <para>The failure reason. Provided only if the call fails.</para>
+                /// <para>The reason for call failure. This field is present only when the call fails.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>账户停机</para>
+                /// <para>Account suspended.</para>
                 /// </summary>
                 [NameInMap("FailedReason")]
                 [Validation(Required=false)]
                 public string FailedReason { get; set; }
 
                 /// <summary>
-                /// <para>The import time, formatted as a timestamp in milliseconds.</para>
+                /// <para>The import time. This is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1748948749000</para>
@@ -244,7 +268,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string MajorIntent { get; set; }
 
                 /// <summary>
-                /// <para>A JSON object of key-value pairs for runtime variables.</para>
+                /// <para>The variable information used at runtime, stored in key-value format in this field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -252,7 +276,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 ///   &quot;phoneNumber&quot;: &quot;777&quot;,
                 ///   &quot;distance&quot;: &quot;555&quot;,
                 ///   &quot;mendian&quot;: &quot;444&quot;,
-                ///   &quot;sex&quot;: &quot;男&quot;,
+                ///   &quot;sex&quot;: &quot;male&quot;,
                 ///   &quot;name&quot;: &quot;111&quot;,
                 ///   &quot;age&quot;: &quot;222&quot;
                 /// }</para>
@@ -262,6 +286,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Options { get; set; }
 
                 /// <summary>
+                /// <para>The business serial number reserved for external input. A unique ID can be used for business association.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>outId</para>
                 /// </summary>
@@ -270,7 +296,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string OutId { get; set; }
 
                 /// <summary>
-                /// <para>The recording file path. Provided only after the recording file is generated.</para>
+                /// <para>The download path of the recording file. This field is present only after the recording file is generated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>https://*******</para>
@@ -280,22 +306,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string RecordingFilePath { get; set; }
 
                 /// <summary>
-                /// <para>The task detail status.</para>
+                /// <para>The task detail status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>0: Initializing</para>
-                /// </description></item>
-                /// <item><description><para>1: Waiting to call</para>
-                /// </description></item>
-                /// <item><description><para>2: Waiting to retry</para>
-                /// </description></item>
-                /// <item><description><para>3: Calling</para>
-                /// </description></item>
-                /// <item><description><para>4: Call ended</para>
-                /// </description></item>
-                /// <item><description><para>5: Call failed</para>
-                /// </description></item>
+                /// <item><description>0: initialized.</description></item>
+                /// <item><description>1: waiting to call.</description></item>
+                /// <item><description>2: waiting to retry.</description></item>
+                /// <item><description>3: calling.</description></item>
+                /// <item><description>4: call ended.</description></item>
+                /// <item><description>5: call failed.</description></item>
                 /// </list>
-                /// <para>Only statuses 4 and 5 are terminal states.</para>
+                /// <para>Only 4 and 5 are desired states.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -315,16 +335,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
+                /// <para>The version name.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>example</para>
+                /// <para>Default version.</para>
                 /// </summary>
                 [NameInMap("VersionName")]
                 [Validation(Required=false)]
                 public string VersionName { get; set; }
 
                 /// <summary>
+                /// <para>The version number.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>55</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("VersionNo")]
                 [Validation(Required=false)]
@@ -333,7 +357,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -365,10 +389,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>A description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Success.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -385,12 +409,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values are:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class UpdateAiCallTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The reason why access was denied.</para>
+        /// <para>The detailed reason for access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the task was updated successfully. Valid values:</para>
+        /// <para>The update result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The update is successful.</para>
+        /// <item><description><para><b>true</b>: The update was successful.</para>
         /// </description></item>
         /// <item><description><para><b>false</b>: The update failed.</para>
         /// </description></item>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error message that is returned when an error occurs.</para>
+        /// <para>The error message. This parameter is returned only when an exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>参数不合法</para>
@@ -68,10 +68,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: successful.</description></item>
+        /// <item><description><b>false</b>: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

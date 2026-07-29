@@ -3262,12 +3262,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a call task.</para>
+        /// <para>Creates a voice call task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating a call task, make a test call with an agent to ensure the results meet your requirements.</para>
+        /// <para>Before creating a call task, use an agent to perform a test call to confirm that the results meet your requirements.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3297,6 +3297,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 request.CallTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTime, "CallTime", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallableTime))
+            {
+                request.CallableTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallableTime, "CallableTime", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -3309,6 +3313,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDayShrink))
             {
                 query["CallDay"] = request.CallDayShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallExpireDate))
+            {
+                query["CallExpireDate"] = request.CallExpireDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallExpireMinutes))
+            {
+                query["CallExpireMinutes"] = request.CallExpireMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallExpireType))
+            {
+                query["CallExpireType"] = request.CallExpireType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRetryInterval))
             {
@@ -3325,6 +3341,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeShrink))
             {
                 query["CallTime"] = request.CallTimeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallableTimeShrink))
+            {
+                query["CallableTime"] = request.CallableTimeShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineEncoding))
             {
@@ -3399,12 +3419,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a call task.</para>
+        /// <para>Creates a voice call task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating a call task, make a test call with an agent to ensure the results meet your requirements.</para>
+        /// <para>Before creating a call task, use an agent to perform a test call to confirm that the results meet your requirements.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3434,6 +3454,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 request.CallTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTime, "CallTime", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallableTime))
+            {
+                request.CallableTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallableTime, "CallableTime", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -3446,6 +3470,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDayShrink))
             {
                 query["CallDay"] = request.CallDayShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallExpireDate))
+            {
+                query["CallExpireDate"] = request.CallExpireDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallExpireMinutes))
+            {
+                query["CallExpireMinutes"] = request.CallExpireMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallExpireType))
+            {
+                query["CallExpireType"] = request.CallExpireType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRetryInterval))
             {
@@ -3462,6 +3498,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeShrink))
             {
                 query["CallTime"] = request.CallTimeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallableTimeShrink))
+            {
+                query["CallableTime"] = request.CallableTimeShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineEncoding))
             {
@@ -3536,12 +3576,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a call task.</para>
+        /// <para>Creates a voice call task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating a call task, make a test call with an agent to ensure the results meet your requirements.</para>
+        /// <para>Before creating a call task, use an agent to perform a test call to confirm that the results meet your requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3559,12 +3599,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a call task.</para>
+        /// <para>Creates a voice call task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating a call task, make a test call with an agent to ensure the results meet your requirements.</para>
+        /// <para>Before creating a call task, use an agent to perform a test call to confirm that the results meet your requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23470,14 +23510,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a paginated query for call task details.</para>
+        /// <para>Queries call task details by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You must create a call task before you can query its details.</description></item>
-        /// <item><description>You can create a call task on the <b>call task management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> API.</description></item>
+        /// <item><description>Before querying call task details, make sure you have created a call task.</description></item>
+        /// <item><description>If you have not created a call task, create one on the <b>Call Task Management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23602,14 +23642,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a paginated query for call task details.</para>
+        /// <para>Queries call task details by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You must create a call task before you can query its details.</description></item>
-        /// <item><description>You can create a call task on the <b>call task management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> API.</description></item>
+        /// <item><description>Before querying call task details, make sure you have created a call task.</description></item>
+        /// <item><description>If you have not created a call task, create one on the <b>Call Task Management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23734,14 +23774,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a paginated query for call task details.</para>
+        /// <para>Queries call task details by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You must create a call task before you can query its details.</description></item>
-        /// <item><description>You can create a call task on the <b>call task management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> API.</description></item>
+        /// <item><description>Before querying call task details, make sure you have created a call task.</description></item>
+        /// <item><description>If you have not created a call task, create one on the <b>Call Task Management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23760,14 +23800,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a paginated query for call task details.</para>
+        /// <para>Queries call task details by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You must create a call task before you can query its details.</description></item>
-        /// <item><description>You can create a call task on the <b>call task management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> API.</description></item>
+        /// <item><description>Before querying call task details, make sure you have created a call task.</description></item>
+        /// <item><description>If you have not created a call task, create one on the <b>Call Task Management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23786,7 +23826,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets basic information for a call task.</para>
+        /// <para>Queries the basic information of a voice call task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23840,7 +23880,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets basic information for a call task.</para>
+        /// <para>Queries the basic information of a voice call task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23894,7 +23934,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets basic information for a call task.</para>
+        /// <para>Queries the basic information of a voice call task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23912,7 +23952,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets basic information for a call task.</para>
+        /// <para>Queries the basic information of a voice call task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23930,7 +23970,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of call tasks.</para>
+        /// <para>Queries the list of voice call tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24012,7 +24052,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of call tasks.</para>
+        /// <para>Queries the list of voice call tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24094,7 +24134,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of call tasks.</para>
+        /// <para>Queries the list of voice call tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24112,7 +24152,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of call tasks.</para>
+        /// <para>Queries the list of voice call tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24654,15 +24694,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a call task and call records.</para>
+        /// <para>Queries the details of a call task and call conversation information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query call details. You can also view call details in the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console.</description></item>
+        /// <item><description>You can use this operation to query call details. You can also view call details in the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console.</description></item>
         /// <item><description>Before calling this operation, make sure that you have created a call task and imported callee data.</description></item>
-        /// <item><description>If you do not have a created call task, create a call task and import callee data in the <b>Call Task Management</b> console, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</description></item>
+        /// <item><description>If you do not have a created call task, create a call task and import callee data in the <b>Call Task Management</b> console, or use the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24729,15 +24769,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a call task and call records.</para>
+        /// <para>Queries the details of a call task and call conversation information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query call details. You can also view call details in the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console.</description></item>
+        /// <item><description>You can use this operation to query call details. You can also view call details in the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console.</description></item>
         /// <item><description>Before calling this operation, make sure that you have created a call task and imported callee data.</description></item>
-        /// <item><description>If you do not have a created call task, create a call task and import callee data in the <b>Call Task Management</b> console, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</description></item>
+        /// <item><description>If you do not have a created call task, create a call task and import callee data in the <b>Call Task Management</b> console, or use the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24804,15 +24844,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a call task and call records.</para>
+        /// <para>Queries the details of a call task and call conversation information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query call details. You can also view call details in the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console.</description></item>
+        /// <item><description>You can use this operation to query call details. You can also view call details in the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console.</description></item>
         /// <item><description>Before calling this operation, make sure that you have created a call task and imported callee data.</description></item>
-        /// <item><description>If you do not have a created call task, create a call task and import callee data in the <b>Call Task Management</b> console, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</description></item>
+        /// <item><description>If you do not have a created call task, create a call task and import callee data in the <b>Call Task Management</b> console, or use the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24831,15 +24871,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a call task and call records.</para>
+        /// <para>Queries the details of a call task and call conversation information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query call details. You can also view call details in the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console.</description></item>
+        /// <item><description>You can use this operation to query call details. You can also view call details in the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console.</description></item>
         /// <item><description>Before calling this operation, make sure that you have created a call task and imported callee data.</description></item>
-        /// <item><description>If you do not have a created call task, create a call task and import callee data in the <b>Call Task Management</b> console, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</description></item>
+        /// <item><description>If you do not have a created call task, create a call task and import callee data in the <b>Call Task Management</b> console, or use the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31598,12 +31638,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a call task configuration.</para>
+        /// <para>Updates the configuration of a voice call task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Ensure the call task is stopped before you update its configuration.</para>
+        /// <para>Before updating the configuration of a voice call task, make sure that the task is in the Stopped state.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31633,10 +31673,26 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 request.CallTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTime, "CallTime", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallableTime))
+            {
+                request.CallableTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallableTime, "CallableTime", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDayShrink))
             {
                 query["CallDay"] = request.CallDayShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallExpireDate))
+            {
+                query["CallExpireDate"] = request.CallExpireDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallExpireMinutes))
+            {
+                query["CallExpireMinutes"] = request.CallExpireMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallExpireType))
+            {
+                query["CallExpireType"] = request.CallExpireType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRetryInterval))
             {
@@ -31653,6 +31709,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeShrink))
             {
                 query["CallTime"] = request.CallTimeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallableTimeShrink))
+            {
+                query["CallableTime"] = request.CallableTimeShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineEncoding))
             {
@@ -31731,12 +31791,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a call task configuration.</para>
+        /// <para>Updates the configuration of a voice call task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Ensure the call task is stopped before you update its configuration.</para>
+        /// <para>Before updating the configuration of a voice call task, make sure that the task is in the Stopped state.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31766,10 +31826,26 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 request.CallTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallTime, "CallTime", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallableTime))
+            {
+                request.CallableTimeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallableTime, "CallableTime", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDayShrink))
             {
                 query["CallDay"] = request.CallDayShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallExpireDate))
+            {
+                query["CallExpireDate"] = request.CallExpireDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallExpireMinutes))
+            {
+                query["CallExpireMinutes"] = request.CallExpireMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallExpireType))
+            {
+                query["CallExpireType"] = request.CallExpireType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRetryInterval))
             {
@@ -31786,6 +31862,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeShrink))
             {
                 query["CallTime"] = request.CallTimeShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallableTimeShrink))
+            {
+                query["CallableTime"] = request.CallableTimeShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineEncoding))
             {
@@ -31864,12 +31944,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a call task configuration.</para>
+        /// <para>Updates the configuration of a voice call task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Ensure the call task is stopped before you update its configuration.</para>
+        /// <para>Before updating the configuration of a voice call task, make sure that the task is in the Stopped state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31887,12 +31967,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a call task configuration.</para>
+        /// <para>Updates the configuration of a voice call task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Ensure the call task is stopped before you update its configuration.</para>
+        /// <para>Before updating the configuration of a voice call task, make sure that the task is in the Stopped state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -32598,7 +32678,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Model Application</para>
+        /// <para>Modifies a model application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32733,6 +32813,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PauseTime))
+            {
+                query["PauseTime"] = request.PauseTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
             {
                 query["Prompt"] = request.Prompt;
@@ -32810,7 +32894,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Model Application</para>
+        /// <para>Modifies a model application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32945,6 +33029,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PauseTime))
+            {
+                query["PauseTime"] = request.PauseTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
             {
                 query["Prompt"] = request.Prompt;
@@ -33022,7 +33110,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Model Application</para>
+        /// <para>Modifies a model application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33040,7 +33128,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Model Application</para>
+        /// <para>Modifies a model application.</para>
         /// </summary>
         /// 
         /// <param name="request">

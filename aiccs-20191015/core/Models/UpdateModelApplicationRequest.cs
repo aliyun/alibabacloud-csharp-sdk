@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to hang up the call when a call assistant is detected.</para>
+        /// <para>Specifies whether to hang up when an intelligent answering service is detected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? CallAssistantRecognize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to trigger the model immediately after the call is connected.</para>
+        /// <para>Specifies whether to enable call-connected event push. Disabled by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? CallConnectedTriggerModel { get; set; }
 
         /// <summary>
-        /// <para>The allowed DTMF digits, specified as a comma-separated string such as <c>1,2,3</c>. You can specify a maximum of 20 digits.</para>
+        /// <para>The enumeration of allowed key digits, separated by commas, such as 1,2,3. Maximum of 20 values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string DtmfAllowedDigits { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically validate the DTMF digits.</para>
+        /// <para>Specifies whether to enable automatic validation of key values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? DtmfAutoValidateEnable { get; set; }
 
         /// <summary>
-        /// <para>The number of DTMF digits to collect. The value must be between 1 and 12.</para>
+        /// <para>The number of DTMF key digits. Valid values: 1 to 12.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? DtmfDigitCount { get; set; }
 
         /// <summary>
-        /// <para>The timeout for DTMF input, in seconds. The value must be between 1 and 10.</para>
+        /// <para>The DTMF input timeout period in seconds. Valid values: 1 to 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -111,7 +111,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? DtmfInputTimeout { get; set; }
 
         /// <summary>
-        /// <para>The action to take when the input is outside the allowed range. Valid values: <c>RETURN_MODEL</c> and <c>AUTO_RETRY</c>.</para>
+        /// <para>The action to take when the input is out of range. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RETURN_MODEL: return to the model</description></item>
+        /// <item><description>AUTO_RETRY: automatically retry</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>RETURN_MODEL</para>
@@ -121,7 +125,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string DtmfOutOfRangeAction { get; set; }
 
         /// <summary>
-        /// <para>The number of retry attempts. The value must be between 1 and 3. This parameter is effective only when <c>DtmfOutOfRangeAction</c> is set to <c>AUTO_RETRY</c>.</para>
+        /// <para>The number of retry attempts (PlayTimes). Valid values: 1 to 3. Takes effect only when DtmfOutOfRangeAction is set to AUTO_RETRY.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -131,7 +135,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? DtmfRetryPlayTimes { get; set; }
 
         /// <summary>
-        /// <para>The custom text for the retry prompt. The text can contain a maximum of 50 characters. If this parameter is empty, the system uses the default prompt: &quot;Invalid input. Please try again.&quot;</para>
+        /// <para>The custom retry prompt text. Maximum length: 50 characters. If left empty, the default message is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试文本</para>
@@ -157,7 +161,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? DtmfSendWaitTimeout { get; set; }
 
         /// <summary>
-        /// <para>The scene name.</para>
+        /// <para>The scenario name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试场景</para>
@@ -167,7 +171,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string DyvmsSceneName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the collection of DTMF signals. The default value is <c>false</c>.</para>
+        /// <para>Specifies whether to enable DTMF key collection. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -185,7 +189,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EnableDtmfSend { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Morse code configuration. The default value is <c>false</c>.</para>
+        /// <para>Specifies whether to enable Morse code configuration. Disabled by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -202,7 +206,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public UpdateModelApplicationRequestInterruptConfig InterruptConfig { get; set; }
         public class UpdateModelApplicationRequestInterruptConfig : TeaModel {
             /// <summary>
-            /// <para>The configuration to prevent consecutive barge-ins.</para>
+            /// <para>The configuration for consecutive interruption prevention.</para>
             /// </summary>
             [NameInMap("AvoidInterruptDTO")]
             [Validation(Required=false)]
@@ -219,7 +223,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? InterruptNum { get; set; }
 
                 /// <summary>
-                /// <para>The interruption protection duration, in seconds.</para>
+                /// <para>The interruption protection duration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16.417547</para>
@@ -231,7 +235,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to prevent consecutive barge-ins.</para>
+            /// <para>Specifies whether to enable consecutive interruption prevention.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -241,7 +245,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public bool? EnableAvoidInterrupt { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the backchannel configuration for interruptions.</para>
+            /// <para>Specifies whether to enable the interruption filler word configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -251,7 +255,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public bool? EnableInterruptBackchannel { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to make the entire opening statement non-interruptible.</para>
+            /// <para>Specifies whether to prevent interruption during the entire opening statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -261,14 +265,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public bool? EnableStartwordEntireNotInterrupt { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to make the opening statement non-interruptible.</para>
+            /// <para>Specifies whether to enable the no-interruption configuration for the opening statement.</para>
             /// </summary>
             [NameInMap("EnableStartwordNotInterrupt")]
             [Validation(Required=false)]
             public bool? EnableStartwordNotInterrupt { get; set; }
 
             /// <summary>
-            /// <para>The protection duration for the opening statement, in seconds.</para>
+            /// <para>The protection duration for the opening statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.4699</para>
@@ -320,7 +324,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? MuteDuration { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive mute events that trigger an automatic hang-up.</para>
+        /// <para>The number of consecutive mute events after which the system proactively hangs up.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70</para>
@@ -330,7 +334,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? MuteHangupNum { get; set; }
 
         /// <summary>
-        /// <para>静音事件推送模式</para>
+        /// <para>The push mode for mute events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FIRST_ONLY</para>
@@ -342,6 +346,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// <para>The ASR recognition pause duration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>350</para>
+        /// </summary>
+        [NameInMap("PauseTime")]
+        [Validation(Required=false)]
+        public long? PauseTime { get; set; }
 
         /// <summary>
         /// <para>The prompt.</para>
@@ -364,7 +378,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? QualificationId { get; set; }
 
         /// <summary>
-        /// <para>The name of the qualification.</para>
+        /// <para>The qualification name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试质检</para>
@@ -374,7 +388,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string QualificationName { get; set; }
 
         /// <summary>
-        /// <para>The URL of the recording file.</para>
+        /// <para>The URL of the recording audio file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxxxxxxxxxxx.wav">https://xxxxxxxxxxxxxxx.wav</a></para>
@@ -392,7 +406,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The session timeout, which is the maximum duration of a call.</para>
+        /// <para>The maximum call duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>49</para>
@@ -402,7 +416,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? SessionTimeout { get; set; }
 
         /// <summary>
-        /// <para>The value must be <c>USER</c>.</para>
+        /// <para>The source. Fixed value: USER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -412,7 +426,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The content of the speech.</para>
+        /// <para>The speech script content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试话术</para>
@@ -422,7 +436,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string SpeechContent { get; set; }
 
         /// <summary>
-        /// <para>The speech ID.</para>
+        /// <para>The speech script ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -442,7 +456,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string StartWord { get; set; }
 
         /// <summary>
-        /// <para>The type of the opening statement. Valid values:</para>
+        /// <para>The type of the opening statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0：文本
@@ -453,7 +467,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? StartWordType { get; set; }
 
         /// <summary>
-        /// <para>The TTS configuration, such as voice, volume, and speech rate.</para>
+        /// <para>The text-to-speech (TTS) configuration, including voice, volume, and speed.</para>
         /// </summary>
         [NameInMap("TtsConfig")]
         [Validation(Required=false)]
@@ -480,7 +494,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? BackgroundSound { get; set; }
 
             /// <summary>
-            /// <para>The volume of the background sound. Valid values: <c>0</c> (low), <c>1</c> (medium), and <c>2</c> (high).</para>
+            /// <para>The background sound volume. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: low</description></item>
+            /// <item><description>1: medium</description></item>
+            /// <item><description>2: high</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -530,7 +549,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The TTS playback speech rate. Valid values range from -200 to 200. The default value is 0.</para>
+            /// <para>The speed for TTS variable playback. Valid values: -200 to 200. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -550,7 +569,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string TtsStyle { get; set; }
 
             /// <summary>
-            /// <para>The TTS playback volume. Valid values range from 0 to 100. The default value is 0.</para>
+            /// <para>The volume for TTS variable playback. Valid values: 0 to 100. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -571,10 +590,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
             /// <summary>
             /// <para>The voice type. Valid values:</para>
-            /// <pre><c>SYSTEM: System voice.
-            /// COSYCLONE: Cloned voice.
-            /// BL-CUSTOM: Premium custom-cloned voice.
-            /// </c></pre>
+            /// <list type="bullet">
+            /// <item><description>SYSTEM: system voice</description></item>
+            /// <item><description>COSYCLONE: cloned voice</description></item>
+            /// <item><description>BL-CUSTOM: custom premium cloned voice</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>
@@ -586,7 +606,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>The purpose of the application.</para>
+        /// <para>The usage description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试用途</para>

@@ -1,3 +1,25 @@
+2026-07-29 Version: 5.4.2
+- Update API CreateAiCallTask: add request parameters CallExpireDate.
+- Update API CreateAiCallTask: add request parameters CallExpireMinutes.
+- Update API CreateAiCallTask: add request parameters CallExpireType.
+- Update API CreateAiCallTask: add request parameters CallableTime.
+- Update API QueryAiCallDetailPage: add response parameters Body.Data.List.$.CallExpireTime.
+- Update API QueryAiCallDetailPage: add response parameters Body.Data.List.$.CallId.
+- Update API QueryAiCallTaskDetail: add response parameters Body.Data.CallExpireDate.
+- Update API QueryAiCallTaskDetail: add response parameters Body.Data.CallExpireMinutes.
+- Update API QueryAiCallTaskDetail: add response parameters Body.Data.CallExpireType.
+- Update API QueryAiCallTaskDetail: add response parameters Body.Data.CallableTimes.
+- Update API QueryAiCallTaskPage: add response parameters Body.Data.List.$.CallExpireDate.
+- Update API QueryAiCallTaskPage: add response parameters Body.Data.List.$.CallExpireMinutes.
+- Update API QueryAiCallTaskPage: add response parameters Body.Data.List.$.CallExpireType.
+- Update API QueryConversationDetailInfoNew: add response parameters Body.Data.BranchId.
+- Update API UpdateAiCallTask: add request parameters CallExpireDate.
+- Update API UpdateAiCallTask: add request parameters CallExpireMinutes.
+- Update API UpdateAiCallTask: add request parameters CallExpireType.
+- Update API UpdateAiCallTask: add request parameters CallableTime.
+- Update API UpdateModelApplication: add request parameters PauseTime.
+
+
 2026-07-02 Version: 5.4.1
 - Generated csharp 2019-10-15 for aiccs.
 
