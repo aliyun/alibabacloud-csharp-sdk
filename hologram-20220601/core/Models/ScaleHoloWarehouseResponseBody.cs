@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ScaleHoloWarehouseResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// <para>The result of the operation. A value of true indicates that the operation was successful. A value of false indicates that the operation failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2A8DEF6E-067E-5DB0-BAE1-2894266E6C6A</para>

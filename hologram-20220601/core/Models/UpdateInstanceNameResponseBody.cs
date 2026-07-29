@@ -10,23 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateInstanceNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result, which indicates whether the operation was successful.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The result of the operation. This indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -39,7 +23,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>404</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -49,7 +33,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Internal server error.</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -66,7 +50,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C6B55032-D41A-5FE0-9C07-8BD81C88422E</para>
@@ -76,23 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request result, which indicates whether the request was successful.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The result of the request. This indicates whether an exception occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

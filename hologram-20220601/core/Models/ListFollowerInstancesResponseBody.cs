@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListFollowerInstancesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public string HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The instance details.</para>
+        /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public List<ListFollowerInstancesResponseBodyInstanceList> InstanceList { get; set; }
         public class ListFollowerInstancesResponseBodyInstanceList : TeaModel {
             /// <summary>
+            /// <para>The billing type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ChargeType { get; set; }
 
             /// <summary>
+            /// <para>The commodity code, which is consistent with the product detail code in User Center.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hologram_postpay_public_cn</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-12-16T02:24:05Z</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CreationTime { get; set; }
 
             /// <summary>
+            /// <para>The expiration time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-05-04T16:00:00.000Z</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ExpirationTime { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hgpostcn-cn-aaab9ad2d8fb</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The instance name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test_instance</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceName { get; set; }
 
             /// <summary>
+            /// <para>The instance status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Running</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
+            /// <para>The instance type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Standard</para>
             /// </summary>
@@ -101,11 +126,16 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
+            /// <summary>
+            /// <para>The tag details.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListFollowerInstancesResponseBodyInstanceListTags> Tags { get; set; }
             public class ListFollowerInstancesResponseBodyInstanceListTags : TeaModel {
                 /// <summary>
+                /// <para>The tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>tag</para>
                 /// </summary>
@@ -114,6 +144,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The tag value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>value</para>
                 /// </summary>
@@ -136,6 +168,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. This parameter is not related to business logic.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

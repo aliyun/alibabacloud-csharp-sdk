@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateMaintenanceWindowRequest : TeaModel {
         /// <summary>
+        /// <para>The end time of the maintenance window, in UTC and <c>HH:mm</c> format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>02:00</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The start time of the maintenance window, in UTC and <c>HH:mm</c> format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>00:00</para>
         /// </summary>

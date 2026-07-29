@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListDatabasesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of databases.</para>
+        /// </summary>
         [NameInMap("DatabaseList")]
         [Validation(Required=false)]
         public List<ListDatabasesResponseBodyDatabaseList> DatabaseList { get; set; }
         public class ListDatabasesResponseBodyDatabaseList : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the table is a foreign table. \<c>true\\</c>: The table is a foreign table. \<c>false\\</c>: The table is not a foreign table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public bool? External { get; set; }
 
             /// <summary>
+            /// <para>The database name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my_db</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The permission model. For more information, see <a href="https://help.aliyun.com/document_detail/198734.html">Hologres permission models</a>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SPM</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string PermissionModel { get; set; }
 
             /// <summary>
+            /// <para>The permission.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>developer</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -72,7 +89,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0C4935F5-6217-569A-902F-931B2F3E28BA</para>
@@ -82,6 +99,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

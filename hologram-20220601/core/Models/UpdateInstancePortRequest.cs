@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateInstancePortRequest : TeaModel {
         /// <summary>
+        /// <para>The port of the instance. Valid values: 1 to 65535.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>443</para>
         /// </summary>

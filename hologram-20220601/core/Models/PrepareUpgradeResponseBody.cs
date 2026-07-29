@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class PrepareUpgradeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The response parameters.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public PrepareUpgradeResponseBodyData Data { get; set; }
         public class PrepareUpgradeResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The reason the preparation task failed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string FailReason { get; set; }
 
             /// <summary>
+            /// <para>A key that identifies the reason for the failure.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ReasonKey { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the preparation task started successfully.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
+        /// <para>The error code returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -64,7 +79,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>77B97AFB-7C9D-50FF-A72D-F13FD73E49D8</para>
@@ -74,6 +89,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call was successful. This does not indicate the result of the upgrade preparation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

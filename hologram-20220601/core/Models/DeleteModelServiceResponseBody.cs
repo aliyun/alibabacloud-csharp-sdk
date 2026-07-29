@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class DeleteModelServiceResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the request was successful. A value of true indicates that the request was successful. A value of false indicates that the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>819A7F0F-2951-540F-BD94-6A41ECF0281F</para>

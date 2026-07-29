@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class DeleteModelServiceRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the model service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>model-qwen</para>
         /// </summary>

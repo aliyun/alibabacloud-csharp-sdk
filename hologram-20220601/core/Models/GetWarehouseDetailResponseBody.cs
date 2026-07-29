@@ -20,18 +20,24 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned values.</para>
+        /// <para>The return value.</para>
         /// </summary>
         [NameInMap("WarehouseDetail")]
         [Validation(Required=false)]
         public GetWarehouseDetailResponseBodyWarehouseDetail WarehouseDetail { get; set; }
         public class GetWarehouseDetailResponseBodyWarehouseDetail : TeaModel {
+            /// <summary>
+            /// <para>The total current auto elastic computing resources of the virtual warehouse.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>32</para>
+            /// </summary>
             [NameInMap("AutoElasticCpu")]
             [Validation(Required=false)]
             public string AutoElasticCpu { get; set; }
 
             /// <summary>
-            /// <para>The remaining unallocated computing resources of the virtual warehouse instance.</para>
+            /// <para>The unallocated computing resources in the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string RemainingCpu { get; set; }
 
             /// <summary>
-            /// <para>The reserved computing resources. The amount of computing resources in all running virtual warehouses in an instance cannot exceed the amount of reserved computing resources in the virtual warehouses.</para>
+            /// <para>The reserved computing resources. The total computing resources of all running virtual warehouses in the instance cannot exceed this value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>64</para>
@@ -50,18 +56,26 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string ReservedCpu { get; set; }
 
+            /// <summary>
+            /// <para>The total current scheduled elastic computing resources of the virtual warehouse.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>64</para>
+            /// </summary>
             [NameInMap("TimedElasticCpu")]
             [Validation(Required=false)]
             public string TimedElasticCpu { get; set; }
 
             /// <summary>
-            /// <para>The list of virtual warehouses.</para>
+            /// <para>The warehouses.</para>
             /// </summary>
             [NameInMap("WarehouseList")]
             [Validation(Required=false)]
             public List<GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList> WarehouseList { get; set; }
             public class GetWarehouseDetailResponseBodyWarehouseDetailWarehouseList : TeaModel {
                 /// <summary>
+                /// <para>The auto scaling type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Standard</para>
                 /// </summary>
@@ -70,6 +84,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string AutoScaleType { get; set; }
 
                 /// <summary>
+                /// <para>The number of clusters.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -78,6 +94,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string ClusterCount { get; set; }
 
                 /// <summary>
+                /// <para>The cluster specifications.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
                 /// </summary>
@@ -95,15 +113,29 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 [Validation(Required=false)]
                 public long? Cpu { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether this is the default virtual warehouse.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("DefaultWarehouse")]
                 [Validation(Required=false)]
                 public bool? DefaultWarehouse { get; set; }
 
+                /// <summary>
+                /// <para>The elastic computing resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>32</para>
+                /// </summary>
                 [NameInMap("ElasticCpu")]
                 [Validation(Required=false)]
                 public long? ElasticCpu { get; set; }
 
                 /// <summary>
+                /// <para>The type of elasticity.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>auto</para>
                 /// </summary>
@@ -122,6 +154,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>The number of reserved clusters.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -130,6 +164,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string InitClusterCount { get; set; }
 
                 /// <summary>
+                /// <para>The maximum number of clusters.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
                 /// </summary>
@@ -138,7 +174,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string MaxClusterCount { get; set; }
 
                 /// <summary>
-                /// <para>The memory capacity.</para>
+                /// <para>The memory size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>128</para>
@@ -148,7 +184,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public long? Mem { get; set; }
 
                 /// <summary>
-                /// <para>The name of the virtual warehouse instance.</para>
+                /// <para>The name of the virtual warehouse.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MyWarehouse</para>
@@ -167,49 +203,18 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 [Validation(Required=false)]
                 public long? NodeCount { get; set; }
 
+                /// <summary>
+                /// <para>The rebalancing status of the virtual warehouse.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DONE</para>
+                /// </summary>
                 [NameInMap("RebalanceStatus")]
                 [Validation(Required=false)]
                 public string RebalanceStatus { get; set; }
 
                 /// <summary>
                 /// <para>The status.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>kRunning</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>kSuspended</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>kInit</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>kFailed</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>kAllocating</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- --></description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kRunning</para>

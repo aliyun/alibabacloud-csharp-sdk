@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListRegionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of regions.</para>
+        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<ListRegionsResponseBodyRegions> Regions { get; set; }
         public class ListRegionsResponseBodyRegions : TeaModel {
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>

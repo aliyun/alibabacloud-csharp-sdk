@@ -10,23 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class EnableHiveAccessResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The result of the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -36,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>404</para>
@@ -46,7 +30,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal server error.</para>

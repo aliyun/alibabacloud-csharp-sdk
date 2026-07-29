@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public RenewInstanceResponseBodyData Data { get; set; }
         public class RenewInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The error code returned.</para>
+            /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidChargeType.UnRenewable</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             /// <para>The error details.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>InvalidChargeType.UnRenewable</para>
+            /// <para>Invalid charge type</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The ID of the order.</para>
+            /// <para>The order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>221625608580893</para>
@@ -47,10 +47,12 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string OrderId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the renewal was successful.</para>
+            /// <para>Indicates whether the renewal is successful.</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: The renewal is successful.</para>
+            /// </description></item>
+            /// <item><description><para>false: The renewal failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +65,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</para>
@@ -103,7 +105,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request result, which indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful. This parameter is not related to the business result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

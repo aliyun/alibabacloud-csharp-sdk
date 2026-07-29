@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateInstanceResponseBodyData Data { get; set; }
         public class CreateInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The error code returned.</para>
+            /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidVpcOrVSwitch.NotAvailable</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The error details.</para>
+            /// <para>The details of the error.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Vpc is not available</para>
+            /// <para>InvalidVpcOrVSwitch.NotAvailable</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             /// <summary>
             /// <para>Indicates whether the instance was created.</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: The instance was created.</para>
+            /// </description></item>
+            /// <item><description><para>false: The instance failed to be created.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -83,7 +85,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -103,7 +105,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9CC37B9F-F4B4-5FF1-939B-AEE78DC70130</para>

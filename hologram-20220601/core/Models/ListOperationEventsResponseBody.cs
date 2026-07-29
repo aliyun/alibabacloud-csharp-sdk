@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListOperationEventsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The event list.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListOperationEventsResponseBodyData> Data { get; set; }
         public class ListOperationEventsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Specifies whether the event can be canceled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public bool? Cancelable { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether the scheduled time for the event can be changed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public bool? ChangeScheduleTime { get; set; }
 
             /// <summary>
+            /// <para>The event details.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Detail { get; set; }
 
             /// <summary>
+            /// <para>The event name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>HOT_UPGRADE</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string EventName { get; set; }
 
             /// <summary>
+            /// <para>The event type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>UPGRADE_ON_CUSTOMERS_BEHALF</para>
             /// </summary>
@@ -53,11 +66,16 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string EventType { get; set; }
 
+            /// <summary>
+            /// <para>The follower instance list.</para>
+            /// </summary>
             [NameInMap("FollowerInstances")]
             [Validation(Required=false)]
             public List<ListOperationEventsResponseBodyDataFollowerInstances> FollowerInstances { get; set; }
             public class ListOperationEventsResponseBodyDataFollowerInstances : TeaModel {
                 /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>hgxxxx</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The instance name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>hi</para>
                 /// </summary>
@@ -76,7 +96,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             }
 
             /// <summary>
-            /// <para>Id</para>
+            /// <para>The event ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1826503661244379138</para>
@@ -86,6 +106,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The instance name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>haha</para>
             /// </summary>
@@ -94,6 +116,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceName { get; set; }
 
             /// <summary>
+            /// <para>The maintenance window.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>21:00-22:00</para>
             /// </summary>
@@ -102,6 +126,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string MaintainWindow { get; set; }
 
             /// <summary>
+            /// <para>The resource ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hgpost-cn-sxfsdfsd</para>
             /// </summary>
@@ -110,7 +136,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>ScheduleTime</para>
+            /// <para>The scheduled time of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-08-22 15:49:28</para>
@@ -120,7 +146,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ScheduleTime { get; set; }
 
             /// <summary>
-            /// <para>State</para>
+            /// <para>The state of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>queued</para>
@@ -130,6 +156,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string State { get; set; }
 
             /// <summary>
+            /// <para>The zone ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-k</para>
             /// </summary>
@@ -140,6 +168,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
+        /// <para>The page number to return. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -148,6 +178,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Default value: 50. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -156,7 +188,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</para>
@@ -166,6 +198,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries that match the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>120</para>
         /// </summary>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpgradeInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpgradeInstanceResponseBodyData Data { get; set; }
         public class UpgradeInstanceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The reason for the upgrade failure.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string FailReason { get; set; }
 
             /// <summary>
+            /// <para>The reason key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ReasonKey { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -74,6 +89,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The request result, which indicates whether an exception occurred for this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

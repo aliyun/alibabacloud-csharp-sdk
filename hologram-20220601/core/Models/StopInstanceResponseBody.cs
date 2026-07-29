@@ -10,23 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class StopInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result, which indicates whether the operation was successful.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -39,7 +23,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>404</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -49,7 +33,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Internal server error.</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -76,23 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request result, which indicates whether the request was successful.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>Indicates whether the request was successful. This parameter is not related to the result of the business operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class EnableSupportAccountRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is deprecated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>The expiration time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-03-24 11:19:05</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
+        /// <para>The password.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>

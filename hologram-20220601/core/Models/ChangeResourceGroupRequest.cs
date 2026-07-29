@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hgprecn-cn-zvp25ysv3006</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>new resource group id</para>
+        /// <para>New resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxwerqwerasfd</para>

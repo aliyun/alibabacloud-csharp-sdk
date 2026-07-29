@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListLeaderInstancesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>404</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Internal server error.</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public string HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The list of instances.</para>
+        /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public List<ListLeaderInstancesResponseBodyInstanceList> InstanceList { get; set; }
         public class ListLeaderInstancesResponseBodyInstanceList : TeaModel {
             /// <summary>
+            /// <para>Indicates the compatibility between the leader instance and the follower instance. A value of <c>0</c> indicates a perfect match. Any other value indicates a mismatch.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string BindingCode { get; set; }
 
             /// <summary>
+            /// <para>The billing method.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ChargeType { get; set; }
 
             /// <summary>
+            /// <para>The commodity code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hologram_combo_public_cn</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-07-25T02:15:35Z</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CreationTime { get; set; }
 
             /// <summary>
+            /// <para>The expiration time. This parameter is not returned for pay-as-you-go instances.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-07-25T02:15:35Z</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ExpirationTime { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hgpostcn-cn-tl32vsdir00h</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The instance name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>user_defined_name</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceName { get; set; }
 
             /// <summary>
+            /// <para>The instance status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Running</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
+            /// <para>The instance type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Standard</para>
             /// </summary>
@@ -109,11 +136,16 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
+            /// <summary>
+            /// <para>The list of tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListLeaderInstancesResponseBodyInstanceListTags> Tags { get; set; }
             public class ListLeaderInstancesResponseBodyInstanceListTags : TeaModel {
                 /// <summary>
+                /// <para>The key of the tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>tagKey</para>
                 /// </summary>
@@ -122,6 +154,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The value of the tag.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>value</para>
                 /// </summary>
@@ -134,7 +168,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5600196E-78E2-50F2-B2A1-C44D3B665438</para>
@@ -144,6 +178,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successfully processed. This does not reflect the business outcome of the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

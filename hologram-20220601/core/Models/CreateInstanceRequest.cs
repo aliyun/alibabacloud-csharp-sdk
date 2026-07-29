@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-payment. Default value: true. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true (default): Automatic payment is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: An order is generated, but no payment is made.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The default value is true. If the balance of your account is insufficient, you can set this parameter to false. In this case, an unpaid order is generated. You can log on to the Expenses and Costs console to pay for the order.</para>
+        /// <para>If your account balance is insufficient, set the <c>autoPay</c> parameter to <c>false</c>. When an unpaid order is generated, log on to the Expenses and Costs console to pay for the order.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,10 +29,12 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable monthly auto-renewal. The default value is false. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Auto-renewal is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): Auto-renewal is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,13 +45,15 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid: subscription</description></item>
-        /// <item><description>PostPaid: pay-as-you-go</description></item>
+        /// <item><description><para>PrePaid: Subscription.</para>
+        /// </description></item>
+        /// <item><description><para>PostPaid: Pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is invalid for Hologres Shared Cluster instances. Hologres Shared Cluster instances have fixed specifications and are pay-as-you-go instances.</para>
+        /// <para>This parameter is ignored for shared instances. Shared instances use defined specifications and the default billing method is pay-as-you-go..</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,9 +65,9 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The infrequent access (IA) storage space of the instance. Unit: GB.</para>
+        /// <para>The cold storage capacity of the instance. Unit: GB.</para>
         /// <remarks>
-        /// <para> This parameter is invalid for pay-as-you-go instances.</para>
+        /// <para>This parameter is ignored for pay-as-you-go (PostPaid) instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,27 +78,29 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? ColdStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The instance specifications. Valid values:</para>
+        /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>8-core 32GB (number of compute nodes: 1)</description></item>
-        /// <item><description>32-core 128GB (number of compute nodes: 2)</description></item>
-        /// <item><description>64-core 256GB (number of compute nodes: 4)</description></item>
-        /// <item><description>96-core 384GB (number of compute nodes: 6)</description></item>
-        /// <item><description>128-core 512GB (number of compute nodes: 8)</description></item>
-        /// <item><description>Others</description></item>
+        /// <item><description><para>32 vCPUs and 128 GB of memory (2 compute nodes)</para>
+        /// </description></item>
+        /// <item><description><para>64 vCPUs and 256 GB of memory (4 compute nodes)</para>
+        /// </description></item>
+        /// <item><description><para>96 vCPUs and 384 GB of memory (6 compute nodes)</para>
+        /// </description></item>
+        /// <item><description><para>128 vCPUs and 512 GB of memory (8 compute nodes)</para>
+        /// </description></item>
+        /// <item><description><para>and so on.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Set this parameter to the number of cores.</para>
+        /// <item><description><para>Specify the number of vCPUs.</para>
         /// </description></item>
-        /// <item><description><para>If you want to set this parameter to specifications with more than 1,024 GB, you must submit a ticket.</para>
+        /// <item><description><para>To purchase an instance with more than 1,024 vCPUs, submit a ticket.</para>
         /// </description></item>
-        /// <item><description><para>This parameter is invalid for Hologres Shared Cluster instances.</para>
-        /// </description></item>
-        /// <item><description><para>The specifications of 8-core 32GB (number of compute nodes: 1) are for trial use only and cannot be used for production.</para>
+        /// <item><description><para>You do not need to specify the instance type for a shared instance.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>64</para>
@@ -102,9 +110,9 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the instance that you want to purchase. For example, you can specify a validity period of two months.</para>
+        /// <para>The subscription duration, such as two months.</para>
         /// <remarks>
-        /// <para> You do not need to configure this parameter for pay-as-you-go instances.</para>
+        /// <para>Specify this parameter only for subscription instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -115,12 +123,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Duration { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Serverless Computing feature.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable Serverless Computing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -130,9 +133,9 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? EnableServerlessComputing { get; set; }
 
         /// <summary>
-        /// <para>The number of gateways. Valid values: 2 to 50.</para>
+        /// <para>The number of gateways. Valid values: [2, 50].</para>
         /// <remarks>
-        /// <para> This parameter is required only for virtual warehouse instances.</para>
+        /// <para>You must specify this parameter only for virtual warehouse instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -153,7 +156,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string InitialDatabases { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance. The name must be 2 to 64 characters in length.</para>
+        /// <para>The instance name. The name must be 2 to 64 characters in length. A letter is counted as one character.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -164,12 +167,18 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The category of the instance. Valid values:</para>
+        /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Standard: general-purpose instance</description></item>
-        /// <item><description>Follower: read-only secondary instance</description></item>
-        /// <item><description>Warehouse: virtual warehouse instance</description></item>
-        /// <item><description>Shared: Hologres Shared Cluster instance</description></item>
+        /// <item><description><para>Standard: General-purpose instance.</para>
+        /// </description></item>
+        /// <item><description><para>Follower: Read-only secondary instance.</para>
+        /// </description></item>
+        /// <item><description><para>Warehouse: Virtual warehouse instance.</para>
+        /// </description></item>
+        /// <item><description><para>Shared: Shared instance.</para>
+        /// </description></item>
+        /// <item><description><para>Serverless: Serverless instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -181,22 +190,22 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary instance. This parameter is required for read-only secondary instances.</para>
+        /// <para>The ID of the primary instance. This parameter is required for secondary instances.</para>
         /// <remarks>
-        /// <para> The primary and secondary instances must meet the following requirements:</para>
-        /// </remarks>
+        /// <para>The primary and secondary instances must meet the following conditions:</para>
         /// <list type="bullet">
         /// <item><description><para>The primary instance is in the Running state.</para>
         /// </description></item>
-        /// <item><description><para>The primary instance and secondary instances are deployed in the same region.</para>
+        /// <item><description><para>The primary and secondary instances are in the same region and zone.</para>
         /// </description></item>
-        /// <item><description><para>The primary instance and secondary instances are deployed in the same zone.</para>
+        /// <item><description><para>They are in the same zone.</para>
         /// </description></item>
-        /// <item><description><para>Less than 10 secondary instances are associated with the primary instance.</para>
+        /// <item><description><para>The primary instance has less than 10 secondary instances.</para>
         /// </description></item>
-        /// <item><description><para>The primary instance and secondary instances belong to the same Alibaba Cloud account.</para>
+        /// <item><description><para>The primary and secondary instances belong to the same Alibaba Cloud account.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>hgpostcn-cn-lbj3aworq112</para>
@@ -208,19 +217,21 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <summary>
         /// <para>The billing cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Hour</description></item>
+        /// <item><description><para>Month: The instance is billed on a monthly basis.</para>
+        /// </description></item>
+        /// <item><description><para>Hour: The instance is billed on an hourly basis.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter can only be set to Month for subscription instances.</para>
+        /// <item><description><para>Subscription instances support only <c>Month</c>.</para>
         /// </description></item>
-        /// <item><description><para>This parameter can only be set to Hour for pay-as-you-go instances.</para>
+        /// <item><description><para>Pay-as-you-go instances support only <c>Hour</c>.</para>
         /// </description></item>
-        /// <item><description><para>By default, this parameter is set to Hour for Hologres Shared Cluster instances.</para>
+        /// <item><description><para>For shared instances, the value is automatically set to <c>Hour</c>.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -230,7 +241,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can obtain region IDs in <a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/endpoints">Endpoints</a>.</para>
+        /// <para>The region ID. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/hologres/developer-reference/api-hologram-2022-06-01-endpoint">Endpoints</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/hologres/developer-reference/api-hologram-2022-06-01-endpoint">Endpoints</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -241,7 +252,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. If you do not specify this parameter, the default resource group of the account is used.</para>
+        /// <para>The resource group. If you leave this parameter empty, the default resource group for your account is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -251,9 +262,9 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The standard storage space of the instance. Unit: GB.</para>
+        /// <para>The standard storage capacity of the instance. Unit: GB.</para>
         /// <remarks>
-        /// <para> This parameter is invalid for pay-as-you-go instances.</para>
+        /// <para>This parameter is ignored for pay-as-you-go (PostPaid) instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -263,12 +274,18 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public long? StorageSize { get; set; }
 
+        /// <summary>
+        /// <para>The storage class.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>redundant</para>
+        /// </summary>
         [NameInMap("storageType")]
         [Validation(Required=false)]
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch. The zone in which the vSwitch resides must be the same as the zone in which the Hologres instance resides.</para>
+        /// <para>The ID of the vSwitch. The vSwitch must be in the same zone as the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -279,7 +296,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC). The region in which the VPC resides must be the same as the region in which the Hologres instance resides.</para>
+        /// <para>The ID of the virtual private cloud (VPC). The VPC must be in the same region as the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -290,7 +307,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone. For more information, see the &quot;Operation description&quot; section in this topic.</para>
+        /// <para>The zone ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

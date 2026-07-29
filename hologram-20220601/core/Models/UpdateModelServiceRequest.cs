@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateModelServiceRequest : TeaModel {
         /// <summary>
+        /// <para>The CPU specifications.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Cpu { get; set; }
 
         /// <summary>
+        /// <para>The GPU specifications.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Gpu { get; set; }
 
         /// <summary>
+        /// <para>The memory specifications.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public long? Memory { get; set; }
 
         /// <summary>
+        /// <para>A custom name for the model service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ModelServiceName { get; set; }
 
         /// <summary>
+        /// <para>The model name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Qwen/Qwen2.5-VL-32B-Instruct</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ModelType { get; set; }
 
         /// <summary>
+        /// <para>The number of service replicas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

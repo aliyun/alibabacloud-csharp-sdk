@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpgradeInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The upgrade type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hot</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The upgrade time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-02-11 10:00:01</para>
         /// </summary>

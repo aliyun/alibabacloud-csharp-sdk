@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateOperationEventScheduleTimeRequest : TeaModel {
         /// <summary>
+        /// <para>The event ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The new scheduled time in <c>YYYY-MM-DD HH:mm:ss</c> format. The time zone is UTC+8.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

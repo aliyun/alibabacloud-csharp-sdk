@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class DisableOperationEventRequest : TeaModel {
         /// <summary>
+        /// <para>The event ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

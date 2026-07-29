@@ -10,18 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class CreateWarehouseScheduleTaskResponseBody : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>The ID of the created warehouse schedule task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>D3AE84AB-0873-5FC7-A4C4-8CF869D2FA70</para>
+        /// <para>The request ID.</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

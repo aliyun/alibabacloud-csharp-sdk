@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class RebalanceHoloWarehouseResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// <para>The result of the request. &quot;true&quot; indicates success, and &quot;false&quot; indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

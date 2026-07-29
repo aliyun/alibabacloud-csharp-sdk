@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class CreateDatabaseRequest : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>my_db</para>
+        /// <para>The name of the database.</para>
         /// </summary>
         [NameInMap("databaseName")]
         [Validation(Required=false)]
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>SPM</para>
+        /// <para>The permission model of the database.</para>
         /// </summary>
         [NameInMap("permissionModel")]
         [Validation(Required=false)]

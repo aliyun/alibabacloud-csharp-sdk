@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class RevokeDatabasePermissionResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the request was successful. A value of \<c>true\\</c> indicates success and a value of \<c>false\\</c> indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

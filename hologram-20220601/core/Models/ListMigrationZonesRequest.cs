@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListMigrationZonesRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum number of results to return per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token from a previous call to retrieve the next page of results. Omit this parameter to get the first page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

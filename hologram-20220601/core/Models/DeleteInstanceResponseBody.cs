@@ -10,23 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class DeleteInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result, which indicates whether the request was successful.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -36,7 +20,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -46,7 +30,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -56,7 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status Code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -76,7 +60,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UpdateScheduledBackupConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The number of scheduled backups to retain. For example, if you set this parameter to <c>3</c>, the system retains the three most recent backups and automatically deletes any older ones.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public int? DataKeepQuantity { get; set; }
 
         /// <summary>
+        /// <para>The destination region for the backup. This parameter applies only to remote backups and enables cross-region disaster recovery. For example, you can back up an instance from China (Hangzhou) to China (Beijing).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string DstRegion { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable scheduled backups. Set this parameter to <c>true</c> to enable scheduled backups, or <c>false</c> to disable them.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>The hour to start the backup. This start time applies to all specified days. For example, if you set <c>week</c> to <c>1,3,5</c> and <c>hour</c> to <c>20</c>, a backup starts at 20:00:00 every Monday, Wednesday, and Friday.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public int? Hour { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hgprecn-cn-zvp25ysxxxx</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The number of manual backups to retain. Manual backups and automatic backups are stored separately and have independent retention policies.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public int? ManualDataKeepQuantity { get; set; }
 
         /// <summary>
+        /// <para>The backup type. This parameter is required only for remote backups.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>remote</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ScheduleType { get; set; }
 
         /// <summary>
+        /// <para>Specifies the days of the week on which to perform a backup. Separate multiple days with commas. For example, to perform backups on Monday, Wednesday, and Friday, set this parameter to <c>1,3,5</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1,3,5</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string Week { get; set; }
 
         /// <summary>
+        /// <para>The destination availability zone for the backup. This parameter applies only to remote backups.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-i</para>
         /// </summary>

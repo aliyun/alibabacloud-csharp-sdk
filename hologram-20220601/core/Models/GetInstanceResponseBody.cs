@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class GetInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code that is returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>404</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Internal server error.</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The information about the instance.</para>
+        /// <para>The instance details.</para>
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
@@ -48,22 +48,6 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public class GetInstanceResponseBodyInstance : TeaModel {
             /// <summary>
             /// <para>Indicates whether auto-renewal is enabled.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -73,7 +57,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string AutoRenewal { get; set; }
 
             /// <summary>
-            /// <para>The cold storage capacity of the instance. Unit: GB. Standard SSD is used for hot storage, and HDD is used for cold storage.</para>
+            /// <para>The cold storage capacity. Unit: GB. SSD is hot storage, which is also standard storage. HDD is cold storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -84,92 +68,6 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
             /// <summary>
             /// <para>The commodity code.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>hologram_maxcomputeAccelerate_public_cn</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>China site/Lakehouse Acceleration Edition</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// <item><description><para>hologram_combo_public_cn</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>China site/Subscription</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// <item><description><para>hologram_prepay_public_intl</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>International site/Subscription</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// <item><description><para>hologram_storage_dp_cn</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>China site/Storage plan</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// <item><description><para>hologram_postpay_public_cn</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>China site/Pay-as-you-go</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// <item><description><para>hologram_postpay_public_intl</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>International site/Pay-as-you-go</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>hologram_maxcomputeAccelerate_public_intl</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>International site/Lakehouse Acceleration Edition</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// <item><description><para>hologram_cu_dp_cn</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>China site/Compute plan</para>
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>hologram_combo_public_cn</para>
@@ -179,7 +77,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The number of compute nodes. In a typical configuration, a node has 16 CPU cores and 32 GB of memory.</para>
+            /// <para>The number of compute nodes. A node has 16 vCPUs and 32 GB of memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -189,7 +87,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? ComputeNodeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores.</para>
+            /// <para>The number of vCPUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -199,7 +97,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-03T13:06:06Z</para>
@@ -209,7 +107,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The amount of data that can be stored in the disk of the Standard storage class. Unit: GB.</para>
+            /// <para>The size of the standard storage. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -228,12 +126,18 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             [Validation(Required=false)]
             public string EnableHiveAccess { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether SSL is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("EnableSSL")]
             [Validation(Required=false)]
             public bool? EnableSSL { get; set; }
 
             /// <summary>
-            /// <para>EnableServerless</para>
+            /// <para>Indicates whether Serverless Computing is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -250,7 +154,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public List<GetInstanceResponseBodyInstanceEndpoints> Endpoints { get; set; }
             public class GetInstanceResponseBodyInstanceEndpoints : TeaModel {
                 /// <summary>
-                /// <para>The endpoint. This parameter is returned if both the AnyTunnel and SingleTunnel modes are enabled for an instance, and the instance is switched from the AnyTunnel mode to the SingleTunnel mode. In this case, two endpoints are returned.</para>
+                /// <para>Some earlier instances have both AnyTunnel and SingleTunnel enabled. When you switch from AnyTunnel to SingleTunnel, the endpoints for both are retained. This field is used to store the extra endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hgprecn-cn-uqm362o1b001-cn-hangzhou-internal.hologres.aliyuncs.com:80</para>
@@ -261,22 +165,6 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
                 /// <summary>
                 /// <para>Indicates whether the network is enabled.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>true</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>false</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- --></description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -286,7 +174,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The endpoint.</para>
+                /// <para>The domain name of the endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hgprecn-cn-uqm362o1b001-cn-hangzhou-internal.hologres.aliyuncs.com:80</para>
@@ -297,51 +185,6 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
                 /// <summary>
                 /// <para>The network type.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>VPCSingleTunnel</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>virtual private cloud (VPC)</para>
-                /// <!-- -->
-                /// 
-                /// <para>.</para>
-                /// </description></item>
-                /// <item><description><para>Intranet</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>internal network</para>
-                /// <!-- -->
-                /// 
-                /// <para>.</para>
-                /// </description></item>
-                /// <item><description><para>VPCAnyTunnel</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>not supported by new instances</para>
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>Internet</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>Internet</para>
-                /// <!-- -->
-                /// 
-                /// <para>.</para>
-                /// </description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Internet</para>
@@ -351,7 +194,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch.</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-bp1jqwp2ys6kp7tc9t983</para>
@@ -361,7 +204,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the VPC to which the instance belongs.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf66jjber3hgvwhki3wna</para>
@@ -371,7 +214,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance that is deployed in the VPC.</para>
+                /// <para>The VPC instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hgprecn-cn-uqm362o1b001-frontend-st</para>
@@ -383,7 +226,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             }
 
             /// <summary>
-            /// <para>The expiration time. This parameter is invalid for pay-as-you-go instances.</para>
+            /// <para>The expiration time. Pay-as-you-go instances do not expire.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-03T13:06:06Z</para>
@@ -403,7 +246,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? GatewayCount { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores of the gateway. Unit: core.</para>
+            /// <para>The vCPU resources of the gateway. Unit: cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -413,7 +256,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? GatewayCpu { get; set; }
 
             /// <summary>
-            /// <para>The size of memory resources of the gateway. Unit: GB.</para>
+            /// <para>The memory resources of the gateway. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -424,31 +267,6 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
             /// <summary>
             /// <para>The billing method of the instance.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>PostPaid</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>pay-as-you-go</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// <item><description><para>PrePaid</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>subscription</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
@@ -468,7 +286,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance name. The instance name must be 2 to 64 characters in length.</para>
+            /// <para>The name of the instance. The name must be 2 to 64 characters in length. Each letter or Chinese character is counted as a single character.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -478,7 +296,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The owner of the instance.</para>
+            /// <para>The instance owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345678900000</para>
@@ -488,37 +306,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceOwner { get; set; }
 
             /// <summary>
-            /// <para>The status of the instance.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Creating</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Running</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Suspended</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Allocating</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>The instance status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -528,32 +316,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the instance.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Follower</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>read-only secondary instance</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// <item><description><para>Standard</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>normal instance</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Standard</para>
@@ -583,7 +346,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the instance resides.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -593,12 +356,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Disaster recovery instance role. </para>
-            /// <list type="bullet">
-            /// <item><description>Active: Primary disaster recovery instance.</description></item>
-            /// <item><description>Passive: Disaster tolerance instance.</description></item>
-            /// <item><description>PreActive: Primary disaster recovery instance not yet in final state.</description></item>
-            /// </list>
+            /// <para>The role of instance in disaster recovery. Active: the primary instance. Passive: the secondary instance. PreActive: a primary instance that has not reached the desired state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -618,10 +376,12 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The storage type.</para>
+            /// <para>The storage class:</para>
             /// <list type="bullet">
-            /// <item><description>redundant: 3 copies</description></item>
-            /// <item><description>local: single copy</description></item>
+            /// <item><description><para>redundant: Zone-redundant storage</para>
+            /// </description></item>
+            /// <item><description><para>local: Locally redundant storage</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -632,43 +392,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The reason for the suspension.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Indebet</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>The instance has an overdue payment</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// <item><description><para>Manual</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>The instance is manually suspended</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// <item><description><para>Overdue</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>The instance has expired</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The reason why the instance was stopped.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Manual</para>
@@ -678,14 +402,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string SuspendReason { get; set; }
 
             /// <summary>
-            /// <para>The instance tag.</para>
+            /// <para>The tags of the instance.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<GetInstanceResponseBodyInstanceTags> Tags { get; set; }
             public class GetInstanceResponseBodyInstanceTags : TeaModel {
                 /// <summary>
-                /// <para>The key of tag N.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tag</para>
@@ -695,7 +419,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag N.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value</para>
@@ -717,7 +441,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone where the instance resides.</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-h</para>
@@ -739,7 +463,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request result, which indicates whether the request was successful.</para>
+        /// <para>The result of the request, which indicates whether an exception occurred. This parameter is not related to the business logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

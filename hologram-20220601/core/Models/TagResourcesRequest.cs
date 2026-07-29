@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The instance type. Set the value to <c>instance</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Instance</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Custom</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        /// <summary>
+        /// <para>The instance IDs.</para>
+        /// </summary>
         [NameInMap("resourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
+        /// <para>The ID of the account that owns the tag.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1062017779051424</para>
         /// </summary>
@@ -45,11 +56,16 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public long? TagOwnerUid { get; set; }
 
+        /// <summary>
+        /// <para>A collection of tags to add.</para>
+        /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTags> Tags { get; set; }
         public class TagResourcesRequestTags : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>any_string</para>
             /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>any_string</para>
             /// </summary>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ScaleInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ScaleInstanceResponseBodyData Data { get; set; }
         public class ScaleInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The error code returned.</para>
+            /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidScaleType.Unsupported</para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The error details.</para>
+            /// <para>The details of the error.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>Invalid scale type</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The ID of the order.</para>
+            /// <para>The order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>219183853450000</para>
@@ -47,23 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public string OrderId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the change to specifications was successful.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>Indicates whether the scaling was successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -75,7 +59,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -85,7 +69,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

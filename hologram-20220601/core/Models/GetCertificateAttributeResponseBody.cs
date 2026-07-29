@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class GetCertificateAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The certificate attributes.</para>
+        /// </summary>
         [NameInMap("CertificateAttributeDto")]
         [Validation(Required=false)]
         public GetCertificateAttributeResponseBodyCertificateAttributeDto CertificateAttributeDto { get; set; }
         public class GetCertificateAttributeResponseBodyCertificateAttributeDto : TeaModel {
             /// <summary>
+            /// <para>Specifies whether SSL is enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public bool? EnableSSL { get; set; }
 
             /// <summary>
+            /// <para>The UNIX timestamp when the certificate expires.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1790583135000</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? ExpirationTime { get; set; }
 
             /// <summary>
+            /// <para>The status of the certificate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>effective</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>819A7F0F-2951-540F-BD94-6A41ECF0281F</para>
         /// </summary>

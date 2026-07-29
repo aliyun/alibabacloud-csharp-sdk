@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource category.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Custom</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        /// <summary>
+        /// <para>An array of instance IDs.</para>
+        /// </summary>
         [NameInMap("resourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>INSTANCe</para>
         /// </summary>
@@ -37,11 +46,16 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>An array of tag keys. To remove tags, you only need to provide the corresponding tag keys.</para>
+        /// </summary>
         [NameInMap("tagKeys")]
         [Validation(Required=false)]
         public List<string> TagKeys { get; set; }
 
         /// <summary>
+        /// <para>The account ID of the tag owner.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1062017779051424</para>
         /// </summary>

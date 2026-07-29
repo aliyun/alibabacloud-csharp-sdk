@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListWarehousesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of virtual warehouse instances.</para>
+        /// <para>The list of virtual warehouses.</para>
         /// </summary>
         [NameInMap("WarehouseList")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The memory capacity.</para>
+            /// <para>The memory size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
             public long? Mem { get; set; }
 
             /// <summary>
-            /// <para>The name of the virtual warehouse instance.</para>
+            /// <para>The name of the virtual warehouse.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MyWarehouse</para>
@@ -68,43 +68,6 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 
             /// <summary>
             /// <para>The status.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>kRunning</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>kSuspended</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>kInit</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>kFailed</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>kAllocating</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>kRunning</para>

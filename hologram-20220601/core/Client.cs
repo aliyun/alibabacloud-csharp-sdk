@@ -18,7 +18,31 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "hologram.us-west-1.aliyuncs.com"},
+                {"us-east-1", "hologram.us-east-1.aliyuncs.com"},
+                {"na-south-1", "hologram.na-south-1.aliyuncs.com"},
+                {"me-east-1", "hologram.me-east-1.aliyuncs.com"},
+                {"eu-central-1", "hologram.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "hologram.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "hologram.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "hologram.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shenzhen", "hologram.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "hologram.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "hologram.cn-shanghai.aliyuncs.com"},
+                {"cn-north-2-gov-1", "hologram.cn-north-2-gov-1.aliyuncs.com"},
+                {"cn-hongkong", "hologram.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "hologram.cn-hangzhou.aliyuncs.com"},
+                {"cn-chengdu", "hologram.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "hologram.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-5", "hologram.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "hologram.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-1", "hologram.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "hologram.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "hologram.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("hologram", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +63,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定主实例</para>
+        /// <para>Binds a follower instance to a leader instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -91,7 +115,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定主实例</para>
+        /// <para>Binds a follower instance to a leader instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -143,7 +167,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定主实例</para>
+        /// <para>Binds a follower instance to a leader instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -162,7 +186,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定主实例</para>
+        /// <para>Binds a follower instance to a leader instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -181,7 +205,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a resource group.</para>
+        /// <para>Updates the resource group of a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -231,7 +255,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a resource group.</para>
+        /// <para>Updates the resource group of a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -281,7 +305,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a resource group.</para>
+        /// <para>Updates the resource group of a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -300,7 +324,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a resource group.</para>
+        /// <para>Updates the resource group of a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -319,7 +343,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建db</para>
+        /// <para>Creates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -369,7 +393,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建db</para>
+        /// <para>Creates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -419,7 +443,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建db</para>
+        /// <para>Creates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -438,7 +462,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建db</para>
+        /// <para>Creates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -457,7 +481,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建外部db</para>
+        /// <para>Creates an external database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -519,7 +543,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建外部db</para>
+        /// <para>Creates an external database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -581,7 +605,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建外部db</para>
+        /// <para>Creates an external database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -600,7 +624,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建外部db</para>
+        /// <para>Creates an external database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -765,33 +789,42 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Hologres instance.</para>
+        /// <para>Creates a Hologres instance in the specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// <para>Warning: 
+        /// This API operation incurs fees. Before you call this operation, make sure that you fully understand the billing methods and pricing of Hologres.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</description></item>
-        /// <item><description>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
-        /// cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-        ///    cn-shanghai: cn-shanghai-e, cn-shanghai-f
-        ///    cn-beijing: cn-beijing-i, cn-beijing-g
-        ///    cn-zhangjiakou: cn-zhangjiakou-b
-        ///    cn-shenzhen: cn-shenzhen-e
-        ///    cn-hongkong: cn-hongkong-b
-        ///    cn-shanghai-finance-1: cn-shanghai-finance-1z
-        ///    ap-northeast-1: ap-northeast-1a
-        ///    ap-southeast-1: ap-southeast-1c
-        ///    ap-southeast-3: ap-southeast-3b
-        ///    ap-southeast-5: ap-southeast-5b
-        ///    ap-south-1: ap-south-1b
-        ///    eu-central-1: eu-central-1a
-        ///    us-east-1: us-east-1a
-        ///    us-west-1: us-west-1b</description></item>
+        /// <item><description>For more information about the billing of Hologres, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
+        /// <item><description>When you create a Hologres instance, you must specify the region and zone for the instance. A region can contain multiple zones. The following list describes the zones that are available in each region:</description></item>
         /// </list>
+        /// <pre><c>   cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+        ///    cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+        ///    cn-shanghai (Shanghai): cn-shanghai-e, cn-shanghai-f, cn-shanghai-l
+        ///    cn-beijing (Beijing): cn-beijing-i, cn-beijing-g, cn-beijing-l
+        ///    cn-zhangjiakou (Zhangjiakou): cn-zhangjiakou-b
+        ///    cn-shenzhen (Shenzhen): cn-shenzhen-d, cn-shenzhen-f, cn-shenzhen-e
+        ///    cn-wulanchabu (Ulanqab): cn-wulanchabu-a
+        ///    cn-hongkong (Hong Kong): cn-hongkong-b, cn-hongkong-d
+        ///    cn-shanghai-finance-1 (Shanghai Finance Cloud): cn-shanghai-finance-1z, cn-shanghai-finance-1f
+        ///    cn-hangzhou-finance (Hangzhou Finance Cloud): cn-hangzhou-finance-k
+        ///    cn-shenzhen-finance-1 (Shenzhen Finance Cloud): cn-shenzhen-finance-1d
+        ///    ap-northeast-1 (Tokyo): ap-northeast-1a
+        ///    ap-southeast-1 (Singapore): ap-southeast-1c, ap-southeast-1a
+        ///    ap-southeast-3 (Kuala Lumpur): ap-southeast-3b
+        ///    ap-southeast-5 (Jakarta): ap-southeast-5b
+        ///    eu-central-1 (Frankfurt): eu-central-1a
+        ///    us-east-1 (Virginia): us-east-1a
+        ///    us-west-1 (Silicon Valley): us-west-1b
+        ///                     
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -913,33 +946,42 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Hologres instance.</para>
+        /// <para>Creates a Hologres instance in the specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// <para>Warning: 
+        /// This API operation incurs fees. Before you call this operation, make sure that you fully understand the billing methods and pricing of Hologres.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</description></item>
-        /// <item><description>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
-        /// cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-        ///    cn-shanghai: cn-shanghai-e, cn-shanghai-f
-        ///    cn-beijing: cn-beijing-i, cn-beijing-g
-        ///    cn-zhangjiakou: cn-zhangjiakou-b
-        ///    cn-shenzhen: cn-shenzhen-e
-        ///    cn-hongkong: cn-hongkong-b
-        ///    cn-shanghai-finance-1: cn-shanghai-finance-1z
-        ///    ap-northeast-1: ap-northeast-1a
-        ///    ap-southeast-1: ap-southeast-1c
-        ///    ap-southeast-3: ap-southeast-3b
-        ///    ap-southeast-5: ap-southeast-5b
-        ///    ap-south-1: ap-south-1b
-        ///    eu-central-1: eu-central-1a
-        ///    us-east-1: us-east-1a
-        ///    us-west-1: us-west-1b</description></item>
+        /// <item><description>For more information about the billing of Hologres, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
+        /// <item><description>When you create a Hologres instance, you must specify the region and zone for the instance. A region can contain multiple zones. The following list describes the zones that are available in each region:</description></item>
         /// </list>
+        /// <pre><c>   cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+        ///    cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+        ///    cn-shanghai (Shanghai): cn-shanghai-e, cn-shanghai-f, cn-shanghai-l
+        ///    cn-beijing (Beijing): cn-beijing-i, cn-beijing-g, cn-beijing-l
+        ///    cn-zhangjiakou (Zhangjiakou): cn-zhangjiakou-b
+        ///    cn-shenzhen (Shenzhen): cn-shenzhen-d, cn-shenzhen-f, cn-shenzhen-e
+        ///    cn-wulanchabu (Ulanqab): cn-wulanchabu-a
+        ///    cn-hongkong (Hong Kong): cn-hongkong-b, cn-hongkong-d
+        ///    cn-shanghai-finance-1 (Shanghai Finance Cloud): cn-shanghai-finance-1z, cn-shanghai-finance-1f
+        ///    cn-hangzhou-finance (Hangzhou Finance Cloud): cn-hangzhou-finance-k
+        ///    cn-shenzhen-finance-1 (Shenzhen Finance Cloud): cn-shenzhen-finance-1d
+        ///    ap-northeast-1 (Tokyo): ap-northeast-1a
+        ///    ap-southeast-1 (Singapore): ap-southeast-1c, ap-southeast-1a
+        ///    ap-southeast-3 (Kuala Lumpur): ap-southeast-3b
+        ///    ap-southeast-5 (Jakarta): ap-southeast-5b
+        ///    eu-central-1 (Frankfurt): eu-central-1a
+        ///    us-east-1 (Virginia): us-east-1a
+        ///    us-west-1 (Silicon Valley): us-west-1b
+        ///                     
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -1061,33 +1103,42 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Hologres instance.</para>
+        /// <para>Creates a Hologres instance in the specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// <para>Warning: 
+        /// This API operation incurs fees. Before you call this operation, make sure that you fully understand the billing methods and pricing of Hologres.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</description></item>
-        /// <item><description>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
-        /// cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-        ///    cn-shanghai: cn-shanghai-e, cn-shanghai-f
-        ///    cn-beijing: cn-beijing-i, cn-beijing-g
-        ///    cn-zhangjiakou: cn-zhangjiakou-b
-        ///    cn-shenzhen: cn-shenzhen-e
-        ///    cn-hongkong: cn-hongkong-b
-        ///    cn-shanghai-finance-1: cn-shanghai-finance-1z
-        ///    ap-northeast-1: ap-northeast-1a
-        ///    ap-southeast-1: ap-southeast-1c
-        ///    ap-southeast-3: ap-southeast-3b
-        ///    ap-southeast-5: ap-southeast-5b
-        ///    ap-south-1: ap-south-1b
-        ///    eu-central-1: eu-central-1a
-        ///    us-east-1: us-east-1a
-        ///    us-west-1: us-west-1b</description></item>
+        /// <item><description>For more information about the billing of Hologres, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
+        /// <item><description>When you create a Hologres instance, you must specify the region and zone for the instance. A region can contain multiple zones. The following list describes the zones that are available in each region:</description></item>
         /// </list>
+        /// <pre><c>   cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+        ///    cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+        ///    cn-shanghai (Shanghai): cn-shanghai-e, cn-shanghai-f, cn-shanghai-l
+        ///    cn-beijing (Beijing): cn-beijing-i, cn-beijing-g, cn-beijing-l
+        ///    cn-zhangjiakou (Zhangjiakou): cn-zhangjiakou-b
+        ///    cn-shenzhen (Shenzhen): cn-shenzhen-d, cn-shenzhen-f, cn-shenzhen-e
+        ///    cn-wulanchabu (Ulanqab): cn-wulanchabu-a
+        ///    cn-hongkong (Hong Kong): cn-hongkong-b, cn-hongkong-d
+        ///    cn-shanghai-finance-1 (Shanghai Finance Cloud): cn-shanghai-finance-1z, cn-shanghai-finance-1f
+        ///    cn-hangzhou-finance (Hangzhou Finance Cloud): cn-hangzhou-finance-k
+        ///    cn-shenzhen-finance-1 (Shenzhen Finance Cloud): cn-shenzhen-finance-1d
+        ///    ap-northeast-1 (Tokyo): ap-northeast-1a
+        ///    ap-southeast-1 (Singapore): ap-southeast-1c, ap-southeast-1a
+        ///    ap-southeast-3 (Kuala Lumpur): ap-southeast-3b
+        ///    ap-southeast-5 (Jakarta): ap-southeast-5b
+        ///    eu-central-1 (Frankfurt): eu-central-1a
+        ///    us-east-1 (Virginia): us-east-1a
+        ///    us-west-1 (Silicon Valley): us-west-1b
+        ///                     
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -1106,33 +1157,42 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Hologres instance.</para>
+        /// <para>Creates a Hologres instance in the specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// <para>Warning: 
+        /// This API operation incurs fees. Before you call this operation, make sure that you fully understand the billing methods and pricing of Hologres.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the billing details of Hologres, see <a href="https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance">Pricing</a>.</description></item>
-        /// <item><description>When you purchase a Hologres instance, you must specify the region and zone in which the Hologres instance resides. A region may correspond to multiple zones. Example:<!---->
-        /// cn-hangzhou: cn-hangzhou-h, cn-hangzhou-j
-        ///    cn-shanghai: cn-shanghai-e, cn-shanghai-f
-        ///    cn-beijing: cn-beijing-i, cn-beijing-g
-        ///    cn-zhangjiakou: cn-zhangjiakou-b
-        ///    cn-shenzhen: cn-shenzhen-e
-        ///    cn-hongkong: cn-hongkong-b
-        ///    cn-shanghai-finance-1: cn-shanghai-finance-1z
-        ///    ap-northeast-1: ap-northeast-1a
-        ///    ap-southeast-1: ap-southeast-1c
-        ///    ap-southeast-3: ap-southeast-3b
-        ///    ap-southeast-5: ap-southeast-5b
-        ///    ap-south-1: ap-south-1b
-        ///    eu-central-1: eu-central-1a
-        ///    us-east-1: us-east-1a
-        ///    us-west-1: us-west-1b</description></item>
+        /// <item><description>For more information about the billing of Hologres, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
+        /// <item><description>When you create a Hologres instance, you must specify the region and zone for the instance. A region can contain multiple zones. The following list describes the zones that are available in each region:</description></item>
         /// </list>
+        /// <pre><c>   cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+        ///    cn-hangzhou (Hangzhou): cn-hangzhou-h, cn-hangzhou-j, cn-hangzhou-k
+        ///    cn-shanghai (Shanghai): cn-shanghai-e, cn-shanghai-f, cn-shanghai-l
+        ///    cn-beijing (Beijing): cn-beijing-i, cn-beijing-g, cn-beijing-l
+        ///    cn-zhangjiakou (Zhangjiakou): cn-zhangjiakou-b
+        ///    cn-shenzhen (Shenzhen): cn-shenzhen-d, cn-shenzhen-f, cn-shenzhen-e
+        ///    cn-wulanchabu (Ulanqab): cn-wulanchabu-a
+        ///    cn-hongkong (Hong Kong): cn-hongkong-b, cn-hongkong-d
+        ///    cn-shanghai-finance-1 (Shanghai Finance Cloud): cn-shanghai-finance-1z, cn-shanghai-finance-1f
+        ///    cn-hangzhou-finance (Hangzhou Finance Cloud): cn-hangzhou-finance-k
+        ///    cn-shenzhen-finance-1 (Shenzhen Finance Cloud): cn-shenzhen-finance-1d
+        ///    ap-northeast-1 (Tokyo): ap-northeast-1a
+        ///    ap-southeast-1 (Singapore): ap-southeast-1c, ap-southeast-1a
+        ///    ap-southeast-3 (Kuala Lumpur): ap-southeast-3b
+        ///    ap-southeast-5 (Jakarta): ap-southeast-5b
+        ///    eu-central-1 (Frankfurt): eu-central-1a
+        ///    us-east-1 (Virginia): us-east-1a
+        ///    us-west-1 (Silicon Valley): us-west-1b
+        ///                     
+        /// </c></pre>
         /// </description>
         /// 
         /// <param name="request">
@@ -1151,7 +1211,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建手动备份</para>
+        /// <para>Creates a manual backup for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1203,7 +1263,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建手动备份</para>
+        /// <para>Creates a manual backup for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1255,7 +1315,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建手动备份</para>
+        /// <para>Creates a manual backup for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1274,7 +1334,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建手动备份</para>
+        /// <para>Creates a manual backup for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1293,8 +1353,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Creates a model service that allows AI functions to invoke models. You can create a service for two types of models: a model from Alibaba Cloud Model Studio or a model on a Hologres AI node. If you use a Hologres AI node, you must purchase the AI node resources separately.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To create a model service, you must specify several parameters. Use the <c>ListModelCatalog</c> operation to find the parameters for a model from Alibaba Cloud Model Studio, and use the <c>GetAvailableModelsResource</c> operation for a model on a Hologres AI node.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelServiceRequest
@@ -1379,8 +1444,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Creates a model service that allows AI functions to invoke models. You can create a service for two types of models: a model from Alibaba Cloud Model Studio or a model on a Hologres AI node. If you use a Hologres AI node, you must purchase the AI node resources separately.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To create a model service, you must specify several parameters. Use the <c>ListModelCatalog</c> operation to find the parameters for a model from Alibaba Cloud Model Studio, and use the <c>GetAvailableModelsResource</c> operation for a model on a Hologres AI node.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelServiceRequest
@@ -1465,8 +1535,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Creates a model service that allows AI functions to invoke models. You can create a service for two types of models: a model from Alibaba Cloud Model Studio or a model on a Hologres AI node. If you use a Hologres AI node, you must purchase the AI node resources separately.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To create a model service, you must specify several parameters. Use the <c>ListModelCatalog</c> operation to find the parameters for a model from Alibaba Cloud Model Studio, and use the <c>GetAvailableModelsResource</c> operation for a model on a Hologres AI node.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelServiceRequest
@@ -1484,8 +1559,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Creates a model service that allows AI functions to invoke models. You can create a service for two types of models: a model from Alibaba Cloud Model Studio or a model on a Hologres AI node. If you use a Hologres AI node, you must purchase the AI node resources separately.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To create a model service, you must specify several parameters. Use the <c>ListModelCatalog</c> operation to find the parameters for a model from Alibaba Cloud Model Studio, and use the <c>GetAvailableModelsResource</c> operation for a model on a Hologres AI node.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelServiceRequest
@@ -1503,7 +1583,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加用户</para>
+        /// <para>Adds a RAM user or an STS account to a Hologres instance. Once added, the account can be used to log on to the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1553,7 +1633,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加用户</para>
+        /// <para>Adds a RAM user or an STS account to a Hologres instance. Once added, the account can be used to log on to the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1603,7 +1683,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加用户</para>
+        /// <para>Adds a RAM user or an STS account to a Hologres instance. Once added, the account can be used to log on to the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1622,7 +1702,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加用户</para>
+        /// <para>Adds a RAM user or an STS account to a Hologres instance. Once added, the account can be used to log on to the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1641,7 +1721,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建warehouse</para>
+        /// <para>Creates a warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1701,7 +1781,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建warehouse</para>
+        /// <para>Creates a warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1761,7 +1841,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建warehouse</para>
+        /// <para>Creates a warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1780,7 +1860,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建warehouse</para>
+        /// <para>Creates a warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1799,7 +1879,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建分时弹性计划</para>
+        /// <para>Creates a warehouse schedule task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1861,7 +1941,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建分时弹性计划</para>
+        /// <para>Creates a warehouse schedule task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1923,7 +2003,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建分时弹性计划</para>
+        /// <para>Creates a warehouse schedule task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1942,7 +2022,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建分时弹性计划</para>
+        /// <para>Creates a warehouse schedule task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1961,7 +2041,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除备份</para>
+        /// <para>Deletes a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2007,7 +2087,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除备份</para>
+        /// <para>Deletes a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2053,7 +2133,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除备份</para>
+        /// <para>Deletes a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2072,7 +2152,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除备份</para>
+        /// <para>Deletes a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2221,17 +2301,23 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Hologres instance.</para>
+        /// <para>Releases an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</para>
+        /// <para>Warning: 
+        /// Before you call this operation, make sure that you understand its prerequisites and consequences.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</description></item>
-        /// <item><description>You can delete only pay-as-you-go instances.</description></item>
+        /// <item><description>After a Hologres instance is released, its data and objects cannot be recovered. Proceed with caution. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.0.7d413e94YMVcqe">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>After a Hologres instance is released, its data and objects cannot be recovered. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</description></item>
+        /// <item><description>This operation applies only to pay-as-you-go instances.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>To unsubscribe from a subscription instance, go to the Unsubscribe page in the Alibaba Cloud console. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/subscription?spm=a2c4g.11186623.0.0.799b69ecPba0y1">Unsubscribe from a subscription instance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2278,17 +2364,23 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Hologres instance.</para>
+        /// <para>Releases an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</para>
+        /// <para>Warning: 
+        /// Before you call this operation, make sure that you understand its prerequisites and consequences.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</description></item>
-        /// <item><description>You can delete only pay-as-you-go instances.</description></item>
+        /// <item><description>After a Hologres instance is released, its data and objects cannot be recovered. Proceed with caution. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.0.7d413e94YMVcqe">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>After a Hologres instance is released, its data and objects cannot be recovered. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</description></item>
+        /// <item><description>This operation applies only to pay-as-you-go instances.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>To unsubscribe from a subscription instance, go to the Unsubscribe page in the Alibaba Cloud console. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/subscription?spm=a2c4g.11186623.0.0.799b69ecPba0y1">Unsubscribe from a subscription instance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2335,17 +2427,23 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Hologres instance.</para>
+        /// <para>Releases an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</para>
+        /// <para>Warning: 
+        /// Before you call this operation, make sure that you understand its prerequisites and consequences.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</description></item>
-        /// <item><description>You can delete only pay-as-you-go instances.</description></item>
+        /// <item><description>After a Hologres instance is released, its data and objects cannot be recovered. Proceed with caution. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.0.7d413e94YMVcqe">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>After a Hologres instance is released, its data and objects cannot be recovered. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</description></item>
+        /// <item><description>This operation applies only to pay-as-you-go instances.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>To unsubscribe from a subscription instance, go to the Unsubscribe page in the Alibaba Cloud console. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/subscription?spm=a2c4g.11186623.0.0.799b69ecPba0y1">Unsubscribe from a subscription instance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2365,17 +2463,23 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Hologres instance.</para>
+        /// <para>Releases an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.</para>
+        /// <para>Warning: 
+        /// Before you call this operation, make sure that you understand its prerequisites and consequences.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</description></item>
-        /// <item><description>You can delete only pay-as-you-go instances.</description></item>
+        /// <item><description>After a Hologres instance is released, its data and objects cannot be recovered. Proceed with caution. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.0.7d413e94YMVcqe">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>After a Hologres instance is released, its data and objects cannot be recovered. Proceed with caution. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7">Billing overview</a>.</description></item>
+        /// <item><description>This operation applies only to pay-as-you-go instances.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>To unsubscribe from a subscription instance, go to the Unsubscribe page in the Alibaba Cloud console. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/subscription?spm=a2c4g.11186623.0.0.799b69ecPba0y1">Unsubscribe from a subscription instance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2395,7 +2499,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型资源</para>
+        /// <para>Deletes a model resource. This action permanently deletes all models deployed on the node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2441,7 +2545,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型资源</para>
+        /// <para>Deletes a model resource. This action permanently deletes all models deployed on the node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2487,7 +2591,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型资源</para>
+        /// <para>Deletes a model resource. This action permanently deletes all models deployed on the node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2506,7 +2610,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型资源</para>
+        /// <para>Deletes a model resource. This action permanently deletes all models deployed on the node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2525,7 +2629,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Deletes a specified model service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2571,7 +2675,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Deletes a specified model service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2617,7 +2721,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Deletes a specified model service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2636,7 +2740,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Deletes a specified model service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2655,8 +2759,25 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除计算组弹性计划</para>
+        /// <para>Deletes a warehouse schedule task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: 
+        /// Before calling this operation, review the feature documentation to understand its prerequisites and impact.
+        /// &lt;props=&quot;china&quot;&gt;</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After a warehouse schedule task is deleted, it cannot be recovered. Proceed with caution.<a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.0.7d413e94YMVcqe"></a>
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>After a warehouse schedule task is deleted, it cannot be recovered. Proceed with caution.<a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7"></a></description></item>
+        /// <item><description>This operation is not limited to pay-as-you-go (PostPaid) instances.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>This operation does not unsubscribe from a subscription (PrePaid) instance. To do so, go to the Alibaba Cloud Unsubscription page. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/subscription?spm=a2c4g.11186623.0.0.799b69ecPba0y1">Unsubscribe from a subscription instance</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWarehouseScheduleTaskRequest
@@ -2705,8 +2826,25 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除计算组弹性计划</para>
+        /// <para>Deletes a warehouse schedule task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: 
+        /// Before calling this operation, review the feature documentation to understand its prerequisites and impact.
+        /// &lt;props=&quot;china&quot;&gt;</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After a warehouse schedule task is deleted, it cannot be recovered. Proceed with caution.<a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.0.7d413e94YMVcqe"></a>
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>After a warehouse schedule task is deleted, it cannot be recovered. Proceed with caution.<a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7"></a></description></item>
+        /// <item><description>This operation is not limited to pay-as-you-go (PostPaid) instances.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>This operation does not unsubscribe from a subscription (PrePaid) instance. To do so, go to the Alibaba Cloud Unsubscription page. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/subscription?spm=a2c4g.11186623.0.0.799b69ecPba0y1">Unsubscribe from a subscription instance</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWarehouseScheduleTaskRequest
@@ -2755,8 +2893,25 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除计算组弹性计划</para>
+        /// <para>Deletes a warehouse schedule task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: 
+        /// Before calling this operation, review the feature documentation to understand its prerequisites and impact.
+        /// &lt;props=&quot;china&quot;&gt;</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After a warehouse schedule task is deleted, it cannot be recovered. Proceed with caution.<a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.0.7d413e94YMVcqe"></a>
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>After a warehouse schedule task is deleted, it cannot be recovered. Proceed with caution.<a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7"></a></description></item>
+        /// <item><description>This operation is not limited to pay-as-you-go (PostPaid) instances.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>This operation does not unsubscribe from a subscription (PrePaid) instance. To do so, go to the Alibaba Cloud Unsubscription page. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/subscription?spm=a2c4g.11186623.0.0.799b69ecPba0y1">Unsubscribe from a subscription instance</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWarehouseScheduleTaskRequest
@@ -2774,8 +2929,25 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除计算组弹性计划</para>
+        /// <para>Deletes a warehouse schedule task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: 
+        /// Before calling this operation, review the feature documentation to understand its prerequisites and impact.
+        /// &lt;props=&quot;china&quot;&gt;</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>After a warehouse schedule task is deleted, it cannot be recovered. Proceed with caution.<a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.0.7d413e94YMVcqe"></a>
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>After a warehouse schedule task is deleted, it cannot be recovered. Proceed with caution.<a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview?spm=a2c63.p38356.0.0.efc33b87i5pDl7"></a></description></item>
+        /// <item><description>This operation is not limited to pay-as-you-go (PostPaid) instances.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>This operation does not unsubscribe from a subscription (PrePaid) instance. To do so, go to the Alibaba Cloud Unsubscription page. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/subscription?spm=a2c4g.11186623.0.0.799b69ecPba0y1">Unsubscribe from a subscription instance</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWarehouseScheduleTaskRequest
@@ -2793,7 +2965,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停实例</para>
+        /// <para>Lists all tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2843,7 +3015,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停实例</para>
+        /// <para>Lists all tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2893,7 +3065,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停实例</para>
+        /// <para>Lists all tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2912,7 +3084,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停实例</para>
+        /// <para>Lists all tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2931,8 +3103,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭OpenAPI执行SQL功能</para>
+        /// <para>Shuts down the ExecuteStatement API access permissions for a specified Hologres instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables the OpenAPI SQL execution feature for a specified Hologres instance. After the feature is disabled, all ExecuteStatement calls return an error. You can call EnableExecuteStatement to re-enable the feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableExecuteStatementRequest
@@ -2971,8 +3148,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭OpenAPI执行SQL功能</para>
+        /// <para>Shuts down the ExecuteStatement API access permissions for a specified Hologres instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables the OpenAPI SQL execution feature for a specified Hologres instance. After the feature is disabled, all ExecuteStatement calls return an error. You can call EnableExecuteStatement to re-enable the feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableExecuteStatementRequest
@@ -3011,8 +3193,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭OpenAPI执行SQL功能</para>
+        /// <para>Shuts down the ExecuteStatement API access permissions for a specified Hologres instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables the OpenAPI SQL execution feature for a specified Hologres instance. After the feature is disabled, all ExecuteStatement calls return an error. You can call EnableExecuteStatement to re-enable the feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableExecuteStatementRequest
@@ -3030,8 +3217,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭OpenAPI执行SQL功能</para>
+        /// <para>Shuts down the ExecuteStatement API access permissions for a specified Hologres instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables the OpenAPI SQL execution feature for a specified Hologres instance. After the feature is disabled, all ExecuteStatement calls return an error. You can call EnableExecuteStatement to re-enable the feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableExecuteStatementRequest
@@ -3179,7 +3371,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消执行计划</para>
+        /// <para>Disables the instance log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3225,7 +3417,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消执行计划</para>
+        /// <para>Disables the instance log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3271,7 +3463,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消执行计划</para>
+        /// <para>Disables the instance log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3290,7 +3482,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消执行计划</para>
+        /// <para>Disables the instance log.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3309,7 +3501,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭SSL</para>
+        /// <para>Disables SSL encryption for a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3345,7 +3537,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭SSL</para>
+        /// <para>Disables SSL encryption for a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3381,7 +3573,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭SSL</para>
+        /// <para>Disables SSL encryption for a Hologres instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3396,7 +3588,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭SSL</para>
+        /// <para>Disables SSL encryption for a Hologres instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3411,8 +3603,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭服务账号</para>
+        /// <para>Disables a Support Account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables the execution of SQL statements through OpenAPI for a specified Hologres instance. After this feature is disabled, all <c>ExecuteStatement</c> calls return an error. You can call the <c>EnableExecuteStatement</c> operation to re-enable this feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableSupportAccountRequest
@@ -3457,8 +3654,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭服务账号</para>
+        /// <para>Disables a Support Account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables the execution of SQL statements through OpenAPI for a specified Hologres instance. After this feature is disabled, all <c>ExecuteStatement</c> calls return an error. You can call the <c>EnableExecuteStatement</c> operation to re-enable this feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableSupportAccountRequest
@@ -3503,8 +3705,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭服务账号</para>
+        /// <para>Disables a Support Account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables the execution of SQL statements through OpenAPI for a specified Hologres instance. After this feature is disabled, all <c>ExecuteStatement</c> calls return an error. You can call the <c>EnableExecuteStatement</c> operation to re-enable this feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableSupportAccountRequest
@@ -3522,8 +3729,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭服务账号</para>
+        /// <para>Disables a Support Account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables the execution of SQL statements through OpenAPI for a specified Hologres instance. After this feature is disabled, all <c>ExecuteStatement</c> calls return an error. You can call the <c>EnableExecuteStatement</c> operation to re-enable this feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableSupportAccountRequest
@@ -3541,7 +3753,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭自动弹性</para>
+        /// <para>Disables autoscale for a specified compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3587,7 +3799,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭自动弹性</para>
+        /// <para>Disables autoscale for a specified compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3633,7 +3845,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭自动弹性</para>
+        /// <para>Disables autoscale for a specified compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3652,7 +3864,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭自动弹性</para>
+        /// <para>Disables autoscale for a specified compute group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3671,7 +3883,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消升级</para>
+        /// <para>Cancels an upgrade. You can call this operation only if the upgrade task has not started or is in the <c>pre_check</c> state. You cannot cancel the upgrade after the task enters the <c>backup</c> state or any subsequent state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3717,7 +3929,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消升级</para>
+        /// <para>Cancels an upgrade. You can call this operation only if the upgrade task has not started or is in the <c>pre_check</c> state. You cannot cancel the upgrade after the task enters the <c>backup</c> state or any subsequent state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3763,7 +3975,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消升级</para>
+        /// <para>Cancels an upgrade. You can call this operation only if the upgrade task has not started or is in the <c>pre_check</c> state. You cannot cancel the upgrade after the task enters the <c>backup</c> state or any subsequent state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3782,7 +3994,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消升级</para>
+        /// <para>Cancels an upgrade. You can call this operation only if the upgrade task has not started or is in the <c>pre_check</c> state. You cannot cancel the upgrade after the task enters the <c>backup</c> state or any subsequent state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3801,7 +4013,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户</para>
+        /// <para>Deletes a RAM user or an STS account from a Hologres instance. Once deleted, the user can no longer log in to the instance. To restore access, call the CreateUser operation to add the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3851,7 +4063,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户</para>
+        /// <para>Deletes a RAM user or an STS account from a Hologres instance. Once deleted, the user can no longer log in to the instance. To restore access, call the CreateUser operation to add the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3901,7 +4113,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户</para>
+        /// <para>Deletes a RAM user or an STS account from a Hologres instance. Once deleted, the user can no longer log in to the instance. To restore access, call the CreateUser operation to add the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3920,7 +4132,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户</para>
+        /// <para>Deletes a RAM user or an STS account from a Hologres instance. Once deleted, the user can no longer log in to the instance. To restore access, call the CreateUser operation to add the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3939,8 +4151,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启或关闭OpenAPI执行SQL功能</para>
+        /// <para>Enables SQL execution via OpenAPI for a specified Hologres instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables SQL execution via OpenAPI for a specified Hologres instance. Once enabled, RAM accounts with the <c>hologram:ExecuteStatement</c> permission can execute SQL statements by calling the <c>ExecuteStatement</c> API. To query the current status, call the <c>GetExecuteStatementEnabled</c> API. To disable the feature, call the <c>DisableExecuteStatement</c> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableExecuteStatementRequest
@@ -3979,8 +4196,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启或关闭OpenAPI执行SQL功能</para>
+        /// <para>Enables SQL execution via OpenAPI for a specified Hologres instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables SQL execution via OpenAPI for a specified Hologres instance. Once enabled, RAM accounts with the <c>hologram:ExecuteStatement</c> permission can execute SQL statements by calling the <c>ExecuteStatement</c> API. To query the current status, call the <c>GetExecuteStatementEnabled</c> API. To disable the feature, call the <c>DisableExecuteStatement</c> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableExecuteStatementRequest
@@ -4019,8 +4241,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启或关闭OpenAPI执行SQL功能</para>
+        /// <para>Enables SQL execution via OpenAPI for a specified Hologres instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables SQL execution via OpenAPI for a specified Hologres instance. Once enabled, RAM accounts with the <c>hologram:ExecuteStatement</c> permission can execute SQL statements by calling the <c>ExecuteStatement</c> API. To query the current status, call the <c>GetExecuteStatementEnabled</c> API. To disable the feature, call the <c>DisableExecuteStatement</c> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableExecuteStatementRequest
@@ -4038,8 +4265,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启或关闭OpenAPI执行SQL功能</para>
+        /// <para>Enables SQL execution via OpenAPI for a specified Hologres instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables SQL execution via OpenAPI for a specified Hologres instance. Once enabled, RAM accounts with the <c>hologram:ExecuteStatement</c> permission can execute SQL statements by calling the <c>ExecuteStatement</c> API. To query the current status, call the <c>GetExecuteStatementEnabled</c> API. To disable the feature, call the <c>DisableExecuteStatement</c> API.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableExecuteStatementRequest
@@ -4057,7 +4289,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables data lake acceleration.</para>
+        /// <para>Enables data lake acceleration for a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4103,7 +4335,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables data lake acceleration.</para>
+        /// <para>Enables data lake acceleration for a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4149,7 +4381,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables data lake acceleration.</para>
+        /// <para>Enables data lake acceleration for a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4168,7 +4400,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables data lake acceleration.</para>
+        /// <para>Enables data lake acceleration for a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4187,7 +4419,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打开SSL</para>
+        /// <para>Enables SSL encryption for a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4223,7 +4455,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打开SSL</para>
+        /// <para>Enables SSL encryption for a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4259,7 +4491,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打开SSL</para>
+        /// <para>Enables SSL encryption for a Hologres instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4274,7 +4506,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打开SSL</para>
+        /// <para>Enables SSL encryption for a Hologres instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4289,8 +4521,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打开服务账号</para>
+        /// <para>Enables a support account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation lets you execute SQL statements on a specified Hologres instance through OpenAPI. After this feature is enabled, a RAM account with the <c>hologram:ExecuteStatement</c> permission can call the <c>ExecuteStatement</c> operation. You can call GetExecuteStatementEnabled to query the current status and DisableExecuteStatement to disable this feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableSupportAccountRequest
@@ -4349,8 +4586,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打开服务账号</para>
+        /// <para>Enables a support account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation lets you execute SQL statements on a specified Hologres instance through OpenAPI. After this feature is enabled, a RAM account with the <c>hologram:ExecuteStatement</c> permission can call the <c>ExecuteStatement</c> operation. You can call GetExecuteStatementEnabled to query the current status and DisableExecuteStatement to disable this feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableSupportAccountRequest
@@ -4409,8 +4651,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打开服务账号</para>
+        /// <para>Enables a support account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation lets you execute SQL statements on a specified Hologres instance through OpenAPI. After this feature is enabled, a RAM account with the <c>hologram:ExecuteStatement</c> permission can call the <c>ExecuteStatement</c> operation. You can call GetExecuteStatementEnabled to query the current status and DisableExecuteStatement to disable this feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableSupportAccountRequest
@@ -4428,8 +4675,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打开服务账号</para>
+        /// <para>Enables a support account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation lets you execute SQL statements on a specified Hologres instance through OpenAPI. After this feature is enabled, a RAM account with the <c>hologram:ExecuteStatement</c> permission can call the <c>ExecuteStatement</c> operation. You can call GetExecuteStatementEnabled to query the current status and DisableExecuteStatement to disable this feature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableSupportAccountRequest
@@ -4447,7 +4699,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启自动弹性</para>
+        /// <para>Enables auto scaling for a warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4497,7 +4749,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启自动弹性</para>
+        /// <para>Enables auto scaling for a warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4547,7 +4799,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启自动弹性</para>
+        /// <para>Enables auto scaling for a warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4566,7 +4818,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启自动弹性</para>
+        /// <para>Enables auto scaling for a warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4585,8 +4837,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SQL执行</para>
+        /// <para>Executes an SQL statement synchronously on a specified database via OpenAPI and returns the result.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Use this API to securely execute SQL statements on a Hologres instance through OpenAPI.
+        /// Before using this API, ensure the following prerequisites are met:</para>
+        /// <ol>
+        /// <item><description>The &quot;Allow SQL execution through OpenAPI&quot; option is enabled on the &quot;Data Security&quot; tab of the instance details page in the console.</description></item>
+        /// <item><description>The calling RAM account must have the hologram:ExecuteStatement permission.
+        /// This API supports statements such as SELECT, DDL, and DML. It also supports parameterized queries with $1 and $2 placeholders to prevent SQL injection. By default, query results are limited to 200 rows (configurable up to 1,000) and 10 MB. Result sets that exceed these limits are truncated, and the <c>truncated</c> field in the response indicates if truncation occurred. The timeout for a single execution is 30 seconds.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecuteStatementRequest
@@ -4651,8 +4914,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SQL执行</para>
+        /// <para>Executes an SQL statement synchronously on a specified database via OpenAPI and returns the result.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Use this API to securely execute SQL statements on a Hologres instance through OpenAPI.
+        /// Before using this API, ensure the following prerequisites are met:</para>
+        /// <ol>
+        /// <item><description>The &quot;Allow SQL execution through OpenAPI&quot; option is enabled on the &quot;Data Security&quot; tab of the instance details page in the console.</description></item>
+        /// <item><description>The calling RAM account must have the hologram:ExecuteStatement permission.
+        /// This API supports statements such as SELECT, DDL, and DML. It also supports parameterized queries with $1 and $2 placeholders to prevent SQL injection. By default, query results are limited to 200 rows (configurable up to 1,000) and 10 MB. Result sets that exceed these limits are truncated, and the <c>truncated</c> field in the response indicates if truncation occurred. The timeout for a single execution is 30 seconds.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecuteStatementRequest
@@ -4717,8 +4991,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SQL执行</para>
+        /// <para>Executes an SQL statement synchronously on a specified database via OpenAPI and returns the result.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Use this API to securely execute SQL statements on a Hologres instance through OpenAPI.
+        /// Before using this API, ensure the following prerequisites are met:</para>
+        /// <ol>
+        /// <item><description>The &quot;Allow SQL execution through OpenAPI&quot; option is enabled on the &quot;Data Security&quot; tab of the instance details page in the console.</description></item>
+        /// <item><description>The calling RAM account must have the hologram:ExecuteStatement permission.
+        /// This API supports statements such as SELECT, DDL, and DML. It also supports parameterized queries with $1 and $2 placeholders to prevent SQL injection. By default, query results are limited to 200 rows (configurable up to 1,000) and 10 MB. Result sets that exceed these limits are truncated, and the <c>truncated</c> field in the response indicates if truncation occurred. The timeout for a single execution is 30 seconds.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecuteStatementRequest
@@ -4736,8 +5021,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SQL执行</para>
+        /// <para>Executes an SQL statement synchronously on a specified database via OpenAPI and returns the result.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Use this API to securely execute SQL statements on a Hologres instance through OpenAPI.
+        /// Before using this API, ensure the following prerequisites are met:</para>
+        /// <ol>
+        /// <item><description>The &quot;Allow SQL execution through OpenAPI&quot; option is enabled on the &quot;Data Security&quot; tab of the instance details page in the console.</description></item>
+        /// <item><description>The calling RAM account must have the hologram:ExecuteStatement permission.
+        /// This API supports statements such as SELECT, DDL, and DML. It also supports parameterized queries with $1 and $2 placeholders to prevent SQL injection. By default, query results are limited to 200 rows (configurable up to 1,000) and 10 MB. Result sets that exceed these limits are truncated, and the <c>truncated</c> field in the response indicates if truncation occurred. The timeout for a single execution is 30 seconds.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecuteStatementRequest
@@ -4755,7 +5051,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得证书信息</para>
+        /// <para>Retrieves the SSL certificate attributes of a Hologres instance, including SSL status and certificate expiration time.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4791,7 +5087,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得证书信息</para>
+        /// <para>Retrieves the SSL certificate attributes of a Hologres instance, including SSL status and certificate expiration time.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4827,7 +5123,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得证书信息</para>
+        /// <para>Retrieves the SSL certificate attributes of a Hologres instance, including SSL status and certificate expiration time.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4842,7 +5138,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得证书信息</para>
+        /// <para>Retrieves the SSL certificate attributes of a Hologres instance, including SSL status and certificate expiration time.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4857,8 +5153,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例是否已开启OpenAPI执行SQL功能</para>
+        /// <para>Checks whether a specified Hologres instance allows SQL execution through OpenAPI.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation checks if the &quot;Allow SQL execution through OpenAPI&quot; feature is enabled for a specified Hologres instance. Returns <c>true</c> if the feature is enabled, and <c>false</c> otherwise. If enabled, you can call the <c>ExecuteStatement</c> operation to execute SQL statements.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetExecuteStatementEnabledRequest
@@ -4897,8 +5198,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例是否已开启OpenAPI执行SQL功能</para>
+        /// <para>Checks whether a specified Hologres instance allows SQL execution through OpenAPI.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation checks if the &quot;Allow SQL execution through OpenAPI&quot; feature is enabled for a specified Hologres instance. Returns <c>true</c> if the feature is enabled, and <c>false</c> otherwise. If enabled, you can call the <c>ExecuteStatement</c> operation to execute SQL statements.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetExecuteStatementEnabledRequest
@@ -4937,8 +5243,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例是否已开启OpenAPI执行SQL功能</para>
+        /// <para>Checks whether a specified Hologres instance allows SQL execution through OpenAPI.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation checks if the &quot;Allow SQL execution through OpenAPI&quot; feature is enabled for a specified Hologres instance. Returns <c>true</c> if the feature is enabled, and <c>false</c> otherwise. If enabled, you can call the <c>ExecuteStatement</c> operation to execute SQL statements.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetExecuteStatementEnabledRequest
@@ -4956,8 +5267,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例是否已开启OpenAPI执行SQL功能</para>
+        /// <para>Checks whether a specified Hologres instance allows SQL execution through OpenAPI.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation checks if the &quot;Allow SQL execution through OpenAPI&quot; feature is enabled for a specified Hologres instance. Returns <c>true</c> if the feature is enabled, and <c>false</c> otherwise. If enabled, you can call the <c>ExecuteStatement</c> operation to execute SQL statements.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetExecuteStatementEnabledRequest
@@ -4975,8 +5291,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取holoweb登陆权限</para>
+        /// <para>Gets the external account login setting for HoloWeb.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Checks whether external accounts are allowed to log in to HoloWeb for a specified Hologres instance. The operation returns <c>true</c> if external accounts are allowed and <c>false</c> otherwise.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHoloWebLoginSettingRequest
@@ -5021,8 +5342,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取holoweb登陆权限</para>
+        /// <para>Gets the external account login setting for HoloWeb.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Checks whether external accounts are allowed to log in to HoloWeb for a specified Hologres instance. The operation returns <c>true</c> if external accounts are allowed and <c>false</c> otherwise.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHoloWebLoginSettingRequest
@@ -5067,8 +5393,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取holoweb登陆权限</para>
+        /// <para>Gets the external account login setting for HoloWeb.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Checks whether external accounts are allowed to log in to HoloWeb for a specified Hologres instance. The operation returns <c>true</c> if external accounts are allowed and <c>false</c> otherwise.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHoloWebLoginSettingRequest
@@ -5086,8 +5417,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取holoweb登陆权限</para>
+        /// <para>Gets the external account login setting for HoloWeb.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Checks whether external accounts are allowed to log in to HoloWeb for a specified Hologres instance. The operation returns <c>true</c> if external accounts are allowed and <c>false</c> otherwise.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHoloWebLoginSettingRequest
@@ -5105,7 +5441,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of an instance.</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5141,7 +5477,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of an instance.</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5177,7 +5513,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of an instance.</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5192,7 +5528,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of an instance.</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5207,7 +5543,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模型信息</para>
+        /// <para>Queries the list of large model services bound to a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5247,7 +5583,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模型信息</para>
+        /// <para>Queries the list of large model services bound to a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5287,7 +5623,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模型信息</para>
+        /// <para>Queries the list of large model services bound to a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5306,7 +5642,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模型信息</para>
+        /// <para>Queries the list of large model services bound to a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5325,7 +5661,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取上次升级历史</para>
+        /// <para>Retrieves the last upgrade record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5365,7 +5701,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取上次升级历史</para>
+        /// <para>Retrieves the last upgrade record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5405,7 +5741,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取上次升级历史</para>
+        /// <para>Retrieves the last upgrade record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5424,7 +5760,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取上次升级历史</para>
+        /// <para>Retrieves the last upgrade record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5443,7 +5779,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得根证书</para>
+        /// <para>Retrieves the root SSL certificate of a Hologres instance for client-side SSL connections.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5479,7 +5815,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得根证书</para>
+        /// <para>Retrieves the root SSL certificate of a Hologres instance for client-side SSL connections.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5515,7 +5851,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得根证书</para>
+        /// <para>Retrieves the root SSL certificate of a Hologres instance for client-side SSL connections.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5530,7 +5866,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获得根证书</para>
+        /// <para>Retrieves the root SSL certificate of a Hologres instance for client-side SSL connections.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5545,7 +5881,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取周期备份配置</para>
+        /// <para>Retrieves the backup configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5599,7 +5935,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取周期备份配置</para>
+        /// <para>Retrieves the backup configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5653,7 +5989,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取周期备份配置</para>
+        /// <para>Retrieves the backup configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5672,7 +6008,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取周期备份配置</para>
+        /// <para>Retrieves the backup configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5691,7 +6027,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取升级状态</para>
+        /// <para>Queries the upgrade status of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5737,7 +6073,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取升级状态</para>
+        /// <para>Queries the upgrade status of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5783,7 +6119,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取升级状态</para>
+        /// <para>Queries the upgrade status of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5802,7 +6138,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取升级状态</para>
+        /// <para>Queries the upgrade status of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5821,7 +6157,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>是否可升级</para>
+        /// <para>Queries whether an instance can be upgraded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5867,7 +6203,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>是否可升级</para>
+        /// <para>Queries whether an instance can be upgraded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5913,7 +6249,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>是否可升级</para>
+        /// <para>Queries whether an instance can be upgraded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5932,7 +6268,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>是否可升级</para>
+        /// <para>Queries whether an instance can be upgraded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5951,7 +6287,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details of a virtual warehouse instance.</para>
+        /// <para>Retrieves the details of a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5987,7 +6323,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details of a virtual warehouse instance.</para>
+        /// <para>Retrieves the details of a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6023,7 +6359,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details of a virtual warehouse instance.</para>
+        /// <para>Retrieves the details of a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6038,7 +6374,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details of a virtual warehouse instance.</para>
+        /// <para>Retrieves the details of a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6053,7 +6389,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DB授权</para>
+        /// <para>Grants permissions on a database to a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6107,7 +6443,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DB授权</para>
+        /// <para>Grants permissions on a database to a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6161,7 +6497,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DB授权</para>
+        /// <para>Grants permissions on a database to a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6180,7 +6516,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DB授权</para>
+        /// <para>Grants permissions on a database to a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6199,7 +6535,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DB授权</para>
+        /// <para>Grants permissions on a schema to a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6257,7 +6593,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DB授权</para>
+        /// <para>Grants permissions on a schema to a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6315,7 +6651,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DB授权</para>
+        /// <para>Grants permissions on a schema to a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6334,7 +6670,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DB授权</para>
+        /// <para>Grants permissions on a schema to a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6353,7 +6689,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DB授权</para>
+        /// <para>Grants permissions on a table to a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6423,7 +6759,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DB授权</para>
+        /// <para>Grants permissions on a table to a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6493,7 +6829,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DB授权</para>
+        /// <para>Grants permissions on a table to a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6512,7 +6848,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DB授权</para>
+        /// <para>Grants permissions on a table to a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6531,7 +6867,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backups. A backup is a full data snapshot of an instance at the end of the snapshot time. You can purchase another instance to completely restore the original data.</para>
+        /// <para>Retrieves a list of snapshots. Each snapshot represents a point-in-time backup that can be used to restore a new instance with its full data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6581,7 +6917,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backups. A backup is a full data snapshot of an instance at the end of the snapshot time. You can purchase another instance to completely restore the original data.</para>
+        /// <para>Retrieves a list of snapshots. Each snapshot represents a point-in-time backup that can be used to restore a new instance with its full data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6631,7 +6967,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backups. A backup is a full data snapshot of an instance at the end of the snapshot time. You can purchase another instance to completely restore the original data.</para>
+        /// <para>Retrieves a list of snapshots. Each snapshot represents a point-in-time backup that can be used to restore a new instance with its full data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6650,7 +6986,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of backups. A backup is a full data snapshot of an instance at the end of the snapshot time. You can purchase another instance to completely restore the original data.</para>
+        /// <para>Retrieves a list of snapshots. Each snapshot represents a point-in-time backup that can be used to restore a new instance with its full data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6669,7 +7005,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取DB列表</para>
+        /// <para>Queries the databases in a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6715,7 +7051,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取DB列表</para>
+        /// <para>Queries the databases in a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6761,7 +7097,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取DB列表</para>
+        /// <para>Queries the databases in a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6780,7 +7116,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取DB列表</para>
+        /// <para>Queries the databases in a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6799,8 +7135,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取只读从实例</para>
+        /// <para>Retrieves read-only secondary instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation retrieves information about model services deployed on a specific Holo instance, including but not limited to CPU, GPU, and memory resource usage.</description></item>
+        /// <item><description>The <c>instanceId</c> parameter is optional. If not specified, information about all related instances is returned by default.</description></item>
+        /// <item><description>This operation applies to Hologres AI nodes. Some parameters may be invalid or not applicable to non-AI nodes.</description></item>
+        /// <item><description>Before using this operation, make sure that you understand the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing methods and pricing of Alibaba Cloud Hologram</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListFollowerInstancesRequest
@@ -6845,8 +7192,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取只读从实例</para>
+        /// <para>Retrieves read-only secondary instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation retrieves information about model services deployed on a specific Holo instance, including but not limited to CPU, GPU, and memory resource usage.</description></item>
+        /// <item><description>The <c>instanceId</c> parameter is optional. If not specified, information about all related instances is returned by default.</description></item>
+        /// <item><description>This operation applies to Hologres AI nodes. Some parameters may be invalid or not applicable to non-AI nodes.</description></item>
+        /// <item><description>Before using this operation, make sure that you understand the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing methods and pricing of Alibaba Cloud Hologram</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListFollowerInstancesRequest
@@ -6891,8 +7249,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取只读从实例</para>
+        /// <para>Retrieves read-only secondary instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation retrieves information about model services deployed on a specific Holo instance, including but not limited to CPU, GPU, and memory resource usage.</description></item>
+        /// <item><description>The <c>instanceId</c> parameter is optional. If not specified, information about all related instances is returned by default.</description></item>
+        /// <item><description>This operation applies to Hologres AI nodes. Some parameters may be invalid or not applicable to non-AI nodes.</description></item>
+        /// <item><description>Before using this operation, make sure that you understand the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing methods and pricing of Alibaba Cloud Hologram</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListFollowerInstancesRequest
@@ -6910,8 +7279,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取只读从实例</para>
+        /// <para>Retrieves read-only secondary instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation retrieves information about model services deployed on a specific Holo instance, including but not limited to CPU, GPU, and memory resource usage.</description></item>
+        /// <item><description>The <c>instanceId</c> parameter is optional. If not specified, information about all related instances is returned by default.</description></item>
+        /// <item><description>This operation applies to Hologres AI nodes. Some parameters may be invalid or not applicable to non-AI nodes.</description></item>
+        /// <item><description>Before using this operation, make sure that you understand the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing methods and pricing of Alibaba Cloud Hologram</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListFollowerInstancesRequest
@@ -6929,8 +7309,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI资源列表</para>
+        /// <para>AI node resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation retrieves information about model services deployed on a specific Hologres instance, including but not limited to CPU, GPU, and memory resource usage.</description></item>
+        /// <item><description>The <c>instanceId</c> parameter is optional. If you do not specify this parameter, information about all related instances is returned by default.</description></item>
+        /// <item><description>This operation applies to Hologres AI nodes. Some parameters may be invalid or inapplicable to non-AI nodes.</description></item>
+        /// <item><description>Before you call this operation, make sure that you understand the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing methods and pricing of Alibaba Cloud Hologres</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListInstanceModelRequest
@@ -6969,8 +7360,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI资源列表</para>
+        /// <para>AI node resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation retrieves information about model services deployed on a specific Hologres instance, including but not limited to CPU, GPU, and memory resource usage.</description></item>
+        /// <item><description>The <c>instanceId</c> parameter is optional. If you do not specify this parameter, information about all related instances is returned by default.</description></item>
+        /// <item><description>This operation applies to Hologres AI nodes. Some parameters may be invalid or inapplicable to non-AI nodes.</description></item>
+        /// <item><description>Before you call this operation, make sure that you understand the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing methods and pricing of Alibaba Cloud Hologres</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListInstanceModelRequest
@@ -7009,8 +7411,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI资源列表</para>
+        /// <para>AI node resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation retrieves information about model services deployed on a specific Hologres instance, including but not limited to CPU, GPU, and memory resource usage.</description></item>
+        /// <item><description>The <c>instanceId</c> parameter is optional. If you do not specify this parameter, information about all related instances is returned by default.</description></item>
+        /// <item><description>This operation applies to Hologres AI nodes. Some parameters may be invalid or inapplicable to non-AI nodes.</description></item>
+        /// <item><description>Before you call this operation, make sure that you understand the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing methods and pricing of Alibaba Cloud Hologres</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListInstanceModelRequest
@@ -7028,8 +7441,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI资源列表</para>
+        /// <para>AI node resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation retrieves information about model services deployed on a specific Hologres instance, including but not limited to CPU, GPU, and memory resource usage.</description></item>
+        /// <item><description>The <c>instanceId</c> parameter is optional. If you do not specify this parameter, information about all related instances is returned by default.</description></item>
+        /// <item><description>This operation applies to Hologres AI nodes. Some parameters may be invalid or inapplicable to non-AI nodes.</description></item>
+        /// <item><description>Before you call this operation, make sure that you understand the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing methods and pricing of Alibaba Cloud Hologres</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListInstanceModelRequest
@@ -7047,7 +7471,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7101,7 +7525,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7155,7 +7579,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7174,7 +7598,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Retrieves a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7193,8 +7617,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主实例</para>
+        /// <para>Retrieves a list of potential leader instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves a list of leader instances that are associated with a specific Holo instance.</description></item>
+        /// <item><description>The <c>instanceId</c> parameter is optional. If omitted, the API returns all related instances by default.</description></item>
+        /// <item><description>This API applies to Hologres AI nodes. Some parameters may be invalid for non-AI nodes.</description></item>
+        /// <item><description>Before you call this operation, review the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing and pricing of Alibaba Cloud Hologres</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLeaderInstancesRequest
@@ -7239,8 +7674,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主实例</para>
+        /// <para>Retrieves a list of potential leader instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves a list of leader instances that are associated with a specific Holo instance.</description></item>
+        /// <item><description>The <c>instanceId</c> parameter is optional. If omitted, the API returns all related instances by default.</description></item>
+        /// <item><description>This API applies to Hologres AI nodes. Some parameters may be invalid for non-AI nodes.</description></item>
+        /// <item><description>Before you call this operation, review the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing and pricing of Alibaba Cloud Hologres</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLeaderInstancesRequest
@@ -7285,8 +7731,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主实例</para>
+        /// <para>Retrieves a list of potential leader instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves a list of leader instances that are associated with a specific Holo instance.</description></item>
+        /// <item><description>The <c>instanceId</c> parameter is optional. If omitted, the API returns all related instances by default.</description></item>
+        /// <item><description>This API applies to Hologres AI nodes. Some parameters may be invalid for non-AI nodes.</description></item>
+        /// <item><description>Before you call this operation, review the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing and pricing of Alibaba Cloud Hologres</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLeaderInstancesRequest
@@ -7304,8 +7761,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主实例</para>
+        /// <para>Retrieves a list of potential leader instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves a list of leader instances that are associated with a specific Holo instance.</description></item>
+        /// <item><description>The <c>instanceId</c> parameter is optional. If omitted, the API returns all related instances by default.</description></item>
+        /// <item><description>This API applies to Hologres AI nodes. Some parameters may be invalid for non-AI nodes.</description></item>
+        /// <item><description>Before you call this operation, review the <a href="https://www.aliyun.com/price/product#/ecs/detail">billing and pricing of Alibaba Cloud Hologres</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListLeaderInstancesRequest
@@ -7323,7 +7791,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例可迁移可用区列表</para>
+        /// <para>Lists the availability zones to which an instance can be migrated. This operation applies to instances that are deployed across three availability zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7373,7 +7841,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例可迁移可用区列表</para>
+        /// <para>Lists the availability zones to which an instance can be migrated. This operation applies to instances that are deployed across three availability zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7423,7 +7891,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例可迁移可用区列表</para>
+        /// <para>Lists the availability zones to which an instance can be migrated. This operation applies to instances that are deployed across three availability zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7442,7 +7910,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例可迁移可用区列表</para>
+        /// <para>Lists the availability zones to which an instance can be migrated. This operation applies to instances that are deployed across three availability zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7461,7 +7929,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出模型列表</para>
+        /// <para>Lists models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7489,6 +7957,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Provider))
+            {
+                query["provider"] = request.Provider;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7511,7 +7983,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出模型列表</para>
+        /// <para>Lists models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7539,6 +8011,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Provider))
+            {
+                query["provider"] = request.Provider;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7561,7 +8037,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出模型列表</para>
+        /// <para>Lists models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7580,7 +8056,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出模型列表</para>
+        /// <para>Lists models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7599,7 +8075,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维事件列表</para>
+        /// <para>Retrieves action events that match specified criteria, supporting pagination and sorting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7673,7 +8149,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维事件列表</para>
+        /// <para>Retrieves action events that match specified criteria, supporting pagination and sorting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7747,7 +8223,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维事件列表</para>
+        /// <para>Retrieves action events that match specified criteria, supporting pagination and sorting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7766,7 +8242,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运维事件列表</para>
+        /// <para>Retrieves action events that match specified criteria, supporting pagination and sorting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7785,7 +8261,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>holoapp共有云所有开服的region</para>
+        /// <para>Queries the list of all regions supported by Hologres.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7825,7 +8301,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>holoapp共有云所有开服的region</para>
+        /// <para>Queries the list of all regions supported by Hologres.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7865,7 +8341,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>holoapp共有云所有开服的region</para>
+        /// <para>Queries the list of all regions supported by Hologres.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7884,7 +8360,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>holoapp共有云所有开服的region</para>
+        /// <para>Queries the list of all regions supported by Hologres.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7903,7 +8379,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取版本列表</para>
+        /// <para>Retrieves the list of versions available for upgrade.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7949,7 +8425,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取版本列表</para>
+        /// <para>Retrieves the list of versions available for upgrade.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7995,7 +8471,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取版本列表</para>
+        /// <para>Retrieves the list of versions available for upgrade.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8014,7 +8490,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取版本列表</para>
+        /// <para>Retrieves the list of versions available for upgrade.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8033,8 +8509,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分时弹性日志</para>
+        /// <para>Retrieves the elastic scheduling events for a specified instance and time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves compute group scaling events for a specific instance ID.</description></item>
+        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters specify the time range for the query, which defaults to the last three days.</description></item>
+        /// <item><description>The <c>pageSize</c> and <c>pageNumber</c> parameters control pagination. The maximum value for <c>pageSize</c> is 100.</description></item>
+        /// <item><description>If the <c>elasticType</c> parameter is omitted, the API returns scaling events of all types.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWarehouseScheduleEventRequest
@@ -8095,8 +8582,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分时弹性日志</para>
+        /// <para>Retrieves the elastic scheduling events for a specified instance and time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves compute group scaling events for a specific instance ID.</description></item>
+        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters specify the time range for the query, which defaults to the last three days.</description></item>
+        /// <item><description>The <c>pageSize</c> and <c>pageNumber</c> parameters control pagination. The maximum value for <c>pageSize</c> is 100.</description></item>
+        /// <item><description>If the <c>elasticType</c> parameter is omitted, the API returns scaling events of all types.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWarehouseScheduleEventRequest
@@ -8157,8 +8655,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分时弹性日志</para>
+        /// <para>Retrieves the elastic scheduling events for a specified instance and time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves compute group scaling events for a specific instance ID.</description></item>
+        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters specify the time range for the query, which defaults to the last three days.</description></item>
+        /// <item><description>The <c>pageSize</c> and <c>pageNumber</c> parameters control pagination. The maximum value for <c>pageSize</c> is 100.</description></item>
+        /// <item><description>If the <c>elasticType</c> parameter is omitted, the API returns scaling events of all types.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWarehouseScheduleEventRequest
@@ -8176,8 +8685,19 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分时弹性日志</para>
+        /// <para>Retrieves the elastic scheduling events for a specified instance and time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves compute group scaling events for a specific instance ID.</description></item>
+        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters specify the time range for the query, which defaults to the last three days.</description></item>
+        /// <item><description>The <c>pageSize</c> and <c>pageNumber</c> parameters control pagination. The maximum value for <c>pageSize</c> is 100.</description></item>
+        /// <item><description>If the <c>elasticType</c> parameter is omitted, the API returns scaling events of all types.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWarehouseScheduleEventRequest
@@ -8195,7 +8715,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算分时弹性计划列表</para>
+        /// <para>Lists all warehouse schedule tasks for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8235,7 +8755,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算分时弹性计划列表</para>
+        /// <para>Lists all warehouse schedule tasks for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8275,7 +8795,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算分时弹性计划列表</para>
+        /// <para>Lists all warehouse schedule tasks for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8294,7 +8814,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>计算分时弹性计划列表</para>
+        /// <para>Lists all warehouse schedule tasks for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8313,7 +8833,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of virtual warehouse instances.</para>
+        /// <para>Retrieves a list of virtual warehouses.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8349,7 +8869,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of virtual warehouse instances.</para>
+        /// <para>Retrieves a list of virtual warehouses.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8385,7 +8905,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of virtual warehouse instances.</para>
+        /// <para>Retrieves a list of virtual warehouses.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8400,7 +8920,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of virtual warehouse instances.</para>
+        /// <para>Retrieves a list of virtual warehouses.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8415,7 +8935,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例迁移</para>
+        /// <para>Migrates an instance to a target availability zone. This operation only supports instances deployed across three availability zones. The instance is launched in the target availability zone without migrating its storage. The process takes approximately 5 minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8461,7 +8981,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例迁移</para>
+        /// <para>Migrates an instance to a target availability zone. This operation only supports instances deployed across three availability zones. The instance is launched in the target availability zone without migrating its storage. The process takes approximately 5 minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8507,7 +9027,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例迁移</para>
+        /// <para>Migrates an instance to a target availability zone. This operation only supports instances deployed across three availability zones. The instance is launched in the target availability zone without migrating its storage. The process takes approximately 5 minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8526,7 +9046,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实例迁移</para>
+        /// <para>Migrates an instance to a target availability zone. This operation only supports instances deployed across three availability zones. The instance is launched in the target availability zone without migrating its storage. The process takes approximately 5 minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8545,7 +9065,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>准备升级</para>
+        /// <para>Prepares an instance for an upgrade by running a pre-upgrade assessment. You can upgrade the instance only if the assessment passes. If it fails, contact technical support for a manual upgrade.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8601,7 +9121,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>准备升级</para>
+        /// <para>Prepares an instance for an upgrade by running a pre-upgrade assessment. You can upgrade the instance only if the assessment passes. If it fails, contact technical support for a manual upgrade.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8657,7 +9177,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>准备升级</para>
+        /// <para>Prepares an instance for an upgrade by running a pre-upgrade assessment. You can upgrade the instance only if the assessment passes. If it fails, contact technical support for a manual upgrade.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8676,7 +9196,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>准备升级</para>
+        /// <para>Prepares an instance for an upgrade by running a pre-upgrade assessment. You can upgrade the instance only if the assessment passes. If it fails, contact technical support for a manual upgrade.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8695,7 +9215,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers shard rebalancing for a virtual warehouse.</para>
+        /// <para>Rebalances shards in a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8741,7 +9261,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers shard rebalancing for a virtual warehouse.</para>
+        /// <para>Rebalances shards in a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8787,7 +9307,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers shard rebalancing for a virtual warehouse.</para>
+        /// <para>Rebalances shards in a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8806,7 +9326,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers shard rebalancing for a virtual warehouse.</para>
+        /// <para>Rebalances shards in a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8963,18 +9483,25 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.</para>
+        /// <para>Renews a subscription Hologres instance. You can also enable monthly auto-renewal.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// <para>Warning: 
+        /// This is a paid operation. Before you call this operation, make sure that you understand the billing methods and pricing of Hologres.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
-        /// <item><description>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</description></item>
-        /// <item><description>You can renew only subscription instances.</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Billing overview</a>.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres renewal, see <a href="https://help.aliyun.com/zh/hologres/product-overview/manage-renewals?spm=a2c4g.11186623.0.0.6b776c2eJ1h2vx">Manage renewals</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres renewal, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</description></item>
+        /// <item><description>Renewal is available only for subscription (PrePaid) instances.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9025,18 +9552,25 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.</para>
+        /// <para>Renews a subscription Hologres instance. You can also enable monthly auto-renewal.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// <para>Warning: 
+        /// This is a paid operation. Before you call this operation, make sure that you understand the billing methods and pricing of Hologres.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
-        /// <item><description>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</description></item>
-        /// <item><description>You can renew only subscription instances.</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Billing overview</a>.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres renewal, see <a href="https://help.aliyun.com/zh/hologres/product-overview/manage-renewals?spm=a2c4g.11186623.0.0.6b776c2eJ1h2vx">Manage renewals</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres renewal, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</description></item>
+        /// <item><description>Renewal is available only for subscription (PrePaid) instances.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9087,18 +9621,25 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.</para>
+        /// <para>Renews a subscription Hologres instance. You can also enable monthly auto-renewal.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// <para>Warning: 
+        /// This is a paid operation. Before you call this operation, make sure that you understand the billing methods and pricing of Hologres.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
-        /// <item><description>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</description></item>
-        /// <item><description>You can renew only subscription instances.</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Billing overview</a>.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres renewal, see <a href="https://help.aliyun.com/zh/hologres/product-overview/manage-renewals?spm=a2c4g.11186623.0.0.6b776c2eJ1h2vx">Manage renewals</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres renewal, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</description></item>
+        /// <item><description>Renewal is available only for subscription (PrePaid) instances.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9118,18 +9659,25 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually renews a Hologres instance. You can enable monthly auto-renewal when you renew a Hologres instance.</para>
+        /// <para>Renews a subscription Hologres instance. You can also enable monthly auto-renewal.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// <para>Warning: 
+        /// This is a paid operation. Before you call this operation, make sure that you understand the billing methods and pricing of Hologres.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
-        /// <item><description>For more information about how to renew a Hologres instance, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</description></item>
-        /// <item><description>You can renew only subscription instances.</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview">Billing overview</a>.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres renewal, see <a href="https://help.aliyun.com/zh/hologres/product-overview/manage-renewals?spm=a2c4g.11186623.0.0.6b776c2eJ1h2vx">Manage renewals</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres renewal, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/manage-renewals?spm=a2c63.p38356.0.0.38e731c9VAwtDP">Manage renewals</a>.</description></item>
+        /// <item><description>Renewal is available only for subscription (PrePaid) instances.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9149,7 +9697,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新证书</para>
+        /// <para>Renews the SSL certificate of a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9185,7 +9733,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新证书</para>
+        /// <para>Renews the SSL certificate of a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9221,7 +9769,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新证书</para>
+        /// <para>Renews the SSL certificate of a Hologres instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9236,7 +9784,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新证书</para>
+        /// <para>Renews the SSL certificate of a Hologres instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9381,7 +9929,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an instance.</para>
+        /// <para>Restarts a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9417,7 +9965,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an instance.</para>
+        /// <para>Restarts a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9453,7 +10001,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an instance.</para>
+        /// <para>Restarts a Hologres instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9468,7 +10016,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an instance.</para>
+        /// <para>Restarts a Hologres instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9483,7 +10031,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a virtual warehouse.</para>
+        /// <para>Resumes a virtual warehouse from Stopped to Running.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9529,7 +10077,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a virtual warehouse.</para>
+        /// <para>Resumes a virtual warehouse from Stopped to Running.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9575,7 +10123,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a virtual warehouse.</para>
+        /// <para>Resumes a virtual warehouse from Stopped to Running.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9594,7 +10142,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a virtual warehouse.</para>
+        /// <para>Resumes a virtual warehouse from Stopped to Running.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9613,7 +10161,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes an instance.</para>
+        /// <para>Resumes a paused instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9649,7 +10197,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes an instance.</para>
+        /// <para>Resumes a paused instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9685,7 +10233,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes an instance.</para>
+        /// <para>Resumes a paused instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9700,7 +10248,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes an instance.</para>
+        /// <para>Resumes a paused instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9715,7 +10263,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消DB授权</para>
+        /// <para>Revokes permissions on a database from a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9769,7 +10317,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消DB授权</para>
+        /// <para>Revokes permissions on a database from a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9823,7 +10371,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消DB授权</para>
+        /// <para>Revokes permissions on a database from a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9842,7 +10390,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消DB授权</para>
+        /// <para>Revokes permissions on a database from a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9861,7 +10409,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消Schema授权</para>
+        /// <para>Revokes permissions on a schema from a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9919,7 +10467,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消Schema授权</para>
+        /// <para>Revokes permissions on a schema from a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9977,7 +10525,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消Schema授权</para>
+        /// <para>Revokes permissions on a schema from a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9996,7 +10544,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消Schema授权</para>
+        /// <para>Revokes permissions on a schema from a specified user within a Hologres instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10015,7 +10563,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消表授权</para>
+        /// <para>Revokes permissions on a table from a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10085,7 +10633,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消表授权</para>
+        /// <para>Revokes permissions on a table from a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10155,7 +10703,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消表授权</para>
+        /// <para>Revokes permissions on a table from a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10174,7 +10722,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消表授权</para>
+        /// <para>Revokes permissions on a table from a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10193,7 +10741,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales in or out a virtual warehouse.</para>
+        /// <para>Scales a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10247,7 +10795,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales in or out a virtual warehouse.</para>
+        /// <para>Scales a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10301,7 +10849,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales in or out a virtual warehouse.</para>
+        /// <para>Scales a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10320,7 +10868,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales in or out a virtual warehouse.</para>
+        /// <para>Scales a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10345,11 +10893,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// <para>Warning: 
+        /// This is a paid operation. Before you call this operation, make sure that you understand the billing methods and pricing of Hologres.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
-        /// <item><description>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>The instance becomes unavailable when you upgrade or downgrade its computing resources. Upgrading or downgrading its storage resources does not affect the services of the instance. Avoid frequently upgrading or downgrading the instance. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications?spm=a2c4g.11186623.0.i7">Upgrade or downgrade instance specifications</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>The instance becomes unavailable when you upgrade or downgrade its computing resources. Upgrading or downgrading its storage resources does not affect the services of the instance. Avoid frequently upgrading or downgrading the instance. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10422,11 +10977,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// <para>Warning: 
+        /// This is a paid operation. Before you call this operation, make sure that you understand the billing methods and pricing of Hologres.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
-        /// <item><description>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>The instance becomes unavailable when you upgrade or downgrade its computing resources. Upgrading or downgrading its storage resources does not affect the services of the instance. Avoid frequently upgrading or downgrading the instance. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications?spm=a2c4g.11186623.0.i7">Upgrade or downgrade instance specifications</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>The instance becomes unavailable when you upgrade or downgrade its computing resources. Upgrading or downgrading its storage resources does not affect the services of the instance. Avoid frequently upgrading or downgrading the instance. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10499,11 +11061,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// <para>Warning: 
+        /// This is a paid operation. Before you call this operation, make sure that you understand the billing methods and pricing of Hologres.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
-        /// <item><description>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>The instance becomes unavailable when you upgrade or downgrade its computing resources. Upgrading or downgrading its storage resources does not affect the services of the instance. Avoid frequently upgrading or downgrading the instance. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications?spm=a2c4g.11186623.0.i7">Upgrade or downgrade instance specifications</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>The instance becomes unavailable when you upgrade or downgrade its computing resources. Upgrading or downgrading its storage resources does not affect the services of the instance. Avoid frequently upgrading or downgrading the instance. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10529,11 +11098,18 @@ namespace AlibabaCloud.SDK.Hologram20220601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.</para>
+        /// <para>Warning: 
+        /// This is a paid operation. Before you call this operation, make sure that you understand the billing methods and pricing of Hologres.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the billing of Hologres, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.</description></item>
-        /// <item><description>During the change of computing resource specifications of a Hologres instance, the instance is unavailable. During the change of storage resource specifications of a Hologres instance, the instance can work normally. Do not frequently change instance specifications. For more information, see <a href="https://www.alibabacloud.com/help/en/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://help.aliyun.com/zh/hologres/product-overview/billing-overview?spm=a2c4g.11186623.0.i4">Billing overview</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For more information about Hologres billing, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/billing-overview">Billing overview</a>.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>The instance becomes unavailable when you upgrade or downgrade its computing resources. Upgrading or downgrading its storage resources does not affect the services of the instance. Avoid frequently upgrading or downgrading the instance. For more information, see <a href="https://help.aliyun.com/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications?spm=a2c4g.11186623.0.i7">Upgrade or downgrade instance specifications</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>The instance becomes unavailable when you upgrade or downgrade its computing resources. Upgrading or downgrading its storage resources does not affect the services of the instance. Avoid frequently upgrading or downgrading the instance. For more information, see <a href="https://www.alibabacloud.com/help/zh/hologres/product-overview/upgrade-or-downgrade-instance-specifications">Upgrade or downgrade instance specifications</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10553,7 +11129,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an instance.</para>
+        /// <para>Stops a running instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10589,7 +11165,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an instance.</para>
+        /// <para>Stops a running instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10625,7 +11201,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an instance.</para>
+        /// <para>Stops a running instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10640,7 +11216,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an instance.</para>
+        /// <para>Stops a running instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10655,7 +11231,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends a virtual warehouse.</para>
+        /// <para>Stops a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10701,7 +11277,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends a virtual warehouse.</para>
+        /// <para>Stops a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10747,7 +11323,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends a virtual warehouse.</para>
+        /// <para>Stops a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10766,7 +11342,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends a virtual warehouse.</para>
+        /// <para>Stops a virtual warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10785,7 +11361,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增tag</para>
+        /// <para>Adds tags to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10853,7 +11429,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增tag</para>
+        /// <para>Adds tags to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10921,7 +11497,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增tag</para>
+        /// <para>Adds tags to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10940,7 +11516,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增tag</para>
+        /// <para>Adds tags to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10959,7 +11535,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除绑定主实例</para>
+        /// <para>Detaches a read-only instance from its primary instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11005,7 +11581,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除绑定主实例</para>
+        /// <para>Detaches a read-only instance from its primary instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11051,7 +11627,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除绑定主实例</para>
+        /// <para>Detaches a read-only instance from its primary instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11070,7 +11646,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除绑定主实例</para>
+        /// <para>Detaches a read-only instance from its primary instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11089,7 +11665,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除tag</para>
+        /// <para>Removes tags from one or more instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11157,7 +11733,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除tag</para>
+        /// <para>Removes tags from one or more instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11225,7 +11801,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除tag</para>
+        /// <para>Removes tags from one or more instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11244,7 +11820,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除tag</para>
+        /// <para>Removes tags from one or more instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11263,7 +11839,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改小版本自动升级开关</para>
+        /// <para>Enables automatic minor version upgrades for an instance. The upgrade occurs automatically during the maintenance window.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11309,7 +11885,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改小版本自动升级开关</para>
+        /// <para>Enables automatic minor version upgrades for an instance. The upgrade occurs automatically during the maintenance window.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11355,7 +11931,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改小版本自动升级开关</para>
+        /// <para>Enables automatic minor version upgrades for an instance. The upgrade occurs automatically during the maintenance window.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11374,7 +11950,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改小版本自动升级开关</para>
+        /// <para>Enables automatic minor version upgrades for an instance. The upgrade occurs automatically during the maintenance window.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11393,7 +11969,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新备份描述</para>
+        /// <para>Updates the description of a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11449,7 +12025,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新备份描述</para>
+        /// <para>Updates the description of a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11505,7 +12081,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新备份描述</para>
+        /// <para>Updates the description of a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11524,7 +12100,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新备份描述</para>
+        /// <para>Updates the description of a backup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11543,8 +12119,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改holoweb登陆权限</para>
+        /// <para>Modifies the login settings for holoweb.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creating a model service requires multiple parameters. To find the parameters for a Model Studio model, call the <c>ListModelCatalog</c> operation. For a Hologres AI node, call the <c>GetAvailableModelsResource</c> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateHoloWebLoginSettingRequest
@@ -11595,8 +12176,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改holoweb登陆权限</para>
+        /// <para>Modifies the login settings for holoweb.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creating a model service requires multiple parameters. To find the parameters for a Model Studio model, call the <c>ListModelCatalog</c> operation. For a Hologres AI node, call the <c>GetAvailableModelsResource</c> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateHoloWebLoginSettingRequest
@@ -11647,8 +12233,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改holoweb登陆权限</para>
+        /// <para>Modifies the login settings for holoweb.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creating a model service requires multiple parameters. To find the parameters for a Model Studio model, call the <c>ListModelCatalog</c> operation. For a Hologres AI node, call the <c>GetAvailableModelsResource</c> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateHoloWebLoginSettingRequest
@@ -11666,8 +12257,13 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改holoweb登陆权限</para>
+        /// <para>Modifies the login settings for holoweb.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creating a model service requires multiple parameters. To find the parameters for a Model Studio model, call the <c>ListModelCatalog</c> operation. For a Hologres AI node, call the <c>GetAvailableModelsResource</c> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateHoloWebLoginSettingRequest
@@ -11815,7 +12411,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the network configuration of an instance.</para>
+        /// <para>Modifies the network type of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11881,7 +12477,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the network configuration of an instance.</para>
+        /// <para>Modifies the network type of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11947,7 +12543,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the network configuration of an instance.</para>
+        /// <para>Modifies the network type of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11966,7 +12562,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the network configuration of an instance.</para>
+        /// <para>Modifies the network type of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11985,7 +12581,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改端口号</para>
+        /// <para>Updates the port of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12031,7 +12627,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改端口号</para>
+        /// <para>Updates the port of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12077,7 +12673,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改端口号</para>
+        /// <para>Updates the port of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12096,7 +12692,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改端口号</para>
+        /// <para>Updates the port of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12115,7 +12711,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改可维护时间窗口</para>
+        /// <para>Updates the maintenance window of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12165,7 +12761,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改可维护时间窗口</para>
+        /// <para>Updates the maintenance window of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12215,7 +12811,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改可维护时间窗口</para>
+        /// <para>Updates the maintenance window of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12234,7 +12830,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改可维护时间窗口</para>
+        /// <para>Updates the maintenance window of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12253,7 +12849,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Updates a model service. This operation applies only to Hologres AI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12319,7 +12915,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Updates a model service. This operation applies only to Hologres AI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12385,7 +12981,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Updates a model service. This operation applies only to Hologres AI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12404,7 +13000,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型服务</para>
+        /// <para>Updates a model service. This operation applies only to Hologres AI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12423,7 +13019,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改运维事件执行时间</para>
+        /// <para>Updates the scheduled execution time for an operation event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12473,7 +13069,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改运维事件执行时间</para>
+        /// <para>Updates the scheduled execution time for an operation event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12523,7 +13119,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改运维事件执行时间</para>
+        /// <para>Updates the scheduled execution time for an operation event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12542,7 +13138,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改运维事件执行时间</para>
+        /// <para>Updates the scheduled execution time for an operation event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12561,7 +13157,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置周期备份</para>
+        /// <para>This operation configures a backup policy for an instance. You can set a weekly schedule to back up an instance on specific days, such as every Monday, Wednesday, and Friday at 20:00:00. You can also specify the number of completed backups to retain. The system automatically deletes expired backups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12645,7 +13241,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置周期备份</para>
+        /// <para>This operation configures a backup policy for an instance. You can set a weekly schedule to back up an instance on specific days, such as every Monday, Wednesday, and Friday at 20:00:00. You can also specify the number of completed backups to retain. The system automatically deletes expired backups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12729,7 +13325,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置周期备份</para>
+        /// <para>This operation configures a backup policy for an instance. You can set a weekly schedule to back up an instance on specific days, such as every Monday, Wednesday, and Friday at 20:00:00. You can also specify the number of completed backups to retain. The system automatically deletes expired backups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12748,7 +13344,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>配置周期备份</para>
+        /// <para>This operation configures a backup policy for an instance. You can set a weekly schedule to back up an instance on specific days, such as every Monday, Wednesday, and Friday at 20:00:00. You can also specify the number of completed backups to retain. The system automatically deletes expired backups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12767,7 +13363,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建分时弹性计划</para>
+        /// <para>Updates an elastic schedule for a warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12829,7 +13425,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建分时弹性计划</para>
+        /// <para>Updates an elastic schedule for a warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12891,7 +13487,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建分时弹性计划</para>
+        /// <para>Updates an elastic schedule for a warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12910,7 +13506,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建分时弹性计划</para>
+        /// <para>Updates an elastic schedule for a warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12929,7 +13525,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始升级</para>
+        /// <para>Upgrades an instance. If the preparation is successful, the instance can start the upgrade directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12983,7 +13579,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始升级</para>
+        /// <para>Upgrades an instance. If the preparation is successful, the instance can start the upgrade directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13037,7 +13633,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始升级</para>
+        /// <para>Upgrades an instance. If the preparation is successful, the instance can start the upgrade directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13056,7 +13652,7 @@ namespace AlibabaCloud.SDK.Hologram20220601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始升级</para>
+        /// <para>Upgrades an instance. If the preparation is successful, the instance can start the upgrade directly.</para>
         /// </summary>
         /// 
         /// <param name="request">

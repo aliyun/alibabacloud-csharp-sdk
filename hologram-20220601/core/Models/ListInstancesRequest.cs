@@ -10,6 +10,25 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>The instance type for Cloud Monitor. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>standard</para>
+        /// </description></item>
+        /// <item><description><para>follower</para>
+        /// </description></item>
+        /// <item><description><para>mc-acceleration</para>
+        /// </description></item>
+        /// <item><description><para>warehouse</para>
+        /// </description></item>
+        /// <item><description><para>high-memory</para>
+        /// </description></item>
+        /// <item><description><para>serverless</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is for Cloud Monitor.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>standard</para>
         /// </summary>
@@ -28,7 +47,7 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the resource.</para>
+        /// <para>The tags of the instance.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]

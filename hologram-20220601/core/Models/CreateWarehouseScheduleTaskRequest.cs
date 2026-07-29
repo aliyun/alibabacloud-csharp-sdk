@@ -10,48 +10,39 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
 {
     public class CreateWarehouseScheduleTaskRequest : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>user stat</para>
+        /// <para>A description of the warehouse schedule task.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The number of elastic compute units.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>32</para>
         /// </summary>
         [NameInMap("elasticCu")]
         [Validation(Required=false)]
         public long? ElasticCu { get; set; }
 
         /// <summary>
+        /// <para>The UTC end time of the task, in ISO 8601 format.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0200</para>
         /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The UTC start time of the task, in ISO 8601 format.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0100</para>
         /// </summary>
         [NameInMap("startTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the warehouse.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
         /// </summary>
         [NameInMap("warehouseId")]
         [Validation(Required=false)]
