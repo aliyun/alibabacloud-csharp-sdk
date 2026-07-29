@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
-    public class DeleteTopicResponseBody : TeaModel {
+    public class GetAccountAttributesResponseBody : TeaModel {
         /// <summary>
         /// <para>The response code.</para>
         /// 
@@ -24,7 +24,49 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Data { get; set; }
+        public GetAccountAttributesResponseBodyData Data { get; set; }
+        public class GetAccountAttributesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether the Log Management feature is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("LogEnabled")]
+            [Validation(Required=false)]
+            public bool? LogEnabled { get; set; }
+
+            /// <summary>
+            /// <para>The name of the Simple Log Service Logstore.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-logstore</para>
+            /// </summary>
+            [NameInMap("LogStoreName")]
+            [Validation(Required=false)]
+            public string LogStoreName { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether the message trace feature is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("MessageTraceEnabled")]
+            [Validation(Required=false)]
+            public bool? MessageTraceEnabled { get; set; }
+
+            /// <summary>
+            /// <para>The name of the Simple Log Service project.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-project</para>
+            /// </summary>
+            [NameInMap("ProjectName")]
+            [Validation(Required=false)]
+            public string ProjectName { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The response message.</para>
@@ -57,7 +99,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

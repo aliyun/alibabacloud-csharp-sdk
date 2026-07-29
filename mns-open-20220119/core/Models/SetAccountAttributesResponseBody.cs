@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
-    public class AuthorizeEndpointAclResponseBody : TeaModel {
+    public class SetAccountAttributesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>operation success</para>
         /// </summary>
@@ -30,18 +26,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>06273500-249F-5863-121D-74D51123****</para>
+        /// <para>06273500-249F-5863-121D-74D51123E62C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the response.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -50,8 +42,6 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

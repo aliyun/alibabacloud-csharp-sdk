@@ -9,20 +9,47 @@ using Tea;
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class SetSubscriptionAttributesRequest : TeaModel {
+        /// <summary>
+        /// <para>The dead-letter queue policy.</para>
+        /// </summary>
         [NameInMap("DlqPolicy")]
         [Validation(Required=false)]
         public SetSubscriptionAttributesRequestDlqPolicy DlqPolicy { get; set; }
         public class SetSubscriptionAttributesRequestDlqPolicy : TeaModel {
+            /// <summary>
+            /// <para>The destination queue for dead-letter messages.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>deadLetterTargetQueue</para>
+            /// </summary>
             [NameInMap("DeadLetterTargetQueue")]
             [Validation(Required=false)]
             public string DeadLetterTargetQueue { get; set; }
 
+            /// <summary>
+            /// <para>Whether to enable dead-letter message delivery.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The retry policy for message delivery failures to the endpoint. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>BACKOFF_RETRY: backoff retry.</para>
+        /// </description></item>
+        /// <item><description><para>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BACKOFF_RETRY</para>
+        /// </summary>
         [NameInMap("NotifyStrategy")]
         [Validation(Required=false)]
         public string NotifyStrategy { get; set; }
@@ -36,7 +63,11 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string StsRoleArn { get; set; }
 
         /// <summary>
+        /// <para>The name of the subscription.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySubscription</para>
         /// </summary>
         [NameInMap("SubscriptionName")]
         [Validation(Required=false)]
@@ -57,7 +88,11 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
+        /// <para>The name of the topic.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("TopicName")]
         [Validation(Required=false)]

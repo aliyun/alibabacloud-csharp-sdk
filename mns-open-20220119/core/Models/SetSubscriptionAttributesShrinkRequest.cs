@@ -9,10 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class SetSubscriptionAttributesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The dead-letter queue policy.</para>
+        /// </summary>
         [NameInMap("DlqPolicy")]
         [Validation(Required=false)]
         public string DlqPolicyShrink { get; set; }
 
+        /// <summary>
+        /// <para>The retry policy for message delivery failures to the endpoint. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>BACKOFF_RETRY: backoff retry.</para>
+        /// </description></item>
+        /// <item><description><para>EXPONENTIAL_DECAY_RETRY: exponential decay retry.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BACKOFF_RETRY</para>
+        /// </summary>
         [NameInMap("NotifyStrategy")]
         [Validation(Required=false)]
         public string NotifyStrategy { get; set; }
@@ -26,7 +41,11 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string StsRoleArn { get; set; }
 
         /// <summary>
+        /// <para>The name of the subscription.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySubscription</para>
         /// </summary>
         [NameInMap("SubscriptionName")]
         [Validation(Required=false)]
@@ -37,7 +56,11 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         public string TenantRateLimitPolicyShrink { get; set; }
 
         /// <summary>
+        /// <para>The name of the topic.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("TopicName")]
         [Validation(Required=false)]

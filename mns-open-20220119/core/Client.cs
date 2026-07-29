@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AuthorizeEndpointAcl</para>
+        /// <para>Adds one or more Access Control List (ACL) rules to an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AuthorizeEndpointAcl</para>
+        /// <para>Adds one or more Access Control List (ACL) rules to an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AuthorizeEndpointAcl</para>
+        /// <para>Adds one or more Access Control List (ACL) rules to an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AuthorizeEndpointAcl</para>
+        /// <para>Adds one or more Access Control List (ACL) rules to an endpoint of a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建事件规则</para>
+        /// <para>Creates an event rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建事件规则</para>
+        /// <para>Creates an event rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -395,7 +395,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建事件规则</para>
+        /// <para>Creates an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -413,7 +413,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建事件规则</para>
+        /// <para>Creates an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateQueue</para>
+        /// <para>Creates a queue.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -539,7 +539,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateQueue</para>
+        /// <para>Creates a queue.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -647,7 +647,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateQueue</para>
+        /// <para>Creates a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -665,7 +665,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateQueue</para>
+        /// <para>Creates a queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -683,7 +683,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateTopic</para>
+        /// <para>Calls the CreateTopic operation to create a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -759,7 +759,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateTopic</para>
+        /// <para>Calls the CreateTopic operation to create a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -835,7 +835,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateTopic</para>
+        /// <para>Calls the CreateTopic operation to create a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -853,7 +853,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateTopic</para>
+        /// <para>Calls the CreateTopic operation to create a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -871,7 +871,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除事件规则</para>
+        /// <para>Deletes an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -917,7 +917,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除事件规则</para>
+        /// <para>Deletes an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -963,7 +963,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除事件规则</para>
+        /// <para>Deletes an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -981,7 +981,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除事件规则</para>
+        /// <para>Deletes an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -999,7 +999,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteQueue</para>
+        /// <para>Calls the DeleteQueue operation to delete a created queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1041,7 +1041,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteQueue</para>
+        /// <para>Calls the DeleteQueue operation to delete a created queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1083,7 +1083,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteQueue</para>
+        /// <para>Calls the DeleteQueue operation to delete a created queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1101,7 +1101,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteQueue</para>
+        /// <para>Calls the DeleteQueue operation to delete a created queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1119,7 +1119,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除订阅主题</para>
+        /// <para>Calls the DeleteTopic operation to delete a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1161,7 +1161,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除订阅主题</para>
+        /// <para>Calls the DeleteTopic operation to delete a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1203,7 +1203,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除订阅主题</para>
+        /// <para>Calls the DeleteTopic operation to delete a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1221,7 +1221,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除订阅主题</para>
+        /// <para>Calls the DeleteTopic operation to delete a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1239,7 +1239,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisableEndpoint</para>
+        /// <para>This operation disables an endpoint of a specified type, blocking all subsequent requests from the endpoint and returning an error.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1281,7 +1281,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisableEndpoint</para>
+        /// <para>This operation disables an endpoint of a specified type, blocking all subsequent requests from the endpoint and returning an error.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1323,7 +1323,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisableEndpoint</para>
+        /// <para>This operation disables an endpoint of a specified type, blocking all subsequent requests from the endpoint and returning an error.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1341,7 +1341,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DisableEndpoint</para>
+        /// <para>This operation disables an endpoint of a specified type, blocking all subsequent requests from the endpoint and returning an error.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1359,7 +1359,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>EnableEndpoint</para>
+        /// <para>This operation enables an endpoint of a specified type. After the endpoint is enabled, requests that originate from the endpoint and are on the Access Control List (ACL) whitelist are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1401,7 +1401,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>EnableEndpoint</para>
+        /// <para>This operation enables an endpoint of a specified type. After the endpoint is enabled, requests that originate from the endpoint and are on the Access Control List (ACL) whitelist are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1443,7 +1443,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>EnableEndpoint</para>
+        /// <para>This operation enables an endpoint of a specified type. After the endpoint is enabled, requests that originate from the endpoint and are on the Access Control List (ACL) whitelist are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1461,7 +1461,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>EnableEndpoint</para>
+        /// <para>This operation enables an endpoint of a specified type. After the endpoint is enabled, requests that originate from the endpoint and are on the Access Control List (ACL) whitelist are not blocked.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1479,7 +1479,111 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetEndpointAttribute</para>
+        /// <para>Retrieves the log configuration of a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccountAttributesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountAttributesResponse
+        /// </returns>
+        public GetAccountAttributesResponse GetAccountAttributesWithOptions(GetAccountAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAccountAttributes",
+                Version = "2022-01-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAccountAttributesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the log configuration of a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccountAttributesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountAttributesResponse
+        /// </returns>
+        public async Task<GetAccountAttributesResponse> GetAccountAttributesWithOptionsAsync(GetAccountAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAccountAttributes",
+                Version = "2022-01-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAccountAttributesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the log configuration of a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccountAttributesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountAttributesResponse
+        /// </returns>
+        public GetAccountAttributesResponse GetAccountAttributes(GetAccountAttributesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAccountAttributesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the log configuration of a user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAccountAttributesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAccountAttributesResponse
+        /// </returns>
+        public async Task<GetAccountAttributesResponse> GetAccountAttributesAsync(GetAccountAttributesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAccountAttributesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the attributes of an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1521,7 +1625,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetEndpointAttribute</para>
+        /// <para>Queries the attributes of an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1563,7 +1667,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetEndpointAttribute</para>
+        /// <para>Queries the attributes of an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1581,7 +1685,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetEndpointAttribute</para>
+        /// <para>Queries the attributes of an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1599,7 +1703,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取事件通知规则</para>
+        /// <para>Retrieves an event notification rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1645,7 +1749,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取事件通知规则</para>
+        /// <para>Retrieves an event notification rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1691,7 +1795,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取事件通知规则</para>
+        /// <para>Retrieves an event notification rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1709,7 +1813,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取事件通知规则</para>
+        /// <para>Retrieves an event notification rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1727,8 +1831,32 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetQueueAttributes</para>
+        /// <para>Retrieves the attributes of a created queue.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: </para>
+        /// </remarks>
+        /// <para>For optimization of service performance, Simple Message Queue (formerly MNS) will offline the return values of the following fields (the default value will be 0):
+        ///     - ActiveMessages
+        ///     - InactiveMessages
+        ///     - DelayMessages 
+        ///   </para>
+        ///   <para>Use the following alternatives to obtain replacement solutions:</para>
+        ///   <list type="bullet">
+        ///     <item><description>Use the CloudMonitor OpenAPI to retrieve queue monitoring metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=ap-southeast-1&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a></description></item>
+        ///     <item><description> <a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor monitoring metrics documentation</a>. The mapping between deprecated fields and monitoring metrics:
+        ///       <list type="bullet">
+        ///         <item><description>ActiveMessages → monitoring metric NumberOfMessagesVisible</description></item>
+        ///         <item><description>InactiveMessages → monitoring metric NumberOfMessagesInvisible</description></item>
+        ///         <item><description>DelayMessages → monitoring metric NumberOfMessagesDelayed</description></item>
+        ///       </list>
+        ///     </description></item>
+        ///   </list>
+        /// </warning>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetQueueAttributesRequest
@@ -1773,8 +1901,32 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetQueueAttributes</para>
+        /// <para>Retrieves the attributes of a created queue.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: </para>
+        /// </remarks>
+        /// <para>For optimization of service performance, Simple Message Queue (formerly MNS) will offline the return values of the following fields (the default value will be 0):
+        ///     - ActiveMessages
+        ///     - InactiveMessages
+        ///     - DelayMessages 
+        ///   </para>
+        ///   <para>Use the following alternatives to obtain replacement solutions:</para>
+        ///   <list type="bullet">
+        ///     <item><description>Use the CloudMonitor OpenAPI to retrieve queue monitoring metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=ap-southeast-1&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a></description></item>
+        ///     <item><description> <a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor monitoring metrics documentation</a>. The mapping between deprecated fields and monitoring metrics:
+        ///       <list type="bullet">
+        ///         <item><description>ActiveMessages → monitoring metric NumberOfMessagesVisible</description></item>
+        ///         <item><description>InactiveMessages → monitoring metric NumberOfMessagesInvisible</description></item>
+        ///         <item><description>DelayMessages → monitoring metric NumberOfMessagesDelayed</description></item>
+        ///       </list>
+        ///     </description></item>
+        ///   </list>
+        /// </warning>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetQueueAttributesRequest
@@ -1819,8 +1971,32 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetQueueAttributes</para>
+        /// <para>Retrieves the attributes of a created queue.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: </para>
+        /// </remarks>
+        /// <para>For optimization of service performance, Simple Message Queue (formerly MNS) will offline the return values of the following fields (the default value will be 0):
+        ///     - ActiveMessages
+        ///     - InactiveMessages
+        ///     - DelayMessages 
+        ///   </para>
+        ///   <para>Use the following alternatives to obtain replacement solutions:</para>
+        ///   <list type="bullet">
+        ///     <item><description>Use the CloudMonitor OpenAPI to retrieve queue monitoring metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=ap-southeast-1&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a></description></item>
+        ///     <item><description> <a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor monitoring metrics documentation</a>. The mapping between deprecated fields and monitoring metrics:
+        ///       <list type="bullet">
+        ///         <item><description>ActiveMessages → monitoring metric NumberOfMessagesVisible</description></item>
+        ///         <item><description>InactiveMessages → monitoring metric NumberOfMessagesInvisible</description></item>
+        ///         <item><description>DelayMessages → monitoring metric NumberOfMessagesDelayed</description></item>
+        ///       </list>
+        ///     </description></item>
+        ///   </list>
+        /// </warning>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetQueueAttributesRequest
@@ -1837,8 +2013,32 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetQueueAttributes</para>
+        /// <para>Retrieves the attributes of a created queue.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Warning: </para>
+        /// </remarks>
+        /// <para>For optimization of service performance, Simple Message Queue (formerly MNS) will offline the return values of the following fields (the default value will be 0):
+        ///     - ActiveMessages
+        ///     - InactiveMessages
+        ///     - DelayMessages 
+        ///   </para>
+        ///   <para>Use the following alternatives to obtain replacement solutions:</para>
+        ///   <list type="bullet">
+        ///     <item><description>Use the CloudMonitor OpenAPI to retrieve queue monitoring metrics. For more information, see <a href="https://api.aliyun.com/api/Cms/2019-01-01/DescribeMetricLast?RegionId=ap-southeast-1&params={%22Namespace%22:%22acs_smq%22,%22MetricName%22:%22NumberOfMessagesVisible%22}&tab=DEBUG">CloudMonitor OpenAPI documentation</a></description></item>
+        ///     <item><description> <a href="https://cloudmonitornext.console.aliyun.com/metric-meta/acs_smq/smq/all?spm=5176.2020520111.0.0.5d0c66102s05T4">CloudMonitor monitoring metrics documentation</a>. The mapping between deprecated fields and monitoring metrics:
+        ///       <list type="bullet">
+        ///         <item><description>ActiveMessages → monitoring metric NumberOfMessagesVisible</description></item>
+        ///         <item><description>InactiveMessages → monitoring metric NumberOfMessagesInvisible</description></item>
+        ///         <item><description>DelayMessages → monitoring metric NumberOfMessagesDelayed</description></item>
+        ///       </list>
+        ///     </description></item>
+        ///   </list>
+        /// </warning>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetQueueAttributesRequest
@@ -1855,7 +2055,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetSubscription</para>
+        /// <para>Retrieves the properties of a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1901,7 +2101,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetSubscription</para>
+        /// <para>Retrieves the properties of a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1947,7 +2147,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetSubscription</para>
+        /// <para>Retrieves the properties of a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1965,7 +2165,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetSubscription</para>
+        /// <para>Retrieves the properties of a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1983,7 +2183,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询主题</para>
+        /// <para>Queries the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2029,7 +2229,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询主题</para>
+        /// <para>Queries the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2075,7 +2275,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询主题</para>
+        /// <para>Queries the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2093,7 +2293,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询主题</para>
+        /// <para>Queries the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2111,7 +2311,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件通知列表</para>
+        /// <para>Queries a list of event notification rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2191,7 +2391,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件通知列表</para>
+        /// <para>Queries a list of event notification rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2271,7 +2471,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件通知列表</para>
+        /// <para>Queries a list of event notification rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2289,7 +2489,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件通知列表</para>
+        /// <para>Queries a list of event notification rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2307,7 +2507,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListQueue</para>
+        /// <para>Lists all queues under a specified Alibaba Cloud account with pagination support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2365,7 +2565,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListQueue</para>
+        /// <para>Lists all queues under a specified Alibaba Cloud account with pagination support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2423,7 +2623,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListQueue</para>
+        /// <para>Lists all queues under a specified Alibaba Cloud account with pagination support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2441,7 +2641,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListQueue</para>
+        /// <para>Lists all queues under a specified Alibaba Cloud account with pagination support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2459,7 +2659,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSubscription</para>
+        /// <para>You can call the ListSubscriptionByTopic operation to retrieve a paginated list of subscriptions for a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2521,7 +2721,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSubscription</para>
+        /// <para>You can call the ListSubscriptionByTopic operation to retrieve a paginated list of subscriptions for a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2583,7 +2783,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSubscription</para>
+        /// <para>You can call the ListSubscriptionByTopic operation to retrieve a paginated list of subscriptions for a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2601,7 +2801,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSubscription</para>
+        /// <para>You can call the ListSubscriptionByTopic operation to retrieve a paginated list of subscriptions for a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2619,7 +2819,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListTopic</para>
+        /// <para>Queries the list of topics under an Alibaba Cloud account with paginated results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2677,7 +2877,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListTopic</para>
+        /// <para>Queries the list of topics under an Alibaba Cloud account with paginated results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2735,7 +2935,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListTopic</para>
+        /// <para>Queries the list of topics under an Alibaba Cloud account with paginated results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2753,7 +2953,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListTopic</para>
+        /// <para>Queries the list of topics under an Alibaba Cloud account with paginated results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2771,7 +2971,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RevokeEndpointAcl</para>
+        /// <para>Revokes one or more Access Control List (ACL) rules for a specified endpoint type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2827,7 +3027,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RevokeEndpointAcl</para>
+        /// <para>Revokes one or more Access Control List (ACL) rules for a specified endpoint type.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2883,7 +3083,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RevokeEndpointAcl</para>
+        /// <para>Revokes one or more Access Control List (ACL) rules for a specified endpoint type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2901,7 +3101,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RevokeEndpointAcl</para>
+        /// <para>Revokes one or more Access Control List (ACL) rules for a specified endpoint type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2919,7 +3119,159 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SetQueueAttributes</para>
+        /// <para>SetAccountAttributes</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAccountAttributesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAccountAttributesResponse
+        /// </returns>
+        public SetAccountAttributesResponse SetAccountAttributesWithOptions(SetAccountAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogEnabled))
+            {
+                query["LogEnabled"] = request.LogEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStoreName))
+            {
+                query["LogStoreName"] = request.LogStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageTraceEnabled))
+            {
+                query["MessageTraceEnabled"] = request.MessageTraceEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAccountAttributes",
+                Version = "2022-01-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAccountAttributesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SetAccountAttributes</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAccountAttributesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAccountAttributesResponse
+        /// </returns>
+        public async Task<SetAccountAttributesResponse> SetAccountAttributesWithOptionsAsync(SetAccountAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogEnabled))
+            {
+                query["LogEnabled"] = request.LogEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStoreName))
+            {
+                query["LogStoreName"] = request.LogStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageTraceEnabled))
+            {
+                query["MessageTraceEnabled"] = request.MessageTraceEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAccountAttributes",
+                Version = "2022-01-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAccountAttributesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SetAccountAttributes</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAccountAttributesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAccountAttributesResponse
+        /// </returns>
+        public SetAccountAttributesResponse SetAccountAttributes(SetAccountAttributesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetAccountAttributesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SetAccountAttributes</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAccountAttributesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAccountAttributesResponse
+        /// </returns>
+        public async Task<SetAccountAttributesResponse> SetAccountAttributesAsync(SetAccountAttributesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetAccountAttributesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the SetQueueAttributes operation to modify queue attributes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3019,7 +3371,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SetQueueAttributes</para>
+        /// <para>Calls the SetQueueAttributes operation to modify queue attributes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3119,7 +3471,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SetQueueAttributes</para>
+        /// <para>Calls the SetQueueAttributes operation to modify queue attributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3137,7 +3489,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SetQueueAttributes</para>
+        /// <para>Calls the SetQueueAttributes operation to modify queue attributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3155,7 +3507,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifySubscription</para>
+        /// <para>Call the SetSubscriptionAttributes operation to modify a subscription\&quot;s attributes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3227,7 +3579,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifySubscription</para>
+        /// <para>Call the SetSubscriptionAttributes operation to modify a subscription\&quot;s attributes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3299,7 +3651,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifySubscription</para>
+        /// <para>Call the SetSubscriptionAttributes operation to modify a subscription\&quot;s attributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3317,7 +3669,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifySubscription</para>
+        /// <para>Call the SetSubscriptionAttributes operation to modify a subscription\&quot;s attributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3335,7 +3687,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑订阅主题</para>
+        /// <para>Calls the SetTopicAttributes operation to modify the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3401,7 +3753,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑订阅主题</para>
+        /// <para>Calls the SetTopicAttributes operation to modify the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3467,7 +3819,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑订阅主题</para>
+        /// <para>Calls the SetTopicAttributes operation to modify the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3485,7 +3837,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑订阅主题</para>
+        /// <para>Calls the SetTopicAttributes operation to modify the attributes of a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3503,7 +3855,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateSubscription</para>
+        /// <para>Calls the Subscribe operation to create a subscription for a topic.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3615,7 +3967,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateSubscription</para>
+        /// <para>Calls the Subscribe operation to create a subscription for a topic.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3727,7 +4079,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateSubscription</para>
+        /// <para>Calls the Subscribe operation to create a subscription for a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3745,7 +4097,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateSubscription</para>
+        /// <para>Calls the Subscribe operation to create a subscription for a topic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3763,7 +4115,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteSubscription</para>
+        /// <para>You can call Unsubscribe to cancel an existing subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3809,7 +4161,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteSubscription</para>
+        /// <para>You can call Unsubscribe to cancel an existing subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3855,7 +4207,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteSubscription</para>
+        /// <para>You can call Unsubscribe to cancel an existing subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3873,7 +4225,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteSubscription</para>
+        /// <para>You can call Unsubscribe to cancel an existing subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
