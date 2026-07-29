@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-beijing", "dtsai.cn-beijing.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dtsai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -246,8 +250,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Creates a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) is supported.</description></item>
+        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDocParserJobRequest
@@ -275,6 +287,14 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             {
                 query["FileUrl"] = request.FileUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageMode))
+            {
+                query["ImageMode"] = request.ImageMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssFileUrl))
+            {
+                query["OssFileUrl"] = request.OssFileUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFormat))
             {
                 query["OutputFormat"] = request.OutputFormat;
@@ -282,6 +302,14 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultType))
+            {
+                query["ResultType"] = request.ResultType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableFormat))
+            {
+                query["TableFormat"] = request.TableFormat;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -304,8 +332,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Creates a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) is supported.</description></item>
+        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDocParserJobRequest
@@ -333,6 +369,14 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             {
                 query["FileUrl"] = request.FileUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageMode))
+            {
+                query["ImageMode"] = request.ImageMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssFileUrl))
+            {
+                query["OssFileUrl"] = request.OssFileUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFormat))
             {
                 query["OutputFormat"] = request.OutputFormat;
@@ -340,6 +384,14 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultType))
+            {
+                query["ResultType"] = request.ResultType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableFormat))
+            {
+                query["TableFormat"] = request.TableFormat;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -362,8 +414,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Creates a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) is supported.</description></item>
+        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDocParserJobRequest
@@ -380,8 +440,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Creates a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) is supported.</description></item>
+        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDocParserJobRequest
@@ -590,8 +658,17 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Retrieves the result of a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) is supported.</description></item>
+        /// <item><description>Fees: Free of charge during the public preview period.</description></item>
+        /// <item><description>Call DescribeDocParserJobResult to retrieve the parsing result of a document parsing task. Call this operation only after DescribeDocParserJobStatus returns a Status of success. Task results are retained for 72 hours and cannot be retrieved after expiration.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDocParserJobResultRequest
@@ -636,8 +713,17 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Retrieves the result of a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) is supported.</description></item>
+        /// <item><description>Fees: Free of charge during the public preview period.</description></item>
+        /// <item><description>Call DescribeDocParserJobResult to retrieve the parsing result of a document parsing task. Call this operation only after DescribeDocParserJobStatus returns a Status of success. Task results are retained for 72 hours and cannot be retrieved after expiration.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDocParserJobResultRequest
@@ -682,8 +768,17 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Retrieves the result of a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) is supported.</description></item>
+        /// <item><description>Fees: Free of charge during the public preview period.</description></item>
+        /// <item><description>Call DescribeDocParserJobResult to retrieve the parsing result of a document parsing task. Call this operation only after DescribeDocParserJobStatus returns a Status of success. Task results are retained for 72 hours and cannot be retrieved after expiration.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDocParserJobResultRequest
@@ -700,8 +795,17 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Retrieves the result of a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) is supported.</description></item>
+        /// <item><description>Fees: Free of charge during the public preview period.</description></item>
+        /// <item><description>Call DescribeDocParserJobResult to retrieve the parsing result of a document parsing task. Call this operation only after DescribeDocParserJobStatus returns a Status of success. Task results are retained for 72 hours and cannot be retrieved after expiration.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDocParserJobResultRequest
@@ -718,8 +822,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Queries the status of a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) is supported.</description></item>
+        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDocParserJobStatusRequest
@@ -764,8 +876,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Queries the status of a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) is supported.</description></item>
+        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDocParserJobStatusRequest
@@ -810,8 +930,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Queries the status of a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) is supported.</description></item>
+        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDocParserJobStatusRequest
@@ -828,8 +956,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Queries the status of a document parsing task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) is supported.</description></item>
+        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDocParserJobStatusRequest
@@ -846,8 +982,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Retrieves the content of a web page.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
+        /// <item><description>Pricing: Free of charge during the public preview period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// WebFetchRequest
@@ -896,8 +1040,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Retrieves the content of a web page.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
+        /// <item><description>Pricing: Free of charge during the public preview period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// WebFetchRequest
@@ -946,8 +1098,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Retrieves the content of a web page.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
+        /// <item><description>Pricing: Free of charge during the public preview period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// WebFetchRequest
@@ -964,8 +1124,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Retrieves the content of a web page.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
+        /// <item><description>Pricing: Free of charge during the public preview period.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// WebFetchRequest
@@ -982,8 +1150,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Performs a web search.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
+        /// <item><description>Fees: Free of charge during the public preview. No fees are charged.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// WebSearchRequest
@@ -1032,8 +1208,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Performs a web search.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
+        /// <item><description>Fees: Free of charge during the public preview. No fees are charged.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// WebSearchRequest
@@ -1082,8 +1266,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Performs a web search.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
+        /// <item><description>Fees: Free of charge during the public preview. No fees are charged.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// WebSearchRequest
@@ -1100,8 +1292,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>网页搜索</para>
+        /// <para>Performs a web search.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
+        /// <item><description>Fees: Free of charge during the public preview. No fees are charged.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// WebSearchRequest
