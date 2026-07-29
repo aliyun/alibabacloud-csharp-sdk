@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetUserCertificateDetailRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to filter certificate content from the response. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: The Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, and SignPrivateKey fields are not returned.</description></item>
-        /// <item><description><b>false</b>: All fields are returned.</description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
+        /// <para>Specifies whether to filter certificate content. If set to <b>true</b>, the Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, and SignPrivateKey fields are not returned. If set to <b>false</b>, these fields are returned. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -27,7 +22,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The certificate ID.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> to obtain the certificate ID.</para>
+        /// <para>You can obtain this ID by calling <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

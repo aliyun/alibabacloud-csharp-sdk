@@ -1,3 +1,8 @@
+2026-07-29 Version: 3.2.12
+- Update API GetContact: add response parameters Body.WebhookList.
+- Update API ListContact: add response parameters Body.ContactList.$.WebhookList.
+
+
 2026-07-20 Version: 3.2.11
 - Generated csharp 2020-04-07 for cas.
 

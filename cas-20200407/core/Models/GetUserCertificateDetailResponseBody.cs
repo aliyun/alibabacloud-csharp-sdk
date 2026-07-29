@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public bool? BuyInAliyun { get; set; }
 
         /// <summary>
-        /// <para>The certificate content that uses a non-Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</para>
+        /// <para>The certificate content that uses a non-Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>---BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</para>
@@ -115,6 +115,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertIdentifier { get; set; }
 
         /// <summary>
+        /// <para>The SHA-2 algorithm value of the certificate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E696C2DB574DF99467A90BEF62B341294A9B0C731D228A0BD38265E1467D8EF0</para>
         /// </summary>
@@ -153,7 +155,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Country { get; set; }
 
         /// <summary>
-        /// <para>The encryption certificate content in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</para>
+        /// <para>The encryption certificate content in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
@@ -165,7 +167,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string EncryptCert { get; set; }
 
         /// <summary>
-        /// <para>The private key of the encryption certificate in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</para>
+        /// <para>The private key of the encryption certificate in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN EC PRIVATE KEY-----
@@ -177,7 +179,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string EncryptPrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The certificate expiration date, in the format of YYYY-MM-DD.</para>
+        /// <para>The certificate expiration date in the format of YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-25</para>
@@ -241,7 +243,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Issuer { get; set; }
 
         /// <summary>
-        /// <para>The private key that uses a non-Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</para>
+        /// <para>The private key that uses a non-Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN RSA PRIVATE KEY----- MII.... -----END RSA PRIVATE KEY-----</para>
@@ -311,7 +313,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Province { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request, which can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
@@ -361,7 +363,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Sha2 { get; set; }
 
         /// <summary>
-        /// <para>The signing certificate content in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</para>
+        /// <para>The signing certificate content in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
@@ -373,7 +375,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string SignCert { get; set; }
 
         /// <summary>
-        /// <para>The private key of the signing certificate in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</para>
+        /// <para>The private key of the signing certificate in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter parameter is set to false, and is not returned when set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN EC PRIVATE KEY-----
@@ -385,7 +387,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string SignPrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The certificate issuance date, in the format of YYYY-MM-DD.</para>
+        /// <para>The certificate issuance date in the format of YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-07-13</para>

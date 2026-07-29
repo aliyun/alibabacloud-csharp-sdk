@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The current page number in a paged query.</para>
+        /// <para>The current page number in the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,12 +51,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Brand { get; set; }
 
             /// <summary>
-            /// <para>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</para>
+            /// <para>The global certificate ID in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</para>
             /// <list type="bullet">
             /// <item><description>For the China site: certificate ID + &quot;-cn-hangzhou&quot;</description></item>
             /// <item><description>For the China site: certificate ID + &quot;-ap-southeast-1&quot;</description></item>
             /// </list>
-            /// <para>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the International site is &quot;123-ap-southeast-1&quot;.</para>
+            /// <para>For example, if the certificate ID is 123, the CertIdentifier for the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier for the International site is &quot;123-ap-southeast-1&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21795675-cn-hangzhou</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string CertificateName { get; set; }
 
             /// <summary>
-            /// <para>The end time of the latest certificate, in timestamp format. If no certificate has been issued, this field is empty.</para>
+            /// <para>The end time of the latest certificate. The value is a UNIX timestamp accurate to seconds. If no certificate has been issued, this field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1801324800000</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? CertificateNotAfter { get; set; }
 
             /// <summary>
-            /// <para>The start time of the latest certificate, in timestamp format. If no certificate has been issued, this field is empty.</para>
+            /// <para>The start time of the latest certificate. The value is a UNIX timestamp accurate to seconds. If no certificate has been issued, this field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1776988800000</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? CertificateNotBefore { get; set; }
 
             /// <summary>
-            /// <para>The revocation time of the latest certificate, in timestamp format.</para>
+            /// <para>The revocation time of the latest certificate. The value is a UNIX timestamp accurate to seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1801324800000</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public int? FullDomainCount { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the instance, in timestamp format. If no certificate has been issued, this field is empty.</para>
+            /// <para>The expiration time of the instance. The value is a UNIX timestamp accurate to seconds. If no certificate has been issued, this field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1801324800000</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The start time of the instance, in timestamp format. If no certificate has been issued, this field is empty.</para>
+            /// <para>The start time of the instance. The value is a UNIX timestamp accurate to seconds. If no certificate has been issued, this field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1801324800000</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string KeyAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>The end time of the instance purchase, in timestamp format. Used to determine the purchase duration of the instance.</para>
+            /// <para>The end time of the instance purchase. The value is a UNIX timestamp accurate to seconds. Used to determine the purchase duration of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1801324800000</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? OrderEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the instance purchase, in timestamp format. Used to determine the refund time limit.</para>
+            /// <para>The start time of the instance purchase. The value is a UNIX timestamp accurate to seconds. Used to determine the refund time limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1801324800000</para>
@@ -285,13 +285,13 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>inactive</b>: pending use.</description></item>
-            /// <item><description><b>pending</b>: under review. The latest certificate is being reviewed.</description></item>
-            /// <item><description><b>willExpire</b>: about to expire.</description></item>
-            /// <item><description><b>expired</b>: expired.</description></item>
-            /// <item><description><b>refund</b>: refunded.</description></item>
-            /// <item><description><b>normal</b>: normal.</description></item>
-            /// <item><description><b>closed</b>: closed and unavailable.</description></item>
+            /// <item><description><b>inactive</b>: Pending use.</description></item>
+            /// <item><description><b>pending</b>: Under review. The latest certificate is being reviewed.</description></item>
+            /// <item><description><b>willExpire</b>: About to expire.</description></item>
+            /// <item><description><b>expired</b>: Expired.</description></item>
+            /// <item><description><b>refund</b>: Refunded.</description></item>
+            /// <item><description><b>normal</b>: Normal.</description></item>
+            /// <item><description><b>closed</b>: Closed and unavailable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of records displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

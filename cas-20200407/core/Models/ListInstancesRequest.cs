@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The certification authority (CA) brand. Valid values: WoSign, CFCA, DigiCert, GeoTrust, GlobalSign, vTrus, and Alibaba.</para>
+        /// <para>The CA brand. Valid values: WoSign, CFCA, DigiCert, GeoTrust, GlobalSign, vTrus, and Alibaba.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Digicert</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The keyword for fuzzy match. Matches domain names, instance names, or corresponding resource IDs.</para>
+        /// <para>The keyword for fuzzy search. Matches domain names, instance names, or corresponding resource IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -102,13 +102,13 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>inactive</b>: pending use.</description></item>
-        /// <item><description><b>pending</b>: under review. The latest certificate is being reviewed.</description></item>
-        /// <item><description><b>willExpire</b>: about to expire.</description></item>
-        /// <item><description><b>expired</b>: expired.</description></item>
-        /// <item><description><b>refund</b>: refunded.</description></item>
-        /// <item><description><b>normal</b>: normal.</description></item>
-        /// <item><description><b>closed</b>: closed and unavailable.</description></item>
+        /// <item><description><b>inactive</b>: Pending use.</description></item>
+        /// <item><description><b>pending</b>: Under review. The latest certificate is being reviewed.</description></item>
+        /// <item><description><b>willExpire</b>: About to expire.</description></item>
+        /// <item><description><b>expired</b>: Expired.</description></item>
+        /// <item><description><b>refund</b>: Refunded.</description></item>
+        /// <item><description><b>normal</b>: Normal.</description></item>
+        /// <item><description><b>closed</b>: Closed and unavailable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertificateName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the latest certificate, in timestamp format. This value is empty if no certificate has been issued.</para>
+        /// <para>The end time of the latest certificate, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -86,12 +86,18 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public long? CertificateNotAfter { get; set; }
 
+        /// <summary>
+        /// <para>The start time of the latest certificate, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1781568000000</para>
+        /// </summary>
         [NameInMap("CertificateNotBefore")]
         [Validation(Required=false)]
         public long? CertificateNotBefore { get; set; }
 
         /// <summary>
-        /// <para>The revocation time of the latest certificate, in timestamp format.</para>
+        /// <para>The revocation time of the latest certificate, in UNIX timestamp format. The value is accurate to the second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -154,7 +160,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public List<long?> ContactIdList { get; set; }
 
         /// <summary>
-        /// <para>The code of the country or region where the certificate organization is located. For example, CN indicates China, and US indicates the United States. This field is required when generating a certificate signing request. Default value: CN.</para>
+        /// <para>The country or region code of the certificate organization. For example, CN indicates China, and US indicates the United States. This field is required when generating a certificate signing request. Default value: CN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CN</para>
@@ -237,7 +243,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The list of domain names to be validated.</para>
+        /// <para>The list of domain validations.</para>
         /// </summary>
         [NameInMap("DomainValidationList")]
         [Validation(Required=false)]
@@ -340,7 +346,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string GenerateCsrMethod { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the instance, in timestamp format. This value is empty if no certificate has been issued.</para>
+        /// <para>The expiration time of the instance, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -360,7 +366,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the instance, in timestamp format. This value is empty if no certificate has been issued.</para>
+        /// <para>The start time of the instance, in UNIX timestamp format. This value is empty if no certificate has been issued. The value is accurate to the second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -401,7 +407,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string KeyAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>The end time of the instance purchase, in timestamp format. This value is used to determine the purchase duration of the instance.</para>
+        /// <para>The end time of the instance purchase, in UNIX timestamp format. This value is used to determine the purchase duration of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -411,7 +417,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? OrderEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the instance purchase, in timestamp format. This value is used to determine the refund time limit.</para>
+        /// <para>The start time of the instance purchase, in UNIX timestamp format. This value is used to determine the refund time limit. The value is accurate to the second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -525,7 +531,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// </description></item>
         /// <item><description><para>payed: the instance upgrade has been paid.</para>
         /// </description></item>
-        /// <item><description><para>issued: the latest certificate has been issued for the upgraded instance.</para>
+        /// <item><description><para>issued: the latest certificate has been issued after the instance upgrade.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -537,7 +543,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string UpgradeStatus { get; set; }
 
         /// <summary>
-        /// <para>The validation method for the certificate application. Valid values:</para>
+        /// <para>The certificate validation method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>DNS: DNS validation, using TXT or CNAME.</description></item>
         /// <item><description>HTTP: file-based validation.</description></item>

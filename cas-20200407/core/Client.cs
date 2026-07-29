@@ -72,12 +72,8 @@ namespace AlibabaCloud.SDK.Cas20200407
                 {"rus-west-1-pop", "cas.aliyuncs.com"},
                 {"us-east-1", "cas.aliyuncs.com"},
                 {"us-west-1", "cas.aliyuncs.com"},
-                {"me-east-1", "cas.me-east-1.aliyuncs.com"},
                 {"eu-central-1", "cas.eu-central-1.aliyuncs.com"},
-                {"ap-southeast-2", "cas.ap-southeast-2.aliyuncs.com"},
                 {"ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "cas.ap-south-1.aliyuncs.com"},
-                {"ap-northeast-1", "cas.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -6672,7 +6668,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The China single-user QPS limit for this operation is 100 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6723,7 +6719,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The China single-user QPS limit for this operation is 100 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6774,7 +6770,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The China single-user QPS limit for this operation is 100 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6797,7 +6793,7 @@ namespace AlibabaCloud.SDK.Cas20200407
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The China single-user QPS limit for this operation is 100 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
