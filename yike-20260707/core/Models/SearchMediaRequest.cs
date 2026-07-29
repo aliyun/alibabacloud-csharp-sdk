@@ -19,14 +19,6 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>BaseMedia</para>
-        /// </summary>
-        [NameInMap("EntityId")]
-        [Validation(Required=false)]
-        public string EntityId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
         /// <para>title = \&quot;中国\&quot; and utcCreate = [\&quot;1693367158561\&quot;,\&quot;1693367158562\&quot;]</para>
         /// </summary>
         [NameInMap("Match")]
@@ -56,14 +48,6 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [NameInMap("ScrollToken")]
         [Validation(Required=false)]
         public string ScrollToken { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>test-1</para>
-        /// </summary>
-        [NameInMap("SearchLibName")]
-        [Validation(Required=false)]
-        public string SearchLibName { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

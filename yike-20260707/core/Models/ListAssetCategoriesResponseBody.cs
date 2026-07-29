@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
-        public string Total { get; set; }
+        public long? Total { get; set; }
 
     }
 

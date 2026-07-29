@@ -8,10 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
-    public class GetMediaComprehensionJobRequest : TeaModel {
+    public class GetYikeJobCreditRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>68ca759e798b40b4903b255*******</para>
+        /// <para>ag_12412424****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

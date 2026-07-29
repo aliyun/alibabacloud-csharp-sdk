@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
-    public class SubmitMediaComprehensionJobResponseBody : TeaModel {
+    public class SubmitVideoTranslationJobResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
-        /// </summary>
-        [NameInMap("ErrorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>68ca759e798b40b4903b255********</para>
+        /// <para>vtj_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
@@ -27,7 +19,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
+        /// <para>request-id</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

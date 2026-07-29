@@ -8,18 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
-    public class SubmitMediaComprehensionJobResponseBody : TeaModel {
+    public class GetYikeJobCreditResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>success</para>
         /// </summary>
-        [NameInMap("ErrorCode")]
+        [NameInMap("CreditStatus")]
         [Validation(Required=false)]
-        public string ErrorCode { get; set; }
+        public string CreditStatus { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>68ca759e798b40b4903b255********</para>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("JobCreditCost")]
+        [Validation(Required=false)]
+        public double? JobCreditCost { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ag_12412424****</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
@@ -27,7 +35,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
+        /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

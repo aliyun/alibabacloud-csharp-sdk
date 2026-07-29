@@ -1023,6 +1023,12 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <para>查询媒资内容理解作业</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMediaComprehensionJobRequest
         /// </param>
@@ -1064,6 +1070,12 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <summary>
         /// <para>查询媒资内容理解作业</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMediaComprehensionJobRequest
@@ -1107,6 +1119,12 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <para>查询媒资内容理解作业</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMediaComprehensionJobRequest
         /// </param>
@@ -1124,6 +1142,12 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <summary>
         /// <para>查询媒资内容理解作业</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMediaComprehensionJobRequest
@@ -1264,6 +1288,230 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetVideoGenerationJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻主账户会员计划及积分情况</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeAccountCreditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeAccountCreditResponse
+        /// </returns>
+        public GetYikeAccountCreditResponse GetYikeAccountCreditWithOptions(GetYikeAccountCreditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeAccountCredit",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeAccountCreditResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻主账户会员计划及积分情况</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeAccountCreditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeAccountCreditResponse
+        /// </returns>
+        public async Task<GetYikeAccountCreditResponse> GetYikeAccountCreditWithOptionsAsync(GetYikeAccountCreditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeAccountCredit",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeAccountCreditResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻主账户会员计划及积分情况</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeAccountCreditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeAccountCreditResponse
+        /// </returns>
+        public GetYikeAccountCreditResponse GetYikeAccountCredit(GetYikeAccountCreditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetYikeAccountCreditWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻主账户会员计划及积分情况</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeAccountCreditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeAccountCreditResponse
+        /// </returns>
+        public async Task<GetYikeAccountCreditResponse> GetYikeAccountCreditAsync(GetYikeAccountCreditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetYikeAccountCreditWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一刻任务实际消耗积分</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeJobCreditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeJobCreditResponse
+        /// </returns>
+        public GetYikeJobCreditResponse GetYikeJobCreditWithOptions(GetYikeJobCreditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeJobCredit",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeJobCreditResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一刻任务实际消耗积分</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeJobCreditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeJobCreditResponse
+        /// </returns>
+        public async Task<GetYikeJobCreditResponse> GetYikeJobCreditWithOptionsAsync(GetYikeJobCreditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeJobCredit",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeJobCreditResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一刻任务实际消耗积分</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeJobCreditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeJobCreditResponse
+        /// </returns>
+        public GetYikeJobCreditResponse GetYikeJobCredit(GetYikeJobCreditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetYikeJobCreditWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一刻任务实际消耗积分</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeJobCreditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeJobCreditResponse
+        /// </returns>
+        public async Task<GetYikeJobCreditResponse> GetYikeJobCreditAsync(GetYikeJobCreditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetYikeJobCreditWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1657,10 +1905,6 @@ namespace AlibabaCloud.SDK.Yike20260707
             {
                 query["CategoryId"] = request.CategoryId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
-            {
-                query["EntityId"] = request.EntityId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
                 query["Match"] = request.Match;
@@ -1676,10 +1920,6 @@ namespace AlibabaCloud.SDK.Yike20260707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollToken))
             {
                 query["ScrollToken"] = request.ScrollToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
-            {
-                query["SearchLibName"] = request.SearchLibName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
@@ -1727,10 +1967,6 @@ namespace AlibabaCloud.SDK.Yike20260707
             {
                 query["CategoryId"] = request.CategoryId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
-            {
-                query["EntityId"] = request.EntityId;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Match))
             {
                 query["Match"] = request.Match;
@@ -1746,10 +1982,6 @@ namespace AlibabaCloud.SDK.Yike20260707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScrollToken))
             {
                 query["ScrollToken"] = request.ScrollToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchLibName))
-            {
-                query["SearchLibName"] = request.SearchLibName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
@@ -2007,6 +2239,12 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <para>提交媒资内容理解作业</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API用于根据提供的媒资文件（比如视频链接）进行内容理解。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitMediaComprehensionJobRequest
         /// </param>
@@ -2052,6 +2290,12 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <summary>
         /// <para>提交媒资内容理解作业</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API用于根据提供的媒资文件（比如视频链接）进行内容理解。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitMediaComprehensionJobRequest
@@ -2099,6 +2343,12 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <para>提交媒资内容理解作业</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API用于根据提供的媒资文件（比如视频链接）进行内容理解。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SubmitMediaComprehensionJobRequest
         /// </param>
@@ -2116,6 +2366,12 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// <summary>
         /// <para>提交媒资内容理解作业</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API用于根据提供的媒资文件（比如视频链接）进行内容理解。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitMediaComprehensionJobRequest
@@ -2328,6 +2584,238 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitVideoGenerationJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频翻译任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该 API 支持多种视频翻译功能，包括字幕翻译和声音翻译。</description></item>
+        /// <item><description><c>JobType</c> 参数定义了任务类型，如 <c>SubtitleTranslate</c>和<c>VoiceTranslate</c> 。</description></item>
+        /// <item><description><c>Input</c> 和 <c>Output</c> 参数分别指定了输入资源和输出路径。</description></item>
+        /// <item><description><c>JobParameters</c> 包含了语言配置和其他能力开关，如 <c>SourceLanguage</c>、<c>TargetLanguage</c>、<c>NeedDetext</c> 和 <c>NeedVisualTranslate</c> 等。</description></item>
+        /// <item><description><c>EditingConfig</c> 可以用来指定最终剪辑合成的样式配置。</description></item>
+        /// <item><description><c>ClientToken</c> 是一个可选参数，用于保证请求的幂等性。</description></item>
+        /// <item><description>请确保所有必填字段都已正确填写，否则可能会导致请求失败。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoTranslationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoTranslationJobResponse
+        /// </returns>
+        public SubmitVideoTranslationJobResponse SubmitVideoTranslationJobWithOptions(SubmitVideoTranslationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParameters))
+            {
+                body["JobParameters"] = request.JobParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
+            {
+                body["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                body["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                body["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVideoTranslationJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVideoTranslationJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频翻译任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该 API 支持多种视频翻译功能，包括字幕翻译和声音翻译。</description></item>
+        /// <item><description><c>JobType</c> 参数定义了任务类型，如 <c>SubtitleTranslate</c>和<c>VoiceTranslate</c> 。</description></item>
+        /// <item><description><c>Input</c> 和 <c>Output</c> 参数分别指定了输入资源和输出路径。</description></item>
+        /// <item><description><c>JobParameters</c> 包含了语言配置和其他能力开关，如 <c>SourceLanguage</c>、<c>TargetLanguage</c>、<c>NeedDetext</c> 和 <c>NeedVisualTranslate</c> 等。</description></item>
+        /// <item><description><c>EditingConfig</c> 可以用来指定最终剪辑合成的样式配置。</description></item>
+        /// <item><description><c>ClientToken</c> 是一个可选参数，用于保证请求的幂等性。</description></item>
+        /// <item><description>请确保所有必填字段都已正确填写，否则可能会导致请求失败。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoTranslationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoTranslationJobResponse
+        /// </returns>
+        public async Task<SubmitVideoTranslationJobResponse> SubmitVideoTranslationJobWithOptionsAsync(SubmitVideoTranslationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["Input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParameters))
+            {
+                body["JobParameters"] = request.JobParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobType))
+            {
+                body["JobType"] = request.JobType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Output))
+            {
+                body["Output"] = request.Output;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                body["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVideoTranslationJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVideoTranslationJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频翻译任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该 API 支持多种视频翻译功能，包括字幕翻译和声音翻译。</description></item>
+        /// <item><description><c>JobType</c> 参数定义了任务类型，如 <c>SubtitleTranslate</c>和<c>VoiceTranslate</c> 。</description></item>
+        /// <item><description><c>Input</c> 和 <c>Output</c> 参数分别指定了输入资源和输出路径。</description></item>
+        /// <item><description><c>JobParameters</c> 包含了语言配置和其他能力开关，如 <c>SourceLanguage</c>、<c>TargetLanguage</c>、<c>NeedDetext</c> 和 <c>NeedVisualTranslate</c> 等。</description></item>
+        /// <item><description><c>EditingConfig</c> 可以用来指定最终剪辑合成的样式配置。</description></item>
+        /// <item><description><c>ClientToken</c> 是一个可选参数，用于保证请求的幂等性。</description></item>
+        /// <item><description>请确保所有必填字段都已正确填写，否则可能会导致请求失败。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoTranslationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoTranslationJobResponse
+        /// </returns>
+        public SubmitVideoTranslationJobResponse SubmitVideoTranslationJob(SubmitVideoTranslationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitVideoTranslationJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交视频翻译任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该 API 支持多种视频翻译功能，包括字幕翻译和声音翻译。</description></item>
+        /// <item><description><c>JobType</c> 参数定义了任务类型，如 <c>SubtitleTranslate</c>和<c>VoiceTranslate</c> 。</description></item>
+        /// <item><description><c>Input</c> 和 <c>Output</c> 参数分别指定了输入资源和输出路径。</description></item>
+        /// <item><description><c>JobParameters</c> 包含了语言配置和其他能力开关，如 <c>SourceLanguage</c>、<c>TargetLanguage</c>、<c>NeedDetext</c> 和 <c>NeedVisualTranslate</c> 等。</description></item>
+        /// <item><description><c>EditingConfig</c> 可以用来指定最终剪辑合成的样式配置。</description></item>
+        /// <item><description><c>ClientToken</c> 是一个可选参数，用于保证请求的幂等性。</description></item>
+        /// <item><description>请确保所有必填字段都已正确填写，否则可能会导致请求失败。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoTranslationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoTranslationJobResponse
+        /// </returns>
+        public async Task<SubmitVideoTranslationJobResponse> SubmitVideoTranslationJobAsync(SubmitVideoTranslationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitVideoTranslationJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

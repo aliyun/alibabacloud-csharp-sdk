@@ -21,14 +21,6 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [Validation(Required=false)]
         public List<SearchMediaResponseBodyMediaInfoList> MediaInfoList { get; set; }
         public class SearchMediaResponseBodyMediaInfoList : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>{\&quot;intField1\&quot;:12,\&quot;strField1\&quot;:\&quot;abc\&quot;}</para>
-            /// </summary>
-            [NameInMap("CustomFields")]
-            [Validation(Required=false)]
-            public string CustomFields { get; set; }
-
             [NameInMap("FileInfoList")]
             [Validation(Required=false)]
             public List<SearchMediaResponseBodyMediaInfoListFileInfoList> FileInfoList { get; set; }
@@ -342,76 +334,6 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     [NameInMap("EntityId")]
                     [Validation(Required=false)]
                     public string EntityId { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>system</para>
-                    /// </summary>
-                    [NameInMap("Type")]
-                    [Validation(Required=false)]
-                    public string Type { get; set; }
-
-                }
-
-                [NameInMap("MediaExtraInfo")]
-                [Validation(Required=false)]
-                public SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo MediaExtraInfo { get; set; }
-                public class SearchMediaResponseBodyMediaInfoListMediaDynamicInfoMediaExtraInfo : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para><em><b>cd4754a89b6</b></em>*</para>
-                    /// </summary>
-                    [NameInMap("AiAuditJobId")]
-                    [Validation(Required=false)]
-                    public string AiAuditJobId { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>normal</para>
-                    /// </summary>
-                    [NameInMap("AiAuditLabel")]
-                    [Validation(Required=false)]
-                    public string AiAuditLabel { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>Passed</para>
-                    /// </summary>
-                    [NameInMap("AiAuditResult")]
-                    [Validation(Required=false)]
-                    public string AiAuditResult { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>Success</para>
-                    /// </summary>
-                    [NameInMap("AiAuditStatus")]
-                    [Validation(Required=false)]
-                    public string AiAuditStatus { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>*<em><b>aed4739c394b38c</b></em></para>
-                    /// </summary>
-                    [NameInMap("AiAuditTemplate")]
-                    [Validation(Required=false)]
-                    public string AiAuditTemplate { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>Init</para>
-                    /// </summary>
-                    [NameInMap("ManualAuditResult")]
-                    [Validation(Required=false)]
-                    public string ManualAuditResult { get; set; }
-
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>Init</para>
-                    /// </summary>
-                    [NameInMap("ManualAuditStatus")]
-                    [Validation(Required=false)]
-                    public string ManualAuditStatus { get; set; }
 
                 }
 
