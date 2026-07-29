@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -16,6 +13,9 @@ namespace AlibabaCloud.SDK.Gdb20190903.Models
         [Validation(Required=false)]
         public string ConnectionStringPrefix { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }

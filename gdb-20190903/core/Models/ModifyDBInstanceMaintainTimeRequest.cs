@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Gdb20190903.Models
 {
     public class ModifyDBInstanceMaintainTimeRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("MaintainTime")]
         [Validation(Required=false)]
         public string MaintainTime { get; set; }

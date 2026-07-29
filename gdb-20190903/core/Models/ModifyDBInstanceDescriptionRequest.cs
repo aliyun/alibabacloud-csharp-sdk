@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Gdb20190903.Models
 {
     public class ModifyDBInstanceDescriptionRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }

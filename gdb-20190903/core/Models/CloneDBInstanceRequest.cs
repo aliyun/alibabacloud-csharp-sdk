@@ -25,10 +25,16 @@ namespace AlibabaCloud.SDK.Gdb20190903.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBInstanceCategory")]
         [Validation(Required=false)]
         public string DBInstanceCategory { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBInstanceClass")]
         [Validation(Required=false)]
         public string DBInstanceClass { get; set; }
@@ -37,18 +43,30 @@ namespace AlibabaCloud.SDK.Gdb20190903.Models
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBInstanceNetworkType")]
         [Validation(Required=false)]
         public string DBInstanceNetworkType { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBInstanceVersion")]
         [Validation(Required=false)]
         public string DBInstanceVersion { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBNodeStorage")]
         [Validation(Required=false)]
         public string DBNodeStorage { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBNodeStorageType")]
         [Validation(Required=false)]
         public string DBNodeStorageType { get; set; }
@@ -61,6 +79,9 @@ namespace AlibabaCloud.SDK.Gdb20190903.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
@@ -69,6 +90,9 @@ namespace AlibabaCloud.SDK.Gdb20190903.Models
         [Validation(Required=false)]
         public string Period { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -97,6 +121,9 @@ namespace AlibabaCloud.SDK.Gdb20190903.Models
         [Validation(Required=false)]
         public string SecurityIPList { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("SourceDBInstanceId")]
         [Validation(Required=false)]
         public string SourceDBInstanceId { get; set; }

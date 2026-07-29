@@ -9,14 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Gdb20190903.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("AccountPassword")]
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }

@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Gdb20190903.Models
         [Validation(Required=false)]
         public string DBInstanceIPArrayName { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
@@ -41,6 +44,9 @@ namespace AlibabaCloud.SDK.Gdb20190903.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("SecurityIps")]
         [Validation(Required=false)]
         public string SecurityIps { get; set; }

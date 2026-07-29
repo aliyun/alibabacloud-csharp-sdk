@@ -33,6 +33,9 @@ namespace AlibabaCloud.SDK.Gdb20190903.Models
         [Validation(Required=false)]
         public string SecurityToken { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }

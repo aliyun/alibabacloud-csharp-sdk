@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Gdb20190903.Models
 {
     public class DescribeResourceUsageRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
