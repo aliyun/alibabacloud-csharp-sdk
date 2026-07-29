@@ -2660,7 +2660,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determines whether an instance has the feature of a specific module.</para>
+        /// <para>Determines whether an instance has the capability of a specific module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2689,6 +2689,14 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ModuleKey"] = request.ModuleKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceLabelKey))
+            {
+                query["ResourceLabelKey"] = request.ResourceLabelKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceLabelValue))
+            {
+                query["ResourceLabelValue"] = request.ResourceLabelValue;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubFeatureKey))
             {
                 query["SubFeatureKey"] = request.SubFeatureKey;
@@ -2714,7 +2722,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determines whether an instance has the feature of a specific module.</para>
+        /// <para>Determines whether an instance has the capability of a specific module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2743,6 +2751,14 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ModuleKey"] = request.ModuleKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceLabelKey))
+            {
+                query["ResourceLabelKey"] = request.ResourceLabelKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceLabelValue))
+            {
+                query["ResourceLabelValue"] = request.ResourceLabelValue;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubFeatureKey))
             {
                 query["SubFeatureKey"] = request.SubFeatureKey;
@@ -2768,7 +2784,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determines whether an instance has the feature of a specific module.</para>
+        /// <para>Determines whether an instance has the capability of a specific module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2786,7 +2802,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determines whether an instance has the feature of a specific module.</para>
+        /// <para>Determines whether an instance has the capability of a specific module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27696,7 +27712,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve information about one or more EIAM applications with paging.</para>
+        /// <para>Queries information about one or more EIAM applications by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27728,6 +27744,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationName))
             {
                 query["ApplicationName"] = request.ApplicationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationTemplateId))
+            {
+                query["ApplicationTemplateId"] = request.ApplicationTemplateId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationType))
             {
@@ -27794,7 +27814,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve information about one or more EIAM applications with paging.</para>
+        /// <para>Queries information about one or more EIAM applications by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27826,6 +27846,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationName))
             {
                 query["ApplicationName"] = request.ApplicationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationTemplateId))
+            {
+                query["ApplicationTemplateId"] = request.ApplicationTemplateId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationType))
             {
@@ -27892,7 +27916,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve information about one or more EIAM applications with paging.</para>
+        /// <para>Queries information about one or more EIAM applications by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27910,7 +27934,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve information about one or more EIAM applications with paging.</para>
+        /// <para>Queries information about one or more EIAM applications by using paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33401,6 +33425,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceManaged))
+            {
+                query["ServiceManaged"] = request.ServiceManaged;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -33462,6 +33490,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceManaged))
+            {
+                query["ServiceManaged"] = request.ServiceManaged;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -33732,7 +33764,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the network endpoints for an IDaaS EIAM instance.</para>
+        /// <para>Queries the list of network access endpoints under an IDaaS EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33798,7 +33830,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the network endpoints for an IDaaS EIAM instance.</para>
+        /// <para>Queries the list of network access endpoints under an IDaaS EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33864,7 +33896,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the network endpoints for an IDaaS EIAM instance.</para>
+        /// <para>Queries the list of network access endpoints under an IDaaS EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33882,7 +33914,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the network endpoints for an IDaaS EIAM instance.</para>
+        /// <para>Queries the list of network access endpoints under an IDaaS EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

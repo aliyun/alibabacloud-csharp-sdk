@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string ModuleKey { get; set; }
 
+        [NameInMap("ResourceLabelKey")]
+        [Validation(Required=false)]
+        public string ResourceLabelKey { get; set; }
+
+        [NameInMap("ResourceLabelValue")]
+        [Validation(Required=false)]
+        public string ResourceLabelValue { get; set; }
+
         /// <summary>
         /// <para>The tertiary module identifier.</para>
         /// 

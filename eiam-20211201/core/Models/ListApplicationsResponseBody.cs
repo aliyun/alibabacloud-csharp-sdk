@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ClientId { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was created, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The application creation time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LogoUrl { get; set; }
 
             /// <summary>
-            /// <para>The ServiceCode of the Alibaba Cloud service that manages the application template.</para>
+            /// <para>The ServiceCode of the cloud service that manages the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rpa</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application template is managed by an Alibaba Cloud service.</para>
+            /// <para>Specifies whether the application template is managed by a cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// <para>The single sign-on (SSO) logon protocol. Valid values:</para>
+            /// <para>The single sign-on protocol. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>saml2: SAML 2.0 protocol.</description></item>
             /// <item><description>oidc: OpenID Connect protocol.</description></item>

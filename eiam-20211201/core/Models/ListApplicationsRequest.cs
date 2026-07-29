@@ -50,6 +50,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationName { get; set; }
 
         /// <summary>
+        /// <para>The application template ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>apt_ramuser_xxxx</para>
+        /// </summary>
+        [NameInMap("ApplicationTemplateId")]
+        [Validation(Required=false)]
+        public string ApplicationTemplateId { get; set; }
+
+        /// <summary>
         /// <para>The application access authorization type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>authorize_required: Explicit authorization is required for access.</description></item>
@@ -73,7 +83,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The custom field identifier. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>agent_type: the agent type.</description></item>
+            /// <item><description>agent_type: The agent type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,6 +126,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string M2MClientStatus { get; set; }
 
+        /// <summary>
+        /// <para>The ServiceCode of the cloud service that manages the application template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>waf</para>
+        /// </summary>
         [NameInMap("ManagedServiceCode")]
         [Validation(Required=false)]
         public string ManagedServiceCode { get; set; }
@@ -150,12 +166,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string ResourceServerStatus { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the application template is managed by a cloud service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ServiceManaged")]
         [Validation(Required=false)]
         public bool? ServiceManaged { get; set; }
 
         /// <summary>
-        /// <para>The SSO type filter condition. Multiple types can be separated by commas, such as oauth2/m2m,oidc+oauth2/m2m.</para>
+        /// <para>The SSO type filter condition. Multiple types can be separated by commas. Example: oauth2/m2m,oidc+oauth2/m2m.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oauth2/m2m</para>

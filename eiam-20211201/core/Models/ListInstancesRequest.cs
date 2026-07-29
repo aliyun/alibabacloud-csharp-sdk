@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        [NameInMap("ServiceManaged")]
+        [Validation(Required=false)]
+        public bool? ServiceManaged { get; set; }
+
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">

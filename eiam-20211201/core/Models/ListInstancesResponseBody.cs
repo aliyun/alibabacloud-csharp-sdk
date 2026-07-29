@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PrimaryInstanceRegionId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the disaster recovery data replication was created, in UNIX timestamp format. Unit: milliseconds.</para>
+                /// <para>The creation time of the disaster recovery data replication, in UNIX timestamp format. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1778499337000</para>
@@ -183,6 +183,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
             /// </summary>
             [NameInMap("ServiceManaged")]
             [Validation(Required=false)]

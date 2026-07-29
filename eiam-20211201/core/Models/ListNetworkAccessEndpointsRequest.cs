@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The maximum value is 100.</para>
+        /// <para>The maximum number of entries per page for a paged query. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,16 +31,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The status of the network endpoint. Valid values:</para>
+        /// <para>The status of the network access endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>pending: The endpoint is pending initialization.</para>
-        /// </description></item>
-        /// <item><description><para>creating: The endpoint is being created.</para>
-        /// </description></item>
-        /// <item><description><para>running: The endpoint is running.</para>
-        /// </description></item>
-        /// <item><description><para>deleting: The endpoint is being deleted.</para>
-        /// </description></item>
+        /// <item><description>pending: Pending initialization.</description></item>
+        /// <item><description>creating: Being created.</description></item>
+        /// <item><description>running: Running.</description></item>
+        /// <item><description>deleting: Being deleted.</description></item>
         /// </list>
         /// <para>This parameter does not take effect when NetworkAccessEndpointType is set to shared.</para>
         /// 
@@ -52,14 +48,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the network endpoint. Valid values:</para>
+        /// <para>The type of the network access endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>shared: a shared network endpoint.</para>
-        /// </description></item>
-        /// <item><description><para>private: a private network endpoint.</para>
-        /// </description></item>
+        /// <item><description>shared: shared network access endpoint.</description></item>
+        /// <item><description>private: dedicated network access endpoint.</description></item>
         /// </list>
-        /// <para>The default value is private.</para>
+        /// <para>Default value: private.</para>
         /// 
         /// <b>Example:</b>
         /// <para>private</para>
@@ -69,7 +63,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointType { get; set; }
 
         /// <summary>
-        /// <para>The token used for the next query. Set this parameter to the NextToken value returned from the previous API call. Leave this parameter empty for the first query.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -79,7 +73,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the private network endpoint is connected. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</para>
+        /// <para>The VPC ID of the dedicated network access endpoint. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-examplexxx</para>
@@ -89,7 +83,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPC to which the private network endpoint is connected. The value of this parameter must be a region returned by the ListNetworkAccessEndpointAvailableRegions operation. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</para>
+        /// <para>The region of the VPC for the dedicated network access endpoint. The region must be one of the regions returned by the ListNetworkAccessEndpointAvailableRegions operation. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

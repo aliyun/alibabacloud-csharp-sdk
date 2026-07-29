@@ -1,3 +1,15 @@
+2026-07-29 Version: 1.25.4
+- Update API CheckInstanceModuleStatus: add request parameters ResourceLabelKey.
+- Update API CheckInstanceModuleStatus: add request parameters ResourceLabelValue.
+- Update API GetNetworkAccessEndpoint: add response parameters Body.NetworkAccessEndpoint.BackupVpcEndpoint.
+- Update API ListApplications: add request parameters ApplicationTemplateId.
+- Update API ListInstances: add request parameters ServiceManaged.
+- Update API ListNetworkAccessEndpoints: add response parameters Body.NetworkAccessEndpoints.$.BackupVpcEndpoint.
+- Update API ListNetworkAccessPaths: add response parameters Body.NetworkAccessPaths.$.CrossRegionReplicationRole.
+- Update API ListNetworkAccessPaths: add response parameters Body.NetworkAccessPaths.$.VpcId.
+- Update API ListNetworkAccessPaths: add response parameters Body.NetworkAccessPaths.$.VpcRegionId.
+
+
 2026-07-15 Version: 1.25.3
 - Update API GenerateOauthToken: add request parameters GrantType.
 - Update API GenerateOauthToken: add request parameters RequestedTokenType.

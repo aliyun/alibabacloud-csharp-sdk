@@ -10,14 +10,44 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListNetworkAccessEndpointsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A collection of network endpoints.</para>
+        /// <para>The list of network access endpoints.</para>
         /// </summary>
         [NameInMap("NetworkAccessEndpoints")]
         [Validation(Required=false)]
         public List<ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints> NetworkAccessEndpoints { get; set; }
         public class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints : TeaModel {
+            [NameInMap("BackupVpcEndpoint")]
+            [Validation(Required=false)]
+            public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint BackupVpcEndpoint { get; set; }
+            public class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint : TeaModel {
+                [NameInMap("BackupEgressPrivateIpAddresses")]
+                [Validation(Required=false)]
+                public List<string> BackupEgressPrivateIpAddresses { get; set; }
+
+                [NameInMap("BackupEgressPublicIpAddresses")]
+                [Validation(Required=false)]
+                public List<string> BackupEgressPublicIpAddresses { get; set; }
+
+                [NameInMap("BackupSecurityGroupId")]
+                [Validation(Required=false)]
+                public string BackupSecurityGroupId { get; set; }
+
+                [NameInMap("BackupVSwitchIds")]
+                [Validation(Required=false)]
+                public List<string> BackupVSwitchIds { get; set; }
+
+                [NameInMap("BackupVpcId")]
+                [Validation(Required=false)]
+                public string BackupVpcId { get; set; }
+
+                [NameInMap("BackupVpcRegionId")]
+                [Validation(Required=false)]
+                public string BackupVpcRegionId { get; set; }
+
+            }
+
             /// <summary>
-            /// <para>The time when the network endpoint was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The creation time of the network access endpoint. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -37,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The network endpoint ID.</para>
+            /// <para>The network access endpoint ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nae_examplexxx</para>
@@ -47,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The name of the network endpoint.</para>
+            /// <para>The network access endpoint name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC access endpoint for xx service</para>
@@ -57,12 +87,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointName { get; set; }
 
             /// <summary>
-            /// <para>The type of the network endpoint. Valid values:</para>
+            /// <para>The type of the network access endpoint. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>shared: a shared network endpoint.</para>
-            /// </description></item>
-            /// <item><description><para>private: a private network endpoint.</para>
-            /// </description></item>
+            /// <item><description>shared: Shared network access endpoint.</description></item>
+            /// <item><description>private: Dedicated network access endpoint.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +101,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group used by the private network endpoint.</para>
+            /// <para>The security group ID used by the dedicated network access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-examplexxx</para>
@@ -83,16 +111,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The status of the network endpoint. Valid values:</para>
+            /// <para>The status of the network access endpoint. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>pending: The endpoint is pending initialization.</para>
-            /// </description></item>
-            /// <item><description><para>creating: The endpoint is being created.</para>
-            /// </description></item>
-            /// <item><description><para>running: The endpoint is running.</para>
-            /// </description></item>
-            /// <item><description><para>deleting: The endpoint is being deleted.</para>
-            /// </description></item>
+            /// <item><description>pending: Pending initialization.</description></item>
+            /// <item><description>creating: Being created.</description></item>
+            /// <item><description>running: Running.</description></item>
+            /// <item><description>deleting: Being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,7 +127,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the network endpoint was last updated. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The last update time of the network access endpoint. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -113,7 +137,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>A list of vSwitches to which the private network endpoint is connected.</para>
+            /// <para>The list of vSwitches for the dedicated network access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-examplexxx</para>
@@ -123,7 +147,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC to which the private network endpoint is connected.</para>
+            /// <para>The VPC ID of the dedicated network access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-examplexxx</para>
@@ -133,7 +157,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the VPC to which the private network endpoint is connected.</para>
+            /// <para>The region of the VPC for the dedicated network access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -145,7 +169,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The token returned for the next query.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -165,7 +189,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
