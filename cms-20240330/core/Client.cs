@@ -4028,6 +4028,204 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a ServiceTask (heap dump or LiveDebug diagnostic task) for a specified application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a service task for an application in a specified workspace.
+        /// Common use cases:</para>
+        /// <list type="bullet">
+        /// <item><description>heapdump: Triggers a JVM heap dump.</description></item>
+        /// <item><description>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</description></item>
+        /// <item><description>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</description></item>
+        /// <item><description>LiveDebug Code Replace: Performs hot code replacement.
+        /// After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceTaskResponse
+        /// </returns>
+        public CreateServiceTaskResponse CreateServiceTaskWithOptions(string workspace, string serviceId, CreateServiceTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
+            {
+                body["ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskConfig))
+            {
+                body["taskConfig"] = request.TaskConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceTask",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/serviceTask/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/task",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a ServiceTask (heap dump or LiveDebug diagnostic task) for a specified application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a service task for an application in a specified workspace.
+        /// Common use cases:</para>
+        /// <list type="bullet">
+        /// <item><description>heapdump: Triggers a JVM heap dump.</description></item>
+        /// <item><description>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</description></item>
+        /// <item><description>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</description></item>
+        /// <item><description>LiveDebug Code Replace: Performs hot code replacement.
+        /// After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceTaskResponse
+        /// </returns>
+        public async Task<CreateServiceTaskResponse> CreateServiceTaskWithOptionsAsync(string workspace, string serviceId, CreateServiceTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
+            {
+                body["ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskConfig))
+            {
+                body["taskConfig"] = request.TaskConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceTask",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/serviceTask/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/task",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a ServiceTask (heap dump or LiveDebug diagnostic task) for a specified application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a service task for an application in a specified workspace.
+        /// Common use cases:</para>
+        /// <list type="bullet">
+        /// <item><description>heapdump: Triggers a JVM heap dump.</description></item>
+        /// <item><description>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</description></item>
+        /// <item><description>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</description></item>
+        /// <item><description>LiveDebug Code Replace: Performs hot code replacement.
+        /// After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceTaskResponse
+        /// </returns>
+        public CreateServiceTaskResponse CreateServiceTask(string workspace, string serviceId, CreateServiceTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateServiceTaskWithOptions(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a ServiceTask (heap dump or LiveDebug diagnostic task) for a specified application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a service task for an application in a specified workspace.
+        /// Common use cases:</para>
+        /// <list type="bullet">
+        /// <item><description>heapdump: Triggers a JVM heap dump.</description></item>
+        /// <item><description>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</description></item>
+        /// <item><description>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</description></item>
+        /// <item><description>LiveDebug Code Replace: Performs hot code replacement.
+        /// After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceTaskResponse
+        /// </returns>
+        public async Task<CreateServiceTaskResponse> CreateServiceTaskAsync(string workspace, string serviceId, CreateServiceTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateServiceTaskWithOptionsAsync(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</para>
         /// </summary>
         /// 
@@ -7242,6 +7440,164 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteServiceRecordWithOptionsAsync(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ServiceTask under a specified application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified service task by taskId.
+        /// heapdump: Simultaneously deletes the corresponding heap dump record.
+        /// LiveDebug: After deleting the task record, synchronously updates the live_debug aggregation configuration on ConfigServer.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceTaskResponse
+        /// </returns>
+        public DeleteServiceTaskResponse DeleteServiceTaskWithOptions(string workspace, string serviceId, string taskId, DeleteServiceTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceTask",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/serviceTask/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/task/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ServiceTask under a specified application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified service task by taskId.
+        /// heapdump: Simultaneously deletes the corresponding heap dump record.
+        /// LiveDebug: After deleting the task record, synchronously updates the live_debug aggregation configuration on ConfigServer.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceTaskResponse
+        /// </returns>
+        public async Task<DeleteServiceTaskResponse> DeleteServiceTaskWithOptionsAsync(string workspace, string serviceId, string taskId, DeleteServiceTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceTask",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/serviceTask/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/task/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ServiceTask under a specified application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified service task by taskId.
+        /// heapdump: Simultaneously deletes the corresponding heap dump record.
+        /// LiveDebug: After deleting the task record, synchronously updates the live_debug aggregation configuration on ConfigServer.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceTaskResponse
+        /// </returns>
+        public DeleteServiceTaskResponse DeleteServiceTask(string workspace, string serviceId, string taskId, DeleteServiceTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteServiceTaskWithOptions(workspace, serviceId, taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ServiceTask under a specified application.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified service task by taskId.
+        /// heapdump: Simultaneously deletes the corresponding heap dump record.
+        /// LiveDebug: After deleting the task record, synchronously updates the live_debug aggregation configuration on ConfigServer.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceTaskResponse
+        /// </returns>
+        public async Task<DeleteServiceTaskResponse> DeleteServiceTaskAsync(string workspace, string serviceId, string taskId, DeleteServiceTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteServiceTaskWithOptionsAsync(workspace, serviceId, taskId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12600,6 +12956,160 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetServiceRecordWithOptionsAsync(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ServiceTask</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据 taskId 查询单个服务任务详情。
+        /// 返回内容随 type 变化：heapdump 返回堆转储任务信息；LiveDebug 返回任务记录及 taskConfig（extraInfo）等字段。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceTaskResponse
+        /// </returns>
+        public GetServiceTaskResponse GetServiceTaskWithOptions(string workspace, string serviceId, string taskId, GetServiceTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceTask",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/serviceTask/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/task/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ServiceTask</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据 taskId 查询单个服务任务详情。
+        /// 返回内容随 type 变化：heapdump 返回堆转储任务信息；LiveDebug 返回任务记录及 taskConfig（extraInfo）等字段。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceTaskResponse
+        /// </returns>
+        public async Task<GetServiceTaskResponse> GetServiceTaskWithOptionsAsync(string workspace, string serviceId, string taskId, GetServiceTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceTask",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/serviceTask/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/task/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ServiceTask</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据 taskId 查询单个服务任务详情。
+        /// 返回内容随 type 变化：heapdump 返回堆转储任务信息；LiveDebug 返回任务记录及 taskConfig（extraInfo）等字段。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceTaskResponse
+        /// </returns>
+        public GetServiceTaskResponse GetServiceTask(string workspace, string serviceId, string taskId, GetServiceTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetServiceTaskWithOptions(workspace, serviceId, taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询ServiceTask</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据 taskId 查询单个服务任务详情。
+        /// 返回内容随 type 变化：heapdump 返回堆转储任务信息；LiveDebug 返回任务记录及 taskConfig（extraInfo）等字段。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceTaskResponse
+        /// </returns>
+        public async Task<GetServiceTaskResponse> GetServiceTaskAsync(string workspace, string serviceId, string taskId, GetServiceTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetServiceTaskWithOptionsAsync(workspace, serviceId, taskId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18138,6 +18648,204 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListServiceRecordsWithOptionsAsync(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举ServiceTask</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>按任务类型列举应用下的服务任务。</para>
+        /// <list type="bullet">
+        /// <item><description>type=heapdump：返回堆转储任务列表</description></item>
+        /// <item><description>type=pprof：返回 pprof dump 列表（需配合 searchCondition）</description></item>
+        /// <item><description>type=live_debug_*：返回对应 LiveDebug 任务列表
+        /// 支持 nextToken / maxResults 分页，以及 searchCondition 过滤。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListServiceTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceTaskResponse
+        /// </returns>
+        public ListServiceTaskResponse ListServiceTaskWithOptions(string workspace, string serviceId, ListServiceTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchCondition))
+            {
+                query["searchCondition"] = request.SearchCondition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceTask",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/serviceTask/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/tasks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举ServiceTask</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>按任务类型列举应用下的服务任务。</para>
+        /// <list type="bullet">
+        /// <item><description>type=heapdump：返回堆转储任务列表</description></item>
+        /// <item><description>type=pprof：返回 pprof dump 列表（需配合 searchCondition）</description></item>
+        /// <item><description>type=live_debug_*：返回对应 LiveDebug 任务列表
+        /// 支持 nextToken / maxResults 分页，以及 searchCondition 过滤。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListServiceTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceTaskResponse
+        /// </returns>
+        public async Task<ListServiceTaskResponse> ListServiceTaskWithOptionsAsync(string workspace, string serviceId, ListServiceTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchCondition))
+            {
+                query["searchCondition"] = request.SearchCondition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceTask",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/serviceTask/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/tasks",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举ServiceTask</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>按任务类型列举应用下的服务任务。</para>
+        /// <list type="bullet">
+        /// <item><description>type=heapdump：返回堆转储任务列表</description></item>
+        /// <item><description>type=pprof：返回 pprof dump 列表（需配合 searchCondition）</description></item>
+        /// <item><description>type=live_debug_*：返回对应 LiveDebug 任务列表
+        /// 支持 nextToken / maxResults 分页，以及 searchCondition 过滤。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListServiceTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceTaskResponse
+        /// </returns>
+        public ListServiceTaskResponse ListServiceTask(string workspace, string serviceId, ListServiceTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListServiceTaskWithOptions(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举ServiceTask</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>按任务类型列举应用下的服务任务。</para>
+        /// <list type="bullet">
+        /// <item><description>type=heapdump：返回堆转储任务列表</description></item>
+        /// <item><description>type=pprof：返回 pprof dump 列表（需配合 searchCondition）</description></item>
+        /// <item><description>type=live_debug_*：返回对应 LiveDebug 任务列表
+        /// 支持 nextToken / maxResults 分页，以及 searchCondition 过滤。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListServiceTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceTaskResponse
+        /// </returns>
+        public async Task<ListServiceTaskResponse> ListServiceTaskAsync(string workspace, string serviceId, ListServiceTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListServiceTaskWithOptionsAsync(workspace, serviceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

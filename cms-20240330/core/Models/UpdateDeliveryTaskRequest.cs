@@ -27,18 +27,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, string> ExternalLabels { get; set; }
 
         /// <summary>
-        /// <para>The metric filter conditions. The entire value is replaced and not incrementally merged.</para>
+        /// <para>The metric filter conditions. The entire value is replaced and incremental merging is not performed.</para>
         /// </summary>
         [NameInMap("labelFilters")]
         [Validation(Required=false)]
         public Dictionary<string, string> LabelFilters { get; set; }
 
         /// <summary>
-        /// <para>The metric filtering mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Deny: denied.</description></item>
-        /// <item><description>Allow: allowed.</description></item>
-        /// </list>
+        /// <para>The metric filtering mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Deny</para>
@@ -65,19 +61,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<UpdateDeliveryTaskRequestSinkList> SinkList { get; set; }
         public class UpdateDeliveryTaskRequestSinkList : TeaModel {
             /// <summary>
-            /// <para>The detailed configuration of the delivery target. The meanings of the key/value pairs vary depending on the sinkType.</para>
+            /// <para>The detailed configuration of the delivery target. The meanings of key/value pairs vary depending on the sinkType.</para>
             /// </summary>
             [NameInMap("sinkConfigs")]
             [Validation(Required=false)]
             public Dictionary<string, string> SinkConfigs { get; set; }
 
             /// <summary>
-            /// <para>The delivery target type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>AcsMaxCompute: MaxCompute.</description></item>
-            /// <item><description>AcsKafka: Message Queue for Apache Kafka.</description></item>
-            /// <item><description>Prometheus: Managed Service for Prometheus.</description></item>
-            /// </list>
+            /// <para>The delivery target type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Prometheus</para>
@@ -92,11 +83,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The task status. This parameter is used to start or stop the task. Valid values:</para>
+        /// <para>The task status. This parameter is used to start or stop a task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Running: running.</description></item>
-        /// <item><description>Enable: enabled.</description></item>
-        /// <item><description>Disable: disabled.</description></item>
+        /// <item><description>Enable: enables the task.</description></item>
+        /// <item><description>Disable: disables the task.</description></item>
+        /// <item><description>Running: the task is running.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TaskDescription { get; set; }
 
         /// <summary>
-        /// <para>The task name. The name can contain letters, digits, underscores (_), and hyphens (-), and can also contain Chinese characters.</para>
+        /// <para>The task name. The name can contain letters, digits, underscores (_), and hyphens (-), and can be in Chinese.</para>
         /// 
         /// <b>Example:</b>
         /// <para>new-task-name</para>
