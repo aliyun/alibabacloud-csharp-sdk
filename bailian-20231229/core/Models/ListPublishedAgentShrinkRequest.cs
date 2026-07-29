@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
-    public class ListPublishedAgentRequest : TeaModel {
+    public class ListPublishedAgentShrinkRequest : TeaModel {
         [NameInMap("pageNo")]
         [Validation(Required=false)]
         public int? PageNo { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         [NameInMap("subTypes")]
         [Validation(Required=false)]
-        public List<string> SubTypes { get; set; }
+        public string SubTypesShrink { get; set; }
 
     }
 

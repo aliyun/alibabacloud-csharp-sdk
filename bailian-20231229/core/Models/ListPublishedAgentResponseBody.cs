@@ -137,6 +137,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
+                [NameInMap("description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
                 [NameInMap("instructions")]
                 [Validation(Required=false)]
                 public string Instructions { get; set; }
@@ -148,6 +152,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("subType")]
+                [Validation(Required=false)]
+                public string SubType { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public int? Type { get; set; }
 
             }
 

@@ -3728,16 +3728,16 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除连接器</para>
+        /// <para>Deletes a connector.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>RAM用户（子账号）需要首先获取阿里云百炼的<a href="https://help.aliyun.com/document_detail/2848578.html">API权限</a>（需要<c>AliyunBailianDataFullAccess</c>，已包括sfm:DeleteConnector权限点），并<a href="https://help.aliyun.com/document_detail/2851098.html">加入一个业务空间</a>后，方可调用本接口。阿里云账号（主账号）可直接调用无须授权。建议您通过最新版<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>来调用本接口。</description></item>
-        /// <item><description>本接口不具备幂等性。
-        /// <b>限流说明：</b>
-        /// 本接口频繁调用会被限流，频率请勿超过5次/秒。如遇限流，请稍后重试。</description></item>
+        /// <item><description>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <c>AliyunBailianDataFullAccess</c>, which includes the sfm:DeleteConnector permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</description></item>
+        /// <item><description>This operation is not idempotent.
+        /// <b>Throttling:</b>
+        /// This operation is throttled if called too frequently. Do not exceed 5 calls per second. If throttled, retry later.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3778,16 +3778,16 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除连接器</para>
+        /// <para>Deletes a connector.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>RAM用户（子账号）需要首先获取阿里云百炼的<a href="https://help.aliyun.com/document_detail/2848578.html">API权限</a>（需要<c>AliyunBailianDataFullAccess</c>，已包括sfm:DeleteConnector权限点），并<a href="https://help.aliyun.com/document_detail/2851098.html">加入一个业务空间</a>后，方可调用本接口。阿里云账号（主账号）可直接调用无须授权。建议您通过最新版<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>来调用本接口。</description></item>
-        /// <item><description>本接口不具备幂等性。
-        /// <b>限流说明：</b>
-        /// 本接口频繁调用会被限流，频率请勿超过5次/秒。如遇限流，请稍后重试。</description></item>
+        /// <item><description>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <c>AliyunBailianDataFullAccess</c>, which includes the sfm:DeleteConnector permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</description></item>
+        /// <item><description>This operation is not idempotent.
+        /// <b>Throttling:</b>
+        /// This operation is throttled if called too frequently. Do not exceed 5 calls per second. If throttled, retry later.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3828,16 +3828,16 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除连接器</para>
+        /// <para>Deletes a connector.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>RAM用户（子账号）需要首先获取阿里云百炼的<a href="https://help.aliyun.com/document_detail/2848578.html">API权限</a>（需要<c>AliyunBailianDataFullAccess</c>，已包括sfm:DeleteConnector权限点），并<a href="https://help.aliyun.com/document_detail/2851098.html">加入一个业务空间</a>后，方可调用本接口。阿里云账号（主账号）可直接调用无须授权。建议您通过最新版<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>来调用本接口。</description></item>
-        /// <item><description>本接口不具备幂等性。
-        /// <b>限流说明：</b>
-        /// 本接口频繁调用会被限流，频率请勿超过5次/秒。如遇限流，请稍后重试。</description></item>
+        /// <item><description>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <c>AliyunBailianDataFullAccess</c>, which includes the sfm:DeleteConnector permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</description></item>
+        /// <item><description>This operation is not idempotent.
+        /// <b>Throttling:</b>
+        /// This operation is throttled if called too frequently. Do not exceed 5 calls per second. If throttled, retry later.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3857,16 +3857,16 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除连接器</para>
+        /// <para>Deletes a connector.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>RAM用户（子账号）需要首先获取阿里云百炼的<a href="https://help.aliyun.com/document_detail/2848578.html">API权限</a>（需要<c>AliyunBailianDataFullAccess</c>，已包括sfm:DeleteConnector权限点），并<a href="https://help.aliyun.com/document_detail/2851098.html">加入一个业务空间</a>后，方可调用本接口。阿里云账号（主账号）可直接调用无须授权。建议您通过最新版<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">阿里云百炼SDK</a>来调用本接口。</description></item>
-        /// <item><description>本接口不具备幂等性。
-        /// <b>限流说明：</b>
-        /// 本接口频繁调用会被限流，频率请勿超过5次/秒。如遇限流，请稍后重试。</description></item>
+        /// <item><description>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <c>AliyunBailianDataFullAccess</c>, which includes the sfm:DeleteConnector permission), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</description></item>
+        /// <item><description>This operation is not idempotent.
+        /// <b>Throttling:</b>
+        /// This operation is throttled if called too frequently. Do not exceed 5 calls per second. If throttled, retry later.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8771,7 +8771,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>查询已发布的智能体应用列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListPublishedAgentRequest
         /// </param>
         /// <param name="headers">
@@ -8784,9 +8784,15 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// ListPublishedAgentResponse
         /// </returns>
-        public ListPublishedAgentResponse ListPublishedAgentWithOptions(string workspaceId, ListPublishedAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListPublishedAgentResponse ListPublishedAgentWithOptions(string workspaceId, ListPublishedAgentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListPublishedAgentShrinkRequest request = new ListPublishedAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubTypes))
+            {
+                request.SubTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubTypes, "subTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -8795,6 +8801,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubTypesShrink))
+            {
+                query["subTypes"] = request.SubTypesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8821,7 +8831,7 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>查询已发布的智能体应用列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListPublishedAgentRequest
         /// </param>
         /// <param name="headers">
@@ -8834,9 +8844,15 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// ListPublishedAgentResponse
         /// </returns>
-        public async Task<ListPublishedAgentResponse> ListPublishedAgentWithOptionsAsync(string workspaceId, ListPublishedAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListPublishedAgentResponse> ListPublishedAgentWithOptionsAsync(string workspaceId, ListPublishedAgentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListPublishedAgentShrinkRequest request = new ListPublishedAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubTypes))
+            {
+                request.SubTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubTypes, "subTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
             {
@@ -8845,6 +8861,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubTypesShrink))
+            {
+                query["subTypes"] = request.SubTypesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
