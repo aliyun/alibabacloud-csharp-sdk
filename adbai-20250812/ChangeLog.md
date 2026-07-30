@@ -1,3 +1,8 @@
+2026-07-30 Version: 1.9.0
+- Support API CreateMultiModelKnowledgeBase.
+- Support API DeleteMultiModalKnowledgeBase.
+
+
 2026-07-28 Version: 1.8.2
 - Update API DescribeChatMessage: add request parameters Skill.
 

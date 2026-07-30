@@ -24,6 +24,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812
                 {"cn-shenzhen", "adbai.cn-shenzhen.aliyuncs.com"},
                 {"cn-shanghai", "adbai.cn-shanghai.aliyuncs.com"},
                 {"cn-hangzhou", "adbai.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "adbai.cn-guangzhou.aliyuncs.com"},
                 {"cn-beijing", "adbai.cn-beijing.aliyuncs.com"},
                 {"ap-southeast-1", "adbai.ap-southeast-1.aliyuncs.com"},
                 {"ap-northeast-1", "adbai.ap-northeast-1.aliyuncs.com"},
@@ -412,6 +413,154 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMultiModelKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiModelKnowledgeBaseResponse
+        /// </returns>
+        public CreateMultiModelKnowledgeBaseResponse CreateMultiModelKnowledgeBaseWithOptions(CreateMultiModelKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultiModelKnowledgeBase",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultiModelKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMultiModelKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiModelKnowledgeBaseResponse
+        /// </returns>
+        public async Task<CreateMultiModelKnowledgeBaseResponse> CreateMultiModelKnowledgeBaseWithOptionsAsync(CreateMultiModelKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMultiModelKnowledgeBase",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMultiModelKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMultiModelKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiModelKnowledgeBaseResponse
+        /// </returns>
+        public CreateMultiModelKnowledgeBaseResponse CreateMultiModelKnowledgeBase(CreateMultiModelKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMultiModelKnowledgeBaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an AnalyticDB multimodal knowledge base.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMultiModelKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMultiModelKnowledgeBaseResponse
+        /// </returns>
+        public async Task<CreateMultiModelKnowledgeBaseResponse> CreateMultiModelKnowledgeBaseAsync(CreateMultiModelKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMultiModelKnowledgeBaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a metrics platform.</para>
         /// </summary>
         /// 
@@ -680,6 +829,154 @@ namespace AlibabaCloud.SDK.ADBAI20250812
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteEmbodiedAIPlatformWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an ADB multimodal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an ADB multimodal knowledge base.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMultiModalKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiModalKnowledgeBaseResponse
+        /// </returns>
+        public DeleteMultiModalKnowledgeBaseResponse DeleteMultiModalKnowledgeBaseWithOptions(DeleteMultiModalKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMultiModalKnowledgeBase",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMultiModalKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an ADB multimodal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an ADB multimodal knowledge base.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMultiModalKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiModalKnowledgeBaseResponse
+        /// </returns>
+        public async Task<DeleteMultiModalKnowledgeBaseResponse> DeleteMultiModalKnowledgeBaseWithOptionsAsync(DeleteMultiModalKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMultiModalKnowledgeBase",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMultiModalKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an ADB multimodal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an ADB multimodal knowledge base.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMultiModalKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiModalKnowledgeBaseResponse
+        /// </returns>
+        public DeleteMultiModalKnowledgeBaseResponse DeleteMultiModalKnowledgeBase(DeleteMultiModalKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMultiModalKnowledgeBaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an ADB multimodal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an ADB multimodal knowledge base.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMultiModalKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMultiModalKnowledgeBaseResponse
+        /// </returns>
+        public async Task<DeleteMultiModalKnowledgeBaseResponse> DeleteMultiModalKnowledgeBaseAsync(DeleteMultiModalKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMultiModalKnowledgeBaseWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
