@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class DeleteInvoiceEntityShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to delete all applicable personnel. If del_all is set to true, all entities under the invoice header are deleted, and the entity list parameter is not validated.</para>
+        /// <para>Specifies whether to delete all applicable personnel. If del_all is set to true, all entities under the invoice header are deleted and the entity list parameter is not validated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

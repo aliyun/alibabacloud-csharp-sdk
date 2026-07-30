@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleFlightItemListItemListSubItemPositionMapValue : TeaModel {
         /// <summary>
+        /// <para>航程序号（从0开始）</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? JourneyIndex { get; set; }
 
         /// <summary>
+        /// <para>航段序号（同一个航程内从0开始）</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

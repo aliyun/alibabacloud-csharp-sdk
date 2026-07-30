@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue : TeaModel {
         /// <summary>
+        /// <para>The number of carry-on baggage pieces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? CarryFreepc { get; set; }
 
         /// <summary>
+        /// <para>The carry-on baggage weight.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? CarryBagWeight { get; set; }
 
         /// <summary>
+        /// <para>The carry-on baggage size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20*20</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CarryBagSize { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the carry-on baggage weight is the total weight.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? IsAllCarryBagWeight { get; set; }
 
         /// <summary>
+        /// <para>The airline.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CA</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Airline { get; set; }
 
         /// <summary>
+        /// <para>The departure airport three-letter code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BJS</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string StartAirport { get; set; }
 
         /// <summary>
+        /// <para>The arrival airport three-letter code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>HGH</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string EndAirport { get; set; }
 
         /// <summary>
+        /// <para>The departure city three-letter code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BJS</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string StartCityCode { get; set; }
 
         /// <summary>
+        /// <para>The arrival city three-letter code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>HGH</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string EndCityCode { get; set; }
 
         /// <summary>
+        /// <para>The number of checked baggage pieces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? FreePcs { get; set; }
 
         /// <summary>
+        /// <para>The maximum checked baggage weight in pounds and kilograms.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? BaggageWeight { get; set; }
 
         /// <summary>
+        /// <para>The weight unit for checked baggage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>KG</para>
         /// </summary>
@@ -106,6 +130,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BaggageUnit { get; set; }
 
         /// <summary>
+        /// <para>The checked baggage size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40*50</para>
         /// </summary>
@@ -114,6 +140,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BaggageSize { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the checked baggage weight is the total weight of all pieces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

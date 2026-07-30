@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightExceedApplyQueryRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel excess approval order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>175634</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? ApplyId { get; set; }
 
         /// <summary>
+        /// <para>The approval instance ID. Either this parameter or apply_id must be specified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024060710160003300008684</para>
         /// </summary>

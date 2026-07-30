@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CreateSubCorpRequest : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the sub-enterprise created through this operation. Reusing this ID causes the call to fail.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OuterCorpId { get; set; }
 
         /// <summary>
+        /// <para>The unique name of the sub-enterprise created through this operation. Reusing this name causes the call to fail.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OuterCorpName { get; set; }
 
         /// <summary>
+        /// <para>The employee ID that exists in an enterprise that has signed the Alibaba Business Travel Parent Account Agreement.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

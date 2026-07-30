@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InsInvoiceScanQueryRequest : TeaModel {
         /// <summary>
+        /// <para>The billing date.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-12-01</para>
         /// </summary>
@@ -18,6 +20,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BillDate { get; set; }
 
         /// <summary>
+        /// <para>The bill ID.</para>
+        /// <remarks>
+        /// <para>Deprecated</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>
@@ -26,6 +33,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? BillId { get; set; }
 
         /// <summary>
+        /// <para>The invoice subtask ID.</para>
+        /// <remarks>
+        /// <para>Deprecated</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>456</para>
         /// </summary>
@@ -34,6 +46,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? InvoiceSubTaskId { get; set; }
 
         /// <summary>
+        /// <para>The page number, starting from 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +56,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

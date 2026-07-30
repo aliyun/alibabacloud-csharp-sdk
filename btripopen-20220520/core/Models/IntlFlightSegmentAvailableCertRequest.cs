@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightSegmentAvailableCertRequest : TeaModel {
         /// <summary>
+        /// <para>The user-defined channel name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ZJTD</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>english: English.</description></item>
+        /// <item><description>chinese: Chinese.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>chinese</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Language { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21341234</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>The username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>张三</para>
         /// </summary>

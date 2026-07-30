@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ExceedApplySyncRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel over-budget approval order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? ApplyId { get; set; }
 
         /// <summary>
+        /// <para>The business type of the approval order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>3: over-budget approval.</description></item>
+        /// <item><description>10: over-budget automatic order approval.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -28,6 +35,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? BizCategory { get; set; }
 
         /// <summary>
+        /// <para>The approval remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>同意</para>
         /// </summary>
@@ -36,6 +45,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Remark { get; set; }
 
         /// <summary>
+        /// <para>The approval order status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: approved.</description></item>
+        /// <item><description>2: rejected.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>The third-party process instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123421</para>
         /// </summary>
@@ -54,6 +70,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ThirdpartyFlowId { get; set; }
 
         /// <summary>
+        /// <para>The third-party user ID of the approver. Separate multiple values with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleFlightItemListBestPriceItemFlightRuleInfosValue : TeaModel {
         /// <summary>
+        /// <para>The refund/change rule summary.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>退改规则简述</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RefundChangeRuleDesc { get; set; }
 
         /// <summary>
+        /// <para>The baggage allowance rule summary.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>行李额规则简述</para>
         /// </summary>

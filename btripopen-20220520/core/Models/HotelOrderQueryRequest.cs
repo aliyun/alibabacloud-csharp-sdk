@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelOrderQueryRequest : TeaModel {
         /// <summary>
+        /// <para>The order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

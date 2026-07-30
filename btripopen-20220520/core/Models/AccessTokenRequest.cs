@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class AccessTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The API secret of the application. For information about how to obtain the secret, see <a href="/#/document/server/application-of-basic-information?handbookId=development-support">Application credentials</a>.</para>
+        /// <para>The app secret of the application. For information about how to obtain the app secret, see <a href="/#/document/server/application-of-basic-information?handbookId=development-support">Application credentials</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

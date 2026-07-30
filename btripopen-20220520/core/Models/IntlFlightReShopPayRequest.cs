@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightReShopPayRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel order ID. Required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The external order ID. Optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>JPT2025032400000001</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The external change application ID. Optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>JPM20241024354</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutReShopApplyId { get; set; }
 
         /// <summary>
+        /// <para>The change application ID. Required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

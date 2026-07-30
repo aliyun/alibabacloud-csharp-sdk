@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The list of car service scenario templates. An empty array [] is returned if no data exists.</para>
+        /// <para>The list of car service scenario templates. An empty array [] is returned when no data is available.</para>
         /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]

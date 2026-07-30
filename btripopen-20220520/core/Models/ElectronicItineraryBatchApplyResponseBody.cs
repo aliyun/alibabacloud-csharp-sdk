@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ElectronicItineraryBatchApplyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -25,15 +29,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The batch application result for electronic itinerary receipts.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public ElectronicItineraryBatchApplyResponseBodyModule Module { get; set; }
         public class ElectronicItineraryBatchApplyResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <para>The list of tickets that failed to be applied.</para>
+            /// </summary>
             [NameInMap("apply_failed_ticket_list")]
             [Validation(Required=false)]
             public List<ElectronicItineraryBatchApplyResponseBodyModuleApplyFailedTicketList> ApplyFailedTicketList { get; set; }
             public class ElectronicItineraryBatchApplyResponseBodyModuleApplyFailedTicketList : TeaModel {
                 /// <summary>
+                /// <para>The failure reason.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>5001</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? FailedCode { get; set; }
 
                 /// <summary>
+                /// <para>The failure reason.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>票号不存在</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string FailedReason { get; set; }
 
                 /// <summary>
+                /// <para>The ticket number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>018-6605785754</para>
                 /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The batch number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0c7b5944608953479a9a4d40c1eec618</para>
             /// </summary>
@@ -80,6 +98,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

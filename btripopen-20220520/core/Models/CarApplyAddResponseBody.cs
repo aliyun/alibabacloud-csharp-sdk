@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? Module { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C61ECFF6-606B-5F66-B81D-D77369043A5F</para>

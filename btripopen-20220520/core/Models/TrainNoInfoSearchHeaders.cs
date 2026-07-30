@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
+        /// <para>The enterprise token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>feth00jqwis</para>
         /// </summary>

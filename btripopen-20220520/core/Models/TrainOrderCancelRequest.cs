@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainOrderCancelRequest : TeaModel {
         /// <summary>
+        /// <para>The change order ID in Alibaba Business Travel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234223</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ChangeOrderId { get; set; }
 
         /// <summary>
+        /// <para>The order ID in Alibaba Business Travel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The change order ID of the distributor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123321245534</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutChangeOrderId { get; set; }
 
         /// <summary>
+        /// <para>The order ID of the distributor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

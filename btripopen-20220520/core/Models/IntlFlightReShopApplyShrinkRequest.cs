@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightReShopApplyShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The asynchronous application key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>asyncKey_2390u230slgw023</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string AsyncApplyKey { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to use the asynchronous commit pattern. If asynchronous commit is used, only a key is returned before the application result is available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? AsyncApplyMode { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID. Required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The external order ID. Optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D1736316966048SC4877</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The external rebooking application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>JPM20241024354</para>
         /// </summary>
@@ -52,6 +61,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutReShopApplyId { get; set; }
 
         /// <summary>
+        /// <para>The rebooking group key returned by the consultation API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +72,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string PassengerJourneyGroupKey { get; set; }
 
         /// <summary>
+        /// <para>The rebooking reason code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +83,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ReShopReasonCode { get; set; }
 
         /// <summary>
+        /// <para>The list of journeys selected for rebooking (submit only the journeys that need to be rebooked).</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Submit by the journey dimension of the order (you can aggregate by journeyIndex). Segments must be placed under the corresponding journey. For one-way trips, there is only one journey. For round trips, the outbound and return journeys are separate. For multi-city trips, each journey is separate.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("selected_journeys")]
@@ -79,6 +95,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string SelectedJourneysShrink { get; set; }
 
         /// <summary>
+        /// <para>The list of passengers selected for rebooking.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("selected_passengers")]
@@ -86,6 +103,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string SelectedPassengersShrink { get; set; }
 
         /// <summary>
+        /// <para>The rebooking intention remarks submitted by the user, such as acceptable price range and preferred departure/arrival airports.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>少中转优先,落地当地时间为白天优先</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightRefundApplyShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The enterprise refund amount.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? CorpRefundPrice { get; set; }
 
         /// <summary>
+        /// <para>The external order ID of the distributor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DisOrderId { get; set; }
 
         /// <summary>
+        /// <para>The external order ID of the distributor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DisSubOrderId { get; set; }
 
         /// <summary>
+        /// <para>The refund amount displayed to the user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,11 +52,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DisplayRefundMoney { get; set; }
 
+        /// <summary>
+        /// <para>The extended information.</para>
+        /// </summary>
         [NameInMap("extra")]
         [Validation(Required=false)]
         public string ExtraShrink { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the refund is voluntary.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +71,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? IsVoluntary { get; set; }
 
         /// <summary>
+        /// <para>The encrypted order parameter returned by the distribution pre-calculation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,11 +81,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ItemUnitIds { get; set; }
 
+        /// <summary>
+        /// <para>The list of passenger segments selected for the refund.</para>
+        /// </summary>
         [NameInMap("passenger_segment_info_list")]
         [Validation(Required=false)]
         public string PassengerSegmentInfoListShrink { get; set; }
 
         /// <summary>
+        /// <para>The personal refund amount.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -84,6 +99,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? PersonalRefundPrice { get; set; }
 
         /// <summary>
+        /// <para>The detailed refund reason.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>分销商自定义</para>
         /// </summary>
@@ -92,6 +109,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ReasonDetail { get; set; }
 
         /// <summary>
+        /// <para>The refund reason type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,11 +119,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? ReasonType { get; set; }
 
+        /// <summary>
+        /// <para>The refund voucher information in JSON format.</para>
+        /// </summary>
         [NameInMap("refund_voucher_info")]
         [Validation(Required=false)]
         public string RefundVoucherInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The session ID returned by the distribution pre-calculation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,6 +138,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The total refund amount of the order.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

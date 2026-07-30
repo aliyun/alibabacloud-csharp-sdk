@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CarOrderListQueryRequest : TeaModel {
         /// <summary>
+        /// <para>false: searches only for unreimbursed orders.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? AllApply { get; set; }
 
         /// <summary>
+        /// <para>The business travel approval ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>117429516</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? ApplyId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the department to which the user belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>departId</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DepartId { get; set; }
 
         /// <summary>
+        /// <para>The end time. The time must be in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-07-01 00:00:00</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The page number, starting from 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 50.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start time. The time must be in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-07-01 00:00:00</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The third-party application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cs2NH_n1QTC3R6hB9m-BAQ08221658314273</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ThirdpartApplyId { get; set; }
 
         /// <summary>
+        /// <para>The update end time. The time must be in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-07-01 00:00:00</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string UpdateEndTime { get; set; }
 
         /// <summary>
+        /// <para>The update start time. The time must be in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-07-01 00:00:00</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string UpdateStartTime { get; set; }
 
         /// <summary>
+        /// <para>The third-party user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>userId</para>
         /// </summary>

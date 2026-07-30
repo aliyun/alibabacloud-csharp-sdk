@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class MealApplyAddResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public MealApplyAddResponseBodyModule Module { get; set; }
         public class MealApplyAddResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The third-party application ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024073128454753</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

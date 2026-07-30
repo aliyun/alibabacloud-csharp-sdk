@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
+        /// <para>The header parameter obtained from the &quot;Enterprise Access Token&quot; operation (added in the header). In HTTP mode, you can use so_corp_token=value or dtb_corp_token=value in the URL as a substitute.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>feth00jqwls</para>
         /// </summary>

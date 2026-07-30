@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightOtaItemDetailResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -32,26 +36,37 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public FlightOtaItemDetailResponseBodyModule Module { get; set; }
         public class FlightOtaItemDetailResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <para>The baggage fee rules.</para>
+            /// </summary>
             [NameInMap("baggage_rule")]
             [Validation(Required=false)]
             public List<FlightOtaItemDetailResponseBodyModuleBaggageRule> BaggageRule { get; set; }
             public class FlightOtaItemDetailResponseBodyModuleBaggageRule : TeaModel {
+                /// <summary>
+                /// <para>The baggage sub-information for domestic flights.</para>
+                /// </summary>
                 [NameInMap("baggage_sub_items")]
                 [Validation(Required=false)]
                 public List<FlightOtaItemDetailResponseBodyModuleBaggageRuleBaggageSubItems> BaggageSubItems { get; set; }
                 public class FlightOtaItemDetailResponseBodyModuleBaggageRuleBaggageSubItems : TeaModel {
+                    /// <summary>
+                    /// <para>The baggage sub-content visualization.</para>
+                    /// </summary>
                     [NameInMap("baggage_sub_content_visualizes")]
                     [Validation(Required=false)]
                     public List<FlightOtaItemDetailResponseBodyModuleBaggageRuleBaggageSubItemsBaggageSubContentVisualizes> BaggageSubContentVisualizes { get; set; }
                     public class FlightOtaItemDetailResponseBodyModuleBaggageRuleBaggageSubItemsBaggageSubContentVisualizes : TeaModel {
                         /// <summary>
-                        /// <para>baggage_desc</para>
+                        /// <para>The baggage allowance description, such as &quot;Each person may carry 1 piece onboard, up to 5 kg/piece, with dimensions not exceeding 20 × 40 × 55 cm&quot;.</para>
                         /// </summary>
                         [NameInMap("baggage_desc")]
                         [Validation(Required=false)]
                         public List<string> BaggageDesc { get; set; }
 
                         /// <summary>
+                        /// <para>The baggage sub-content type.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
                         /// </summary>
@@ -59,11 +74,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         [Validation(Required=false)]
                         public int? BaggageSubContentType { get; set; }
 
+                        /// <summary>
+                        /// <para>The description.</para>
+                        /// </summary>
                         [NameInMap("description")]
                         [Validation(Required=false)]
                         public FlightOtaItemDetailResponseBodyModuleBaggageRuleBaggageSubItemsBaggageSubContentVisualizesDescription Description { get; set; }
                         public class FlightOtaItemDetailResponseBodyModuleBaggageRuleBaggageSubItemsBaggageSubContentVisualizesDescription : TeaModel {
                             /// <summary>
+                            /// <para>The content.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>您可以随身携带上飞机客舱内的行李物品，由旅客自行负责保管。具体尺寸、重量、类型等以各航空公司规定为准。</para>
                             /// </summary>
@@ -72,6 +92,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                             public string Desc { get; set; }
 
                             /// <summary>
+                            /// <para>The icon.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para><a href="https://gw.alicdn.com/imgextra/i4/O1CN01UynXG31pjsEtA3tMF_!!6000000005397-2-tps-36-36.png">https://gw.alicdn.com/imgextra/i4/O1CN01UynXG31pjsEtA3tMF_!!6000000005397-2-tps-36-36.png</a></para>
                             /// </summary>
@@ -80,6 +102,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                             public string Icon { get; set; }
 
                             /// <summary>
+                            /// <para>The image URL.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para><a href="https://gw.alicdn.com/imgextra/i1/O1CN01qe7wL21gJ0SmEXXL7_!!6000000004120-2-tps-1206-768.png">https://gw.alicdn.com/imgextra/i1/O1CN01qe7wL21gJ0SmEXXL7_!!6000000004120-2-tps-1206-768.png</a></para>
                             /// </summary>
@@ -88,6 +112,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                             public string Image { get; set; }
 
                             /// <summary>
+                            /// <para>The title.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>手提行李说明</para>
                             /// </summary>
@@ -97,11 +123,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                         }
 
+                        /// <summary>
+                        /// <para>The image information.</para>
+                        /// </summary>
                         [NameInMap("image_d_o")]
                         [Validation(Required=false)]
                         public FlightOtaItemDetailResponseBodyModuleBaggageRuleBaggageSubItemsBaggageSubContentVisualizesImageDO ImageDO { get; set; }
                         public class FlightOtaItemDetailResponseBodyModuleBaggageRuleBaggageSubItemsBaggageSubContentVisualizesImageDO : TeaModel {
                             /// <summary>
+                            /// <para>The image URL.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para><a href="https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png">https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png</a></para>
                             /// </summary>
@@ -110,6 +141,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                             public string Image { get; set; }
 
                             /// <summary>
+                            /// <para>The maximum quantity.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>55</para>
                             /// </summary>
@@ -118,6 +151,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                             public string Largest { get; set; }
 
                             /// <summary>
+                            /// <para>The middle value.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>40</para>
                             /// </summary>
@@ -126,6 +161,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                             public string Middle { get; set; }
 
                             /// <summary>
+                            /// <para>The minimum value.</para>
+                            /// 
                             /// <b>Example:</b>
                             /// <para>20</para>
                             /// </summary>
@@ -136,6 +173,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         }
 
                         /// <summary>
+                        /// <para>Indicates whether the subtitle is highlighted.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
                         /// </summary>
@@ -144,6 +183,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         public bool? IsHighlight { get; set; }
 
                         /// <summary>
+                        /// <para>The subtitle, such as &quot;Free carry-on baggage&quot;.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>免费手提行李</para>
                         /// </summary>
@@ -153,11 +194,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>The extra content visualization.</para>
+                    /// </summary>
                     [NameInMap("extra_content_visualizes")]
                     [Validation(Required=false)]
                     public List<object> ExtraContentVisualizes { get; set; }
 
                     /// <summary>
+                    /// <para>Indicates whether the content is structured.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
                     /// </summary>
@@ -166,6 +212,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public bool? IsStruct { get; set; }
 
                     /// <summary>
+                    /// <para>The passenger type: ADT/CHD/INF. An empty value indicates no restriction.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ADT</para>
                     /// </summary>
@@ -174,6 +222,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string Ptc { get; set; }
 
                     /// <summary>
+                    /// <para>The title.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>成人行李</para>
                     /// </summary>
@@ -184,6 +234,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 }
 
                 /// <summary>
+                /// <para>The sequence number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -192,18 +244,25 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? Index { get; set; }
 
                 /// <summary>
+                /// <para>The table header content (e.g., outbound Beijing-Shanghai).</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>tableHead</para>
+                /// <para>北京-上海</para>
                 /// </summary>
                 [NameInMap("table_head")]
                 [Validation(Required=false)]
                 public string TableHead { get; set; }
 
+                /// <summary>
+                /// <para>The baggage tips for domestic flights.</para>
+                /// </summary>
                 [NameInMap("tips")]
                 [Validation(Required=false)]
                 public FlightOtaItemDetailResponseBodyModuleBaggageRuleTips Tips { get; set; }
                 public class FlightOtaItemDetailResponseBodyModuleBaggageRuleTips : TeaModel {
                     /// <summary>
+                    /// <para>The logo URL.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png">https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png</a></para>
                     /// </summary>
@@ -212,6 +271,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string Logo { get; set; }
 
                     /// <summary>
+                    /// <para>The tip description.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>各个尺寸的行李箱有多大？</para>
                     /// </summary>
@@ -220,6 +281,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string TipsDesc { get; set; }
 
                     /// <summary>
+                    /// <para>The tip image URL.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://gw.alicdn.com/imgextra/i3/O1CN01rJxjw61f3bXNHAmlk_!!6000000003951-2-tps-1050-675.png">https://gw.alicdn.com/imgextra/i3/O1CN01rJxjw61f3bXNHAmlk_!!6000000003951-2-tps-1050-675.png</a></para>
                     /// </summary>
@@ -230,6 +293,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 }
 
                 /// <summary>
+                /// <para>The title.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>行李规定</para>
                 /// </summary>
@@ -238,6 +303,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string Title { get; set; }
 
                 /// <summary>
+                /// <para>The type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -247,15 +314,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// <para>The change rules.</para>
+            /// </summary>
             [NameInMap("change_rule")]
             [Validation(Required=false)]
             public List<FlightOtaItemDetailResponseBodyModuleChangeRule> ChangeRule { get; set; }
             public class FlightOtaItemDetailResponseBodyModuleChangeRule : TeaModel {
+                /// <summary>
+                /// <para>The extra content.</para>
+                /// </summary>
                 [NameInMap("extra_contents")]
                 [Validation(Required=false)]
                 public List<FlightOtaItemDetailResponseBodyModuleChangeRuleExtraContents> ExtraContents { get; set; }
                 public class FlightOtaItemDetailResponseBodyModuleChangeRuleExtraContents : TeaModel {
                     /// <summary>
+                    /// <para>The content.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>变更航班或舱位如有差价须补足。客票有效期一年；退票不晚于有效期，截止后一个月之内办理；特殊折扣机票退改签按其相应规定执行。</para>
                     /// </summary>
@@ -264,6 +339,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string Content { get; set; }
 
                     /// <summary>
+                    /// <para>The title.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>特殊说明</para>
                     /// </summary>
@@ -274,6 +351,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 }
 
                 /// <summary>
+                /// <para>The flight number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HO3925</para>
                 /// </summary>
@@ -282,6 +361,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string FlightNo { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether free checked baggage allowance is available. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Free checked baggage allowance available.</description></item>
+                /// <item><description>1: No free checked baggage allowance.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -290,6 +375,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? FreeBaggage { get; set; }
 
                 /// <summary>
+                /// <para>The sequence number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -298,6 +385,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? Index { get; set; }
 
                 /// <summary>
+                /// <para>The level. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Non-refundable/non-changeable.</description></item>
+                /// <item><description>1: Low refund/change fees.</description></item>
+                /// <item><description>2: High refund/change fees.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -305,11 +399,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? Level { get; set; }
 
+                /// <summary>
+                /// <para>The refund/change sub-content.</para>
+                /// </summary>
                 [NameInMap("refund_sub_items")]
                 [Validation(Required=false)]
                 public List<FlightOtaItemDetailResponseBodyModuleChangeRuleRefundSubItems> RefundSubItems { get; set; }
                 public class FlightOtaItemDetailResponseBodyModuleChangeRuleRefundSubItems : TeaModel {
                     /// <summary>
+                    /// <para>Indicates whether the content is structured.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
                     /// </summary>
@@ -318,6 +417,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public bool? IsStruct { get; set; }
 
                     /// <summary>
+                    /// <para>The passenger type: ADT/CHD/INF. An empty value indicates no restriction.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ADT</para>
                     /// </summary>
@@ -325,11 +426,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string Ptc { get; set; }
 
+                    /// <summary>
+                    /// <para>The refund/change sub-content.</para>
+                    /// </summary>
                     [NameInMap("refund_sub_contents")]
                     [Validation(Required=false)]
                     public List<FlightOtaItemDetailResponseBodyModuleChangeRuleRefundSubItemsRefundSubContents> RefundSubContents { get; set; }
                     public class FlightOtaItemDetailResponseBodyModuleChangeRuleRefundSubItemsRefundSubContents : TeaModel {
                         /// <summary>
+                        /// <para>The fee description.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>￥732/人</para>
                         /// </summary>
@@ -338,6 +444,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         public string FeeDesc { get; set; }
 
                         /// <summary>
+                        /// <para>The fee range.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>9月1日 04:00 后</para>
                         /// </summary>
@@ -346,6 +454,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         public string FeeRange { get; set; }
 
                         /// <summary>
+                        /// <para>The style.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
                         /// </summary>
@@ -356,6 +466,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     }
 
                     /// <summary>
+                    /// <para>The title.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>成人</para>
                     /// </summary>
@@ -366,21 +478,25 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 }
 
                 /// <summary>
-                /// <para>subTableHead</para>
+                /// <para>The sub-table header, which is consistent with the number of sub-content columns, such as [&quot;Time node&quot;,&quot;Refund fee&quot;].</para>
                 /// </summary>
                 [NameInMap("sub_table_head")]
                 [Validation(Required=false)]
                 public List<string> SubTableHead { get; set; }
 
                 /// <summary>
+                /// <para>The table header content (e.g., outbound Beijing-Shanghai).</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>tableHead</para>
+                /// <para>北京-上海</para>
                 /// </summary>
                 [NameInMap("table_head")]
                 [Validation(Required=false)]
                 public string TableHead { get; set; }
 
                 /// <summary>
+                /// <para>The title.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>同舱改期规则</para>
                 /// </summary>
@@ -389,6 +505,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string Title { get; set; }
 
                 /// <summary>
+                /// <para>The type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -398,15 +516,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// <para>The refund rules.</para>
+            /// </summary>
             [NameInMap("refund_rule")]
             [Validation(Required=false)]
             public List<FlightOtaItemDetailResponseBodyModuleRefundRule> RefundRule { get; set; }
             public class FlightOtaItemDetailResponseBodyModuleRefundRule : TeaModel {
+                /// <summary>
+                /// <para>The extra content.</para>
+                /// </summary>
                 [NameInMap("extra_contents")]
                 [Validation(Required=false)]
                 public List<FlightOtaItemDetailResponseBodyModuleRefundRuleExtraContents> ExtraContents { get; set; }
                 public class FlightOtaItemDetailResponseBodyModuleRefundRuleExtraContents : TeaModel {
                     /// <summary>
+                    /// <para>The content.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>变更航班或舱位如有差价须补足。客票有效期一年；退票不晚于有效期，截止后一个月之内办理；特殊折扣机票退改签按其相应规定执行。</para>
                     /// </summary>
@@ -415,6 +541,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string Content { get; set; }
 
                     /// <summary>
+                    /// <para>The title.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>特殊说明</para>
                     /// </summary>
@@ -425,6 +553,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 }
 
                 /// <summary>
+                /// <para>The flight number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HO3925</para>
                 /// </summary>
@@ -433,6 +563,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string FlightNo { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether free checked baggage allowance is available. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Free checked baggage allowance available.</description></item>
+                /// <item><description>1: No free checked baggage allowance.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -441,6 +577,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? FreeBaggage { get; set; }
 
                 /// <summary>
+                /// <para>The sequence number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -449,6 +587,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? Index { get; set; }
 
                 /// <summary>
+                /// <para>The level. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Non-refundable/non-changeable.</description></item>
+                /// <item><description>1: Low refund/change fees.</description></item>
+                /// <item><description>2: High refund/change fees.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -456,11 +601,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? Level { get; set; }
 
+                /// <summary>
+                /// <para>The refund/change sub-content.</para>
+                /// </summary>
                 [NameInMap("refund_sub_items")]
                 [Validation(Required=false)]
                 public List<FlightOtaItemDetailResponseBodyModuleRefundRuleRefundSubItems> RefundSubItems { get; set; }
                 public class FlightOtaItemDetailResponseBodyModuleRefundRuleRefundSubItems : TeaModel {
                     /// <summary>
+                    /// <para>Indicates whether the content is structured.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
                     /// </summary>
@@ -469,6 +619,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public bool? IsStruct { get; set; }
 
                     /// <summary>
+                    /// <para>The passenger type: ADT/CHD/INF. An empty value indicates no restriction.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ADT</para>
                     /// </summary>
@@ -476,11 +628,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string Ptc { get; set; }
 
+                    /// <summary>
+                    /// <para>The refund/change sub-content.</para>
+                    /// </summary>
                     [NameInMap("refund_sub_contents")]
                     [Validation(Required=false)]
                     public List<FlightOtaItemDetailResponseBodyModuleRefundRuleRefundSubItemsRefundSubContents> RefundSubContents { get; set; }
                     public class FlightOtaItemDetailResponseBodyModuleRefundRuleRefundSubItemsRefundSubContents : TeaModel {
                         /// <summary>
+                        /// <para>The fee description.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>￥915/人</para>
                         /// </summary>
@@ -489,6 +646,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         public string FeeDesc { get; set; }
 
                         /// <summary>
+                        /// <para>The fee range.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>9月1日 04:00 后</para>
                         /// </summary>
@@ -497,6 +656,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         public string FeeRange { get; set; }
 
                         /// <summary>
+                        /// <para>The style.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
                         /// </summary>
@@ -507,6 +668,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     }
 
                     /// <summary>
+                    /// <para>The title.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>成人</para>
                     /// </summary>
@@ -517,21 +680,25 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 }
 
                 /// <summary>
-                /// <para>subTableHead</para>
+                /// <para>The sub-table header, which is consistent with the number of sub-content columns, such as [&quot;Time node&quot;,&quot;Refund fee&quot;].</para>
                 /// </summary>
                 [NameInMap("sub_table_head")]
                 [Validation(Required=false)]
                 public List<string> SubTableHead { get; set; }
 
                 /// <summary>
+                /// <para>The table header content (e.g., outbound Beijing-Shanghai).</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>tableHead</para>
+                /// <para>北京-上海</para>
                 /// </summary>
                 [NameInMap("table_head")]
                 [Validation(Required=false)]
                 public string TableHead { get; set; }
 
                 /// <summary>
+                /// <para>The title.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>退票收费规则</para>
                 /// </summary>
@@ -540,6 +707,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string Title { get; set; }
 
                 /// <summary>
+                /// <para>The type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -550,6 +719,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The selling price, which is the actual price (full price, including airport construction fee, fuel surcharge, and all segments) - total price.</para>
+            /// <remarks>
+            /// <para>Warning: Deprecated.</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>1830</para>
             /// </summary>
@@ -557,11 +731,22 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? SellPrice { get; set; }
 
+            /// <summary>
+            /// <para>The selling price, which is the actual price (full price, including airport construction fee, fuel surcharge, and all segments) - round trip. Two prices are returned for round trips.</para>
+            /// <remarks>
+            /// <para>Warning: Deprecated.</warning></para>
+            /// </remarks>
+            /// </summary>
             [NameInMap("sell_price_list")]
             [Validation(Required=false)]
             public List<int?> SellPriceList { get; set; }
 
             /// <summary>
+            /// <para>The trip type.</para>
+            /// <remarks>
+            /// <para>Warning: Deprecated.</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -572,7 +757,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// <para>requestId</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>92359A00-85D8-16C4-AED0-249618DEEC17</para>
@@ -582,6 +767,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -590,7 +777,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>traceId</para>
+        /// <para>The global trace ID of the request, typically used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>210bc60a16916374201706365d2a16</para>

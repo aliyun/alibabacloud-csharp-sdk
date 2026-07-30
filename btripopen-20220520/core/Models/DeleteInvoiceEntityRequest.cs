@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class DeleteInvoiceEntityRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to delete all applicable personnel. If del_all is set to true, all entities under the invoice header are deleted, and the entity list parameter is not validated.</para>
+        /// <para>Specifies whether to delete all applicable personnel. If del_all is set to true, all entities under the invoice header are deleted and the entity list parameter is not validated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             /// <summary>
             /// <para>The entity type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: employee</description></item>
-            /// <item><description>2: department</description></item>
-            /// <item><description>3: role</description></item>
-            /// <item><description>4: third-party department</description></item>
+            /// <item><description>1: employee.</description></item>
+            /// <item><description>2: department.</description></item>
+            /// <item><description>3: role.</description></item>
+            /// <item><description>4: third-party department.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

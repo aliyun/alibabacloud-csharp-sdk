@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InvoiceSearchRequest : TeaModel {
         /// <summary>
+        /// <para>The third-party invoice ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ThirdPartId { get; set; }
 
         /// <summary>
+        /// <para>The keyword of the invoice title.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>测试抬头</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Title { get; set; }
 
         /// <summary>
+        /// <para>The third-party user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>

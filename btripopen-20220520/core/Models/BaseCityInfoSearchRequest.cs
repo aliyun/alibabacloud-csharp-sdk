@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class BaseCityInfoSearchRequest : TeaModel {
         /// <summary>
+        /// <para>The search keyword, which is the city name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The search region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

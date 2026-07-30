@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainStopoverSearchRequest : TeaModel {
         /// <summary>
+        /// <para>The arrival station.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ArrStation { get; set; }
 
         /// <summary>
+        /// <para>The departure station.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DepStation { get; set; }
 
         /// <summary>
+        /// <para>The departure date in the format yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string TrainDate { get; set; }
 
         /// <summary>
+        /// <para>The train number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

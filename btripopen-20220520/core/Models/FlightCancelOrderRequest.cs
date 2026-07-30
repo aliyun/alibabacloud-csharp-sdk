@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightCancelOrderRequest : TeaModel {
         /// <summary>
+        /// <para>The external order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

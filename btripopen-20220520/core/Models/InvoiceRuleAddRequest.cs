@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InvoiceRuleAddRequest : TeaModel {
         /// <summary>
+        /// <para>The list of entities.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("entities")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<InvoiceRuleAddRequestEntities> Entities { get; set; }
         public class InvoiceRuleAddRequestEntities : TeaModel {
             /// <summary>
+            /// <para>The ID of the available scope entity, such as an employee ID, department ID, role ID, or third-party department ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string EntityId { get; set; }
 
             /// <summary>
+            /// <para>The name of the available scope entity, such as an employee name, department name, role name, or third-party department name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string EntityName { get; set; }
 
             /// <summary>
+            /// <para>The type of the available scope. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: employee.</description></item>
+            /// <item><description>2: department.</description></item>
+            /// <item><description>3: role.</description></item>
+            /// <item><description>4: third-party department.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -49,6 +59,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The third-party invoice ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

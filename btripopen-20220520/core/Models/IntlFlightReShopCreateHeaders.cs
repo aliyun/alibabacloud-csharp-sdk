@@ -16,8 +16,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         /// <summary>
         /// <para>The enterprise access token.</para>
         /// <list type="bullet">
-        /// <item><description>When calling this operation over HTTP, this parameter is required and must be appended to the request URL. For more information about how to obtain the token, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.5e2a281frQyDQ8&docId=3769985">Enterprise access token</a>.</description></item>
-        /// <item><description>When appending the token, use crop_token=value instead.</description></item>
+        /// <item><description>When calling this API over HTTP, this parameter must be included as a required parameter in the request URL. For more information about how to obtain the token, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.5e2a281frQyDQ8&docId=3769985">Enterprise access token</a>.</description></item>
+        /// <item><description>When concatenating the URL, use crop_token=value instead.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

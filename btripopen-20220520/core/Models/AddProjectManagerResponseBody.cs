@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? RemoveNum { get; set; }
 
             /// <summary>
-            /// <para>The parsed btrip_rule.rule_code (501 + projectId), which helps callers with troubleshooting and reconciliation.</para>
+            /// <para>The parsed btrip_rule.rule_code (501 + projectId), provided for the caller to troubleshoot and reconcile.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500578154</para>

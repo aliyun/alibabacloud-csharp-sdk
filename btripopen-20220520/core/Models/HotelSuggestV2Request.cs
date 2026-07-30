@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelSuggestV2Request : TeaModel {
         /// <summary>
+        /// <para>The external user ID. If organization members are synchronized, use btripUserId. Otherwise, pass the userId corresponding to the distributor\&quot;s own system user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The hotel check-in date in the format yyyy-MM-dd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-05-15</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CheckIn { get; set; }
 
         /// <summary>
+        /// <para>The hotel check-out date in the format yyyy-MM-dd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-06-04</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CheckOut { get; set; }
 
         /// <summary>
+        /// <para>The city code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>330100</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CityCode { get; set; }
 
         /// <summary>
+        /// <para>The keyword. Required when search_type is set to 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>万豪</para>
         /// </summary>
@@ -50,6 +60,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The search type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

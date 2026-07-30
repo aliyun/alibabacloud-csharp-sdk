@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ElectronicItineraryBatchApplyRequest : TeaModel {
         /// <summary>
+        /// <para>The list of electronic itinerary receipt applications in the batch.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("apply_itinerary_list")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<ElectronicItineraryBatchApplyRequestApplyItineraryList> ApplyItineraryList { get; set; }
         public class ElectronicItineraryBatchApplyRequestApplyItineraryList : TeaModel {
             /// <summary>
+            /// <para>The purchaser name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>测试购方名称</para>
             /// </summary>
@@ -25,6 +28,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PurchaserName { get; set; }
 
             /// <summary>
+            /// <para>The tax identification number of the purchaser.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tax3213132131</para>
             /// </summary>
@@ -33,6 +38,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PurchaserTaxNo { get; set; }
 
             /// <summary>
+            /// <para>The purchaser type. Valid values:
+            /// 1: individual.
+            /// 2: enterprise.
+            /// 3: non-enterprise organization.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -43,6 +52,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? PurchaserType { get; set; }
 
             /// <summary>
+            /// <para>The ticket number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -55,6 +65,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>Specifies whether reprinting is allowed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

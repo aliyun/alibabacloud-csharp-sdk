@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InsureOrderDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>张三</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BuyerName { get; set; }
 
         /// <summary>
+        /// <para>The order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string InsOrderId { get; set; }
 
         /// <summary>
+        /// <para>The user-defined channel name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PostalSavingsBank</para>
         /// </summary>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The supplier code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fliggy</para>
         /// </summary>

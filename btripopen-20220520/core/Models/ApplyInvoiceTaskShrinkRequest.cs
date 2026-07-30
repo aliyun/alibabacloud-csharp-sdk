@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ApplyInvoiceTaskShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The billing date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BillDate { get; set; }
 
         /// <summary>
+        /// <para>The adjusted invoice task list.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("invoice_task_list")]

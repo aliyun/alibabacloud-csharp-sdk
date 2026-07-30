@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InsureOrderRefundResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public InsureOrderRefundResponseBodyModule Module { get; set; }
         public class InsureOrderRefundResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The cancellation application ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>118526587</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ApplyId { get; set; }
 
             /// <summary>
+            /// <para>The insurance order ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1423041410342678003</para>
             /// </summary>
@@ -45,11 +56,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string InsOrderId { get; set; }
 
+            /// <summary>
+            /// <para>The cancellation details.</para>
+            /// </summary>
             [NameInMap("ins_refund_list")]
             [Validation(Required=false)]
             public List<InsureOrderRefundResponseBodyModuleInsRefundList> InsRefundList { get; set; }
             public class InsureOrderRefundResponseBodyModuleInsRefundList : TeaModel {
                 /// <summary>
+                /// <para>The policy cancellation number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>po102000399221</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string PolicyRefundNo { get; set; }
 
                 /// <summary>
+                /// <para>The cancellation status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>REFUND_SUCCESS</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string RefundStatus { get; set; }
 
                 /// <summary>
+                /// <para>The sub-order ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1230012499921</para>
                 /// </summary>
@@ -76,6 +96,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The external cancellation application ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1423041410342678022</para>
             /// </summary>
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2103ad3116824902540648188de7ac</para>
         /// </summary>
@@ -94,6 +118,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -102,6 +128,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The log trace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>210e846c16726306481681232d441f</para>
         /// </summary>

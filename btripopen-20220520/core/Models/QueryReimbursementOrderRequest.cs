@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class QueryReimbursementOrderRequest : TeaModel {
         /// <summary>
+        /// <para>The reimbursement order number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ReimbOrderNo { get; set; }
 
         /// <summary>
+        /// <para>The ID of the sub-enterprise.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ding123</para>
         /// </summary>

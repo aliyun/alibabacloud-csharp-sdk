@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class OrderRefundDetailQueryRequest : TeaModel {
         /// <summary>
+        /// <para>The order ID of the service provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CooperatorOrderId { get; set; }
 
         /// <summary>
+        /// <para>The order ID on the Zhongzhou platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

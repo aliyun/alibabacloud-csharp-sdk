@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class EstimatedPriceQueryRequest : TeaModel {
         /// <summary>
+        /// <para>The destination city.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ArrCity { get; set; }
 
         /// <summary>
+        /// <para>The category. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>flight: flight ticket</description></item>
+        /// <item><description>hotel: hotel</description></item>
+        /// <item><description>train: train</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +37,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Category { get; set; }
 
         /// <summary>
+        /// <para>The departure city.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +48,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DepCity { get; set; }
 
         /// <summary>
+        /// <para>The return time. Unit: millisecond timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The itinerary ID. For internal enterprise applications, obtain this value by calling the list approval orders interface. For third-party enterprise applications, obtain this value by calling the list approval orders interface.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1245</para>
         /// </summary>
@@ -58,6 +69,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ItineraryId { get; set; }
 
         /// <summary>
+        /// <para>The departure time. Unit: millisecond timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +80,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>The sub-enterprise corp ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>btrip123</para>
         /// </summary>
@@ -76,6 +90,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string SubCorpId { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

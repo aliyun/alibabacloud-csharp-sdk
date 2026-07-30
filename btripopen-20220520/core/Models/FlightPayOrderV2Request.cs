@@ -10,22 +10,28 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightPayOrderV2Request : TeaModel {
         /// <summary>
+        /// <para>The custom channel name defined by the user.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>cheshiapi</para>
+        /// <para>name</para>
         /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID. Either the external order ID or the business travel order ID is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>cheshiapi002kwl</para>
+        /// <para>1234234</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The external order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1017002195798359400</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The total ticket price, excluding service fees.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5100</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? TotalPrice { get; set; }
 
         /// <summary>
+        /// <para>The total service fee. Unit: cents.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

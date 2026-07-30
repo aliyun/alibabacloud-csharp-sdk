@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether external polling is enabled. When enabled, the external frontend controls polling to reduce the response time of a single search. Default value: false.</para>
+        /// <para>Specifies whether external polling is enabled. When enabled, the external frontend controls polling to reduce single search response time. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string SelectedPassengersShrink { get; set; }
 
         /// <summary>
-        /// <para>The query record token for external polling.</para>
+        /// <para>The query record token used for external polling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0305b8203a7767626f911d97a91a9473</para>

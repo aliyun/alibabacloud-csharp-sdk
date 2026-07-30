@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainApplyRefundRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The order ID assigned by the distributor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The refund request ID assigned by the distributor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutRefundId { get; set; }
 
         /// <summary>
+        /// <para>The ticket information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refund_train_infos")]
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<TrainApplyRefundRequestRefundTrainInfos> RefundTrainInfos { get; set; }
         public class TrainApplyRefundRequestRefundTrainInfos : TeaModel {
             /// <summary>
+            /// <para>The departure time in the format of yyyy-MM-dd hh:mm:ss.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +62,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepTime { get; set; }
 
             /// <summary>
+            /// <para>The passenger information.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("refund_passenger_infos")]
@@ -64,6 +70,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public List<TrainApplyRefundRequestRefundTrainInfosRefundPassengerInfos> RefundPassengerInfos { get; set; }
             public class TrainApplyRefundRequestRefundTrainInfosRefundPassengerInfos : TeaModel {
                 /// <summary>
+                /// <para>The certificate number, encrypted with SM4.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -74,6 +81,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string PassengerCertNo { get; set; }
 
                 /// <summary>
+                /// <para>The certificate type, encrypted with SM4. Enum values are provided.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -84,6 +92,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string PassengerCertType { get; set; }
 
                 /// <summary>
+                /// <para>The third-party passenger ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -94,6 +103,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string PassengerId { get; set; }
 
                 /// <summary>
+                /// <para>The passenger name, encrypted with SM4.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -106,6 +116,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The short train number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

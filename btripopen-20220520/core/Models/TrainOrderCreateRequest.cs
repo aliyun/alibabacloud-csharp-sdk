@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainOrderCreateRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to accept a no-seat ticket. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Not accepted.</description></item>
+        /// <item><description>1: Accepted.</description></item>
+        /// </list>
+        /// <para>Default value: 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +25,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string AcceptNoSeat { get; set; }
 
         /// <summary>
+        /// <para>The train information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("book_train_infos")]
@@ -25,6 +33,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<TrainOrderCreateRequestBookTrainInfos> BookTrainInfos { get; set; }
         public class TrainOrderCreateRequestBookTrainInfos : TeaModel {
             /// <summary>
+            /// <para>The arrival station code.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -35,6 +44,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ArrStationCode { get; set; }
 
             /// <summary>
+            /// <para>The ticket information.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("book_ticket_infos")]
@@ -42,6 +52,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public List<TrainOrderCreateRequestBookTrainInfosBookTicketInfos> BookTicketInfos { get; set; }
             public class TrainOrderCreateRequestBookTrainInfosBookTicketInfos : TeaModel {
                 /// <summary>
+                /// <para>The third-party passenger ID used to match the outer passenger list.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -52,6 +63,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string PassengerId { get; set; }
 
                 /// <summary>
+                /// <para>The seat type. This is an enumerated value.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -62,6 +74,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string SeatType { get; set; }
 
                 /// <summary>
+                /// <para>The unit price of the ticket. Unit: cents.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -72,6 +85,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? TicketPrice { get; set; }
 
                 /// <summary>
+                /// <para>The ticket type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: adult</description></item>
+                /// <item><description>1: child</description></item>
+                /// <item><description>2: infant</description></item>
+                /// <item><description>3: student</description></item>
+                /// <item><description>4: other</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -84,6 +105,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The seat preference string. Pass the value based on the seat selection rules.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1T</para>
             /// </summary>
@@ -92,6 +115,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ChooseBeds { get; set; }
 
             /// <summary>
+            /// <para>The berth preference string, such as 1T2M3B. The number indicates the berth quantity. T: upper berth. M: middle berth. B: lower berth.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1T</para>
             /// </summary>
@@ -100,6 +125,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ChooseSeats { get; set; }
 
             /// <summary>
+            /// <para>The departure station code.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -110,6 +136,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepStationCode { get; set; }
 
             /// <summary>
+            /// <para>The departure time in the format of yyyy-MM-dd hh:mm:ss.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -120,6 +147,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepTime { get; set; }
 
             /// <summary>
+            /// <para>The short train number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -132,6 +160,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The unique ID of the booker.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -142,6 +171,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The name of the booker.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -151,11 +181,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BtripUserName { get; set; }
 
+        /// <summary>
+        /// <para>The business travel information.</para>
+        /// </summary>
         [NameInMap("business_info")]
         [Validation(Required=false)]
         public TrainOrderCreateRequestBusinessInfo BusinessInfo { get; set; }
         public class TrainOrderCreateRequestBusinessInfo : TeaModel {
             /// <summary>
+            /// <para>The customer application ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4321</para>
             /// </summary>
@@ -164,6 +199,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CustomerApplyId { get; set; }
 
             /// <summary>
+            /// <para>The customer itinerary ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234</para>
             /// </summary>
@@ -174,6 +211,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The contact information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("contact_info")]
@@ -181,6 +219,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public TrainOrderCreateRequestContactInfo ContactInfo { get; set; }
         public class TrainOrderCreateRequestContactInfo : TeaModel {
             /// <summary>
+            /// <para>The external passenger ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -191,6 +230,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PassengerId { get; set; }
 
             /// <summary>
+            /// <para>The contact mobile number. SM4 encrypted.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -201,6 +241,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PassengerMobile { get; set; }
 
             /// <summary>
+            /// <para>The contact name. SM4 encrypted.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -213,6 +254,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>Specifies whether to force match the seat preference. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Force match.</description></item>
+        /// <item><description>1: Do not force match.</description></item>
+        /// </list>
+        /// <para>Default value: 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -221,6 +269,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ForceMatch { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to pay upon order creation. This feature is not currently supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -229,6 +279,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? IsPayNow { get; set; }
 
         /// <summary>
+        /// <para>The distributor order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -239,17 +290,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The passenger list.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("passenger_open_info_s")]
         [Validation(Required=false)]
         public List<TrainOrderCreateRequestPassengerOpenInfoS> PassengerOpenInfoS { get; set; }
         public class TrainOrderCreateRequestPassengerOpenInfoS : TeaModel {
+            /// <summary>
+            /// <para>The cost center information.</para>
+            /// </summary>
             [NameInMap("cost_center_info")]
             [Validation(Required=false)]
             public TrainOrderCreateRequestPassengerOpenInfoSCostCenterInfo CostCenterInfo { get; set; }
             public class TrainOrderCreateRequestPassengerOpenInfoSCostCenterInfo : TeaModel {
                 /// <summary>
+                /// <para>The cascading department name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>hn办公室1</para>
                 /// </summary>
@@ -258,6 +315,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CascadeDeptName { get; set; }
 
                 /// <summary>
+                /// <para>The cost center ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>123321</para>
                 /// </summary>
@@ -266,6 +325,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CostCenterId { get; set; }
 
                 /// <summary>
+                /// <para>The cost center name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>hh办公室</para>
                 /// </summary>
@@ -274,6 +335,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CostCenterName { get; set; }
 
                 /// <summary>
+                /// <para>The cost center number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12332112344</para>
                 /// </summary>
@@ -282,6 +345,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CostCenterNo { get; set; }
 
                 /// <summary>
+                /// <para>The department ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>010000009</para>
                 /// </summary>
@@ -290,6 +355,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string DepartId { get; set; }
 
                 /// <summary>
+                /// <para>The department name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>hn办公室</para>
                 /// </summary>
@@ -298,6 +365,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string DepartName { get; set; }
 
                 /// <summary>
+                /// <para>The invoice ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>111111</para>
                 /// </summary>
@@ -306,6 +375,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string InvoiceId { get; set; }
 
                 /// <summary>
+                /// <para>The invoice title.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>测试</para>
                 /// </summary>
@@ -314,6 +385,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string InvoiceTitle { get; set; }
 
                 /// <summary>
+                /// <para>The project code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>acs</para>
                 /// </summary>
@@ -322,6 +395,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ProjectCode { get; set; }
 
                 /// <summary>
+                /// <para>The project name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>办公室一号</para>
                 /// </summary>
@@ -332,6 +407,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The nationality code. SM4 encrypted. Required when the certificate type is not an ID card.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</para>
             /// </summary>
@@ -340,6 +417,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CountryCode { get; set; }
 
             /// <summary>
+            /// <para>The certificate number. SM4 encrypted.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -350,6 +428,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PassengerCertNo { get; set; }
 
             /// <summary>
+            /// <para>The certificate type. SM4 encrypted. Enumerated values are provided.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -360,6 +439,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PassengerCertType { get; set; }
 
             /// <summary>
+            /// <para>The third-party passenger ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -370,6 +450,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PassengerId { get; set; }
 
             /// <summary>
+            /// <para>The passenger mobile number. SM4 encrypted.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>b6a6fc1bdf1ba60e25c2e132b612c8819</para>
             /// </summary>
@@ -378,6 +460,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PassengerMobile { get; set; }
 
             /// <summary>
+            /// <para>The passenger name. SM4 encrypted.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -388,6 +471,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PassengerName { get; set; }
 
             /// <summary>
+            /// <para>The certificate expiration date. SM4 encrypted. Format: yyyy-MM-dd. Required when the certificate type is not an ID card.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</para>
             /// </summary>

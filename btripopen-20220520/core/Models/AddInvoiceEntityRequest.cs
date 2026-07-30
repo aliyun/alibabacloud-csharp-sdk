@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<AddInvoiceEntityRequestEntities> Entities { get; set; }
         public class AddInvoiceEntityRequestEntities : TeaModel {
             /// <summary>
-            /// <para>The entity ID, which can be an employee ID, department ID, role ID, or third-party department ID.</para>
+            /// <para>The entity ID, which can be a personnel ID, department ID, role ID, or third-party department ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string EntityId { get; set; }
 
             /// <summary>
-            /// <para>The entity name, which can be an employee name, department name, role name, or third-party department name.</para>
+            /// <para>The entity name, which can be a personnel name, department name, role name, or third-party department name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

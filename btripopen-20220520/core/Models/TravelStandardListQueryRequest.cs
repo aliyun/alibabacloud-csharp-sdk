@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The user ID. Specify this parameter to query the travel standards bound to an employee.</para>
+        /// <para>The user ID. Specify this parameter when querying the travel standard bound to an employee.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_1234</para>

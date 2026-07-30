@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InvoiceSearchResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The remarks that describe the result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The return value.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public List<InvoiceSearchResponseBodyModule> Module { get; set; }
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The third-party invoice ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>405009</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ThirdPartInvoiceId { get; set; }
 
             /// <summary>
+            /// <para>The invoice title.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>测试抬头</para>
             /// </summary>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The unique identifier of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
         /// </summary>
@@ -66,6 +79,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Set by the server. Set to false if an exception occurs or the result is null.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

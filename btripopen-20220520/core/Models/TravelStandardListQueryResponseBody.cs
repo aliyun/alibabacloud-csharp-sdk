@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The response data. Returned by the server. An empty value is returned if no results are found or an exception occurs.</para>
+        /// <para>The response data. Returned by the server. Returns null if no results are found or an exception occurs.</para>
         /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public TravelStandardListQueryResponseBodyModule Module { get; set; }
         public class TravelStandardListQueryResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The list of travel standards.</para>
+            /// <para>The list of travel standard information.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the travel standard description item.</para>
+                        /// <para>The travel standard description value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>经济舱,超级经济舱,公务舱,头等舱</para>

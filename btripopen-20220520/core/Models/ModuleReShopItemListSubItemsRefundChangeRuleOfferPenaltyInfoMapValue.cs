@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleReShopItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the rule is applicable.</para>
+        /// <para>是否适用规则</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? Struct { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether refund is supported.</para>
+        /// <para>支持退票</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? CancelFeeInd { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether date change is supported.</para>
+        /// <para>支持改期</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? ChangeFeeInd { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether upgrade is supported.</para>
+        /// <para>支持升舱</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? UpgradeFeeInd { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether reissue is supported.</para>
+        /// <para>支持换开</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -60,16 +60,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? ReissueInd { get; set; }
 
         /// <summary>
-        /// <para>The rule type. Valid values:</para>
+        /// <para>规则类型</para>
         /// <list type="bullet">
-        /// <item><description>0: Refund fee.</description></item>
-        /// <item><description>1: Change fee.</description></item>
-        /// <item><description>2: No-show penalty.</description></item>
-        /// <item><description>3: Other.</description></item>
-        /// <item><description>4: Upgrade fee.</description></item>
-        /// <item><description>5: Endorsement.</description></item>
-        /// <item><description>6: Deduction for used segments.</description></item>
-        /// <item><description>100: Tax refund.</description></item>
+        /// <item><description><para>0退票费用</para>
+        /// </description></item>
+        /// <item><description><para>1改期费用</para>
+        /// </description></item>
+        /// <item><description><para>2误机罚金</para>
+        /// </description></item>
+        /// <item><description><para>3其它</para>
+        /// </description></item>
+        /// <item><description><para>4升舱费用</para>
+        /// </description></item>
+        /// <item><description><para>5签转</para>
+        /// </description></item>
+        /// <item><description><para>6已使用航段扣减金额</para>
+        /// </description></item>
+        /// <item><description><para>100退税</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,12 +88,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? PenaltyTypeCode { get; set; }
 
         /// <summary>
-        /// <para>The applicability scope of the rule. Valid values:</para>
+        /// <para>规则的适用范围</para>
         /// <list type="bullet">
-        /// <item><description>1: All unused.</description></item>
-        /// <item><description>2: Partially unused.</description></item>
-        /// <item><description>3: Outbound.</description></item>
-        /// <item><description>4: Inbound.</description></item>
+        /// <item><description>1全部未使用</description></item>
+        /// <item><description>2部分未使用</description></item>
+        /// <item><description>3去程</description></item>
+        /// <item><description>4回程</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,11 +104,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? PenaltyApplyRangeCode { get; set; }
 
         /// <summary>
-        /// <para>The charge method of the rule. Valid values:</para>
+        /// <para>规则的收费方式</para>
         /// <list type="bullet">
-        /// <item><description>0: Charged per whole trip.</description></item>
-        /// <item><description>1: Charged per direction.</description></item>
-        /// <item><description>2: Charged per segment.</description></item>
+        /// <item><description>0按照全程收费</description></item>
+        /// <item><description>1按每个方向收费</description></item>
+        /// <item><description>2按照每个航段收费&quot;</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +119,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? PenaltyChargeTypeCode { get; set; }
 
         /// <summary>
-        /// <para>The fee amount.</para>
+        /// <para>费用</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -121,7 +129,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public double? Fee { get; set; }
 
         /// <summary>
-        /// <para>The currency of the fee.</para>
+        /// <para>费用币种</para>
         /// 
         /// <b>Example:</b>
         /// <para>CNY</para>
@@ -131,7 +139,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Currency { get; set; }
 
         /// <summary>
-        /// <para>The fee percentage.</para>
+        /// <para>费用百分比</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -141,7 +149,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public double? PenaltyPercent { get; set; }
 
         /// <summary>
-        /// <para>The start time of the rule time range.</para>
+        /// <para>规则时间范围-开始时间</para>
         /// 
         /// <b>Example:</b>
         /// <para>-720</para>
@@ -151,7 +159,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The end time of the rule time range.</para>
+        /// <para>规则时间范围-结束时间</para>
         /// 
         /// <b>Example:</b>
         /// <para>-168</para>
@@ -161,10 +169,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The time unit. Valid values:</para>
+        /// <para>时间单位</para>
         /// <list type="bullet">
-        /// <item><description>0: Hours.</description></item>
-        /// <item><description>1: Days.</description></item>
+        /// <item><description><para>0小时</para>
+        /// </description></item>
+        /// <item><description><para>1天</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -175,7 +185,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? TimeUnitCode { get; set; }
 
         /// <summary>
-        /// <para>The rule title.</para>
+        /// <para>规则标题</para>
         /// 
         /// <b>Example:</b>
         /// <para>退票费用</para>

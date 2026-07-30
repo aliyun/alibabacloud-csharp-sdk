@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CooperatorHotelEventPushRequest : TeaModel {
         /// <summary>
+        /// <para>The order status after the change. Leave empty unless a special scenario applies.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? ChangeOrderStatus { get; set; }
 
         /// <summary>
+        /// <para>The description of the order status after the change.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>交易成功</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ChangeOrderStatusDesc { get; set; }
 
         /// <summary>
+        /// <para>The order ID of the service provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CooperatorOrderId { get; set; }
 
         /// <summary>
+        /// <para>The event type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Event { get; set; }
 
         /// <summary>
+        /// <para>The description of the event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>用户离店</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string EventDesc { get; set; }
 
         /// <summary>
+        /// <para>The time when the event occurred.</para>
+        /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +74,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string EventTime { get; set; }
 
         /// <summary>
+        /// <para>The order ID on the Zhongzhou platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

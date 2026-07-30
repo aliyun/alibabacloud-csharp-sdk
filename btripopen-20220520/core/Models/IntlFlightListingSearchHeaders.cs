@@ -14,6 +14,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
+        /// <para>The enterprise access token.</para>
+        /// <list type="bullet">
+        /// <item><description>When calling this operation over HTTP, include this as a required parameter in the request URL. For information about how to obtain the token, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.5e2a281frQyDQ8&docId=3769985">Enterprise access token</a>.</description></item>
+        /// <item><description>When concatenating the parameter, use crop_token=value instead.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>feth00jqwls</para>
         /// </summary>

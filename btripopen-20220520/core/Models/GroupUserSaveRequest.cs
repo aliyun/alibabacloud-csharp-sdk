@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class GroupUserSaveRequest : TeaModel {
         /// <summary>
+        /// <para>The 6-digit administrative code. A maximum of two codes are supported, separated by commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456,654321</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BaseCityCode { get; set; }
 
         /// <summary>
+        /// <para>The date of birth in the format yyyy-MM-dd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1999-03-12</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Birthday { get; set; }
 
+        /// <summary>
+        /// <para>The list of certificates.</para>
+        /// </summary>
         [NameInMap("cert_list")]
         [Validation(Required=false)]
         public List<GroupUserSaveRequestCertList> CertList { get; set; }
         public class GroupUserSaveRequestCertList : TeaModel {
             /// <summary>
+            /// <para>The certificate expiration date in the format yyyy-MM-dd.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2099-03-12</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CertExpiredTime { get; set; }
 
             /// <summary>
+            /// <para>The two-letter code of the certificate issuing country.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CN</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CertNation { get; set; }
 
             /// <summary>
+            /// <para>The certificate number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123456</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CertNo { get; set; }
 
             /// <summary>
+            /// <para>The certificate type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? CertType { get; set; }
 
             /// <summary>
+            /// <para>The two-letter nationality code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CN</para>
             /// </summary>
@@ -72,6 +89,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The gender. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>F: female.</description></item>
+        /// <item><description>M: male.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>M</para>
         /// </summary>
@@ -80,6 +103,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Gender { get; set; }
 
         /// <summary>
+        /// <para>The employee number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1001</para>
         /// </summary>
@@ -88,6 +113,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string JobNo { get; set; }
 
         /// <summary>
+        /// <para>The mobile phone number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>18000000000</para>
         /// </summary>
@@ -96,6 +123,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Phone { get; set; }
 
         /// <summary>
+        /// <para>The English name. Use &quot;/&quot; as a separator with no spaces. Format: last_name/first_name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ce/shi</para>
         /// </summary>
@@ -104,17 +133,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RealNameEn { get; set; }
 
         /// <summary>
+        /// <para>The list of affiliated enterprises.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sub_corp_id_list")]
         [Validation(Required=false)]
         public List<GroupUserSaveRequestSubCorpIdList> SubCorpIdList { get; set; }
         public class GroupUserSaveRequestSubCorpIdList : TeaModel {
+            /// <summary>
+            /// <para>The list of department IDs.</para>
+            /// </summary>
             [NameInMap("depart_ids")]
             [Validation(Required=false)]
             public List<string> DepartIds { get; set; }
 
             /// <summary>
+            /// <para>The email address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:btrip@alibaba-inc.com">btrip@alibaba-inc.com</a></para>
             /// </summary>
@@ -123,6 +158,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Email { get; set; }
 
             /// <summary>
+            /// <para>The employment status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: active.</description></item>
+            /// <item><description>1: resigned.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -133,6 +173,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? LeaveStatus { get; set; }
 
             /// <summary>
+            /// <para>The ID of the direct manager.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -141,6 +183,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ManagerUserId { get; set; }
 
             /// <summary>
+            /// <para>The position level.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -149,6 +193,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PositionLevel { get; set; }
 
             /// <summary>
+            /// <para>The enterprise ID. This can be a parent or subsidiary enterprise ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -161,6 +206,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The employee ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -171,6 +217,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>The employee name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

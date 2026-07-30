@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightInventoryPriceCheckRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel user ID. Required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ZHANG/SAN</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BuyerName { get; set; }
 
         /// <summary>
+        /// <para>The user-defined channel name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ZJTD</para>
         /// </summary>
@@ -36,6 +41,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The total order price including tax (excluding service fee). Unit: cents.</para>
+        /// <remarks>
+        /// <para>The system verifies whether the price is consistent.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>102000</para>
         /// </summary>
@@ -44,6 +54,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? OrderPrice { get; set; }
 
         /// <summary>
+        /// <para>The product ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +65,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OtaItemId { get; set; }
 
         /// <summary>
+        /// <para>The passenger information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("passenger_list")]
@@ -61,6 +73,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<IntlFlightInventoryPriceCheckRequestPassengerList> PassengerList { get; set; }
         public class IntlFlightInventoryPriceCheckRequestPassengerList : TeaModel {
             /// <summary>
+            /// <para>The date of birth. Required.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -71,6 +84,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Birthday { get; set; }
 
             /// <summary>
+            /// <para>The certificate information. Required.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("cert_info")]
@@ -78,16 +92,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public IntlFlightInventoryPriceCheckRequestPassengerListCertInfo CertInfo { get; set; }
             public class IntlFlightInventoryPriceCheckRequestPassengerListCertInfo : TeaModel {
                 /// <summary>
+                /// <para>The certificate number.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>H123456</para>
+                /// <para>110101********1234</para>
                 /// </summary>
                 [NameInMap("cert_no")]
                 [Validation(Required=false)]
                 public string CertNo { get; set; }
 
                 /// <summary>
+                /// <para>The certificate type.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -98,6 +114,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? CertType { get; set; }
 
                 /// <summary>
+                /// <para>The certificate validity date.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2033-01-09</para>
                 /// </summary>
@@ -106,6 +124,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CertValidDate { get; set; }
 
                 /// <summary>
+                /// <para>The place of issue.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>CN</para>
                 /// </summary>
@@ -116,6 +136,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The name of the passenger.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -126,6 +147,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string FullName { get; set; }
 
             /// <summary>
+            /// <para>The gender.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -136,6 +158,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? Gender { get; set; }
 
             /// <summary>
+            /// <para>The employee ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>L5000924</para>
             /// </summary>
@@ -144,6 +168,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string JobNo { get; set; }
 
             /// <summary>
+            /// <para>The nationality.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -154,6 +179,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Nationality { get; set; }
 
             /// <summary>
+            /// <para>The two-letter nationality code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CN</para>
             /// </summary>
@@ -162,16 +189,22 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string NationalityCode { get; set; }
 
             /// <summary>
+            /// <para>The phone number. Required.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>18012341234</para>
+            /// <para>13100008888</para>
             /// </summary>
             [NameInMap("phone")]
             [Validation(Required=false)]
             public string Phone { get; set; }
 
             /// <summary>
+            /// <para>The passenger type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: adult.</description></item>
+            /// <item><description>1: child.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -182,6 +215,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? Type { get; set; }
 
             /// <summary>
+            /// <para>The unique business travel user ID. Required.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -192,6 +226,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>The employee type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>

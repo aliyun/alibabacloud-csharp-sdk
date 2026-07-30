@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class WaitApplyInvoiceTaskDetailQueryRequest : TeaModel {
         /// <summary>
+        /// <para>The billing date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

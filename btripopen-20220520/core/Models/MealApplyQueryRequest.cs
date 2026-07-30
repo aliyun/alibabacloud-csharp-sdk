@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class MealApplyQueryRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the third-party application order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightRefundDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The distribution external order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DisOrderId { get; set; }
 
         /// <summary>
+        /// <para>The sub-order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

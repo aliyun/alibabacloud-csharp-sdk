@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IsvRuleSaveShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the current employee needs to submit a travel approval request when making a booking.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? ApplyNeed { get; set; }
 
         /// <summary>
+        /// <para>The type of role permission granted to the employee.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,11 +30,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BookType { get; set; }
 
+        /// <summary>
+        /// <para>The list of users for whom the booking agent permission takes effect.</para>
+        /// </summary>
         [NameInMap("bookuser_list")]
         [Validation(Required=false)]
         public string BookuserListShrink { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the current employee is subject to travel policy restrictions when making a booking.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -40,6 +48,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? RuleNeed { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the authorization takes effect.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,10 +59,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>The employee ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123</para>
+        /// <para>user_1234</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

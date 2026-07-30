@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class VasBillSettlementQueryRequest : TeaModel {
+        /// <summary>
+        /// <para>The approval ID.</para>
+        /// </summary>
         [NameInMap("apply_id")]
         [Validation(Required=false)]
         public string ApplyId { get; set; }
 
         /// <summary>
+        /// <para>The bill batch in yyyyMMdd format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20250501</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BillBatch { get; set; }
 
         /// <summary>
+        /// <para>The bill recording end time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-01-02</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BillRecordTimeEnd { get; set; }
 
         /// <summary>
+        /// <para>The bill recording start time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-01-01</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BillRecordTimeStart { get; set; }
 
         /// <summary>
+        /// <para>The ID of the service provider.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cooperator_alibtrip</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CooperatorId { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>
@@ -54,6 +67,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? OrderId { get; set; }
 
         /// <summary>
+        /// <para>The page number to return.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +78,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +89,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The billing update end date in yyyy-MM-dd format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-07-01</para>
         /// </summary>
@@ -82,6 +99,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string PeriodEnd { get; set; }
 
         /// <summary>
+        /// <para>The billing update start date in yyyy-MM-dd format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-10-01</para>
         /// </summary>
@@ -90,6 +109,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string PeriodStart { get; set; }
 
         /// <summary>
+        /// <para>The scroll ID. In scroll mode, this value can be used as the input parameter for the next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CAESBgoEIgIIABgAIhkKFwMSAAAAMUw4MDAwMDAwMDA3MjdkMzgw</para>
         /// </summary>
@@ -98,6 +119,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ScrollId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to use scroll mode for the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

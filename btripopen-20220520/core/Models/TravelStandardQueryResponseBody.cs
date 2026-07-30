@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public List<string> ActivatedServiceTypeList { get; set; }
 
             /// <summary>
-            /// <para>The travel standard information, which consists of the main travel standard information and module configuration information.</para>
+            /// <para>The travel standard information, which consists of the main travel standard information and module configurations.</para>
             /// </summary>
             [NameInMap("reserve_rule")]
             [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 }
 
                 /// <summary>
-                /// <para>The module configuration information.</para>
+                /// <para>The module configurations.</para>
                 /// </summary>
                 [NameInMap("module_config_list")]
                 [Validation(Required=false)]

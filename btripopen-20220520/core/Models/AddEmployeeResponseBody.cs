@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request.</para>
+        /// <para>The unique identifier of this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C61ECFF6-<b><b>-</b></b>-****-D77369043A5F</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

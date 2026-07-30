@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CarApplyModifyRequest : TeaModel {
         /// <summary>
+        /// <para>The approval time. The time must be in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-07-12 16:12:53</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OperateTime { get; set; }
 
         /// <summary>
+        /// <para>The approval remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>同意</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Remark { get; set; }
 
         /// <summary>
+        /// <para>The approval result.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>The third-party approval order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ThirdPartApplyId { get; set; }
 
         /// <summary>
+        /// <para>The third-party employee ID of the approval order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

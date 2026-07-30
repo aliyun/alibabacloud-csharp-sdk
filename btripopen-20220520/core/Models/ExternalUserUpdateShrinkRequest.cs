@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ExternalUserUpdateShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The date of birth in the format yyyy-MM-dd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2000-01-02</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Birthday { get; set; }
 
+        /// <summary>
+        /// <para>The list of identity documents.</para>
+        /// </summary>
         [NameInMap("cert_request_list")]
         [Validation(Required=false)]
         public string CertRequestListShrink { get; set; }
 
         /// <summary>
+        /// <para>The email address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:zhangsan@alibaba-inc.com">zhangsan@alibaba-inc.com</a></para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Email { get; set; }
 
         /// <summary>
+        /// <para>The phone number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13438009765</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Phone { get; set; }
 
         /// <summary>
+        /// <para>The Chinese real name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>张三</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RealName { get; set; }
 
         /// <summary>
+        /// <para>The passport name in pinyin, in the format LastName/FirstName.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zhang/san</para>
         /// </summary>

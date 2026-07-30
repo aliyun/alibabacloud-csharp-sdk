@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainOrderQueryRequest : TeaModel {
         /// <summary>
+        /// <para>The order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,8 +21,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? OrderId { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>用户ID</para>
+        /// <para>User ID.</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

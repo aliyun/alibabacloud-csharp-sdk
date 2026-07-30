@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelOrderCancelResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>noPermission</para>
         /// </summary>
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public HotelOrderCancelResponseBodyModule Module { get; set; }
         public class HotelOrderCancelResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the cancellation is successful.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public bool? CancelSuccess { get; set; }
 
             /// <summary>
+            /// <para>The status code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -49,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The status description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>订单申请取消中退款申请已提交，商家确认中</para>
             /// </summary>
@@ -57,6 +67,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Desc { get; set; }
 
             /// <summary>
+            /// <para>The penalty fee. Unit: cents.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -67,6 +79,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C61ECFF6-606B-5F66-B81D-D77369043A5F</para>
         /// </summary>
@@ -75,6 +89,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -83,6 +99,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The trace ID of the log.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21041ce316577904808056433edbb2</para>
         /// </summary>

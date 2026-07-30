@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainOrderDetailQueryRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The distributor order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainOrderChangeConfirmRequest : TeaModel {
         /// <summary>
+        /// <para>The change order ID assigned by the business travel platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ChangeApplyId { get; set; }
 
         /// <summary>
+        /// <para>The settlement amount for the ticket change.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? ChangeSettleAmount { get; set; }
 
         /// <summary>
+        /// <para>The order ID assigned by the business travel platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The change application ID assigned by the distributor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutChangeApplyId { get; set; }
 
         /// <summary>
+        /// <para>The order ID assigned by the distributor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

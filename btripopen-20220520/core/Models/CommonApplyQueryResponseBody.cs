@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CommonApplyQueryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The approval order object.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public CommonApplyQueryResponseBodyModule Module { get; set; }
         public class CommonApplyQueryResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The Alibaba business travel approval ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? ApplyId { get; set; }
 
             /// <summary>
+            /// <para>The approval type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? BizCategory { get; set; }
 
             /// <summary>
+            /// <para>The application reason.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>改签</para>
             /// </summary>
@@ -54,14 +67,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Cause { get; set; }
 
             /// <summary>
+            /// <para>The business travel enterprise ID.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>0001A1100000007EX08O</para>
+            /// <para>btrip5tnut0d3v78sl794</para>
             /// </summary>
             [NameInMap("corp_id")]
             [Validation(Required=false)]
             public string CorpId { get; set; }
 
             /// <summary>
+            /// <para>The extended information of the approval order.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>改签：
             /// {
@@ -142,6 +159,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ExtendValue { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// <remarks>
+            /// <para>Notice: Time format: yyyy-MM-dd\&quot;T\&quot;HH:mm\&quot;Z\&quot;</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-03-18T20:26Z</para>
             /// </summary>
@@ -150,6 +172,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The order ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1017124195788186048</para>
             /// </summary>
@@ -158,6 +182,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? OrderId { get; set; }
 
             /// <summary>
+            /// <para>The approval status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -166,14 +192,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? Status { get; set; }
 
             /// <summary>
+            /// <para>The third-party enterprise ID. The value is the same as the business travel enterprise ID.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>1233</para>
+            /// <para>btrip5tnut0d3v78sl794</para>
             /// </summary>
             [NameInMap("thirdpart_corp_id")]
             [Validation(Required=false)]
             public string ThirdpartCorpId { get; set; }
 
             /// <summary>
+            /// <para>The third-party business trip approval ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12344</para>
             /// </summary>
@@ -182,6 +212,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ThirdpartId { get; set; }
 
             /// <summary>
+            /// <para>The reason for the business trip.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>杭州出差</para>
             /// </summary>
@@ -190,6 +222,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string TripCause { get; set; }
 
             /// <summary>
+            /// <para>The third-party user ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>user1</para>
             /// </summary>
@@ -198,6 +232,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>The third-party username.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>张三</para>
             /// </summary>
@@ -208,6 +244,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
         /// </summary>
@@ -216,6 +254,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -224,6 +264,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The trace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21041ce316577904808056433edbb2</para>
         /// </summary>

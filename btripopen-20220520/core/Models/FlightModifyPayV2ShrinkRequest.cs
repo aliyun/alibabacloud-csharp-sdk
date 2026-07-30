@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightModifyPayV2ShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The payment extension fields.</para>
+        /// </summary>
         [NameInMap("ext_params")]
         [Validation(Required=false)]
         public string ExtParamsShrink { get; set; }
 
         /// <summary>
+        /// <para>The user-defined channel name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The payment amount for the ticket change.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5100</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? ModifyPayAmount { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1017002195370467200</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? OrderId { get; set; }
 
         /// <summary>
+        /// <para>The distribution external order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1017002195370467200</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The distribution external sub-order ID for the ticket change.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1019195786853020</para>
         /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutSubOrderId { get; set; }
 
         /// <summary>
+        /// <para>The business travel sub-order ID (change sales order ID).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1019195786853020</para>
         /// </summary>

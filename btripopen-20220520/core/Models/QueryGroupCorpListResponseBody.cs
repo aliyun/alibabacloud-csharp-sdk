@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class QueryGroupCorpListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A3F8DCAB-8301-5770-BD9F-71B0BF9E1A6E</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The return code description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>系统错误</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public List<QueryGroupCorpListResponseBodyModule> Module { get; set; }
         public class QueryGroupCorpListResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The enterprise ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>corp1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CorpId { get; set; }
 
             /// <summary>
+            /// <para>The enterprise name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>阿里巴巴</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the API call is successful. Valid values: true and false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The global trace identifier of the request, typically used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21041ce316577904808056433edbb2</para>
         /// </summary>

@@ -10,16 +10,22 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightOtaItemDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The user-defined channel name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cheshi</para>
+        /// <para>name</para>
         /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID. Either the external order ID or the business travel order ID is required.</para>
+        /// <remarks>
+        /// <para>Notice: Pass in this parameter when querying refund/change and baggage rules for a rebooking product. The rules may not be calculable for a re-rebooking scenario.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1017060204732105050</para>
         /// </summary>
@@ -28,6 +34,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The product ID.</para>
+        /// <remarks>
+        /// <para>Notice: If querying a rebooking product, pass in the rebooking product otaItemId.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +48,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OtaItemId { get; set; }
 
         /// <summary>
+        /// <para>The external order ID.</para>
+        /// <remarks>
+        /// <para>Notice: Pass in this parameter when querying refund/change and baggage rules for a rebooking product. The rules may not be calculable for a re-rebooking scenario.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>3814233628483219456</para>
         /// </summary>

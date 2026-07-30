@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelOrderChangeApplyRequest : TeaModel {
         /// <summary>
+        /// <para>The external user ID. If organization members have been synchronized, use btripUserId. Otherwise, pass the userId corresponding to the user in the distributor\&quot;s own system.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123122</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The distributor order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DisOrderId { get; set; }
 
         /// <summary>
+        /// <para>The reason for the order modification.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Reason { get; set; }
 
         /// <summary>
+        /// <para>The list of rooms to be modified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("room_info_list")]
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<HotelOrderChangeApplyRequestRoomInfoList> RoomInfoList { get; set; }
         public class HotelOrderChangeApplyRequestRoomInfoList : TeaModel {
             /// <summary>
+            /// <para>The list of cancellation dates. Currently, only full order cancellation and early checkout are supported. For full order cancellation, pass all check-in dates. For early checkout, pass the dates that will no longer be occupied.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("cancel_date")]
@@ -52,6 +58,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public List<string> CancelDate { get; set; }
 
             /// <summary>
+            /// <para>The room number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -64,6 +71,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

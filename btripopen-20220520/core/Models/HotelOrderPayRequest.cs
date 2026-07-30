@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelOrderPayRequest : TeaModel {
         /// <summary>
+        /// <para>The supplier order ID, which is returned from the order creation operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? BtripOrderId { get; set; }
 
         /// <summary>
+        /// <para>The user ID. If organization members are synchronized, use the btripUserId. Otherwise, specify the userId that corresponds to the user in the distributor\&quot;s own system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The enterprise payment amount. Unit: cents.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? CompanyPayFee { get; set; }
 
         /// <summary>
+        /// <para>The personal payment amount. Unit: cents. You do not need to specify this field. If you need to use this field, contact the integration helpdesk.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? PersonPayFee { get; set; }
 
         /// <summary>
+        /// <para>The third-party payment account. You do not need to specify this field. If you need to use this field, contact the integration helpdesk.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>demo</para>
         /// </summary>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ThirdPayAccount { get; set; }
 
         /// <summary>
+        /// <para>The third-party transaction number. You do not need to specify this field. If you need to use this field, contact the integration helpdesk.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>demo</para>
         /// </summary>
@@ -66,6 +74,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ThirdTradeNo { get; set; }
 
         /// <summary>
+        /// <para>The total room price excluding service fees. Unit: cents.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainFeeCalculateChangeRequest : TeaModel {
         /// <summary>
+        /// <para>The change ticket information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("change_train_details")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<TrainFeeCalculateChangeRequestChangeTrainDetails> ChangeTrainDetails { get; set; }
         public class TrainFeeCalculateChangeRequestChangeTrainDetails : TeaModel {
             /// <summary>
+            /// <para>The arrival station code.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ArrStationCode { get; set; }
 
             /// <summary>
+            /// <para>The departure station code.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepStationCode { get; set; }
 
             /// <summary>
+            /// <para>The departure time in the format of yyyy-MM-dd hh:mm:ss.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepTime { get; set; }
 
             /// <summary>
+            /// <para>The original departure time.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +62,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string OriginalDepTime { get; set; }
 
             /// <summary>
+            /// <para>The original train number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -67,6 +73,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string OriginalTrainNo { get; set; }
 
             /// <summary>
+            /// <para>The passenger information.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("passenger_info")]
@@ -74,6 +81,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public TrainFeeCalculateChangeRequestChangeTrainDetailsPassengerInfo PassengerInfo { get; set; }
             public class TrainFeeCalculateChangeRequestChangeTrainDetailsPassengerInfo : TeaModel {
                 /// <summary>
+                /// <para>The passenger certificate number, encrypted with SM4.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -84,6 +92,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string PassengerCertNo { get; set; }
 
                 /// <summary>
+                /// <para>The passenger certificate type, encrypted with SM4.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -94,6 +103,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string PassengerCertType { get; set; }
 
                 /// <summary>
+                /// <para>The passenger name, encrypted with SM4.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -106,6 +116,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The seat type for the change.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -116,6 +127,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string SeatType { get; set; }
 
             /// <summary>
+            /// <para>The short train number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -128,6 +140,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The supplier order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -138,6 +151,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DistributeOrderId { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

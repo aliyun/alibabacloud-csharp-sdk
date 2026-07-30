@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InvoiceRuleDeleteRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to delete all applicable entities. When del_all is set to true, all entities under the invoice title are deleted, and the entity list parameter is not validated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public bool? DelAll { get; set; }
 
+        /// <summary>
+        /// <para>Not required when del_all is set to true. Otherwise, this parameter is required.</para>
+        /// </summary>
         [NameInMap("entities")]
         [Validation(Required=false)]
         public List<InvoiceRuleDeleteRequestEntities> Entities { get; set; }
         public class InvoiceRuleDeleteRequestEntities : TeaModel {
             /// <summary>
+            /// <para>The entity ID, which can be an employee ID, department ID, role ID, or third-party department ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12345</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string EntityId { get; set; }
 
             /// <summary>
+            /// <para>The entity type of the available scope.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -40,6 +49,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The third-party invoice ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

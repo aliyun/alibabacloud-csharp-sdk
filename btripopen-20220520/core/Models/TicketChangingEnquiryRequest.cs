@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TicketChangingEnquiryRequest : TeaModel {
         /// <summary>
+        /// <para>The three-letter code of the arrival city.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ArrCity { get; set; }
 
         /// <summary>
+        /// <para>The three-letter code of the departure city.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DepCity { get; set; }
 
         /// <summary>
+        /// <para>The distribution external order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DisOrderId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the change is voluntary.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? IsVoluntary { get; set; }
 
         /// <summary>
+        /// <para>The change date. This parameter is required for calculating the change price.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +65,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ModifyDepartDate { get; set; }
 
         /// <summary>
+        /// <para>The change flight number. This parameter is required for calculating the change price.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +76,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ModifyFlightNo { get; set; }
 
         /// <summary>
+        /// <para>The session ID returned from the change search.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

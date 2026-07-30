@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightPayOrderV2ResponseBody : TeaModel {
         /// <summary>
+        /// <para>The return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public FlightPayOrderV2ResponseBodyModule Module { get; set; }
         public class FlightPayOrderV2ResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The actual payment amount.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>51000</para>
             /// </summary>
@@ -53,6 +59,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

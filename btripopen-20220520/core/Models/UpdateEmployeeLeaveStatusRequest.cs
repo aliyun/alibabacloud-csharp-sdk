@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class UpdateEmployeeLeaveStatusRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the employee has left the company.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,10 +21,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? IsLeave { get; set; }
 
         /// <summary>
+        /// <para>The employee ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>user123</para>
+        /// <para>user_1234</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

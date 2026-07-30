@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
+        /// <para>The header parameter obtained from the &quot;Application Access Credential&quot; operation. Add it to the header. In HTTP mode, you can use access_token=value in the URL as an alternative.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>feth00jqwls</para>
         /// </summary>

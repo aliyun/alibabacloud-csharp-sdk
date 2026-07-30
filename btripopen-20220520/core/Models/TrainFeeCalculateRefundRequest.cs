@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainFeeCalculateRefundRequest : TeaModel {
         /// <summary>
+        /// <para>The supplier order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DistributeOrderId { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The ticket information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refund_train_infos")]
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<TrainFeeCalculateRefundRequestRefundTrainInfos> RefundTrainInfos { get; set; }
         public class TrainFeeCalculateRefundRequestRefundTrainInfos : TeaModel {
             /// <summary>
+            /// <para>The arrival station code.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ArrStationCode { get; set; }
 
             /// <summary>
+            /// <para>The departure station code.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +62,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepStationCode { get; set; }
 
             /// <summary>
+            /// <para>The departure time, in the format of yyyy-MM-dd hh:mm:ss.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -67,6 +73,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepTime { get; set; }
 
             /// <summary>
+            /// <para>The passenger information.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("refund_passenger_infos")]
@@ -74,6 +81,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public List<TrainFeeCalculateRefundRequestRefundTrainInfosRefundPassengerInfos> RefundPassengerInfos { get; set; }
             public class TrainFeeCalculateRefundRequestRefundTrainInfosRefundPassengerInfos : TeaModel {
                 /// <summary>
+                /// <para>The certificate number, SM4-encrypted.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -84,6 +92,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string PassengerCertNo { get; set; }
 
                 /// <summary>
+                /// <para>The certificate type, SM4-encrypted. Enum values are provided.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -94,6 +103,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string PassengerCertType { get; set; }
 
                 /// <summary>
+                /// <para>The passenger ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -104,6 +114,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string PassengerId { get; set; }
 
                 /// <summary>
+                /// <para>The passenger name, SM4-encrypted.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -116,6 +127,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The train number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

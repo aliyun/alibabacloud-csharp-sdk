@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable external polling. When enabled, the external frontend controls polling, which reduces the response time (RT) of a single search. Default value: false.</para>
+        /// <para>Specifies whether external polling is enabled. The external frontend controls polling to reduce single search response time. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? OutWheelSearch { get; set; }
 
         /// <summary>
-        /// <para>The rebooking group key returned by the consultation operation.</para>
+        /// <para>The change group key returned by the consultation API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string PassengerJourneyGroupKey { get; set; }
 
         /// <summary>
-        /// <para>The rebooking reason code.</para>
+        /// <para>The change reason code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ReShopReasonCode { get; set; }
 
         /// <summary>
-        /// <para>The search journeys. Only pass the journeys to be rebooked.</para>
+        /// <para>The search journeys. Only pass the journeys to be changed.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("search_journeys")]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepDate { get; set; }
 
             /// <summary>
-            /// <para>The selected flight information for rebooking.</para>
+            /// <para>The selected flight information for the change.</para>
             /// </summary>
             [NameInMap("selected_flights")]
             [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// <para>The list of selected passengers for rebooking.</para>
+        /// <para>The list of selected passengers for the flight change.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("selected_passengers")]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// <para>The query record token used for external polling.</para>
+        /// <para>The query record token for external polling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9960b412-cc05-4d10-b570-93372d816807</para>

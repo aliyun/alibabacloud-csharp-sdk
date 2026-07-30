@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelCityCodeListRequest : TeaModel {
         /// <summary>
+        /// <para>The two-letter country code. This parameter does not need to be specified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

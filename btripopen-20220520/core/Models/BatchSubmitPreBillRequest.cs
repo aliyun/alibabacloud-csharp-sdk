@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         /// <list type="bullet">
         /// <item><description>1: bill in the current period.</description></item>
         /// <item><description>2: deferred billing.</description></item>
-        /// <item><description>null: bill based on the current billing decision of the record.</description></item>
+        /// <item><description>null: bill according to the current billing decision of the record.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

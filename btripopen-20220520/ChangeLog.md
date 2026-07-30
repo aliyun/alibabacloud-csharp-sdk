@@ -1,3 +1,7 @@
+2026-07-30 Version: 5.4.1
+- Update API HotelOrderQuery: add response parameters Body.module.order_base_info.dailyBreakfastList.
+
+
 2026-07-20 Version: 5.4.0
 - Support API IntlFlightReShopCreate.
 - Support API IntlFlightReShopListSearch.

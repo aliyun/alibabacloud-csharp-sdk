@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class DeleteEmployeesFromCustomRoleShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the custom enterprise role.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RoleId { get; set; }
 
         /// <summary>
+        /// <para>The list of member IDs. The maximum number of members per request is 500.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("user_id_list")]

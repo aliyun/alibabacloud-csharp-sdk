@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightOtaSearchRequest : TeaModel {
         /// <summary>
+        /// <para>The two-letter code of the airline.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CA</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string AirlineCode { get; set; }
 
         /// <summary>
+        /// <para>The three-letter code of the arrival city.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ArrCityCode { get; set; }
 
         /// <summary>
+        /// <para>The cabin class.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Y</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CabinClass { get; set; }
 
         /// <summary>
+        /// <para>The operating flight number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CA2324</para>
         /// </summary>
@@ -44,16 +51,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CarrierFlightNo { get; set; }
 
         /// <summary>
+        /// <para>The three-letter code of the departure city.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>HGH</para>
+        /// <para>HGH222</para>
         /// </summary>
         [NameInMap("dep_city_code")]
         [Validation(Required=false)]
         public string DepCityCode { get; set; }
 
         /// <summary>
+        /// <para>The departure time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +73,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DepDate { get; set; }
 
         /// <summary>
+        /// <para>The flight number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

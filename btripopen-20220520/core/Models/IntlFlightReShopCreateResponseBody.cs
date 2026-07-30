@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public bool? NeedRetry { get; set; }
 
             /// <summary>
-            /// <para>The retry time interval, in milliseconds.</para>
+            /// <para>The retry time interval. Unit: ms.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The global trace ID of the request, typically used for troubleshooting.</para>
+        /// <para>The global trace identifier of the request, typically used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>210bc4b116835992457938931db4de</para>

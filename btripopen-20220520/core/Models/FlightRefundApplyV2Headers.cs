@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
+        /// <para>A header parameter. Obtained from the &quot;Enterprise Access Credential&quot; operation and included in the request header.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>feth00jqwls</para>
         /// </summary>

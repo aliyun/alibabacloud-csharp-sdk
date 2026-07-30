@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CitySearchRequest : TeaModel {
         /// <summary>
+        /// <para>The search keyword.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightInventoryPriceCheckShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel user ID. Required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ZHANG/SAN</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BuyerName { get; set; }
 
         /// <summary>
+        /// <para>The user-defined channel name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ZJTD</para>
         /// </summary>
@@ -36,6 +41,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The total order price including tax (excluding service fee). Unit: cents.</para>
+        /// <remarks>
+        /// <para>The system verifies whether the price is consistent.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>102000</para>
         /// </summary>
@@ -44,6 +54,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? OrderPrice { get; set; }
 
         /// <summary>
+        /// <para>The product ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +65,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OtaItemId { get; set; }
 
         /// <summary>
+        /// <para>The passenger information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("passenger_list")]

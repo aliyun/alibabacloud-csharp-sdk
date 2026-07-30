@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InvoiceRuleAddShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The list of entities.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("entities")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string EntitiesShrink { get; set; }
 
         /// <summary>
+        /// <para>The third-party invoice ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

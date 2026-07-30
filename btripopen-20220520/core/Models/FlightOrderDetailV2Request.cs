@@ -10,16 +10,19 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightOrderDetailV2Request : TeaModel {
         /// <summary>
+        /// <para>The user-defined channel name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cheshiapi</para>
+        /// <para>name</para>
         /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID. Either the external order ID or the business travel order ID is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1017002195370467138</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? OrderId { get; set; }
 
         /// <summary>
+        /// <para>The external order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1017002195370467137</para>
         /// </summary>

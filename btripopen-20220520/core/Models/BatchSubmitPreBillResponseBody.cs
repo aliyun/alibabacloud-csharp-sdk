@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public BatchSubmitPreBillResponseBodyModule Module { get; set; }
         public class BatchSubmitPreBillResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The batch ID. This value may be null if no actionable bills exist.</para>
+            /// <para>The batch ID. This value may be null if there are no actionable bills.</para>
             /// 
             /// <b>Example:</b>
             /// <para>999</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// <para>The pagination token set by the server. Indicates whether more data exists on the next page during pagination.</para>
+        /// <para>The pagination token set by the server. Indicates whether more data is available on the next page during pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

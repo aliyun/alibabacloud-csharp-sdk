@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightOrderCancelRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ZHANG/SAN</para>
         /// </summary>
@@ -26,26 +30,31 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BuyerName { get; set; }
 
         /// <summary>
+        /// <para>The custom channel name defined by the user.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>TRAVEL</para>
+        /// <para>testname</para>
         /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID. Required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1012000000000000</para>
+        /// <para>1017035200141986748</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The external order ID. Optional.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>F11374007131319304192</para>
+        /// <para>3823859622698536960</para>
         /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]

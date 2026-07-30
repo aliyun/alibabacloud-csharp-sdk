@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightOtaSearchV2ShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The cabin type for search. Default value: ALL_CABIN (all cabins).</para>
+        /// <remarks>
+        /// <para>Notice: Although the parameter structure is a list, only a single cabin type is supported. Multiple cabin types are not supported.</notice></para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("cabin_type_list")]
         [Validation(Required=false)]
         public string CabinTypeListShrink { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to show only direct flights. Default value: TRUE.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -22,16 +30,19 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? DirectOnly { get; set; }
 
         /// <summary>
+        /// <para>The user-defined channel name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cheshi</para>
+        /// <para>ceshi</para>
         /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether codeshare flights are needed. Default value: TRUE.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -40,6 +51,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? NeedShareFlight { get; set; }
 
         /// <summary>
+        /// <para>The search journeys.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("search_journeys")]
@@ -47,16 +59,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string SearchJourneysShrink { get; set; }
 
         /// <summary>
+        /// <para>The search mode.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("search_mode")]
         [Validation(Required=false)]
         public int? SearchMode { get; set; }
 
         /// <summary>
+        /// <para>The trip type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

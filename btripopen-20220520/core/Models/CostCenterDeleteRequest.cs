@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CostCenterDeleteRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the third-party cost center.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

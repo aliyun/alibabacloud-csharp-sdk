@@ -14,8 +14,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
+        /// <para>The application credential, which is one of the header parameters in the HTTP method. <b>Deprecated. Use the</b> <c>app_secret</c> <b>field instead.</b></para>
+        /// 
         /// <b>Example:</b>
-        /// <para>feth00jqwls</para>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("x-acs-btrip-access-token")]
         [Validation(Required=false)]

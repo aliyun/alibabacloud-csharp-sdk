@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightRefundApplyRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel order ID. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The external order ID. This parameter is optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3750656668336001024</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The external refund application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>202503251022170001</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutRefundApplyId { get; set; }
 
         /// <summary>
+        /// <para>The refund group key returned by the consultation operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string PassengerJourneyGroupKey { get; set; }
 
         /// <summary>
+        /// <para>The refund reason code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +63,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RefundReasonCode { get; set; }
 
         /// <summary>
+        /// <para>The list of flight segments to be refunded.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refund_segment_list")]
@@ -63,6 +71,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<IntlFlightRefundApplyRequestRefundSegmentList> RefundSegmentList { get; set; }
         public class IntlFlightRefundApplyRequestRefundSegmentList : TeaModel {
             /// <summary>
+            /// <para>The unique key of the segment. Format: flight number + departure airport + arrival airport + departure date (MMdd).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -75,6 +84,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The list of passengers to be refunded. Either the passenger ID or the passenger full name is required.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("selected_passengers")]
@@ -82,6 +92,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<IntlFlightRefundApplyRequestSelectedPassengers> SelectedPassengers { get; set; }
         public class IntlFlightRefundApplyRequestSelectedPassengers : TeaModel {
             /// <summary>
+            /// <para>The full name of the passenger.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ZHANG/SAN</para>
             /// </summary>
@@ -90,6 +102,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string FullName { get; set; }
 
             /// <summary>
+            /// <para>The passenger ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

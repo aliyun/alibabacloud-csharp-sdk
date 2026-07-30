@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightRefundDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel order ID. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The external order ID. This parameter is optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40820102379649052</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The external refund or rebooking application ID. This parameter is optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>202503251022170001</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutRefundApplyId { get; set; }
 
         /// <summary>
+        /// <para>The refund application ID. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

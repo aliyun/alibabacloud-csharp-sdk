@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The remarks on the result, such as a description of the result.</para>
+        /// <para>The remarks that describe the result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>成功</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The return value from the server. An empty value is returned if no result is available or an exception occurs.</para>
+        /// <para>The response data returned by the server. An empty value is returned if no result is available or an exception occurs.</para>
         /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A5009956-1077-52FB-B520-EA8C7E91D722</para>

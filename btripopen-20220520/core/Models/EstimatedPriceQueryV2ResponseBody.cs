@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public Dictionary<string, ModulePriceMapValue> PriceMap { get; set; }
 
             /// <summary>
-            /// <para>The type, such as economy class, business class, first class, G/D train, other, or travel standard.</para>
+            /// <para>The type, such as economy class, business class, first class, G/D, other, or travel standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>经济舱</para>

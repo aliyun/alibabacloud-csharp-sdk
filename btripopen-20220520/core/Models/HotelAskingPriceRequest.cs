@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelAskingPriceRequest : TeaModel {
         /// <summary>
+        /// <para>The number of adults.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string AdultNum { get; set; }
 
         /// <summary>
+        /// <para>The user ID. If organization members are synchronized, use btripUserId. Otherwise, pass the userId corresponding to the distributor\&quot;s own system user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The check-in date in the format of YYYY-MM-DD HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CheckInDate { get; set; }
 
         /// <summary>
+        /// <para>The check-out date in the format of YYYY-MM-DD HH:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CheckOutDate { get; set; }
 
         /// <summary>
+        /// <para>The city code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>330100</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CityCode { get; set; }
 
         /// <summary>
+        /// <para>The city name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>杭州</para>
         /// </summary>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CityName { get; set; }
 
         /// <summary>
+        /// <para>The sort direction.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -70,6 +82,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Dir { get; set; }
 
         /// <summary>
+        /// <para>The list of star ratings for filtering.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -78,6 +92,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string HotelStar { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to query only contracted hotels.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -86,6 +102,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? IsProtocol { get; set; }
 
         /// <summary>
+        /// <para>The payment method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: enterprise payment.</description></item>
+        /// <item><description>1: personal payment.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -94,6 +116,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? PaymentType { get; set; }
 
         /// <summary>
+        /// <para>The hotel IDs for filtering. A maximum of 20 IDs per page are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("shids")]
@@ -101,6 +124,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<long?> Shids { get; set; }
 
         /// <summary>
+        /// <para>The sort method.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

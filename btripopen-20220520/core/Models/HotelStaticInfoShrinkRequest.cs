@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelStaticInfoShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The list of hotel IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("hotel_ids")]

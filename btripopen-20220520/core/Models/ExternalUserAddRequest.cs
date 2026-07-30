@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ExternalUserAddRequest : TeaModel {
         /// <summary>
+        /// <para>The date of birth in the format yyyy-MM-dd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2000-01-02</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Birthday { get; set; }
 
+        /// <summary>
+        /// <para>The list of certificates.</para>
+        /// </summary>
         [NameInMap("cert_request_list")]
         [Validation(Required=false)]
         public List<ExternalUserAddRequestCertRequestList> CertRequestList { get; set; }
         public class ExternalUserAddRequestCertRequestList : TeaModel {
             /// <summary>
+            /// <para>The certificate expiration date in the format yyyy-MM-dd.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2034-10-01</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CertExpiredTime { get; set; }
 
             /// <summary>
+            /// <para>The two-letter country code of the issuing country.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CN</para>
             /// </summary>
@@ -38,6 +47,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CertNation { get; set; }
 
             /// <summary>
+            /// <para>The certificate number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,6 +58,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CertNo { get; set; }
 
             /// <summary>
+            /// <para>The certificate type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? CertType { get; set; }
 
             /// <summary>
+            /// <para>The two-letter country code for nationality.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CN</para>
             /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The email address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:zhangsan@alibaba-inc.com">zhangsan@alibaba-inc.com</a></para>
         /// </summary>
@@ -76,6 +91,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Email { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the external traveler within the enterprise scope.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,6 +102,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ExternalUserId { get; set; }
 
         /// <summary>
+        /// <para>The phone number. This parameter is required. For specific enterprises, contact the administrator to apply for an exemption.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13438009765</para>
         /// </summary>
@@ -94,6 +112,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Phone { get; set; }
 
         /// <summary>
+        /// <para>The real name in Chinese.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>张三</para>
         /// </summary>
@@ -102,6 +122,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RealName { get; set; }
 
         /// <summary>
+        /// <para>The passport name in pinyin, in the format LastName/FirstName.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zhang/san</para>
         /// </summary>
@@ -110,10 +132,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RealNameEn { get; set; }
 
         /// <summary>
+        /// <para>The user type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("user_type")]
         [Validation(Required=false)]

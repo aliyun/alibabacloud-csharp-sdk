@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightPayOrderRequest : TeaModel {
         /// <summary>
+        /// <para>The enterprise payment amount, in cents.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? CorpPayPrice { get; set; }
 
         /// <summary>
+        /// <para>The external order ID of the distribution.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,11 +31,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
 
+        /// <summary>
+        /// <para>The extended information.</para>
+        /// </summary>
         [NameInMap("extra")]
         [Validation(Required=false)]
         public Dictionary<string, string> Extra { get; set; }
 
         /// <summary>
+        /// <para>The personal payment amount, in cents.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +50,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? PersonalPayPrice { get; set; }
 
         /// <summary>
+        /// <para>The total payment amount of the order, in cents.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

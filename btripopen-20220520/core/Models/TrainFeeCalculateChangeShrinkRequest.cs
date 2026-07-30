@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainFeeCalculateChangeShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The change ticket information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("change_train_details")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ChangeTrainDetailsShrink { get; set; }
 
         /// <summary>
+        /// <para>The supplier order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DistributeOrderId { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightCreateOrderShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The arrival airport code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>HGH</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ArrAirportCode { get; set; }
 
         /// <summary>
+        /// <para>The arrival city code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ArrCityCode { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable automatic payment (not available).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? AutoPay { get; set; }
 
         /// <summary>
+        /// <para>The name of the buyer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>张三</para>
         /// </summary>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BuyerName { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the external channel user in the distribution scenario.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +62,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BuyerUniqueKey { get; set; }
 
         /// <summary>
+        /// <para>The contact information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("contact_info")]
@@ -61,6 +70,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ContactInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The departure airport code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PEK</para>
         /// </summary>
@@ -69,6 +80,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DepAirportCode { get; set; }
 
         /// <summary>
+        /// <para>The departure city code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,6 +91,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DepCityCode { get; set; }
 
         /// <summary>
+        /// <para>The departure date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,6 +102,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DepDate { get; set; }
 
         /// <summary>
+        /// <para>The distributor order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,11 +112,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
 
+        /// <summary>
+        /// <para>The order tag field.</para>
+        /// </summary>
         [NameInMap("order_attr")]
         [Validation(Required=false)]
         public string OrderAttrShrink { get; set; }
 
         /// <summary>
+        /// <para>The encrypted order parameters returned from the flight search.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,6 +131,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderParams { get; set; }
 
         /// <summary>
+        /// <para>The item ID (the itemId returned from the flight search).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -123,6 +142,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OtaItemId { get; set; }
 
         /// <summary>
+        /// <para>The price.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -133,6 +153,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? Price { get; set; }
 
         /// <summary>
+        /// <para>The receipt title. This field cannot be empty when a unified mailed invoice is required (not available).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>无</para>
         /// </summary>
@@ -141,6 +163,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ReceiptAddress { get; set; }
 
         /// <summary>
+        /// <para>The receipt target. 1: individual. 2: company (not available).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -149,6 +173,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? ReceiptTarget { get; set; }
 
         /// <summary>
+        /// <para>The receipt title. This field cannot be empty when a unified mailed invoice is required (not available).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>无</para>
         /// </summary>
@@ -157,6 +183,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ReceiptTitle { get; set; }
 
         /// <summary>
+        /// <para>The list of travelers.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("traveler_info_list")]
@@ -164,6 +191,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string TravelerInfoListShrink { get; set; }
 
         /// <summary>
+        /// <para>The trip type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

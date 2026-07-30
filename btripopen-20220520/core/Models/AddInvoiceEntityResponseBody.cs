@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The remarks on the result, such as a description of the result.</para>
+        /// <para>The remarks that describe the result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>成功</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The return value from the server. This parameter is empty if no result is returned or an exception occurs.</para>
+        /// <para>The response data returned by the server. This parameter is empty if no result is returned or an exception occurs.</para>
         /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? AddNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entities under the invoice header.</para>
+            /// <para>The number of entities under the invoice title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A5009956-1077-52FB-B520-EA8C7E91D722</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ElectronicItineraryGetApplyResultResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -25,15 +29,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The electronic itinerary receipt application result.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public ElectronicItineraryGetApplyResultResponseBodyModule Module { get; set; }
         public class ElectronicItineraryGetApplyResultResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <para>The result list.</para>
+            /// </summary>
             [NameInMap("apply_ticket_list")]
             [Validation(Required=false)]
             public List<ElectronicItineraryGetApplyResultResponseBodyModuleApplyTicketList> ApplyTicketList { get; set; }
             public class ElectronicItineraryGetApplyResultResponseBodyModuleApplyTicketList : TeaModel {
                 /// <summary>
+                /// <para>The error code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>5001</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? FailedCode { get; set; }
 
                 /// <summary>
+                /// <para>The failure reason.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>开票失败后透出具体原因</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string FailedReason { get; set; }
 
                 /// <summary>
+                /// <para>The itinerary receipt status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>行程单状态
                 /// 1- 待开票
@@ -62,6 +78,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? ItineraryStatus { get; set; }
 
                 /// <summary>
+                /// <para>The remarks.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>实际购方信息与申请不一致，该发票商旅不支持换开，请联系航司进行换开</para>
                 /// </summary>
@@ -70,6 +88,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string Remark { get; set; }
 
                 /// <summary>
+                /// <para>The ticket number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>781-6605285563</para>
                 /// </summary>
@@ -80,6 +100,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The batch number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0c7b5944618943479a9a4d40c1eec618</para>
             /// </summary>
@@ -100,6 +122,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

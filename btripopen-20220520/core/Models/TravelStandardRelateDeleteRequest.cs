@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TravelStandardRelateDeleteRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to use the group travel standard. This parameter is optional. If this parameter is not specified, the system determines whether to use the group travel standard based on the unified travel management configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -17,11 +19,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public bool? FromGroup { get; set; }
 
+        /// <summary>
+        /// <para>The list of entities to remove from the travel standard.</para>
+        /// </summary>
         [NameInMap("remove_list")]
         [Validation(Required=false)]
         public List<TravelStandardRelateDeleteRequestRemoveList> RemoveList { get; set; }
         public class TravelStandardRelateDeleteRequestRemoveList : TeaModel {
             /// <summary>
+            /// <para>The ID of the entity.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -32,6 +38,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string EntityId { get; set; }
 
             /// <summary>
+            /// <para>The type of the entity.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The ID of the travel standard rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

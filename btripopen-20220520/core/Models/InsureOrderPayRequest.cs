@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InsureOrderPayRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The name of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>测试乘机人</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BuyerName { get; set; }
 
         /// <summary>
+        /// <para>The custom channel name defined by the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PostalSavingsBank</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The flight order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>202310101026030</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The rebooking order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1020030003332000</para>
         /// </summary>
@@ -52,6 +61,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutSubOrderId { get; set; }
 
         /// <summary>
+        /// <para>The payment amount.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? PaymentAmount { get; set; }
 
         /// <summary>
+        /// <para>The supplier code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fliggy</para>
         /// </summary>

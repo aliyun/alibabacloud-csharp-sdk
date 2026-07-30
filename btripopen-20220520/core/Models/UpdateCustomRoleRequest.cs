@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class UpdateCustomRoleRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the enterprise custom role.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RoleId { get; set; }
 
         /// <summary>
+        /// <para>The name of the enterprise custom role.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

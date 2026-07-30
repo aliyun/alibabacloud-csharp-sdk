@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ApplyModifyRequest : TeaModel {
         /// <summary>
+        /// <para>The total budget.</para>
+        /// <para>Includes domestic flights, domestic hotels, train tickets, and car service.</para>
+        /// <para>Currency unit: CNY, in cents.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4000</para>
         /// </summary>
@@ -18,6 +22,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? Budget { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to merge budgets of multiple business trip approval forms.</para>
+        /// <para>Multiple approval forms with the same union_no can have their budgets merged and used interchangeably.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -25,11 +32,22 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? BudgetMerge { get; set; }
 
+        /// <summary>
+        /// <para>The business travel car service rule.</para>
+        /// </summary>
         [NameInMap("car_rule")]
         [Validation(Required=false)]
         public ApplyModifyRequestCarRule CarRule { get; set; }
         public class ApplyModifyRequestCarRule : TeaModel {
             /// <summary>
+            /// <para>The car service scenario template ID. Query address: <a href="https://open.alibtrip.com/#/document/server/carscene-query-query-enterprise-car-scene-template?handbookId=development-support">Car Scene Template Query</a>.</para>
+            /// <ol>
+            /// <item><description>Optional.</description></item>
+            /// <item><description>If specified, the approval form can only be used in this scenario.</description></item>
+            /// <item><description>If not specified, all business travel car service scenarios are available.</description></item>
+            /// <item><description>Only applicable to business travel car service.</description></item>
+            /// </ol>
+            /// 
             /// <b>Example:</b>
             /// <para>1234567</para>
             /// </summary>
@@ -38,6 +56,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ScenarioTemplateId { get; set; }
 
             /// <summary>
+            /// <para>The car service scenario template name. Query address: Car Scene Template Query.</para>
+            /// <ol>
+            /// <item><description>Optional.</description></item>
+            /// <item><description>If specified, the approval form can only be used in this scenario.</description></item>
+            /// <item><description>If not specified, all business travel car service scenarios are available.</description></item>
+            /// <item><description>Only applicable to business travel car service.</description></item>
+            /// </ol>
+            /// 
             /// <b>Example:</b>
             /// <para>测试场景模板</para>
             /// </summary>
@@ -48,6 +74,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The enterprise name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>阿里巴巴</para>
         /// </summary>
@@ -55,11 +83,21 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string CorpName { get; set; }
 
+        /// <summary>
+        /// <para>The default travel standards for the approval form.</para>
+        /// <para>If the travelers are not determined when the approval form is submitted but you need to control the travel standards for subsequently added travelers, set the default travel standards for the approval form.</para>
+        /// </summary>
         [NameInMap("default_standard")]
         [Validation(Required=false)]
         public ApplyModifyRequestDefaultStandard DefaultStandard { get; set; }
         public class ApplyModifyRequestDefaultStandard : TeaModel {
             /// <summary>
+            /// <para>The business class discount.</para>
+            /// <list type="bullet">
+            /// <item><description>Pass an integer from 1 to 10.</description></item>
+            /// <item><description>1 means 10% of the full price. 10 means no discount.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -68,6 +106,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? BusinessDiscount { get; set; }
 
             /// <summary>
+            /// <para>The economy class discount.</para>
+            /// <list type="bullet">
+            /// <item><description>Pass an integer from 1 to 10.</description></item>
+            /// <item><description>1 means 10% of the full price. 10 means no discount.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -76,6 +120,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? EconomyDiscount { get; set; }
 
             /// <summary>
+            /// <para>The first class discount.</para>
+            /// <list type="bullet">
+            /// <item><description>Pass an integer from 1 to 10.</description></item>
+            /// <item><description>1 means 10% of the full price. 10 means no discount.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>9</para>
             /// </summary>
@@ -84,6 +134,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? FirstDiscount { get; set; }
 
             /// <summary>
+            /// <para>The domestic flight cabin class. Multiple values separated by commas. If a cabin class is specified, the corresponding discount field is required. (For example, if P is specified, the premium economy class discount field is required.)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Y</para>
             /// </summary>
@@ -92,6 +144,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string FlightCabins { get; set; }
 
             /// <summary>
+            /// <para>The rule code for international flight travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -100,6 +154,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? FlightIntlRuleCode { get; set; }
 
             /// <summary>
+            /// <para>The rule code for domestic flight travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -107,11 +163,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public long? FlightRuleCode { get; set; }
 
+            /// <summary>
+            /// <para>The city code. Pass 0 to represent all other cities.</para>
+            /// </summary>
             [NameInMap("hotel_citys")]
             [Validation(Required=false)]
             public List<ApplyModifyRequestDefaultStandardHotelCitys> HotelCitys { get; set; }
             public class ApplyModifyRequestDefaultStandardHotelCitys : TeaModel {
                 /// <summary>
+                /// <para>The three-letter code of the check-in city.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>500100</para>
                 /// </summary>
@@ -120,6 +181,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityCode { get; set; }
 
                 /// <summary>
+                /// <para>The city name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>杭州</para>
                 /// </summary>
@@ -128,6 +191,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityName { get; set; }
 
                 /// <summary>
+                /// <para>The hotel room rate per night, in cents. Set to 99999999 for no limit. Note: Travel standards can only be controlled down to the yuan. Jiao and fen are truncated.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
                 /// </summary>
@@ -137,11 +202,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// <para>The hotel room-night amount in cents. Pass 99999999 for unlimited. Note: The travel standard can only control amounts down to the yuan level. Jiao and fen values are.</para>
+            /// </summary>
             [NameInMap("hotel_intl_citys")]
             [Validation(Required=false)]
             public List<ApplyModifyRequestDefaultStandardHotelIntlCitys> HotelIntlCitys { get; set; }
             public class ApplyModifyRequestDefaultStandardHotelIntlCitys : TeaModel {
                 /// <summary>
+                /// <para>The three-letter city code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>510100</para>
                 /// </summary>
@@ -150,6 +220,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityCode { get; set; }
 
                 /// <summary>
+                /// <para>The city name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>城市名称</para>
                 /// </summary>
@@ -158,6 +230,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityName { get; set; }
 
                 /// <summary>
+                /// <para>The fee, in cents.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
                 /// </summary>
@@ -168,6 +242,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The rule code for international hotel travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -176,6 +252,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? HotelIntlRuleCode { get; set; }
 
             /// <summary>
+            /// <para>The rule code for domestic hotel travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -184,6 +262,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? HotelRuleCode { get; set; }
 
             /// <summary>
+            /// <para>The international flight cabin classes. Separate multiple values with commas.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>F</para>
             /// </summary>
@@ -192,6 +272,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string InternationalFlightCabins { get; set; }
 
             /// <summary>
+            /// <para>The premium economy class discount.</para>
+            /// <list type="bullet">
+            /// <item><description>Pass an integer from 1 to 10.</description></item>
+            /// <item><description>1 means 10% of the full price. 10 means no discount.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -200,6 +286,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? PremiumEconomyDiscount { get; set; }
 
             /// <summary>
+            /// <para>The travel standard restriction type. 0: no restriction on travel standards. 1: restricted by travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -208,6 +296,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? ReserveType { get; set; }
 
             /// <summary>
+            /// <para>The rule code for domestic train travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -216,6 +306,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? TrainRuleCode { get; set; }
 
             /// <summary>
+            /// <para>The train seat classes. Separate multiple values with commas.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -226,14 +318,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The department ID. If not specified, the system retrieves the department information based on the user information. If an incorrect department ID is specified, cost allocation to the department cannot be performed. The department ID must be numeric.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>001</para>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("depart_id")]
         [Validation(Required=false)]
         public string DepartId { get; set; }
 
         /// <summary>
+        /// <para>The department name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>采购部</para>
         /// </summary>
@@ -242,7 +338,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DepartName { get; set; }
 
         /// <summary>
-        /// <para>可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账</para>
+        /// <para>Pass supplementary descriptions in this field. The value appears in bills and can be used for enterprise statistics and reconciliation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;cost_center&quot;:&quot;成本中心&quot;}</para>
@@ -251,11 +347,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ExtendField { get; set; }
 
+        /// <summary>
+        /// <para>The external traveler list.</para>
+        /// </summary>
         [NameInMap("external_traveler_list")]
         [Validation(Required=false)]
         public List<ApplyModifyRequestExternalTravelerList> ExternalTravelerList { get; set; }
         public class ApplyModifyRequestExternalTravelerList : TeaModel {
             /// <summary>
+            /// <para>The extended field.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“{&quot;name&quot;:&quot;张三&quot;}”</para>
             /// </summary>
@@ -264,6 +365,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Attribute { get; set; }
 
             /// <summary>
+            /// <para>The business travel cost center ID. Specify either this or the third-party cost center ID.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>144224</para>
             /// </summary>
@@ -272,6 +375,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? CostCenterId { get; set; }
 
             /// <summary>
+            /// <para>The external traveler ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>371164</para>
             /// </summary>
@@ -280,6 +385,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ExternalUserId { get; set; }
 
             /// <summary>
+            /// <para>The invoice header ID.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11411</para>
             /// </summary>
@@ -288,6 +395,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? InvoiceId { get; set; }
 
             /// <summary>
+            /// <para>The cost allocation department ID.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11422</para>
             /// </summary>
@@ -296,6 +405,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PaymentDepartmentId { get; set; }
 
             /// <summary>
+            /// <para>The cost allocation department name.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“一级事业部”</para>
             /// </summary>
@@ -304,6 +415,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PaymentDepartmentName { get; set; }
 
             /// <summary>
+            /// <para>The project code.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acs</para>
             /// </summary>
@@ -312,6 +425,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ProjectCode { get; set; }
 
             /// <summary>
+            /// <para>The project name.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“成本项目”</para>
             /// </summary>
@@ -320,6 +435,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ProjectTitle { get; set; }
 
             /// <summary>
+            /// <para>The third-party invoice ID. Specify either this or the business travel invoice ID.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>91140100688069283J</para>
             /// </summary>
@@ -328,6 +445,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ThirdPartInvoiceId { get; set; }
 
             /// <summary>
+            /// <para>The third-party cost center ID.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>HD4451224</para>
             /// </summary>
@@ -336,6 +455,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ThirdpartCostCenterId { get; set; }
 
             /// <summary>
+            /// <para>The third-party department ID.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6281</para>
             /// </summary>
@@ -344,6 +465,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ThirdpartDepartId { get; set; }
 
             /// <summary>
+            /// <para>The traveler name. For English names, use &quot;/&quot; as a separator with no spaces. Format: last-name/first-name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>王武</para>
             /// </summary>
@@ -352,6 +475,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string UserName { get; set; }
 
             /// <summary>
+            /// <para>The traveler English name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>wu/wang</para>
             /// </summary>
@@ -361,11 +486,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// <para>The external traveler travel standard.</para>
+        /// </summary>
         [NameInMap("external_traveler_standard")]
         [Validation(Required=false)]
         public ApplyModifyRequestExternalTravelerStandard ExternalTravelerStandard { get; set; }
         public class ApplyModifyRequestExternalTravelerStandard : TeaModel {
             /// <summary>
+            /// <para>The business class discount.</para>
+            /// <list type="bullet">
+            /// <item><description>Pass an integer from 1 to 10.</description></item>
+            /// <item><description>1 means 10% of the full price. 10 means no discount.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -374,6 +508,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? BusinessDiscount { get; set; }
 
             /// <summary>
+            /// <para>The economy class discount.</para>
+            /// <list type="bullet">
+            /// <item><description>Pass an integer from 1 to 10.</description></item>
+            /// <item><description>1 means 10% of the full price. 10 means no discount.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -382,6 +522,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? EconomyDiscount { get; set; }
 
             /// <summary>
+            /// <para>The first class discount.</para>
+            /// <list type="bullet">
+            /// <item><description>Pass an integer from 1 to 10.</description></item>
+            /// <item><description>1 means 10% of the full price. 10 means no discount.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -390,6 +536,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? FirstDiscount { get; set; }
 
             /// <summary>
+            /// <para>The domestic flight cabin class. Multiple values separated by commas. If a cabin class is specified, the corresponding discount field is required. (For example, if P is specified, the premium economy class discount field is required.)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Y</para>
             /// </summary>
@@ -398,6 +546,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string FlightCabins { get; set; }
 
             /// <summary>
+            /// <para>The rule code for international flight travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -406,6 +556,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? FlightIntlRuleCode { get; set; }
 
             /// <summary>
+            /// <para>The rule code for domestic flight travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -413,11 +565,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public long? FlightRuleCode { get; set; }
 
+            /// <summary>
+            /// <para>The hotel city cost list.</para>
+            /// </summary>
             [NameInMap("hotel_citys")]
             [Validation(Required=false)]
             public List<ApplyModifyRequestExternalTravelerStandardHotelCitys> HotelCitys { get; set; }
             public class ApplyModifyRequestExternalTravelerStandardHotelCitys : TeaModel {
                 /// <summary>
+                /// <para>The city code. Pass 0 to represent all other cities.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -426,6 +583,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityCode { get; set; }
 
                 /// <summary>
+                /// <para>The city name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>北京</para>
                 /// </summary>
@@ -434,6 +593,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityName { get; set; }
 
                 /// <summary>
+                /// <para>The hotel room-night amount in cents. Pass 99999999 for unlimited. Note: The travel standard can only control amounts down to the yuan level. Jiao and fen values are.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1001</para>
                 /// </summary>
@@ -443,11 +604,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of international hotel city fees.</para>
+            /// </summary>
             [NameInMap("hotel_intl_citys")]
             [Validation(Required=false)]
             public List<ApplyModifyRequestExternalTravelerStandardHotelIntlCitys> HotelIntlCitys { get; set; }
             public class ApplyModifyRequestExternalTravelerStandardHotelIntlCitys : TeaModel {
                 /// <summary>
+                /// <para>The city code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>330100</para>
                 /// </summary>
@@ -456,6 +622,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityCode { get; set; }
 
                 /// <summary>
+                /// <para>The city name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>杭州</para>
                 /// </summary>
@@ -464,6 +632,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityName { get; set; }
 
                 /// <summary>
+                /// <para>The hotel room-night amount in cents. Pass 99999999 for unlimited. Note: The travel standard can only control amounts down to the yuan level. Jiao and fen values are.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1009</para>
                 /// </summary>
@@ -474,6 +644,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The rule code for international hotel travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -482,6 +654,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? HotelIntlRuleCode { get; set; }
 
             /// <summary>
+            /// <para>The rule code for domestic hotel travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -490,6 +664,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? HotelRuleCode { get; set; }
 
             /// <summary>
+            /// <para>The international flight cabin classes. Separate multiple values with commas.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>F</para>
             /// </summary>
@@ -498,7 +674,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string InternationalFlightCabins { get; set; }
 
             /// <summary>
-            /// <para>超级经济舱折扣。1到10的整数</para>
+            /// <para>The premium economy class discount.</para>
+            /// <list type="bullet">
+            /// <item><description>Pass an integer from 1 to 10.</description></item>
+            /// <item><description>1 means 10% of the full price. 10 means no discount.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -508,6 +688,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? PremiumEconomyDiscount { get; set; }
 
             /// <summary>
+            /// <para>The travel standard restriction type. 0: no restriction on travel standards. 1: restricted by travel standards. Note: All travelers in the same approval form must either all be restricted or all be unrestricted. Otherwise, the call fails.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -516,6 +698,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? ReserveType { get; set; }
 
             /// <summary>
+            /// <para>The rule code for domestic train travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -524,8 +708,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? TrainRuleCode { get; set; }
 
             /// <summary>
+            /// <para>The train seat class. Multiple values separated by commas.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>1000</para>
             /// </summary>
             [NameInMap("train_seats")]
             [Validation(Required=false)]
@@ -534,6 +720,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The domestic flight budget.</para>
+        /// <para>Currency unit: CNY, in cents.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -542,6 +731,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? FlightBudget { get; set; }
 
         /// <summary>
+        /// <para>The domestic hotel budget.</para>
+        /// <para>Currency unit: CNY, in cents.</para>
+        /// <remarks>
+        /// <para>Warning: Miscellaneous charges incurred by specially authorized guests during their stay (meals, in-room items, etc.) are deducted at checkout and paid by the enterprise.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -549,11 +744,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? HotelBudget { get; set; }
 
+        /// <summary>
+        /// <para>The hotel room-sharing rule.</para>
+        /// </summary>
         [NameInMap("hotel_share")]
         [Validation(Required=false)]
         public ApplyModifyRequestHotelShare HotelShare { get; set; }
         public class ApplyModifyRequestHotelShare : TeaModel {
             /// <summary>
+            /// <para>Pass an integer. When the room-sharing type is 1/2/3, the API converts the value to x%.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>70</para>
             /// </summary>
@@ -562,6 +762,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Param { get; set; }
 
             /// <summary>
+            /// <para>The room-sharing formula.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -572,6 +774,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The international/Hong Kong (China), Macao (China), Taiwan (China) flight budget (in cents).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -580,6 +784,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? IntlFlightBudget { get; set; }
 
         /// <summary>
+        /// <para>The international hotel budget (in cents).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -588,6 +794,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? IntlHotelBudget { get; set; }
 
         /// <summary>
+        /// <para>The itinerary list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -596,6 +804,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<ApplyModifyRequestItineraryList> ItineraryList { get; set; }
         public class ApplyModifyRequestItineraryList : TeaModel {
             /// <summary>
+            /// <para>The arrival city.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -606,6 +815,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ArrCity { get; set; }
 
             /// <summary>
+            /// <para>The arrival city code. Pass 0 to disable arrival city restrictions. Note: Departure and arrival locations must either both be unrestricted or both be restricted. When cities are unrestricted, ensure hotel travel standards are passed for all cities.
+            /// When traffic_type is 0/6/21/25, pass the three-letter airport code. For all other traffic_type values, pass the six-digit city code.</para>
+            /// <para><a href="https://btrip-doc.oss-cn-hangzhou.aliyuncs.com/base-data/btrip-flight-city-data.xlsx">Three-letter airport code data</a>
+            /// <a href="https://btrip-doc.oss-cn-hangzhou.aliyuncs.com/base-data/btrip-hotel-city-data.xlsx">Administrative division city code data</a></para>
+            /// 
             /// <b>Example:</b>
             /// <para>HGH</para>
             /// </summary>
@@ -614,6 +828,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ArrCityCode { get; set; }
 
             /// <summary>
+            /// <para>The arrival date in the format yyyy-MM-dd HH:mm:ss.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -624,6 +839,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ArrDate { get; set; }
 
             /// <summary>
+            /// <para>The extended field.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“{&quot;name&quot;:&quot;张三&quot;}”</para>
             /// </summary>
@@ -632,6 +849,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Attribute { get; set; }
 
             /// <summary>
+            /// <para>The business travel cost center ID. Specify either this or the third-party cost center ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021413</para>
             /// </summary>
@@ -640,6 +859,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? CostCenterId { get; set; }
 
             /// <summary>
+            /// <para>The departure city.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -650,6 +870,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepCity { get; set; }
 
             /// <summary>
+            /// <para>The departure city code. Pass 0 to disable departure city restrictions. Note: Departure and arrival locations must either both be unrestricted or both be restricted. When cities are unrestricted, ensure hotel travel standards are passed for all cities.
+            /// When traffic_type is 0/6/21/25, pass the three-letter airport code. For all other traffic_type values, pass the six-digit city code.</para>
+            /// <para><a href="https://btrip-doc.oss-cn-hangzhou.aliyuncs.com/base-data/btrip-flight-city-data.xlsx">Three-letter airport code data</a>
+            /// <a href="https://btrip-doc.oss-cn-hangzhou.aliyuncs.com/base-data/btrip-hotel-city-data.xlsx">Administrative division city code data</a></para>
+            /// 
             /// <b>Example:</b>
             /// <para>BJS</para>
             /// </summary>
@@ -658,6 +883,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepCityCode { get; set; }
 
             /// <summary>
+            /// <para>The departure date in the format yyyy-MM-dd HH:mm:ss.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -668,6 +894,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepDate { get; set; }
 
             /// <summary>
+            /// <para>The business travel invoice ID. Specify either this or the third-party invoice ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>614141</para>
             /// </summary>
@@ -676,6 +904,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? InvoiceId { get; set; }
 
             /// <summary>
+            /// <para>The itinerary ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -685,11 +914,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ItineraryId { get; set; }
 
+            /// <summary>
+            /// <para>The itinerary travel standard.</para>
+            /// </summary>
             [NameInMap("itinerary_travel_standard")]
             [Validation(Required=false)]
             public ApplyModifyRequestItineraryListItineraryTravelStandard ItineraryTravelStandard { get; set; }
             public class ApplyModifyRequestItineraryListItineraryTravelStandard : TeaModel {
                 /// <summary>
+                /// <para>The number of available room nights per day.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -700,6 +934,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>Specifies whether the itinerary requires hotel booking. Default value: true. (Deprecated)
+            /// Deprecated. Refer to the traffic_type field.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -708,6 +945,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public bool? NeedHotel { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether the itinerary requires transportation booking. Default value: true. (Deprecated)
+            /// Deprecated. Refer to the traffic_type field.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -716,6 +956,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public bool? NeedTraffic { get; set; }
 
             /// <summary>
+            /// <para>The project code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>projectone</para>
             /// </summary>
@@ -724,6 +966,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ProjectCode { get; set; }
 
             /// <summary>
+            /// <para>The project name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>项目1</para>
             /// </summary>
@@ -731,11 +975,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ProjectTitle { get; set; }
 
+            /// <summary>
+            /// <para>The city set that can be elevated to province level.</para>
+            /// <para>This is a control field.</para>
+            /// </summary>
             [NameInMap("province_travel_city_adcodes")]
             [Validation(Required=false)]
             public List<string> ProvinceTravelCityAdcodes { get; set; }
 
             /// <summary>
+            /// <para>The third-party invoice ID. Specify either this or the business travel invoice ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ZG14131</para>
             /// </summary>
@@ -744,6 +994,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ThirdPartInvoiceId { get; set; }
 
             /// <summary>
+            /// <para>The third-party cost center ID. Specify either this or the business travel cost center ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>thirdpart5151</para>
             /// </summary>
@@ -752,16 +1004,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ThirdpartCostCenterId { get; set; }
 
             /// <summary>
+            /// <para>The transportation type. needTraffic and needHotel are optional.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>9</para>
             /// </summary>
             [NameInMap("traffic_type")]
             [Validation(Required=false)]
             public int? TrafficType { get; set; }
 
             /// <summary>
+            /// <para>The trip type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -774,6 +1028,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The approval form city rule:
+        /// 0: One-to-one departure and destination, pass itineraries as a list. 
+        /// 1: Select N cities, city set itinerary.
+        /// Default value: 0.
+        /// When the approval form city rule is 0, itinerary_list is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -781,11 +1041,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? ItineraryRule { get; set; }
 
+        /// <summary>
+        /// <para>The city set itinerary list.</para>
+        /// </summary>
         [NameInMap("itinerary_set_list")]
         [Validation(Required=false)]
         public List<ApplyModifyRequestItinerarySetList> ItinerarySetList { get; set; }
         public class ApplyModifyRequestItinerarySetList : TeaModel {
             /// <summary>
+            /// <para>The arrival date.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2017-01-01 00:00:00</para>
             /// </summary>
@@ -794,6 +1059,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ArrDate { get; set; }
 
             /// <summary>
+            /// <para>The extended field.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“{&quot;name&quot;:&quot;张三&quot;}”</para>
             /// </summary>
@@ -802,14 +1069,25 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Attribute { get; set; }
 
             /// <summary>
+            /// <para>The departure and arrival city codes, separated by Chinese commas &quot;，&quot;.
+            /// Pass 0 to disable city restrictions. Note: When cities are unrestricted, ensure hotel travel standards are passed for all cities.
+            /// When the allowed booking category is 0/6/21/25, three-letter airport codes or six-digit city codes are accepted.
+            /// When the allowed booking category is any other value, only six-digit city codes are accepted.
+            /// city_set and city_code_set must have a one-to-one correspondence.
+            /// Note: When the itinerary includes a flight-type itinerary, if the specified city has no airport, flight itineraries cannot be booked.</para>
+            /// <para><a href="https://btrip-doc.oss-cn-hangzhou.aliyuncs.com/base-data/btrip-flight-city-data.xlsx">Three-letter airport code data</a>
+            /// <a href="https://btrip-doc.oss-cn-hangzhou.aliyuncs.com/base-data/btrip-hotel-city-data.xlsx">Administrative division city code data</a></para>
+            /// 
             /// <b>Example:</b>
-            /// <para>BJS,SHA</para>
+            /// <para>BJS，SHA</para>
             /// </summary>
             [NameInMap("city_code_set")]
             [Validation(Required=false)]
             public string CityCodeSet { get; set; }
 
             /// <summary>
+            /// <para>The departure and arrival city names, separated by Chinese commas &quot;，&quot;.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>北京，上海</para>
             /// </summary>
@@ -818,6 +1096,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CitySet { get; set; }
 
             /// <summary>
+            /// <para>The business travel cost center ID. Specify either this or the third-party cost center ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123455</para>
             /// </summary>
@@ -826,6 +1106,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? CostCenterId { get; set; }
 
             /// <summary>
+            /// <para>The departure date.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2017-01-01 00:00:00</para>
             /// </summary>
@@ -834,6 +1116,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepDate { get; set; }
 
             /// <summary>
+            /// <para>The business travel invoice ID. Specify either this or the third-party invoice ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12344</para>
             /// </summary>
@@ -842,6 +1126,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? InvoiceId { get; set; }
 
             /// <summary>
+            /// <para>The itinerary ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20220722001</para>
             /// </summary>
@@ -849,11 +1135,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ItineraryId { get; set; }
 
+            /// <summary>
+            /// <para>The itinerary travel standard.</para>
+            /// </summary>
             [NameInMap("itinerary_travel_standard")]
             [Validation(Required=false)]
             public ApplyModifyRequestItinerarySetListItineraryTravelStandard ItineraryTravelStandard { get; set; }
             public class ApplyModifyRequestItinerarySetListItineraryTravelStandard : TeaModel {
                 /// <summary>
+                /// <para>The number of available room nights per day.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -864,6 +1155,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The project code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>projecttow</para>
             /// </summary>
@@ -872,6 +1165,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ProjectCode { get; set; }
 
             /// <summary>
+            /// <para>The project name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>项目1</para>
             /// </summary>
@@ -879,11 +1174,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ProjectTitle { get; set; }
 
+            /// <summary>
+            /// <para>The city set that can be elevated to province level.</para>
+            /// <para>This is a control field.</para>
+            /// </summary>
             [NameInMap("province_travel_city_adcodes")]
             [Validation(Required=false)]
             public List<string> ProvinceTravelCityAdcodes { get; set; }
 
             /// <summary>
+            /// <para>The third-party invoice ID. Specify either this or the business travel invoice ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>thridpart12138</para>
             /// </summary>
@@ -892,6 +1193,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ThirdPartInvoiceId { get; set; }
 
             /// <summary>
+            /// <para>The third-party cost center ID. Specify either this or the business travel cost center ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>thridpart12138</para>
             /// </summary>
@@ -900,6 +1203,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ThirdpartCostCenterId { get; set; }
 
             /// <summary>
+            /// <para>The transportation type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -910,6 +1215,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>Specifies whether to restrict travelers.</para>
+        /// <para>0: Do not restrict travelers. 1: Restrict to travelers on the approval form.</para>
+        /// <remarks>
+        /// <para>Warning: If the approval form does not restrict travelers and no default travel standard (default_standard) is passed, the traveler information on the approval form is not stored, and actual travelers are not subject to travel standard restrictions.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -918,6 +1229,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? LimitTraveler { get; set; }
 
         /// <summary>
+        /// <para>The meal budget (in cents).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -926,6 +1239,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? MealBudget { get; set; }
 
         /// <summary>
+        /// <para>The cost allocation department ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>141125</para>
         /// </summary>
@@ -934,6 +1249,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string PaymentDepartmentId { get; set; }
 
         /// <summary>
+        /// <para>The cost allocation department name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>产品部</para>
         /// </summary>
@@ -942,6 +1259,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string PaymentDepartmentName { get; set; }
 
         /// <summary>
+        /// <para>The approval form status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -950,7 +1269,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>子企业Id</para>
+        /// <para><del>Sub-enterprise ID</del>
+        /// Deprecated. Use <a href="/#/document/server/groupcorptoken-group-enterprise-certificate?handbookId=development-support">Group Enterprise Credential</a> instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>btrip123</para>
@@ -960,6 +1280,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string SubCorpId { get; set; }
 
         /// <summary>
+        /// <para>The external approval form ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -970,6 +1291,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ThirdpartApplyId { get; set; }
 
         /// <summary>
+        /// <para>The external approval form ID displayed to users.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>202201413141</para>
         /// </summary>
@@ -978,6 +1301,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ThirdpartBusinessId { get; set; }
 
         /// <summary>
+        /// <para>The third-party department ID.</para>
+        /// <para>If either the third-party department ID or the department ID is specified, the specified field takes precedence.</para>
+        /// <para>If both are specified, the third-party department ID takes precedence.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>三方部门id</para>
         /// </summary>
@@ -986,6 +1313,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ThirdpartDepartId { get; set; }
 
         /// <summary>
+        /// <para>The simultaneous booking (flight &amp; train) rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -994,6 +1323,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? TogetherBookRule { get; set; }
 
         /// <summary>
+        /// <para>The train ticket budget.</para>
+        /// <para>Currency unit: CNY, in cents.</para>
+        /// <remarks>
+        /// <para>Warning: For the same seat class such as &quot;hard sleeper&quot;, upper/middle/lower berths have price differences. During booking, the budget balance is validated against the highest price.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -1001,11 +1336,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? TrainBudget { get; set; }
 
+        /// <summary>
+        /// <para>The traveler list.</para>
+        /// </summary>
         [NameInMap("traveler_list")]
         [Validation(Required=false)]
         public List<ApplyModifyRequestTravelerList> TravelerList { get; set; }
         public class ApplyModifyRequestTravelerList : TeaModel {
             /// <summary>
+            /// <para>The extended field.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“{&quot;name&quot;:&quot;张三&quot;}”</para>
             /// </summary>
@@ -1014,6 +1354,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Attribute { get; set; }
 
             /// <summary>
+            /// <para>The business travel cost center ID.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12211</para>
             /// </summary>
@@ -1022,6 +1364,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? CostCenterId { get; set; }
 
             /// <summary>
+            /// <para>The internal business travel invoice header ID.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11412</para>
             /// </summary>
@@ -1030,6 +1374,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? InvoiceId { get; set; }
 
             /// <summary>
+            /// <para>The cost allocation department ID.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11633</para>
             /// </summary>
@@ -1038,6 +1384,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PaymentDepartmentId { get; set; }
 
             /// <summary>
+            /// <para>The cost allocation department name.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“一级事业部”</para>
             /// </summary>
@@ -1046,6 +1394,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PaymentDepartmentName { get; set; }
 
             /// <summary>
+            /// <para>The project code.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acs</para>
             /// </summary>
@@ -1054,6 +1404,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ProjectCode { get; set; }
 
             /// <summary>
+            /// <para>The project name.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“成本项目”</para>
             /// </summary>
@@ -1062,6 +1414,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ProjectTitle { get; set; }
 
             /// <summary>
+            /// <para>The third-party invoice header ID associated with the approval form.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>517492</para>
             /// </summary>
@@ -1070,6 +1424,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ThirdPartInvoiceId { get; set; }
 
             /// <summary>
+            /// <para>The third-party cost center ID.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>HD424333</para>
             /// </summary>
@@ -1078,6 +1434,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ThirdpartCostCenterId { get; set; }
 
             /// <summary>
+            /// <para>The third-party department ID.<notice>&quot;To use this field, contact customer operations.&quot;</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1001A11000000000O7YC</para>
             /// </summary>
@@ -1086,6 +1444,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ThirdpartDepartId { get; set; }
 
             /// <summary>
+            /// <para>The traveler ID (third-party user ID).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>GS641312</para>
             /// </summary>
@@ -1094,6 +1454,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>The traveler name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>李四</para>
             /// </summary>
@@ -1103,11 +1465,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// <para>The list of travel standards for internal personnel.</para>
+        /// </summary>
         [NameInMap("traveler_standard")]
         [Validation(Required=false)]
         public List<ApplyModifyRequestTravelerStandard> TravelerStandard { get; set; }
         public class ApplyModifyRequestTravelerStandard : TeaModel {
             /// <summary>
+            /// <para>The business class discount.</para>
+            /// <list type="bullet">
+            /// <item><description>Pass an integer from 1 to 10.</description></item>
+            /// <item><description>1 means 10% of the full price. 10 means no discount.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -1115,11 +1486,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? BusinessDiscount { get; set; }
 
+            /// <summary>
+            /// <para>The cross-city rules for business travel car services.</para>
+            /// </summary>
             [NameInMap("car_city_set")]
             [Validation(Required=false)]
             public List<ApplyModifyRequestTravelerStandardCarCitySet> CarCitySet { get; set; }
             public class ApplyModifyRequestTravelerStandardCarCitySet : TeaModel {
                 /// <summary>
+                /// <para>The cross-city city code. Only 6-digit codes are supported. Separate multiple values with Chinese commas. Note: A maximum of 10 cities can be specified. The city_code and city_name values must correspond one-to-one.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -1130,6 +1505,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityCode { get; set; }
 
                 /// <summary>
+                /// <para>The cross-city city name. Separate multiple values with Chinese commas. Note: A maximum of 10 cities can be specified. The city_code and city_name values must correspond one-to-one.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -1426,6 +1802,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The economy class discount.</para>
+            /// <list type="bullet">
+            /// <item><description>Pass an integer from 1 to 10.</description></item>
+            /// <item><description>1 means 10% of the full price. 10 means no discount.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -1434,6 +1816,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? EconomyDiscount { get; set; }
 
             /// <summary>
+            /// <para>The first class discount.</para>
+            /// <list type="bullet">
+            /// <item><description>Pass an integer from 1 to 10.</description></item>
+            /// <item><description>1 means 10% of the full price. 10 means no discount.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -1442,6 +1830,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? FirstDiscount { get; set; }
 
             /// <summary>
+            /// <para>The domestic flight cabin class. Multiple values separated by commas. If a cabin class is specified, the corresponding discount field is required. (For example, if P is specified, the premium economy class discount field is required.)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Y</para>
             /// </summary>
@@ -1450,6 +1840,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string FlightCabins { get; set; }
 
             /// <summary>
+            /// <para>The rule code for international flight travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -1458,6 +1850,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? FlightIntlRuleCode { get; set; }
 
             /// <summary>
+            /// <para>The rule code for domestic flight travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -1465,11 +1859,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public long? FlightRuleCode { get; set; }
 
+            /// <summary>
+            /// <para>The hotel city cost list.</para>
+            /// </summary>
             [NameInMap("hotel_citys")]
             [Validation(Required=false)]
             public List<ApplyModifyRequestTravelerStandardHotelCitys> HotelCitys { get; set; }
             public class ApplyModifyRequestTravelerStandardHotelCitys : TeaModel {
                 /// <summary>
+                /// <para>The city code. Pass 0 to represent all other cities.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -1478,6 +1877,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityCode { get; set; }
 
                 /// <summary>
+                /// <para>The city name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>北京</para>
                 /// </summary>
@@ -1486,6 +1887,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityName { get; set; }
 
                 /// <summary>
+                /// <para>The hotel room-night amount in cents. Pass 99999999 for unlimited. Note: The travel standard can only control amounts down to the yuan level. Jiao and fen values are.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1014</para>
                 /// </summary>
@@ -1495,11 +1898,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// <para>The set of international hotel cities.</para>
+            /// </summary>
             [NameInMap("hotel_intl_citys")]
             [Validation(Required=false)]
             public List<ApplyModifyRequestTravelerStandardHotelIntlCitys> HotelIntlCitys { get; set; }
             public class ApplyModifyRequestTravelerStandardHotelIntlCitys : TeaModel {
                 /// <summary>
+                /// <para>The city code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>110100</para>
                 /// </summary>
@@ -1508,6 +1916,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityCode { get; set; }
 
                 /// <summary>
+                /// <para>The city name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>杭州</para>
                 /// </summary>
@@ -1516,6 +1926,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityName { get; set; }
 
                 /// <summary>
+                /// <para>The hotel room-night amount in cents. Pass 99999999 for unlimited. Note: The travel standard can only control amounts down to the yuan level. Jiao and fen values are.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1009</para>
                 /// </summary>
@@ -1526,6 +1938,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The rule code for international hotel travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -1534,6 +1948,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? HotelIntlRuleCode { get; set; }
 
             /// <summary>
+            /// <para>The rule code for domestic hotel travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -1542,6 +1958,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? HotelRuleCode { get; set; }
 
             /// <summary>
+            /// <para>The international flight cabin classes. Separate multiple values with commas.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>F</para>
             /// </summary>
@@ -1550,7 +1968,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string InternationalFlightCabins { get; set; }
 
             /// <summary>
-            /// <para>超级经济舱折扣。1到10的整数</para>
+            /// <para>The premium economy class discount.</para>
+            /// <list type="bullet">
+            /// <item><description>Pass an integer from 1 to 10.</description></item>
+            /// <item><description>1 means 10% of the full price. 10 means no discount.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -1560,6 +1982,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? PremiumEconomyDiscount { get; set; }
 
             /// <summary>
+            /// <para>The travel standard restriction type. 0: no restriction on travel standards. 1: restricted by travel standards. Note: All travelers in the same approval form must either all be restricted or all be unrestricted. Otherwise, the call fails.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -1568,6 +1992,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? ReserveType { get; set; }
 
             /// <summary>
+            /// <para>The rule code for domestic train travel standards.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10032</para>
             /// </summary>
@@ -1576,14 +2002,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? TrainRuleCode { get; set; }
 
             /// <summary>
+            /// <para>The train seat class. Multiple values separated by commas.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>1000</para>
             /// </summary>
             [NameInMap("train_seats")]
             [Validation(Required=false)]
             public string TrainSeats { get; set; }
 
             /// <summary>
+            /// <para>The traveler ID (third-party user ID).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>thirdpart12138</para>
             /// </summary>
@@ -1594,6 +2024,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The reason for the business trip.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -1604,6 +2035,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string TripCause { get; set; }
 
         /// <summary>
+        /// <para>The number of business trip days.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -1612,6 +2045,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? TripDay { get; set; }
 
         /// <summary>
+        /// <para>The title of the approval form.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -1622,6 +2056,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string TripTitle { get; set; }
 
         /// <summary>
+        /// <para>The associated order number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>union51415</para>
         /// </summary>
@@ -1630,6 +2066,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string UnionNo { get; set; }
 
         /// <summary>
+        /// <para>The applicant ID (third-party user ID).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -1640,6 +2077,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>The username. If specified, it must be the real name. If not specified, the system uses the name associated with the current userId for booking.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>张三</para>
         /// </summary>
@@ -1648,6 +2087,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string UserName { get; set; }
 
         /// <summary>
+        /// <para>The car service budget.</para>
+        /// <para>Currency unit: CNY, in cents.</para>
+        /// <remarks>
+        /// <para>Warning: Uncontrollable factors in ride-hailing scenarios may cause the actual price to exceed the estimated price: 1. The passenger changes the destination offline. 2. Traffic congestion or other road incidents. 3. The driver adds surcharges such as tolls, highway fees, or waiting fees.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>

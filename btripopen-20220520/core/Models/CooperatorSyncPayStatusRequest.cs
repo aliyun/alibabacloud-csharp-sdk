@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CooperatorSyncPayStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The service provider order number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CooperatorOrderId { get; set; }
 
         /// <summary>
+        /// <para>The personal payment order number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CooperatorPayNo { get; set; }
 
         /// <summary>
+        /// <para>The service provider order number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The payment status.<para><b>Valid values:</b><list type="bullet"><item><description>SUCCESS: Payment succeeded.</description></item></list></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string PayStatus { get; set; }
 
         /// <summary>
+        /// <para>The payment time (UNIX timestamp).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

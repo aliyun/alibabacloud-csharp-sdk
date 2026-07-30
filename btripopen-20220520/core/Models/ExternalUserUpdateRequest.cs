@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ExternalUserUpdateRequest : TeaModel {
         /// <summary>
+        /// <para>The date of birth in the format yyyy-MM-dd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2000-01-02</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Birthday { get; set; }
 
+        /// <summary>
+        /// <para>The list of identity documents.</para>
+        /// </summary>
         [NameInMap("cert_request_list")]
         [Validation(Required=false)]
         public List<ExternalUserUpdateRequestCertRequestList> CertRequestList { get; set; }
         public class ExternalUserUpdateRequestCertRequestList : TeaModel {
             /// <summary>
+            /// <para>The document expiration date in the format yyyy-MM-dd.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2034-10-01</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CertExpiredTime { get; set; }
 
             /// <summary>
+            /// <para>The issuing country in two-letter country code format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CN</para>
             /// </summary>
@@ -38,6 +47,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CertNation { get; set; }
 
             /// <summary>
+            /// <para>The document number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,6 +58,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CertNo { get; set; }
 
             /// <summary>
+            /// <para>The document type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? CertType { get; set; }
 
             /// <summary>
+            /// <para>The nationality in two-letter country code format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CN</para>
             /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The email address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:zhangsan@alibaba-inc.com">zhangsan@alibaba-inc.com</a></para>
         /// </summary>
@@ -76,6 +91,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Email { get; set; }
 
         /// <summary>
+        /// <para>The phone number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13438009765</para>
         /// </summary>
@@ -84,6 +101,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Phone { get; set; }
 
         /// <summary>
+        /// <para>The Chinese real name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>张三</para>
         /// </summary>
@@ -92,6 +111,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RealName { get; set; }
 
         /// <summary>
+        /// <para>The passport name in pinyin, in the format LastName/FirstName.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zhang/san</para>
         /// </summary>

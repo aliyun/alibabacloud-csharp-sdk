@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CostCenterQueryRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the cost center is disabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: Not disabled.</description></item>
+        /// <item><description><b>1</b>: Disabled.</description></item>
+        /// </list>
+        /// <para>If this parameter is not specified, all data is queried by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +25,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? Disable { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to display member information. This parameter is returned when the cost center applies to partial members.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -26,6 +35,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? NeedOrgEntity { get; set; }
 
         /// <summary>
+        /// <para>The third-party cost center ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cost1</para>
         /// </summary>
@@ -34,6 +45,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ThirdpartId { get; set; }
 
         /// <summary>
+        /// <para>The cost center name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>测试成本中心</para>
         /// </summary>
@@ -42,6 +55,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Title { get; set; }
 
         /// <summary>
+        /// <para>The third-party user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user1</para>
         /// </summary>

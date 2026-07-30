@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class EntityDeleteResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The remarks that describe the result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The response data returned by the server. Returns null if no result is available or an exception occurs.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public EntityDeleteResponseBodyModule Module { get; set; }
         public class EntityDeleteResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The number of removed members.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? RemoveNum { get; set; }
 
             /// <summary>
+            /// <para>The total number of employees in the cost center.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether more data is available on the next page. Set by the server during pagination.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? MorePage { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Set by the server. Set to false when an exception occurs or the result is null.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

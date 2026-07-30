@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class MonthBillGetResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -25,11 +29,19 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The monthly billing information.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public List<MonthBillGetResponseBodyModule> Module { get; set; }
         public class MonthBillGetResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The end date of the billing period.</para>
+            /// <list type="bullet">
+            /// <item><description>Format: yyyy-MM-dd.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-04-30</para>
             /// </summary>
@@ -38,13 +50,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string EndDate { get; set; }
 
             /// <summary>
-            /// <para>CorpMonthAccountBillFeeDetail</para>
+            /// <para>The bill object details.</para>
             /// </summary>
             [NameInMap("monthAccountBillDetail")]
             [Validation(Required=false)]
             public MonthBillGetResponseBodyModuleMonthAccountBillDetail MonthAccountBillDetail { get; set; }
             public class MonthBillGetResponseBodyModuleMonthAccountBillDetail : TeaModel {
                 /// <summary>
+                /// <para>Indicates whether the bill is confirmed.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -53,66 +67,68 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? BillConfirmed { get; set; }
 
                 /// <summary>
-                /// <para>用车金额（单位：元）</para>
+                /// <para>The car service amount. Unit: CNY.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx.xx</para>
+                /// <para>56.70</para>
                 /// </summary>
                 [NameInMap("carAmount")]
                 [Validation(Required=false)]
                 public double? CarAmount { get; set; }
 
                 /// <summary>
-                /// <para>违约金金额（单位：元）</para>
+                /// <para>The penalty amount. Unit: CNY.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx.xx</para>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("damageAmount")]
                 [Validation(Required=false)]
                 public double? DamageAmount { get; set; }
 
                 /// <summary>
-                /// <para>机票金额（单位：元）</para>
+                /// <para>The flight ticket amount. Unit: CNY.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx.xx</para>
+                /// <para>1234.00</para>
                 /// </summary>
                 [NameInMap("flightAmount")]
                 [Validation(Required=false)]
                 public double? FlightAmount { get; set; }
 
                 /// <summary>
-                /// <para>福豆金额（单位：元）</para>
+                /// <para>The Fu points amount. Unit: CNY.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx.xx</para>
+                /// <para>1.50</para>
                 /// </summary>
                 [NameInMap("fuPoint")]
                 [Validation(Required=false)]
                 public double? FuPoint { get; set; }
 
                 /// <summary>
-                /// <para>酒店金额（单位：元）</para>
+                /// <para>The hotel amount. Unit: CNY.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx.xx</para>
+                /// <para>500.00</para>
                 /// </summary>
                 [NameInMap("hotelAmount")]
                 [Validation(Required=false)]
                 public double? HotelAmount { get; set; }
 
                 /// <summary>
-                /// <para>国际机票金额（单位：元）</para>
+                /// <para>The international flight ticket amount. Unit: CNY.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx.xx</para>
+                /// <para>3456.00</para>
                 /// </summary>
                 [NameInMap("ieFlightAmount")]
                 [Validation(Required=false)]
                 public double? IeFlightAmount { get; set; }
 
                 /// <summary>
+                /// <para>The international hotel amount. Unit: CNY.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3000.00</para>
                 /// </summary>
@@ -121,7 +137,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? IeHotelAmount { get; set; }
 
                 /// <summary>
-                /// <para>账期日：YYYYMMDD</para>
+                /// <para>The bill issue date.</para>
+                /// <list type="bullet">
+                /// <item><description>Format: yyyyMMdd.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20200501</para>
@@ -131,6 +150,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? MailBillDate { get; set; }
 
                 /// <summary>
+                /// <para>The meal amount. Unit: CNY.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>22.40</para>
                 /// </summary>
@@ -143,26 +164,28 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? MetroAmount { get; set; }
 
                 /// <summary>
-                /// <para>服务费金额（单位：元）</para>
+                /// <para>The service fee amount. Unit: CNY.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx.xx</para>
+                /// <para>45.00</para>
                 /// </summary>
                 [NameInMap("serviceAmount")]
                 [Validation(Required=false)]
                 public double? ServiceAmount { get; set; }
 
                 /// <summary>
-                /// <para>火车票金额（单位：元）</para>
+                /// <para>The train ticket amount. Unit: CNY.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx.xx</para>
+                /// <para>648.00</para>
                 /// </summary>
                 [NameInMap("trainAmount")]
                 [Validation(Required=false)]
                 public double? TrainAmount { get; set; }
 
                 /// <summary>
+                /// <para>The value-added service amount. Unit: CNY.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>19.22</para>
                 /// </summary>
@@ -173,6 +196,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The start date of the billing period.</para>
+            /// <list type="bullet">
+            /// <item><description>Format: yyyy-MM-dd.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-04-01</para>
             /// </summary>
@@ -181,8 +209,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string StartDate { get; set; }
 
             /// <summary>
+            /// <para>The download link for the bill data. Retrieve it using HttpClient and parse it in GBK encoding.</para>
+            /// <list type="bullet">
+            /// <item><description>The data is in JSON format.</description></item>
+            /// <item><description>The link is valid for 5 minutes.</description></item>
+            /// <item><description>For object descriptions, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=5037134">Alibaba Business Travel bill object overview</a>.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
-            /// <para><a href="https://xxx">https://xxx</a></para>
+            /// <para><a href="https://alibtrip-oss.oss-cn-hangzhou.aliyuncs.com/">https://alibtrip-oss.oss-cn-hangzhou.aliyuncs.com/</a>********</para>
             /// </summary>
             [NameInMap("url")]
             [Validation(Required=false)]
@@ -191,14 +226,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The unique ID of this request.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
+        /// <para>407543AF-<b><b>-</b></b>-****-9D1AB7218B27</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -207,8 +246,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The global trace ID of the request, typically used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>21041ce316577904808056433edbb2</para>
+        /// <para>21041ce********056433edbb2</para>
         /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]

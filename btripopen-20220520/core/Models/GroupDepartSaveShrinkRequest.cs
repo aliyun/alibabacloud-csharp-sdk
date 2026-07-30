@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class GroupDepartSaveShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The department name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DeptName { get; set; }
 
         /// <summary>
+        /// <para>The department manager ID.</para>
+        /// <list type="bullet">
+        /// <item><description>If the department has multiple managers, pass the values in the format <c>[manager1|manager2|manager3]</c>.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>001|002|003</para>
         /// </summary>
@@ -28,24 +34,32 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ManagerIds { get; set; }
 
         /// <summary>
+        /// <para>The department ID. The default root department ID in Alibaba Business Travel is 1. Do not use this value when passing parameters to avoid call failures.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>001</para>
+        /// <para>1001</para>
         /// </summary>
         [NameInMap("outer_dept_id")]
         [Validation(Required=false)]
         public string OuterDeptId { get; set; }
 
         /// <summary>
+        /// <para>The parent department ID. The default root department ID in Alibaba Business Travel is 1. Do not use this value when passing parameters to avoid call failures.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>002</para>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("outer_dept_pid")]
         [Validation(Required=false)]
         public string OuterDeptPid { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the department is active. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Active.</description></item>
+        /// <item><description>1: Inactive.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,11 +69,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        /// <summary>
+        /// <para>The list of enterprise IDs to which the department belongs. <b>Required parameter</b>.</para>
+        /// </summary>
         [NameInMap("sub_corp_id_list")]
         [Validation(Required=false)]
         public string SubCorpIdListShrink { get; set; }
 
         /// <summary>
+        /// <para><b>Deprecated. No input required.</b></para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>

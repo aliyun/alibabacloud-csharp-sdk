@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TicketChangingCancelRequest : TeaModel {
         /// <summary>
+        /// <para>The distribution external order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dis123</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DisOrderId { get; set; }
 
         /// <summary>
+        /// <para>The distribution external change order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>refun123</para>
         /// </summary>

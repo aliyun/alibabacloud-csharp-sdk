@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightModifyCancelV2Request : TeaModel {
         /// <summary>
+        /// <para>The custom channel name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name</para>
         /// </summary>
@@ -18,22 +20,28 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>1017002195370467138</para>
+        /// <para>1017002195370467200</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
+        /// <para>The distribution external order ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>1017002195370467137</para>
+        /// <para>1017002195370467200</para>
         /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The distribution external sub-order ID (rebooking).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1019195786853020</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutSubOrderId { get; set; }
 
         /// <summary>
+        /// <para>The business travel sub-order ID (rebooking sales order ID).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1019195786853020</para>
         /// </summary>

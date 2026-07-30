@@ -145,11 +145,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ResultMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the API call is successful. A value of true indicates success. A value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

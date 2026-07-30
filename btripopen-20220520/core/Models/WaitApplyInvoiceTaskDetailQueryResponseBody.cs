@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class WaitApplyInvoiceTaskDetailQueryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The response data. The server returns null if no result is found or an exception occurs.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public List<WaitApplyInvoiceTaskDetailQueryResponseBodyModule> Module { get; set; }
         public class WaitApplyInvoiceTaskDetailQueryResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The recipient name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>张三</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Contact { get; set; }
 
             /// <summary>
+            /// <para>The recipient email address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>接收电子发票的电子邮箱地址</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Email { get; set; }
 
             /// <summary>
+            /// <para>The general invoice amount for domestic flights.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string FlightInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The Fu Point invoice amount.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3.12</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string FuPointInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The hotel general invoice amount.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string HotelNormalInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The hotel special VAT invoice amount.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string HotelSpecialInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The general invoice amount for international/Hong Kong, Macao, Taiwan (China) vehicle services.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string IeVehicleNormalInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The general invoice amount for international flights.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string InternationalFlightInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The general invoice amount for international hotels.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string InternationalHotelInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The third-party invoice title ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string InvoiceThirdPartId { get; set; }
 
             /// <summary>
+            /// <para>The invoice title name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>测试发票抬头</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string InvoiceTitle { get; set; }
 
             /// <summary>
+            /// <para>The detailed mailing address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>余杭区仓前街道XX路1号XX大厦101</para>
             /// </summary>
@@ -126,6 +157,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string MailAddress { get; set; }
 
             /// <summary>
+            /// <para>The city in the mailing address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>杭州市</para>
             /// </summary>
@@ -134,6 +167,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string MailCity { get; set; }
 
             /// <summary>
+            /// <para>The full mailing address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>浙江省杭州市余杭区仓前街道XX路1号XX大厦101</para>
             /// </summary>
@@ -142,6 +177,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string MailFullAddress { get; set; }
 
             /// <summary>
+            /// <para>The province in the mailing address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>浙江省</para>
             /// </summary>
@@ -150,6 +187,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string MailProvince { get; set; }
 
             /// <summary>
+            /// <para>The general VAT invoice amount for meals (Alibaba Business Travel).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -158,6 +197,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string MealNormalInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The general VAT invoice amount for meals (Alibaba Business Travel Yuhang Branch).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -166,6 +207,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string MealTc7NormalInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The penalty fee invoice amount.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -174,6 +217,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PenaltyFee { get; set; }
 
             /// <summary>
+            /// <para>The invoice remark.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>测试备注</para>
             /// </summary>
@@ -182,6 +227,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Remark { get; set; }
 
             /// <summary>
+            /// <para>The service fee invoice amount.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.02</para>
             /// </summary>
@@ -190,6 +237,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ServiceFee { get; set; }
 
             /// <summary>
+            /// <para>The recipient phone number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234567890</para>
             /// </summary>
@@ -198,6 +247,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Telephone { get; set; }
 
             /// <summary>
+            /// <para>The train ticket acceleration package amount.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -206,6 +257,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string TrainAccelerationPackageInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The general invoice amount for train tickets.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -214,6 +267,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string TrainInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The general invoice amount for vacation services.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -222,6 +277,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string VacationNormalInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The special VAT invoice amount for value-added services.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -230,6 +287,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string VasMallSpecialInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The special VAT invoice amount for vehicle services.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -238,6 +297,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string VehicleInvoiceFee { get; set; }
 
             /// <summary>
+            /// <para>The general invoice amount for domestic vehicle services.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -258,6 +319,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

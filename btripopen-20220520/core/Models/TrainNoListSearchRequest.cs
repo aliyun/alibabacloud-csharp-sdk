@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainNoListSearchRequest : TeaModel {
         /// <summary>
+        /// <para>The arrival station.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ArrLocation { get; set; }
 
         /// <summary>
+        /// <para>The date of the train schedule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DepDate { get; set; }
 
         /// <summary>
+        /// <para>The departure station.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DepLocation { get; set; }
 
         /// <summary>
+        /// <para>The query conditions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("option")]
@@ -47,6 +51,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public TrainNoListSearchRequestOption Option { get; set; }
         public class TrainNoListSearchRequestOption : TeaModel {
             /// <summary>
+            /// <para>Specifies whether a transfer is required.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -57,6 +63,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The order ID. This parameter is required when searching for ticket changes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>

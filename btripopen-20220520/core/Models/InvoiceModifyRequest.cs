@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InvoiceModifyRequest : TeaModel {
         /// <summary>
+        /// <para>The registered address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>注册地址</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Address { get; set; }
 
         /// <summary>
+        /// <para>The name of the bank where the account is opened.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345678</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BankName { get; set; }
 
         /// <summary>
+        /// <para>The bank account number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2222</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BankNo { get; set; }
 
+        /// <summary>
+        /// <para>The third-party ID of the mailing address.</para>
+        /// </summary>
         [NameInMap("mail_third_part_id")]
         [Validation(Required=false)]
         public string MailThirdPartId { get; set; }
 
         /// <summary>
+        /// <para>The tax identification number. This parameter is required when unit_type is set to 1 and optional when unit_type is set to 2.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>122333121</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string TaxNo { get; set; }
 
         /// <summary>
+        /// <para>The company phone number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345678</para>
         /// </summary>
@@ -54,6 +67,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Tel { get; set; }
 
         /// <summary>
+        /// <para>The third-party invoice ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +78,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ThirdPartId { get; set; }
 
         /// <summary>
+        /// <para>The invoice header.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +89,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Title { get; set; }
 
         /// <summary>
+        /// <para>The invoice type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: VAT general invoice.</description></item>
+        /// <item><description>2: VAT special invoice.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,6 +104,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Type { get; set; }
 
         /// <summary>
+        /// <para>The entity type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: enterprise (tax number required).</description></item>
+        /// <item><description>2: non-enterprise (tax number optional).</description></item>
+        /// </list>
+        /// <para>Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

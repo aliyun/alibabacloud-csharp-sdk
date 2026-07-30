@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelOrderQueryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -32,11 +36,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public HotelOrderQueryResponseBodyModule Module { get; set; }
         public class HotelOrderQueryResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <para>The hotel information.</para>
+            /// </summary>
             [NameInMap("hotel_info")]
             [Validation(Required=false)]
             public HotelOrderQueryResponseBodyModuleHotelInfo HotelInfo { get; set; }
             public class HotelOrderQueryResponseBodyModuleHotelInfo : TeaModel {
                 /// <summary>
+                /// <para>The hotel brand code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
                 /// </summary>
@@ -45,6 +54,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string BrandCode { get; set; }
 
                 /// <summary>
+                /// <para>The hotel group.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>华住集团</para>
                 /// </summary>
@@ -53,6 +64,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string BrandGroup { get; set; }
 
                 /// <summary>
+                /// <para>The hotel brand name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>汉庭</para>
                 /// </summary>
@@ -61,6 +74,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string BrandName { get; set; }
 
                 /// <summary>
+                /// <para>The check-in time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1669344020</para>
                 /// </summary>
@@ -69,6 +84,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? CheckIn { get; set; }
 
                 /// <summary>
+                /// <para>The check-out time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1669344020</para>
                 /// </summary>
@@ -77,6 +94,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? CheckOut { get; set; }
 
                 /// <summary>
+                /// <para>The city where the hotel is located.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>杭州市</para>
                 /// </summary>
@@ -85,6 +104,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string City { get; set; }
 
                 /// <summary>
+                /// <para>The six-digit city code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>330100</para>
                 /// </summary>
@@ -93,6 +114,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityAdCode { get; set; }
 
                 /// <summary>
+                /// <para>The country code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -101,6 +124,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CountryCode { get; set; }
 
                 /// <summary>
+                /// <para>The country name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>中国</para>
                 /// </summary>
@@ -109,6 +134,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CountryName { get; set; }
 
                 /// <summary>
+                /// <para>The hotel address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>红丰路***号</para>
                 /// </summary>
@@ -117,6 +144,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string HotelAddress { get; set; }
 
                 /// <summary>
+                /// <para>The hotel name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>阿里商旅专营店</para>
                 /// </summary>
@@ -125,6 +154,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string HotelName { get; set; }
 
                 /// <summary>
+                /// <para>The hotel phone number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0571-88888888</para>
                 /// </summary>
@@ -133,6 +164,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string HotelPhone { get; set; }
 
                 /// <summary>
+                /// <para>The type of VAT invoice supported by the hotel.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
                 /// </summary>
@@ -141,6 +174,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? HotelSupportVatInvoiceType { get; set; }
 
                 /// <summary>
+                /// <para>The number of room nights.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -149,6 +184,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? Night { get; set; }
 
                 /// <summary>
+                /// <para>The number of rooms.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -157,6 +194,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? RoomNum { get; set; }
 
                 /// <summary>
+                /// <para>The room type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>标准间</para>
                 /// </summary>
@@ -164,17 +203,25 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string RoomType { get; set; }
 
+                /// <summary>
+                /// <para>The hotel star rating.</para>
+                /// </summary>
                 [NameInMap("star")]
                 [Validation(Required=false)]
                 public string Star { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The hotel invoice data.</para>
+            /// </summary>
             [NameInMap("invoice_info")]
             [Validation(Required=false)]
             public HotelOrderQueryResponseBodyModuleInvoiceInfo InvoiceInfo { get; set; }
             public class HotelOrderQueryResponseBodyModuleInvoiceInfo : TeaModel {
                 /// <summary>
+                /// <para>The invoice ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -183,6 +230,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>The invoice title.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xxxx有限公司</para>
                 /// </summary>
@@ -192,11 +241,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// <para>The basic information of the order.</para>
+            /// </summary>
             [NameInMap("order_base_info")]
             [Validation(Required=false)]
             public HotelOrderQueryResponseBodyModuleOrderBaseInfo OrderBaseInfo { get; set; }
             public class HotelOrderQueryResponseBodyModuleOrderBaseInfo : TeaModel {
                 /// <summary>
+                /// <para>The approval form ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -205,6 +259,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ApplyId { get; set; }
 
                 /// <summary>
+                /// <para>The travel reason specified in the approval form.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>拜访客户</para>
                 /// </summary>
@@ -213,6 +269,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string BtripTitle { get; set; }
 
                 /// <summary>
+                /// <para>The category code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -221,6 +279,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? Category { get; set; }
 
                 /// <summary>
+                /// <para>The enterprise ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>iscorpId</para>
                 /// </summary>
@@ -229,6 +289,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CorpId { get; set; }
 
                 /// <summary>
+                /// <para>The enterprise name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>阿里商旅</para>
                 /// </summary>
@@ -236,7 +298,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CorpName { get; set; }
 
+                [NameInMap("dailyBreakfastList")]
+                [Validation(Required=false)]
+                public HotelOrderQueryResponseBodyModuleOrderBaseInfoDailyBreakfastList DailyBreakfastList { get; set; }
+                public class HotelOrderQueryResponseBodyModuleOrderBaseInfoDailyBreakfastList : TeaModel {
+                    [NameInMap("breakfastCount")]
+                    [Validation(Required=false)]
+                    public int? BreakfastCount { get; set; }
+
+                    [NameInMap("date")]
+                    [Validation(Required=false)]
+                    public string Date { get; set; }
+
+                }
+
                 /// <summary>
+                /// <para>The department ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -245,6 +323,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string DepartId { get; set; }
 
                 /// <summary>
+                /// <para>The department name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>阿里商旅客户服务</para>
                 /// </summary>
@@ -252,11 +332,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DepartName { get; set; }
 
+                /// <summary>
+                /// <para>The list of over-standard approval form numbers.</para>
+                /// </summary>
                 [NameInMap("exceed_apply_nos")]
                 [Validation(Required=false)]
                 public List<string> ExceedApplyNos { get; set; }
 
                 /// <summary>
+                /// <para>The extended field of the approval form.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>扩展字段</para>
                 /// </summary>
@@ -265,6 +350,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ExtendField { get; set; }
 
                 /// <summary>
+                /// <para>The time when the order was created.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1669344020</para>
                 /// </summary>
@@ -273,6 +360,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>The time when the order was last updated.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1669344020</para>
                 /// </summary>
@@ -281,6 +370,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>The order ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1002145190081005400</para>
                 /// </summary>
@@ -289,6 +380,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>The itinerary ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -297,6 +390,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ItineraryId { get; set; }
 
                 /// <summary>
+                /// <para>The order status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -305,6 +400,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? OrderStatus { get; set; }
 
                 /// <summary>
+                /// <para>The order type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -313,6 +410,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? OrderType { get; set; }
 
                 /// <summary>
+                /// <para>The service supplier.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>阿里商旅</para>
                 /// </summary>
@@ -321,6 +420,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string Supplier { get; set; }
 
                 /// <summary>
+                /// <para>The third-party approval form ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -329,6 +430,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ThirdpartApplyId { get; set; }
 
                 /// <summary>
+                /// <para>The external approval form ID displayed to the user.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>00021230711000001Test-2</para>
                 /// </summary>
@@ -337,6 +440,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ThirdpartBusinessId { get; set; }
 
                 /// <summary>
+                /// <para>The third-party department ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -345,6 +450,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ThirdpartDepartId { get; set; }
 
                 /// <summary>
+                /// <para>The third-party itinerary ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -353,6 +460,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ThirdpartItineraryId { get; set; }
 
                 /// <summary>
+                /// <para>The user ID of the contact.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -361,6 +470,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string UserId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the contact.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>阿里小蜜</para>
                 /// </summary>
@@ -370,11 +481,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of hotel guests.</para>
+            /// </summary>
             [NameInMap("passenger_list")]
             [Validation(Required=false)]
             public List<HotelOrderQueryResponseBodyModulePassengerList> PassengerList { get; set; }
             public class HotelOrderQueryResponseBodyModulePassengerList : TeaModel {
                 /// <summary>
+                /// <para>The Alibaba Business Travel approval form ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1004313100</para>
                 /// </summary>
@@ -383,6 +499,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ApplyId { get; set; }
 
                 /// <summary>
+                /// <para>The cost center ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -391,6 +509,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? CostCenterId { get; set; }
 
                 /// <summary>
+                /// <para>The cost center name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>成本中心</para>
                 /// </summary>
@@ -399,6 +519,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CostCenterName { get; set; }
 
                 /// <summary>
+                /// <para>The cost center code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -407,6 +529,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CostCenterNumber { get; set; }
 
                 /// <summary>
+                /// <para>The itinerary ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>f7c05571-d1f1-46fa-96c9-d5c29c986c07</para>
                 /// </summary>
@@ -415,6 +539,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ItineraryId { get; set; }
 
                 /// <summary>
+                /// <para>The guest type. Valid values: 1: primary guest. 2: co-occupant.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -423,6 +549,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? OccupantType { get; set; }
 
                 /// <summary>
+                /// <para>The project code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>项目编码</para>
                 /// </summary>
@@ -431,6 +559,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ProjectCode { get; set; }
 
                 /// <summary>
+                /// <para>The project ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -439,6 +569,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
+                /// <para>The project name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xxx项目</para>
                 /// </summary>
@@ -447,6 +579,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ProjectTitle { get; set; }
 
                 /// <summary>
+                /// <para>The third-party approval form ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>01-2023-04156</para>
                 /// </summary>
@@ -455,6 +589,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ThirdpartApplyId { get; set; }
 
                 /// <summary>
+                /// <para>The third-party cost center ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -463,6 +599,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ThirdpartCostCenterId { get; set; }
 
                 /// <summary>
+                /// <para>The third-party project ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -471,6 +609,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ThirdpartProjectId { get; set; }
 
                 /// <summary>
+                /// <para>The DingTalk ID of the traveler.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
                 /// </summary>
@@ -479,6 +619,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string UserId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the traveler.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>张三</para>
                 /// </summary>
@@ -487,6 +629,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string UserName { get; set; }
 
                 /// <summary>
+                /// <para>The traveler type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -496,11 +640,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of hotel order fees.</para>
+            /// </summary>
             [NameInMap("price_info_list")]
             [Validation(Required=false)]
             public List<HotelOrderQueryResponseBodyModulePriceInfoList> PriceInfoList { get; set; }
             public class HotelOrderQueryResponseBodyModulePriceInfoList : TeaModel {
                 /// <summary>
+                /// <para>The transaction category code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -509,6 +658,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? CategoryCode { get; set; }
 
                 /// <summary>
+                /// <para>The time when the transaction was created.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1669344020</para>
                 /// </summary>
@@ -517,6 +668,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>The settlement method.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -525,6 +678,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? PayType { get; set; }
 
                 /// <summary>
+                /// <para>The transaction amount.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
                 /// </summary>
@@ -533,6 +688,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? Price { get; set; }
 
                 /// <summary>
+                /// <para>The transaction ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12345678910987654321</para>
                 /// </summary>
@@ -541,6 +698,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string TradeId { get; set; }
 
                 /// <summary>
+                /// <para>The fund flow direction.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -563,6 +722,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -14,6 +14,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ArrivalTime { get; set; }
 
         /// <summary>
+        /// <para>The external user ID. If organization personnel synchronization is enabled, use the btripUserId. Otherwise, pass the userId corresponding to the distributor\&quot;s own system user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,26 +25,30 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The check-in date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-10-20</para>
+        /// <para>2020-10-20 00:00:00</para>
         /// </summary>
         [NameInMap("check_in")]
         [Validation(Required=false)]
         public string CheckIn { get; set; }
 
         /// <summary>
+        /// <para>The check-out date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-10-20</para>
+        /// <para>2020-10-20 00:00:00</para>
         /// </summary>
         [NameInMap("check_out")]
         [Validation(Required=false)]
         public string CheckOut { get; set; }
 
         /// <summary>
+        /// <para>The contact person\&quot;s email address. This parameter is required if the need_email parameter returned by the pre-order validation operation is true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>demo</para>
         /// </summary>
@@ -52,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ContractEmail { get; set; }
 
         /// <summary>
+        /// <para>The contact person\&quot;s name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>张三</para>
         /// </summary>
@@ -60,16 +67,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ContractName { get; set; }
 
         /// <summary>
+        /// <para>The contact person\&quot;s mobile phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>19281772123</para>
+        /// <para>131****8888</para>
         /// </summary>
         [NameInMap("contract_phone")]
         [Validation(Required=false)]
         public string ContractPhone { get; set; }
 
         /// <summary>
+        /// <para>The corporate payment amount. Unit: cents.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +89,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? CorpPayPrice { get; set; }
 
         /// <summary>
+        /// <para>The distributor order ID. Regardless of whether the order is created successfully, the distributor order ID is recorded. Do not use the same order ID to place orders multiple times.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,6 +100,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DisOrderId { get; set; }
 
         /// <summary>
+        /// <para>The extended information in JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>（特定企业需要传递）
         /// 1.企业支付金额：DisCorpPayPrice
@@ -100,11 +112,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Extra { get; set; }
 
+        /// <summary>
+        /// <para>The invoice information.</para>
+        /// </summary>
         [NameInMap("invoice_info")]
         [Validation(Required=false)]
         public string InvoiceInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The item ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,6 +131,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? ItemId { get; set; }
 
         /// <summary>
+        /// <para>The btrip itinerary ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -128,11 +145,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string LeaveTime { get; set; }
 
+        /// <summary>
+        /// <para>The GDS membership card information.</para>
+        /// </summary>
         [NameInMap("member_info")]
         [Validation(Required=false)]
         public string MemberInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The occupant information. The number of occupants cannot exceed the number specified during price validation. A maximum of two occupants are allowed per room.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("occupant_info_list")]
@@ -140,6 +161,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OccupantInfoListShrink { get; set; }
 
         /// <summary>
+        /// <para>The personal payment amount. Unit: cents.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -149,11 +171,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? PersonPayPrice { get; set; }
 
+        /// <summary>
+        /// <para>The promotion information.</para>
+        /// </summary>
         [NameInMap("promotion_info")]
         [Validation(Required=false)]
         public string PromotionInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The rate plan ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -164,6 +190,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? RatePlanId { get; set; }
 
         /// <summary>
+        /// <para>The room ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -174,6 +201,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? RoomId { get; set; }
 
         /// <summary>
+        /// <para>The number of rooms.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -188,6 +216,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? RpType { get; set; }
 
         /// <summary>
+        /// <para>The seller ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -198,6 +227,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? SellerId { get; set; }
 
         /// <summary>
+        /// <para>The standard hotel ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -208,6 +238,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? Shid { get; set; }
 
         /// <summary>
+        /// <para>The total order price. Unit: cents.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -218,6 +249,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? TotalOrderPrice { get; set; }
 
         /// <summary>
+        /// <para>The validation result.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

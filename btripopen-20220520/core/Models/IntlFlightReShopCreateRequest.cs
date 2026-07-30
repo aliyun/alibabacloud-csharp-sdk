@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutReShopApplyId { get; set; }
 
         /// <summary>
-        /// <para>The rebooking group key returned by the inquiry operation.</para>
+        /// <para>The rebooking group key returned by the consultation API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,9 +124,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// <para>The total rebooking fee (excluding the service fee), in cents.
-        ///      * Total rebooking fee = cabin upgrade fee + handling fee + tax difference (applicable to international flights).
-        ///      * Pass in this parameter when fees are incurred to verify whether the price has changed.</para>
+        /// <para>The total fee for this rebooking (excluding service fees). Unit: cents.
+        ///      * Total rebooking fee = cabin upgrade fee + handling fee + tax difference (international flights have tax differences).
+        ///      * Pass this parameter when fees are involved to verify whether the price has changed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1400</para>

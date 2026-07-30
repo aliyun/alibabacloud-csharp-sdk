@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ApplyTripTaskExecuteRequest : TeaModel {
         /// <summary>
+        /// <para>The source of the task execution.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ActionFrom { get; set; }
 
         /// <summary>
+        /// <para>The approval comment.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>这是一条评论</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to approve or reject the approval task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string TaskAction { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? TaskId { get; set; }
 
         /// <summary>
+        /// <para>The userId of the current operator.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>The name of the current operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>张三</para>
         /// </summary>

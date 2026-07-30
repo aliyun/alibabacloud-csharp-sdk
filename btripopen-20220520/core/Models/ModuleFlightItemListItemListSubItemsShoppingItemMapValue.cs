@@ -19,15 +19,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        /// <summary>
+        /// <para>The remaining cabin inventory per segment, ((journeyIndex, segmentIndex), Cabin).</para>
+        /// </summary>
         [NameInMap("cabin_quantity")]
         [Validation(Required=false)]
         public Dictionary<string, ModuleFlightItemListItemListSubItemsShoppingItemMapValueCabinQuantityValue> CabinQuantity { get; set; }
 
+        /// <summary>
+        /// <para>The price provided by the search.</para>
+        /// </summary>
         [NameInMap("search_price")]
         [Validation(Required=false)]
         public ModuleFlightItemListItemListSubItemsShoppingItemMapValueSearchPrice SearchPrice { get; set; }
         public class ModuleFlightItemListItemListSubItemsShoppingItemMapValueSearchPrice : TeaModel {
             /// <summary>
+            /// <para>The floor price (unit: cents).</para>
+            /// <remarks>
+            /// <para>Warning: Deprecated</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>17400</para>
             /// </summary>
@@ -36,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? FloorPrice { get; set; }
 
             /// <summary>
+            /// <para>The ticket face price (unit: cents).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>121000</para>
             /// </summary>
@@ -44,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? TicketPrice { get; set; }
 
             /// <summary>
+            /// <para>The selling price (unit: cents).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>17400</para>
             /// </summary>
@@ -52,6 +67,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? SellPrice { get; set; }
 
             /// <summary>
+            /// <para>The original selling price, the price before promotion (unit: cents).</para>
+            /// <remarks>
+            /// <para>Warning: Deprecated</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>17400</para>
             /// </summary>
@@ -60,6 +80,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? OriginalSellPrice { get; set; }
 
             /// <summary>
+            /// <para>The controlled total price (unit: cents).</para>
+            /// <remarks>
+            /// <para>Warning: Deprecated</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>管控总价格（单位：分）</para>
             /// </summary>
@@ -68,6 +93,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? BaseTotalPrice { get; set; }
 
             /// <summary>
+            /// <para>The pre-control price (unit: cents).</para>
+            /// <remarks>
+            /// <para>Warning: Deprecated</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>17400</para>
             /// </summary>
@@ -76,6 +106,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? BeforeControlPrice { get; set; }
 
             /// <summary>
+            /// <para>The reference tax (unit: cents).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11000</para>
             /// </summary>
@@ -84,6 +116,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? Tax { get; set; }
 
             /// <summary>
+            /// <para>The supplier\&quot;s selling price for procurement products.</para>
+            /// <remarks>
+            /// <para>Warning: Deprecated</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>采购产品，服务商的销售价</para>
             /// </summary>
@@ -92,6 +129,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? SupplyPrice { get; set; }
 
             /// <summary>
+            /// <para>The cabin base price.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>242000</para>
             /// </summary>
@@ -100,6 +139,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? BasicCabinPrice { get; set; }
 
             /// <summary>
+            /// <para>The domestic airport construction fee.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5000</para>
             /// </summary>
@@ -108,6 +149,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? BuildPrice { get; set; }
 
             /// <summary>
+            /// <para>The domestic fuel surcharge.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6000</para>
             /// </summary>
@@ -116,6 +159,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? OilPrice { get; set; }
 
             /// <summary>
+            /// <para>The first class base price.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>头等舱基准价格</para>
             /// </summary>
@@ -124,6 +169,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? FirstStandardPrice { get; set; }
 
             /// <summary>
+            /// <para>The business class base price.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>商务舱基准价格</para>
             /// </summary>
@@ -132,6 +179,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? BusinessStandardPrice { get; set; }
 
             /// <summary>
+            /// <para>The economy class base price.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>242000</para>
             /// </summary>
@@ -140,7 +189,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? CommonStandardPrice { get; set; }
 
             /// <summary>
-            /// <para>fdPrice</para>
+            /// <para>The fdPrice.</para>
+            /// <remarks>
+            /// <para>Warning: Deprecated</warning></para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>fdPrice</para>
@@ -150,6 +202,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? InterTicketPrice { get; set; }
 
             /// <summary>
+            /// <para>直减往返，航段上减去的钱</para>
+            /// <remarks>
+            /// <para>Warning: 已废弃</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>直减往返，航段上减去的钱</para>
             /// </summary>
@@ -158,6 +215,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? SubtractedPrice { get; set; }
 
             /// <summary>
+            /// <para>优惠前价格（一舱多价）[动态优惠专用]</para>
+            /// <remarks>
+            /// <para>Warning: 已废弃</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>优惠前价格（一舱多价）[动态优惠专用]</para>
             /// </summary>
@@ -166,6 +228,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? OriginCommonPrice { get; set; }
 
             /// <summary>
+            /// <para>动态优惠后的价格 [动态优惠专用]</para>
+            /// <remarks>
+            /// <para>Warning: 已废弃</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>动态优惠后的价格 [动态优惠专用]</para>
             /// </summary>
@@ -174,6 +241,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? DynamicPromotionPrice { get; set; }
 
             /// <summary>
+            /// <para>分期数</para>
+            /// <remarks>
+            /// <para>Warning: 已废弃</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>分期数</para>
             /// </summary>
@@ -182,6 +254,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? InstallmentNum { get; set; }
 
             /// <summary>
+            /// <para>分期每期价格</para>
+            /// <remarks>
+            /// <para>Warning: 已废弃</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>分期每期价格</para>
             /// </summary>
@@ -190,6 +267,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public double? InstallmentPrice { get; set; }
 
             /// <summary>
+            /// <para>竞品动态补贴后的目标价格</para>
+            /// <remarks>
+            /// <para>Warning: 已废弃</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>竞品动态补贴后的目标价格</para>
             /// </summary>
@@ -198,6 +280,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? CompetitionDynamicPrice { get; set; }
 
             /// <summary>
+            /// <para>竞品动态补贴，可减的优惠</para>
+            /// <remarks>
+            /// <para>Warning: 已废弃</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>竞品动态补贴，可减的优惠</para>
             /// </summary>
@@ -206,6 +293,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? CompetitionPromotionPrice { get; set; }
 
             /// <summary>
+            /// <para>当前航班组合普通报价限价前最低价格</para>
+            /// <remarks>
+            /// <para>Warning: 已废弃</warning></para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>17400</para>
             /// </summary>
@@ -213,11 +305,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? MinBeforeControlPriceOfNormal { get; set; }
 
+            /// <summary>
+            /// <para>价格展示信息</para>
+            /// </summary>
             [NameInMap("price_show_info")]
             [Validation(Required=false)]
             public ModuleFlightItemListItemListSubItemsShoppingItemMapValueSearchPricePriceShowInfo PriceShowInfo { get; set; }
             public class ModuleFlightItemListItemListSubItemsShoppingItemMapValueSearchPricePriceShowInfo : TeaModel {
                 /// <summary>
+                /// <para>折扣</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.8折</para>
                 /// </summary>
@@ -226,6 +323,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string DiscountInfo { get; set; }
 
                 /// <summary>
+                /// <para>折扣数值</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.8</para>
                 /// </summary>
@@ -234,6 +333,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? DiscountNum { get; set; }
 
                 /// <summary>
+                /// <para>是否展示票面价</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -245,6 +346,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// <para>每一航段的价格</para>
+        /// <remarks>
+        /// <para>Warning: 已废弃</warning></para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("segment_price")]
         [Validation(Required=false)]
         public Dictionary<string, ModuleFlightItemListItemListSubItemsShoppingItemMapValueSegmentPriceValue> SegmentPrice { get; set; }

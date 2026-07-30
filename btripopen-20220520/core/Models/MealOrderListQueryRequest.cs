@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class MealOrderListQueryRequest : TeaModel {
         /// <summary>
+        /// <para>The user ID. If organization personnel synchronization is enabled, this is the btripUserId. Otherwise, pass the userId that corresponds to the user in the distributor\&quot;s own system.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue : TeaModel {
         /// <summary>
-        /// <para>The cabin remaining inventory per segment.</para>
+        /// <para>The remaining cabin inventory for each segment.</para>
         /// </summary>
         [NameInMap("cabin_quantity_list")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition SegmentPosition { get; set; }
             public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition : TeaModel {
                 /// <summary>
-                /// <para>The journey ordinal number (starting from 0).</para>
+                /// <para>The journey index (starting from 0).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? JourneyIndex { get; set; }
 
                 /// <summary>
-                /// <para>The segment ordinal number (starting from 0 within the same journey).</para>
+                /// <para>The segment index (starting from 0 within the same journey).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -63,7 +63,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string Cabin { get; set; }
 
                 /// <summary>
-                /// <para>The cabin class. Valid values: F: first class. C: business class. Y: economy class. P: premium economy class.</para>
+                /// <para>The cabin class. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>F: First class.</description></item>
+                /// <item><description>C: Business class.</description></item>
+                /// <item><description>Y: Economy class.</description></item>
+                /// <item><description>P: Premium economy class.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Y</para>
@@ -73,7 +79,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CabinClass { get; set; }
 
                 /// <summary>
-                /// <para>The cabin class name.</para>
+                /// <para>The cabin class name. Displays the custom name if one exists. Otherwise, displays the standard name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>经济舱</para>
@@ -124,7 +130,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSearchPrice SearchPrice { get; set; }
         public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSearchPrice : TeaModel {
             /// <summary>
-            /// <para>The total amount, in cents.</para>
+            /// <para>The total amount in cents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -134,7 +140,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? TotalAmount { get; set; }
 
             /// <summary>
-            /// <para>The service fee amount, in cents.</para>
+            /// <para>The handling fee amount in cents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -144,7 +150,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? HandlingAmount { get; set; }
 
             /// <summary>
-            /// <para>The cabin upgrade fee amount, in cents.</para>
+            /// <para>The cabin upgrade fee amount in cents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -154,7 +160,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? UpgradeAmount { get; set; }
 
             /// <summary>
-            /// <para>The tax difference amount, in cents.</para>
+            /// <para>The tax difference amount in cents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -186,7 +192,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// <para>The price per segment. This field may not have a value because airline bundled products may not have prices split by segment.</para>
+        /// <para>The price for each segment. This value may not always be available because airline bundled products may not have prices broken down by segment.</para>
         /// </summary>
         [NameInMap("segment_price_list")]
         [Validation(Required=false)]
@@ -200,7 +206,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition SegmentPosition { get; set; }
             public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition : TeaModel {
                 /// <summary>
-                /// <para>The journey ordinal number (starting from 0).</para>
+                /// <para>The journey index (starting from 0).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -210,7 +216,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? JourneyIndex { get; set; }
 
                 /// <summary>
-                /// <para>The segment ordinal number (starting from 0 within the same journey).</para>
+                /// <para>The segment index (starting from 0 within the same journey).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -229,7 +235,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceListSearchPrice SearchPrice { get; set; }
             public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceListSearchPrice : TeaModel {
                 /// <summary>
-                /// <para>The total amount, in cents.</para>
+                /// <para>The total amount in cents.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -239,7 +245,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? TotalAmount { get; set; }
 
                 /// <summary>
-                /// <para>The service fee amount, in cents.</para>
+                /// <para>The handling fee amount in cents.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -249,7 +255,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? HandlingAmount { get; set; }
 
                 /// <summary>
-                /// <para>The cabin upgrade fee amount, in cents.</para>
+                /// <para>The cabin upgrade fee amount in cents.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -259,7 +265,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? UpgradeAmount { get; set; }
 
                 /// <summary>
-                /// <para>The tax difference amount, in cents.</para>
+                /// <para>The tax difference amount in cents.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>

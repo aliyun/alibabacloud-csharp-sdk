@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleItemListShoppingItemMapValueCabinQuantityValue : TeaModel {
         /// <summary>
+        /// <para>The cabin code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>R</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Cabin { get; set; }
 
         /// <summary>
+        /// <para>The cabin class.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Y</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CabinClass { get; set; }
 
         /// <summary>
+        /// <para>The cabin class name. Displays the custom name if one exists, otherwise displays the generic name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>经济舱</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CabinClassName { get; set; }
 
         /// <summary>
+        /// <para>The cabin class description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>舱位等级描述</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CabinClassMemo { get; set; }
 
         /// <summary>
+        /// <para>The domestic special notes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>国内特殊说明</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Specification { get; set; }
 
         /// <summary>
+        /// <para>The number of remaining seats in the cabin. A value of &quot;A&quot; indicates sufficient seats, which depends on the airline and generally means more than 9 seats. For some airlines, it may mean more than 4 seats.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A</para>
         /// </summary>
@@ -57,11 +69,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Quantity { get; set; }
 
+        /// <summary>
+        /// <para>The linked cabins, used for industry seat verification.</para>
+        /// </summary>
         [NameInMap("link_cabins")]
         [Validation(Required=false)]
         public List<string> LinkCabins { get; set; }
 
         /// <summary>
+        /// <para>The cabin class change.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? ReshopChangeCabin { get; set; }
 
         /// <summary>
+        /// <para>The child cabin type. Refer to: com.taobao.trip.gds.common.enumerate.GdsChildTicketType.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>儿童舱位类型</para>
         /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? ChildCabinType { get; set; }
 
         /// <summary>
+        /// <para>The infant base cabin. This is the base cabin corresponding to the cabin class of the adult cabin information, used to retrieve fare data for infant pricing.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>婴儿基准舱位</para>
         /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string InfantBasicCabin { get; set; }
 
         /// <summary>
+        /// <para>The sub-cabin type, used for domestic flights. Refer to InnerCabinClass[FIRST,BUSINESS,ECONOMY,PREMIUM_ECONOMY,PREMIUM_FIRST,code,text,flag].</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

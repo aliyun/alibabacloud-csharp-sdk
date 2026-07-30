@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleOrderItemListBaggageRuleOfferBaggageInfoMapValue : TeaModel {
         /// <summary>
+        /// <para>The departure city code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NNG</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string StartCityCode { get; set; }
 
         /// <summary>
+        /// <para>The arrival city code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SHA</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string EndCityCode { get; set; }
 
         /// <summary>
+        /// <para>The number of carry-on baggage pieces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? CarryFreePc { get; set; }
 
         /// <summary>
+        /// <para>The carry-on baggage weight.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? CarryBagWeight { get; set; }
 
         /// <summary>
+        /// <para>The carry-on baggage size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20<em>40</em>55CM、三边之和不超过115CM</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CarryBagSize { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the carry-on baggage weight represents the total weight.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? IsAllCarryBagWeight { get; set; }
 
         /// <summary>
+        /// <para>The total number of carry-on and checked baggage pieces. Applicable to domestic flights only.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? TotalPcs { get; set; }
 
         /// <summary>
+        /// <para>The total weight of carry-on and checked baggage. Applicable to domestic flights only.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? TotalWeight { get; set; }
 
         /// <summary>
+        /// <para>The carry-on baggage unknown mark.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? CarryUnknown { get; set; }
 
         /// <summary>
+        /// <para>The carry-on baggage length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? CarryLength { get; set; }
 
         /// <summary>
+        /// <para>The carry-on baggage width.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? CarryWidth { get; set; }
 
         /// <summary>
+        /// <para>The carry-on baggage height.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>55</para>
         /// </summary>
@@ -106,6 +130,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? CarryHeight { get; set; }
 
         /// <summary>
+        /// <para>The sum of the three dimensions of carry-on baggage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>115</para>
         /// </summary>
@@ -114,6 +140,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? CarrySumOfLengthWidthHeight { get; set; }
 
         /// <summary>
+        /// <para>The number of checked baggage pieces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -122,6 +150,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? FreePcs { get; set; }
 
         /// <summary>
+        /// <para>The maximum checked baggage weight, in pounds or kilograms.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -130,6 +160,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? BaggageWeight { get; set; }
 
         /// <summary>
+        /// <para>The weight unit of checked baggage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>KG</para>
         /// </summary>
@@ -138,6 +170,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BaggageUnit { get; set; }
 
         /// <summary>
+        /// <para>The checked baggage size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>长宽高之和≤158CM</para>
         /// </summary>
@@ -146,6 +180,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BaggageSize { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the checked baggage weight represents the total weight of all pieces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -154,6 +190,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? AllWeight { get; set; }
 
         /// <summary>
+        /// <para>The checked baggage length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -162,6 +200,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Length { get; set; }
 
         /// <summary>
+        /// <para>The checked baggage width.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -170,6 +210,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Width { get; set; }
 
         /// <summary>
+        /// <para>The checked baggage height.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>55</para>
         /// </summary>
@@ -178,6 +220,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Height { get; set; }
 
         /// <summary>
+        /// <para>The sum of the three dimensions of checked baggage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>115</para>
         /// </summary>
@@ -186,6 +230,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? SumOfLengthWidthHeight { get; set; }
 
         /// <summary>
+        /// <para>The unknown baggage mark.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -194,6 +240,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? Unknown { get; set; }
 
         /// <summary>
+        /// <para>The baggage allowance description in Chinese.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -204,6 +252,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CnDesc { get; set; }
 
         /// <summary>
+        /// <para>The baggage allowance description in English.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -214,6 +264,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string EnDesc { get; set; }
 
         /// <summary>
+        /// <para>The extension property in JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -222,6 +274,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Attribute { get; set; }
 
         /// <summary>
+        /// <para>The baggage price.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -230,6 +284,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? BaggagePrice { get; set; }
 
         /// <summary>
+        /// <para>The carry-on baggage tips.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>

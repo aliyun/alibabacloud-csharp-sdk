@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>The header parameter obtained from the &quot;Enterprise access credential&quot; operation (added in the header). In HTTP mode, you can use socorptoken=value or dtbcorptoken=value in the URL as an alternative.</para>
+        /// <para>A header parameter obtained from the &quot;Enterprise access credential&quot; operation (added in the header). In HTTP mode, you can use socorptoken=value or dtbcorptoken=value in the URL as an alternative.</para>
         /// 
         /// <b>Example:</b>
         /// <para>feth00jqwis</para>

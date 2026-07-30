@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainOrderChangeConfirmResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public TrainOrderChangeConfirmResponseBodyModule Module { get; set; }
         public class TrainOrderChangeConfirmResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The change order ID assigned by the business travel platform.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123445443444</para>
             /// </summary>
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ChangeOrderId { get; set; }
 
             /// <summary>
+            /// <para>The order ID assigned by the business travel platform.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>116019444</para>
             /// </summary>
@@ -49,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string OrderId { get; set; }
 
             /// <summary>
+            /// <para>The order ID assigned by the distributor.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234232</para>
             /// </summary>
@@ -57,6 +67,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string OutOrderId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the payment is successful.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -67,6 +79,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A5009956-1077-52FB-B520-EA8C7E91D722</para>
         /// </summary>
@@ -75,6 +89,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

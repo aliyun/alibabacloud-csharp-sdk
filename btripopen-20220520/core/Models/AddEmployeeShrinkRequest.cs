@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string AccountEmail { get; set; }
 
         /// <summary>
-        /// <para>The account phone number. For enterprises with international phone numbers enabled, specify international numbers, Hong Kong (China), Macao (China), and Taiwan (China) numbers in the format +xx-xxxxxx.</para>
+        /// <para>The account phone number. For enterprises that have enabled international phone numbers, specify international numbers, Hong Kong (China), Macao (China), and Taiwan (China) numbers in the format +xx-xxxxxx.</para>
         /// 
         /// <b>Example:</b>
         /// <para>+86-18812345678</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         /// <summary>
         /// <para>The 6-digit administrative code of the work location.</para>
         /// <list type="bullet">
-        /// <item><description>A maximum of two different administrative codes can be specified.</description></item>
+        /// <item><description>You can specify up to two different administrative codes.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("base_city_code_list")]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CertListShrink { get; set; }
 
         /// <summary>
-        /// <para>The collection of role IDs associated with the employee. The number of roles associated with a single employee must be less than or equal to 200. Otherwise, the employee synchronization fails.</para>
+        /// <para>The collection of role IDs associated with the employee. An employee can be associated with a maximum of 200 roles. Otherwise, the employee synchronization fails.</para>
         /// </summary>
         [NameInMap("custom_role_code_list")]
         [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? IsDeptLeader { get; set; }
 
         /// <summary>
-        /// <para>The employee number, which serves as a unique identifier for the employee along with <c>user_id</c>. Ensure that the value is unique.</para>
+        /// <para>The employee number, which serves as a unique identifier along with <c>user_id</c>. Ensure that this value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job_1234</para>
@@ -212,9 +212,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RealName { get; set; }
 
         /// <summary>
-        /// <para>The English name of the employee. Follow these format requirements:</para>
+        /// <para>The English name of the employee. Specify the value in the following format:</para>
         /// <list type="bullet">
-        /// <item><description>Separate the last name and first name with &quot;/&quot;, for example: LastName/FirstName.</description></item>
+        /// <item><description>Separate the last name and first name with a forward slash (/), such as LastName/FirstName.</description></item>
         /// <item><description>Do not include spaces between the last name and first name.</description></item>
         /// </list>
         /// 
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RealNameEn { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the same employee across multiple enterprises (parent and subsidiary enterprises).</para>
+        /// <para>The unique identifier of the same employee across multiple enterprises (parent enterprise and subsidiaries).</para>
         /// 
         /// <b>Example:</b>
         /// <para>union_0123</para>

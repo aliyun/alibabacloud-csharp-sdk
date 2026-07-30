@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class EntitySetShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of available scope entries.</para>
+        /// </summary>
         [NameInMap("entity_d_o_list")]
         [Validation(Required=false)]
         public string EntityDOListShrink { get; set; }
 
         /// <summary>
+        /// <para>The ID of the third-party cost center.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

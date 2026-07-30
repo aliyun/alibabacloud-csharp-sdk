@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Succeeded.</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public AccessTokenResponseBodyModule Module { get; set; }
         public class AccessTokenResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The validity duration of the token. The initial value is 2 hours (7200000 ms). To prevent token expiration, set the refresh interval to: <b>5 minutes ≤ interval ≤ 2 hours</b>. If you refresh within this interval, the token obtained from the previous request remains valid.</para>
+            /// <para>The validity period of the token. The initial value is 2 hours (7200000 ms). To prevent token expiration, set the refresh interval to: <b>5 minutes ≤ interval ≤ 2 hours</b>. If you refresh within this interval, the token obtained from the previous request remains valid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7200000</para>

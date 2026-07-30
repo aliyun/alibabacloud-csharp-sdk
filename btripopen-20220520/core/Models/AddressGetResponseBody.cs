@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// <para>The unique identifier of this request.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>407543AF-<b><b>-</b></b>-****-9D1AB7218B27</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleGroupItemSubItemPositionMapValue : TeaModel {
         /// <summary>
+        /// <para>The journey index.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? JourneyIndex { get; set; }
 
         /// <summary>
+        /// <para>The segment index.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

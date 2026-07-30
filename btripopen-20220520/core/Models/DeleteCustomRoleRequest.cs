@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class DeleteCustomRoleRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the custom enterprise role.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

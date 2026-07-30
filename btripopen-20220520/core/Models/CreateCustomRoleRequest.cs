@@ -10,16 +10,21 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CreateCustomRoleRequest : TeaModel {
         /// <summary>
+        /// <para>The custom role ID.</para>
+        /// <list type="bullet">
+        /// <item><description>This is the unique identifier of the role. Ensure that the value is unique for each request.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123abc</para>
+        /// <para>role_1234</para>
         /// </summary>
         [NameInMap("role_id")]
         [Validation(Required=false)]
         public string RoleId { get; set; }
 
         /// <summary>
+        /// <para>The custom role name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

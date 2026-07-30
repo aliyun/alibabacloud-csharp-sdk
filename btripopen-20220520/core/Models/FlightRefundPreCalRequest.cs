@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightRefundPreCalRequest : TeaModel {
         /// <summary>
+        /// <para>The external order ID of the distributor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DisOrderId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the refund is voluntary. This field is currently unavailable.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string IsVoluntary { get; set; }
 
         /// <summary>
+        /// <para>The list of passenger segments selected for refund.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("passenger_segment_info_list")]
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<FlightRefundPreCalRequestPassengerSegmentInfoList> PassengerSegmentInfoList { get; set; }
         public class FlightRefundPreCalRequestPassengerSegmentInfoList : TeaModel {
             /// <summary>
+            /// <para>The flight number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string FlightNo { get; set; }
 
             /// <summary>
+            /// <para>The passenger name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -55,6 +61,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string PassengerName { get; set; }
 
             /// <summary>
+            /// <para>The user ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

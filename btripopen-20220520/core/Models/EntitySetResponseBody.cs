@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class EntitySetResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The remarks about the result, such as a description of the result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The response data returned by the server. An empty value is returned if no result is available or an exception occurs.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public EntitySetResponseBodyModule Module { get; set; }
         public class EntitySetResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The number of added personnel, departments, or roles.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? AddNum { get; set; }
 
             /// <summary>
+            /// <para>The number of removed entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? RemoveNum { get; set; }
 
             /// <summary>
+            /// <para>The total number of employees under the cost center.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The pagination flag set by the server. Indicates whether more data is available on the next page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? MorePage { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The success flag set by the server. The value is set to false when an exception occurs or the result is null.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

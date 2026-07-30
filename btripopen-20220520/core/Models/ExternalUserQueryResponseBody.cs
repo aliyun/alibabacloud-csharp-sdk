@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ExternalUserQueryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>查询失败</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The query result of the external traveler. Returns null if the query fails or the external traveler does not exist. Otherwise, returns the external traveler information.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public ExternalUserQueryResponseBodyModule Module { get; set; }
         public class ExternalUserQueryResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The date of birth in the format yyyy-MM-dd.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2000-01-02</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Birthday { get; set; }
 
             /// <summary>
+            /// <para>The enterprise ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>btrip123456</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string CorpId { get; set; }
 
             /// <summary>
+            /// <para>The email address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:zhangsan@alibaba-inc.com">zhangsan@alibaba-inc.com</a></para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Email { get; set; }
 
             /// <summary>
+            /// <para>The external employee ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>000001</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ExternalUserId { get; set; }
 
             /// <summary>
+            /// <para>The phone number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>13438009765</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Phone { get; set; }
 
             /// <summary>
+            /// <para>The real name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>张三</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string RealName { get; set; }
 
             /// <summary>
+            /// <para>The passport name (pinyin) in the format LastName/FirstName.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>zhang/san</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string RealNameEn { get; set; }
 
             /// <summary>
+            /// <para>The user ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>e1$12345678</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>The nickname of the user.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>张三</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string UserNick { get; set; }
 
             /// <summary>
+            /// <para>The user type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -120,6 +149,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
         /// </summary>
@@ -128,6 +159,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

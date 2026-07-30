@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ApplyExternalNodeStatusUpdateShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
+        /// <summary>
+        /// <para>The external approval information.</para>
+        /// </summary>
         [NameInMap("operation_records")]
         [Validation(Required=false)]
         public string OperationRecordsShrink { get; set; }
 
         /// <summary>
+        /// <para>The process execution result.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

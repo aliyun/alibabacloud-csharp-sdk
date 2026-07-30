@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ElectronicItineraryBatchApplyShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The list of electronic itinerary receipt applications in the batch.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("apply_itinerary_list")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ApplyItineraryListShrink { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether reprinting is allowed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

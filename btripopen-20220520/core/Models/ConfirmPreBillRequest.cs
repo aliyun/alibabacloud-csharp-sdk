@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ConfirmPreBillRequest : TeaModel {
         /// <summary>
-        /// <para>The bill batch date in the format of yyyy-MM-dd, such as 2026-06-21.</para>
+        /// <para>The bill batch in the format of yyyy-MM-dd, such as 2026-06-21.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

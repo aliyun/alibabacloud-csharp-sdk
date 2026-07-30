@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelAskingPriceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>None</para>
         /// </summary>
@@ -25,15 +29,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The module information.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public HotelAskingPriceResponseBodyModule Module { get; set; }
         public class HotelAskingPriceResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <para>The list of hotel prices.</para>
+            /// </summary>
             [NameInMap("hotel_asking_price_details")]
             [Validation(Required=false)]
             public List<HotelAskingPriceResponseBodyModuleHotelAskingPriceDetails> HotelAskingPriceDetails { get; set; }
             public class HotelAskingPriceResponseBodyModuleHotelAskingPriceDetails : TeaModel {
                 /// <summary>
+                /// <para>The city code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>652302</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CityCode { get; set; }
 
                 /// <summary>
+                /// <para>The hotel address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>文一西路998号海创大厦5号楼</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string HotelAddress { get; set; }
 
                 /// <summary>
+                /// <para>The hotel code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>55335212</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string HotelCode { get; set; }
 
                 /// <summary>
+                /// <para>The hotel name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>商旅酒店</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string HotelName { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the price is a contracted price.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public bool? IsProtocol { get; set; }
 
                 /// <summary>
+                /// <para>The starting price of the hotel.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? MinPrice { get; set; }
 
                 /// <summary>
+                /// <para>The price before discount.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -94,6 +118,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C61ECFF6-606B-5F66-B81D-D77369043A5F</para>
         /// </summary>
@@ -102,6 +128,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -110,6 +138,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The trace ID of the log.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>210bcc3a16583004579056128d33d7</para>
         /// </summary>

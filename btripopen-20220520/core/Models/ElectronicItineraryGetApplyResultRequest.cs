@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ElectronicItineraryGetApplyResultRequest : TeaModel {
         /// <summary>
+        /// <para>The batch number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

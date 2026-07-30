@@ -14,8 +14,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
+        /// <para>The enterprise access credential.</para>
+        /// <list type="bullet">
+        /// <item><description>This is a required header parameter for HTTP calls. To obtain the credential, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// <item><description>You can use corp_token=value in the request URL as a replacement.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
-        /// <para>feth00jqwls</para>
+        /// <para>fet****wls</para>
         /// </summary>
         [NameInMap("x-acs-btrip-access-token")]
         [Validation(Required=false)]

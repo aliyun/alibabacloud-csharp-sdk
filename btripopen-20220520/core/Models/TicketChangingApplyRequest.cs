@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TicketChangingApplyRequest : TeaModel {
         /// <summary>
+        /// <para>The external order ID of the distribution.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DisOrderId { get; set; }
 
         /// <summary>
+        /// <para>The external change order ID of the distribution.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string DisSubOrderId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the change is voluntary.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? IsVoluntary { get; set; }
 
         /// <summary>
+        /// <para>The change flight information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("modify_flight_info_list")]
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<TicketChangingApplyRequestModifyFlightInfoList> ModifyFlightInfoList { get; set; }
         public class TicketChangingApplyRequestModifyFlightInfoList : TeaModel {
             /// <summary>
+            /// <para>The three-letter code of the arrival city.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -55,6 +61,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string ArrCity { get; set; }
 
             /// <summary>
+            /// <para>The target cabin class code for the change.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Y</para>
             /// </summary>
@@ -63,6 +71,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string Cabin { get; set; }
 
             /// <summary>
+            /// <para>The three-letter code of the departure city.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -73,6 +82,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepCity { get; set; }
 
             /// <summary>
+            /// <para>The departure date for the changed flight.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -83,6 +93,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string DepDate { get; set; }
 
             /// <summary>
+            /// <para>The flight number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -93,6 +104,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string FlightNo { get; set; }
 
             /// <summary>
+            /// <para>The passenger information for the change.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("passenger_info_list")]
@@ -100,6 +112,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public List<TicketChangingApplyRequestModifyFlightInfoListPassengerInfoList> PassengerInfoList { get; set; }
             public class TicketChangingApplyRequestModifyFlightInfoListPassengerInfoList : TeaModel {
                 /// <summary>
+                /// <para>The original flight number.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -110,6 +123,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string OriginFlightNo { get; set; }
 
                 /// <summary>
+                /// <para>The user ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -120,6 +134,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string OutUserId { get; set; }
 
                 /// <summary>
+                /// <para>The passenger name.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -134,6 +149,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The OTA item ID. This value is obtained from the itemId field in the response of the change flight price inquiry API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -144,6 +160,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OtaItemId { get; set; }
 
         /// <summary>
+        /// <para>The reason for the ticket change.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>自愿改签测试</para>
         /// </summary>
@@ -152,6 +170,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Reason { get; set; }
 
         /// <summary>
+        /// <para>The session ID. This value is obtained from the isessionId field in the response of the change flight price inquiry API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -162,6 +181,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to retry.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

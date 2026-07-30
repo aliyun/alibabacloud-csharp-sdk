@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InsureOrderCancelRequest : TeaModel {
         /// <summary>
+        /// <para>The business travel user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The name of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>张三</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BuyerName { get; set; }
 
         /// <summary>
+        /// <para>The custom channel name defined by the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>open12igetbis4o07v10B1TlOWcM00</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The supplier code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fliggy</para>
         /// </summary>

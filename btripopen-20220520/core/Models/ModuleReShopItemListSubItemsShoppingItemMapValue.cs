@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public ModuleReShopItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition SegmentPosition { get; set; }
             public class ModuleReShopItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition : TeaModel {
                 /// <summary>
-                /// <para>The journey ordinal number, starting from 0.</para>
+                /// <para>The journey index (starting from 0).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? JourneyIndex { get; set; }
 
                 /// <summary>
-                /// <para>The segment ordinal number, starting from 0 within the same journey.</para>
+                /// <para>The segment index (starting from 0 within the same journey).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
-            /// <para>The detailed cabin information.</para>
+            /// <para>The cabin details.</para>
             /// </summary>
             [NameInMap("cabin_info")]
             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CabinClassName { get; set; }
 
                 /// <summary>
-                /// <para>The number of remaining seats in the cabin. Valid values: 0-9 (0 to 9 seats remaining) or A (more than 9 seats).</para>
+                /// <para>The number of remaining seats in the cabin. 0-9: 0 to 9 seats remaining. A: More than 9 seats.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? TotalAmount { get; set; }
 
             /// <summary>
-            /// <para>The service fee amount in cents.</para>
+            /// <para>The handling fee amount, in cents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? HandlingAmount { get; set; }
 
             /// <summary>
-            /// <para>The upgrade fee amount, in cents.</para>
+            /// <para>The cabin upgrade fee amount, in cents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public long? TaxDiffAmount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a direct quote is available. Default value: true.</para>
+            /// <para>Indicates whether a direct price quote is available. Default value: true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public bool? HasPrice { get; set; }
 
             /// <summary>
-            /// <para>The text prompt displayed when no direct quote is available.</para>
+            /// <para>The text prompt displayed when no direct price quote is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>待服务商确认</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
-        /// <para>The price for each segment. This field may not have a value because airline bundled products may not have prices broken down by segment.</para>
+        /// <para>The price for each segment. This field may not have a value because bundled airline products may not have segment-level pricing.</para>
         /// </summary>
         [NameInMap("segment_price_list")]
         [Validation(Required=false)]
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public ModuleReShopItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition SegmentPosition { get; set; }
             public class ModuleReShopItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition : TeaModel {
                 /// <summary>
-                /// <para>The journey ordinal number, starting from 0.</para>
+                /// <para>The journey index (starting from 0).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? JourneyIndex { get; set; }
 
                 /// <summary>
-                /// <para>The segment ordinal number, starting from 0 within the same journey.</para>
+                /// <para>The segment index (starting from 0 within the same journey).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -228,14 +228,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
-            /// <para>The rebooking quote.</para>
+            /// <para>The rebooking price.</para>
             /// </summary>
             [NameInMap("search_price")]
             [Validation(Required=false)]
             public ModuleReShopItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice SearchPrice { get; set; }
             public class ModuleReShopItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice : TeaModel {
                 /// <summary>
-                /// <para>The total amount in cents.</para>
+                /// <para>The total amount, in cents.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? TotalAmount { get; set; }
 
                 /// <summary>
-                /// <para>The service fee amount in cents.</para>
+                /// <para>The handling fee amount, in cents.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? HandlingAmount { get; set; }
 
                 /// <summary>
-                /// <para>The upgrade fee amount in cents.</para>
+                /// <para>The cabin upgrade fee amount, in cents.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? UpgradeAmount { get; set; }
 
                 /// <summary>
-                /// <para>The tax difference amount in cents.</para>
+                /// <para>The tax difference amount, in cents.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? TaxDiffAmount { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a direct quote is available. Default value: true.</para>
+                /// <para>Indicates whether a direct price quote is available. Default value: true.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public bool? HasPrice { get; set; }
 
                 /// <summary>
-                /// <para>The text prompt displayed when no direct quote is available.</para>
+                /// <para>The text prompt displayed when no direct price quote is available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>待服务商确认</para>

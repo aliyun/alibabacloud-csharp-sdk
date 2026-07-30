@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InsureOrderCreateShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The applicant information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("applicant")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ApplicantShrink { get; set; }
 
         /// <summary>
+        /// <para>The business travel user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20202109390122</para>
         /// </summary>
@@ -25,6 +28,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BtripUserId { get; set; }
 
         /// <summary>
+        /// <para>The name of the buyer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>测试乘机人</para>
         /// </summary>
@@ -33,6 +38,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BuyerName { get; set; }
 
         /// <summary>
+        /// <para>The passenger and segment information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ins_person_and_segment_list")]
@@ -40,6 +46,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string InsPersonAndSegmentListShrink { get; set; }
 
         /// <summary>
+        /// <para>The user-defined channel name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The external insurance order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100000320302020</para>
         /// </summary>
@@ -58,6 +67,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutInsOrderId { get; set; }
 
         /// <summary>
+        /// <para>The flight order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +78,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The change order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1020030003332000</para>
         /// </summary>
@@ -76,6 +88,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutSubOrderId { get; set; }
 
         /// <summary>
+        /// <para>The supplier code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fliggy</para>
         /// </summary>

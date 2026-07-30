@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class MonthPreBillGetResponseBody : TeaModel {
         /// <summary>
+        /// <para>The return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The remarks about the result, such as a description of the result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The return value from the server. Returns empty if there is no result or an exception occurs.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public List<MonthPreBillGetResponseBodyModule> Module { get; set; }
         public class MonthPreBillGetResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The end date.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-04-30</para>
             /// </summary>
@@ -37,11 +46,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string EndDate { get; set; }
 
+            /// <summary>
+            /// <para>CorpMonthAccountBillFeeDetail</para>
+            /// </summary>
             [NameInMap("monthAccountBillDetail")]
             [Validation(Required=false)]
             public MonthPreBillGetResponseBodyModuleMonthAccountBillDetail MonthAccountBillDetail { get; set; }
             public class MonthPreBillGetResponseBodyModuleMonthAccountBillDetail : TeaModel {
                 /// <summary>
+                /// <para>The bill confirmation status. Valid values: null: no confirmation required. 0: unconfirmed. 1: confirmed.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? BillConfirmed { get; set; }
 
                 /// <summary>
+                /// <para>The car service amount (unit: CNY).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>56.70</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? CarAmount { get; set; }
 
                 /// <summary>
+                /// <para>The penalty amount (unit: CNY).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? DamageAmount { get; set; }
 
                 /// <summary>
+                /// <para>The flight amount (unit: CNY).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1234.00</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? FlightAmount { get; set; }
 
                 /// <summary>
+                /// <para>The FuPoint amount (unit: CNY).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1.50</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? FuPoint { get; set; }
 
                 /// <summary>
+                /// <para>The hotel amount (unit: CNY).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>500.00</para>
                 /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? HotelAmount { get; set; }
 
                 /// <summary>
+                /// <para>The international flight amount (unit: CNY).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3456.00</para>
                 /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? IeFlightAmount { get; set; }
 
                 /// <summary>
+                /// <para>The international hotel amount (unit: CNY).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3000.00</para>
                 /// </summary>
@@ -106,6 +134,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? IeHotelAmount { get; set; }
 
                 /// <summary>
+                /// <para>The billing date in YYYYMMDD format.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20200601</para>
                 /// </summary>
@@ -114,6 +144,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public long? MailBillDate { get; set; }
 
                 /// <summary>
+                /// <para>The meal amount.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>22.40</para>
                 /// </summary>
@@ -122,6 +154,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? MealAmount { get; set; }
 
                 /// <summary>
+                /// <para>The service fee amount (unit: CNY).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>45.00</para>
                 /// </summary>
@@ -130,6 +164,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? ServiceAmount { get; set; }
 
                 /// <summary>
+                /// <para>The train ticket amount (unit: CNY).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>648.00</para>
                 /// </summary>
@@ -138,6 +174,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public double? TrainAmount { get; set; }
 
                 /// <summary>
+                /// <para>The value-added service amount.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>19.22</para>
                 /// </summary>
@@ -148,6 +186,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The start date.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-04-01</para>
             /// </summary>
@@ -156,6 +196,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string StartDate { get; set; }
 
             /// <summary>
+            /// <para>The data URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://cdn.ewt360.com/resources/tiku_h5/uploads/2026/5/3/6fc104f3-561e-4960-b962-a112db1e9d00.jpg">https://cdn.ewt360.com/resources/tiku_h5/uploads/2026/5/3/6fc104f3-561e-4960-b962-a112db1e9d00.jpg</a></para>
             /// </summary>
@@ -166,6 +208,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3D082D37-160A-53BE-9CF1-7AB8E100045B</para>
         /// </summary>
@@ -174,6 +218,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The success flag set by the server. Set to false when an exception occurs or the result is null.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -182,6 +228,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The trace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3b52151317702574069534727d0099</para>
         /// </summary>

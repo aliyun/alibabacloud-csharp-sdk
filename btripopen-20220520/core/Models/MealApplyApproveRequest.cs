@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class MealApplyApproveRequest : TeaModel {
         /// <summary>
+        /// <para>The approval time.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Time zone: UTC+8.</description></item>
+        /// <item><description>Format: yyyy-MM-dd HH:mm:ss.</description></item>
+        /// <item><description>Default value: the time when the API call succeeds.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-07-12 16:12:53</para>
         /// </summary>
@@ -18,6 +27,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OperateTime { get; set; }
 
         /// <summary>
+        /// <para>The approval remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>同意</para>
         /// </summary>
@@ -26,6 +37,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Remark { get; set; }
 
         /// <summary>
+        /// <para>The status of the application form.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +48,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>The ID of the third-party approval form.</para>
+        /// <remarks>
+        /// <para>Use a unique identifier. It is displayed in the application forms, orders, and bills in Alibaba Business Travel.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +62,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ThirdPartApplyId { get; set; }
 
         /// <summary>
+        /// <para>The employee ID of the approver.</para>
+        /// <remarks>
+        /// <para>Enter the user_id of the business travel employee.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

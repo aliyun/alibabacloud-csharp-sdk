@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainNoListSearchResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -32,11 +36,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public TrainNoListSearchResponseBodyModule Module { get; set; }
         public class TrainNoListSearchResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <para>The direct train search results.</para>
+            /// </summary>
             [NameInMap("train_station_search_v_o_s")]
             [Validation(Required=false)]
             public List<TrainNoListSearchResponseBodyModuleTrainStationSearchVOS> TrainStationSearchVOS { get; set; }
             public class TrainNoListSearchResponseBodyModuleTrainStationSearchVOS : TeaModel {
                 /// <summary>
+                /// <para>The number of days crossed.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -45,6 +54,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ArrDayTag { get; set; }
 
                 /// <summary>
+                /// <para>The arrival station code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>BDC</para>
                 /// </summary>
@@ -53,6 +64,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ArrStationCode { get; set; }
 
                 /// <summary>
+                /// <para>The arrival station name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>包头东</para>
                 /// </summary>
@@ -61,6 +74,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ArrStationName { get; set; }
 
                 /// <summary>
+                /// <para>The arrival time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-05-07 14:46:06</para>
                 /// </summary>
@@ -69,6 +84,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ArrTime { get; set; }
 
                 /// <summary>
+                /// <para>The travel duration. Unit: minutes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
                 /// </summary>
@@ -77,6 +94,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string CostTime { get; set; }
 
                 /// <summary>
+                /// <para>The departure station code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>BTC</para>
                 /// </summary>
@@ -85,6 +104,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string DepStationCode { get; set; }
 
                 /// <summary>
+                /// <para>The departure station name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>包头</para>
                 /// </summary>
@@ -93,6 +114,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string DepStationName { get; set; }
 
                 /// <summary>
+                /// <para>The departure time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-05-06 14:46:06</para>
                 /// </summary>
@@ -101,6 +124,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string DepTime { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the station is the terminal station. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: Yes.</description></item>
+                /// <item><description>0: No.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -109,6 +138,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? IsEndStation { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the station is the originating station.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -117,6 +148,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public int? IsStartStation { get; set; }
 
                 /// <summary>
+                /// <para>The price. Unit: cents.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>54000</para>
                 /// </summary>
@@ -125,6 +158,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string Price { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the train is available for booking. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: Available.</description></item>
+                /// <item><description>0: Not available.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -133,6 +172,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string SaleFlag { get; set; }
 
                 /// <summary>
+                /// <para>The reason why the train is unavailable for booking.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>没有原因</para>
                 /// </summary>
@@ -141,6 +182,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string SaleFlagMsg { get; set; }
 
                 /// <summary>
+                /// <para>The segment index of the trip.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -148,11 +191,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string SeagmentIndex { get; set; }
 
+                /// <summary>
+                /// <para>The seat information.</para>
+                /// </summary>
                 [NameInMap("seat_infos")]
                 [Validation(Required=false)]
                 public List<TrainNoListSearchResponseBodyModuleTrainStationSearchVOSSeatInfos> SeatInfos { get; set; }
                 public class TrainNoListSearchResponseBodyModuleTrainStationSearchVOSSeatInfos : TeaModel {
                     /// <summary>
+                    /// <para>The price. Unit: cents.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>40900</para>
                     /// </summary>
@@ -161,6 +209,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public long? Price { get; set; }
 
                     /// <summary>
+                    /// <para>The seat name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>二等座</para>
                     /// </summary>
@@ -169,6 +219,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string SeatName { get; set; }
 
                     /// <summary>
+                    /// <para>The seat type.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>14</para>
                     /// </summary>
@@ -177,6 +229,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string SeatType { get; set; }
 
                     /// <summary>
+                    /// <para>The remaining ticket availability. If the remaining quantity is 0, the value is &quot;None&quot;. If the remaining quantity is greater than 99, the value is &quot;Available&quot;. If the remaining quantity is between 1 and 99, the specific number is returned.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>有</para>
                     /// </summary>
@@ -187,6 +241,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 }
 
                 /// <summary>
+                /// <para>The train number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>D2345</para>
                 /// </summary>
@@ -195,6 +251,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string TrainNo { get; set; }
 
                 /// <summary>
+                /// <para>The train type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -204,11 +262,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// <para>The transfer train search results.</para>
+            /// </summary>
             [NameInMap("train_transfer_station_search_v_os")]
             [Validation(Required=false)]
             public List<TrainNoListSearchResponseBodyModuleTrainTransferStationSearchVOs> TrainTransferStationSearchVOs { get; set; }
             public class TrainNoListSearchResponseBodyModuleTrainTransferStationSearchVOs : TeaModel {
                 /// <summary>
+                /// <para>The arrival station.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>重庆西</para>
                 /// </summary>
@@ -217,6 +280,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string ArrStation { get; set; }
 
                 /// <summary>
+                /// <para>The departure station.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>巫山站</para>
                 /// </summary>
@@ -225,6 +290,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string DepStation { get; set; }
 
                 /// <summary>
+                /// <para>The unique route identifier. This is required for transfer routes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>中转唯一标识</para>
                 /// </summary>
@@ -233,6 +300,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string LineKey { get; set; }
 
                 /// <summary>
+                /// <para>The transfer station.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>万州北</para>
                 /// </summary>
@@ -240,11 +309,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string MiddleStation { get; set; }
 
+                /// <summary>
+                /// <para>The list of transfer trains.</para>
+                /// </summary>
                 [NameInMap("transfer_detail_list")]
                 [Validation(Required=false)]
                 public List<TrainNoListSearchResponseBodyModuleTrainTransferStationSearchVOsTransferDetailList> TransferDetailList { get; set; }
                 public class TrainNoListSearchResponseBodyModuleTrainTransferStationSearchVOsTransferDetailList : TeaModel {
                     /// <summary>
+                    /// <para>The number of days crossed.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -253,6 +327,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string ArrDayTag { get; set; }
 
                     /// <summary>
+                    /// <para>The arrival station code.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>123344</para>
                     /// </summary>
@@ -261,6 +337,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string ArrStationCode { get; set; }
 
                     /// <summary>
+                    /// <para>The arrival station name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>巫山站</para>
                     /// </summary>
@@ -269,6 +347,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string ArrStationName { get; set; }
 
                     /// <summary>
+                    /// <para>The arrival time.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2024-05-07 14:46:06</para>
                     /// </summary>
@@ -277,6 +357,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string ArrTime { get; set; }
 
                     /// <summary>
+                    /// <para>The travel duration. Unit: minutes.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>234567</para>
                     /// </summary>
@@ -285,6 +367,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string CostTime { get; set; }
 
                     /// <summary>
+                    /// <para>The departure station code.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>12334</para>
                     /// </summary>
@@ -293,6 +377,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string DepStationCode { get; set; }
 
                     /// <summary>
+                    /// <para>The departure station name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>重庆西</para>
                     /// </summary>
@@ -301,6 +387,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string DepStationName { get; set; }
 
                     /// <summary>
+                    /// <para>The departure time.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2024-05-06 14:46:06</para>
                     /// </summary>
@@ -309,6 +397,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string DepTime { get; set; }
 
                     /// <summary>
+                    /// <para>Indicates whether the station is the terminal station. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>1: Yes.</description></item>
+                    /// <item><description>0: No.</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -317,6 +411,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public int? IsEndStation { get; set; }
 
                     /// <summary>
+                    /// <para>Indicates whether the station is the originating station. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>1: Yes.</description></item>
+                    /// <item><description>0: No.</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -325,6 +425,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public int? IsStartStation { get; set; }
 
                     /// <summary>
+                    /// <para>The price. Unit: cents.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>105000</para>
                     /// </summary>
@@ -333,6 +435,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string Price { get; set; }
 
                     /// <summary>
+                    /// <para>Indicates whether the train is available for booking. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>1: Available.</description></item>
+                    /// <item><description>0: Not available.</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -341,6 +449,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string SaleFlag { get; set; }
 
                     /// <summary>
+                    /// <para>The reason why the train is unavailable for booking.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>没有原因</para>
                     /// </summary>
@@ -348,11 +458,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string SaleFlagMsg { get; set; }
 
+                    /// <summary>
+                    /// <para>The seat information.</para>
+                    /// </summary>
                     [NameInMap("seat_infos")]
                     [Validation(Required=false)]
                     public List<TrainNoListSearchResponseBodyModuleTrainTransferStationSearchVOsTransferDetailListSeatInfos> SeatInfos { get; set; }
                     public class TrainNoListSearchResponseBodyModuleTrainTransferStationSearchVOsTransferDetailListSeatInfos : TeaModel {
                         /// <summary>
+                        /// <para>The price. Unit: cents.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>40900</para>
                         /// </summary>
@@ -361,6 +476,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         public long? Price { get; set; }
 
                         /// <summary>
+                        /// <para>The seat name.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>二等座</para>
                         /// </summary>
@@ -369,6 +486,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         public string SeatName { get; set; }
 
                         /// <summary>
+                        /// <para>The seat type.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>14</para>
                         /// </summary>
@@ -377,6 +496,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                         public string SeatType { get; set; }
 
                         /// <summary>
+                        /// <para>The remaining ticket availability. If the remaining quantity is 0, the value is &quot;None&quot;. If the remaining quantity is greater than 99, the value is &quot;Available&quot;. If the remaining quantity is between 1 and 99, the specific number is returned.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>33</para>
                         /// </summary>
@@ -387,6 +508,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     }
 
                     /// <summary>
+                    /// <para>The segment index of the trip.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -395,6 +518,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string SegmentIndex { get; set; }
 
                     /// <summary>
+                    /// <para>The train number.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>K2345</para>
                     /// </summary>
@@ -403,6 +528,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string TrainNo { get; set; }
 
                     /// <summary>
+                    /// <para>The train type.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -413,6 +540,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 }
 
                 /// <summary>
+                /// <para>The transfer type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -425,6 +554,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>210bc81a17090871660176894d008c</para>
         /// </summary>
@@ -433,6 +564,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

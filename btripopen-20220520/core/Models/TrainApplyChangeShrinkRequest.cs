@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainApplyChangeShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to accept no-seat tickets. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Not accepted.</description></item>
+        /// <item><description>1: Accepted.</description></item>
+        /// </list>
+        /// <para>Default value: 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +25,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string AcceptNoSeat { get; set; }
 
         /// <summary>
+        /// <para>The ticket information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("change_train_info_s")]
@@ -25,6 +33,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ChangeTrainInfoSShrink { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to force match seat preferences. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Force match.</description></item>
+        /// <item><description>1: Do not force match.</description></item>
+        /// </list>
+        /// <para>Default value: 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -33,6 +48,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ForceMatch { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to pay upon order creation. This feature is not currently supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -41,6 +58,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? IsPayNow { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,6 +69,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The change application ID assigned by the distributor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,6 +80,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutChangeApplyId { get; set; }
 
         /// <summary>
+        /// <para>The order ID assigned by the distributor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

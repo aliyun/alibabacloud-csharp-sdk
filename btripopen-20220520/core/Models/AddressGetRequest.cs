@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         /// <summary>
         /// <para>The itinerary ID.</para>
         /// <list type="bullet">
-        /// <item><description>When the redirect page is the business travel booking page (<c>action_type = 1</c>), you can optionally pass this parameter to quickly redirect to the booking page of the category associated with the itinerary.</description></item>
+        /// <item><description>When the redirect page is the business travel booking page (<c>action_type = 1</c>), you can optionally specify this parameter to quickly redirect to the booking page of the category associated with the itinerary.</description></item>
         /// <item><description>The itinerary ID must have been submitted to the Alibaba Business Travel system through the <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4929938">Create a business trip approval</a> operation.</description></item>
         /// </list>
         /// 
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         /// <summary>
         /// <para>Specifies whether to skip the booking intermediate page.</para>
         /// <ol>
-        /// <item><description>Set this parameter to 2 to skip the booking intermediate page. When skipping the intermediate page, the <b>itinerary_id</b> parameter is required. If this parameter is empty or set to a value other than 2, the intermediate page is not skipped.</description></item>
+        /// <item><description>When set to 2, the booking intermediate page is skipped. In this case, the <b>itinerary_id</b> parameter is required. If left empty or set to a value other than 2, the intermediate page is not skipped.</description></item>
         /// <item><description>This parameter is available when the redirect page is the <b>H5 booking page</b> (<c>action_type = 1</c>) and the category is <b>flight</b> (<c>type = 1</c>) or <b>train</b> (<c>type = 2</c>).</description></item>
         /// </ol>
         /// 
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string SessionParameters { get; set; }
 
         /// <summary>
-        /// <para>The sub-enterprise ID. Pass this parameter to redirect to the business page of the specified sub-enterprise.</para>
+        /// <para>The sub-enterprise ID. When specified, the page redirects to the business page of the sub-enterprise.</para>
         /// <list type="bullet">
         /// <item><description><b>View permissions</b>: Only enterprise administrators have view permissions.</description></item>
         /// <item><description><b>Path to obtain</b>: Enterprise management console &gt; Parent-child account management &gt; Account management &gt; Sub-account management &gt; Company ID.</description></item>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string TaobaoCallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The third-party approval ID.</para>
+        /// <para>The third-party application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TP00097732</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? Type { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use proxy booking mode.</para>
+        /// <para>Specifies whether to use the proxy booking mode.</para>
         /// <list type="bullet">
         /// <item><description>The proxy booking page is accessible only when this parameter is set to 1.</description></item>
         /// </list>

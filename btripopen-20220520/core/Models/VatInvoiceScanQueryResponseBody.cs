@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The response data. This parameter is returned by the server. An empty value is returned if no result is found or an exception occurs.</para>
+        /// <para>The response data. Returned by the server. Returns null if there is no result or an exception occurs.</para>
         /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public List<VatInvoiceScanQueryResponseBodyModuleItems> Items { get; set; }
             public class VatInvoiceScanQueryResponseBodyModuleItems : TeaModel {
                 /// <summary>
-                /// <para>The tax-inclusive amount.</para>
+                /// <para>The total amount including tax.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string AmountWithTax { get; set; }
 
                 /// <summary>
-                /// <para>The tax-exclusive amount.</para>
+                /// <para>The amount without tax.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>18.87</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string Index { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the goods, taxable services, or service name.</para>
+                    /// <para>The name of the goods or taxable services, service name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>铂金首饰</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     public string Quantity { get; set; }
 
                     /// <summary>
-                    /// <para>The specification and model.</para>
+                    /// <para>The specification or model.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>66PT11230069</para>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string MachineCode { get; set; }
 
                 /// <summary>
-                /// <para>The URL for the VAT invoice file in OFD format. This URL is available only for digitalized electronic invoicing and electronic general VAT invoices.</para>
+                /// <para>The download URL of the VAT invoice file in OFD format. Available only for digital electronic invoicing and VAT general invoices (electronic).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://www.testurl.com">https://www.testurl.com</a></para>
@@ -317,7 +317,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string OfdOssUrl { get; set; }
 
                 /// <summary>
-                /// <para>The URL for the VAT invoice file in image format.</para>
+                /// <para>The download URL of the VAT invoice file in image format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://www.testurl.com">https://www.testurl.com</a></para>
@@ -337,7 +337,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string PasswordArea { get; set; }
 
                 /// <summary>
-                /// <para>The URL for the VAT invoice file in PDF format. This URL is available only for digitalized electronic invoicing and electronic general VAT invoices.</para>
+                /// <para>The download URL of the VAT invoice file in PDF format. Available only for digital electronic invoicing and VAT general invoices (electronic).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://www.testurl.com">https://www.testurl.com</a></para>
@@ -497,7 +497,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string TotalAmountInWords { get; set; }
 
                 /// <summary>
-                /// <para>The URL for the VAT invoice file in XML format. This URL is available only for digitalized electronic invoicing.</para>
+                /// <para>The download URL of the VAT invoice file in XML format. Available only for digital electronic invoicing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://www.testurl.com">https://www.testurl.com</a></para>
@@ -509,7 +509,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
-            /// <para>The page number of this request.</para>
+            /// <para>The page number of the current request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -519,7 +519,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? PageNo { get; set; }
 
             /// <summary>
-            /// <para>The page size of this request.</para>
+            /// <para>The page size of the current request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -561,7 +561,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

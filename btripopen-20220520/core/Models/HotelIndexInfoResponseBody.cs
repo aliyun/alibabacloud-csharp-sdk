@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelIndexInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
         /// </summary>
@@ -25,15 +29,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The data.</para>
+        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public HotelIndexInfoResponseBodyModule Module { get; set; }
         public class HotelIndexInfoResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <para>The list of hotel codes. Returns null when empty.</para>
+            /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<HotelIndexInfoResponseBodyModuleItems> Items { get; set; }
             public class HotelIndexInfoResponseBodyModuleItems : TeaModel {
                 /// <summary>
+                /// <para>The hotel ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>182873</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public string HotelId { get; set; }
 
                 /// <summary>
+                /// <para>The hotel status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -52,6 +66,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             }
 
             /// <summary>
+            /// <para>The page size.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The pagination token. A value of &quot;0&quot; indicates that all data has been retrieved.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>182873</para>
             /// </summary>
@@ -70,6 +88,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
         /// </summary>
@@ -78,6 +98,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -86,6 +108,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The trace ID of the log.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21041ce316577904808056433edbb2</para>
         /// </summary>

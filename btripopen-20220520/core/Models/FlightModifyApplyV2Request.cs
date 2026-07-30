@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightModifyApplyV2Request : TeaModel {
         /// <summary>
+        /// <para>The cached data key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>72e961f8-930b-43c1-a4ca-18a6f28349c6distributionModifyCacheInfo</para>
         /// </summary>
@@ -18,14 +20,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string CacheKey { get; set; }
 
         /// <summary>
+        /// <para>The contact phone number.</para>
+        /// <remarks>
+        /// <para>Sending change notification SMS to the contact phone number specified in the change order is not currently supported.</para>
+        /// <list type="bullet">
+        /// <item><description>If the contact phone number specified in the change order differs from the contact phone number in the original order, the change notification SMS is sent to the contact phone number in the original order.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
-        /// <para>17816963077</para>
+        /// <para>131****8888</para>
         /// </summary>
         [NameInMap("contact_phone")]
         [Validation(Required=false)]
         public string ContactPhone { get; set; }
 
         /// <summary>
+        /// <para>The user-defined channel name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name</para>
         /// </summary>
@@ -34,6 +46,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The item ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fa2fb23a859a4e78b5ddb87a6a23094b_0</para>
         /// </summary>
@@ -42,6 +56,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string ItemId { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID (sales order ID).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1017002195370467138</para>
         /// </summary>
@@ -50,6 +66,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public long? OrderId { get; set; }
 
         /// <summary>
+        /// <para>The external order ID for distribution.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1017002195370467137</para>
         /// </summary>
@@ -58,6 +76,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The external sub-order ID for distribution.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1019195786853020</para>
         /// </summary>
@@ -65,11 +85,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string OutSubOrderId { get; set; }
 
+        /// <summary>
+        /// <para>The passenger-segment relations. Required at the passenger-segment level.</para>
+        /// </summary>
         [NameInMap("passenger_segment_relations")]
         [Validation(Required=false)]
         public List<FlightModifyApplyV2RequestPassengerSegmentRelations> PassengerSegmentRelations { get; set; }
         public class FlightModifyApplyV2RequestPassengerSegmentRelations : TeaModel {
             /// <summary>
+            /// <para>The passenger ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3243028</para>
             /// </summary>
@@ -77,6 +102,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string PassengerId { get; set; }
 
+            /// <summary>
+            /// <para>The list of segment IDs.</para>
+            /// </summary>
             [NameInMap("segment_id_list")]
             [Validation(Required=false)]
             public List<string> SegmentIdList { get; set; }
@@ -84,6 +112,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The reason for the ticket change.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>测试原因</para>
         /// </summary>
@@ -102,6 +132,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the change is voluntary.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

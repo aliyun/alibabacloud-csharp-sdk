@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class MonthBillGetRequest : TeaModel {
         /// <summary>
+        /// <para>The bill batch. Format: yyyyMMdd for periodic billing.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20250101</para>
         /// </summary>
@@ -18,8 +20,13 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string BillBatch { get; set; }
 
         /// <summary>
+        /// <para>The billing month.</para>
+        /// <list type="bullet">
+        /// <item><description>Format: yyyyMM.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
-        /// <para>202207</para>
+        /// <para>202401</para>
         /// </summary>
         [NameInMap("bill_month")]
         [Validation(Required=false)]

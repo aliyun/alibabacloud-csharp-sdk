@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightRefundDetailV2Request : TeaModel {
         /// <summary>
+        /// <para>The custom channel name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string IsvName { get; set; }
 
         /// <summary>
+        /// <para>The business travel order ID. Either the business travel order ID or the external order ID is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1002039195025156784</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The distribution external order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1017002195371212121</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutOrderId { get; set; }
 
         /// <summary>
+        /// <para>The external refund order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1002039195025156800</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string OutRefundApplyId { get; set; }
 
         /// <summary>
+        /// <para>The business travel refund order ID. Either the business travel refund order ID or the external refund order ID is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1002039195025156700</para>
         /// </summary>

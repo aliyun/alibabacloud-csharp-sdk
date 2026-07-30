@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainOrderPayResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>成功</para>
         /// </summary>
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public TrainOrderPayResponseBodyModule Module { get; set; }
         public class TrainOrderPayResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The business travel order ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1017124195788186048</para>
             /// </summary>
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string OrderId { get; set; }
 
             /// <summary>
+            /// <para>The distributor order ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1017002195370467137</para>
             /// </summary>
@@ -49,6 +57,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public string OutOrderId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the payment is successful.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -59,6 +69,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C61ECFF6-606B-5F66-B81D-D77369043A5F</para>
         /// </summary>
@@ -67,6 +79,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
