@@ -3506,6 +3506,154 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the current status and authorization result of an OAuth authorization session.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOAuthAuthorizationSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetOAuthAuthorizationSessionHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOAuthAuthorizationSessionResponse
+        /// </returns>
+        public GetOAuthAuthorizationSessionResponse GetOAuthAuthorizationSessionWithOptions(string instanceId, GetOAuthAuthorizationSessionRequest request, GetOAuthAuthorizationSessionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionUri))
+            {
+                body["sessionUri"] = request.SessionUri;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOAuthAuthorizationSession",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/oauthAuthorizationSessions/_/actions/get",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOAuthAuthorizationSessionResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the current status and authorization result of an OAuth authorization session.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOAuthAuthorizationSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetOAuthAuthorizationSessionHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOAuthAuthorizationSessionResponse
+        /// </returns>
+        public async Task<GetOAuthAuthorizationSessionResponse> GetOAuthAuthorizationSessionWithOptionsAsync(string instanceId, GetOAuthAuthorizationSessionRequest request, GetOAuthAuthorizationSessionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionUri))
+            {
+                body["sessionUri"] = request.SessionUri;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOAuthAuthorizationSession",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/oauthAuthorizationSessions/_/actions/get",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOAuthAuthorizationSessionResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the current status and authorization result of an OAuth authorization session.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOAuthAuthorizationSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOAuthAuthorizationSessionResponse
+        /// </returns>
+        public GetOAuthAuthorizationSessionResponse GetOAuthAuthorizationSession(string instanceId, GetOAuthAuthorizationSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetOAuthAuthorizationSessionHeaders headers = new GetOAuthAuthorizationSessionHeaders();
+            return GetOAuthAuthorizationSessionWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the current status and authorization result of an OAuth authorization session.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOAuthAuthorizationSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOAuthAuthorizationSessionResponse
+        /// </returns>
+        public async Task<GetOAuthAuthorizationSessionResponse> GetOAuthAuthorizationSessionAsync(string instanceId, GetOAuthAuthorizationSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetOAuthAuthorizationSessionHeaders headers = new GetOAuthAuthorizationSessionHeaders();
+            return await GetOAuthAuthorizationSessionWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the information about an organizational unit.</para>
         /// </summary>
         /// 

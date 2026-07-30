@@ -43,11 +43,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string ConsumerId { get; set; }
 
         /// <summary>
-        /// <para>The consumer type of the authentication token. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>application: application</description></item>
-        /// <item><description>custom: custom type</description></item>
-        /// </list>
+        /// <para>The consumer type of the authentication token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>application</para>
@@ -77,10 +73,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CreatorId { get; set; }
 
         /// <summary>
-        /// <para>The creator type of the authentication token. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>application: application</description></item>
-        /// </list>
+        /// <para>The creator type of the authentication token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>application</para>
@@ -120,14 +113,14 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The authentication token content of the OAuth Access Token type.</para>
+        /// <para>The content of the OAuth Access Token type authentication token.</para>
         /// </summary>
         [NameInMap("oauthAccessTokenContent")]
         [Validation(Required=false)]
         public FetchOAuthAuthenticationTokenResponseBodyOauthAccessTokenContent OauthAccessTokenContent { get; set; }
         public class FetchOAuthAuthenticationTokenResponseBodyOauthAccessTokenContent : TeaModel {
             /// <summary>
-            /// <para>The access_token field in the OAuth protocol Token endpoint response.</para>
+            /// <para>The access_token field in the OAuth protocol token endpoint response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DgEBAGP2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
@@ -137,7 +130,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string AccessTokenValue { get; set; }
 
             /// <summary>
-            /// <para>The scope field in the OAuth protocol Token endpoint response.</para>
+            /// <para>The scope field in the OAuth protocol token endpoint response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example:test_01 example:test_02</para>
@@ -147,7 +140,7 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The token_type field in the OAuth protocol Token endpoint response.</para>
+            /// <para>The token_type field in the OAuth protocol token endpoint response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Bearer</para>
@@ -158,27 +151,36 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 
         }
 
+        /// <summary>
+        /// <para>The authorization session of the OAuth user_federation flow. Returned during first-time authorization or when user interaction is required.</para>
+        /// </summary>
         [NameInMap("oauthAuthorizationSession")]
         [Validation(Required=false)]
         public FetchOAuthAuthenticationTokenResponseBodyOauthAuthorizationSession OauthAuthorizationSession { get; set; }
         public class FetchOAuthAuthenticationTokenResponseBodyOauthAuthorizationSession : TeaModel {
             /// <summary>
+            /// <para>The user authorization URL.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para><a href="https://auth.example.com">https://auth.example.com</a></para>
+            /// <para><a href="https://login.dingtalk.com/oauth2/auth?client_id=">https://login.dingtalk.com/oauth2/auth?client_id=</a>...</para>
             /// </summary>
             [NameInMap("authorizationUrl")]
             [Validation(Required=false)]
             public string AuthorizationUrl { get; set; }
 
             /// <summary>
+            /// <para>The authorization session ID.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>atpoas_yyy</para>
+            /// <para>atpoas_01l6losojlojbbv01adsq56xxxxx</para>
             /// </summary>
             [NameInMap("sessionId")]
             [Validation(Required=false)]
             public string SessionId { get; set; }
 
             /// <summary>
+            /// <para>The authorization session status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pending</para>
             /// </summary>
@@ -187,8 +189,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
             public string SessionStatus { get; set; }
 
             /// <summary>
+            /// <para>The authorization session URI.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>urn:ietf:params:oauth:request_uri:atpoas_yyy</para>
+            /// <para>urn:ietf:params:oauth:request_uri:atpoas_01l6ljnvrpc5niakl3gj3amxxxxxx</para>
             /// </summary>
             [NameInMap("sessionUri")]
             [Validation(Required=false)]

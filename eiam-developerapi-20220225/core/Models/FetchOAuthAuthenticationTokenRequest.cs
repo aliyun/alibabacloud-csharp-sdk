@@ -20,21 +20,30 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [Validation(Required=false)]
         public string CredentialProviderIdentifier { get; set; }
 
+        /// <summary>
+        /// <para>Custom key-value pairs appended to the OAuth authorization URL to pass additional parameters supported by the OAuth provider.</para>
+        /// </summary>
         [NameInMap("customParameters")]
         [Validation(Required=false)]
         public Dictionary<string, string> CustomParameters { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to ignore existing valid tokens and force re-authorization. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("forceAuthentication")]
         [Validation(Required=false)]
         public bool? ForceAuthentication { get; set; }
 
         /// <summary>
-        /// <para>The scope in the OAuth protocol.</para>
+        /// <para>The scope corresponding to the OAuth protocol.</para>
         /// <remarks>
-        /// <para>If not specified, the scope of the issued OAuth Access Token defaults to the Scope configuration of the corresponding credential provider.</para>
+        /// <para>If not specified, the scope of the issued OAuth Access Token defaults to the scope configuration of the corresponding credential provider.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>Notice: Multiple Scope values are separated by spaces.</para>
+        /// <para>Notice: Multiple scope values are separated by spaces.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
