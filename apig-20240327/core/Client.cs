@@ -2753,6 +2753,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["gatewayEdition"] = request.GatewayEdition;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayMode))
+            {
+                body["gatewayMode"] = request.GatewayMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
             {
                 body["gatewayType"] = request.GatewayType;
@@ -2838,6 +2842,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayEdition))
             {
                 body["gatewayEdition"] = request.GatewayEdition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayMode))
+            {
+                body["gatewayMode"] = request.GatewayMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
             {
@@ -9115,7 +9123,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves basic information about a gateway, including the associated VPC, vSwitch, and gateway ingress.</para>
+        /// <para>Retrieves basic information about a gateway, including the VPC, vSwitch, and gateway ingress.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9151,7 +9159,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves basic information about a gateway, including the associated VPC, vSwitch, and gateway ingress.</para>
+        /// <para>Retrieves basic information about a gateway, including the VPC, vSwitch, and gateway ingress.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9187,7 +9195,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves basic information about a gateway, including the associated VPC, vSwitch, and gateway ingress.</para>
+        /// <para>Retrieves basic information about a gateway, including the VPC, vSwitch, and gateway ingress.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9202,7 +9210,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves basic information about a gateway, including the associated VPC, vSwitch, and gateway ingress.</para>
+        /// <para>Retrieves basic information about a gateway, including the VPC, vSwitch, and gateway ingress.</para>
         /// </summary>
         /// 
         /// <returns>

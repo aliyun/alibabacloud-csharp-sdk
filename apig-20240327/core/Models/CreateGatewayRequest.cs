@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>POSTPAY: subscription.</description></item>
-        /// <item><description>PREPAY: pay-as-you-go.</description></item>
-        /// </list>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
@@ -43,12 +39,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string GatewayEdition { get; set; }
 
+        [NameInMap("gatewayMode")]
+        [Validation(Required=false)]
+        public string GatewayMode { get; set; }
+
         /// <summary>
-        /// <para>The gateway type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>AI: AI gateway.</description></item>
-        /// <item><description>API: cloud-native API gateway.</description></item>
-        /// </list>
+        /// <para>The gateway type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>
@@ -103,12 +99,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateGatewayRequestNetworkAccessConfig NetworkAccessConfig { get; set; }
         public class CreateGatewayRequestNetworkAccessConfig : TeaModel {
             /// <summary>
-            /// <para>The network access type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>InternetAndIntranet: public and internal network.</description></item>
-            /// <item><description>Intranet: internal network.</description></item>
-            /// <item><description>Internet: public network.</description></item>
-            /// </list>
+            /// <para>The network access type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Internet</para>
@@ -186,11 +177,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateGatewayRequestZoneConfig ZoneConfig { get; set; }
         public class CreateGatewayRequestZoneConfig : TeaModel {
             /// <summary>
-            /// <para>The zone selection option. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Auto: automatic.</description></item>
-            /// <item><description>Manual: manual.</description></item>
-            /// </list>
+            /// <para>The zone selection option.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Manual</para>

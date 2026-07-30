@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The gateway list query result.</para>
+        /// <para>The query result of the gateway list.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string CreateFrom { get; set; }
 
                 /// <summary>
-                /// <para>The creation timestamp. Unit: milliseconds.</para>
+                /// <para>The creation timestamp, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The expiration timestamp for subscription instances. Unit: milliseconds.</para>
+                /// <para>The expiration timestamp for subscription instances, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172086834548</para>
@@ -94,6 +94,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>ENTERPRISE</para>
+                /// </summary>
+                [NameInMap("gatewayMode")]
+                [Validation(Required=false)]
+                public string GatewayMode { get; set; }
+
+                /// <summary>
                 /// <para>The gateway type.</para>
                 /// 
                 /// <b>Example:</b>
@@ -104,7 +112,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the gateway instance was created before AI gateway was released.</para>
+                /// <para>Indicates whether the gateway instance was created before the AI gateway feature was released.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -114,7 +122,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? Legacy { get; set; }
 
                 /// <summary>
-                /// <para>The list of gateway entry addresses.</para>
+                /// <para>The list of gateway ingress addresses.</para>
                 /// </summary>
                 [NameInMap("loadBalancers")]
                 [Validation(Required=false)]
@@ -151,7 +159,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string AddressType { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether this is the default entry address of the gateway.</para>
+                    /// <para>Indicates whether this is the default ingress address of the gateway.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -224,7 +232,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     }
 
                     /// <summary>
-                    /// <para>The load balancing status. Valid values:</para>
+                    /// <para>The status of the load balancing instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Ready</para>
@@ -351,7 +359,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The target version of the gateway. When this value differs from version, a version upgrade can be performed.</para>
+                /// <para>The target version of the gateway. If this value differs from the version, a version upgrade can be performed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.0.2</para>
@@ -361,7 +369,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string TargetVersion { get; set; }
 
                 /// <summary>
-                /// <para>The update timestamp. Unit: milliseconds.</para>
+                /// <para>The update timestamp, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>

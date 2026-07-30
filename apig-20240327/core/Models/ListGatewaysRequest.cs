@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The keyword for full match search. The search is case-insensitive.</para>
+        /// <para>The keyword for full match search. Case-insensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zeqrgx6jrlb063y06yjo</para>
