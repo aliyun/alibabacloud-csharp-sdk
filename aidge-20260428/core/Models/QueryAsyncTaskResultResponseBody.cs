@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
-            public Dictionary<string, long?> UsageMap { get; set; }
+            public Dictionary<string, object> UsageMap { get; set; }
 
         }
 

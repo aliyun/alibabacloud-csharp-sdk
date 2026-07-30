@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class VideoTranslationShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The array of translation capabilities. Valid values: [&quot;visual&quot;].</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Capabilities")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string CapabilitiesShrink { get; set; }
 
         /// <summary>
+        /// <para>The source language. This parameter is optional. Default value: auto (automatic detection).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -25,6 +28,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
+        /// <para>The target language. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
+        /// <para>The video URL (MP4/MOV, ≤ 200 MB).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
