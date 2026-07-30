@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The model category. This parameter is optional when type is set to LLM or Ai. This parameter is not required for other types.</para>
+        /// <para>The model category. This parameter is optional when type is set to LLM or Ai. This parameter is not required for other types. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Text</para>

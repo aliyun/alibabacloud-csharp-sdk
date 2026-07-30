@@ -20,16 +20,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the attachment point supported by the policy.</para>
-        /// <para>Valid values:</para>
+        /// <para>The type of attachment point supported by the policy.</para>
         /// <list type="bullet">
-        /// <item><description>HttpApi: HTTP API.</description></item>
-        /// <item><description>Operation: Operation of an HTTP API.</description></item>
-        /// <item><description>GatewayRoute: Gateway route.</description></item>
-        /// <item><description>GatewayService: Gateway service.</description></item>
-        /// <item><description>GatewayServicePort: Gateway service port.</description></item>
-        /// <item><description>Domain: Gateway domain name.</description></item>
-        /// <item><description>Gateway: Gateway.</description></item>
+        /// <item><description>HttpApi: HttpApi.</description></item>
+        /// <item><description>Operation: Operation of HttpApi.</description></item>
+        /// <item><description>GatewayRoute: gateway route.</description></item>
+        /// <item><description>GatewayService: gateway service.</description></item>
+        /// <item><description>GatewayServicePort: gateway service port.</description></item>
+        /// <item><description>Domain: gateway domain name.</description></item>
+        /// <item><description>Gateway: gateway.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

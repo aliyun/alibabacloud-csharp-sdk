@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetGatewayQuotaRuleSubjectUsageRequest : TeaModel {
+        [NameInMap("filterFailedRequests")]
+        [Validation(Required=false)]
+        public bool? FilterFailedRequests { get; set; }
+
         /// <summary>
         /// <para>The page number of the detailed consumption (request) records of the consumer within the cycle.</para>
         /// 

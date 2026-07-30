@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ConsumerId { get; set; }
 
             /// <summary>
-            /// <para>The expiration mode. Currently, only LongTerm is supported.</para>
+            /// <para>The expiration mode. Currently only LongTerm is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LongTerm</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? ExpireTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The type of the authorization principal.</para>
+            /// <para>The principal type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ConsumerGroup</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The resource identifier, which serves as a unique identifier for space reuse by non-standard code sources.</para>
+            /// <para>The resource identifier. Serves as a unique identifier for space reuse by non-standard code sources.</para>
             /// </summary>
             [NameInMap("resourceIdentifier")]
             [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ParentResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource ID.</para>
+                /// <para>The ID of the target resource to authorize. The required ID type is determined by resourceType, and the prefix must match.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ha-cn-li942gy8p03</para>

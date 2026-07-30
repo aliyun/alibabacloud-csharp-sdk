@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class Service : TeaModel {
         /// <summary>
-        /// <para>The address information, including IP addresses or domain names.</para>
+        /// <para>The address information, including IP addresses or domain name lists.</para>
         /// </summary>
         [NameInMap("addresses")]
         [Validation(Required=false)]
@@ -40,8 +40,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public long? CreateTimestamp { get; set; }
 
+        [NameInMap("dnsServers")]
+        [Validation(Required=false)]
+        public List<string> DnsServers { get; set; }
+
         /// <summary>
-        /// <para>The CloudFlow execution mode.</para>
+        /// <para>The execution mode of CloudFlow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>StartExecution</para>
@@ -61,7 +65,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The service group name.</para>
+        /// <para>The name of the service group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>publich</para>
@@ -78,11 +82,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ServiceHealthCheck HealthCheck { get; set; }
 
         /// <summary>
-        /// <para>The health check status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Healthy</description></item>
-        /// <item><description>Unhealthy</description></item>
-        /// </list>
+        /// <para>The health check status. Valid values: Healthy and Unhealthy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Healthy</para>
@@ -90,6 +90,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("healthStatus")]
         [Validation(Required=false)]
         public string HealthStatus { get; set; }
+
+        [NameInMap("healthyPanicThreshold")]
+        [Validation(Required=false)]
+        public float? HealthyPanicThreshold { get; set; }
 
         /// <summary>
         /// <para>The label information of the service.</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ModelProviderId { get; set; }
 
         /// <summary>
-        /// <para>The service name.</para>
+        /// <para>The name of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-service</para>
@@ -126,6 +130,32 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        [NameInMap("outlierDetection")]
+        [Validation(Required=false)]
+        public ServiceOutlierDetection OutlierDetection { get; set; }
+        public class ServiceOutlierDetection : TeaModel {
+            [NameInMap("baseEjectionTime")]
+            [Validation(Required=false)]
+            public int? BaseEjectionTime { get; set; }
+
+            [NameInMap("enable")]
+            [Validation(Required=false)]
+            public bool? Enable { get; set; }
+
+            [NameInMap("failurePercentageMinimumHosts")]
+            [Validation(Required=false)]
+            public int? FailurePercentageMinimumHosts { get; set; }
+
+            [NameInMap("failurePercentageThreshold")]
+            [Validation(Required=false)]
+            public int? FailurePercentageThreshold { get; set; }
+
+            [NameInMap("interval")]
+            [Validation(Required=false)]
+            public int? Interval { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The circuit-broken endpoints.</para>
         /// </summary>
@@ -141,7 +171,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<ServicePorts> Ports { get; set; }
         public class ServicePorts : TeaModel {
             /// <summary>
-            /// <para>The port name.</para>
+            /// <para>The name of the port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-service</para>

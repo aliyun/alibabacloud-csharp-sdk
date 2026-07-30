@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>User-defined configuration</para>
+        /// <para>The custom configuration. Required when provider is set to custom.</para>
         /// </summary>
         [NameInMap("customConfig")]
         [Validation(Required=false)]
         public AgentServiceConfigCustomConfig CustomConfig { get; set; }
         public class AgentServiceConfigCustomConfig : TeaModel {
             /// <summary>
-            /// <para>apiKey</para>
+            /// <para>The API key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-xxx</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ApiKey { get; set; }
 
             /// <summary>
-            /// <para>API key generation mode.</para>
+            /// <para>The key generation mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reference</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The Model Studio service configuration.</para>
+        /// <para>The DashScope service configuration. Required when provider is set to qwen. The appCredentials parameter cannot be empty, and each entry must have non-empty appId and apiKey values.</para>
         /// </summary>
         [NameInMap("dashScopeConfig")]
         [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The Dify service configuration.</para>
+        /// <para>The Dify service configuration. Required when provider is set to dify. The botType and apiKey parameters cannot be empty.</para>
         /// </summary>
         [NameInMap("difyConfig")]
         [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The interaction type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>chatbot</para>
+            /// <para>chatflow</para>
             /// </summary>
             [NameInMap("botType")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? EnableHealthCheck { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable outlier detection</para>
+        /// <para>Specifies whether to enable outlier detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? EnableOutlierDetection { get; set; }
 
         /// <summary>
-        /// <para>The protocol.</para>
+        /// <para>The list of communication protocols.</para>
         /// </summary>
         [NameInMap("protocols")]
         [Validation(Required=false)]

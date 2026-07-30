@@ -10,40 +10,40 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the destination resource group.</para>
+        /// <para>The ID of the destination resource group. You can view resource group IDs in the Resource Management console.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aekzdrfx2xdnaja</para>
+        /// <para>rg-aekzuqyxxxxxxxx</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The ID of the resource to be moved. The value must match the specified ResourceType.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gw-ct4i14um1hkn0tpqfae0</para>
+        /// <para>gw-cq2vmc93km41m3dm4bg0</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The resource type. The value is case-sensitive and must exactly match one of the valid values.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gateway</para>
+        /// <para>Gateway</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The service name. Set this parameter to apig.</para>
+        /// <para>The cloud service identifier. Fixed as APIG. You generally do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>apig</para>
+        /// <para>APIG</para>
         /// </summary>
         [NameInMap("Service")]
         [Validation(Required=false)]

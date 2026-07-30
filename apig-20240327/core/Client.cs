@@ -543,7 +543,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量添加消费者组成员</para>
+        /// <para>Adds members to a consumer group in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -589,7 +589,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量添加消费者组成员</para>
+        /// <para>Adds members to a consumer group in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -635,7 +635,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量添加消费者组成员</para>
+        /// <para>Adds members to a consumer group in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -654,7 +654,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量添加消费者组成员</para>
+        /// <para>Adds members to a consumer group in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -803,7 +803,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量移除消费者组成员</para>
+        /// <para>Removes consumer group members in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -849,7 +849,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量移除消费者组成员</para>
+        /// <para>Removes consumer group members in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -895,7 +895,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量移除消费者组成员</para>
+        /// <para>Removes consumer group members in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -914,7 +914,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量移除消费者组成员</para>
+        /// <para>Removes consumer group members in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1087,13 +1087,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建AI模型卡片</para>
+        /// <para>Creates an AI model card.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>在指定AI网关实例的已有模型供应商下创建模型卡片。目标网关必须存在、属于当前账号且类型为AI网关，modelProvider必须引用该网关中已存在的模型供应商。
-        /// 同一AI网关实例、同一模型供应商下的modelName必须唯一；单个网关实例最多可创建1000张模型卡片。credit当前仅支持fixed类型，费用单位为Credits/百万Token；未传时type默认为fixed，各项费用默认为0。availablePaths中的每一项必须同时包含path和type。</para>
+        /// <para>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference an existing model provider in the gateway.
+        /// The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1000 model cards can be created per gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If not specified, type defaults to fixed and all cost values default to 0. Each item in availablePaths must include both path and type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1163,13 +1163,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建AI模型卡片</para>
+        /// <para>Creates an AI model card.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>在指定AI网关实例的已有模型供应商下创建模型卡片。目标网关必须存在、属于当前账号且类型为AI网关，modelProvider必须引用该网关中已存在的模型供应商。
-        /// 同一AI网关实例、同一模型供应商下的modelName必须唯一；单个网关实例最多可创建1000张模型卡片。credit当前仅支持fixed类型，费用单位为Credits/百万Token；未传时type默认为fixed，各项费用默认为0。availablePaths中的每一项必须同时包含path和type。</para>
+        /// <para>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference an existing model provider in the gateway.
+        /// The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1000 model cards can be created per gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If not specified, type defaults to fixed and all cost values default to 0. Each item in availablePaths must include both path and type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1239,13 +1239,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建AI模型卡片</para>
+        /// <para>Creates an AI model card.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>在指定AI网关实例的已有模型供应商下创建模型卡片。目标网关必须存在、属于当前账号且类型为AI网关，modelProvider必须引用该网关中已存在的模型供应商。
-        /// 同一AI网关实例、同一模型供应商下的modelName必须唯一；单个网关实例最多可创建1000张模型卡片。credit当前仅支持fixed类型，费用单位为Credits/百万Token；未传时type默认为fixed，各项费用默认为0。availablePaths中的每一项必须同时包含path和type。</para>
+        /// <para>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference an existing model provider in the gateway.
+        /// The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1000 model cards can be created per gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If not specified, type defaults to fixed and all cost values default to 0. Each item in availablePaths must include both path and type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1264,13 +1264,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建AI模型卡片</para>
+        /// <para>Creates an AI model card.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>在指定AI网关实例的已有模型供应商下创建模型卡片。目标网关必须存在、属于当前账号且类型为AI网关，modelProvider必须引用该网关中已存在的模型供应商。
-        /// 同一AI网关实例、同一模型供应商下的modelName必须唯一；单个网关实例最多可创建1000张模型卡片。credit当前仅支持fixed类型，费用单位为Credits/百万Token；未传时type默认为fixed，各项费用默认为0。availablePaths中的每一项必须同时包含path和type。</para>
+        /// <para>Performs model creation for a model card under an existing model provider in a specified AI gateway instance. The target gateway must exist, belong to the current account, and be of the AI gateway type. The modelProvider must reference an existing model provider in the gateway.
+        /// The modelName must be unique within the same AI gateway instance and the same model provider. A maximum of 1000 model cards can be created per gateway instance. The credit parameter currently supports only the fixed type, and the cost unit is Credits per million tokens. If not specified, type defaults to fixed and all cost values default to 0. Each item in availablePaths must include both path and type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1289,7 +1289,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建AI模型供应商</para>
+        /// <para>Creates an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1308,6 +1308,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         public CreateAiModelProviderResponse CreateAiModelProviderWithOptions(CreateAiModelProviderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
@@ -1328,6 +1333,7 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1347,7 +1353,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建AI模型供应商</para>
+        /// <para>Creates an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1366,6 +1372,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         public async Task<CreateAiModelProviderResponse> CreateAiModelProviderWithOptionsAsync(CreateAiModelProviderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
@@ -1386,6 +1397,7 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1405,7 +1417,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建AI模型供应商</para>
+        /// <para>Creates an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1424,7 +1436,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建AI模型供应商</para>
+        /// <para>Creates an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1972,6 +1984,16 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Creates consumer authorization rules.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites: Before creating consumer authorization rules, prepare resources according to the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
+        /// Gateway instance (CreateGateway → gatewayId, gw- prefix)
+        /// Environment (A default environment is automatically created with the gateway. You can also use CreateEnvironment → environmentId, env- prefix, which requires the gatewayId from step 1)
+        /// HTTP API (CreateHttpApi → httpApiId, api- prefix)
+        /// Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belongs to the API in step 3. Then publish to the environment in step 2 by using DeployHttpApi. Unpublished routes cannot be authorized)
+        /// Consumer (CreateConsumer → consumerId, cs- prefix. Or consumer group consumerGroupId, csg- prefix. Use either consumerId or consumerGroupId)</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateConsumerAuthorizationRulesRequest
         /// </param>
@@ -2017,6 +2039,16 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Creates consumer authorization rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites: Before creating consumer authorization rules, prepare resources according to the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
+        /// Gateway instance (CreateGateway → gatewayId, gw- prefix)
+        /// Environment (A default environment is automatically created with the gateway. You can also use CreateEnvironment → environmentId, env- prefix, which requires the gatewayId from step 1)
+        /// HTTP API (CreateHttpApi → httpApiId, api- prefix)
+        /// Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belongs to the API in step 3. Then publish to the environment in step 2 by using DeployHttpApi. Unpublished routes cannot be authorized)
+        /// Consumer (CreateConsumer → consumerId, cs- prefix. Or consumer group consumerGroupId, csg- prefix. Use either consumerId or consumerGroupId)</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateConsumerAuthorizationRulesRequest
@@ -2064,6 +2096,16 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Creates consumer authorization rules.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites: Before creating consumer authorization rules, prepare resources according to the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
+        /// Gateway instance (CreateGateway → gatewayId, gw- prefix)
+        /// Environment (A default environment is automatically created with the gateway. You can also use CreateEnvironment → environmentId, env- prefix, which requires the gatewayId from step 1)
+        /// HTTP API (CreateHttpApi → httpApiId, api- prefix)
+        /// Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belongs to the API in step 3. Then publish to the environment in step 2 by using DeployHttpApi. Unpublished routes cannot be authorized)
+        /// Consumer (CreateConsumer → consumerId, cs- prefix. Or consumer group consumerGroupId, csg- prefix. Use either consumerId or consumerGroupId)</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateConsumerAuthorizationRulesRequest
         /// </param>
@@ -2083,6 +2125,16 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Creates consumer authorization rules.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites: Before creating consumer authorization rules, prepare resources according to the following dependency chain (the corresponding creation API and ID passing relationships are shown in parentheses):
+        /// Gateway instance (CreateGateway → gatewayId, gw- prefix)
+        /// Environment (A default environment is automatically created with the gateway. You can also use CreateEnvironment → environmentId, env- prefix, which requires the gatewayId from step 1)
+        /// HTTP API (CreateHttpApi → httpApiId, api- prefix)
+        /// Route and publish (CreateHttpApiRoute → routeId, hr- prefix, belongs to the API in step 3. Then publish to the environment in step 2 by using DeployHttpApi. Unpublished routes cannot be authorized)
+        /// Consumer (CreateConsumer → consumerId, cs- prefix. Or consumer group consumerGroupId, csg- prefix. Use either consumerId or consumerGroupId)</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateConsumerAuthorizationRulesRequest
         /// </param>
@@ -2099,7 +2151,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建消费者组</para>
+        /// <para>Creates a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2157,7 +2209,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建消费者组</para>
+        /// <para>Creates a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2215,7 +2267,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建消费者组</para>
+        /// <para>Creates a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2234,7 +2286,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建消费者组</para>
+        /// <para>Creates a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5067,7 +5119,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除AI模型卡片</para>
+        /// <para>Deletes an AI model card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5107,7 +5159,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除AI模型卡片</para>
+        /// <para>Deletes an AI model card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5147,7 +5199,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除AI模型卡片</para>
+        /// <para>Deletes an AI model card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5166,7 +5218,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除AI模型卡片</para>
+        /// <para>Deletes an AI model card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5185,7 +5237,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除AI模型供应商</para>
+        /// <para>Deletes an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5225,7 +5277,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除AI模型供应商</para>
+        /// <para>Deletes an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5265,7 +5317,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除AI模型供应商</para>
+        /// <para>Deletes an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5284,7 +5336,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除AI模型供应商</para>
+        /// <para>Deletes an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5507,7 +5559,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除消费者组</para>
+        /// <para>Deletes a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5547,7 +5599,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除消费者组</para>
+        /// <para>Deletes a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5587,7 +5639,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除消费者组</para>
+        /// <para>Deletes a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5606,7 +5658,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除消费者组</para>
+        /// <para>Deletes a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8007,7 +8059,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型卡片详情</para>
+        /// <para>Queries the details of an AI model card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8047,7 +8099,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型卡片详情</para>
+        /// <para>Queries the details of an AI model card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8087,7 +8139,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型卡片详情</para>
+        /// <para>Queries the details of an AI model card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8106,7 +8158,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型卡片详情</para>
+        /// <para>Queries the details of an AI model card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8125,7 +8177,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型供应商详情</para>
+        /// <para>Queries the details of an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8165,7 +8217,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型供应商详情</para>
+        /// <para>Queries the details of an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8205,7 +8257,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型供应商详情</para>
+        /// <para>Queries the details of an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8224,7 +8276,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型供应商详情</para>
+        /// <para>Queries the details of an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8447,7 +8499,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组</para>
+        /// <para>Queries a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8487,7 +8539,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组</para>
+        /// <para>Queries a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8527,7 +8579,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组</para>
+        /// <para>Queries a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8546,7 +8598,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组</para>
+        /// <para>Queries a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9356,6 +9408,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterFailedRequests))
+            {
+                query["filterFailedRequests"] = request.FilterFailedRequests;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -9411,6 +9467,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterFailedRequests))
+            {
+                query["filterFailedRequests"] = request.FilterFailedRequests;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -10715,7 +10775,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a service.</para>
+        /// <para>Gets service details.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10751,7 +10811,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a service.</para>
+        /// <para>Gets service details.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10787,7 +10847,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a service.</para>
+        /// <para>Gets service details.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10802,7 +10862,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a service.</para>
+        /// <para>Gets service details.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11421,7 +11481,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型卡片列表</para>
+        /// <para>Queries the list of AI model cards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11479,7 +11539,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型卡片列表</para>
+        /// <para>Queries the list of AI model cards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11537,7 +11597,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型卡片列表</para>
+        /// <para>Queries the list of AI model cards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11556,7 +11616,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型卡片列表</para>
+        /// <para>Queries the list of AI model cards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11575,7 +11635,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型供应商列表</para>
+        /// <para>Queries the list of AI model providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11633,7 +11693,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型供应商列表</para>
+        /// <para>Queries the list of AI model providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11691,7 +11751,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型供应商列表</para>
+        /// <para>Queries the list of AI model providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11710,7 +11770,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询AI模型供应商列表</para>
+        /// <para>Queries the list of AI model providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11875,7 +11935,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组成员列表</para>
+        /// <para>Queries the member list of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11929,7 +11989,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组成员列表</para>
+        /// <para>Queries the member list of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11983,7 +12043,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组成员列表</para>
+        /// <para>Queries the member list of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12002,7 +12062,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组成员列表</para>
+        /// <para>Queries the member list of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12021,7 +12081,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组列表</para>
+        /// <para>Queries the list of consumer groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12079,7 +12139,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组列表</para>
+        /// <para>Queries the list of consumer groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12137,7 +12197,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组列表</para>
+        /// <para>Queries the list of consumer groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12156,7 +12216,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者组列表</para>
+        /// <para>Queries the list of consumer groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13395,6 +13455,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 query["tag"] = request.TagShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["vpcId"] = request.VpcId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -13474,6 +13538,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagShrink))
             {
                 query["tag"] = request.TagShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["vpcId"] = request.VpcId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17993,7 +18061,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI模型卡片</para>
+        /// <para>Updates an AI model card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18059,7 +18127,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI模型卡片</para>
+        /// <para>Updates an AI model card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18125,7 +18193,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI模型卡片</para>
+        /// <para>Updates an AI model card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18144,7 +18212,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI模型卡片</para>
+        /// <para>Updates an AI model card.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18163,7 +18231,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI模型供应商</para>
+        /// <para>Updates an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18213,7 +18281,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI模型供应商</para>
+        /// <para>Updates an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18263,7 +18331,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI模型供应商</para>
+        /// <para>Updates an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18282,7 +18350,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI模型供应商</para>
+        /// <para>Updates an AI model provider.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18787,7 +18855,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新消费者组</para>
+        /// <para>Updates a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18837,7 +18905,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新消费者组</para>
+        /// <para>Updates a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18887,7 +18955,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新消费者组</para>
+        /// <para>Updates a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18906,7 +18974,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新消费者组</para>
+        /// <para>Updates a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">

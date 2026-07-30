@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class BatchAddConsumerGroupConsumersRequest : TeaModel {
         /// <summary>
+        /// <para>The list of consumer IDs to add to the consumer group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;cs-8c13d2b4f8a1&quot;]</para>
         /// </summary>

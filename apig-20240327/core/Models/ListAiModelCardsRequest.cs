@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListAiModelCardsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the AI gateway instance. The target instance must exist, belong to the current account, and be of the AI gateway type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
+        /// <para>The fuzzy match keyword for the model provider identifier or model name. If left empty, all model cards under the current gateway are queried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1. The value must be greater than or equal to 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10. Valid values: 1 to 500.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

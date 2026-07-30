@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetAiModelCardResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response status code. Ok is returned for a successful request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The model card details.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetAiModelCardResponseBodyData Data { get; set; }
         public class GetAiModelCardResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of invocation paths supported by the model. Each item contains both path and type.</para>
+            /// </summary>
             [NameInMap("availablePaths")]
             [Validation(Required=false)]
             public List<GetAiModelCardResponseBodyDataAvailablePaths> AvailablePaths { get; set; }
             public class GetAiModelCardResponseBodyDataAvailablePaths : TeaModel {
                 /// <summary>
+                /// <para>The model invocation path. The maximum length is 2048 characters.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>/v1/chat/completions</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Path { get; set; }
 
                 /// <summary>
+                /// <para>The protocol type corresponding to the path. The maximum length is 64 characters.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>OpenAICompatible</para>
                 /// </summary>
@@ -43,11 +55,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             }
 
+            /// <summary>
+            /// <para>The credit billing information of the model. The unit is Credits per million tokens.</para>
+            /// </summary>
             [NameInMap("credit")]
             [Validation(Required=false)]
             public GetAiModelCardResponseBodyDataCredit Credit { get; set; }
             public class GetAiModelCardResponseBodyDataCredit : TeaModel {
                 /// <summary>
+                /// <para>The cache hit token cost, in Credits per million tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.5</para>
                 /// </summary>
@@ -56,6 +73,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public float? CacheCost { get; set; }
 
                 /// <summary>
+                /// <para>The input token cost, in Credits per million tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1.5</para>
                 /// </summary>
@@ -64,6 +83,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public float? InputCost { get; set; }
 
                 /// <summary>
+                /// <para>The output token cost, in Credits per million tokens.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -72,6 +93,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public float? OutputCost { get; set; }
 
                 /// <summary>
+                /// <para>The billing type. Currently only fixed is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>fixed</para>
                 /// </summary>
@@ -82,6 +105,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
+            /// <para>The model capability switches. Keys are model capability names supported by the API gateway, and values are Boolean values.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true}</para>
             /// </summary>
@@ -90,6 +115,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public Dictionary<string, object> Features { get; set; }
 
             /// <summary>
+            /// <para>The ID of the AI gateway instance to which the model card belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>gw-8c13d2b4f8a1</para>
             /// </summary>
@@ -97,11 +124,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string GatewayId { get; set; }
 
+            /// <summary>
+            /// <para>The token limits and input/output modality information of the model.</para>
+            /// </summary>
             [NameInMap("meta")]
             [Validation(Required=false)]
             public GetAiModelCardResponseBodyDataMeta Meta { get; set; }
             public class GetAiModelCardResponseBodyDataMeta : TeaModel {
                 /// <summary>
+                /// <para>The maximum number of input tokens supported by the model. The value is greater than or equal to 0.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>131072</para>
                 /// </summary>
@@ -110,6 +142,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? MaxInputTokens { get; set; }
 
                 /// <summary>
+                /// <para>The maximum number of output tokens supported by the model. The value is greater than or equal to 0.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>8192</para>
                 /// </summary>
@@ -118,6 +152,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? MaxOutputTokens { get; set; }
 
                 /// <summary>
+                /// <para>The maximum total number of context tokens supported by the model. The value is greater than or equal to 0.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>131072</para>
                 /// </summary>
@@ -125,10 +161,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public long? MaxTokens { get; set; }
 
+                /// <summary>
+                /// <para>The list of input modalities supported by the model. The list contains up to 16 items, and each item cannot be empty.</para>
+                /// </summary>
                 [NameInMap("supportedInputModalities")]
                 [Validation(Required=false)]
                 public List<string> SupportedInputModalities { get; set; }
 
+                /// <summary>
+                /// <para>The list of output modalities supported by the model. The list contains up to 16 items, and each item cannot be empty.</para>
+                /// </summary>
                 [NameInMap("supportedOutputModalities")]
                 [Validation(Required=false)]
                 public List<string> SupportedOutputModalities { get; set; }
@@ -136,6 +178,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
+            /// <para>The model card ID. This ID is generated by the system and starts with mc-.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mc-8c13d2b4f8a1</para>
             /// </summary>
@@ -144,6 +188,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelCardId { get; set; }
 
             /// <summary>
+            /// <para>The model name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qwen-plus</para>
             /// </summary>
@@ -152,6 +198,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelName { get; set; }
 
             /// <summary>
+            /// <para>The model provider identifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qwen</para>
             /// </summary>
@@ -160,6 +208,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelProvider { get; set; }
 
             /// <summary>
+            /// <para>The source of the model card. For instance-level model cards, user is returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>user</para>
             /// </summary>
@@ -168,6 +218,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Source { get; set; }
 
             /// <summary>
+            /// <para>The last update time of the model card, in the format of yyyy-MM-dd HH:mm:ss.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-07-14 18:30:00</para>
             /// </summary>
@@ -178,6 +230,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
+        /// <para>The response message. success is returned for a successful request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -186,6 +240,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID, which is generated by the system and used to locate this call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>

@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateServiceRequestOutlierDetectionConfig OutlierDetectionConfig { get; set; }
         public class UpdateServiceRequestOutlierDetectionConfig : TeaModel {
             /// <summary>
-            /// <para>The initial ejection duration. This is the initial isolation duration after a node is ejected (for example, 30 seconds). The isolation duration is calculated by using the formula: k × base_ejection_time (k starts at 1). Each ejection increases the isolation duration (k is incremented by 1). If consecutive checks are normal, the isolation duration is gradually reduced (k is decremented by 1).</para>
+            /// <para>The base ejection time. This is the initial isolation duration after a node is ejected (for example, 30 seconds). The isolation time is calculated using the formula: k × base_ejection_time (where k starts at 1). Each ejection increases the isolation time (k is incremented by one). If consecutive checks are healthy, the isolation time is gradually reduced (k is decremented by one).</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? FailurePercentageMinimumHosts { get; set; }
 
             /// <summary>
-            /// <para>The failure percentage threshold. When the percentage of failed requests on a node reaches this threshold, the system triggers the ejection mechanism for the node.</para>
+            /// <para>The failure percentage threshold. When the proportion of failed requests for a node reaches this threshold, the system triggers the ejection mechanism for that node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The port.</para>
+            /// <para>The port number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>

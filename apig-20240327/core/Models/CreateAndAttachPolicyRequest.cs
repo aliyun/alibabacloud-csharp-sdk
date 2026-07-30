@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The policy description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>主路由失败时回退</para>
+        /// <para>Fallback when primary route fails</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -81,7 +81,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The policy name.</para>
+        /// <para>The policy name.
+        /// This parameter is required when className is set to IpAccessControl, JWTAuth, OIDCAuth, or ExternalZAuth, and must be unique within the same gateway instance (gatewayId) under the current account. If the name conflicts with an existing policy, a PolicyExisted error is returned. When retrying after receiving this error, you must use a different name. Submitting the same name repeatedly will always fail.
+        /// For other className values (such as RateLimit, Timeout, Retry, ServiceTls, and AiProxy), name is optional and used only for display purposes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-fallback-policy</para>

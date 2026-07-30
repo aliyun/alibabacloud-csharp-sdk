@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
-        /// <para>The configuration information. The value is a JSON string.</para>
+        /// <para>The configuration information. A JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The policy description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是策略描述。</para>
+        /// <para>This is a policy description.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

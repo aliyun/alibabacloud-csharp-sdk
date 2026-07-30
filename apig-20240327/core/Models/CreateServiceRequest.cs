@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public AgentServiceConfig AgentServiceConfig { get; set; }
 
             /// <summary>
-            /// <para>The AI service configuration.</para>
+            /// <para>The AI service configuration. This parameter is required when sourceType is set to AI.</para>
             /// </summary>
             [NameInMap("aiServiceConfig")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> DnsServers { get; set; }
 
             /// <summary>
-            /// <para>The service expression type. Identifies the special type or mode of the service.</para>
+            /// <para>The service expression type that identifies the special type or mode of the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Standard</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The model provider ID.</para>
+            /// <para>The model provider ID. This parameter is applicable only to AI services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mp-xxx****</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelProviderId { get; set; }
 
             /// <summary>
-            /// <para>The service name.</para>
+            /// <para>The service name. This parameter is required when sourceType is set to FC3.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-service</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SourceId { get; set; }
 
             /// <summary>
-            /// <para>The validation options. Configuration options related to service validation.</para>
+            /// <para>The validation options for service verification configuration.</para>
             /// </summary>
             [NameInMap("validationOptions")]
             [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The service source. Valid values:</para>
+        /// <para>The service source type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>MSE_NACOS: a service in MSE Nacos.</description></item>
         /// <item><description>K8S: a service in a Kubernetes cluster of Container Service.</description></item>

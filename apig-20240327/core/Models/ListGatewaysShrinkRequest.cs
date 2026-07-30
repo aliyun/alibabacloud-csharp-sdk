@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The keyword for full match search. Case-insensitive.</para>
+        /// <para>The keyword for full match search. The search is case-insensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzq6bzz5uyg2q</para>
@@ -85,6 +85,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("tag")]
         [Validation(Required=false)]
         public string TagShrink { get; set; }
+
+        /// <summary>
+        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-2zeqrgx6jrlb063y06yjo</para>
+        /// </summary>
+        [NameInMap("vpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
 
     }
 

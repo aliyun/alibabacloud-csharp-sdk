@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ConsumerGroupInfo : TeaModel {
         /// <summary>
+        /// <para>The consumer group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>csg-8c13d2b4f8a1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConsumerGroupId { get; set; }
 
         /// <summary>
+        /// <para>The gateway type. Valid values: API or AI.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>API</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
+        /// <para>The consumer group name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>api-consumer-group</para>
         /// </summary>
