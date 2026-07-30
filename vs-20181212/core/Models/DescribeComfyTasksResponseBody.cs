@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeComfyTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of 0 indicates a successful request.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The message that provides details about the result of the request.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned data. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of tasks per page.</para>
+        /// <para>The page size.</para>
         /// <remarks>
-        /// <para>This parameter applies only to recording queries.</para>
+        /// <para>Only applicable to recording queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of Comfy tasks.</para>
+        /// <para>The task list.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<DescribeComfyTasksResponseBodyTasks> Tasks { get; set; }
         public class DescribeComfyTasksResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The creation time of the task.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780387493000</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task.</para>
+            /// <para>The task end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780387494000</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource pool used by the task.</para>
+            /// <para>The resource pool ID used by the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hive-26cd567b35c04a0a90f017388207b2</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task state.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string TaskState { get; set; }
 
             /// <summary>
-            /// <para>The last modified time of the task.</para>
+            /// <para>The last modified time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780387494000</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string UpdatedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Comfy workflow associated with the task.</para>
+            /// <para>The Comfy workflow ID used by the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The total number of tasks that match the filter criteria.</para>
+        /// <para>The number of tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

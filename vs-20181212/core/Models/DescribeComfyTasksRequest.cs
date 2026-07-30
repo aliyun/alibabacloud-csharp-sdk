@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of tasks per page.</para>
+        /// <para>The number of records displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -29,8 +29,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
+
         /// <summary>
-        /// <para>The task state. If specified, the operation returns only tasks in that state.</para>
+        /// <para>The task status used as a filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>QUEUED</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string TaskState { get; set; }
 
         /// <summary>
-        /// <para>If you specify this parameter, the operation returns only tasks for the specified workflow.</para>
+        /// <para>The Comfy workflow ID used as a filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</para>

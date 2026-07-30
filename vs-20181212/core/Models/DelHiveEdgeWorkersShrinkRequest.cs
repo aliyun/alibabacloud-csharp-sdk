@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DelHiveEdgeWorkersShrinkRequest : TeaModel {
         /// <summary>
+        /// <para><b>The cluster ID.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string HiveId { get; set; }
 
         /// <summary>
+        /// <para><b>The list of workload IDs.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

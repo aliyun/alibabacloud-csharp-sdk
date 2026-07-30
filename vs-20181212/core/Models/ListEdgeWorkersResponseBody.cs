@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListEdgeWorkersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of payloads.</para>
+        /// <para>The workload list.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string HiveId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The workload ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>as-d135ca4425c24b99b79cd0b6c552cac9</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The package ID.</para>
+            /// <para>The plan ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pk-db3394401cc8403f85e4d72d99b52449</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The page number of the query. The value starts from 1. Default value: 1.</para>
+        /// <para>The page number of the query list. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paged query. The maximum value is 100. Default value: 100.</para>
+        /// <para>The number of entries per page for a paginated query. Maximum value: 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of workloads.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

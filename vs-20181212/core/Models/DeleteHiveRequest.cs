@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteHiveRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the cloud application service group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListSpecificationsRequest : TeaModel {
         /// <summary>
+        /// <para>The page number of the query list. Minimum value: 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page for paging. Maximum value: 100. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The specification.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ew.gn8t6xlarge-rb.x1p</para>
         /// </summary>

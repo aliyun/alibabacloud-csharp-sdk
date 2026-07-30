@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListEdgeWorkersRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required for renewal scenarios.</para>
+        /// <para>The expiration time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-14T15:20:37+08:00</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The list of cluster IDs.</para>
+        /// <para>The cluster ID list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;hive-4fbf3928d40e43948b98acdb4fb5aaed&quot;]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<string> HiveIds { get; set; }
 
         /// <summary>
-        /// <para>The list of payload IDs.</para>
+        /// <para>The workload ID list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ew-xxxxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query. The value starts from 1. Default value: 1.</para>
+        /// <para>The page number of the query list. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paged query. The maximum value is 100. Default value: 10.</para>
+        /// <para>The number of entries per page for a paginated query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of package IDs.</para>
+        /// <para>The plan ID list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;pk-4fbf3928d40e43948b98acdb4fb5aaed&quot;]</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<string> PlanIds { get; set; }
 
         /// <summary>
-        /// <para>Specification</para>
+        /// <para>The specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ew.gn8t6xlarge-rb.x1p</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Spec { get; set; }
 
         /// <summary>
-        /// <para>The parameter for filtering by time range. The time must be in ISO 8601 format and use UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The start time for time range filtering. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-25T06:35:26+08:00</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of statuses.</para>
+        /// <para>The status list.</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

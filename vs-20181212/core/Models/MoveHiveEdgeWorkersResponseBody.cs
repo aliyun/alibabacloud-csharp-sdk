@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class MoveHiveEdgeWorkersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of instances that failed to move.</para>
+        /// <para>The number of failed operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? FailedInstanceCount { get; set; }
 
         /// <summary>
-        /// <para>Details of the instances that failed to move.</para>
+        /// <para>The list of workloads that failed to be moved.</para>
         /// </summary>
         [NameInMap("FailedInstances")]
         [Validation(Required=false)]
         public List<MoveHiveEdgeWorkersResponseBodyFailedInstances> FailedInstances { get; set; }
         public class MoveHiveEdgeWorkersResponseBodyFailedInstances : TeaModel {
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The workload ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ew-1226d588c69449209ee963161c067b04</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of successfully moved instances.</para>
+        /// <para>The number of successful operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? SuccessInstanceCount { get; set; }
 
         /// <summary>
-        /// <para>Details of the successfully moved instances.</para>
+        /// <para>The list of workloads that were successfully moved.</para>
         /// </summary>
         [NameInMap("SuccessInstances")]
         [Validation(Required=false)]
         public List<MoveHiveEdgeWorkersResponseBodySuccessInstances> SuccessInstances { get; set; }
         public class MoveHiveEdgeWorkersResponseBodySuccessInstances : TeaModel {
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The workload ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ew-1226d588c69449209ee963161c067b04</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The result message. For a successful operation, the value is typically <c>SUCCESS</c>.</para>
+            /// <para>The message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
