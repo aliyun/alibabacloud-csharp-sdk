@@ -7995,7 +7995,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of contacts.</para>
+        /// <para>Retrieves the list of contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8045,7 +8045,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of contacts.</para>
+        /// <para>Retrieves the list of contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8095,7 +8095,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of contacts.</para>
+        /// <para>Retrieves the list of contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8113,7 +8113,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of contacts.</para>
+        /// <para>Retrieves the list of contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">

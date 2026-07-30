@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? EmailStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID card number of the contact. This parameter is required for the CFCA certificate brand and is not required for other brands.</para>
+        /// <para>The ID card number of the contact. This is required for the CFCA certificate brand and not required for other brands.</para>
         /// 
         /// <b>Example:</b>
         /// <para>142***************</para>
@@ -89,12 +89,15 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The webhook URLs of DingTalk, WeCom, or Lark chatbots, in list format.</para>
+        /// </summary>
         [NameInMap("WebhookList")]
         [Validation(Required=false)]
         public List<string> WebhookList { get; set; }
 
         /// <summary>
-        /// <para>The webhook URLs of DingTalk, WeCom, or Lark chatbots. The value is a string in list format.</para>
+        /// <para>The webhook URLs of DingTalk, WeCom, or Lark chatbots, in list format as a string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[\&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/dc1aa9b9-47cd-4b34-91ef-73c1034208e5%5C%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/dc1aa9b9-47cd-4b34-91ef-73c1034208e5\\&quot;]</a></para>

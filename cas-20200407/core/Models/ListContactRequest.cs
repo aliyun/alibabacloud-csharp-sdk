@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListContactRequest : TeaModel {
         /// <summary>
-        /// <para>The current page number for paged queries. Default value: <b>1</b>.</para>
+        /// <para>The current page number for pagination. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The search keyword, such as a keyword in the name, email address, or phone number.</para>
+        /// <para>The search keyword. For example, a keyword in the name, email address, or phone number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>186</para>

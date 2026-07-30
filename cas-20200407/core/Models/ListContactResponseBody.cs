@@ -76,6 +76,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The webhook URL.</para>
+            /// </summary>
             [NameInMap("WebhookList")]
             [Validation(Required=false)]
             public List<string> WebhookList { get; set; }
