@@ -5770,7 +5770,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the tab configuration for usage monitoring.</para>
+        /// <para>Retrieves the usage monitoring tab configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5820,7 +5820,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the tab configuration for usage monitoring.</para>
+        /// <para>Retrieves the usage monitoring tab configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5870,7 +5870,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the tab configuration for usage monitoring.</para>
+        /// <para>Retrieves the usage monitoring tab configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5889,7 +5889,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the tab configuration for usage monitoring.</para>
+        /// <para>Retrieves the usage monitoring tab configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5908,7 +5908,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a chat completion.</para>
+        /// <para>Initiates a chat conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5949,7 +5949,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a chat completion.</para>
+        /// <para>Initiates a chat conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5990,7 +5990,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a chat completion.</para>
+        /// <para>Initiates a chat conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6009,7 +6009,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a chat completion.</para>
+        /// <para>Initiates a chat conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6028,7 +6028,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures balance throttling for a department.</para>
+        /// <para>Enables balance-based throttling for a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6082,7 +6082,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures balance throttling for a department.</para>
+        /// <para>Enables balance-based throttling for a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6136,7 +6136,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures balance throttling for a department.</para>
+        /// <para>Enables balance-based throttling for a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6155,7 +6155,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures balance throttling for a department.</para>
+        /// <para>Enables balance-based throttling for a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6276,7 +6276,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API key management / Create an API key</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6322,7 +6322,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API key management / Create an API key</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6368,7 +6368,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API key management / Create an API key</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6387,7 +6387,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API key management / Create an API key</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6408,11 +6408,6 @@ namespace AlibabaCloud.SDK.AiContent20240611
         /// <summary>
         /// <para>Creates a balance transaction for customer management.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is deprecated. Do not use it.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterCreateBalanceTransactionRequest
@@ -6476,11 +6471,6 @@ namespace AlibabaCloud.SDK.AiContent20240611
         /// <para>Creates a balance transaction for customer management.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is deprecated. Do not use it.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// ModelRouterCreateBalanceTransactionRequest
         /// </param>
@@ -6543,11 +6533,6 @@ namespace AlibabaCloud.SDK.AiContent20240611
         /// <para>Creates a balance transaction for customer management.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is deprecated. Do not use it.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// ModelRouterCreateBalanceTransactionRequest
         /// </param>
@@ -6567,11 +6552,6 @@ namespace AlibabaCloud.SDK.AiContent20240611
         /// <para>Creates a balance transaction for customer management.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is deprecated. Do not use it.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// ModelRouterCreateBalanceTransactionRequest
         /// </param>
@@ -6588,7 +6568,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Billing Management/Create Billing Rule</para>
+        /// <para>Creates a billing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6654,7 +6634,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Billing Management/Create Billing Rule</para>
+        /// <para>Creates a billing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6720,7 +6700,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Billing Management/Create Billing Rule</para>
+        /// <para>Creates a billing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6739,7 +6719,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Billing Management/Create Billing Rule</para>
+        /// <para>Creates a billing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6758,7 +6738,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Client management / Create client</para>
+        /// <para>Creates a customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6781,6 +6761,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Address))
             {
                 body["address"] = request.Address;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedModelGroupConfig))
+            {
+                body["allowedModelGroupConfig"] = request.AllowedModelGroupConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedModels))
             {
@@ -6828,7 +6812,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Client management / Create client</para>
+        /// <para>Creates a customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6851,6 +6835,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Address))
             {
                 body["address"] = request.Address;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedModelGroupConfig))
+            {
+                body["allowedModelGroupConfig"] = request.AllowedModelGroupConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedModels))
             {
@@ -6898,7 +6886,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Client management / Create client</para>
+        /// <para>Creates a customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6917,7 +6905,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Client management / Create client</para>
+        /// <para>Creates a customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6936,7 +6924,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Conversation management / Create conversation</para>
+        /// <para>Creates a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6990,7 +6978,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Conversation management / Create conversation</para>
+        /// <para>Creates a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7044,7 +7032,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Conversation management / Create conversation</para>
+        /// <para>Creates a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7063,7 +7051,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Conversation management / Create conversation</para>
+        /// <para>Creates a conversation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7082,7 +7070,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model.</para>
+        /// <para>Performs model creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7172,7 +7160,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model.</para>
+        /// <para>Performs model creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7262,7 +7250,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model.</para>
+        /// <para>Performs model creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7281,7 +7269,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model.</para>
+        /// <para>Performs model creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7300,13 +7288,8 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户管理/创建周期充值订阅</para>
+        /// <para>Creates a periodic recharge subscription for customer management.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>该接口已弃用，请勿使用</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterCreateSubscriptionRequest
@@ -7363,13 +7346,8 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户管理/创建周期充值订阅</para>
+        /// <para>Creates a periodic recharge subscription for customer management.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>该接口已弃用，请勿使用</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterCreateSubscriptionRequest
@@ -7426,13 +7404,8 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户管理/创建周期充值订阅</para>
+        /// <para>Creates a periodic recharge subscription for customer management.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>该接口已弃用，请勿使用</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterCreateSubscriptionRequest
@@ -7450,13 +7423,8 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户管理/创建周期充值订阅</para>
+        /// <para>Creates a periodic recharge subscription for customer management.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>该接口已弃用，请勿使用</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterCreateSubscriptionRequest
@@ -7474,7 +7442,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API Key Management / Delete API Key</para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7510,7 +7478,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API Key Management / Delete API Key</para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7546,7 +7514,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API Key Management / Delete API Key</para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7561,7 +7529,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API Key Management / Delete API Key</para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7576,7 +7544,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a client.</para>
+        /// <para>Deletes a customer.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7612,7 +7580,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a client.</para>
+        /// <para>Deletes a customer.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7648,7 +7616,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a client.</para>
+        /// <para>Deletes a customer.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7663,7 +7631,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a client.</para>
+        /// <para>Deletes a customer.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7678,7 +7646,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Conversation management/Delete conversation</para>
+        /// <para>Deletes a conversation.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7714,7 +7682,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Conversation management/Delete conversation</para>
+        /// <para>Deletes a conversation.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7750,7 +7718,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Conversation management/Delete conversation</para>
+        /// <para>Deletes a conversation.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7765,7 +7733,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Conversation management/Delete conversation</para>
+        /// <para>Deletes a conversation.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8000,7 +7968,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the balance change log for a specified department.</para>
+        /// <para>Retrieves the balance change logs of a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8062,7 +8030,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the balance change log for a specified department.</para>
+        /// <para>Retrieves the balance change logs of a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8124,7 +8092,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the balance change log for a specified department.</para>
+        /// <para>Retrieves the balance change logs of a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8143,7 +8111,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the balance change log for a specified department.</para>
+        /// <para>Retrieves the balance change logs of a department.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8162,12 +8130,12 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户管理/查询周期充值订阅列表</para>
+        /// <para>Queries the list of periodic recharge subscriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该接口已弃用，请勿使用</para>
+        /// <para>This operation is deprecated. Do not use it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8225,12 +8193,12 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户管理/查询周期充值订阅列表</para>
+        /// <para>Queries the list of periodic recharge subscriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该接口已弃用，请勿使用</para>
+        /// <para>This operation is deprecated. Do not use it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8288,12 +8256,12 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户管理/查询周期充值订阅列表</para>
+        /// <para>Queries the list of periodic recharge subscriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该接口已弃用，请勿使用</para>
+        /// <para>This operation is deprecated. Do not use it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8312,12 +8280,12 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户管理/查询周期充值订阅列表</para>
+        /// <para>Queries the list of periodic recharge subscriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该接口已弃用，请勿使用</para>
+        /// <para>This operation is deprecated. Do not use it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9392,7 +9360,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a hierarchical tree of customers.</para>
+        /// <para>Retrieves the customer tree structure.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9442,7 +9410,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a hierarchical tree of customers.</para>
+        /// <para>Retrieves the customer tree structure.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9492,7 +9460,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a hierarchical tree of customers.</para>
+        /// <para>Retrieves the customer tree structure.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9511,7 +9479,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a hierarchical tree of customers.</para>
+        /// <para>Retrieves the customer tree structure.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10914,13 +10882,8 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures Nacos or retrieves the list of Nacos service providers.</para>
+        /// <para>Queries the list of Nacos service providers through Nacos configuration.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is deprecated. Do not use it.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterQueryNacosProvidersRequest
@@ -10993,13 +10956,8 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures Nacos or retrieves the list of Nacos service providers.</para>
+        /// <para>Queries the list of Nacos service providers through Nacos configuration.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is deprecated. Do not use it.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterQueryNacosProvidersRequest
@@ -11072,13 +11030,8 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures Nacos or retrieves the list of Nacos service providers.</para>
+        /// <para>Queries the list of Nacos service providers through Nacos configuration.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is deprecated. Do not use it.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterQueryNacosProvidersRequest
@@ -11096,13 +11049,8 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures Nacos or retrieves the list of Nacos service providers.</para>
+        /// <para>Queries the list of Nacos service providers through Nacos configuration.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This operation is deprecated. Do not use it.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModelRouterQueryNacosProvidersRequest
@@ -11484,7 +11432,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model Observation / Observation Logs</para>
+        /// <para>Retrieves a list of model observation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11582,7 +11530,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model Observation / Observation Logs</para>
+        /// <para>Retrieves a list of model observation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11680,7 +11628,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model Observation / Observation Logs</para>
+        /// <para>Retrieves a list of model observation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11699,7 +11647,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model Observation / Observation Logs</para>
+        /// <para>Retrieves a list of model observation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11718,7 +11666,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model Observation &gt; Get Observation Metric Data</para>
+        /// <para>Retrieves observability metric data for models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11816,7 +11764,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model Observation &gt; Get Observation Metric Data</para>
+        /// <para>Retrieves observability metric data for models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11914,7 +11862,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model Observation &gt; Get Observation Metric Data</para>
+        /// <para>Retrieves observability metric data for models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11933,7 +11881,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model Observation &gt; Get Observation Metric Data</para>
+        /// <para>Retrieves observability metric data for models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12300,7 +12248,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户管理/停止周期充值订阅</para>
+        /// <para>Stops a periodic recharge subscription for customer management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12346,7 +12294,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户管理/停止周期充值订阅</para>
+        /// <para>Stops a periodic recharge subscription for customer management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12392,7 +12340,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户管理/停止周期充值订阅</para>
+        /// <para>Stops a periodic recharge subscription for customer management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12411,7 +12359,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客户管理/停止周期充值订阅</para>
+        /// <para>Stops a periodic recharge subscription for customer management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12600,7 +12548,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified client\&quot;s information.</para>
+        /// <para>Updates customer information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12623,6 +12571,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Address))
             {
                 body["address"] = request.Address;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedModelGroupConfig))
+            {
+                body["allowedModelGroupConfig"] = request.AllowedModelGroupConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedModels))
             {
@@ -12670,7 +12622,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified client\&quot;s information.</para>
+        /// <para>Updates customer information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12693,6 +12645,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Address))
             {
                 body["address"] = request.Address;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedModelGroupConfig))
+            {
+                body["allowedModelGroupConfig"] = request.AllowedModelGroupConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedModels))
             {
@@ -12740,7 +12696,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified client\&quot;s information.</para>
+        /// <para>Updates customer information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12759,7 +12715,7 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified client\&quot;s information.</para>
+        /// <para>Updates customer information.</para>
         /// </summary>
         /// 
         /// <param name="request">

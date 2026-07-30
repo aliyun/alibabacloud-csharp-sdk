@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterStopSubscriptionRequest : TeaModel {
         /// <summary>
+        /// <para>The type of subscription balance to stop (permanent/monthly).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>permanent</para>
         /// </summary>

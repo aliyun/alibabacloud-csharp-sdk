@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryObservationMetricsRequest : TeaModel {
         /// <summary>
-        /// <para>The API Key ID to use for filtering the results.</para>
+        /// <para>The API key ID used to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>The client ID to use for filtering the results.</para>
+        /// <para>The client ID used to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
-        /// <para>The end time of a custom time range for the query.</para>
+        /// <para>The custom end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-02T00:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The field to use for grouping the results.</para>
+        /// <para>The field by which to group the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The model ID to use for filtering the results.</para>
+        /// <para>The model ID used to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ModelId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the total count of results.</para>
+        /// <para>Specifies whether to return the total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public bool? NeedTotalCount { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results, obtained from the previous response.</para>
+        /// <para>The token for the next query. An empty value indicates the last page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The field to use for sorting the results.</para>
+        /// <para>The field by which to sort the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: <c>ASC</c> (ascending) and <c>DESC</c> (descending).</para>
+        /// <para>The sort direction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderDirection { get; set; }
 
         /// <summary>
-        /// <para>The page number to retrieve.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of results to return per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time of a custom time range for the query.</para>
+        /// <para>The custom start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The time range for the query. Valid values: <c>1h</c>, <c>6h</c>, <c>24h</c>, <c>7d</c>, and <c>30d</c>.</para>
+        /// <para>The time range for the query. Valid values: 1h, 6h, 24h, 7d, and 30d.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24h</para>

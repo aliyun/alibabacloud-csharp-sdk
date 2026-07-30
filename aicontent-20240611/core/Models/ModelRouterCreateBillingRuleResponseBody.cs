@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterCreateBillingRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Contains the details of the billing rule.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string BillingType { get; set; }
 
             /// <summary>
-            /// <para>The delete marker.</para>
+            /// <para>The deletion tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? DeleteTag { get; set; }
 
             /// <summary>
-            /// <para>The effective time of the rule.</para>
+            /// <para>The effective period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the rule.</para>
+            /// <para>The expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01T00:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the rule.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time of the rule.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public object PricingConfig { get; set; }
 
             /// <summary>
-            /// <para>The provider identifier.</para>
+            /// <para>The vendor identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Symbol { get; set; }
 
             /// <summary>
-            /// <para>The version of the rule.</para>
+            /// <para>The version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The fault code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]

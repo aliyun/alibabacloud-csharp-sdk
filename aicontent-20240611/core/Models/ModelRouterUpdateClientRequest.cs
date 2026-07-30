@@ -13,14 +13,24 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The company address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>杭州市</para>
+        /// <para>Hangzhou</para>
         /// </summary>
         [NameInMap("address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of model IDs that the client can use. If this parameter is left empty, the client can use all models.</para>
+        /// <para>The allowed model group configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;model_ids&quot;:[101],&quot;group_ids&quot;:[&quot;mg_xxx&quot;]}</para>
+        /// </summary>
+        [NameInMap("allowedModelGroupConfig")]
+        [Validation(Required=false)]
+        public string AllowedModelGroupConfig { get; set; }
+
+        /// <summary>
+        /// <para>The list of allowed model IDs, separated by commas. An empty value indicates all models are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
@@ -40,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Contact { get; set; }
 
         /// <summary>
+        /// <para>The discount coefficient.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
         /// </summary>
@@ -48,27 +60,27 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? Discount { get; set; }
 
         /// <summary>
-        /// <para>The client name.</para>
+        /// <para>The customer name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>我的客户</para>
+        /// <para>MyCustomer</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>A remark about the client.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>备注</para>
+        /// <para>Remarks</para>
         /// </summary>
         [NameInMap("remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The client\&quot;s status.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterCreateModelRequest : TeaModel {
         /// <summary>
-        /// <para>The API key.</para>
+        /// <para>API Key</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-xxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The base URL.</para>
+        /// <para>Base URL</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The model\&quot;s extended configuration parameters, provided as a JSON string.</para>
+        /// <para>The extension configuration parameters of the model, stored as a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Extensions { get; set; }
 
         /// <summary>
-        /// <para>The supported input and output data types for the model.</para>
+        /// <para>The input and output data types supported by the model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Symbol { get; set; }
 
         /// <summary>
-        /// <para>Tags for the model. Separate multiple tags with commas.</para>
+        /// <para>The tags, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TXT_GEN,DEEP_THINK</para>

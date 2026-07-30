@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterCreateConversationRequest : TeaModel {
         /// <summary>
-        /// <para>The conversation data, provided as a JSON string containing the message history for each model. This parameter is required.</para>
+        /// <para>The conversation data in JSON format, containing message records for each model. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;stream&quot;:true,&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;1+1&quot;}],&quot;model&quot;:&quot;qwen/qwen-max/r0&quot;,&quot;stream_options&quot;:{&quot;include_usage&quot;:true}}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ChatData { get; set; }
 
         /// <summary>
-        /// <para>A list of model IDs, provided as a JSON array string.</para>
+        /// <para>The list of model IDs, specified as a JSON array string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelIds { get; set; }
 
         /// <summary>
-        /// <para>The conversation title. If omitted, a title is automatically generated from the first user message.</para>
+        /// <para>The conversation title. If not specified, the title is automatically extracted from the first user message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

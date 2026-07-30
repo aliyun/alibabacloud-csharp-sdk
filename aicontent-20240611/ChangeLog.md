@@ -1,3 +1,8 @@
+2026-07-30 Version: 7.5.1
+- Update API ModelRouterCreateClient: add request parameters body.allowedModelGroupConfig.
+- Update API ModelRouterUpdateClient: add request parameters body.allowedModelGroupConfig.
+
+
 2026-07-21 Version: 7.5.0
 - Support API ModelRouterCreateSubscription.
 - Support API ModelRouterListSubscriptions.

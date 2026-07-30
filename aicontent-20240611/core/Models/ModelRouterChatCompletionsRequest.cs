@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterChatCompletionsRequest : TeaModel {
         /// <summary>
-        /// <para>The request body, which must be a JSON object.</para>
+        /// <para>The chat request body.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

@@ -36,10 +36,16 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             [Validation(Required=false)]
             public List<ModelRouterQueryNacosProvidersResponseBodyDataModels> Models { get; set; }
             public class ModelRouterQueryNacosProvidersResponseBodyDataModels : TeaModel {
+                /// <summary>
+                /// <para>The extension configuration parameters of the model, stored as key-value pairs for additional model behavior configuration.</para>
+                /// </summary>
                 [NameInMap("extensions")]
                 [Validation(Required=false)]
                 public ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions Extensions { get; set; }
                 public class ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions : TeaModel {
+                    /// <summary>
+                    /// <para>The asynchronous call identifier.</para>
+                    /// </summary>
                     [NameInMap("async")]
                     [Validation(Required=false)]
                     public bool? Async { get; set; }
@@ -57,6 +63,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string Identifier { get; set; }
 
                 /// <summary>
+                /// <para>The input type and output type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
                 /// </summary>
@@ -85,6 +93,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string OutputToken { get; set; }
 
                 /// <summary>
+                /// <para>The feature type or capability category of the model.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Chat</para>
                 /// </summary>
@@ -117,7 +127,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
-        /// <para>The error message code.</para>
+        /// <para>The fault message code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -130,7 +140,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>未知错误</para>
+        /// <para>Unknown error</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]

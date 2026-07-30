@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <summary>
         /// <para>The target balance pool type. Default value: permanent. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>permanent: permanent balance pool (the amount never expires).</description></item>
-        /// <item><description>monthly: monthly balance pool (automatically reset to zero at the beginning of each month).</description></item>
+        /// <item><description>permanent: permanent balance pool. The balance never expires.</description></item>
+        /// <item><description>monthly: monthly balance pool. The balance is automatically reset to zero at the beginning of each month.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string BalanceType { get; set; }
 
         /// <summary>
-        /// <para>The idempotency key. UUID v4 format is recommended. Maximum length: 32 characters. Repeated submissions with the same key are not executed again.</para>
+        /// <para>The idempotency key. UUID v4 format is recommended. Maximum length: 32 characters. Duplicate submissions with the same key are not executed repeatedly.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550e8400e29b41d4a716446655440000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The remark.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Top-up.</para>
+        /// <para>Top-up</para>
         /// </summary>
         [NameInMap("remark")]
         [Validation(Required=false)]
