@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class Model : TeaModel {
         /// <summary>
-        /// <para>The workspace accessibility. Valid values:</para>
+        /// <para>The workspace visibility. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PRIVATE (default): The model is accessible only to you and the administrator of the workspace.</description></item>
-        /// <item><description>PUBLIC: The model is accessible to all members of the workspace.</description></item>
+        /// <item><description>PRIVATE (default): visible only to yourself and administrators within the workspace.</description></item>
+        /// <item><description>PUBLIC: visible to all users in the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The domain where the model is applied, such as nlp (Natural Language Processing) and cv (Computer Vision).</para>
+        /// <para>The domain. Describes the domain of the problem that the model solves, such as nlp (natural language processing) or cv (computer vision).</para>
         /// 
         /// <b>Example:</b>
         /// <para>nlp</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> ExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>The time when the model was created, in UTC. The time follows the ISO 8601 standard.</para>
+        /// <para>The UTC time of model creation, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35Z</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>最后版本更新时间。</para>
+        /// <para>The time when the latest version was updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35Z</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtLatestVersionModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the model was last modified, in UTC. The time follows the ISO 8601 standard.</para>
+        /// <para>The time when the model was last updated in UTC, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35Z</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The labels.</para>
+        /// <para>The label list. This parameter will be deprecated and replaced by Tag.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
@@ -99,14 +99,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>The model description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>情感分析。</para>
+        /// <para>Sentiment analysis</para>
         /// </summary>
         [NameInMap("ModelDescription")]
         [Validation(Required=false)]
         public string ModelDescription { get; set; }
 
         /// <summary>
-        /// <para>The model document.</para>
+        /// <para>The model documentation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://***.md</para>
@@ -129,14 +129,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>The model name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>情感分析</para>
+        /// <para>Sentiment Analysis</para>
         /// </summary>
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The model type, such as checkpoint and LoRA.</para>
+        /// <para>The model type, such as Checkpoint or LoRA.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Checkpoint</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ModelType { get; set; }
 
         /// <summary>
-        /// <para>The sequence number of the model.</para>
+        /// <para>The model sequence number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? OrderNumber { get; set; }
 
         /// <summary>
-        /// <para>The community or organization to which the source model belongs, such as ModelScope or Hugging Face.</para>
+        /// <para>The model origin. Describes the community or organization to which the source model belongs, such as ModelScope or HuggingFace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ModelScope</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1557702098******</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>参数量，单位M。</para>
+        /// <para>The number of parameters, in millions (M).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -196,14 +196,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Provider { get; set; }
 
         /// <summary>
-        /// <para>标签列表</para>
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<Label> Tags { get; set; }
 
         /// <summary>
-        /// <para>The task. The specific issue that the model resolves, such as text-classification.</para>
+        /// <para>The task. Describes the specific problem that the model solves, such as text-classification (text categorization).</para>
         /// 
         /// <b>Example:</b>
         /// <para>text-classifiaction</para>

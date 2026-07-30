@@ -87,19 +87,22 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The display name of the workspace.</para>
+            /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The list of environments in the workspace.</para>
+            /// <para>The list of environments contained in the workspace.</para>
             /// </summary>
             [NameInMap("EnvTypes")]
             [Validation(Required=false)]
             public List<string> EnvTypes { get; set; }
 
             /// <summary>
-            /// <para>The extended information. Currently, this includes TenantId, which represents the tenant ID.</para>
+            /// <para>The extended information. Currently includes TenantId, which indicates the tenant ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;TenantId&quot;: &quot;4286******98&quot;}</para>
@@ -109,7 +112,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public Dictionary<string, object> ExtraInfos { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was created. The time follows the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mm:ss.SSSZ.</para>
+            /// <para>The time when the workspace was created. The time is in the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mm:ss.SSSZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-21T17:12:35.232Z</para>
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was last modified. The time follows the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mmZ.</para>
+            /// <para>The time when the workspace was last modified. The time is in the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mmZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-21T17:12:35.232Z</para>

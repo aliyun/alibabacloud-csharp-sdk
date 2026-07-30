@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The classification of the configuration item. The following classifications are supported:</para>
+        /// <para>The category of the configuration item. The following categories are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>CommonResourceConfig: common resource configurations</para>
-        /// </description></item>
-        /// <item><description><para>DLCAutoRecycle: automatic DLC resource recycling</para>
-        /// </description></item>
-        /// <item><description><para>DLCPriorityConfig: DLC priority settings</para>
-        /// </description></item>
-        /// <item><description><para>DSWPriorityConfig: DSW priority settings</para>
-        /// </description></item>
-        /// <item><description><para>QuotaMaximumDuration: the maximum runtime of a DLC task for a quota</para>
-        /// </description></item>
-        /// <item><description><para>CommonTagConfig: tag settings</para>
-        /// </description></item>
+        /// <item><description>CommonResourceConfig: common resource configuration</description></item>
+        /// <item><description>DLCAutoRecycle: DLC automatic reclamation</description></item>
+        /// <item><description>DLCPriorityConfig: DLC priority settings</description></item>
+        /// <item><description>DSWPriorityConfig: DSW priority settings</description></item>
+        /// <item><description>QuotaMaximumDuration: maximum runtime duration configuration for DLC jobs in a quota</description></item>
+        /// <item><description>CommonTagConfig: tag settings</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,16 +30,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The key of the configuration item. The following keys are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>tempStoragePath: the temporary storage path. This key applies only when CategoryName is CommonResourceConfig.</para>
-        /// </description></item>
-        /// <item><description><para>isAutoRecycle: the automatic recycling configuration. This key applies only when CategoryName is DLCAutoRecycle.</para>
-        /// </description></item>
-        /// <item><description><para>priorityConfig: the priority configuration. This key applies only when CategoryName is DLCPriorityConfig or DSWPriorityConfig.</para>
-        /// </description></item>
-        /// <item><description><para>quotaMaximumDuration: the maximum runtime of a DLC task for a quota. This key applies only when CategoryName is QuotaMaximumDuration.</para>
-        /// </description></item>
-        /// <item><description><para>predefinedTags: the predefined tags for the workspace. Resources that you create must have tags.</para>
-        /// </description></item>
+        /// <item><description>tempStoragePath: the temporary storage path. This key is valid only when CategoryName is set to CommonResourceConfig.</description></item>
+        /// <item><description>isAutoRecycle: the automatic reclamation configuration. This key is valid only when CategoryName is set to DLCAutoRecycle.</description></item>
+        /// <item><description>priorityConfig: the priority configuration. This key is valid only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</description></item>
+        /// <item><description>quotaMaximumDuration: the maximum runtime duration configuration for DLC jobs in a quota. This key is valid only when CategoryName is set to QuotaMaximumDuration.</description></item>
+        /// <item><description>predefinedTags: the preset tags for the workspace. Resources created in the workspace must include these tags.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,23 +54,35 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string ConfigValue { get; set; }
 
+        /// <summary>
+        /// <para>The time when the configuration item was created, in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-07-17T06:53:04.000Z</para>
+        /// </summary>
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
 
+        /// <summary>
+        /// <para>The time when the configuration item was last modified, in UTC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-07-17T06:55:04.000Z</para>
+        /// </summary>
         [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The list of tags for the configuration item.</para>
+        /// <para>The list of labels for the configuration item.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<GetConfigResponseBodyLabels> Labels { get; set; }
         public class GetConfigResponseBodyLabels : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The key of the label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -91,7 +92,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The value of the label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>

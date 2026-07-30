@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>The MIME type of the file. It includes a type and a subtype.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>image/png</para>
+        /// <para>text/png</para>
         /// </summary>
         [NameInMap("ContentType")]
         [Validation(Required=false)]
@@ -116,8 +116,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;ImageHeight&quot;: 1080,
-        ///     &quot;ImageWidth&quot;: 1920
+        ///     &quot;Image&quot;:
+        ///     {
+        ///         &quot;Width&quot;: 1920,
+        ///         &quot;Height&quot;: 1080,
+        ///         &quot;Channel&quot;: 3
+        ///     }
         /// }</para>
         /// </summary>
         [NameInMap("MetaAttributes")]
@@ -182,19 +186,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>{
         ///     &quot;ai&quot;:
         ///     [
-        ///         &quot;Lane line&quot;,
-        ///         &quot;Water horse&quot;,
-        ///         &quot;Sunny day&quot;
+        ///         &quot;Felis catus&quot;,
+        ///         &quot;Shorthair&quot;
         ///     ],
         ///     &quot;user&quot;:
         ///     [
-        ///         &quot;Everett&quot;,
-        ///         &quot;Intelligent driving Dataset 1&quot;,
-        ///         &quot;Cloudy day&quot;
-        ///     ],
-        ///     &quot;user-delete-ai-tags&quot;:
-        ///     [
-        ///         &quot;Sunny day&quot;
+        ///         &quot;cat&quot;,
+        ///         &quot;White&quot;
         ///     ]
         /// }</para>
         /// </summary>

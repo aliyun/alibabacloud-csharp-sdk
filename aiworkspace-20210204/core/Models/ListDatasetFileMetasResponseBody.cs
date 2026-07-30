@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetFileMetasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed metadata of the dataset files.</para>
+        /// <para>The list of dataset file metadata details.</para>
         /// </summary>
         [NameInMap("DatasetFileMetas")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// <para>The version name of the dataset.</para>
+        /// <para>The dataset version name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results returned per page when you use the \<c>NextToken\\</c> parameter.</para>
+        /// <para>The maximum number of results returned per request when using NextToken-based pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. If the number of results that match the query exceeds the page size, this token is returned. To retrieve the next page of data, use the returned token in your next request. Repeat this process until no token is returned, which indicates that all data has been retrieved.</para>
+        /// <para>The pagination token. If the results that match the query conditions exceed the page size, this pagination token is returned. Pass the returned token value as a request parameter to retrieve the next page, until no token is returned, which indicates that all data has been retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90******-f5c5-4cd4-927e-1f45e1cb8b62_1729644433000</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The current page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

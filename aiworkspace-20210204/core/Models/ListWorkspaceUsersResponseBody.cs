@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of users that meet the filter condition.</para>
+        /// <para>The number of users that match the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

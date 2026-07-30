@@ -857,7 +857,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a code configuration in PAI using a code branch and commit ID from a Git repository. This configuration can then be referenced in DLC jobs.</para>
+        /// <para>Creates a code configuration in PAI. You can configure a Git code branch and CommitId. After the configuration is created, it can be referenced in DLC jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -943,7 +943,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a code configuration in PAI using a code branch and commit ID from a Git repository. This configuration can then be referenced in DLC jobs.</para>
+        /// <para>Creates a code configuration in PAI. You can configure a Git code branch and CommitId. After the configuration is created, it can be referenced in DLC jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1029,7 +1029,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a code configuration in PAI using a code branch and commit ID from a Git repository. This configuration can then be referenced in DLC jobs.</para>
+        /// <para>Creates a code configuration in PAI. You can configure a Git code branch and CommitId. After the configuration is created, it can be referenced in DLC jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1048,7 +1048,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a code configuration in PAI using a code branch and commit ID from a Git repository. This configuration can then be referenced in DLC jobs.</para>
+        /// <para>Creates a code configuration in PAI. You can configure a Git code branch and CommitId. After the configuration is created, it can be referenced in DLC jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7509,7 +7509,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified code source configuration.</para>
+        /// <para>Retrieves the details of a code source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7549,7 +7549,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified code source configuration.</para>
+        /// <para>Retrieves the details of a code source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7589,7 +7589,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified code source configuration.</para>
+        /// <para>Retrieves the details of a code source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7608,7 +7608,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified code source configuration.</para>
+        /// <para>Retrieves the details of a code source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7627,7 +7627,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configurations of a workspace.</para>
+        /// <para>Retrieves the workspace configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7681,7 +7681,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configurations of a workspace.</para>
+        /// <para>Retrieves the workspace configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7735,7 +7735,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configurations of a workspace.</para>
+        /// <para>Retrieves the workspace configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7754,7 +7754,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configurations of a workspace.</para>
+        /// <para>Retrieves the workspace configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9611,6 +9611,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 query["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerAccessKeyId))
+            {
+                query["CallerAccessKeyId"] = request.CallerAccessKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerSecurityToken))
+            {
+                query["CallerSecurityToken"] = request.CallerSecurityToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerType))
             {
                 query["CallerType"] = request.CallerType;
@@ -9690,6 +9698,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
             {
                 query["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerAccessKeyId))
+            {
+                query["CallerAccessKeyId"] = request.CallerAccessKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerSecurityToken))
+            {
+                query["CallerSecurityToken"] = request.CallerSecurityToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerType))
             {
@@ -10157,7 +10173,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of code source configurations with support for paging, sorting, and filtering.</para>
+        /// <para>Queries a list of code configurations. This operation supports pagination, sorting, and conditional filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10223,7 +10239,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of code source configurations with support for paging, sorting, and filtering.</para>
+        /// <para>Queries a list of code configurations. This operation supports pagination, sorting, and conditional filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10289,7 +10305,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of code source configurations with support for paging, sorting, and filtering.</para>
+        /// <para>Queries a list of code configurations. This operation supports pagination, sorting, and conditional filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10308,7 +10324,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of code source configurations with support for paging, sorting, and filtering.</para>
+        /// <para>Queries a list of code configurations. This operation supports pagination, sorting, and conditional filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10327,7 +10343,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the configurations for a workspace.</para>
+        /// <para>Retrieves the list of workspace configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10385,7 +10401,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the configurations for a workspace.</para>
+        /// <para>Retrieves the list of workspace configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10443,7 +10459,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the configurations for a workspace.</para>
+        /// <para>Retrieves the list of workspace configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10462,7 +10478,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the configurations for a workspace.</para>
+        /// <para>Retrieves the list of workspace configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10743,7 +10759,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files in a dataset.</para>
+        /// <para>Queries the list of dataset files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10923,7 +10939,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files in a dataset.</para>
+        /// <para>Queries the list of dataset files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11103,7 +11119,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files in a dataset.</para>
+        /// <para>Queries the list of dataset files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11122,7 +11138,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the files in a dataset.</para>
+        /// <para>Queries the list of dataset files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11303,7 +11319,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists dataset jobs.</para>
+        /// <para>Retrieves a list of dataset tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11381,7 +11397,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists dataset jobs.</para>
+        /// <para>Retrieves a list of dataset tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11459,7 +11475,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists dataset jobs.</para>
+        /// <para>Retrieves a list of dataset tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11478,7 +11494,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists dataset jobs.</para>
+        /// <para>Retrieves a list of dataset tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14663,7 +14679,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists users that can be added as members to a workspace.</para>
+        /// <para>Lists users who have not joined a workspace and can be added as workspace members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14713,7 +14729,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists users that can be added as members to a workspace.</para>
+        /// <para>Lists users who have not joined a workspace and can be added as workspace members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14763,7 +14779,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists users that can be added as members to a workspace.</para>
+        /// <para>Lists users who have not joined a workspace and can be added as workspace members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14782,7 +14798,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists users that can be added as members to a workspace.</para>
+        /// <para>Lists users who have not joined a workspace and can be added as workspace members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16283,7 +16299,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a code source.</para>
+        /// <para>Updates a code source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16361,7 +16377,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a code source.</para>
+        /// <para>Updates a code source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16439,7 +16455,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a code source.</para>
+        /// <para>Updates a code source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16458,7 +16474,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a code source.</para>
+        /// <para>Updates a code source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">

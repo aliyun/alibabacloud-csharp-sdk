@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateCodeSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the code source.</para>
+        /// <para>The ID of the code source configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code-20********</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeSourceId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40325405-579C-4D82****</para>

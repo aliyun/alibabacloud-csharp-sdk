@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
     public class ListWorkspacesRequest : TeaModel {
         /// <summary>
         /// <para>The list of return fields for workspace details. This parameter limits the workspace properties returned in the result.
-        /// Separate multiple properties with commas (,). Currently, only Id is supported, which represents the workspace ID.</para>
+        /// Separate multiple properties with commas (,). Currently, only Id is supported, which indicates the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Id</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Option { get; set; }
 
         /// <summary>
-        /// <para>The sort order for the specified sort field in a paged query. Valid values:</para>
+        /// <para>The sorting order for the specified sorting field during paging. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ASC (default): ascending order.</description></item>
         /// <item><description>DESC: descending order.</description></item>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Default value: 20.</para>
+        /// <para>The number of entries per page for paging. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting in a paged query. Default value: GmtCreateTime. Valid values:</para>
+        /// <para>The sorting field for paging. Default value: GmtCreateTime. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>GmtCreateTime (default): sorts by creation time.</description></item>
         /// <item><description>GmtModifiedTime: sorts by modification time.</description></item>
@@ -120,6 +120,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The user ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>17*****1743</para>
+        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

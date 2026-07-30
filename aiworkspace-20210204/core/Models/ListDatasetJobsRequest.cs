@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the dataset version.</para>
+        /// <para>The dataset version name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The job action.</para>
+        /// <para>The task action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SemanticIndex</para>
@@ -30,12 +30,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string JobAction { get; set; }
 
         /// <summary>
-        /// <para>The order in which to sort the results. This parameter is used with <c>SortBy</c>. Default: DESC.</para>
+        /// <para>The sorting order for the specified sorting field in a paged query. Used together with SortBy. Default value: DESC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ASC: ascending order.</para>
-        /// </description></item>
-        /// <item><description><para>DESC: descending order.</para>
-        /// </description></item>
+        /// <item><description>ASC: ascending order.</description></item>
+        /// <item><description>DESC: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages are 1-indexed. Default: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results. By default, the results are sorted by <c>CreateTime</c> in descending order.</para>
+        /// <para>The sort field. By default, results are sorted by creation time in descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>
@@ -76,7 +74,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The job status.</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -85,12 +83,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to return task logs.</para>
+        /// </summary>
         [NameInMap("WithLogs")]
         [Validation(Required=false)]
         public bool? WithLogs { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The workspace ID. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>

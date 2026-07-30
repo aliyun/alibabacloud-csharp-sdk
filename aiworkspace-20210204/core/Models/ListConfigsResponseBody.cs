@@ -17,18 +17,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<ListConfigsResponseBodyConfigs> Configs { get; set; }
         public class ListConfigsResponseBodyConfigs : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>wc-95******o36ylr</para>
+            /// </summary>
+            [NameInMap("ConfigId")]
+            [Validation(Required=false)]
+            public string ConfigId { get; set; }
+
+            /// <summary>
             /// <para>The key of the configuration item. The following keys are supported:</para>
             /// <list type="bullet">
-            /// <item><description><para>tempStoragePath: The path for temporary storage. This key is valid only when CategoryName is set to CommonResourceConfig.</para>
-            /// </description></item>
-            /// <item><description><para>isAutoRecycle: The automatic recycling configuration. This key is valid only when CategoryName is set to DLCAutoRecycle.</para>
-            /// </description></item>
-            /// <item><description><para>priorityConfig: The priority configuration. This key is valid only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</para>
-            /// </description></item>
-            /// <item><description><para>quotaMaximumDuration: The configuration for the maximum runtime of a DLC task in a quota. This key is valid only when CategoryName is set to QuotaMaximumDuration.</para>
-            /// </description></item>
-            /// <item><description><para>predefinedTags: The predefined labels for the workspace. Resources that you create must have these labels.</para>
-            /// </description></item>
+            /// <item><description>tempStoragePath: temporary storage path. This ConfigKey can be used only when CategoryName is set to CommonResourceConfig.</description></item>
+            /// <item><description>isAutoRecycle: automatic reclamation configuration. This ConfigKey can be used only when CategoryName is set to DLCAutoRecycle.</description></item>
+            /// <item><description>priorityConfig: priority configuration. This ConfigKey can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</description></item>
+            /// <item><description>quotaMaximumDuration: maximum runtime duration configuration for DLC jobs in a quota. This ConfigKey can be used only when CategoryName is set to QuotaMaximumDuration.</description></item>
+            /// <item><description>predefinedTags: preset tags for the workspace. Resources that are created must include these tags.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ConfigKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the configuration item.</para>
+            /// <para>The configuration value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://***</para>
@@ -48,10 +51,22 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             [Validation(Required=false)]
             public string ConfigValue { get; set; }
 
+            /// <summary>
+            /// <para>The UTC time when the configuration item was created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-05-12T07:59:41.000Z</para>
+            /// </summary>
             [NameInMap("GmtCreateTime")]
             [Validation(Required=false)]
             public string GmtCreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The UTC time when the configuration item was last modified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-07-28T03:44:10.000Z</para>
+            /// </summary>
             [NameInMap("GmtModifiedTime")]
             [Validation(Required=false)]
             public string GmtModifiedTime { get; set; }
@@ -88,7 +103,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A******C83E</para>
@@ -98,7 +113,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned configuration items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

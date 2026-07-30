@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListCodeSourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The display name of the code source configuration. Fuzzy match is supported.</para>
+        /// <para>The display name of the code configuration. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyDataSource</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>The sort order for the specified field in a paged query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ASC (default): Ascending order.</para>
-        /// </description></item>
-        /// <item><description><para>DESC: Descending order.</para>
-        /// </description></item>
+        /// <item><description>ASC (default): ascending order.</description></item>
+        /// <item><description>DESC: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value starts from 1. The default value is 1.</para>
+        /// <para>The page number of the code configuration list. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The default value is 20.</para>
+        /// <para>The number of entries per page in a paged query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -56,16 +54,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field to use for sorting. Valid values:</para>
+        /// <para>The field used for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>GmtModifyTime: The time when the code source was last modified.</para>
-        /// </description></item>
-        /// <item><description><para>DisplayName: The display name.</para>
-        /// </description></item>
-        /// <item><description><para>CodeSourceId: The code source ID.</para>
-        /// </description></item>
-        /// <item><description><para>GmtCreateTime (default): The time when the code source was created.</para>
-        /// </description></item>
+        /// <item><description>GmtModifyTime: the time when the code source was last modified.</description></item>
+        /// <item><description>DisplayName: the display name.</description></item>
+        /// <item><description>CodeSourceId: the code source ID.</description></item>
+        /// <item><description>GmtCreateTime (default): the time when the code source was created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +70,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The workspace ID. This parameter is required. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>

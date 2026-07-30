@@ -9,12 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateCodeSourceRequest : TeaModel {
+        /// <summary>
+        /// <para>The clone mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0 (default): creates a new subdirectory.</description></item>
+        /// <item><description>1: tiles to the current directory.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("CloneType")]
         [Validation(Required=false)]
         public int? CloneType { get; set; }
 
         /// <summary>
-        /// <para>The name of the code branch.</para>
+        /// <para>The branch name of the code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev</para>
@@ -24,7 +34,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeBranch { get; set; }
 
         /// <summary>
-        /// <para>The commit ID.</para>
+        /// <para>The commit ID of the code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3a6*****</para>
@@ -44,7 +54,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeRepo { get; set; }
 
         /// <summary>
-        /// <para>The access token for the username.</para>
+        /// <para>The access token associated with the username.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -54,7 +64,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeRepoAccessToken { get; set; }
 
         /// <summary>
-        /// <para>The username for the code repository.</para>
+        /// <para>The username used to access the access code repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo-user</para>
@@ -64,17 +74,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeRepoUserName { get; set; }
 
         /// <summary>
-        /// <para>The description of the code source.</para>
+        /// <para>The description of the code source configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Training code for XX</para>
+        /// <para>用于XX的训练代码</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the code source.</para>
+        /// <para>The name of the code source configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyCodeSource1</para>

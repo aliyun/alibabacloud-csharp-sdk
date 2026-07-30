@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetPermissionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the permission. The name is unique within the same region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>.</para>
+        /// <para>The name of the permission, which is unique within the same region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PaiDLC:ListJobs</para>
@@ -29,12 +29,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// <summary>
             /// <para>The access type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>PUBLIC: All members in the current workspace can perform the operation.</para>
-            /// </description></item>
-            /// <item><description><para>PRIVATE: Only the creator can perform the operation.</para>
-            /// </description></item>
-            /// <item><description><para>ANY: Both the creator and non-creators can perform the operation.</para>
-            /// </description></item>
+            /// <item><description>PUBLIC: All members in the current workspace can perform operations.</description></item>
+            /// <item><description>PRIVATE: Only the creator can perform operations.</description></item>
+            /// <item><description>ANY: Both the creator and non-creators can perform operations.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -46,13 +43,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
             /// <summary>
             /// <para>The access type.
-            /// This parameter is invalid when Accessibility is set to PUBLIC because all users can perform the operation.
+            /// When Accessibility is set to PUBLIC, all users can perform operations and this value does not take effect.
             /// When Accessibility is set to PRIVATE, EntityAccessType supports the following values:</para>
             /// <list type="bullet">
-            /// <item><description><para>CREATOR: Only the creator can perform the operation.</para>
-            /// </description></item>
-            /// <item><description><para>ANY: Both the creator and non-creators can perform the operation.</para>
-            /// </description></item>
+            /// <item><description>CREATOR: Only the creator can perform operations.</description></item>
+            /// <item><description>ANY: Both the creator and non-creators can perform operations.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
