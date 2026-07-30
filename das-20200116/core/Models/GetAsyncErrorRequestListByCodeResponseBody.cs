@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Indicates whether the asynchronous request was complete.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -46,8 +48,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Indicates whether the asynchronous request failed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,8 +64,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Indicates whether the asynchronous request was complete. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,9 +119,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The state of the asynchronous request. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>RUNNING</b></description></item>
-            /// <item><description><b>SUCCESS</b></description></item>
-            /// <item><description><b>FAIL</b></description></item>
+            /// <item><description><para><b>RUNNING</b></para>
+            /// </description></item>
+            /// <item><description><para><b>SUCCESS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>FAIL</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,7 +149,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -163,8 +172,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

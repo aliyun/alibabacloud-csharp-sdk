@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeTopHotKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ConsoleContext { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end of the query time range, specified as a UNIX timestamp in milliseconds.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
         /// <item><description><para>The end time must be later than the start time.</para>
         /// </description></item>
-        /// <item><description><para>Only data within the last four days can be queried.</para>
+        /// <item><description><para>You can query data within the last four days.</para>
         /// </description></item>
-        /// <item><description><para>The maximum interval between the <b>start time</b> and the** end time** is 3 hours.</para>
+        /// <item><description><para>The maximum time interval between <b>StartTime</b> and <b>EndTime</b> is three hours.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraDB for Redis instance.</para>
+        /// <para>The ID of the Redis instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data shard on the ApsaraDB for Redis instance.</para>
+        /// <para>The ID of the data shard of the Redis instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-****-db-0</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start of the query time range, specified as a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

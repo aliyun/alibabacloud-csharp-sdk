@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The database name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>school</para>
+                /// <para>testdb</para>
                 /// </summary>
                 [NameInMap("DatabaseName")]
                 [Validation(Required=false)]
@@ -280,8 +280,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

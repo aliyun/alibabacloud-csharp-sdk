@@ -36,8 +36,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the operation is active. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The IP address of the client.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>219.143.177.4:52324</para>
+                /// <para>219.143.XX.XX:52324</para>
                 /// </summary>
                 [NameInMap("Client")]
                 [Validation(Required=false)]
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The host.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>a79******.cloud.et15:3328</para>
+                /// <para>a79****.cloud.et15:3328</para>
                 /// </summary>
                 [NameInMap("Host")]
                 [Validation(Required=false)]
@@ -117,8 +119,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the operation is marked as terminated.</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -162,7 +166,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The architecture of the operating system.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>amd64</para>
+                /// <para>AMD64</para>
                 /// </summary>
                 [NameInMap("OsArch")]
                 [Validation(Required=false)]
@@ -221,7 +225,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The ID of the data shard.</para>
                 /// <remarks>
-                /// <para> This parameter is returned for sharded cluster instances.</para>
+                /// <para>This parameter is returned for sharded cluster instances.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -278,7 +282,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The total number of sessions.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>55</para>
+                /// <para>11</para>
                 /// </summary>
                 [NameInMap("TotalCount")]
                 [Validation(Required=false)]
@@ -301,7 +305,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. Otherwise, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, <b>Successful</b> is returned. Otherwise, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -324,8 +328,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

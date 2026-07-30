@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetInstanceGroupInspectReportListRequest : TeaModel {
         /// <summary>
+        /// <para>Optional. By default, the default Agent is used. You can also specify the Agent that was generated after DAS Agent was activated or that was manually created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ag-472T0DxtmjIxxxxx</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The end timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>Reserved parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -35,7 +40,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
+        [NameInMap("ReportType")]
+        [Validation(Required=false)]
+        public string ReportType { get; set; }
+
         /// <summary>
+        /// <para>The start timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -46,8 +46,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -60,8 +62,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether DAS Enterprise Edition is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -126,7 +130,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The database instances for which the automatic fragment recycling feature is enabled and DAS Enterprise Edition is disabled.</para>
             /// <remarks>
-            /// <para> Automatic fragment recycling tasks are run on this type of database instances only if DAS Enterprise Edition is enabled for the database instances again.</para>
+            /// <para>Automatic fragment recycling tasks are run on this type of database instances only if DAS Enterprise Edition is enabled for the database instances again.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("HasEnableRuleButNotDasProList")]
@@ -136,8 +140,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -150,8 +156,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether DAS Enterprise Edition is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -206,7 +214,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The number of database instances that do not exist or for which the automatic fragment recycling feature has never been enabled.</para>
             /// <remarks>
-            /// <para> If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</para>
+            /// <para>If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -253,8 +261,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>:</description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>:</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -267,8 +277,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether DAS Enterprise Edition is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -325,7 +337,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -348,8 +360,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

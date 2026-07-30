@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</para>
+        /// <para>The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The metric whose trend you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>count</b>: the number of executions.</description></item>
-        /// <item><description><b>avgRt</b>: the average execution duration.</description></item>
-        /// <item><description><b>rtRate</b>: the execution duration percentage.</description></item>
-        /// <item><description><b>rowsExamined</b>: the total number of scanned rows.</description></item>
+        /// <item><description><para><b>count</b>: the number of executions.</para>
+        /// </description></item>
+        /// <item><description><para><b>avgRt</b>: the average execution duration.</para>
+        /// </description></item>
+        /// <item><description><para><b>rtRate</b>: the execution duration percentage.</para>
+        /// </description></item>
+        /// <item><description><para><b>rowsExamined</b>: the total number of scanned rows.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> This parameter is required if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL clusters.</para>
+        /// <para>This parameter is required if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class ModifySecurityIPGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The IP addresses in the whitelist template.</para>
+        /// <remarks>
+        /// <para>Separate multiple IP addresses with commas (,). A maximum of 1,000 IP addresses or CIDR blocks can be added to all IP address whitelists.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string GIpList { get; set; }
 
         /// <summary>
+        /// <para>The name of the IP address whitelist template. The name must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description><para>It can contain lowercase letters, digits, and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a letter and end with a letter or a digit.</para>
+        /// </description></item>
+        /// <item><description><para>It must be 2 to 120 characters in length.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter overwrites the initial value.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +46,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string GlobalIgName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the IP address whitelist template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string GlobalSecurityGroupId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

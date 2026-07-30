@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The error code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>-1001</b>: indicates that the specified parameter is invalid.</description></item>
-            /// <item><description><b>-91029</b>: indicates that a system error occurred.</description></item>
+            /// <item><description><para><b>-1001</b>: indicates that the specified parameter is invalid.</para>
+            /// </description></item>
+            /// <item><description><para><b>-91029</b>: indicates that a system error occurred.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,8 +55,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Indicates whether the request initiated to configure the automatic SQL optimization feature was successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +73,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,8 +96,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

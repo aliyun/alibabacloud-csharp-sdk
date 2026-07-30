@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DeleteStopGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The ID that can uniquely identify the DBGateway. You can obtain the DBGateway ID by calling the <a href="https://help.aliyun.com/document_detail/230669.html">DescribeCloudbenchTask</a> operation. The DBGateway ID is the value of the <b>ClientGatewayId</b> field in the response.</para>
+        /// <para>The unique ID of the database gateway.</para>
+        /// <para>Note: You can get this ID from the <c>ClientGatewayId</c> field in the response of the <a href="https://help.aliyun.com/document_detail/230669.html">DescribeCloudbenchTask</a>  API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

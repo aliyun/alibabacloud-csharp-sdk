@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database instance IDs.</para>
         /// <remarks>
-        /// <para> Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <c>[\\&quot;Instance ID1\\&quot;, \\&quot;Instance ID2\\&quot;]</c>.</para>
+        /// <para>Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <c>[\\&quot;Instance ID1\\&quot;, \\&quot;Instance ID2\\&quot;]</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The ID of the asynchronous request.</para>
         /// <remarks>
-        /// <para> Asynchronous calls do not immediately return the complete results. To obtain the complete results, you must use the value of <b>ResultId</b> returned in the response to re-initiate the call until the value of <b>isFinish</b> is <b>true</b>.**** In this case, you must call this operation at least twice.</para>
+        /// <para>Asynchronous calls do not immediately return the complete results. To obtain the complete results, you must use the value of <b>ResultId</b> returned in the response to re-initiate the call until the value of <b>isFinish</b> is <b>true</b>.\<em>\</em>\<em>\</em> In this case, you must call this operation at least twice.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

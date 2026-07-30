@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The threshold for the number of active sessions.</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter and CpuUsage are in the <b>OR</b> relationship, set this parameter to an integer that is greater than or equal to 16.</description></item>
-        /// <item><description>If this parameter and CpuUsage are in the <b>AND</b> relationship, set this parameter to an integer that is greater than or equal to 2.</description></item>
+        /// <item><description><para>If this parameter and CpuUsage are in the <b>OR</b> relationship, set this parameter to an integer that is greater than or equal to 16.</para>
+        /// </description></item>
+        /// <item><description><para>If this parameter and CpuUsage are in the <b>AND</b> relationship, set this parameter to an integer that is greater than or equal to 2.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,11 +62,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Specifies whether to terminate abnormal SQL statements in execution at the same time. Valid values:</para>
         /// <remarks>
-        /// <para> Abnormal SQL statements use the same template as the SQL statements to be throttled.</para>
+        /// <para>Abnormal SQL statements use the same template as the SQL statements to be throttled.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -88,8 +92,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AND</b></description></item>
-        /// <item><description><b>OR</b></description></item>
+        /// <item><description><para><b>AND</b></para>
+        /// </description></item>
+        /// <item><description><para><b>OR</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -114,7 +120,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database instance IDs.</para>
         /// <remarks>
-        /// <para> Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <c>[\\&quot;Instance ID1\\&quot;, \\&quot;Instance ID2\\&quot;]</c>.</para>
+        /// <para>Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <c>[\\&quot;Instance ID1\\&quot;, \\&quot;Instance ID2\\&quot;]</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -139,7 +145,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The ID of the asynchronous request.</para>
         /// <remarks>
-        /// <para> You can leave this parameter empty when you call the operation to initiate the request for the first time, and use the value of this parameter contained in the response to the first request for subsequent requests.</para>
+        /// <para>You can leave this parameter empty when you call the operation to initiate the request for the first time, and use the value of this parameter contained in the response to the first request for subsequent requests.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

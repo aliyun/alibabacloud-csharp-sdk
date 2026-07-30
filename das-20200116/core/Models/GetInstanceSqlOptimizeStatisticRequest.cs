@@ -23,11 +23,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Specifies whether to filter instances for which DAS Enterprise Edition is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set this parameter to <b>true</b>, only database instances for which DAS Enterprise Edition is disabled are queried. If you set this parameter to <b>false</b>, all database instances are queried.</para>
+        /// <para>If you set this parameter to <b>true</b>, only database instances for which DAS Enterprise Edition is disabled are queried. If you set this parameter to <b>false</b>, all database instances are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database instance ID.</para>
         /// <remarks>
-        /// <para> The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</para>
+        /// <para>The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.</para>
+        /// <para>For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The duration threshold for automatic SQL optimization events. After this parameter is specified, the system collects statistics on automatic SQL optimization events whose duration does not exceed the specified threshold.</para>
         /// <remarks>
-        /// <para> This parameter is a reserved parameter and does not take effect.</para>
+        /// <para>This parameter is a reserved parameter and does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,11 +93,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Specifies whether to merge automatic SQL optimization events. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: merges automatic SQL optimization events.</description></item>
-        /// <item><description><b>false</b>: does not merge automatic SQL optimization events.</description></item>
+        /// <item><description><para><b>true</b>: merges automatic SQL optimization events.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: does not merge automatic SQL optimization events.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is a reserved parameter and does not take effect.</para>
+        /// <para>This parameter is a reserved parameter and does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

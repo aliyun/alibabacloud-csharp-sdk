@@ -33,15 +33,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID. For ApsaraDB for MongoDB instances, you can use this parameter to specify a node for storage analysis. You can call the <a href="https://help.aliyun.com/document_detail/123802.html">DescribeRoleZoneInfo</a> operation to query the information about nodes of an ApsaraDB for MongoDB instance.</para>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to a value in the <b>InsName</b> format, such as <c>d-bp1872fa24d5****</c>, you can call this operation to analyze the hidden node that corresponds to the node ID.</description></item>
-        /// <item><description>If you set this parameter to a value in the <c>InsName#RoleId</c> format, such as <c>d-bp1872fa24d5****#299****5</c>, you can call this operation to analyze the specified node.</description></item>
+        /// <item><description><para>If you set this parameter to a value in the <b>InsName</b> format, such as <c>d-bp1872fa24d5****</c>, you can call this operation to analyze the hidden node that corresponds to the node ID.</para>
+        /// </description></item>
+        /// <item><description><para>If you set this parameter to a value in the <c>InsName#RoleId</c> format, such as <c>d-bp1872fa24d5****#299****5</c>, you can call this operation to analyze the specified node.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you run a storage analysis task on an ApsaraDB for MongoDB replica set instance and you do not specify this parameter, only the hidden node of the instance is analyzed by default. If you run a storage analysis task on an ApsaraDB for MongoDB sharded cluster instance, we recommend that you set this parameter to specify a node.</para>
+        /// <para>If you run a storage analysis task on an ApsaraDB for MongoDB replica set instance and you do not specify this parameter, only the hidden node of the instance is analyzed by default. If you run a storage analysis task on an ApsaraDB for MongoDB sharded cluster instance, we recommend that you set this parameter to specify a node.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>23302528</para>
+        /// <para>d-bp1872fa24d5****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

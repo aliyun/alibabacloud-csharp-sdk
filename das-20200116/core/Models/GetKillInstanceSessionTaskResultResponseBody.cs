@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The node ID.</para>
             /// <remarks>
-            /// <para> This parameter is returned only if the instance is a PolarDB for MySQL cluster.</para>
+            /// <para>This parameter is returned only if the instance is a PolarDB for MySQL cluster.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -152,14 +152,22 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The description of the session when the session was terminated.</para>
                 /// <list type="bullet">
-                /// <item><description><b>SESSION_KILLED</b>: The session is terminated.</description></item>
-                /// <item><description><b>SESSION_EXPIRED</b>: The session has expired.</description></item>
-                /// <item><description><b>SESSION_NO_PERMISSION</b>: The account used to terminate the session has insufficient permissions.</description></item>
-                /// <item><description><b>SESSION_ACCOUNT_ERROR</b>: The account or password used to terminate the session is invalid.</description></item>
-                /// <item><description><b>SESSION_IGNORED_USER</b>: The session of the account does not need to be terminated.</description></item>
-                /// <item><description><b>SESSION_INTERNAL_USER_OR_COMMAND</b>: The session is a session initiated by or a command run by an Alibaba Cloud O\&amp;M account.</description></item>
-                /// <item><description><b>SESSION_KILL_TASK_TIMEOUT</b>: Timeout occurs when the session is terminated.</description></item>
-                /// <item><description><b>SESSION_OTHER_ERROR</b>: Other errors occurred.</description></item>
+                /// <item><description><para><b>SESSION_KILLED</b>: The session is terminated.</para>
+                /// </description></item>
+                /// <item><description><para><b>SESSION_EXPIRED</b>: The session has expired.</para>
+                /// </description></item>
+                /// <item><description><para><b>SESSION_NO_PERMISSION</b>: The account used to terminate the session has insufficient permissions.</para>
+                /// </description></item>
+                /// <item><description><para><b>SESSION_ACCOUNT_ERROR</b>: The account or password used to terminate the session is invalid.</para>
+                /// </description></item>
+                /// <item><description><para><b>SESSION_IGNORED_USER</b>: The session of the account does not need to be terminated.</para>
+                /// </description></item>
+                /// <item><description><para><b>SESSION_INTERNAL_USER_OR_COMMAND</b>: The session is a session initiated by or a command run by an Alibaba Cloud O\&amp;M account.</para>
+                /// </description></item>
+                /// <item><description><para><b>SESSION_KILL_TASK_TIMEOUT</b>: Timeout occurs when the session is terminated.</para>
+                /// </description></item>
+                /// <item><description><para><b>SESSION_OTHER_ERROR</b>: Other errors occurred.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -214,7 +222,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The session IDs.</para>
             /// <remarks>
-            /// <para> If all sessions are terminated, the IDs of all sessions on the instance or node are returned.</para>
+            /// <para>If all sessions are terminated, the IDs of all sessions on the instance or node are returned.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Sessions")]
@@ -234,10 +242,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The state of the task that terminates sessions.</para>
             /// <list type="bullet">
-            /// <item><description><b>RUNNING</b>: The task is in progress.</description></item>
-            /// <item><description><b>SUCCESS</b>: The task is successful.</description></item>
-            /// <item><description><b>FAILURE</b>: The task failed.</description></item>
-            /// <item><description><b>ERROR</b>: Other errors occur.</description></item>
+            /// <item><description><para><b>RUNNING</b>: The task is in progress.</para>
+            /// </description></item>
+            /// <item><description><para><b>SUCCESS</b>: The task is successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>FAILURE</b>: The task failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>ERROR</b>: Other errors occur.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -262,7 +274,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -285,8 +297,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

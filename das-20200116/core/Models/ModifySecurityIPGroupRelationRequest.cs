@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class ModifySecurityIPGroupRelationRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the IP address whitelist template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string GlobalSecurityGroupId { get; set; }
 
         /// <summary>
+        /// <para>The database instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// </description></item>
         /// <item><description><para>By default, if you leave this parameter empty, all database instances for which the automatic fragment recycling feature has been enabled within the current Alibaba Cloud account are returned. The following types of database instances are returned:</para>
         /// <list type="bullet">
-        /// <item><description>Database instances for which the automatic fragment recycling feature is currently enabled.</description></item>
-        /// <item><description>Database instances for which the automatic fragment recycling feature was once enabled but is currently disabled, including those for which DAS Enterprise Edition has been disabled but excluding those that have been released.</description></item>
+        /// <item><description><para>Database instances for which the automatic fragment recycling feature is currently enabled.</para>
+        /// </description></item>
+        /// <item><description><para>Database instances for which the automatic fragment recycling feature was once enabled but is currently disabled, including those for which DAS Enterprise Edition has been disabled but excluding those that have been released.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>

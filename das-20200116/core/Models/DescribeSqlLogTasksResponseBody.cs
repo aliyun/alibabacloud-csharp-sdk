@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSqlLogTasksResponseBodyData Data { get; set; }
         public class DescribeSqlLogTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the data returned.</para>
+            /// <para>The list of tasks.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<DescribeSqlLogTasksResponseBodyDataList> List { get; set; }
             public class DescribeSqlLogTasksResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The time when the analysis task was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The analysis completion time, represented as a unix timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1712751923000</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? AnalysisTaskFinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The state of the analysis task.</para>
+                /// <para>The status of the analysis task.</para>
                 /// <remarks>
-                /// <para> This parameter is a system parameter. You do not need to pay attention to the parameter.</para>
+                /// <para>This is an internal parameter. You can ignore it.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string AnalysisTaskStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time when the task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The task creation time, represented as a unix timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1681363254423</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the task ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The task end time, represented as a unix timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1705975320000</para>
@@ -77,10 +77,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? End { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the task expired. Valid values:</para>
+                /// <para>Indicates whether the task has expired. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>: The task has expired.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: The task has not expired.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -91,20 +93,20 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public bool? Expire { get; set; }
 
                 /// <summary>
-                /// <para>The filter parameters.</para>
+                /// <para>A list of filter conditions.</para>
                 /// </summary>
                 [NameInMap("Filters")]
                 [Validation(Required=false)]
                 public List<DescribeSqlLogTasksResponseBodyDataListFilters> Filters { get; set; }
                 public class DescribeSqlLogTasksResponseBodyDataListFilters : TeaModel {
                     /// <summary>
-                    /// <para>The name of the filter parameter.</para>
+                    /// <para>The filter parameter.</para>
                     /// <remarks>
-                    /// <para> For more information about the filter parameters, see the <b>Valid values of Key</b> section of this topic.</para>
+                    /// <para>For information about the supported filter parameters and their valid values, see <b>Additional information about request parameters</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>delimiter</para>
+                    /// <para>keyWords</para>
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
@@ -114,7 +116,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <para>The value of the filter parameter.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>,</para>
+                    /// <para>select</para>
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -122,6 +124,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
                 }
 
+                /// <summary>
+                /// <para>The VPC-internal URL for accessing the task result.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://das-sqllog-download-oss-cn-shanghai-internal.aliyuncs.com">https://das-sqllog-download-oss-cn-shanghai-internal.aliyuncs.com</a>
+                /// /la</para>
+                /// </summary>
                 [NameInMap("InnerResult")]
                 [Validation(Required=false)]
                 public string InnerResult { get; set; }
@@ -130,14 +139,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The ID of the database instance.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>rm-2zew761kf7ho18752</para>
+                /// <para>r-bp1nti25tc7bq5****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The number of log records.</para>
+                /// <para>The total number of logs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>99999</para>
@@ -147,17 +156,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? LogCount { get; set; }
 
                 /// <summary>
-                /// <para>The task name.</para>
+                /// <para>The name of the task.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test01</para>
+                /// <para>SQL audit export 1</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The task progress.</para>
+                /// <para>The progress of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -167,7 +176,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public int? Progress { get; set; }
 
                 /// <summary>
-                /// <para>The URL that is returned if the value of TaskType is <b>Export</b>.</para>
+                /// <para>The URL that is returned when <b>TaskType</b> is set to <b>Export</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://das-sqllog-download-cn-shanghai.oss-cn-shanghai.aliyuncs.com/la">https://das-sqllog-download-cn-shanghai.oss-cn-shanghai.aliyuncs.com/la</a></para>
@@ -177,7 +186,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string Result { get; set; }
 
                 /// <summary>
-                /// <para>The number of files that are scanned.</para>
+                /// <para>The total size of the scanned files, in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3000</para>
@@ -187,7 +196,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? ScanFileSize { get; set; }
 
                 /// <summary>
-                /// <para>The time when the task started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The task start time, represented as a unix timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1683859555482</para>
@@ -197,16 +206,21 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? Start { get; set; }
 
                 /// <summary>
-                /// <para>The task state. Valid values:</para>
+                /// <para>The task status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>INIT</b>: The task is to be scheduled.</description></item>
-                /// <item><description><b>RUNNING</b>: The task is running.</description></item>
-                /// <item><description><b>FAILED</b>: The task failed.</description></item>
-                /// <item><description><b>CANCELED</b>: The task is canceled.</description></item>
-                /// <item><description><b>COMPLETED</b>: The task is complete.</description></item>
+                /// <item><description><para><b>INIT</b>: pending scheduling.</para>
+                /// </description></item>
+                /// <item><description><para><b>RUNNING</b>: running.</para>
+                /// </description></item>
+                /// <item><description><para><b>FAILED</b>: failed.</para>
+                /// </description></item>
+                /// <item><description><para><b>CANCELED</b>: canceled.</para>
+                /// </description></item>
+                /// <item><description><para><b>COMPLETED</b>: completed.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> If a task is in the <b>COMPLETED</b> state, you can view the results of the task.</para>
+                /// <para>You can view the result of an offline task only when its status is <b>COMPLETED</b>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -229,8 +243,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The task type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Export</b></description></item>
-                /// <item><description><b>Query</b></description></item>
+                /// <item><description><para><b>Export</b>: an export task.</para>
+                /// </description></item>
+                /// <item><description><para><b>Query</b>: a query task.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -253,7 +269,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? PageNo { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -263,7 +279,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The number of tasks.</para>
+            /// <para>The total number of tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -275,9 +291,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -300,8 +316,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

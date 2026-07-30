@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeTopHotKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -90,8 +90,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

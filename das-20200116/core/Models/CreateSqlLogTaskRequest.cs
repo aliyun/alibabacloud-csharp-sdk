@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The name of the filter parameter.</para>
             /// <remarks>
-            /// <para> For more information about the supported filter parameters and their valid values, see the following <b>supplement about the Key parameter</b>.</para>
+            /// <para>For more information about the supported filter parameters and their valid values, see the following <b>supplement about the Key parameter</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <para>The name of the task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test01</para>
+        /// <para>SQL audit export 1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -75,11 +75,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the offline tasks of a specific node. By default, if this parameter is not specified, the information about the offline tasks of the primary node is returned.</para>
+        /// <para>This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the offline tasks of a specific node. By default, if this parameter is not specified, the information about the offline tasks of the primary node is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>pi-uf6k5f6g3912i0dqz</para>
+        /// <para>pi-uf6k5f6g3912i****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -88,8 +88,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The role of the node of the PolarDB-X 2.0 database instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>polarx_cn</b>: compute node</description></item>
-        /// <item><description><b>polarx_dn</b>: data node</description></item>
+        /// <item><description><para><b>polarx_cn</b>: compute node</para>
+        /// </description></item>
+        /// <item><description><para><b>polarx_dn</b>: data node</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,9 +115,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The type of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Export</b></description></item>
-        /// <item><description><b>Query</b></description></item>
-        /// <item><description><b>Insight</b></description></item>
+        /// <item><description><para><b>Export</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Query</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Insight</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

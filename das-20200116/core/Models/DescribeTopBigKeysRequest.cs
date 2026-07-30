@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// </description></item>
         /// <item><description><para>Only data within the last four days can be queried.</para>
         /// </description></item>
-        /// <item><description><para>The maximum interval between the <b>start time</b> and the** end time** is 3 hours.</para>
+        /// <item><description><para>The maximum interval between the <b>start time</b> and the\<em>\</em> end time\<em>\</em> is 3 hours.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

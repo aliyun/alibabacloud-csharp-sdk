@@ -22,11 +22,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The information of the diagnostics reports. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>total</b>: the number of diagnostics reports.</description></item>
-        /// <item><description><b>score</b>: the health score.</description></item>
-        /// <item><description><b>diagnosticTime</b>: the time when the diagnostics report was generated. The time is displayed in UTC.</description></item>
-        /// <item><description><b>startTime</b>: the start time of the query. The time is displayed in UTC.</description></item>
-        /// <item><description><b>endTime</b>: the end time of the query. The time is displayed in UTC.</description></item>
+        /// <item><description><para><b>total</b>: the number of diagnostics reports.</para>
+        /// </description></item>
+        /// <item><description><para><b>score</b>: the health score.</para>
+        /// </description></item>
+        /// <item><description><para><b>diagnosticTime</b>: the time when the diagnostics report was generated. The time is displayed in UTC.</para>
+        /// </description></item>
+        /// <item><description><para><b>startTime</b>: the start time of the query. The time is displayed in UTC.</para>
+        /// </description></item>
+        /// <item><description><para><b>endTime</b>: the end time of the query. The time is displayed in UTC.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +44,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,8 +67,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

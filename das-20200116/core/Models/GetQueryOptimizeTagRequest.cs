@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b>: ApsaraDB RDS for MySQL</description></item>
-        /// <item><description><b>PolarDBMySQL</b>: PolarDB for MySQL</description></item>
-        /// <item><description><b>PostgreSQL</b>: ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description><para><b>MySQL</b>: ApsaraDB RDS for MySQL</para>
+        /// </description></item>
+        /// <item><description><para><b>PolarDBMySQL</b>: PolarDB for MySQL</para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b>: ApsaraDB RDS for PostgreSQL</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>29d9fef63e347d39c3436658a5fe5f2b</para>
+        /// <para>29d9fef63e347d39c3436658a5fe****</para>
         /// </summary>
         [NameInMap("SqlId")]
         [Validation(Required=false)]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time.</para>
+        /// <para>The end time must be later than the start time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,10 +46,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The urgency level of the events. If you specify this parameter, the MinLevel parameter does not take effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Notice</b>: events for which the system sends notifications.</description></item>
-        /// <item><description><b>Optimization</b>: events that need to be optimized.</description></item>
-        /// <item><description><b>Warn</b>: events for which the system sends warnings.</description></item>
-        /// <item><description><b>Critical</b>: critical events.</description></item>
+        /// <item><description><para><b>Notice</b>: events for which the system sends notifications.</para>
+        /// </description></item>
+        /// <item><description><para><b>Optimization</b>: events that need to be optimized.</para>
+        /// </description></item>
+        /// <item><description><para><b>Warn</b>: events for which the system sends warnings.</para>
+        /// </description></item>
+        /// <item><description><para><b>Critical</b>: critical events.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,10 +66,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The minimum urgency level of the events. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Notice</b>: events for which the system sends notifications.</description></item>
-        /// <item><description><b>Optimization</b>: events that need to be optimized.</description></item>
-        /// <item><description><b>Warn</b>: events for which the system sends warnings.</description></item>
-        /// <item><description><b>Critical</b>: critical events.</description></item>
+        /// <item><description><para><b>Notice</b>: events for which the system sends notifications.</para>
+        /// </description></item>
+        /// <item><description><para><b>Optimization</b>: events that need to be optimized.</para>
+        /// </description></item>
+        /// <item><description><para><b>Warn</b>: events for which the system sends warnings.</para>
+        /// </description></item>
+        /// <item><description><para><b>Critical</b>: critical events.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +86,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The ID of the node in a PolarDB for MySQL cluster. You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the node ID returned by the DBNodeId response parameter.</para>
         /// <remarks>
-        /// <para> You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</para>
+        /// <para>You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

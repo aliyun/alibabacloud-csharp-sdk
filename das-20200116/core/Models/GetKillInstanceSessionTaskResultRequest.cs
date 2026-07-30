@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> You must specify this parameter if your database instance is a PolarDB for MySQL cluster.</para>
+        /// <para>You must specify this parameter if your database instance is a PolarDB for MySQL cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

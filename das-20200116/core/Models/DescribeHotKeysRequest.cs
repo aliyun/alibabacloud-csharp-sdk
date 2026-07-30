@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeHotKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraDB for Redis instance.</para>
+        /// <para>The ID of the Redis instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data shard on the ApsaraDB for Redis instance.</para>
+        /// <para>The ID of the data shard of the Redis instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-x****-db-0</para>

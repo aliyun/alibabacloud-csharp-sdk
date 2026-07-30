@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database instance IDs.</para>
         /// <remarks>
-        /// <para> Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <c>[\\&quot;Instance ID1\\&quot;,\\&quot;Instance ID2\\&quot;]</c>.</para>
+        /// <para>Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <c>[\\&quot;Instance ID1\\&quot;,\\&quot;Instance ID2\\&quot;]</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

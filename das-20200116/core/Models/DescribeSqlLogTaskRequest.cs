@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the database instance.</para>
+        /// <para>The database instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1nti25tc7bq5****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages are numbered starting from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The page size. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

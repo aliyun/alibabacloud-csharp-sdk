@@ -56,8 +56,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The metric name. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>sqlExecuteCount</b>: the number of slow SQL executions.</description></item>
-                /// <item><description><b>optimizedSqlExecuteCount</b>: the number of slow SQL executions that need to be optimized.</description></item>
+                /// <item><description><para><b>sqlExecuteCount</b>: the number of slow SQL executions.</para>
+                /// </description></item>
+                /// <item><description><para><b>optimizedSqlExecuteCount</b>: the number of slow SQL executions that need to be optimized.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -134,8 +136,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

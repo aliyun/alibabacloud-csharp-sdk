@@ -12,15 +12,24 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>SQLServer</b></description></item>
-        /// <item><description><b>PolarDBMySQL</b></description></item>
-        /// <item><description><b>PolarDBPostgreSQL</b></description></item>
-        /// <item><description><b>Redis</b></description></item>
-        /// <item><description><b>MongoDB</b></description></item>
-        /// <item><description><b>PolarDBOracle</b></description></item>
-        /// <item><description><b>PolarDBX</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SQLServer</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PolarDBMySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PolarDBPostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Redis</b></para>
+        /// </description></item>
+        /// <item><description><para><b>MongoDB</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PolarDBOracle</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PolarDBX</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,12 +62,15 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The type of the instance on which the database is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RDS</b>: an Alibaba Cloud database instance.</description></item>
-        /// <item><description><b>ECS</b>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</description></item>
-        /// <item><description><b>IDC</b>: a self-managed database instance that is not deployed on Alibaba Cloud.</description></item>
+        /// <item><description><para><b>RDS</b>: an Alibaba Cloud database instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>ECS</b>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</para>
+        /// </description></item>
+        /// <item><description><para><b>IDC</b>: a self-managed database instance that is not deployed on Alibaba Cloud.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> IDC refers to your data center.</para>
+        /// <para>IDC refers to your data center.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

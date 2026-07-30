@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Slow SQL queries of offline synchronization. No optimization is required.</para>
+            /// <para>Slow SQL from offline synchronization. No optimization needed.</para>
             /// </summary>
             [NameInMap("Comments")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <para>The SQL template ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>651b56fe9418d48edb8fdf0980ec****</para>
+            /// <para>29d9fef63e347d39c3436658a5fe****</para>
             /// </summary>
             [NameInMap("SqlId")]
             [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,8 +84,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

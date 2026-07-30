@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DeleteSecurityIPGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the IP address whitelist template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string GlobalSecurityGroupId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

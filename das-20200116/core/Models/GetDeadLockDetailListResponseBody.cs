@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <para>The name of the database.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>school</para>
+                    /// <para>testdb1</para>
                     /// </summary>
                     [NameInMap("DatabaseName")]
                     [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <para>The hostname.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>sd74020124</para>
+                    /// <para>sd7402****</para>
                     /// </summary>
                     [NameInMap("HostName")]
                     [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <para>The logon name of the user.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>sd74020124\\Administrator</para>
+                    /// <para>sd7402****\\Administrator</para>
                     /// </summary>
                     [NameInMap("LoginName")]
                     [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <para>The locked object.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>school.dbo.test2</para>
+                    /// <para>testdb1.dbo.test2</para>
                     /// </summary>
                     [NameInMap("ObjectOwned")]
                     [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <para>The object that the transaction requested to lock.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>school.dbo.test1</para>
+                    /// <para>testdb1.dbo.test1</para>
                     /// </summary>
                     [NameInMap("ObjectRequested")]
                     [Validation(Required=false)]
@@ -183,8 +183,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>Indicates whether the session is the victim of the deadlock. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>0</b>: no.</description></item>
-                    /// <item><description><b>1</b>: yes.</description></item>
+                    /// <item><description><para><b>0</b>: no.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>1</b>: yes.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -240,7 +242,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The name of the database.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>school</para>
+                /// <para>testdb1</para>
                 /// </summary>
                 [NameInMap("DatabaseName")]
                 [Validation(Required=false)]
@@ -250,7 +252,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The hostname.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>sd74020124</para>
+                /// <para>sd7402****</para>
                 /// </summary>
                 [NameInMap("HostName")]
                 [Validation(Required=false)]
@@ -290,7 +292,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The logon name of the user.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>sd74020124\\Administrator</para>
+                /// <para>sd7402****\\Administrator</para>
                 /// </summary>
                 [NameInMap("LoginName")]
                 [Validation(Required=false)]
@@ -300,7 +302,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The locked object.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>school.dbo.test1</para>
+                /// <para>testdb1.dbo.test1</para>
                 /// </summary>
                 [NameInMap("ObjectOwned")]
                 [Validation(Required=false)]
@@ -310,7 +312,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The object that the transaction requested to lock.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>school.dbo.test2</para>
+                /// <para>testdb1.dbo.test2</para>
                 /// </summary>
                 [NameInMap("ObjectRequested")]
                 [Validation(Required=false)]
@@ -359,8 +361,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the session is the victim of the deadlock. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: no.</description></item>
-                /// <item><description><b>1</b>: yes.</description></item>
+                /// <item><description><para><b>0</b>: no.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: yes.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -437,7 +441,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request is successful, <b>Successful</b> is returned. Otherwise, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. Otherwise, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -460,8 +464,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

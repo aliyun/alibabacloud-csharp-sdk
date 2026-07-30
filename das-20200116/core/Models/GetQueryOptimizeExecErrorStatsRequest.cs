@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Specifies whether to sort the returned entries in ascending order. Default value: <b>true</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: sorts the returned entries in ascending order.</description></item>
-        /// <item><description><b>false</b>: does not sort the returned entries in ascending order.</description></item>
+        /// <item><description><para><b>true</b>: sorts the returned entries in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: does not sort the returned entries in ascending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,9 +38,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>PolarDBMySQL</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PolarDBMySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -72,8 +77,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The logical relationship between multiple keywords. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>or</b></description></item>
-        /// <item><description><b>and</b></description></item>
+        /// <item><description><para><b>or</b></para>
+        /// </description></item>
+        /// <item><description><para><b>and</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,13 +125,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The region in which the instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-china</b>: Chinese mainland</description></item>
-        /// <item><description><b>cn-hongkong</b>: China (Hong Kong)</description></item>
-        /// <item><description><b>ap-southeast-1</b>: Singapore</description></item>
+        /// <item><description><para><b>cn-china</b>: Chinese mainland</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hongkong</b>: China (Hong Kong)</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: Singapore</para>
+        /// </description></item>
         /// </list>
-        /// <para>This parameter takes effect only if <b>InstanceIds</b> is left empty. If you leave <b>InstanceIds</b> empty, the system obtains data from the region set by <b>Region</b>. By default, Region is set to <b>cn-china</b>. If you specify <b>InstanceIds</b>, <b>Region</b> does not take effect and the system obtains data from the region in which the first specified instance resides.****</para>
+        /// <para>This parameter takes effect only if <b>InstanceIds</b> is left empty. If you leave <b>InstanceIds</b> empty, the system obtains data from the region set by <b>Region</b>. By default, Region is set to <b>cn-china</b>. If you specify <b>InstanceIds</b>, <b>Region</b> does not take effect and the system obtains data from the region in which the first specified instance resides.\<em>\</em>\<em>\</em></para>
         /// <remarks>
-        /// <para> Set this parameter to <b>cn-china</b> for the instances that are created in the regions in the Chinese mainland.</para>
+        /// <para>Set this parameter to <b>cn-china</b> for the instances that are created in the regions in the Chinese mainland.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

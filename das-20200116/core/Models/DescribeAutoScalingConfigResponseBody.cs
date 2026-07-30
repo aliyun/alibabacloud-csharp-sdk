@@ -56,8 +56,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the automatic bandwidth downgrade feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -70,13 +72,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The observation window of the automatic bandwidth adjustment feature. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</para>
                 /// <list type="bullet">
-                /// <item><description><b>s</b>: seconds.</description></item>
-                /// <item><description><b>m</b>: minutes.</description></item>
-                /// <item><description><b>h</b>: hours.</description></item>
-                /// <item><description><b>d</b>: days.</description></item>
+                /// <item><description><para><b>s</b>: seconds.</para>
+                /// </description></item>
+                /// <item><description><para><b>m</b>: minutes.</para>
+                /// </description></item>
+                /// <item><description><para><b>h</b>: hours.</para>
+                /// </description></item>
+                /// <item><description><para><b>d</b>: days.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> A value of <b>5m</b> indicates 5 minutes.</para>
+                /// <para>A value of <b>5m</b> indicates 5 minutes.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -89,8 +95,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the automatic bandwidth adjustment feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -132,13 +140,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The observation window of the automatic scale-in feature for local resources. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</para>
                 /// <list type="bullet">
-                /// <item><description><b>s</b>: seconds.</description></item>
-                /// <item><description><b>m</b>: minutes.</description></item>
-                /// <item><description><b>h</b>: hours.</description></item>
-                /// <item><description><b>d</b>: days.</description></item>
+                /// <item><description><para><b>s</b>: seconds.</para>
+                /// </description></item>
+                /// <item><description><para><b>m</b>: minutes.</para>
+                /// </description></item>
+                /// <item><description><para><b>h</b>: hours.</para>
+                /// </description></item>
+                /// <item><description><para><b>d</b>: days.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> A value of <b>5m</b> indicates 5 minutes.</para>
+                /// <para>A value of <b>5m</b> indicates 5 minutes.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -151,8 +163,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the auto scaling feature is enabled for local resources. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -165,13 +179,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The observation window of the automatic scale-out feature for local resources. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</para>
                 /// <list type="bullet">
-                /// <item><description><b>s</b>: seconds.</description></item>
-                /// <item><description><b>m</b>: minutes.</description></item>
-                /// <item><description><b>h</b>: hours.</description></item>
-                /// <item><description><b>d</b>: days.</description></item>
+                /// <item><description><para><b>s</b>: seconds.</para>
+                /// </description></item>
+                /// <item><description><para><b>m</b>: minutes.</para>
+                /// </description></item>
+                /// <item><description><para><b>h</b>: hours.</para>
+                /// </description></item>
+                /// <item><description><para><b>d</b>: days.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> A value of <b>5m</b> indicates 5 minutes.</para>
+                /// <para>A value of <b>5m</b> indicates 5 minutes.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -193,8 +211,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the feature of automatically removing shards is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -207,13 +227,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The observation window of the feature of automatically removing shards. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</para>
                 /// <list type="bullet">
-                /// <item><description><b>s</b>: seconds.</description></item>
-                /// <item><description><b>m</b>: minutes.</description></item>
-                /// <item><description><b>h</b>: hours.</description></item>
-                /// <item><description><b>d</b>: days.</description></item>
+                /// <item><description><para><b>s</b>: seconds.</para>
+                /// </description></item>
+                /// <item><description><para><b>m</b>: minutes.</para>
+                /// </description></item>
+                /// <item><description><para><b>h</b>: hours.</para>
+                /// </description></item>
+                /// <item><description><para><b>d</b>: days.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> A value of <b>1d</b> indicates one day.</para>
+                /// <para>A value of <b>1d</b> indicates one day.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -266,8 +290,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the feature of automatically adding shards is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -280,13 +306,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The observation window of the feature of automatically adding shards. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</para>
                 /// <list type="bullet">
-                /// <item><description><b>s</b>: seconds.</description></item>
-                /// <item><description><b>m</b>: minutes.</description></item>
-                /// <item><description><b>h</b>: hours.</description></item>
-                /// <item><description><b>d</b>: days.</description></item>
+                /// <item><description><para><b>s</b>: seconds.</para>
+                /// </description></item>
+                /// <item><description><para><b>m</b>: minutes.</para>
+                /// </description></item>
+                /// <item><description><para><b>h</b>: hours.</para>
+                /// </description></item>
+                /// <item><description><para><b>d</b>: days.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> A value of <b>5m</b> indicates 5 minutes.</para>
+                /// <para>A value of <b>5m</b> indicates 5 minutes.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -308,13 +338,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The quiescent period. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</para>
                 /// <list type="bullet">
-                /// <item><description><b>s</b>: seconds.</description></item>
-                /// <item><description><b>m</b>: minutes.</description></item>
-                /// <item><description><b>h</b>: hours.</description></item>
-                /// <item><description><b>d</b>: days.</description></item>
+                /// <item><description><para><b>s</b>: seconds.</para>
+                /// </description></item>
+                /// <item><description><para><b>m</b>: minutes.</para>
+                /// </description></item>
+                /// <item><description><para><b>h</b>: hours.</para>
+                /// </description></item>
+                /// <item><description><para><b>d</b>: days.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> A value of <b>5m</b> indicates 5 minutes.</para>
+                /// <para>A value of <b>5m</b> indicates 5 minutes.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -337,8 +371,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the automatic specification scale-down feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -361,8 +397,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The maximum specifications to which the cluster can be scaled up. For more information about the specifications of each type of supported database instances, see the following topics:</para>
                 /// <list type="bullet">
-                /// <item><description>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications of PolarDB for MySQL Enterprise Edition</a></description></item>
-                /// <item><description>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></description></item>
+                /// <item><description><para>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications of PolarDB for MySQL Enterprise Edition</a></para>
+                /// </description></item>
+                /// <item><description><para>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -385,13 +423,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The observation window. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</para>
                 /// <list type="bullet">
-                /// <item><description><b>s</b>: seconds.</description></item>
-                /// <item><description><b>m</b>: minutes.</description></item>
-                /// <item><description><b>h</b>: hours.</description></item>
-                /// <item><description><b>d</b>: days.</description></item>
+                /// <item><description><para><b>s</b>: seconds.</para>
+                /// </description></item>
+                /// <item><description><para><b>m</b>: minutes.</para>
+                /// </description></item>
+                /// <item><description><para><b>h</b>: hours.</para>
+                /// </description></item>
+                /// <item><description><para><b>d</b>: days.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> A value of <b>5m</b> indicates 5 minutes.</para>
+                /// <para>A value of <b>5m</b> indicates 5 minutes.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -404,8 +446,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the automatic specification scale-up feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -447,8 +491,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the automatic storage expansion feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -465,7 +511,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -488,8 +534,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

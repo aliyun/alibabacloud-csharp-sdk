@@ -96,8 +96,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The file descriptor event. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>r</b>: Client sockets are readable in the event loop.</description></item>
-                /// <item><description><b>w</b>: Client sockets are writable in the event loop.</description></item>
+                /// <item><description><para><b>r</b>: Client sockets are readable in the event loop.</para>
+                /// </description></item>
+                /// <item><description><para><b>w</b>: Client sockets are writable in the event loop.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -120,19 +122,32 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The client flag. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>A</b>: The connection needs to be closed at the earliest opportunity.</description></item>
-                /// <item><description><b>b</b>: The client is waiting for blocked events.</description></item>
-                /// <item><description><b>c</b>: The connection is closed after all replies are written.</description></item>
-                /// <item><description><b>d</b>: The monitored keys have been modified, and the <c>EXEC</c> command is about to fail.</description></item>
-                /// <item><description><b>i</b>: The client is waiting for VM I/O operations. This value is no longer used.</description></item>
-                /// <item><description><b>M</b>: The client is the primary node.</description></item>
-                /// <item><description><b>N</b>: No special flags are configured.</description></item>
-                /// <item><description><b>O</b>: The client is in monitor mode.</description></item>
-                /// <item><description><b>r</b>: The client is a cluster node in read-only mode.</description></item>
-                /// <item><description><b>S</b>: The client is a replica node in normal mode.</description></item>
-                /// <item><description><b>u</b>: The client is not blocked.</description></item>
-                /// <item><description><b>U</b>: The client is connected by using UNIX domain sockets.</description></item>
-                /// <item><description><b>x</b>: The client is executing a transaction.</description></item>
+                /// <item><description><para><b>A</b>: The connection needs to be closed at the earliest opportunity.</para>
+                /// </description></item>
+                /// <item><description><para><b>b</b>: The client is waiting for blocked events.</para>
+                /// </description></item>
+                /// <item><description><para><b>c</b>: The connection is closed after all replies are written.</para>
+                /// </description></item>
+                /// <item><description><para><b>d</b>: The monitored keys have been modified, and the <c>EXEC</c> command is about to fail.</para>
+                /// </description></item>
+                /// <item><description><para><b>i</b>: The client is waiting for VM I/O operations. This value is no longer used.</para>
+                /// </description></item>
+                /// <item><description><para><b>M</b>: The client is the primary node.</para>
+                /// </description></item>
+                /// <item><description><para><b>N</b>: No special flags are configured.</para>
+                /// </description></item>
+                /// <item><description><para><b>O</b>: The client is in monitor mode.</para>
+                /// </description></item>
+                /// <item><description><para><b>r</b>: The client is a cluster node in read-only mode.</para>
+                /// </description></item>
+                /// <item><description><para><b>S</b>: The client is a replica node in normal mode.</para>
+                /// </description></item>
+                /// <item><description><para><b>u</b>: The client is not blocked.</para>
+                /// </description></item>
+                /// <item><description><para><b>U</b>: The client is connected by using UNIX domain sockets.</para>
+                /// </description></item>
+                /// <item><description><para><b>x</b>: The client is executing a transaction.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -325,7 +340,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -348,8 +363,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

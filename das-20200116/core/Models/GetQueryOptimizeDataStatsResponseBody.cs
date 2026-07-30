@@ -209,8 +209,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The type of the rule. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>Predefined</b></description></item>
-                    /// <item><description><b>UserDefined</b></description></item>
+                    /// <item><description><para><b>Predefined</b></para>
+                    /// </description></item>
+                    /// <item><description><para><b>UserDefined</b></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -319,8 +321,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

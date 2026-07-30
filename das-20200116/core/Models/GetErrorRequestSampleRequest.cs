@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time. The interval cannot exceed 24 hours.</para>
+        /// <para>The end time must be later than the start time. The interval cannot exceed 24 hours.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</para>
+        /// <para>You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// <remarks>
-        /// <para> The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.</para>
+        /// <para>The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

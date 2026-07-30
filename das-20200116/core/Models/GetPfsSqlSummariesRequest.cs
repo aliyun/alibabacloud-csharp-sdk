@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetPfsSqlSummariesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to sort the returned entries in ascending order. Default value: <b>false</b>. Valid values:</para>
+        /// <para>Sort in ascending order. Default is <b>false</b>.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +26,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? Asc { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>End time of the query, in Unix timestamp format, in milliseconds.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time. You can view the data of up to seven days within the last month.</para>
+        /// <para>The end time must be later than the start time. You can query data for any seven-day period within the last 30 days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Database instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf61swc4cru0b****</para>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The keywords of the SQL template. Separate multiple keywords with spaces.</para>
+        /// <para>Keywords in the SQL text. Separate multiple keywords with spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>select update</para>
@@ -57,9 +59,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Keywords { get; set; }
 
         /// <summary>
-        /// <para>The node ID.</para>
+        /// <para>Node ID.</para>
         /// <remarks>
-        /// <para> This parameter is required if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</para>
+        /// <para>Provide a node ID for RDS MySQL Cluster Edition or PolarDB for MySQL database instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,14 +72,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the returned entries. Default value: <b>count</b>.</para>
+        /// <para>Field to sort by. Default is <b>count</b>.</para>
         /// <list type="bullet">
-        /// <item><description><b>count</b>: the number of executions.</description></item>
-        /// <item><description><b>avgRt</b>: the average execution duration.</description></item>
-        /// <item><description><b>rtRate</b>: the execution duration percentage.</description></item>
-        /// <item><description><b>rowsExamined</b>: the total number of scanned rows.</description></item>
-        /// <item><description><b>avgRowsExamined</b>: the average number of scanned rows.</description></item>
-        /// <item><description><b>avgRowsReturned</b>: the average number of returned rows.</description></item>
+        /// <item><description><para><b>count</b>: Number of executions.</para>
+        /// </description></item>
+        /// <item><description><para><b>avgLatency</b>: Average execution time.</para>
+        /// </description></item>
+        /// <item><description><para><b>rowsExamined</b>: Total number of scanned rows.</para>
+        /// </description></item>
+        /// <item><description><para><b>rowsExaminedAvg</b>: Average number of scanned rows.</para>
+        /// </description></item>
+        /// <item><description><para><b>rowsSentAvg</b>: Average number of returned rows.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +94,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>Page number for paged queries. Start from 1. Default is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Valid values: 1 to 100.</para>
+        /// <para>Maximum number of records per page for paged queries. Default is 10. Maximum is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -108,9 +114,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The SQL ID.</para>
+        /// <para>SQL ID.</para>
         /// <remarks>
-        /// <para> If this parameter is specified, the full request statistics of the specified SQL query are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.</para>
+        /// <para>If you specify an SQL ID, the system returns statistics for that SQL ID only. If you leave this parameter empty, the system returns statistics for the entire database instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SqlId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>Start time of the query, in Unix timestamp format, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1675833788056</para>

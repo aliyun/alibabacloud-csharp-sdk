@@ -46,8 +46,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The reason why the analysis on the database and table fails.</para>
                 /// <list type="bullet">
-                /// <item><description><b>DB_OR_TABLE_NOT_EXIST</b>: The specified database or table does not exist.</description></item>
-                /// <item><description><b>DB_NOT_EXIST</b>: The specified database does not exist.</description></item>
+                /// <item><description><para><b>DB_OR_TABLE_NOT_EXIST</b>: The specified database or table does not exist.</para>
+                /// </description></item>
+                /// <item><description><para><b>DB_NOT_EXIST</b>: The specified database does not exist.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -124,14 +126,22 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The optimization suggestion. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>NEED_ANALYZE_TABLE</b>: You can execute the <c>ANALYZE TABLE</c> statement on the table during off-peak hours. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</description></item>
-                    /// <item><description><b>NEED_OPTIMIZE_TABLE</b>: You can reclaim fragments during off-peak hours.</description></item>
-                    /// <item><description><b>CHANGE_TABLE_ENGINE_IF_NECESSARY</b>: Change the storage engine type of a table after risk assessment. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</description></item>
-                    /// <item><description><b>AUTO_INCREMENT_ID_BE_TO_RUN_OUT</b>: Pay attention to the usage of auto-increment IDs. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</description></item>
-                    /// <item><description><b>DUPLICATE_INDEX</b>: Optimize indexes of tables. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</description></item>
-                    /// <item><description><b>TABLE_SIZE</b>: Pay attention to the table size. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</description></item>
-                    /// <item><description><b>TABLE_ROWS_AND_AVG_ROW_LENGTH</b>: Pay attention to the number of rows in a table and the average row length. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</description></item>
-                    /// <item><description><b>STORAGE_USED_PERCENT</b>: Pay attention to the space usage to prevent the instance from being locked if the instance is full.</description></item>
+                    /// <item><description><para><b>NEED_ANALYZE_TABLE</b>: You can execute the <c>ANALYZE TABLE</c> statement on the table during off-peak hours. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>NEED_OPTIMIZE_TABLE</b>: You can reclaim fragments during off-peak hours.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>CHANGE_TABLE_ENGINE_IF_NECESSARY</b>: Change the storage engine type of a table after risk assessment. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>AUTO_INCREMENT_ID_BE_TO_RUN_OUT</b>: Pay attention to the usage of auto-increment IDs. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>DUPLICATE_INDEX</b>: Optimize indexes of tables. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>TABLE_SIZE</b>: Pay attention to the table size. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>TABLE_ROWS_AND_AVG_ROW_LENGTH</b>: Pay attention to the number of rows in a table and the average row length. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>STORAGE_USED_PERCENT</b>: Pay attention to the space usage to prevent the instance from being locked if the instance is full.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -148,8 +158,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// </description></item>
                     /// <item><description><para><b>NEED_OPTIMIZE_TABLE</b>: tables whose space fragments are larger than 6 GB and whose fragmentation rates are greater than 30%. The fragmentation rate of a table is generally calculated based on the following formulas:</para>
                     /// <list type="bullet">
-                    /// <item><description>ApsaraDB RDS for MySQL and PolarDB for MySQL: <c>Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)</c>. In this topic, PhyTotalSize = DataSize + IndexSize + DataFree. Thus, the fragmentation rate can be calculated based on the following formula: <c>Fragmentation rate = DataFree/PhyTotalSize</c>.</description></item>
-                    /// <item><description>ApsaraDB for MongoDB: <c>Fragmentation rate = FragmentSize/PhyTotalSize</c>.</description></item>
+                    /// <item><description><para>ApsaraDB RDS for MySQL and PolarDB for MySQL: <c>Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)</c>. In this topic, PhyTotalSize = DataSize + IndexSize + DataFree. Thus, the fragmentation rate can be calculated based on the following formula: <c>Fragmentation rate = DataFree/PhyTotalSize</c>.</para>
+                    /// </description></item>
+                    /// <item><description><para>ApsaraDB for MongoDB: <c>Fragmentation rate = FragmentSize/PhyTotalSize</c>.</para>
+                    /// </description></item>
                     /// </list>
                     /// </description></item>
                     /// <item><description><para><b>TABLE_ENGINE</b>: tables whose storage engines are not InnoDB or XEngine. This is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</para>
@@ -207,7 +219,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The size of space fragments. Unit: bytes.</para>
                     /// <remarks>
-                    /// <para> This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. The fragmentation rate of a table is generally calculated based on the following formula: <c>Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)</c>. In this topic, <c>Fragmentation rate = DataFree/PhyTotalSize</c>.</para>
+                    /// <para>This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. The fragmentation rate of a table is generally calculated based on the following formula: <c>Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)</c>. In this topic, <c>Fragmentation rate = DataFree/PhyTotalSize</c>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -219,8 +231,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
                     /// <summary>
                     /// <list type="bullet">
-                    /// <item><description>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by data. Unit: bytes.</description></item>
-                    /// <item><description>For ApsaraDB for MongoDB instances, this parameter indicates the size of uncompressed data, that is, the amount of data. Unit: bytes.</description></item>
+                    /// <item><description><para>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by data. Unit: bytes.</para>
+                    /// </description></item>
+                    /// <item><description><para>For ApsaraDB for MongoDB instances, this parameter indicates the size of uncompressed data, that is, the amount of data. Unit: bytes.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -243,7 +257,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The type of the storage engine used by the table.</para>
                     /// <remarks>
-                    /// <para> This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</para>
+                    /// <para>This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -256,7 +270,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The size of space that can be reclaimed. Unit: bytes.</para>
                     /// <remarks>
-                    /// <para> This parameter is applicable only to ApsaraDB for MongoDB instances. <c>Fragmentation rate = FragmentSize/PhyTotalSize</c>.</para>
+                    /// <para>This parameter is applicable only to ApsaraDB for MongoDB instances. <c>Fragmentation rate = FragmentSize/PhyTotalSize</c>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -279,7 +293,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The storage space of the table. Unit: bytes.</para>
                     /// <remarks>
-                    /// <para> For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, the value of the parameter is the sum of <b>DataSize</b>, <b>IndexSize</b>, and <b>DataFree</b>. For ApsaraDB for MongoDB instances, the value of this parameter is the sum of <b>DataSize</b> and <b>IndexSize</b>.</para>
+                    /// <para>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, the value of the parameter is the sum of <b>DataSize</b>, <b>IndexSize</b>, and <b>DataFree</b>. For ApsaraDB for MongoDB instances, the value of this parameter is the sum of <b>DataSize</b> and <b>IndexSize</b>.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -292,7 +306,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The physical file size of the table. Unit: bytes.</para>
                     /// <remarks>
-                    /// <para> This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. Data of specific database instances cannot be obtained due to deployment mode.</para>
+                    /// <para>This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters. Data of specific database instances cannot be obtained due to deployment mode.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -325,7 +339,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The type of the table.</para>
                     /// <remarks>
-                    /// <para> This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</para>
+                    /// <para>This parameter is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -337,8 +351,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
                     /// <summary>
                     /// <list type="bullet">
-                    /// <item><description>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by table data and indexes. Unit: bytes. The value is the sum of <b>DataSize</b> and <b>IndexSize</b>.</description></item>
-                    /// <item><description>For ApsaraDB for MongoDB instances, this parameter indicates the actual size of space allocated by Block Manager. Unit: Bytes. The compression ratio of an ApsaraDB for MongoDB instance is calculated based on the following formula: <c>Compression ratio = TotalSize/DataSize</c>.</description></item>
+                    /// <item><description><para>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter indicates the amount of space occupied by table data and indexes. Unit: bytes. The value is the sum of <b>DataSize</b> and <b>IndexSize</b>.</para>
+                    /// </description></item>
+                    /// <item><description><para>For ApsaraDB for MongoDB instances, this parameter indicates the actual size of space allocated by Block Manager. Unit: Bytes. The compression ratio of an ApsaraDB for MongoDB instance is calculated based on the following formula: <c>Compression ratio = TotalSize/DataSize</c>.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -353,7 +369,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The size of remaining storage.</para>
                 /// <remarks>
-                /// <para> Unit: bytes.</para>
+                /// <para>Unit: bytes.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -366,7 +382,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The total size of instance storage.</para>
                 /// <remarks>
-                /// <para> Unit: bytes.</para>
+                /// <para>Unit: bytes.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -379,7 +395,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The size of used storage.</para>
                 /// <remarks>
-                /// <para> Unit: bytes.</para>
+                /// <para>Unit: bytes.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -414,11 +430,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The task progress.</para>
             /// <remarks>
-            /// <para> Valid values are integers that range from 0 to 100.</para>
+            /// <para>Valid values are integers that range from 0 to 100.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>50</para>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TaskProgress")]
             [Validation(Required=false)]
@@ -427,17 +443,24 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The status of the storage analysis task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: The task is being initialized.</description></item>
-            /// <item><description><b>PENDING</b>: The task is being queued for execution.</description></item>
-            /// <item><description><b>RECEIVED</b>: The task is received for execution.</description></item>
-            /// <item><description><b>RUNNING</b>: The task is being executed.</description></item>
-            /// <item><description><b>RETRY</b>: The task is being retried.</description></item>
-            /// <item><description><b>SUCCESS</b>: The task succeeds.</description></item>
-            /// <item><description><b>FAILURE</b>: The task fails.</description></item>
+            /// <item><description><para><b>INIT</b>: The task is being initialized.</para>
+            /// </description></item>
+            /// <item><description><para><b>PENDING</b>: The task is being queued for execution.</para>
+            /// </description></item>
+            /// <item><description><para><b>RECEIVED</b>: The task is received for execution.</para>
+            /// </description></item>
+            /// <item><description><para><b>RUNNING</b>: The task is being executed.</para>
+            /// </description></item>
+            /// <item><description><para><b>RETRY</b>: The task is being retried.</para>
+            /// </description></item>
+            /// <item><description><para><b>SUCCESS</b>: The task succeeds.</para>
+            /// </description></item>
+            /// <item><description><para><b>FAILURE</b>: The task fails.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>RUNNING</para>
+            /// <para>SUCCESS</para>
             /// </summary>
             [NameInMap("TaskState")]
             [Validation(Required=false)]
@@ -468,7 +491,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request is successful, <b>Successful</b> is returned. Otherwise, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. Otherwise, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -491,8 +514,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

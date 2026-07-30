@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database instance IDs. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para> You can specify up to 50 instance IDs.</para>
+        /// <para>You can specify up to 50 instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,9 +26,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The status of the automatic SQL optimization feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The automatic SQL optimization feature is disabled.</description></item>
-        /// <item><description><b>1</b>: <b>SQL diagnosis and automatic index creation</b> is specified.</description></item>
-        /// <item><description><b>3</b>: <b>SQL diagnosis only</b> is specified.</description></item>
+        /// <item><description><para><b>0</b>: The automatic SQL optimization feature is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: <b>SQL diagnosis and automatic index creation</b> is specified.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: <b>SQL diagnosis only</b> is specified.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

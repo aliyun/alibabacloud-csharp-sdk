@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public DescribeSqlLogStatisticResponseBodyData Data { get; set; }
         public class DescribeSqlLogStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The size of the SQL Explorer and Audit data that is stored in cold storage. Unit: bytes.</para>
+            /// <para>The total size of data in cold storage, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8585901</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? ColdSqlSize { get; set; }
 
             /// <summary>
-            /// <para>The free quota for cold data storage. Unit: bytes.</para>
+            /// <para>The amount of free-of-charge cold storage, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5041450</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? FreeColdSqlSize { get; set; }
 
             /// <summary>
-            /// <para>The free quota for hot data storage. Unit: bytes.</para>
+            /// <para>The amount of free-of-charge hot storage, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>297245</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? FreeHotSqlSize { get; set; }
 
             /// <summary>
-            /// <para>The size of the SQL Explorer and Audit data that is stored in hot storage. Unit: bytes.</para>
+            /// <para>The total size of data in hot storage, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1118042</para>
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? HotSqlSize { get; set; }
 
             /// <summary>
-            /// <para>The size of the SQL Explorer and Audit data that was generated in the most recent day. Unit: bytes.</para>
+            /// <para>The amount of data imported in the last 24 hours, in bytes.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>23</para>
+            /// <para>297245</para>
             /// </summary>
             [NameInMap("ImportSqlSize")]
             [Validation(Required=false)]
             public long? ImportSqlSize { get; set; }
 
             /// <summary>
-            /// <para>The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1712568564928</para>
@@ -86,6 +86,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public long? Timestamp { get; set; }
 
+            /// <summary>
+            /// <para>The total storage size. This is the sum of the data in hot storage and cold storage. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>9703943</para>
+            /// </summary>
             [NameInMap("TotalSqlSize")]
             [Validation(Required=false)]
             public long? TotalSqlSize { get; set; }
@@ -93,9 +99,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. Otherwise, an error message is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,8 +124,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

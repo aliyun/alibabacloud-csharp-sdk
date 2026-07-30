@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetRequestDiagnosisResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the database.</para>
+            /// <para>The database name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>das</para>
@@ -49,12 +49,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The database engine. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>MySQL</b></description></item>
-            /// <item><description><b>PostgreSQL</b></description></item>
-            /// <item><description><b>SQLServer</b></description></item>
-            /// <item><description><b>PolarDBMySQL</b></description></item>
-            /// <item><description><b>PolarDBOracle</b></description></item>
-            /// <item><description><b>MongoDB</b></description></item>
+            /// <item><description><para><b>MySQL</b></para>
+            /// </description></item>
+            /// <item><description><para><b>PostgreSQL</b></para>
+            /// </description></item>
+            /// <item><description><para><b>SQL Server</b></para>
+            /// </description></item>
+            /// <item><description><para><b>PolarDB-X</b></para>
+            /// </description></item>
+            /// <item><description><para><b>PolarDB for Oracle</b></para>
+            /// </description></item>
+            /// <item><description><para><b>MongoDB</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,7 +71,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The time when the SQL diagnostics task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The creation time of the SQL diagnosis, provided as a Unix timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1633071840000</para>
@@ -75,7 +81,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the SQL diagnostics task was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The last modification time of the SQL diagnosis, provided as a Unix timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1633071850000</para>
@@ -85,7 +91,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the diagnostics task.</para>
+            /// <para>The unique ID of the diagnosis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>61820b594664275c4429****</para>
@@ -95,7 +101,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string MessageId { get; set; }
 
             /// <summary>
-            /// <para>The additional information.</para>
+            /// <para>Additional information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;&quot;:&quot;&quot;}</para>
@@ -105,61 +111,106 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Param { get; set; }
 
             /// <summary>
-            /// <para>The result of the SQL diagnostics task. The result includes the following information:</para>
+            /// <para>The details of the SQL diagnosis result, returned as a JSON-formatted string.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>endTime</b>: the end time of the SQL diagnostics task.</para>
+            /// <item><description><para><b>endTime</b>: The end time of the SQL diagnosis.</para>
             /// </description></item>
-            /// <item><description><para><b>errorCode</b>: the error code.</para>
+            /// <item><description><para><b>errorCode</b>: The error code.</para>
             /// <list type="bullet">
-            /// <item><description><b>0001</b>: The SQL diagnostics task is complete.</description></item>
-            /// <item><description><b>0003</b>: The SQL diagnostics task failed.</description></item>
+            /// <item><description><para><b>0001</b>: The diagnosis was successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>0003</b>: The diagnosis failed.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>errorMessage</b>: the error message.</para>
+            /// <item><description><para><b>errorMessage</b>: The error message.</para>
             /// </description></item>
-            /// <item><description><para><b>estimateCost</b>: the estimated cost.</para>
+            /// <item><description><para><b>estimateCost</b>: The estimated cost.</para>
             /// <list type="bullet">
-            /// <item><description><b>cpu</b>: the estimated CPU utilization of the index.</description></item>
-            /// <item><description><b>io</b>: the estimated I/O usage of the index.</description></item>
-            /// <item><description><b>rows</b>: the estimated values of the rows returned for the index.</description></item>
+            /// <item><description><para><b>cpu</b>: The estimated CPU cost of the query.</para>
+            /// </description></item>
+            /// <item><description><para><b>io</b>: The estimated I/O cost of the query.</para>
+            /// </description></item>
+            /// <item><description><para><b>rows</b>: The estimated number of rows returned by the query.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>improvement</b>: the performance improvement ratio.</para>
+            /// <item><description><para><b>improvement</b>: The performance improvement ratio.</para>
             /// </description></item>
-            /// <item><description><para><b>indexAdvices</b>: the index recommendations, which include the following information:</para>
+            /// <item><description><para><b>indexAdvices</b>: The index suggestions.</para>
             /// <list type="bullet">
-            /// <item><description><b>columns</b>: the index columns.</description></item>
-            /// <item><description><b>ddlAddIndex</b>: the DDL statement for the index.</description></item>
-            /// <item><description><b>indexName</b>: the name of the index.</description></item>
-            /// <item><description><b>schemaName</b>: the name of the database.</description></item>
-            /// <item><description><b>tableName</b>: the name of the table.</description></item>
-            /// <item><description><b>unique</b>: indicates whether the index is unique.</description></item>
+            /// <item><description><para><b>columns</b>: The index columns.</para>
+            /// </description></item>
+            /// <item><description><para><b>ddlAddIndex</b>: The DDL statement for creating the index.</para>
+            /// </description></item>
+            /// <item><description><para><b>indexName</b>: The index name.</para>
+            /// </description></item>
+            /// <item><description><para><b>schemaName</b>: The schema name.</para>
+            /// </description></item>
+            /// <item><description><para><b>tableName</b>: The table name.</para>
+            /// </description></item>
+            /// <item><description><para><b>unique</b>: Indicates whether the index is a unique index.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>ip</b>: the IP address of the instance.</para>
+            /// <item><description><para><b>ip</b>: The instance IP address.</para>
             /// </description></item>
-            /// <item><description><para><b>messageId</b>: the ID of the diagnostics task.</para>
+            /// <item><description><para><b>messageId</b>: The diagnosis ID.</para>
             /// </description></item>
-            /// <item><description><para><b>port</b>: the port used to connect to the instance.</para>
+            /// <item><description><para><b>port</b>: The instance port.</para>
             /// </description></item>
-            /// <item><description><para><b>sqlTag</b>: the SQL tag.</para>
-            /// </description></item>
-            /// <item><description><para><b>startTime</b>: the start time of the SQL diagnostics task.</para>
-            /// </description></item>
-            /// <item><description><para><b>success</b>: indicates whether the request was successful.</para>
-            /// </description></item>
-            /// <item><description><para><b>support</b>: indicates whether the SQL statement can be diagnosed. Valid values:</para>
+            /// <item><description><para><b>sqlTag</b>: The SQL tags.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>PRED_EQUAL</b>: Equality predicate.</para>
+            /// </description></item>
+            /// <item><description><para><b>CNT_QB</b>: Number of query blocks.</para>
+            /// </description></item>
+            /// <item><description><para><b>CNT_TB</b>: Number of tables.</para>
+            /// </description></item>
+            /// <item><description><para><b>JOIN_LEFT</b>: Left join.</para>
+            /// </description></item>
+            /// <item><description><para><b>SEL_SMALL</b>: Small result set selection.</para>
+            /// </description></item>
+            /// <item><description><para><b>AGGR_SEL</b>: Aggregate selection.</para>
+            /// </description></item>
+            /// <item><description><para><b>PRED_LT_EQ / PRED_GT_EQ</b>: Less-than-or-equal-to / greater-than-or-equal-to predicate.</para>
+            /// </description></item>
+            /// <item><description><para><b>PRED_LIKE_PREFIX</b>: LIKE prefix match.</para>
+            /// </description></item>
+            /// <item><description><para><b>ORDER_BY</b>: Contains an ORDER BY clause.</para>
+            /// </description></item>
+            /// <item><description><para><b>LIMIT</b>: Contains a LIMIT clause.</para>
+            /// </description></item>
+            /// <item><description><para><b>GROUP_BY</b>: Contains a GROUP BY clause.</para>
+            /// </description></item>
+            /// <item><description><para><b>JOIN_INNER</b>: Inner join.</para>
+            /// </description></item>
+            /// <item><description><para><b>JOIN_RIGHT</b>: Right join.</para>
+            /// </description></item>
+            /// <item><description><para><b>HAVING</b>: Contains a HAVING clause.</para>
+            /// </description></item>
+            /// <item><description><para><b>UNION</b>: Contains a UNION operation.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>tuningAdvices</b> : the SQL rewrite suggestions.</para>
+            /// <item><description><para><b>startTime</b>: The start time of the SQL diagnosis.</para>
+            /// </description></item>
+            /// <item><description><para><b>success</b>: Indicates whether the diagnosis was successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>support</b>: Indicates whether the SQL statement can be diagnosed.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: Supported.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Not supported.</para>
+            /// </description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description><para><b>tuningAdvices</b>: The SQL rewrite suggestions.</para>
             /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>{ &quot;endTime&quot;:1636354256000, &quot;errorCode&quot;:&quot;0001&quot;, &quot;errorMessage&quot;:&quot;TFX succeeded&quot;, &quot;estimateCost&quot;:{ &quot;cpu&quot;:1.7878745150389268, &quot;io&quot;:9.948402604746128, &quot;rows&quot;:8.889372575194633 }, &quot;improvement&quot;:12933.97, &quot;indexAdvices&quot;:[ { &quot;columns&quot;:[ &quot;work_no&quot; ], &quot;ddlAddIndex&quot;:&quot;ALTER TABLE <c>test</c>.<c>work_order</c> ADD INDEX <c>idx_workno</c> (<c>work_no</c>)&quot;, &quot;indexName&quot;:&quot;idx_workno&quot;, &quot;schemaName&quot;:&quot;test&quot;, &quot;tableName&quot;:&quot;work_order&quot;, &quot;unique&quot;:false } ], &quot;ip&quot;:&quot;<b><b>.mysql.rds.aliyuncs.com&quot;, &quot;messageId&quot;:&quot;6188c8cb2f1365b16aee</b></b>&quot;, &quot;port&quot;:3306, &quot;sqlTag&quot;:&quot;{\&quot;PRED_EQUAL\&quot;:\&quot;Y\&quot;,\&quot;CNT_QB\&quot;:\&quot;1\&quot;,\&quot;CNT_TB\&quot;:\&quot;1\&quot;}&quot;, &quot;startTime&quot;:1636354252000, &quot;success&quot;:true, &quot;support&quot;:true, &quot;tuningAdvices&quot;:[ ] }</para>
+            /// <para>{ &quot;endTime&quot;:1636354256000, &quot;errorCode&quot;:&quot;0001&quot;, &quot;errorMessage&quot;:&quot;TFX成功&quot;, &quot;estimateCost&quot;:{ &quot;cpu&quot;:1.7878745150389268, &quot;io&quot;:9.948402604746128, &quot;rows&quot;:8.889372575194633 }, &quot;improvement&quot;:12933.97, &quot;indexAdvices&quot;:[ { &quot;columns&quot;:[ &quot;work_no&quot; ], &quot;ddlAddIndex&quot;:&quot;ALTER TABLE <c>test</c>.<c>work_order</c> ADD INDEX <c>idx_workno</c> (<c>work_no</c>)&quot;, &quot;indexName&quot;:&quot;idx_workno&quot;, &quot;schemaName&quot;:&quot;test&quot;, &quot;tableName&quot;:&quot;work_order&quot;, &quot;unique&quot;:false } ], &quot;ip&quot;:&quot;<b><b>.mysql.rds.aliyuncs.com&quot;, &quot;messageId&quot;:&quot;6188c8cb2f1365b16aee</b></b>&quot;, &quot;port&quot;:3306, &quot;sqlTag&quot;:&quot;{\&quot;PRED_EQUAL\&quot;:\&quot;Y\&quot;,\&quot;CNT_QB\&quot;:\&quot;1\&quot;,\&quot;CNT_TB\&quot;:\&quot;1\&quot;}&quot;, &quot;startTime&quot;:1636354252000, &quot;success&quot;:true, &quot;support&quot;:true, &quot;tuningAdvices&quot;:[ ] }</para>
             /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]
@@ -176,13 +227,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string SqlId { get; set; }
 
             /// <summary>
-            /// <para>The state of the diagnostics task. Valid values:</para>
+            /// <para>The diagnosis status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The diagnostics task is in progress.</description></item>
-            /// <item><description><b>1</b>: A diagnostics error occurred.</description></item>
-            /// <item><description><b>2</b>: The diagnostics task is complete.</description></item>
-            /// <item><description><b>3</b>: An SQL error occurred.</description></item>
-            /// <item><description><b>4</b>: An engine error occurred.</description></item>
+            /// <item><description><para><b>0</b>: In progress.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Diagnosis error.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Completed.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: SQL error.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: Engine error.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -193,7 +249,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? State { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the diagnostics instance.</para>
+            /// <para>The unique identifier of the diagnosed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hdm_51fe9bc19ec413f4d530431af87a****</para>
@@ -205,9 +261,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// <remarks>
-        /// <para> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>This parameter returns <c>Successful</c> if the request succeeds. If the request fails, it returns an error message, which may include an error code.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -230,8 +286,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

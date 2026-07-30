@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class CreateLatestDeadLockAnalysisRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the database instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The node ID.</para>
+        /// <remarks>
+        /// <para>Required for PolarDB for MySQL clusters.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>pi-bp16v3824rt73****</para>
         /// </summary>

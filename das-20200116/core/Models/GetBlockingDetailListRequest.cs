@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <para>The name of the database. Separate multiple database names with commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>school1,school2</para>
+        /// <para>testdb1,testdb2</para>
         /// </summary>
         [NameInMap("DbNameList")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-t4nfalp2ap421312z</para>
+        /// <para>rm-t4nfalp2ap421****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

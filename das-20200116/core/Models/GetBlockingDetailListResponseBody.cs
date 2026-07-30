@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The name of the database.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>school</para>
+                /// <para>testdb1</para>
                 /// </summary>
                 [NameInMap("DataBase")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The username that is used for the logon.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Cheney603</para>
+                /// <para>Testuser</para>
                 /// </summary>
                 [NameInMap("LoginId")]
                 [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The hash value of the SQL statement.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>6977DD06CD9CAFF2</para>
+                /// <para>DC08B955CAD25E7B</para>
                 /// </summary>
                 [NameInMap("QueryHash")]
                 [Validation(Required=false)]
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request is successful, <b>Successful</b> is returned. Otherwise, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. Otherwise, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -213,8 +213,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

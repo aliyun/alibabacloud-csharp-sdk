@@ -34,9 +34,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The type of auto scaling. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>specScale</b>: The specifications of a database instance are automatically scaled up or down.</description></item>
-        /// <item><description><b>shardScale</b>: The number of shards for a database instance is automatically increased or decreased.</description></item>
-        /// <item><description><b>bandwidthScale</b>: The bandwidth of a database instance is automatically increased or decreased.</description></item>
+        /// <item><description><para><b>specScale</b>: The specifications of a database instance are automatically scaled up or down.</para>
+        /// </description></item>
+        /// <item><description><para><b>shardScale</b>: The number of shards for a database instance is automatically increased or decreased.</para>
+        /// </description></item>
+        /// <item><description><para><b>bandwidthScale</b>: The bandwidth of a database instance is automatically increased or decreased.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

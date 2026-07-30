@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DeleteStopGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,13 +20,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result of the DeleteStopGateway operation. Valid values:</para>
+        /// <para>The status code indicating the result of the deletion:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The metadata of the DBGateway is deleted.</description></item>
-        /// <item><description><b>-1</b>: A system error occurs.</description></item>
-        /// <item><description><b>-2</b>: The DBGateway does not exist.</description></item>
-        /// <item><description><b>-3</b>: The DBGateway is not stopped and the metadata cannot be deleted.</description></item>
-        /// <item><description><b>-4</b>: The metadata of the DBGateway fails to be deleted.</description></item>
+        /// <item><description><para><b>0</b>: Success. The metadata was deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>-1</b>: A system error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>-2</b>: The specified database gateway does not exist.</para>
+        /// </description></item>
+        /// <item><description><para><b>-3</b>: The database gateway is still active (not stopped) and its metadata cannot be deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>-4</b>: Failed to delete the metadata.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +44,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>When the request is successful, this parameter returns <b>Successful</b>. When the request fails, this parameter returns exception information such as error codes.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,10 +65,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><para><b>true</b>: The operation is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

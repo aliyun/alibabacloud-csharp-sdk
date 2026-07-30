@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The ID of the backup file. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query the ID.</para>
         /// <list type="bullet">
-        /// <item><description>If you need to specify multiple backup file IDs, separate them with commas (,). For example, you can set this parameter to <c>12345,67890</c>.</description></item>
-        /// <item><description>If you do not specify this parameter, the system automatically backs up the task and performs cache analysis on the backup file.</description></item>
+        /// <item><description><para>If you need to specify multiple backup file IDs, separate them with commas (,). For example, you can set this parameter to <c>12345,67890</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify this parameter, the system automatically backs up the task and performs cache analysis on the backup file.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The ID of the data node on the instance. You can specify this parameter to query the monitoring information about the specified node.</para>
         /// <remarks>
-        /// <para> If you specify the BackupSetId parameter, the system ignores the NodeId parameter. You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query the node ID.</para>
+        /// <para>If you specify the BackupSetId parameter, the system ignores the NodeId parameter. You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query the node ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

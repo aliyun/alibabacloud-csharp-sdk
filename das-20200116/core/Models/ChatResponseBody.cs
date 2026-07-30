@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class ChatResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates the current activity status of the agent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>waiting_for_agent_thinking</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ActivityType { get; set; }
 
         /// <summary>
+        /// <para>The content of the response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>I see you have several PolarDB instances, and I will query them for you shortly</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The incremental content of the response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hello</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Delta { get; set; }
 
         /// <summary>
+        /// <para>The message ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>61820b594664275c4429****</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string MessageId { get; set; }
 
         /// <summary>
+        /// <para>The key for the additional information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>summary</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the parent message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>76bee207-31ee-4707-8851-6b9d4da033aa</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ParentMessageId { get; set; }
 
         /// <summary>
+        /// <para>The role in the conversation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>assistant</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Role { get; set; }
 
         /// <summary>
+        /// <para>The run ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ed7cb7b1-ddc8-45d7-9ff3-b315726cb5f7</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RunId { get; set; }
 
         /// <summary>
+        /// <para>The name of the execution step.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sub_agent_performance_diagnose_mysql</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string StepName { get; set; }
 
         /// <summary>
+        /// <para>The identifier of the callback tool.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>das_api</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string TaskTrackerId { get; set; }
 
         /// <summary>
+        /// <para>The thread ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8e481be1-21d5-4a92-a2fb-fb54be0ab4f6</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ThreadId { get; set; }
 
         /// <summary>
+        /// <para>The tool call ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>call_edf9cdb69e0e4c9796a6a5a6</para>
         /// </summary>
@@ -106,6 +130,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ToolCallId { get; set; }
 
         /// <summary>
+        /// <para>The name of the tool.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>das_api</para>
         /// </summary>
@@ -114,6 +140,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ToolCallName { get; set; }
 
         /// <summary>
+        /// <para>The event type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TEXT_MESSAGE_CONTENT</para>
         /// </summary>
@@ -122,6 +150,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The value of the additional information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;CharCount&quot;:393,&quot;End&quot;:1777428785996,&quot;RequestId&quot;:&quot;BE59AED5-D831-5811-BBAD-590B917B2089&quot;,&quot;SessionId&quot;:&quot;123e4567-e89b-12d3-a456-xxxxxxxxxxxx&quot;,&quot;Start&quot;:1777428707927}</para>
         /// </summary>

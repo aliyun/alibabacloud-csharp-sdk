@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeAuditLogsRequest : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2c548e83-1473-4fda-b3dc-5a189074ead5</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string AsyncRequestId { get; set; }
 
         /// <summary>
+        /// <para>The IP address of the request client.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11.26.118.7</para>
         /// </summary>
@@ -25,11 +29,19 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string ClientIp { get; set; }
 
+        /// <summary>
+        /// <para>The client type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql</para>
+        /// </summary>
         [NameInMap("ClientUa")]
         [Validation(Required=false)]
         public string ClientUa { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The name of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TestDB</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
+        /// <para>The range of affected rows.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>in[1 33]</para>
         /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string EffectRowRange { get; set; }
 
         /// <summary>
+        /// <para>The end time of the alert log. The value is a UNIX timestamp in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15682887991222</para>
         /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The range of execution time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>in[1000 2000]</para>
         /// </summary>
@@ -70,6 +90,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ExecuteTimeRange { get; set; }
 
         /// <summary>
+        /// <para>The name of the asset instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-t4ni1cezz5y3xxxx</para>
         /// </summary>
@@ -78,6 +100,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The network type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>default</b> (default): non-Alibaba Cloud service.</para>
+        /// </description></item>
+        /// <item><description><para><b>aliyun</b>: Alibaba Cloud service.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>aliyun</para>
         /// </summary>
@@ -86,6 +116,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string IpType { get; set; }
 
         /// <summary>
+        /// <para>The language type for sending and receiving messages. Default value: zh_cn. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh_cn: Chinese.</description></item>
+        /// <item><description>en_us: English.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
         /// </summary>
@@ -94,6 +130,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to load the whitelist status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -101,7 +139,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public bool? LoadWhiteList { get; set; }
 
+        [NameInMap("LogQueryOpJson")]
+        [Validation(Required=false)]
+        public string LogQueryOpJson { get; set; }
+
         /// <summary>
+        /// <para>The data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SLOW_SQL</para>
         /// </summary>
@@ -110,6 +154,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string LogSource { get; set; }
 
         /// <summary>
+        /// <para>The operation type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Insert</para>
         /// </summary>
@@ -118,6 +164,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string OperateType { get; set; }
 
         /// <summary>
+        /// <para>The key of the OSS storage object.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>N.A</para>
         /// </summary>
@@ -126,6 +174,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string OssObjectKey { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of records per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -134,6 +184,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The name of the product to which the data asset belongs. Valid values: <b>RDS, PolarDB, PolarDB-X 2.0</b>, and others.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
         /// </summary>
@@ -142,6 +194,17 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// <para>The ID that corresponds to the product name to which the data object belongs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>3: ADB-MYSQL</description></item>
+        /// <item><description>5: RDS</description></item>
+        /// <item><description>7: PolarDB-X</description></item>
+        /// <item><description>8: PolarDB</description></item>
+        /// <item><description>9: ADB-PG</description></item>
+        /// <item><description>11: MongoDB</description></item>
+        /// <item><description>25: Redis</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -150,6 +213,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? ProductId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to perform an aggregate query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -158,6 +223,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? RuleAggQuery { get; set; }
 
         /// <summary>
+        /// <para>The rule type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -166,6 +233,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RuleCategory { get; set; }
 
         /// <summary>
+        /// <para>The ID of the audit policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9953411</para>
         /// </summary>
@@ -174,6 +243,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RuleID { get; set; }
 
         /// <summary>
+        /// <para>The rule ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>867028</para>
         /// </summary>
@@ -182,6 +253,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RuleId { get; set; }
 
         /// <summary>
+        /// <para>The name of the audit policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_rule</para>
         /// </summary>
@@ -190,6 +263,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// <para>The content of the SQL statement.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SELECT * FROM test where name = \&quot;das\&quot;</para>
         /// </summary>
@@ -198,6 +273,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SqlText { get; set; }
 
         /// <summary>
+        /// <para>The start time of the alert log, in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1608888296000</para>
         /// </summary>
@@ -206,6 +283,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>The username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>admin</para>
         /// </summary>

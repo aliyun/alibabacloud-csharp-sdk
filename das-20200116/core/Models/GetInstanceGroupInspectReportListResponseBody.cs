@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetInstanceGroupInspectReportListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public List<GetInstanceGroupInspectReportListResponseBodyData> Data { get; set; }
         public class GetInstanceGroupInspectReportListResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The time when the task was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-12-11 00:39:00</para>
             /// </summary>
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The date of the diagnosis.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-12-10</para>
             /// </summary>
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ReportDate { get; set; }
 
             /// <summary>
+            /// <para>The report ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>13f52040-5a6e-42c3-bb84-051f5d6d****</para>
             /// </summary>
@@ -49,6 +57,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ReportId { get; set; }
 
             /// <summary>
+            /// <para>The task status. Valid values: WAITING_UNREADY = 0, WAITING_READY = 1, PROCESSING = 2, FINISHED = 3, ERROR = 4, STOPPED = -1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -59,6 +69,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// <remarks>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, exception information such as an error code is returned.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
         /// </summary>
@@ -67,6 +82,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>
         /// </summary>
@@ -75,6 +92,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

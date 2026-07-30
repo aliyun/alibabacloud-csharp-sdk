@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</para>
+        /// <para>The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported</para>
+        /// <para>Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.</para>
+        /// <para>For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

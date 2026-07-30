@@ -89,8 +89,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>Abnormal SQL statements use the same template as the SQL statements that need to be throttled.</para>
                 /// </remarks>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -103,8 +105,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>AND</b></description></item>
-                /// <item><description><b>OR</b></description></item>
+                /// <item><description><para><b>AND</b></para>
+                /// </description></item>
+                /// <item><description><para><b>OR</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -157,8 +161,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the automatic SQL throttling feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -173,7 +179,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The number of database instances that do not exist or for which the automatic SQL throttling feature has never been enabled.</para>
             /// <remarks>
-            /// <para> If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</para>
+            /// <para>If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -186,7 +192,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The number of database instances that do not exist or for which the automatic SQL throttling feature has never been enabled.</para>
             /// <remarks>
-            /// <para> If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</para>
+            /// <para>If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("NeverEnableAutoThrottleOrReleasedInstanceIdList")]
@@ -266,8 +272,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>Abnormal SQL statements use the same template as the SQL statements that need to be throttled.</para>
                 /// </remarks>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -280,8 +288,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>AND</b></description></item>
-                /// <item><description><b>OR</b></description></item>
+                /// <item><description><para><b>AND</b></para>
+                /// </description></item>
+                /// <item><description><para><b>OR</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -334,8 +344,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the automatic SQL throttling feature is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -352,7 +364,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message that contains information such as an error code is returned.</para>
+        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message that contains information such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -375,8 +387,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

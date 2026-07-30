@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class ModifySqlLogConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable DAS Enterprise Edition. Valid values:</para>
+        /// <para>Indicates whether to enable DAS Enterprise Edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: enables DAS Enterprise Edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disables DAS Enterprise Edition.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if you want to enable DAS Enterprise Edition. By default, the latest version of DAS Enterprise Edition that supports the database instance is enabled.</para>
+        /// <para>This parameter is required when you enable DAS Enterprise Edition. By default, this operation enables the latest supported version.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,6 +28,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether to enable security audit.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableAudit")]
         [Validation(Required=false)]
         public bool? EnableAudit { get; set; }
@@ -60,9 +68,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The number of days for which the SQL Explorer and Audit data is stored in hot storage. Valid values: 1 to 7.</para>
+        /// <para>The hot storage retention period, in days. The value must be an integer from 1 to 7.</para>
         /// <remarks>
-        /// <para> This parameter is required if only DAS Enterprise Edition V3 can be enabled for the database instance.</para>
+        /// <para>This parameter is required only if you enable DAS Enterprise Edition V3.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,20 +85,22 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rr-2ze770smbq3tpr2o9</para>
+        /// <para>rr-2ze770smbq3tp****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the SQL Explorer feature. Valid values:</para>
+        /// <para>Indicates whether to enable SQL Explorer. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: enables SQL Explorer.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disables SQL Explorer.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if only DAS Enterprise Edition V3 can be enabled for the database instance.</para>
+        /// <para>This parameter is required only if you enable DAS Enterprise Edition V3.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -101,15 +111,19 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? RequestEnable { get; set; }
 
         /// <summary>
-        /// <para>The total storage duration of the SQL Explorer and Audit data. Unit: day. Valid values:</para>
+        /// <para>The data retention period, in days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>7</description></item>
-        /// <item><description>30</description></item>
-        /// <item><description>180</description></item>
-        /// <item><description>365</description></item>
+        /// <item><description><para>7</para>
+        /// </description></item>
+        /// <item><description><para>30</para>
+        /// </description></item>
+        /// <item><description><para>180</para>
+        /// </description></item>
+        /// <item><description><para>365</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you want to enable DAS Enterprise Edition V3, the value of this parameter must be greater than or equal to 30.</para>
+        /// <para>If you enable DAS Enterprise Edition V3, the value of this parameter must be 30 or greater.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

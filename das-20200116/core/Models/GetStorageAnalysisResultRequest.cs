@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-bp10xxxxxxxxx</para>
+        /// <para>rm-2ze1jdv45i7l6****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> This parameter is reserved.</para>
+        /// <para>This parameter is reserved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>202****</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]

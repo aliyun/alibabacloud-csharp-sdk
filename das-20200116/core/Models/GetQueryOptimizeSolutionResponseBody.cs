@@ -46,8 +46,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The severity level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>INFO</b></description></item>
-                /// <item><description><b>WARN</b></description></item>
+                /// <item><description><para><b>INFO</b></para>
+                /// </description></item>
+                /// <item><description><para><b>WARN</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -144,8 +146,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

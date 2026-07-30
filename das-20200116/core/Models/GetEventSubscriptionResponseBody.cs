@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Indicates whether the event subscription feature is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The event subscription feature is disabled.</description></item>
-            /// <item><description><b>1</b>: The event subscription feature is enabled.</description></item>
+            /// <item><description><para><b>0</b>: The event subscription feature is disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: The event subscription feature is enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,10 +45,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The notification method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>hdm_alarm_sms</b>: text message.</description></item>
-            /// <item><description><b>dingtalk</b>: DingTalk chatbot.</description></item>
-            /// <item><description><b>hdm_alarm_sms_and_email</b>: text message and email.</description></item>
-            /// <item><description><b>hdm_alarm_sms,dingtalk</b>: text message and DingTalk chatbot.</description></item>
+            /// <item><description><para><b>hdm_alarm_sms</b>: text message.</para>
+            /// </description></item>
+            /// <item><description><para><b>dingtalk</b>: DingTalk chatbot.</para>
+            /// </description></item>
+            /// <item><description><para><b>hdm_alarm_sms_and_email</b>: text message and email.</para>
+            /// </description></item>
+            /// <item><description><para><b>hdm_alarm_sms,dingtalk</b>: text message and DingTalk chatbot.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,7 +83,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The members of the alert contact group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot;[\&quot;Mr. Zhang\&quot;,\&quot;Ms. Wang\&quot;,\&quot;Mr. Li\&quot;]&quot;</para>
+                /// <para>&quot;[\&quot;Mr. Zhang\&quot;,\&quot;Mr. Wang\&quot;,\&quot;Mr. Li\&quot;]&quot;</para>
                 /// </summary>
                 [NameInMap("contacts")]
                 [Validation(Required=false)]
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <para>The name of the alert contact group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Mr. Zhang</para>
+                /// <para>张先生</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -154,6 +160,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
                 /// <summary>
                 /// <para>The contact groups to which the alert contact belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Mr. Zhang</para>
                 /// </summary>
                 [NameInMap("groups")]
                 [Validation(Required=false)]
@@ -162,8 +171,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether the alert contact name is the same as the contact name on CloudMonitor.</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -275,10 +286,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The risk level of the events that trigger notifications. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Notice</b></description></item>
-            /// <item><description><b>Optimization</b></description></item>
-            /// <item><description><b>Warn</b></description></item>
-            /// <item><description><b>Critical</b></description></item>
+            /// <item><description><para><b>Notice</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Optimization</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Warn</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Critical</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -313,7 +328,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -336,8 +351,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

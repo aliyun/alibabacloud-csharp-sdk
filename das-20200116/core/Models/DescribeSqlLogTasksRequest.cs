@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end time of the query range. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1608888296000</para>
@@ -20,20 +20,20 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The filter parameters.</para>
+        /// <para>An array of filter conditions.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<DescribeSqlLogTasksRequestFilters> Filters { get; set; }
         public class DescribeSqlLogTasksRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The name of the filter parameter.</para>
+            /// <para>The filter parameter.</para>
             /// <remarks>
-            /// <para> For more information about the filter parameters, see the <b>Valid values of Key</b> section of this topic.</para>
+            /// <para>See <b>Additional information about request parameters</b> for the supported filter parameters and their valid values.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>delimiter</para>
+            /// <para>keyWords</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <para>The value of the filter parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>,</para>
+            /// <para>select</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -64,18 +64,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> This parameter is available only for instances that are deployed in the cluster architecture. You can specify this parameter to query the tasks of a specific node. If this parameter is not specified, the tasks of the primary node are returned by default.</para>
+        /// <para>For cluster instances only. You can specify a node ID to query its offline tasks. If this parameter is omitted, the offline tasks of the primary node are returned by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>pi-bp1o58x3ib7e6z496</para>
+        /// <para>pi-bp1o58x3ib7e6****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. The value must be a positive integer. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start time of the query range. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1596177993000</para>

@@ -79,14 +79,19 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The state of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: The task is to be scheduled.</description></item>
-            /// <item><description><b>RUNNING</b>: The task is running.</description></item>
-            /// <item><description><b>FAILED</b>: The task failed.</description></item>
-            /// <item><description><b>CANCELED</b>: The task is canceled.</description></item>
-            /// <item><description><b>COMPLETED</b>: The task is complete.</description></item>
+            /// <item><description><para><b>INIT</b>: The task is to be scheduled.</para>
+            /// </description></item>
+            /// <item><description><para><b>RUNNING</b>: The task is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>FAILED</b>: The task failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>CANCELED</b>: The task is canceled.</para>
+            /// </description></item>
+            /// <item><description><para><b>COMPLETED</b>: The task is complete.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> You can view the result of a task that is in the <b>COMPLETED</b> state.</para>
+            /// <para>You can view the result of a task that is in the <b>COMPLETED</b> state.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -111,7 +116,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, error information such as an error code is returned.</para>
+        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, error information such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -134,8 +139,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

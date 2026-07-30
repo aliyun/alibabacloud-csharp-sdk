@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The ID of the task that terminated the sessions.</para>
         /// <remarks>
-        /// <para> If the sessions of a PolarDB for MySQL cluster were terminated, <b>NodeId</b> is left empty, and <b>KillAllSessions</b> is set to <b>true</b>, the task IDs are returned based on the number of nodes. Example: [&quot;f77d535b45405bd462b21caa3ee8\<em>\</em>\<em>\</em>&quot;, &quot;e93ab549abb081eb5dcd5396a29b\<em>\</em>\<em>\</em>&quot;].</para>
+        /// <para>If the sessions of a PolarDB for MySQL cluster were terminated, <b>NodeId</b> is left empty, and <b>KillAllSessions</b> is set to <b>true</b>, the task IDs are returned based on the number of nodes. Example: [&quot;f77d535b45405bd462b21caa3ee8\<em>\</em>\<em>\</em>&quot;, &quot;e93ab549abb081eb5dcd5396a29b\<em>\</em>\<em>\</em>&quot;].</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -58,8 +58,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,27 +10,29 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class ModifySqlLogConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>403</para>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifySqlLogConfigResponseBodyData Data { get; set; }
         public class ModifySqlLogConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the cold data storage is enabled. Valid values:</para>
+            /// <para>Indicates whether the cold data storage is enabled.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? ColdEnable { get; set; }
 
             /// <summary>
-            /// <para>The number of days for which the SQL Explorer and Audit data is stored in cold storage. The value is calculated by using the following formula: Value of ColdRetention = Value of Retention - Value of HotRetention.``</para>
+            /// <para>The retention period of the cold data. Unit: day. This value is calculated by using the following formula: <c>Retention - HotRetention</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23</para>
@@ -61,15 +63,22 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? ColdStartTime { get; set; }
 
             /// <summary>
-            /// <para>The collector version. Valid values:</para>
+            /// <para>The version of the database collector. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>MYSQL_V0</b></description></item>
-            /// <item><description><b>MYSQL_V1</b></description></item>
-            /// <item><description><b>MYSQL_V2</b></description></item>
-            /// <item><description><b>MYSQL_V3</b></description></item>
-            /// <item><description><b>PG_V1</b></description></item>
-            /// <item><description><b>rdspg_v1</b></description></item>
-            /// <item><description><b>polarpg_v1</b></description></item>
+            /// <item><description><para><b>MYSQL_V0</b>: MySQL V0</para>
+            /// </description></item>
+            /// <item><description><para><b>MYSQL_V1</b>: MySQL V1</para>
+            /// </description></item>
+            /// <item><description><para><b>MYSQL_V2</b>: MySQL V2</para>
+            /// </description></item>
+            /// <item><description><para><b>MYSQL_V3</b>: MySQL V3</para>
+            /// </description></item>
+            /// <item><description><para><b>PG_V1</b>: PostgreSQL V1</para>
+            /// </description></item>
+            /// <item><description><para><b>rdspg_v1</b>: ApsaraDB RDS for PostgreSQL V1</para>
+            /// </description></item>
+            /// <item><description><para><b>polarpg_v1</b>: PolarDB for PostgreSQL V1</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,10 +89,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string CollectorVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the hot data storage is enabled. Valid values:</para>
+            /// <para>Indicates whether the hot data storage is enabled.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,7 +105,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? HotEnable { get; set; }
 
             /// <summary>
-            /// <para>The number of days for which the SQL Explorer and Audit data is stored in hot storage.</para>
+            /// <para>The retention period of the hot data. Unit: day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -124,10 +135,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string LogFilter { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the SQL Explorer feature is enabled. Valid values:</para>
+            /// <para>Indicates whether SQL Explorer is enabled.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,7 +151,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? RequestEnable { get; set; }
 
             /// <summary>
-            /// <para>The time when the SQL Explorer feature was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when SQL Explorer was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683712800000</para>
@@ -148,7 +161,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? RequestStartTime { get; set; }
 
             /// <summary>
-            /// <para>The time when DAS Enterprise Edition V1 expired. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The expiration time of DAS Enterprise Edition. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1715335200000</para>
@@ -158,7 +171,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? RequestStopTime { get; set; }
 
             /// <summary>
-            /// <para>The total storage duration of the SQL Explorer and Audit data. Unit: day.</para>
+            /// <para>The total retention period of data. Unit: day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -168,10 +181,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? Retention { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether DAS Enterprise Edition is enabled. Valid values:</para>
+            /// <para>Indicates whether DAS Enterprise Edition is enabled.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -181,16 +196,22 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public bool? SqlLogEnable { get; set; }
 
+            /// <summary>
+            /// <para>The source of the audit log.</para>
+            /// </summary>
             [NameInMap("SqlLogSource")]
             [Validation(Required=false)]
             public string SqlLogSource { get; set; }
 
             /// <summary>
-            /// <para>The state of data migration. Valid values:</para>
+            /// <para>The data migration state. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>FINISH</b>: The historical data is migrated.</description></item>
-            /// <item><description><b>RUNNING</b>: The historical data is being migrated.</description></item>
-            /// <item><description><b>FAILURE</b>: The historical data fails to be migrated.</description></item>
+            /// <item><description><para><b>FINISH</b>: The historical data is migrated.</para>
+            /// </description></item>
+            /// <item><description><para><b>RUNNING</b>: The historical data is being migrated.</para>
+            /// </description></item>
+            /// <item><description><para><b>FAILURE</b>: The historical data fails to be migrated.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -211,14 +232,20 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? SqlLogVisibleTime { get; set; }
 
             /// <summary>
-            /// <para>The latest version of DAS Enterprise Edition that supports the database instance. Valid values:</para>
+            /// <para>The latest supported version of DAS Enterprise Edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SQL_LOG_V0</b>: DAS Enterprise Edition V0.</description></item>
-            /// <item><description><b>SQL_LOG_V1</b>: DAS Enterprise Edition V1.</description></item>
-            /// <item><description><b>SQL_LOG_V2</b>: DAS Enterprise Edition V2.</description></item>
-            /// <item><description><b>SQL_LOG_V3</b>: DAS Enterprise Edition V3.</description></item>
-            /// <item><description><b>SQL_LOG_NOT_ENABLE</b>: DAS Enterprise Edition is not enabled.</description></item>
-            /// <item><description><b>SQL_LOG_NOT_SUPPORT</b>: DAS Enterprise Edition is not supported.</description></item>
+            /// <item><description><para><b>SQL_LOG_V0</b>: DAS Enterprise Edition V0</para>
+            /// </description></item>
+            /// <item><description><para><b>SQL_LOG_V1</b>: DAS Enterprise Edition V1</para>
+            /// </description></item>
+            /// <item><description><para><b>SQL_LOG_V2</b>: DAS Enterprise Edition V2</para>
+            /// </description></item>
+            /// <item><description><para><b>SQL_LOG_V3</b>: DAS Enterprise Edition V3</para>
+            /// </description></item>
+            /// <item><description><para><b>SQL_LOG_NOT_ENABLE</b>: DAS Enterprise Edition is not enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>SQL_LOG_NOT_SUPPORT</b>: DAS Enterprise Edition is not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -229,14 +256,20 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string SupportVersion { get; set; }
 
             /// <summary>
-            /// <para>The version of DAS Enterprise Edition that is enabled for the database instance. Valid values:</para>
+            /// <para>The current version of DAS Enterprise Edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SQL_LOG_V0</b>: DAS Enterprise Edition V0.</description></item>
-            /// <item><description><b>SQL_LOG_V1</b>: DAS Enterprise Edition V1.</description></item>
-            /// <item><description><b>SQL_LOG_V2</b>: DAS Enterprise Edition V2.</description></item>
-            /// <item><description><b>SQL_LOG_V3</b>: DAS Enterprise Edition V3.</description></item>
-            /// <item><description><b>SQL_LOG_NOT_ENABLE</b>: DAS Enterprise Edition is not enabled.</description></item>
-            /// <item><description><b>SQL_LOG_NOT_SUPPORT</b>: DAS Enterprise Edition is not supported.</description></item>
+            /// <item><description><para><b>SQL_LOG_V0</b>: DAS Enterprise Edition V0</para>
+            /// </description></item>
+            /// <item><description><para><b>SQL_LOG_V1</b>: DAS Enterprise Edition V1</para>
+            /// </description></item>
+            /// <item><description><para><b>SQL_LOG_V2</b>: DAS Enterprise Edition V2</para>
+            /// </description></item>
+            /// <item><description><para><b>SQL_LOG_V3</b>: DAS Enterprise Edition V3</para>
+            /// </description></item>
+            /// <item><description><para><b>SQL_LOG_NOT_ENABLE</b>: DAS Enterprise Edition is not enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>SQL_LOG_NOT_SUPPORT</b>: DAS Enterprise Edition is not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -249,9 +282,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. Otherwise, an error message is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -274,12 +307,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>False</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

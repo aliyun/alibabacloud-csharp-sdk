@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to apply the <b>Bandwidth</b> configuration of the bandwidth auto scaling feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,9 +35,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The average bandwidth usage threshold that triggers automatic bandwidth downgrade. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>10</b></description></item>
-            /// <item><description><b>20</b></description></item>
-            /// <item><description><b>30</b></description></item>
+            /// <item><description><para><b>10</b></para>
+            /// </description></item>
+            /// <item><description><para><b>20</b></para>
+            /// </description></item>
+            /// <item><description><para><b>30</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,12 +56,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The average bandwidth usage threshold that triggers automatic bandwidth upgrade. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>50</b></description></item>
-            /// <item><description><b>60</b></description></item>
-            /// <item><description><b>70</b></description></item>
-            /// <item><description><b>80</b></description></item>
-            /// <item><description><b>90</b></description></item>
-            /// <item><description><b>95</b></description></item>
+            /// <item><description><para><b>50</b></para>
+            /// </description></item>
+            /// <item><description><para><b>60</b></para>
+            /// </description></item>
+            /// <item><description><para><b>70</b></para>
+            /// </description></item>
+            /// <item><description><para><b>80</b></para>
+            /// </description></item>
+            /// <item><description><para><b>90</b></para>
+            /// </description></item>
+            /// <item><description><para><b>95</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,8 +83,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to enable automatic bandwidth downgrade. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,11 +99,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The observation window of the bandwidth auto scaling feature. The value of this parameter consists of a numeric value and a time unit suffix. The <b>m</b> time unit suffix specifies the minute. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1m</b></description></item>
-            /// <item><description><b>5m</b></description></item>
-            /// <item><description><b>10m</b></description></item>
-            /// <item><description><b>15m</b></description></item>
-            /// <item><description><b>30m</b></description></item>
+            /// <item><description><para><b>1m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>5m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>10m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>15m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>30m</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,8 +124,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to enable automatic bandwidth upgrade. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,8 +160,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to apply the <b>Resource</b> configuration of the resource auto scaling feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,9 +179,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The average CPU utilization threshold that triggers automatic resource scale-out. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>70</b></description></item>
-            /// <item><description><b>80</b></description></item>
-            /// <item><description><b>90</b></description></item>
+            /// <item><description><para><b>70</b></para>
+            /// </description></item>
+            /// <item><description><para><b>80</b></para>
+            /// </description></item>
+            /// <item><description><para><b>90</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -175,12 +200,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The observation window of the automatic resource scale-in feature. The value of this parameter consists of a numeric value and a time unit suffix. The <b>m</b> time unit suffix specifies the minute. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1m</b></description></item>
-            /// <item><description><b>3m</b></description></item>
-            /// <item><description><b>5m</b></description></item>
-            /// <item><description><b>10m</b></description></item>
-            /// <item><description><b>20m</b></description></item>
-            /// <item><description><b>30m</b></description></item>
+            /// <item><description><para><b>1m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>3m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>5m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>10m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>20m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>30m</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -196,8 +227,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to enable resource auto scaling. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -213,12 +246,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The observation window of the automatic resource scale-out feature. The value of this parameter consists of a numeric value and a time unit suffix. The <b>m</b> time unit suffix specifies the minute. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1m</b></description></item>
-            /// <item><description><b>3m</b></description></item>
-            /// <item><description><b>5m</b></description></item>
-            /// <item><description><b>10m</b></description></item>
-            /// <item><description><b>20m</b></description></item>
-            /// <item><description><b>30m</b></description></item>
+            /// <item><description><para><b>1m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>3m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>5m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>10m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>20m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>30m</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -243,11 +282,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to apply the <b>Shard</b> configuration of the shard auto scaling feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> The shard auto scaling feature is available only for Tair (Redis OSS-compatible) cloud-native cluster instances on the China site (aliyun.com).</para>
+            /// <para>The shard auto scaling feature is available only for Tair (Redis OSS-compatible) cloud-native cluster instances on the China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -260,11 +301,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to enable automatic shard removal. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> The automatic shard removal feature is in a canary release.</para>
+            /// <para>The automatic shard removal feature is in a canary release.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -277,11 +320,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The observation window of the automatic shard removal feature. The value of this parameter consists of a numeric value and a time unit suffix. The <b>h</b> time unit suffix specifies the hour. The <b>d</b> time unit suffix specifies the day. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1h</b></description></item>
-            /// <item><description><b>2h</b></description></item>
-            /// <item><description><b>3h</b></description></item>
-            /// <item><description><b>1d</b></description></item>
-            /// <item><description><b>7d</b></description></item>
+            /// <item><description><para><b>1h</b></para>
+            /// </description></item>
+            /// <item><description><para><b>2h</b></para>
+            /// </description></item>
+            /// <item><description><para><b>3h</b></para>
+            /// </description></item>
+            /// <item><description><para><b>1d</b></para>
+            /// </description></item>
+            /// <item><description><para><b>7d</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -310,9 +358,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The average memory usage threshold that triggers automatic shard removal. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>10</b></description></item>
-            /// <item><description><b>20</b></description></item>
-            /// <item><description><b>30</b></description></item>
+            /// <item><description><para><b>10</b></para>
+            /// </description></item>
+            /// <item><description><para><b>20</b></para>
+            /// </description></item>
+            /// <item><description><para><b>30</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -328,11 +379,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The average memory usage threshold that triggers automatic shard addition. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>50</b></description></item>
-            /// <item><description><b>60</b></description></item>
-            /// <item><description><b>70</b></description></item>
-            /// <item><description><b>80</b></description></item>
-            /// <item><description><b>90</b></description></item>
+            /// <item><description><para><b>50</b></para>
+            /// </description></item>
+            /// <item><description><para><b>60</b></para>
+            /// </description></item>
+            /// <item><description><para><b>70</b></para>
+            /// </description></item>
+            /// <item><description><para><b>80</b></para>
+            /// </description></item>
+            /// <item><description><para><b>90</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -361,8 +417,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to enable automatic shard addition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -375,10 +433,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The observation window of the automatic shard addition feature. The value of this parameter consists of a numeric value and a time unit suffix. The <b>m</b> time unit suffix specifies the minute. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>5m</b></description></item>
-            /// <item><description><b>10m</b></description></item>
-            /// <item><description><b>15m</b></description></item>
-            /// <item><description><b>30m</b></description></item>
+            /// <item><description><para><b>5m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>10m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>15m</b></para>
+            /// </description></item>
+            /// <item><description><para><b>30m</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -403,8 +465,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to apply the <b>Spec</b> configuration of the specification auto scaling feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -417,8 +481,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The quiescent period. The value of this parameter consists of a numeric value and a time unit suffix. The <b>m</b> time unit suffix specifies the minute, the <b>h</b> time unit suffix specifies the hour, and the <b>d</b> time unit suffix specifies the day.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values for PolarDB for MySQL Cluster Edition instances: <b>5m</b>, <b>10m</b>, <b>30m</b>, <b>1h</b>, <b>2h</b>, <b>3h</b>, <b>1d</b>, and <b>7d</b>.</description></item>
-            /// <item><description>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or Enterprise SSDs (ESSDs): <b>5m</b>, <b>10m</b>, <b>30m</b>, <b>1h</b>, <b>2h</b>, <b>3h</b>, <b>1d</b>, and <b>7d</b>.</description></item>
+            /// <item><description><para>Valid values for PolarDB for MySQL Cluster Edition instances: <b>5m</b>, <b>10m</b>, <b>30m</b>, <b>1h</b>, <b>2h</b>, <b>3h</b>, <b>1d</b>, and <b>7d</b>.</para>
+            /// </description></item>
+            /// <item><description><para>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or Enterprise SSDs (ESSDs): <b>5m</b>, <b>10m</b>, <b>30m</b>, <b>1h</b>, <b>2h</b>, <b>3h</b>, <b>1d</b>, and <b>7d</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -434,14 +500,19 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The average CPU utilization threshold that triggers automatic specification scale-up. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>50</b></description></item>
-            /// <item><description><b>60</b></description></item>
-            /// <item><description><b>70</b></description></item>
-            /// <item><description><b>80</b></description></item>
-            /// <item><description><b>90</b></description></item>
+            /// <item><description><para><b>50</b></para>
+            /// </description></item>
+            /// <item><description><para><b>60</b></para>
+            /// </description></item>
+            /// <item><description><para><b>70</b></para>
+            /// </description></item>
+            /// <item><description><para><b>80</b></para>
+            /// </description></item>
+            /// <item><description><para><b>90</b></para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</para>
+            /// <para>This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -457,11 +528,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to enable automatic specification scale-down. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</para>
+            /// <para>This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -477,7 +550,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The maximum number of read-only nodes of the instance.</para>
             /// <remarks>
-            /// <para> This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.</para>
+            /// <para>This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -493,8 +566,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The maximum specifications to which the database instance can be scaled up. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, see the following topics:</para>
             /// <list type="bullet">
-            /// <item><description>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a></description></item>
-            /// <item><description>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></description></item>
+            /// <item><description><para>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a></para>
+            /// </description></item>
+            /// <item><description><para>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -510,14 +585,19 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The average memory usage threshold that triggers automatic specification scale-up. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>50</b></description></item>
-            /// <item><description><b>60</b></description></item>
-            /// <item><description><b>70</b></description></item>
-            /// <item><description><b>80</b></description></item>
-            /// <item><description><b>90</b></description></item>
+            /// <item><description><para><b>50</b></para>
+            /// </description></item>
+            /// <item><description><para><b>60</b></para>
+            /// </description></item>
+            /// <item><description><para><b>70</b></para>
+            /// </description></item>
+            /// <item><description><para><b>80</b></para>
+            /// </description></item>
+            /// <item><description><para><b>90</b></para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter must be specified if the database instance is a Tair (Redis OSS-compatible) Community Edition cloud-native instance on the China site (aliyun.com).</para>
+            /// <para>This parameter must be specified if the database instance is a Tair (Redis OSS-compatible) Community Edition cloud-native instance on the China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -533,9 +613,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The observation window. The value of this parameter consists of a numeric value and a time unit suffix. The <b>m</b> time unit suffix specifies the minute and the <b>h</b> time unit suffix specifies the hour.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values for PolarDB for MySQL Cluster Edition instances: <b>5m</b>, <b>10m</b>, <b>15m</b>, and <b>30m</b>.</description></item>
-            /// <item><description>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <b>5m</b>, <b>20m</b>, <b>30m</b>, <b>40m</b>, and <b>1h</b>.</description></item>
-            /// <item><description>Valid values for Tair (Redis OSS-compatible) Community Edition cloud-native instances: <b>5m</b>, <b>10m</b>, <b>15m</b>, and <b>30m</b>.</description></item>
+            /// <item><description><para>Valid values for PolarDB for MySQL Cluster Edition instances: <b>5m</b>, <b>10m</b>, <b>15m</b>, and <b>30m</b>.</para>
+            /// </description></item>
+            /// <item><description><para>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <b>5m</b>, <b>20m</b>, <b>30m</b>, <b>40m</b>, and <b>1h</b>.</para>
+            /// </description></item>
+            /// <item><description><para>Valid values for Tair (Redis OSS-compatible) Community Edition cloud-native instances: <b>5m</b>, <b>10m</b>, <b>15m</b>, and <b>30m</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -551,8 +634,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to enable automatic specification scale-up. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -577,8 +662,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to apply the <b>Storage</b> configuration of the automatic storage expansion feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -591,11 +678,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The average storage usage threshold that triggers automatic storage expansion. Unit: %. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>50</b></description></item>
-            /// <item><description><b>60</b></description></item>
-            /// <item><description><b>70</b></description></item>
-            /// <item><description><b>80</b></description></item>
-            /// <item><description><b>90</b></description></item>
+            /// <item><description><para><b>50</b></para>
+            /// </description></item>
+            /// <item><description><para><b>60</b></para>
+            /// </description></item>
+            /// <item><description><para><b>70</b></para>
+            /// </description></item>
+            /// <item><description><para><b>80</b></para>
+            /// </description></item>
+            /// <item><description><para><b>90</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -611,11 +703,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The maximum storage size of the database instance. Unit: GB. The value must be greater than or equal to the total storage size of the instance.</para>
             /// <list type="bullet">
-            /// <item><description>If the instance uses ESSDs, the maximum value of this parameter can be 32000.</description></item>
-            /// <item><description>If the instance uses standard SSDs, the maximum value of this parameter can be 6000.</description></item>
+            /// <item><description><para>If the instance uses ESSDs, the maximum value of this parameter can be 32000.</para>
+            /// </description></item>
+            /// <item><description><para>If the instance uses standard SSDs, the maximum value of this parameter can be 6000.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> The standard SSD storage type is phased out. We recommend that you <a href="https://help.aliyun.com/document_detail/314678.html">upgrade the storage type of your instance from standard SSDs to ESSDs</a>.</para>
+            /// <para>The standard SSD storage type is phased out. We recommend that you <a href="https://help.aliyun.com/document_detail/314678.html">upgrade the storage type of your instance from standard SSDs to ESSDs</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -631,8 +725,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Specifies whether to enable automatic storage expansion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

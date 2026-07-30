@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDeadlockHistogramResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public long? Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetDeadlockHistogramResponseBodyData> Data { get; set; }
         public class GetDeadlockHistogramResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The end time of the analysis task range.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1729998000000</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string EndTime { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pc-bp1u5mas9exx7****</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The number of deadlocks.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? LockNumber { get; set; }
 
             /// <summary>
+            /// <para>The node ID, used for PolarDB MySQL clusters.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pi-bp16v3824rt73****</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string NodeId { get; set; }
 
             /// <summary>
+            /// <para>The start time of the analysis task range.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1729994400000</para>
             /// </summary>
@@ -62,6 +77,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string StartTime { get; set; }
 
             /// <summary>
+            /// <para>The task status:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>SUCCESS</b>: The analysis was successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>FAILED</b>: The analysis was abnormal or failed.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
             /// </summary>
@@ -70,6 +93,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The ID of the full deadlock analysis task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>B6D17591-B48B-4D31-9CD6-1321B394****</para>
             /// </summary>
@@ -78,6 +103,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>The user ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>108************</para>
             /// </summary>
@@ -88,6 +115,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
+        /// <para>The message returned.</para>
+        /// <remarks>
+        /// <para>When the request is successful, this parameter returns <b>Successful</b>. When the request fails, this parameter returns exception information such as error codes.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
         /// </summary>
@@ -96,6 +128,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0A74B755-98B7-59DB-8724-1321B394****</para>
         /// </summary>
@@ -104,6 +138,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

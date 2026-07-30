@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The time when the file expires. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// <remarks>
-            /// <para> The file expires three days after the task is created.</para>
+            /// <para>The file expires three days after the task is created.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -62,10 +62,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: The task is being initialized.</description></item>
-            /// <item><description><b>RUNNING</b>: The task is running.</description></item>
-            /// <item><description><b>FINISH</b>: The task is complete.</description></item>
-            /// <item><description><b>FAILED</b>: The task failed.</description></item>
+            /// <item><description><para><b>INIT</b>: The task is being initialized.</para>
+            /// </description></item>
+            /// <item><description><para><b>RUNNING</b>: The task is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>FINISH</b>: The task is complete.</para>
+            /// </description></item>
+            /// <item><description><para><b>FAILED</b>: The task failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,9 +82,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The status code of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NO_DATA</b>: No data is returned.</description></item>
-            /// <item><description><b>INTERNAL_ERROR</b>: An internal error occurred.</description></item>
-            /// <item><description><b>SUCCESS</b>: The task is successful.</description></item>
+            /// <item><description><para><b>NO_DATA</b>: No data is returned.</para>
+            /// </description></item>
+            /// <item><description><para><b>INTERNAL_ERROR</b>: An internal error occurred.</para>
+            /// </description></item>
+            /// <item><description><para><b>SUCCESS</b>: The task is successful.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +112,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -128,8 +135,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

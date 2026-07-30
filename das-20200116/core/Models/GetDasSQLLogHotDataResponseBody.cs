@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDasSQLLogHotDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDasSQLLogHotDataResponseBodyData Data { get; set; }
         public class GetDasSQLLogHotDataResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The reserved parameter.</para>
+            /// <para>A reserved parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public object Extra { get; set; }
 
             /// <summary>
-            /// <para>The details of the data returned.</para>
+            /// <para>A list of the returned data.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<GetDasSQLLogHotDataResponseBodyDataList> List { get; set; }
             public class GetDasSQLLogHotDataResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The account of the database.</para>
+                /// <para>The database account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testuser</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the database.</para>
+                /// <para>The database name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testDB</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// <para>The execution time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// <para>The UTC time when the execution was recorded, formatted as <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-05-23 T12:11:20Z</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ExecuteTime { get; set; }
 
                 /// <summary>
-                /// <para>The extended information. This parameter is a reserved parameter.</para>
+                /// <para>A reserved parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>None</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string Ext { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the client.</para>
+                /// <para>The client IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.100.XX.XX</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string HostAddress { get; set; }
 
                 /// <summary>
-                /// <para>The execution duration. Unit: microseconds.</para>
+                /// <para>The latency, in microseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? Latancy { get; set; }
 
                 /// <summary>
-                /// <para>The lock wait duration. Unit: microseconds.</para>
+                /// <para>The lock wait time, in microseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -123,12 +123,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public long? LogicRead { get; set; }
 
+                /// <summary>
+                /// <para>The node ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pi-bp120roy76f3qbd84</para>
+                /// </summary>
                 [NameInMap("NodeId")]
                 [Validation(Required=false)]
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The execution time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// <para>The precise UTC time when the execution was recorded, formatted as <c>yyyy-MM-ddTHH:mm:ss.SSSZ</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-05-23 T12:11:20.999Z</para>
@@ -158,7 +164,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? PhysicSyncRead { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows returned.</para>
+                /// <para>The number of returned rows.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -168,7 +174,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? ReturnRows { get; set; }
 
                 /// <summary>
-                /// <para>The content of the SQL statement.</para>
+                /// <para>The SQL statement.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>select 1</para>
@@ -178,7 +184,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string SQLText { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows scanned by the SQL statement.</para>
+                /// <para>The number of scanned rows.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>29</para>
@@ -188,22 +194,25 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? ScanRows { get; set; }
 
                 /// <summary>
-                /// <para>The type of the SQL statement. Valid values:</para>
+                /// <para>The SQL type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>SELECT</b></description></item>
-                /// <item><description><b>UPDATE</b></description></item>
-                /// <item><description><b>DELETE</b></description></item>
+                /// <item><description><para><b>select</b></para>
+                /// </description></item>
+                /// <item><description><para><b>update</b></para>
+                /// </description></item>
+                /// <item><description><para><b>delete</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>SELECT</para>
+                /// <para>select</para>
                 /// </summary>
                 [NameInMap("SqlType")]
                 [Validation(Required=false)]
                 public string SqlType { get; set; }
 
                 /// <summary>
-                /// <para>The execution result. If a <b>0</b> is returned, the SQL statement was successfully executed. If an error code is returned, the SQL statement failed to be executed.</para>
+                /// <para>The execution status. A value of <b>0</b> indicates success. Any other value is an error code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -255,7 +264,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? PageNo { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -265,7 +274,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -277,9 +286,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// <remarks>
-        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request succeeds, <b>Successful</b> is returned. If the request fails, an error message is returned, which may include an error code.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -290,7 +299,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID generated by Alibaba Cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A74B755-98B7-59DB-8724-1321B394****</para>
@@ -300,10 +309,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request succeeded:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

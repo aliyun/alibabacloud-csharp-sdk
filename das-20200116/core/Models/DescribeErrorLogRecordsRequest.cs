@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeErrorLogRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This field is of the Long type. During serialization and deserialization, precision may be lost. Make sure that the value does not exceed 9007199254740991.</para>
+        /// </notice>
+        /// 
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +26,19 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The filter conditions.</para>
+        /// <remarks>
+        /// <para>Error log filtering is supported only for RDS MySQL, RDS PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, and PolarDB for PostgreSQL (compatible with Oracle).</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<DescribeErrorLogRecordsRequestFilters> Filters { get; set; }
         public class DescribeErrorLogRecordsRequestFilters : TeaModel {
             /// <summary>
+            /// <para>The filter parameter. Set the value to filters.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>filters</para>
             /// </summary>
@@ -32,6 +47,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The content of the error log to filter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>deadlock</para>
             /// </summary>
@@ -42,6 +59,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +70,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The node ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pi-bp16v3824rt73****</para>
         /// </summary>
@@ -60,6 +80,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -68,6 +90,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -76,6 +100,15 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The node role:</para>
+        /// <list type="bullet">
+        /// <item><description>db</description></item>
+        /// <item><description>mongos</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is supported only for ApsaraDB for MongoDB instances.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>db</para>
         /// </summary>
@@ -84,6 +117,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Role { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This field is of the Long type. During serialization and deserialization, precision may be lost. Make sure that the value does not exceed 9007199254740991.</para>
+        /// </notice>
+        /// 
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

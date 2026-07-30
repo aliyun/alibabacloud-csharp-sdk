@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> You must specify the node ID if your database instance is a PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB instance.</para>
+        /// <para>You must specify the node ID if your database instance is a PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

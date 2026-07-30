@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The message that is returned for the request.</para>
             /// <remarks>
-            /// <para> If the request is successful, <b>Successful</b> is returned. If the request fails, an error message that contains information such as an error code is returned.</para>
+            /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message that contains information such as an error code is returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -220,10 +220,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The state of the cache analysis task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>BACKUP</b>: The data is being backed up.</description></item>
-            /// <item><description><b>ANALYZING</b>: The data is being analyzed.</description></item>
-            /// <item><description><b>FINISHED</b>: The data is analyzed.</description></item>
-            /// <item><description><b>FAILED</b>: An error occurred.</description></item>
+            /// <item><description><para><b>BACKUP</b>: The data is being backed up.</para>
+            /// </description></item>
+            /// <item><description><para><b>ANALYZING</b>: The data is being analyzed.</para>
+            /// </description></item>
+            /// <item><description><para><b>FINISHED</b>: The data is analyzed.</para>
+            /// </description></item>
+            /// <item><description><para><b>FAILED</b>: An error occurred.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -326,7 +330,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The message that is returned for the request.</para>
         /// <remarks>
-        /// <para> If the request is successful, <b>Successful</b> is returned. If the request fails, an error message that contains information such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message that contains information such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -349,8 +353,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <para>Specifies whether to sort the results in ascending order. By default, the results are not sorted in ascending order.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Disabled</para>
+        /// <para>False</para>
         /// </summary>
         [NameInMap("Asc")]
         [Validation(Required=false)]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</para>
+        /// <para>The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> This parameter must be specified if the database instance is a PolarDB for MySQL cluster.</para>
+        /// <para>This parameter must be specified if the database instance is a PolarDB for MySQL cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,12 +60,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The field by which the results to be returned are sorted. Default value: <b>count</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>count</b>: the number of executions.</description></item>
-        /// <item><description><b>avgRt</b>: the average execution duration.</description></item>
-        /// <item><description><b>rtRate</b>: the execution duration percentage.</description></item>
-        /// <item><description><b>rowsExamined</b>: the total number of scanned rows.</description></item>
-        /// <item><description><b>avgRowsExamined</b>: the average number of scanned rows.</description></item>
-        /// <item><description><b>avgRowsReturned</b>: the average number of returned rows.</description></item>
+        /// <item><description><para><b>count</b>: the number of executions.</para>
+        /// </description></item>
+        /// <item><description><para><b>avgRt</b>: the average execution duration.</para>
+        /// </description></item>
+        /// <item><description><para><b>rtRate</b>: the execution duration percentage.</para>
+        /// </description></item>
+        /// <item><description><para><b>rowsExamined</b>: the total number of scanned rows.</para>
+        /// </description></item>
+        /// <item><description><para><b>avgRowsExamined</b>: the average number of scanned rows.</para>
+        /// </description></item>
+        /// <item><description><para><b>avgRowsReturned</b>: the average number of returned rows.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,8 +106,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The role of the PolarDB-X 2.0 node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>polarx_cn</b>: compute node.</description></item>
-        /// <item><description><b>polarx_en</b>: data node.</description></item>
+        /// <item><description><para><b>polarx_cn</b>: compute node.</para>
+        /// </description></item>
+        /// <item><description><para><b>polarx_en</b>: data node.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +122,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The type of the SQL statement. Valid values: <b>SELECT</b>, <b>INSERT</b>, <b>UPDATE</b>, <b>DELETE</b>, <b>MERGE</b>, <b>ALTER</b>, <b>CREATEINDEX</b>, <b>DROPINDEX</b>, <b>CREATE</b>, <b>DROP</b>, <b>SET</b>, <b>DESC</b>, <b>REPLACE</b>, <b>CALL</b>, <b>BEGIN</b>, <b>DESCRIBE</b>, <b>ROLLBACK</b>, <b>FLUSH</b>, <b>USE</b>, <b>SHOW</b>, <b>START</b>, <b>COMMIT</b>, and <b>RENAME</b>.</para>
         /// <remarks>
-        /// <para> If the database instance is an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL instance, or a PolarDB-X 2.0 instance, statistics can be collected based on the SQL statement type.</para>
+        /// <para>If the database instance is an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL instance, or a PolarDB-X 2.0 instance, statistics can be collected based on the SQL statement type.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -127,7 +135,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// <remarks>
-        /// <para> The start time must be within the storage duration of the SQL Explorer of the database instance, and can be up to 90 days earlier than the current time.</para>
+        /// <para>The start time must be within the storage duration of the SQL Explorer of the database instance, and can be up to 90 days earlier than the current time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -141,7 +149,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The ID of the Alibaba Cloud account that is used to create the database instance.</para>
         /// <remarks>
-        /// <para> This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</para>
+        /// <para>This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

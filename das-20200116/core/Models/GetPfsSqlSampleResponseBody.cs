@@ -139,8 +139,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Indicates whether the server failed to find an index that can be used for the SQL statement. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: yes.</description></item>
-            /// <item><description><b>0</b>: no.</description></item>
+            /// <item><description><para><b>1</b>: yes.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: no.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,8 +155,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Indicates whether table scans were performed when indexes were not used. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: yes.</description></item>
-            /// <item><description><b>0</b>: no.</description></item>
+            /// <item><description><para><b>1</b>: yes.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: no.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -167,7 +171,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The node ID.</para>
             /// <remarks>
-            /// <para> This parameter is returned only for ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters.</para>
+            /// <para>This parameter is returned only for ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -368,7 +372,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -391,8 +395,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

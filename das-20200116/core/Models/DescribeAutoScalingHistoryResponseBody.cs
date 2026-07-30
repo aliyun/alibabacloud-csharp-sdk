@@ -67,10 +67,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The error code returned by the scaling task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Insufficient_Balance</b>: The account has insufficient balance or an unpaid order.</description></item>
-                /// <item><description><b>REACH_SPEC_UPPERBOUND</b>: The instance type reaches the upper limit.</description></item>
-                /// <item><description><b>Control_Error_Timeout_Msg</b>: The management task timed out.</description></item>
-                /// <item><description><b>Invoke_Rds_Api_Error_Msg</b>: Failed to call the ApsaraDB RDS API.</description></item>
+                /// <item><description><para><b>Insufficient_Balance</b>: The account has insufficient balance or an unpaid order.</para>
+                /// </description></item>
+                /// <item><description><para><b>REACH_SPEC_UPPERBOUND</b>: The instance type reaches the upper limit.</para>
+                /// </description></item>
+                /// <item><description><para><b>Control_Error_Timeout_Msg</b>: The management task timed out.</para>
+                /// </description></item>
+                /// <item><description><para><b>Invoke_Rds_Api_Error_Msg</b>: Failed to call the ApsaraDB RDS API.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -113,8 +117,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The type of the automatic performance scaling task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>SCALE_UP</b>: automatic instance type scale-up task.</description></item>
-                /// <item><description><b>SCALE_DOWN</b>: automatic instance type scale-down task.</description></item>
+                /// <item><description><para><b>SCALE_UP</b>: automatic instance type scale-up task.</para>
+                /// </description></item>
+                /// <item><description><para><b>SCALE_DOWN</b>: automatic instance type scale-down task.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -157,8 +163,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The status of the task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: The task was successful.</description></item>
-                /// <item><description><b>false</b>: The task failed.</description></item>
+                /// <item><description><para><b>true</b>: The task was successful.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: The task failed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -215,8 +223,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// </description></item>
         /// <item><description><para>By default, if you leave this parameter empty, all database instances for which the automatic SQL throttling feature has been enabled within the current Alibaba Cloud account are returned. The following types of database instances are returned:</para>
         /// <list type="bullet">
-        /// <item><description>Database instances for which the automatic SQL throttling feature is currently enabled.</description></item>
-        /// <item><description>Database instances for which the automatic SQL throttling feature was once enabled but is currently disabled. Released database instances are not included.</description></item>
+        /// <item><description><para>Database instances for which the automatic SQL throttling feature is currently enabled.</para>
+        /// </description></item>
+        /// <item><description><para>Database instances for which the automatic SQL throttling feature was once enabled but is currently disabled. Released database instances are not included.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>

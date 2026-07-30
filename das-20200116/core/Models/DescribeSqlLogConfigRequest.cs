@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the database instance.</para>
+        /// <para>The database instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dds-uf608087********</para>
+        /// <para>dds-uf6079bda570****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> If you do not specify a node ID, the sessions of the primary node are queried by default.</para>
+        /// <para>If you do not specify a node ID, the sessions of the primary node are queried by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

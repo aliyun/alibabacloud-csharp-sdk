@@ -46,14 +46,22 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The name of the metric. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>sqlExecuteCount</b>: the number of executions of slow SQL queries.</description></item>
-                /// <item><description><b>sqlExecuteCountDiff</b>: the difference in the number of executions of slow SQL queries compared to the previous day.</description></item>
-                /// <item><description><b>sqlCount</b>: the number of slow SQL templates.</description></item>
-                /// <item><description><b>sqlCountDiff</b>: the difference in the number of slow SQL templates compared to the previous day.</description></item>
-                /// <item><description><b>optimizedSqlExecuteCount</b>: the number of optimizable executions of slow SQL queries.</description></item>
-                /// <item><description><b>optimizedSqlExecuteCountDiff</b>: the difference in the number of optimizable executions of slow SQL queries compared to the previous day.</description></item>
-                /// <item><description><b>optimizedSqlCount</b>: the number of optimizable slow SQL templates.</description></item>
-                /// <item><description><b>optimizedSqlCountDiff</b>: the difference in the number of optimizable slow SQL templates compared to the previous day.</description></item>
+                /// <item><description><para><b>sqlExecuteCount</b>: the number of executions of slow SQL queries.</para>
+                /// </description></item>
+                /// <item><description><para><b>sqlExecuteCountDiff</b>: the difference in the number of executions of slow SQL queries compared to the previous day.</para>
+                /// </description></item>
+                /// <item><description><para><b>sqlCount</b>: the number of slow SQL templates.</para>
+                /// </description></item>
+                /// <item><description><para><b>sqlCountDiff</b>: the difference in the number of slow SQL templates compared to the previous day.</para>
+                /// </description></item>
+                /// <item><description><para><b>optimizedSqlExecuteCount</b>: the number of optimizable executions of slow SQL queries.</para>
+                /// </description></item>
+                /// <item><description><para><b>optimizedSqlExecuteCountDiff</b>: the difference in the number of optimizable executions of slow SQL queries compared to the previous day.</para>
+                /// </description></item>
+                /// <item><description><para><b>optimizedSqlCount</b>: the number of optimizable slow SQL templates.</para>
+                /// </description></item>
+                /// <item><description><para><b>optimizedSqlCountDiff</b>: the difference in the number of optimizable slow SQL templates compared to the previous day.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -140,8 +148,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

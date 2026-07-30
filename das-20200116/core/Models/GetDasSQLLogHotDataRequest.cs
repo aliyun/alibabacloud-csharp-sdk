@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDasSQLLogHotDataRequest : TeaModel {
         /// <summary>
-        /// <para>The account of the database.</para>
+        /// <para>The database account.</para>
         /// <remarks>
-        /// <para> You can specify multiple database accounts that are separated by spaces. Example: <c>user1 user2 user3</c>.</para>
+        /// <para>You can specify multiple database accounts. Separate multiple accounts with a space. For example: <c>user1 user2 user3</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> This parameter must be specified if the database instance is a PolarDB for MySQL cluster.</para>
+        /// <para>This parameter is required if the database instance is a PolarDB for MySQL cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ChildDBInstanceIDs { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// <remarks>
-        /// <para> You can specify multiple database names that are separated by spaces. Example: <c>DB1 DB2 DB3</c>.</para>
+        /// <para>You can specify multiple database names. Separate multiple names with a space. For example: <c>DB1 DB2 DB3</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end of the time range to query. This value must be a Unix timestamp in milliseconds.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</para>
+        /// <para>The end time must be later than the start time. The time range cannot exceed one day.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? End { get; set; }
 
         /// <summary>
-        /// <para>The error code of SQL execution. You can call the <a href="https://help.aliyun.com/document_detail/409804.html">GetAsyncErrorRequestStatByCode</a> operation to query MySQL error codes in SQL Explorer data.</para>
+        /// <para>The SQL execution error code. You can call the <a href="https://help.aliyun.com/document_detail/409804.html">GetAsyncErrorRequestStatByCode</a> operation to obtain the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1064</para>
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Fail { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client.</para>
+        /// <para>The client IP address.</para>
         /// <remarks>
-        /// <para> You can specify multiple IP addresses that are separated by spaces. Example: <c>IP1 IP2 IP3</c>.</para>
+        /// <para>You can specify multiple client IP addresses. Separate multiple IP addresses with a space. For example: <c>IP1 IP2 IP3</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -97,10 +97,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The logical relationship among multiple keywords.</para>
+        /// <para>The logical operator to use with multiple keywords. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>or</b></description></item>
-        /// <item><description><b>and</b></description></item>
+        /// <item><description><para><b>or</b></para>
+        /// </description></item>
+        /// <item><description><para><b>and</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string LogicalOperator { get; set; }
 
         /// <summary>
-        /// <para>The maximum execution duration. Unit: microseconds. You can specify this parameter to query the SQL statements whose execution duration is smaller than the value of this parameter.</para>
+        /// <para>The maximum execution time in microseconds. Returns SQL statements that have an execution time less than this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? MaxRecordsPerPage { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -141,7 +143,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? MaxRows { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of scanned rows. You can specify this parameter to query the SQL statements that scan a smaller number of rows than the value of this parameter.</para>
+        /// <para>The maximum number of scanned rows. Returns SQL statements that scanned fewer than this number of rows.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -151,7 +153,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? MaxScanRows { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -161,7 +163,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? MaxSpillCnt { get; set; }
 
         /// <summary>
-        /// <para>The minimum execution duration. Unit: microseconds. You can specify this parameter to query the SQL statements whose execution duration is greater than or equal to the value of this parameter.</para>
+        /// <para>The minimum execution time in microseconds. Returns SQL statements with an execution time greater than or equal to this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -171,7 +173,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? MinLatancy { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -181,7 +183,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? MinRows { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of scanned rows. You can specify this parameter to query the SQL statements that scan a larger or an equal number of rows than the value of this parameter.</para>
+        /// <para>The minimum number of scanned rows. Returns SQL statements that scanned at least this number of rows.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -191,7 +193,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? MinScanRows { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -201,7 +203,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? MinSpillCnt { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number to return. Pages start from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -211,20 +213,20 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? PageNumbers { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used for the query.</para>
+        /// <para>The query keyword.</para>
         /// <remarks>
-        /// <para> Fuzzy search is not supported. You can query data by using multiple keywords. Separate keywords with spaces.</para>
+        /// <para>Fuzzy search is supported. You can specify up to 10 keywords. Separate multiple keywords with a space. For example: a1 b2 c3.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>a1 b2</para>
         /// </summary>
         [NameInMap("QueryKeyword")]
         [Validation(Required=false)]
         public string QueryKeyword { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -234,54 +236,57 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// <para>The basis on which you want to sort the query results.</para>
+        /// <para>The sort key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SCAN_ROWS</b>: the number of scanned rows.</description></item>
-        /// <item><description><b>UPDATE_ROWS</b>: the number of updated rows.</description></item>
-        /// <item><description><b>CONSUME</b>: the time consumed.</description></item>
-        /// <item><description><b>ORIGIN_TIME</b>: the execution duration.</description></item>
+        /// <item><description><para><b>ScanRows</b>: scanned rows.</para>
+        /// </description></item>
+        /// <item><description><para><b>UpdateRows</b>: updated rows.</para>
+        /// </description></item>
+        /// <item><description><para><b>Consume</b>: execution time.</para>
+        /// </description></item>
+        /// <item><description><para><b>OriginTime</b>: The execution start time.</para>
+        /// </description></item>
+        /// <item><description><para><b>ReturnRows</b>: returned rows.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>SCAN_ROWS</para>
+        /// <para>ScanRows</para>
         /// </summary>
         [NameInMap("SortKey")]
         [Validation(Required=false)]
         public string SortKey { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the query results.</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ase</b>: ascending order.</description></item>
-        /// <item><description><b>desc</b>: descending order.</description></item>
+        /// <item><description><para><b>ASC</b>: ascending</para>
+        /// </description></item>
+        /// <item><description><para><b>DESC</b>: descending</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>ase</para>
+        /// <para>ASC</para>
         /// </summary>
         [NameInMap("SortMethod")]
         [Validation(Required=false)]
         public string SortMethod { get; set; }
 
         /// <summary>
-        /// <para>The type of the SQL statement. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>SELECT</b></description></item>
-        /// <item><description><b>UPDATE</b></description></item>
-        /// <item><description><b>DELETE</b></description></item>
-        /// </list>
+        /// <para>The SQL type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SELECT</para>
+        /// <para>select</para>
         /// </summary>
         [NameInMap("SqlType")]
         [Validation(Required=false)]
         public string SqlType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start of the time range to query. This value must be a Unix timestamp in milliseconds.</para>
         /// <remarks>
-        /// <para> The beginning of the time range to query must be later than the time when DAS Enterprise Edition is enabled, and can be up to seven days earlier than the current time.</para>
+        /// <para>You can query only data that is generated after you enable DAS Enterprise Edition. The start time cannot be earlier than seven days before the current time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -293,7 +298,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? Start { get; set; }
 
         /// <summary>
-        /// <para>The execution results. You can specify <b>0</b> to query the SQL statements that are successfully executed. You can also specify an error code to query the corresponding SQL statements that fail to be executed.</para>
+        /// <para>The execution state. Set this parameter to <b>0</b> to query for successfully executed SQL statements. You can also specify an error code to query for the corresponding SQL statements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -305,7 +310,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The thread ID.</para>
         /// <remarks>
-        /// <para> You can specify multiple thread IDs that are separated by spaces. Example: <c>Thread ID1 Thread ID2 Thread ID3</c>.</para>
+        /// <para>You can specify multiple thread IDs. Separate multiple IDs with a space. For example: <c>657 658 659</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -316,7 +321,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ThreadID { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter. This parameter is not supported.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>

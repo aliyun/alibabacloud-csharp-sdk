@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class CreateCloudBenchTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The total number of stress testing tasks that you want to create. Valid values: <b>0</b> to <b>30</b>. Default value: <b>1</b>.</para>
+        /// <para>The total number of stress testing tasks to create. Valid values: <b>0</b> to <b>30</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Amount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/26273.html">DescribeBackups</a> operation to query the ID of the backup set.</para>
+        /// <para>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/26273.html">DescribeBackups</a> operation to query the backup list and obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>229132</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The time when the backup starts. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The time of the backup. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-04-23T13:22:14Z</para>
@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string BackupTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the stress testing client. Valid values:</para>
+        /// <para>The type of stress testing machine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS</b>: indicates that you must create the <a href="https://help.aliyun.com/document_detail/64905.html">DBGateway</a>.</description></item>
-        /// <item><description><b>DAS_ECS</b>: indicates that DAS automatically purchases and deploys an Elastic Compute Service (ECS) instance for stress testing.</description></item>
+        /// <item><description><para><b>ECS</b>: You need to prepare a <a href="https://help.aliyun.com/document_detail/64905.html">Database Gateway</a> yourself.</para>
+        /// </description></item>
+        /// <item><description><para><b>DAS_ECS</b>: An ECS instance that is automatically purchased and deployed by DAS.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,9 +71,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the destination instance. The specified endpoint must be the endpoint of an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance.</para>
+        /// <para>The connection address of the target instance. Only RDS MySQL and PolarDB MySQL instances are supported.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set <b>DstType</b> to <b>ConnectionString</b>.</para>
+        /// <para>This parameter takes effect when <b>DstType</b> is set to <b>ConnectionString</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,9 +84,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DstConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the <a href="https://help.aliyun.com/document_detail/202857.html">GetInstanceInspections</a> operation to query the ID.</para>
+        /// <para>The ID of the target instance. Only RDS MySQL and PolarDB MySQL instances are supported. You can call the <a href="https://help.aliyun.com/document_detail/202857.html">GetInstanceInspections</a> operation to obtain the ID.</para>
         /// <remarks>
-        /// <para> This parameter must be specified if you set <b>DstType</b> to <b>Instance</b>.</para>
+        /// <para>This parameter is required when <b>DstType</b> is set to <b>Instance</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,9 +97,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DstInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The port number of the instance that you want to access.</para>
+        /// <para>The port of the target instance.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set <b>DstType</b> to <b>ConnectionString</b>.</para>
+        /// <para>This parameter takes effect when <b>DstType</b> is set to <b>ConnectionString</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DstPort { get; set; }
 
         /// <summary>
-        /// <para>The name of the privileged account for the destination instance.</para>
+        /// <para>The privileged account of the target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root</para>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DstSuperAccount { get; set; }
 
         /// <summary>
-        /// <para>The password of the privileged account for the destination instance.</para>
+        /// <para>The password of the privileged account of the target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test123</para>
@@ -128,10 +130,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DstSuperPassword { get; set; }
 
         /// <summary>
-        /// <para>The type of the identifier that is used to indicate the destination instance. Valid values:</para>
+        /// <para>The type of the target instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Instance</b>: the instance ID. This is the default value.</description></item>
-        /// <item><description><b>ConnectionString</b>: the endpoint of the instance.</description></item>
+        /// <item><description><para><b>Instance</b> (default): instance ID.</para>
+        /// </description></item>
+        /// <item><description><para><b>ConnectionString</b>: connection address of the instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,9 +146,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DstType { get; set; }
 
         /// <summary>
-        /// <para>The specification of the Data Transmission Service (DTS) migration task. You can call the <a href="https://help.aliyun.com/document_detail/230669.html">DescribeCloudbenchTask</a> operation to query the specification.</para>
+        /// <para>The specification of the DTS migration task. You can call the <a href="https://help.aliyun.com/document_detail/230669.html">DescribeCloudbenchTask</a> operation to obtain the specification.</para>
         /// <remarks>
-        /// <para> You must migrate the basic data in the source instance to the destination instance before you start a stress testing task. When you create a DTS migration task, you must specify this parameter.</para>
+        /// <para>The stress testing task needs to migrate the baseline data from the source instance to the target instance. This parameter is required when you create a new DTS task.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -155,9 +159,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DtsJobClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DTS migration task. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to query the ID.</para>
+        /// <para>The ID of the DTS migration task. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to obtain the ID.</para>
         /// <remarks>
-        /// <para> After a DTS migration task is created in the DTS console, you must specify this parameter.</para>
+        /// <para>This parameter is required when a DTS task has been created in the DTS console.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -168,15 +172,19 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The state that specifies the last operation that is performed for the stress testing task. Valid values:</para>
+        /// <para>The status after the stress testing task ends. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>WAIT_TARGET</b>: prepares the destination instance</description></item>
-        /// <item><description><b>WAIT_DBGATEWAY</b>: prepares the DBGateway</description></item>
-        /// <item><description><b>WAIT_SQL</b>: prepares the full SQL statistics</description></item>
-        /// <item><description><b>WAIT_LOGIC</b>: prepares to replay the traffic</description></item>
+        /// <item><description><para><b>WAIT_TARGET</b>: Prepare the target instance for stress testing.</para>
+        /// </description></item>
+        /// <item><description><para><b>WAIT_DBGATEWAY</b>: Prepare the stress testing deployment.</para>
+        /// </description></item>
+        /// <item><description><para><b>WAIT_SQL</b>: Prepare the full SQL statements.</para>
+        /// </description></item>
+        /// <item><description><para><b>WAIT_LOGIC</b>: Prepare to start replaying the traffic.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> When the state of a stress testing task changes to the state that is specified by the EndState parameter, the stress testing task becomes completed.</para>
+        /// <para>When the stress testing task completes the status set by EndState, the task directly reaches the completed status.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -187,9 +195,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string EndState { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) in which the database gateway (DBGateway) is deployed.</para>
+        /// <para>The virtual private cloud (VPC) ID of the Database Gateway.</para>
         /// <remarks>
-        /// <para> This parameter must be specified if you set <b>ClientType</b> to <b>ECS</b>.</para>
+        /// <para>This parameter is required when <b>ClientType</b> is set to <b>ECS</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -200,9 +208,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string GatewayVpcId { get; set; }
 
         /// <summary>
-        /// <para>The IP address or domain name of the DBGateway.</para>
+        /// <para>The IP address or domain name of the Database Gateway.</para>
         /// <remarks>
-        /// <para> This parameter must be specified if you set <b>ClientType</b> to <b>ECS</b>.</para>
+        /// <para>This parameter is required when <b>ClientType</b> is set to <b>ECS</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -213,7 +221,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string GatewayVpcIp { get; set; }
 
         /// <summary>
-        /// <para>The rate at which the traffic captured from the source instance is replayed on the destination instance. The value must be a positive integer. Valid values: <b>1</b> to <b>30</b>. Default value: <b>1</b>.</para>
+        /// <para>The replay speed of the source instance traffic on the target instance. The replay speed must be a positive integer. Valid values: <b>1</b> to <b>30</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -223,7 +231,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Rate { get; set; }
 
         /// <summary>
-        /// <para>The duration of the stress testing task for which the traffic is captured from the source instance. Unit: milliseconds.</para>
+        /// <para>The duration of the stress testing task. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86400000</para>
@@ -233,7 +241,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestDuration { get; set; }
 
         /// <summary>
-        /// <para>The time when the stress testing task ends. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end time of the stress testing task. The time is in the UNIX timestamp format. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1608888296001</para>
@@ -243,7 +251,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestEndTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the stress testing task starts. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start time of the stress testing task. The time is in the UNIX timestamp format. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1608888296000</para>
@@ -253,9 +261,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestStartTime { get; set; }
 
         /// <summary>
-        /// <para>The duration within which the traffic generation stressing test takes effect. Unit: milliseconds.</para>
+        /// <para>The duration of the generated stress testing. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para> This parameter must be specified if you set <b>TaskType</b> to <b>smart pressure test</b>.</para>
+        /// <para>This parameter is required when <b>TaskType</b> is set to <b>smart pressure test</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -266,9 +274,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SmartPressureTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source instance. The instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance. You can call the <a href="https://help.aliyun.com/document_detail/202857.html">GetInstanceInspections</a> operation to query the ID.</para>
+        /// <para>The ID of the source instance. Only RDS MySQL and PolarDB MySQL instances are supported. You can call the <a href="https://help.aliyun.com/document_detail/202857.html">GetInstanceInspections</a> operation to obtain the ID.</para>
         /// <remarks>
-        /// <para> This parameter must be specified if you set <b>DstType</b> to <b>Instance</b>.</para>
+        /// <para>This parameter is required when <b>DstType</b> is set to <b>Instance</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -280,7 +288,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SrcInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>Reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -290,9 +298,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SrcPublicIp { get; set; }
 
         /// <summary>
-        /// <para>The name of the privileged account for the source instance. Set the value to <b>admin</b>.</para>
+        /// <para>The privileged account of the source instance. Value: <b>admin</b>.</para>
         /// <remarks>
-        /// <para> This parameter must be specified if you set <b>DstType</b> to <b>Instance</b>.</para>
+        /// <para>This parameter is required when <b>DstType</b> is set to <b>Instance</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -303,9 +311,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SrcSuperAccount { get; set; }
 
         /// <summary>
-        /// <para>The password of the privileged account for the source instance.</para>
+        /// <para>The password of the privileged account of the source instance.</para>
         /// <remarks>
-        /// <para> This parameter must be specified if you set <b>DstType</b> to <b>Instance</b>.</para>
+        /// <para>This parameter is required when <b>DstType</b> is set to <b>Instance</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -316,10 +324,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SrcSuperPassword { get; set; }
 
         /// <summary>
-        /// <para>The type of the stress testing task. Valid values:</para>
+        /// <para>The type of stress testing task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pressure test</b> (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.</description></item>
-        /// <item><description><b>smart pressure test</b>: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.</description></item>
+        /// <item><description><para><b>pressure test</b> (default): Intelligent stress testing, which replays the traffic captured from the source instance on the target instance at the maximum speed supported by the target instance type.</para>
+        /// </description></item>
+        /// <item><description><para><b>smart pressure test</b>: Generated stress testing, which analyzes and learns from the traffic captured from the source instance in a short period of time, generates traffic that is consistent with the business model and traffic distribution of the original traffic for continuous stress testing, reduces the time for collecting data from the source instance, and reduces storage costs and performance overhead.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -331,7 +341,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The temporary directory generated for stress testing.</para>
+        /// <para>The temporary directory generated by the stress testing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/tmp/bench/</para>

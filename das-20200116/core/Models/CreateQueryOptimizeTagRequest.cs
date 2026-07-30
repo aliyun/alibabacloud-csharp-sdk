@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <para>The remarks can be 1 to 300 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Slow SQL queries of offline synchronization. No optimization is required.</para>
+        /// <para>Slow SQL from offline synchronization. No optimization needed.</para>
         /// </summary>
         [NameInMap("Comments")]
         [Validation(Required=false)]
@@ -23,9 +23,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b>: ApsaraDB RDS for MySQL</description></item>
-        /// <item><description><b>PolarDBMySQL</b>: PolarDB for MySQL</description></item>
-        /// <item><description><b>PostgreSQL</b>: ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description><para><b>MySQL</b>: ApsaraDB RDS for MySQL</para>
+        /// </description></item>
+        /// <item><description><para><b>PolarDBMySQL</b>: PolarDB for MySQL</para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b>: ApsaraDB RDS for PostgreSQL</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6068ce044e3dc9b903979672fb0b69df,d12515c015fc9f41a0778a9e1de0e941</para>
+        /// <para>6068ce044e3dc9b903979672fb0b69df,d12515c015fc9f41a0778a9e1de0****</para>
         /// </summary>
         [NameInMap("SqlIds")]
         [Validation(Required=false)]
@@ -61,8 +64,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The status of <b>Tags</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: removes all tags added to the SQL templates that are specified by <b>SqlIds</b> and leaves <b>Tags</b> empty.</description></item>
-        /// <item><description><b>1</b>: adds the tags specified by <b>Tags</b> to the SQL templates that are specified by <b>SqlIds</b>.</description></item>
+        /// <item><description><para><b>0</b>: removes all tags added to the SQL templates that are specified by <b>SqlIds</b> and leaves <b>Tags</b> empty.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: adds the tags specified by <b>Tags</b> to the SQL templates that are specified by <b>SqlIds</b>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -76,10 +81,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The SQL tags. Separate multiple SQL tags with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DAS_IMPORTANT</b>: The SQL template is important.</description></item>
-        /// <item><description><b>DAS_NOT_IMPORTANT</b>: The SQL template is unimportant.</description></item>
-        /// <item><description><b>USER_IGNORE</b>: The scheduling of the SQL template does not need to be optimized.</description></item>
-        /// <item><description><b>DAS_IN_PLAN</b>: The scheduling of the SQL template needs to be optimized.</description></item>
+        /// <item><description><para><b>DAS_IMPORTANT</b>: The SQL template is important.</para>
+        /// </description></item>
+        /// <item><description><para><b>DAS_NOT_IMPORTANT</b>: The SQL template is unimportant.</para>
+        /// </description></item>
+        /// <item><description><para><b>USER_IGNORE</b>: The scheduling of the SQL template does not need to be optimized.</para>
+        /// </description></item>
+        /// <item><description><para><b>DAS_IN_PLAN</b>: The scheduling of the SQL template needs to be optimized.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

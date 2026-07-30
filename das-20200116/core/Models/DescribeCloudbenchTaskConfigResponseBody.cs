@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeCloudbenchTaskConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The detailed information, including the error codes and the number of entries that are returned.</para>
+        /// <para>The list of detailed information, including the total number of information items, error codes, and other details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeCloudbenchTaskConfigResponseBodyData Data { get; set; }
         public class DescribeCloudbenchTaskConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The path in which the files are archived.</para>
+            /// <para>The path of archived objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/tmp/das/cloudbench/archive-sqls/</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ArchiveFolder { get; set; }
 
             /// <summary>
-            /// <para>The command that was run to start the stress testing task.</para>
+            /// <para>The stress testing command.</para>
             /// 
             /// <b>Example:</b>
             /// <para>java -jar /tmp/das/cloudbench/CloudBenchClient.jar --bench --rocksdb /tmp/das/cloudbench/rocksdb --meta /tmp/das/cloudbench/cl-1621353601000-360****.meta --task_name 2777bba9-a836-49e6-9f70-1c3822fc9239 --result_file /tmp/das/cloudbench/null.result --user cloudb**** --pwd \&quot;cloudbench@<b><b>\&quot; --host rm-bp1j5f8s5x26kq79216</b></b>.mysql.rds.aliyuncs.com --port 3306 --charset utf8mb4 --interval 1 --bench_time 3600 --rate_factor 1.0 --start_time 1621353601 --rt &gt; /tmp/das/cloudbench/null.log</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string BenchCmd { get; set; }
 
             /// <summary>
-            /// <para>The path to the JAR file that is used for stress testing.</para>
+            /// <para>The path of the stress testing JAR package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/tmp/das/cloudbench/CloudBenchClient.jar</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ClientJarPath { get; set; }
 
             /// <summary>
-            /// <para>The path to the JAR file that is stored in OSS. The JAR file is used for stress testing.</para>
+            /// <para>The path of the stress testing JAR package in OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cloudbench-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/CloudBenchClient.jar?OSSAccessKeyId=LTAI5tKj8B4wikkVtupK****&Expires=1622441372&Signature=28p%2BCe4tNHpr9VPOcHc3Si9iOb">https://cloudbench-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/CloudBenchClient.jar?OSSAccessKeyId=LTAI5tKj8B4wikkVtupK****&amp;Expires=1622441372&amp;Signature=28p%2BCe4tNHpr9VPOcHc3Si9iOb</a>****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string JarOnOss { get; set; }
 
             /// <summary>
-            /// <para>The command that was run to preload the file that stores the analysis result of full SQL statistics.</para>
+            /// <para>The command for preloading the SQL file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>java -jar /tmp/das/cloudbench/CloudBenchClient.jar --load --out /tmp/das/cloudbench/cl-1621353601000-360****.sc --meta /tmp/das/cloudbench/cl-1621353601000-360****.meta --task_name 2777bba9-<b><b>-49e6-9f70-1c3822fc</b></b> --rocksdb /tmp/das/cloudbench/rocksdb</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string MetaFileName { get; set; }
 
             /// <summary>
-            /// <para>The name of the metadata file stored in Object Storage Service (OSS).</para>
+            /// <para>The name of the metadata file in OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;<a href="https://cb-rm-bp1w9g06h560l****.oss-cn-hangzhou.aliyuncs.com/cl-1621353601000-360****.meta?OSSAccessKeyId=LTAI5tKj8B4wikkVtupK****&Expires=1622441372&Signature=Qsehg3tzeA57M%2BIixAbWPWAtvl">https://cb-rm-bp1w9g06h560l****.oss-cn-hangzhou.aliyuncs.com/cl-1621353601000-360****.meta?OSSAccessKeyId=LTAI5tKj8B4wikkVtupK****&amp;Expires=1622441372&amp;Signature=Qsehg3tzeA57M%2BIixAbWPWAtvl</a>****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string MetaFileOnOss { get; set; }
 
             /// <summary>
-            /// <para>The path to the metadata file.</para>
+            /// <para>The path of the metadata file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/tmp/das/cloudbench/cl-1621353601000-360****.meta</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string MetaFilePath { get; set; }
 
             /// <summary>
-            /// <para>The command that was run to parse the file that stores the analysis result of full SQL statistics.</para>
+            /// <para>The command for parsing the SQL file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cd /tmp/das/cloudbench &amp;&amp; java -jar CloudBenchClient.jar --parse --threads 32 --file /tmp/das/cloudbench/2777bba9-a836-49e6-9f70-1c3822fc9239.archiveSql --meta /tmp/das/cloudbench/cl-1621353601000-360****.meta --out /tmp/das/cloudbench/cl-1621353601000-360****.sc --parent_patmp/das/cloudbench --source RDS --h /thost rm-bp1j5f8s5x266****.mysql.rds.aliyuncs.com --port 3306 --user cloudb**** --pwd \&quot;cloudbench@****\&quot; --cutSqlLen 8192 --db_black_list=information_schema,test,unknow,null</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ParseCmd { get; set; }
 
             /// <summary>
-            /// <para>The path to the file that is parsed. The file stores the analysis result of full SQL statistics.</para>
+            /// <para>The path of the parsed SQL file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/tmp/das/cloudbench/2777bba9-a836-49e6-9f70-1c3822fc****.archiveSql</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ParseFilePath { get; set; }
 
             /// <summary>
-            /// <para>The location where the RocksDB storage system is deployed in the stress testing client.</para>
+            /// <para>The location of the RocksDB storage system in the stress testing machine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/tmp/das/cloudbench/rocksdb</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string RocksDbPath { get; set; }
 
             /// <summary>
-            /// <para>The name of the file that stores the analysis result of full SQL statistics.</para>
+            /// <para>The name of the full SQL file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cl-1621353601000-360****.sc</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string SqlFileName { get; set; }
 
             /// <summary>
-            /// <para>The name of the file that stores the analysis result of full SQL statistics and that is stored in OSS.</para>
+            /// <para>The name of the full SQL file in OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cb-rm-bp1w9g06h560l****.oss-cn-hangzhou.aliyuncs.com/cl-1621353601000-360****.sc?OSSAccessKeyId=LTAI5tKj8B4wikkVtupK****&Expires=1622441372&Signature=LYMADwo%2BRrJeqR3e4d8OlIkVmw">https://cb-rm-bp1w9g06h560l****.oss-cn-hangzhou.aliyuncs.com/cl-1621353601000-360****.sc?OSSAccessKeyId=LTAI5tKj8B4wikkVtupK****&amp;Expires=1622441372&amp;Signature=LYMADwo%2BRrJeqR3e4d8OlIkVmw</a>****</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string SqlFileOnOss { get; set; }
 
             /// <summary>
-            /// <para>The path to the file that stores the analysis result of full SQL statistics.</para>
+            /// <para>The path of the SQL file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/tmp/das/cloudbench/cl-1621353601000-360****.sc</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The path of the temporary directory that is generated for stress testing.</para>
+            /// <para>The temporary directory generated for stress testing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/tmp/bench/</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>When the request is successful, this parameter returns <b>Successful</b>. When the request fails, this parameter returns exception information (such as error codes).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -222,10 +222,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

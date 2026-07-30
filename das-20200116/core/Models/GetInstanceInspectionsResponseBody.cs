@@ -43,9 +43,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>Indicates whether the feature of automatically creating and deleting indexes is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>0</b>: disabled.</description></item>
-                    /// <item><description><b>1</b>: enabled.</description></item>
-                    /// <item><description><b>2</b>: not supported.</description></item>
+                    /// <item><description><para><b>0</b>: disabled.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>1</b>: enabled.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>2</b>: not supported.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -58,9 +61,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>Indicates whether the automatic throttling feature is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>0</b>: disabled.</description></item>
-                    /// <item><description><b>1</b>: enabled.</description></item>
-                    /// <item><description><b>2</b>: not supported.</description></item>
+                    /// <item><description><para><b>0</b>: disabled.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>1</b>: enabled.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>2</b>: not supported.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -73,9 +79,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>0</b>: disabled.</description></item>
-                    /// <item><description><b>1</b>: enabled.</description></item>
-                    /// <item><description><b>2</b>: not supported.</description></item>
+                    /// <item><description><para><b>0</b>: disabled.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>1</b>: enabled.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>2</b>: not supported.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -88,9 +97,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>Indicates whether the auto scaling feature is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>0</b>: disabled.</description></item>
-                    /// <item><description><b>1</b>: enabled.</description></item>
-                    /// <item><description><b>2</b>: not supported.</description></item>
+                    /// <item><description><para><b>0</b>: disabled.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>1</b>: enabled.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>2</b>: not supported.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -103,9 +115,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>Indicates whether the event subscription feature is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>0</b>: disabled.</description></item>
-                    /// <item><description><b>1</b>: enabled.</description></item>
-                    /// <item><description><b>2</b>: not supported.</description></item>
+                    /// <item><description><para><b>0</b>: disabled.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>1</b>: enabled.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>2</b>: not supported.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -130,9 +145,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>Indicates whether DAS Enterprise Edition is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: disabled.</description></item>
-                /// <item><description><b>1</b>: enabled.</description></item>
-                /// <item><description><b>2</b>: not supported.</description></item>
+                /// <item><description><para><b>0</b>: disabled.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: enabled.</para>
+                /// </description></item>
+                /// <item><description><para><b>2</b>: not supported.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -145,7 +163,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The end time of the inspection and scoring task. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// <remarks>
-                /// <para> The end time must be later than the start time.</para>
+                /// <para>The end time must be later than the start time.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -185,8 +203,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The connection mode of the instance. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>standard</b>: standard mode.</description></item>
-                    /// <item><description><b>safe</b>: database proxy mode.</description></item>
+                    /// <item><description><para><b>standard</b>: standard mode.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>safe</b>: database proxy mode.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -209,9 +229,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The database engine. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>MySQL</b></description></item>
-                    /// <item><description><b>Redis</b></description></item>
-                    /// <item><description><b>PolarDBMySQL</b></description></item>
+                    /// <item><description><para><b>MySQL</b></para>
+                    /// </description></item>
+                    /// <item><description><para><b>Redis</b></para>
+                    /// </description></item>
+                    /// <item><description><para><b>PolarDBMySQL</b></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -244,12 +267,15 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     /// <summary>
                     /// <para>The type of the instance on which the database is deployed. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>RDS</b>: an Alibaba Cloud database instance.</description></item>
-                    /// <item><description><b>ECS</b>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</description></item>
-                    /// <item><description><b>IDC</b>: a self-managed database instance that is not deployed on Alibaba Cloud.</description></item>
+                    /// <item><description><para><b>RDS</b>: an Alibaba Cloud database instance.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>ECS</b>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>IDC</b>: a self-managed database instance that is not deployed on Alibaba Cloud.</para>
+                    /// </description></item>
                     /// </list>
                     /// <remarks>
-                    /// <para> The value IDC indicates that the instance is deployed in a data center.</para>
+                    /// <para>The value IDC indicates that the instance is deployed in a data center.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -381,9 +407,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The state of the inspection and scoring task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: The task is waiting for execution.</description></item>
-                /// <item><description><b>1</b>: The task is in progress.</description></item>
-                /// <item><description><b>2</b>: The task is complete.</description></item>
+                /// <item><description><para><b>0</b>: The task is waiting for execution.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: The task is in progress.</para>
+                /// </description></item>
+                /// <item><description><para><b>2</b>: The task is complete.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -396,8 +425,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The mode in which the inspection and scoring task was initiated. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: automatic mode.</description></item>
-                /// <item><description><b>1</b>: manual mode.</description></item>
+                /// <item><description><para><b>0</b>: automatic mode.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: manual mode.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -444,7 +475,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -467,8 +498,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

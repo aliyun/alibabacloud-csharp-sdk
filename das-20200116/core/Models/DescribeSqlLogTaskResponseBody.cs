@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The returned HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSqlLogTaskResponseBodyData Data { get; set; }
         public class DescribeSqlLogTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the task was created, which is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1681363254423</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The end of the query time range, which is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1608888296000</para>
@@ -49,8 +49,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>Indicates whether the task has expired. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: The task has expired.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The task has not expired.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Expire { get; set; }
 
             /// <summary>
-            /// <para>The download URL of the export task.</para>
+            /// <para>The download URL of the exported file. This parameter is returned only if the value of <c>TaskType</c> is <c>Export</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;<a href="https://das-sqllog-download-cn-hongkong.oss-cn-hongkong.aliyuncs.com/">https://das-sqllog-download-cn-hongkong.oss-cn-hongkong.aliyuncs.com/</a>****&quot;</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Export { get; set; }
 
             /// <summary>
-            /// <para>The filter parameters.</para>
+            /// <para>The filter conditions.</para>
             /// </summary>
             [NameInMap("Filters")]
             [Validation(Required=false)]
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The name of the filter parameter.</para>
                 /// <remarks>
-                /// <para> For more information about the filter parameters, see the <b>Valid values of Key</b> section of this topic.</para>
+                /// <para>For more information about the supported filter parameters and their valid values, see the &quot;Additional information about response parameters&quot; section.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -104,13 +106,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
             /// <summary>
             /// <para>The task name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SQL audit export 1</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The results of the offline querying task.</para>
+            /// <para>The results of the offline query task. This parameter is returned only if the value of <c>TaskType</c> is <c>Query</c>.</para>
             /// </summary>
             [NameInMap("Queries")]
             [Validation(Required=false)]
@@ -127,6 +132,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
+                /// <para>The affected columns.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;col1&quot;]</para>
                 /// </summary>
@@ -135,6 +142,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string AffectColumns { get; set; }
 
                 /// <summary>
+                /// <para>The client IP address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10.0.0.1xx</para>
                 /// </summary>
@@ -143,6 +152,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ClientIp { get; set; }
 
                 /// <summary>
+                /// <para>The client port.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3306</para>
                 /// </summary>
@@ -150,11 +161,19 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public long? ClientPort { get; set; }
 
+                /// <summary>
+                /// <para>This parameter is reserved.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>None</para>
+                /// </summary>
                 [NameInMap("Collection")]
                 [Validation(Required=false)]
                 public string Collection { get; set; }
 
                 /// <summary>
+                /// <para>The connection ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ld-******</para>
                 /// </summary>
@@ -163,7 +182,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ConnectionId { get; set; }
 
                 /// <summary>
-                /// <para>The execution duration. Unit: millisecond.</para>
+                /// <para>The execution duration. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>58</para>
@@ -173,7 +192,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? Consume { get; set; }
 
                 /// <summary>
-                /// <para>The CPU execution time. Unit: microsecond.</para>
+                /// <para>The CPU execution time. Unit: microseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -193,7 +212,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string DBName { get; set; }
 
                 /// <summary>
-                /// <para>The execution time. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
+                /// <para>The time when the SQL statement was executed. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-12-07T02:15:32Z</para>
@@ -203,7 +222,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ExecuteTime { get; set; }
 
                 /// <summary>
-                /// <para>The extended information. This parameter is a reserved parameter.</para>
+                /// <para>Reserved for future use.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>None</para>
@@ -213,7 +232,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string Ext { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows pulled by the CNs of the PolarDB-X 2.0 instance.</para>
+                /// <para>The number of rows that are fetched by the compute nodes of a PolarDB-X 2.0 instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -223,7 +242,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? Frows { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the client.</para>
+                /// <para>The client IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11.197.XX.XX</para>
@@ -233,7 +252,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string HostAddress { get; set; }
 
                 /// <summary>
-                /// <para>The lock wait time. Unit: millisecond.</para>
+                /// <para>The lock wait time. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -253,7 +272,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? LogicRead { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the child node.</para>
+                /// <para>The node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pi-bp1o58x3ib7e6****</para>
@@ -263,7 +282,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The execution timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The time when the SQL statement was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1701886532000</para>
@@ -273,7 +292,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? OriginTime { get; set; }
 
                 /// <summary>
-                /// <para>The wait time of parallel queries in the queue in the PolarDB for MySQL instance. Unit: millisecond.</para>
+                /// <para>The degree of parallelism (DOP) for the PolarDB for MySQL instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -283,7 +302,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ParallelDegree { get; set; }
 
                 /// <summary>
-                /// <para>The degree of parallelism (DOP) value of the PolarDB for MySQL instance.</para>
+                /// <para>The parallel queuing time for the PolarDB for MySQL instance. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -293,6 +312,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ParallelQueueTime { get; set; }
 
                 /// <summary>
+                /// <para>The query parameters.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[1, &quot;das&quot;]</para>
                 /// </summary>
@@ -311,7 +332,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? PhysicAsyncRead { get; set; }
 
                 /// <summary>
-                /// <para>The total number of physical reads.</para>
+                /// <para>The number of physical reads.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -331,6 +352,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? PhysicSyncRead { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the query is protected.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>MySQL</para>
                 /// </summary>
@@ -339,7 +362,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string Protected { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows returned.</para>
+                /// <para>The number of returned rows.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -349,6 +372,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? ReturnRows { get; set; }
 
                 /// <summary>
+                /// <para>The row key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>23</para>
                 /// </summary>
@@ -357,7 +382,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string RowKey { get; set; }
 
                 /// <summary>
-                /// <para>The total number of rows updated or returned by the CNs of the PolarDB-X 2.0 instance.</para>
+                /// <para>The total number of rows that are updated or returned by the compute nodes of a PolarDB-X 2.0 instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -367,7 +392,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? Rows { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows scanned.</para>
+                /// <para>The number of scanned rows.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -377,7 +402,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? ScanRows { get; set; }
 
                 /// <summary>
-                /// <para>The number of requests from the compute nodes (CNs) to the data nodes (DNs) in the PolarDB-X 2.0 instance.</para>
+                /// <para>The number of requests that are sent from compute nodes (CNs) to data nodes (DNs) for a PolarDB-X 2.0 instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -387,6 +412,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? Scnt { get; set; }
 
                 /// <summary>
+                /// <para>The SQL command in the query.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>sql</para>
                 /// </summary>
@@ -395,7 +422,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? SqlCommand { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the SQL statement.</para>
+                /// <para>The SQL ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a4111670e80596c5bf42cf5154438a91</para>
@@ -405,7 +432,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string SqlId { get; set; }
 
                 /// <summary>
-                /// <para>The queried SQL statement.</para>
+                /// <para>The SQL statement.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SELECT @@session.transaction_read_only</para>
@@ -417,9 +444,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The type of the SQL statement. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>SELECT</b></description></item>
-                /// <item><description><b>UPDATE</b></description></item>
-                /// <item><description><b>DELETE</b></description></item>
+                /// <item><description><para><b>SELECT</b></para>
+                /// </description></item>
+                /// <item><description><para><b>UPDATE</b></para>
+                /// </description></item>
+                /// <item><description><para><b>DELETE</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -430,10 +460,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string SqlType { get; set; }
 
                 /// <summary>
-                /// <para>The execution result of the SQL statement. Valid values:</para>
+                /// <para>The execution state. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: The execution was successful.</description></item>
-                /// <item><description><b>1</b>: The execution failed.</description></item>
+                /// <item><description><para><b>0</b>: The execution was successful.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: The execution failed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -444,6 +476,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string State { get; set; }
 
                 /// <summary>
+                /// <para>The table name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>das</para>
                 /// </summary>
@@ -462,7 +496,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? ThreadId { get; set; }
 
                 /// <summary>
-                /// <para>The trace ID of the PolarDB-X 2.0 instance, which is the execution ID of the SQL statement on the DN.</para>
+                /// <para>The trace ID of a PolarDB-X 2.0 instance. The trace ID is the execution ID of the SQL statement on data nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>14c93b7c7bf00000</para>
@@ -482,7 +516,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string TrxId { get; set; }
 
                 /// <summary>
-                /// <para>The number of rows updated.</para>
+                /// <para>The number of updated rows.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -492,10 +526,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? UpdateRows { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the PolarDB for MySQL instance uses In-Memory Column Indexes (IMCIs). Valid values:</para>
+                /// <para>Indicates whether an In-Memory Column Index (IMCI) is used for the PolarDB for MySQL instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -506,7 +542,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string UseImciEngine { get; set; }
 
                 /// <summary>
-                /// <para>The IP address to which the endpoint used for query is resolved.</para>
+                /// <para>The IP address that the query endpoint resolves to.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.146.XX.XX</para>
@@ -516,7 +552,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string Vip { get; set; }
 
                 /// <summary>
-                /// <para>The number of writes to the ApsaraDB RDS for SQL Server instance.</para>
+                /// <para>The number of writes for the ApsaraDB RDS for SQL Server instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -528,7 +564,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// <para>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The beginning of the query time range, which is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1596177993000</para>
@@ -538,16 +574,21 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? Start { get; set; }
 
             /// <summary>
-            /// <para>The task state. Valid values:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: The task is to be scheduled.</description></item>
-            /// <item><description><b>RUNNING</b>: The task is running.</description></item>
-            /// <item><description><b>FAILED</b>: The task failed.</description></item>
-            /// <item><description><b>CANCELED</b>: The task is canceled.</description></item>
-            /// <item><description><b>COMPLETED</b>: The task is complete.</description></item>
+            /// <item><description><para><b>INIT</b>: The task is pending.</para>
+            /// </description></item>
+            /// <item><description><para><b>RUNNING</b>: The task is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>FAILED</b>: The task failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>CANCELED</b>: The task was canceled.</para>
+            /// </description></item>
+            /// <item><description><para><b>COMPLETED</b>: The task is complete.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> If a task is in the <b>COMPLETED</b> state, you can view the results of the task.</para>
+            /// <para>The results of an offline task are available only when the status is <b>COMPLETED</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -570,8 +611,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Export</b></description></item>
-            /// <item><description><b>Query</b></description></item>
+            /// <item><description><para><b>Export</b>: an export task.</para>
+            /// </description></item>
+            /// <item><description><para><b>Query</b>: a query task.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -594,9 +637,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// <remarks>
-        /// <para> If the request was successful, <b>Successful</b> is returned. If the request failed, an error message is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. Otherwise, an error message is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -619,8 +662,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The duration within which the SQL throttling rule takes effect. Unit: seconds.</para>
         /// <remarks>
-        /// <para> The throttling rule takes effect only within this duration.</para>
+        /// <para>The throttling rule takes effect only within this duration.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</para>
+        /// <para>You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The maximum number of concurrent SQL statements. Set this parameter to a positive integer.</para>
         /// <remarks>
-        /// <para> When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.</para>
+        /// <para>When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The keywords that are used to identify the SQL statements that need to be throttled.</para>
         /// <remarks>
-        /// <para> If you specify multiple SQL keywords, separate them with tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.</para>
+        /// <para>If you specify multiple SQL keywords, separate them with tildes (\~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,9 +78,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The type of the SQL statements. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SELECT</b></description></item>
-        /// <item><description><b>UPDATE</b></description></item>
-        /// <item><description><b>DELETE</b></description></item>
+        /// <item><description><para><b>SELECT</b></para>
+        /// </description></item>
+        /// <item><description><para><b>UPDATE</b></para>
+        /// </description></item>
+        /// <item><description><para><b>DELETE</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

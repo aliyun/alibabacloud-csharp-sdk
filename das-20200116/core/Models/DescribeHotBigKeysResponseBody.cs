@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeHotBigKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of hot keys and large keys.</para>
+        /// <para>The details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeHotBigKeysResponseBodyData Data { get; set; }
         public class DescribeHotBigKeysResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The reason why the large key failed to be queried.</para>
+            /// <para>The reason why the big keys sorted by the number of child elements failed to be retrieved.</para>
             /// 
             /// <b>Example:</b>
             /// <para>current version doesn\&quot;t support</para>
@@ -68,6 +68,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
             }
 
+            /// <summary>
+            /// <para>The reason why the hot keys sorted by traffic failed to be retrieved.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>current version doesn\&quot;t support</para>
+            /// </summary>
             [NameInMap("HighTrafficKeyMsg")]
             [Validation(Required=false)]
             public string HighTrafficKeyMsg { get; set; }
@@ -117,7 +123,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// <para>The reason why the hot key failed to be queried.</para>
+            /// <para>The reason why the hot keys sorted by QPS failed to be retrieved.</para>
             /// 
             /// <b>Example:</b>
             /// <para>current version doesn\&quot;t support</para>
@@ -166,6 +172,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
             }
 
+            /// <summary>
+            /// <para>The reason why the big keys sorted by memory usage failed to be retrieved.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>current version doesn\&quot;t support</para>
+            /// </summary>
             [NameInMap("LargeKeyMsg")]
             [Validation(Required=false)]
             public string LargeKeyMsg { get; set; }
