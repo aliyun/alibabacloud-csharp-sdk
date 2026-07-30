@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ChangeCloudPhoneNodeRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates if automatic payment is enabled. Default: false.</para>
+        /// <para>Specifies whether to enable automatic payment. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string DisplayConfig { get; set; }
 
         /// <summary>
-        /// <para>The downstream bandwidth limit, in Mbps.</para>
+        /// <para>The downstream bandwidth throttling. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud phone matrix.</para>
+        /// <para>The cloud phone matrix ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpn-0ugbptfu473fy****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The number of cloud phone instances. Call the <a href="t2729804.xdita#"></a>operation to query the minimum and maximum number of allowed instances.</para>
+        /// <para>The number of cloud phone instances. Call the <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> operation to query the maximum and minimum instance count limits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PhoneCount { get; set; }
 
         /// <summary>
-        /// <para>The capacity of the internal storage, in GiB. Valid values: 10 to 4000. If you do not specify this parameter, the current capacity is retained.</para>
+        /// <para>The device storage size. Valid values: 10 GiB to 4000 GiB. If this parameter is left empty, the current size is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? SwapSize { get; set; }
 
         /// <summary>
-        /// <para>The upstream bandwidth limit, in Mbps.</para>
+        /// <para>The upstream bandwidth throttling. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

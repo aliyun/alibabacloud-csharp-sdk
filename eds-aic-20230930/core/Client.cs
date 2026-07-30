@@ -1436,7 +1436,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a cloud phone matrix, including the instance type and the number of cloud phone instances.</para>
+        /// <para>Modifies the configuration of a cloud phone matrix. Currently, only the instance type and the number of cloud phone instances (the instance count of the cloud phone matrix) can be changed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1518,7 +1518,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a cloud phone matrix, including the instance type and the number of cloud phone instances.</para>
+        /// <para>Modifies the configuration of a cloud phone matrix. Currently, only the instance type and the number of cloud phone instances (the instance count of the cloud phone matrix) can be changed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1600,7 +1600,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a cloud phone matrix, including the instance type and the number of cloud phone instances.</para>
+        /// <para>Modifies the configuration of a cloud phone matrix. Currently, only the instance type and the number of cloud phone instances (the instance count of the cloud phone matrix) can be changed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1618,7 +1618,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a cloud phone matrix, including the instance type and the number of cloud phone instances.</para>
+        /// <para>Modifies the configuration of a cloud phone matrix. Currently, only the instance type and the number of cloud phone instances (the instance count of the cloud phone matrix) can be changed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4252,7 +4252,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定时任务</para>
+        /// <para>Creates a scheduled task for an agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4320,7 +4320,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定时任务</para>
+        /// <para>Creates a scheduled task for an agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4388,7 +4388,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定时任务</para>
+        /// <para>Creates a scheduled task for an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4406,7 +4406,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定时任务</para>
+        /// <para>Creates a scheduled task for an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8448,7 +8448,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details of JVS instances.</para>
+        /// <para>Queries JVS instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8498,7 +8498,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details of JVS instances.</para>
+        /// <para>Queries JVS instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8548,7 +8548,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details of JVS instances.</para>
+        /// <para>Queries JVS instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8566,7 +8566,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details of JVS instances.</para>
+        /// <para>Queries JVS instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14357,6 +14357,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                query["AgentVersion"] = request.AgentVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyToAll))
             {
                 query["ApplyToAll"] = request.ApplyToAll;
@@ -14415,6 +14419,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                query["AgentVersion"] = request.AgentVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyToAll))
             {
                 query["ApplyToAll"] = request.ApplyToAll;

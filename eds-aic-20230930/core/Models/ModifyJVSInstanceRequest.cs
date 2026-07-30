@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ModifyJVSInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The target version, such as 2607W1. Set this parameter to latest to automatically resolve to the latest available version.</para>
+        /// </summary>
+        [NameInMap("AgentVersion")]
+        [Validation(Required=false)]
+        public string AgentVersion { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to apply the configuration to all instances.</para>
         /// 
         /// <b>Example:</b>
@@ -20,14 +27,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? ApplyToAll { get; set; }
 
         /// <summary>
-        /// <para>The credit limit configuration. Subsequent configurations overwrite previous ones.</para>
+        /// <para>The credit quota configuration. If you submit the configuration multiple times, the latest configuration overwrites the previous one.</para>
         /// </summary>
         [NameInMap("CreditConfig")]
         [Validation(Required=false)]
         public List<ModifyJVSInstanceRequestCreditConfig> CreditConfig { get; set; }
         public class ModifyJVSInstanceRequestCreditConfig : TeaModel {
             /// <summary>
-            /// <para>The credit limit.</para>
+            /// <para>The quota limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -39,9 +46,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <summary>
             /// <para>The dimension of the current credit. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>total: total usage limit.</description></item>
-            /// <item><description>month: monthly. The limit resets based on the resource activation time cycle.</description></item>
-            /// <item><description>day: daily. The limit resets at 00:00.</description></item>
+            /// <item><description>total: Total usage limit.</description></item>
+            /// <item><description>month: Monthly. The quota resets based on the resource activation time cycle.</description></item>
+            /// <item><description>day: Daily. The quota resets at 00:00.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

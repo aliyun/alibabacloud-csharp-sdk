@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ChangeCloudPhoneNodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Information about the modified cloud phone matrix.</para>
+        /// <para>The cloud phone matrix information.</para>
         /// </summary>
         [NameInMap("NodeInfos")]
         [Validation(Required=false)]
         public List<ChangeCloudPhoneNodeResponseBodyNodeInfos> NodeInfos { get; set; }
         public class ChangeCloudPhoneNodeResponseBodyNodeInfos : TeaModel {
             /// <summary>
-            /// <para>Information about the cloud phone instances.</para>
+            /// <para>The cloud phone instance information.</para>
             /// </summary>
             [NameInMap("InstanceInfos")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The internal storage capacity, in GiB.</para>
+                /// <para>The dedicated device storage capacity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The ID of the cloud phone matrix.</para>
+            /// <para>The cloud phone matrix ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpn-e5kxgjyt8s1mb****</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The size of the shared storage, in GiB. If the matrix uses independent internal storage, this defaults to a fixed 64 GiB for global files, such as images. If the matrix was configured with shared storage at purchase, this indicates the size of that storage.</para>
+            /// <para>When the matrix uses dedicated device storage, a 64 GiB shared storage space is allocated by default (not modifiable) for storing images and other matrix-wide files. When the matrix uses shared device storage (with the size specified at purchase), this storage space is shared by all instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the order for this change.</para>
+        /// <para>The generated order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223684716098****</para>

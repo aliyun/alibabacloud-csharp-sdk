@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateScheduledTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The cron expression.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string CronExpression { get; set; }
 
         /// <summary>
+        /// <para>The list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of executions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxExecutions { get; set; }
 
         /// <summary>
+        /// <para>The run configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;maxSteps&quot;:10,&quot;timeoutSeconds&quot;:3600}</para>
         /// </summary>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public CreateScheduledTaskRequestRunConfig RunConfig { get; set; }
         public class CreateScheduledTaskRequestRunConfig : TeaModel {
             /// <summary>
+            /// <para>The extended parameter JSON string.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;batchSize&quot;:&quot;1000&quot;}</para>
             /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ExtraParams { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of execution steps.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? MaxSteps { get; set; }
 
             /// <summary>
+            /// <para>The timeout period, in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3600</para>
             /// </summary>
@@ -72,20 +84,22 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
+        /// <para>The task name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>自动回复钉钉消息</para>
+        /// <para>Auto-reply to DingTalk messages.</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
+        /// <para>The user prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>打开钉钉，回复前5个未读消息</para>
+        /// <para>Open DingTalk and reply to the first 5 unread messages.</para>
         /// </summary>
         [NameInMap("UserPrompt")]
         [Validation(Required=false)]
