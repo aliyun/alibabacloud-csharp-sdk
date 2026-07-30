@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026 New Slimming Women\&quot;s Summer Dress with Mid-Length Design, High-Quality Waist Definition for a Slender Look</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -40,10 +43,22 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [Validation(Required=false)]
         public VideoGenerationRequestIntent Intent { get; set; }
         public class VideoGenerationRequestIntent : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("Channel")]
             [Validation(Required=false)]
             public string Channel { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("Goal")]
             [Validation(Required=false)]
             public string Goal { get; set; }
@@ -59,6 +74,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public class VideoGenerationRequestOutput : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
@@ -66,11 +84,18 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1080p</para>
             /// </summary>
             [NameInMap("Quality")]
             [Validation(Required=false)]
             public string Quality { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>9:16</para>
+            /// </summary>
             [NameInMap("Ratio")]
             [Validation(Required=false)]
             public string Ratio { get; set; }

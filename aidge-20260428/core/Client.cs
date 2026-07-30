@@ -4527,6 +4527,654 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following 8 language pairs, with more to be supported in the future.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Product Introduction</h2>
+        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following language pairs, with more to be supported in the future.
+        /// Supported language pairs:</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>No.</b></th>
+        /// <th><b>Source Language</b></th>
+        /// <th></th>
+        /// <th><b>Target Language</b></th>
+        /// <th></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td></td>
+        /// <td>Language Code</td>
+        /// <td>Language Name</td>
+        /// <td>Language Code</td>
+        /// <td>Language Name</td>
+        /// </tr>
+        /// <tr>
+        /// <td>1</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ar</td>
+        /// <td>Arabic</td>
+        /// </tr>
+        /// <tr>
+        /// <td>2</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>id</td>
+        /// <td>Indonesian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>3</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>th</td>
+        /// <td>Thai</td>
+        /// </tr>
+        /// <tr>
+        /// <td>4</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ko</td>
+        /// <td>Korean</td>
+        /// </tr>
+        /// <tr>
+        /// <td>5</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ja</td>
+        /// <td>Japanese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>6</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>vi</td>
+        /// <td>Vietnamese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>7</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ru</td>
+        /// <td>Russian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>8</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>tl</td>
+        /// <td>Filipino</td>
+        /// </tr>
+        /// <tr>
+        /// <td>9</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>es</td>
+        /// <td>Spanish</td>
+        /// </tr>
+        /// <tr>
+        /// <td>10</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>fr</td>
+        /// <td>French</td>
+        /// </tr>
+        /// <tr>
+        /// <td>11</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>de</td>
+        /// <td>German</td>
+        /// </tr>
+        /// <tr>
+        /// <td>12</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>pl</td>
+        /// <td>Polish</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2>Common scenarios</h2>
+        /// <para>Main product images and detail images for cross-border e-commerce.</para>
+        /// <h2>Functions and features</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product body information protection</b>: Supports custom selection of whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images. This helps protect brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationPlusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationPlusResponse
+        /// </returns>
+        public ImageTranslationPlusResponse ImageTranslationPlusWithOptions(ImageTranslationPlusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            {
+                body["Glossary"] = request.Glossary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                body["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            {
+                body["IncludingProductArea"] = request.IncludingProductArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            {
+                body["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            {
+                body["UseImageEditor"] = request.UseImageEditor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageTranslationPlus",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageTranslationPlusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following 8 language pairs, with more to be supported in the future.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Product Introduction</h2>
+        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following language pairs, with more to be supported in the future.
+        /// Supported language pairs:</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>No.</b></th>
+        /// <th><b>Source Language</b></th>
+        /// <th></th>
+        /// <th><b>Target Language</b></th>
+        /// <th></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td></td>
+        /// <td>Language Code</td>
+        /// <td>Language Name</td>
+        /// <td>Language Code</td>
+        /// <td>Language Name</td>
+        /// </tr>
+        /// <tr>
+        /// <td>1</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ar</td>
+        /// <td>Arabic</td>
+        /// </tr>
+        /// <tr>
+        /// <td>2</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>id</td>
+        /// <td>Indonesian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>3</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>th</td>
+        /// <td>Thai</td>
+        /// </tr>
+        /// <tr>
+        /// <td>4</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ko</td>
+        /// <td>Korean</td>
+        /// </tr>
+        /// <tr>
+        /// <td>5</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ja</td>
+        /// <td>Japanese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>6</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>vi</td>
+        /// <td>Vietnamese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>7</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ru</td>
+        /// <td>Russian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>8</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>tl</td>
+        /// <td>Filipino</td>
+        /// </tr>
+        /// <tr>
+        /// <td>9</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>es</td>
+        /// <td>Spanish</td>
+        /// </tr>
+        /// <tr>
+        /// <td>10</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>fr</td>
+        /// <td>French</td>
+        /// </tr>
+        /// <tr>
+        /// <td>11</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>de</td>
+        /// <td>German</td>
+        /// </tr>
+        /// <tr>
+        /// <td>12</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>pl</td>
+        /// <td>Polish</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2>Common scenarios</h2>
+        /// <para>Main product images and detail images for cross-border e-commerce.</para>
+        /// <h2>Functions and features</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product body information protection</b>: Supports custom selection of whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images. This helps protect brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationPlusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationPlusResponse
+        /// </returns>
+        public async Task<ImageTranslationPlusResponse> ImageTranslationPlusWithOptionsAsync(ImageTranslationPlusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
+            {
+                body["Glossary"] = request.Glossary;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                body["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
+            {
+                body["IncludingProductArea"] = request.IncludingProductArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
+            {
+                body["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
+            {
+                body["UseImageEditor"] = request.UseImageEditor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageTranslationPlus",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageTranslationPlusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following 8 language pairs, with more to be supported in the future.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Product Introduction</h2>
+        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following language pairs, with more to be supported in the future.
+        /// Supported language pairs:</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>No.</b></th>
+        /// <th><b>Source Language</b></th>
+        /// <th></th>
+        /// <th><b>Target Language</b></th>
+        /// <th></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td></td>
+        /// <td>Language Code</td>
+        /// <td>Language Name</td>
+        /// <td>Language Code</td>
+        /// <td>Language Name</td>
+        /// </tr>
+        /// <tr>
+        /// <td>1</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ar</td>
+        /// <td>Arabic</td>
+        /// </tr>
+        /// <tr>
+        /// <td>2</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>id</td>
+        /// <td>Indonesian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>3</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>th</td>
+        /// <td>Thai</td>
+        /// </tr>
+        /// <tr>
+        /// <td>4</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ko</td>
+        /// <td>Korean</td>
+        /// </tr>
+        /// <tr>
+        /// <td>5</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ja</td>
+        /// <td>Japanese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>6</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>vi</td>
+        /// <td>Vietnamese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>7</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ru</td>
+        /// <td>Russian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>8</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>tl</td>
+        /// <td>Filipino</td>
+        /// </tr>
+        /// <tr>
+        /// <td>9</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>es</td>
+        /// <td>Spanish</td>
+        /// </tr>
+        /// <tr>
+        /// <td>10</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>fr</td>
+        /// <td>French</td>
+        /// </tr>
+        /// <tr>
+        /// <td>11</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>de</td>
+        /// <td>German</td>
+        /// </tr>
+        /// <tr>
+        /// <td>12</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>pl</td>
+        /// <td>Polish</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2>Common scenarios</h2>
+        /// <para>Main product images and detail images for cross-border e-commerce.</para>
+        /// <h2>Functions and features</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product body information protection</b>: Supports custom selection of whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images. This helps protect brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationPlusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationPlusResponse
+        /// </returns>
+        public ImageTranslationPlusResponse ImageTranslationPlus(ImageTranslationPlusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImageTranslationPlusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following 8 language pairs, with more to be supported in the future.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Product Introduction</h2>
+        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following language pairs, with more to be supported in the future.
+        /// Supported language pairs:</para>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>No.</b></th>
+        /// <th><b>Source Language</b></th>
+        /// <th></th>
+        /// <th><b>Target Language</b></th>
+        /// <th></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td></td>
+        /// <td>Language Code</td>
+        /// <td>Language Name</td>
+        /// <td>Language Code</td>
+        /// <td>Language Name</td>
+        /// </tr>
+        /// <tr>
+        /// <td>1</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ar</td>
+        /// <td>Arabic</td>
+        /// </tr>
+        /// <tr>
+        /// <td>2</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>id</td>
+        /// <td>Indonesian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>3</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>th</td>
+        /// <td>Thai</td>
+        /// </tr>
+        /// <tr>
+        /// <td>4</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ko</td>
+        /// <td>Korean</td>
+        /// </tr>
+        /// <tr>
+        /// <td>5</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ja</td>
+        /// <td>Japanese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>6</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>vi</td>
+        /// <td>Vietnamese</td>
+        /// </tr>
+        /// <tr>
+        /// <td>7</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>ru</td>
+        /// <td>Russian</td>
+        /// </tr>
+        /// <tr>
+        /// <td>8</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>tl</td>
+        /// <td>Filipino</td>
+        /// </tr>
+        /// <tr>
+        /// <td>9</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>es</td>
+        /// <td>Spanish</td>
+        /// </tr>
+        /// <tr>
+        /// <td>10</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>fr</td>
+        /// <td>French</td>
+        /// </tr>
+        /// <tr>
+        /// <td>11</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>de</td>
+        /// <td>German</td>
+        /// </tr>
+        /// <tr>
+        /// <td>12</td>
+        /// <td>en</td>
+        /// <td>English</td>
+        /// <td>pl</td>
+        /// <td>Polish</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2>Common scenarios</h2>
+        /// <para>Main product images and detail images for cross-border e-commerce.</para>
+        /// <h2>Functions and features</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Product body information protection</b>: Supports custom selection of whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images. This helps protect brand name information from being translated.</para>
+        /// </description></item>
+        /// <item><description><para><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageTranslationPlusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageTranslationPlusResponse
+        /// </returns>
+        public async Task<ImageTranslationPlusResponse> ImageTranslationPlusAsync(ImageTranslationPlusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImageTranslationPlusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Translates text in e-commerce images using the Pro edition, which integrates multimodal foundation model technology for more accurate image understanding and significantly improved translation quality.</para>
         /// </summary>
         /// 
@@ -7822,6 +8470,30 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <para>电商视频生成（异步提交）</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>适用场景</h1>
+        /// <list type="bullet">
+        /// <item><description>卖家/平台批量生成商品短视频：支持多种视频比例与尺寸（3:4、9:16），适配商品详情页视频位、商品主页展示、信息流投放、短视频种草、活动会场素材等场景。</description></item>
+        /// <item><description>商品上新，快速生成首批视频素材：当商家有大量新品集中上架时，只需上传商品图、商品标题等基础信息，即可快速生成商品展示视频、模特上身视频、口播讲解视频等内容，帮助商家在上新阶段迅速完成素材铺设。</description></item>
+        /// <item><description>高保真服饰展示：基于商品主图生成更贴近真实商拍效果的模特展示视频，重点优化版型还原、面料纹理保留、颜色准确呈现、细节稳定一致等能力，支持服装上身、转身、走动、近景特写、多角度切换等常见电商展示方式。</description></item>
+        /// <item><description>生成高质量商拍模特：内置 20+ 套目标受众模特库，覆盖大码女性、大码男性、泳装、少女风、轻熟通勤、青年休闲、商务男装、运动健身等多体型、多肤色、多人种模特，支持站姿展示、侧身展示、走动展示、局部特写等多种商拍表达方式。</description></item>
+        /// <item><description>标品讲解等高频电商场景：适用于护肤品、化妆品、个护小家电、食品饮料、家清日用、3C 数码等标准化商品类目，可基于商品主图、标题、卖点信息和讲解脚本快速生成商品讲解视频。</description></item>
+        /// <item><description>多商品、多卖点测试，提升投放效率：面向信息流广告、短视频投放和内容种草场景，可快速生成多个版本的视频素材，便于企业低成本验证不同卖点与表现形式的转化效果，提升投放 ROI。</description></item>
+        /// </list>
+        /// <h1>功能介绍</h1>
+        /// <list type="bullet">
+        /// <item><description>全自动端到端批量生成，零 Prompt 门槛：调用方仅需传入商品图片 URL 与标题，系统自动完成从商品理解、分镜规划到视频生成的全流程处理，无需人工编写 Prompt、选择模板或反复调参。内置商品理解、画面质检、脚本规划、编导运镜等多 Agent，大幅降低使用门槛。</description></item>
+        /// <item><description>高稳定生成，低废片率：采用确定性生成流程与多层质量控制机制，可在更少重试次数下输出可用素材，减少无效生成和资源浪费，整体生产成本更可控。</description></item>
+        /// <item><description>电商专属商品保真能力：内置多轮质检 Agent，在视频生成全程锁定商品状态（如拉链不会被拉开、袖子不会被放下、印花不会消失），通过「脚本改写 + 显式约束注入 + 失败感知重试」多层防御确保商品一致性。</description></item>
+        /// <item><description>参考图优先 + 6 轴一致性校验：采用 Reference-Image-First 生成范式，以原商品图作为视觉唯一事实源，自动执行 6 维度 VL 诊断（颜色漂移、图案缺失、轮廓偏移、结构增减、模特匹配、脏污检测），从机制上杜绝生成图与商品不像的问题。</description></item>
+        /// <item><description>灵活的分镜编排与时长控制：支持 5–30 秒可调视频时长；Agent 自主规划独立分镜展示商品在不同场景下的效果；也支持固定场景模式，在统一视觉风格下深度展示产品调性。</description></item>
+        /// <item><description>电影级运镜能力：内置子弹时间、格莱美慢镜头、360° 环绕旋转、模特全身旋转展示等高级运镜模式，通过分段精准控制实现确定性产出。</description></item>
+        /// <item><description>模特库与定制化服务：内置多类型模特资源库，支持商家指定固定模特、定制专属模特形象、长期绑定品牌视觉人设，保证品牌视觉统一性。</description></item>
+        /// <item><description>适配高频电商内容场景：支持 720P、1080P 等多种清晰度及 3:4、9:16等多种长宽比，适配商品详情页视频位、商品主页视频展示、瀑布流/信息流投放、活动会场素材、上新与促销视频生成。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// VideoGenerationRequest
         /// </param>
@@ -7885,6 +8557,30 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <summary>
         /// <para>电商视频生成（异步提交）</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>适用场景</h1>
+        /// <list type="bullet">
+        /// <item><description>卖家/平台批量生成商品短视频：支持多种视频比例与尺寸（3:4、9:16），适配商品详情页视频位、商品主页展示、信息流投放、短视频种草、活动会场素材等场景。</description></item>
+        /// <item><description>商品上新，快速生成首批视频素材：当商家有大量新品集中上架时，只需上传商品图、商品标题等基础信息，即可快速生成商品展示视频、模特上身视频、口播讲解视频等内容，帮助商家在上新阶段迅速完成素材铺设。</description></item>
+        /// <item><description>高保真服饰展示：基于商品主图生成更贴近真实商拍效果的模特展示视频，重点优化版型还原、面料纹理保留、颜色准确呈现、细节稳定一致等能力，支持服装上身、转身、走动、近景特写、多角度切换等常见电商展示方式。</description></item>
+        /// <item><description>生成高质量商拍模特：内置 20+ 套目标受众模特库，覆盖大码女性、大码男性、泳装、少女风、轻熟通勤、青年休闲、商务男装、运动健身等多体型、多肤色、多人种模特，支持站姿展示、侧身展示、走动展示、局部特写等多种商拍表达方式。</description></item>
+        /// <item><description>标品讲解等高频电商场景：适用于护肤品、化妆品、个护小家电、食品饮料、家清日用、3C 数码等标准化商品类目，可基于商品主图、标题、卖点信息和讲解脚本快速生成商品讲解视频。</description></item>
+        /// <item><description>多商品、多卖点测试，提升投放效率：面向信息流广告、短视频投放和内容种草场景，可快速生成多个版本的视频素材，便于企业低成本验证不同卖点与表现形式的转化效果，提升投放 ROI。</description></item>
+        /// </list>
+        /// <h1>功能介绍</h1>
+        /// <list type="bullet">
+        /// <item><description>全自动端到端批量生成，零 Prompt 门槛：调用方仅需传入商品图片 URL 与标题，系统自动完成从商品理解、分镜规划到视频生成的全流程处理，无需人工编写 Prompt、选择模板或反复调参。内置商品理解、画面质检、脚本规划、编导运镜等多 Agent，大幅降低使用门槛。</description></item>
+        /// <item><description>高稳定生成，低废片率：采用确定性生成流程与多层质量控制机制，可在更少重试次数下输出可用素材，减少无效生成和资源浪费，整体生产成本更可控。</description></item>
+        /// <item><description>电商专属商品保真能力：内置多轮质检 Agent，在视频生成全程锁定商品状态（如拉链不会被拉开、袖子不会被放下、印花不会消失），通过「脚本改写 + 显式约束注入 + 失败感知重试」多层防御确保商品一致性。</description></item>
+        /// <item><description>参考图优先 + 6 轴一致性校验：采用 Reference-Image-First 生成范式，以原商品图作为视觉唯一事实源，自动执行 6 维度 VL 诊断（颜色漂移、图案缺失、轮廓偏移、结构增减、模特匹配、脏污检测），从机制上杜绝生成图与商品不像的问题。</description></item>
+        /// <item><description>灵活的分镜编排与时长控制：支持 5–30 秒可调视频时长；Agent 自主规划独立分镜展示商品在不同场景下的效果；也支持固定场景模式，在统一视觉风格下深度展示产品调性。</description></item>
+        /// <item><description>电影级运镜能力：内置子弹时间、格莱美慢镜头、360° 环绕旋转、模特全身旋转展示等高级运镜模式，通过分段精准控制实现确定性产出。</description></item>
+        /// <item><description>模特库与定制化服务：内置多类型模特资源库，支持商家指定固定模特、定制专属模特形象、长期绑定品牌视觉人设，保证品牌视觉统一性。</description></item>
+        /// <item><description>适配高频电商内容场景：支持 720P、1080P 等多种清晰度及 3:4、9:16等多种长宽比，适配商品详情页视频位、商品主页视频展示、瀑布流/信息流投放、活动会场素材、上新与促销视频生成。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// VideoGenerationRequest
@@ -7950,6 +8646,30 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <para>电商视频生成（异步提交）</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>适用场景</h1>
+        /// <list type="bullet">
+        /// <item><description>卖家/平台批量生成商品短视频：支持多种视频比例与尺寸（3:4、9:16），适配商品详情页视频位、商品主页展示、信息流投放、短视频种草、活动会场素材等场景。</description></item>
+        /// <item><description>商品上新，快速生成首批视频素材：当商家有大量新品集中上架时，只需上传商品图、商品标题等基础信息，即可快速生成商品展示视频、模特上身视频、口播讲解视频等内容，帮助商家在上新阶段迅速完成素材铺设。</description></item>
+        /// <item><description>高保真服饰展示：基于商品主图生成更贴近真实商拍效果的模特展示视频，重点优化版型还原、面料纹理保留、颜色准确呈现、细节稳定一致等能力，支持服装上身、转身、走动、近景特写、多角度切换等常见电商展示方式。</description></item>
+        /// <item><description>生成高质量商拍模特：内置 20+ 套目标受众模特库，覆盖大码女性、大码男性、泳装、少女风、轻熟通勤、青年休闲、商务男装、运动健身等多体型、多肤色、多人种模特，支持站姿展示、侧身展示、走动展示、局部特写等多种商拍表达方式。</description></item>
+        /// <item><description>标品讲解等高频电商场景：适用于护肤品、化妆品、个护小家电、食品饮料、家清日用、3C 数码等标准化商品类目，可基于商品主图、标题、卖点信息和讲解脚本快速生成商品讲解视频。</description></item>
+        /// <item><description>多商品、多卖点测试，提升投放效率：面向信息流广告、短视频投放和内容种草场景，可快速生成多个版本的视频素材，便于企业低成本验证不同卖点与表现形式的转化效果，提升投放 ROI。</description></item>
+        /// </list>
+        /// <h1>功能介绍</h1>
+        /// <list type="bullet">
+        /// <item><description>全自动端到端批量生成，零 Prompt 门槛：调用方仅需传入商品图片 URL 与标题，系统自动完成从商品理解、分镜规划到视频生成的全流程处理，无需人工编写 Prompt、选择模板或反复调参。内置商品理解、画面质检、脚本规划、编导运镜等多 Agent，大幅降低使用门槛。</description></item>
+        /// <item><description>高稳定生成，低废片率：采用确定性生成流程与多层质量控制机制，可在更少重试次数下输出可用素材，减少无效生成和资源浪费，整体生产成本更可控。</description></item>
+        /// <item><description>电商专属商品保真能力：内置多轮质检 Agent，在视频生成全程锁定商品状态（如拉链不会被拉开、袖子不会被放下、印花不会消失），通过「脚本改写 + 显式约束注入 + 失败感知重试」多层防御确保商品一致性。</description></item>
+        /// <item><description>参考图优先 + 6 轴一致性校验：采用 Reference-Image-First 生成范式，以原商品图作为视觉唯一事实源，自动执行 6 维度 VL 诊断（颜色漂移、图案缺失、轮廓偏移、结构增减、模特匹配、脏污检测），从机制上杜绝生成图与商品不像的问题。</description></item>
+        /// <item><description>灵活的分镜编排与时长控制：支持 5–30 秒可调视频时长；Agent 自主规划独立分镜展示商品在不同场景下的效果；也支持固定场景模式，在统一视觉风格下深度展示产品调性。</description></item>
+        /// <item><description>电影级运镜能力：内置子弹时间、格莱美慢镜头、360° 环绕旋转、模特全身旋转展示等高级运镜模式，通过分段精准控制实现确定性产出。</description></item>
+        /// <item><description>模特库与定制化服务：内置多类型模特资源库，支持商家指定固定模特、定制专属模特形象、长期绑定品牌视觉人设，保证品牌视觉统一性。</description></item>
+        /// <item><description>适配高频电商内容场景：支持 720P、1080P 等多种清晰度及 3:4、9:16等多种长宽比，适配商品详情页视频位、商品主页视频展示、瀑布流/信息流投放、活动会场素材、上新与促销视频生成。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// VideoGenerationRequest
         /// </param>
@@ -7967,6 +8687,30 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <summary>
         /// <para>电商视频生成（异步提交）</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>适用场景</h1>
+        /// <list type="bullet">
+        /// <item><description>卖家/平台批量生成商品短视频：支持多种视频比例与尺寸（3:4、9:16），适配商品详情页视频位、商品主页展示、信息流投放、短视频种草、活动会场素材等场景。</description></item>
+        /// <item><description>商品上新，快速生成首批视频素材：当商家有大量新品集中上架时，只需上传商品图、商品标题等基础信息，即可快速生成商品展示视频、模特上身视频、口播讲解视频等内容，帮助商家在上新阶段迅速完成素材铺设。</description></item>
+        /// <item><description>高保真服饰展示：基于商品主图生成更贴近真实商拍效果的模特展示视频，重点优化版型还原、面料纹理保留、颜色准确呈现、细节稳定一致等能力，支持服装上身、转身、走动、近景特写、多角度切换等常见电商展示方式。</description></item>
+        /// <item><description>生成高质量商拍模特：内置 20+ 套目标受众模特库，覆盖大码女性、大码男性、泳装、少女风、轻熟通勤、青年休闲、商务男装、运动健身等多体型、多肤色、多人种模特，支持站姿展示、侧身展示、走动展示、局部特写等多种商拍表达方式。</description></item>
+        /// <item><description>标品讲解等高频电商场景：适用于护肤品、化妆品、个护小家电、食品饮料、家清日用、3C 数码等标准化商品类目，可基于商品主图、标题、卖点信息和讲解脚本快速生成商品讲解视频。</description></item>
+        /// <item><description>多商品、多卖点测试，提升投放效率：面向信息流广告、短视频投放和内容种草场景，可快速生成多个版本的视频素材，便于企业低成本验证不同卖点与表现形式的转化效果，提升投放 ROI。</description></item>
+        /// </list>
+        /// <h1>功能介绍</h1>
+        /// <list type="bullet">
+        /// <item><description>全自动端到端批量生成，零 Prompt 门槛：调用方仅需传入商品图片 URL 与标题，系统自动完成从商品理解、分镜规划到视频生成的全流程处理，无需人工编写 Prompt、选择模板或反复调参。内置商品理解、画面质检、脚本规划、编导运镜等多 Agent，大幅降低使用门槛。</description></item>
+        /// <item><description>高稳定生成，低废片率：采用确定性生成流程与多层质量控制机制，可在更少重试次数下输出可用素材，减少无效生成和资源浪费，整体生产成本更可控。</description></item>
+        /// <item><description>电商专属商品保真能力：内置多轮质检 Agent，在视频生成全程锁定商品状态（如拉链不会被拉开、袖子不会被放下、印花不会消失），通过「脚本改写 + 显式约束注入 + 失败感知重试」多层防御确保商品一致性。</description></item>
+        /// <item><description>参考图优先 + 6 轴一致性校验：采用 Reference-Image-First 生成范式，以原商品图作为视觉唯一事实源，自动执行 6 维度 VL 诊断（颜色漂移、图案缺失、轮廓偏移、结构增减、模特匹配、脏污检测），从机制上杜绝生成图与商品不像的问题。</description></item>
+        /// <item><description>灵活的分镜编排与时长控制：支持 5–30 秒可调视频时长；Agent 自主规划独立分镜展示商品在不同场景下的效果；也支持固定场景模式，在统一视觉风格下深度展示产品调性。</description></item>
+        /// <item><description>电影级运镜能力：内置子弹时间、格莱美慢镜头、360° 环绕旋转、模特全身旋转展示等高级运镜模式，通过分段精准控制实现确定性产出。</description></item>
+        /// <item><description>模特库与定制化服务：内置多类型模特资源库，支持商家指定固定模特、定制专属模特形象、长期绑定品牌视觉人设，保证品牌视觉统一性。</description></item>
+        /// <item><description>适配高频电商内容场景：支持 720P、1080P 等多种清晰度及 3:4、9:16等多种长宽比，适配商品详情页视频位、商品主页视频展示、瀑布流/信息流投放、活动会场素材、上新与促销视频生成。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// VideoGenerationRequest
