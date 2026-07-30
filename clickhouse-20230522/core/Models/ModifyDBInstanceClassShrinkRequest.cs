@@ -72,6 +72,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
         /// <summary>
         /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
