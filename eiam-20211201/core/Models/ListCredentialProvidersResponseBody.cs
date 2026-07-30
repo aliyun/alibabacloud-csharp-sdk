@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListCredentialProvidersResponseBodyCredentialProviders> CredentialProviders { get; set; }
         public class ListCredentialProvidersResponseBodyCredentialProviders : TeaModel {
             /// <summary>
-            /// <para>The creation time of the credential provider. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the credential provider was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The credential provider configuration.</para>
+            /// <para>The configuration of the credential provider.</para>
             /// </summary>
             [NameInMap("CredentialProviderConfig")]
             [Validation(Required=false)]
             public ListCredentialProvidersResponseBodyCredentialProvidersCredentialProviderConfig CredentialProviderConfig { get; set; }
             public class ListCredentialProvidersResponseBodyCredentialProvidersCredentialProviderConfig : TeaModel {
                 /// <summary>
-                /// <para>The configuration of the JWT credential provider.</para>
+                /// <para>The configuration of the JWT-type credential provider.</para>
                 /// </summary>
                 [NameInMap("JwtProviderConfig")]
                 [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public List<string> AllowedTokenIssuers { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the JWT derived short token feature is enabled.</para>
+                    /// <para>Specifies whether to enable the JWT-derived short token capability.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public int? Expiration { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether JWT expiration cleanup is enabled.</para>
+                    /// <para>Specifies whether to enable JWT expiration cleanup.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -100,14 +100,32 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the OAuth credential provider.</para>
+                /// <para>The configuration of the OAuth-type credential provider.</para>
                 /// </summary>
                 [NameInMap("OAuthProviderConfig")]
                 [Validation(Required=false)]
                 public ListCredentialProvidersResponseBodyCredentialProvidersCredentialProviderConfigOAuthProviderConfig OAuthProviderConfig { get; set; }
                 public class ListCredentialProvidersResponseBodyCredentialProvidersCredentialProviderConfigOAuthProviderConfig : TeaModel {
                     /// <summary>
-                    /// <para>The client_id in the OAuth protocol, which is the client ID.</para>
+                    /// <para>The endpoint URL used to guide users through authorization. Conditionally required: this parameter is required when AuthorizationFlow is set to user_federation and ProviderVendor is set to custom. For preset vendors, this value can be automatically populated through DiscoveryUrl.</para>
+                    /// </summary>
+                    [NameInMap("AuthorizationEndpoint")]
+                    [Validation(Required=false)]
+                    public string AuthorizationEndpoint { get; set; }
+
+                    /// <summary>
+                    /// <para>The OAuth authorization flow type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>m2m: machine-to-machine (2LO, Client Credentials).</description></item>
+                    /// <item><description>user_federation: user federation (3LO, Authorization Code).</description></item>
+                    /// </list>
+                    /// </summary>
+                    [NameInMap("AuthorizationFlow")]
+                    [Validation(Required=false)]
+                    public string AuthorizationFlow { get; set; }
+
+                    /// <summary>
+                    /// <para>The client_id in the OAuth protocol.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>client_id_example_xxx</para>
@@ -117,13 +135,39 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string ClientId { get; set; }
 
                     /// <summary>
+                    /// <para>The URL of the discovery document used to automatically obtain OAuth endpoint configurations. Conditionally optional: used when AuthorizationFlow is set to user_federation. If DiscoveryUrl is not provided, you must manually configure fields such as TokenEndpoint and AuthorizationEndpoint.</para>
+                    /// </summary>
+                    [NameInMap("DiscoveryUrl")]
+                    [Validation(Required=false)]
+                    public string DiscoveryUrl { get; set; }
+
+                    [NameInMap("Issuer")]
+                    [Validation(Required=false)]
+                    public string Issuer { get; set; }
+
+                    /// <summary>
+                    /// <para>The method used to generate the PKCE code_challenge. Default value: s256.</para>
+                    /// </summary>
+                    [NameInMap("PkceChallengeMethod")]
+                    [Validation(Required=false)]
+                    public string PkceChallengeMethod { get; set; }
+
+                    /// <summary>
+                    /// <para>Specifies whether to use the PKCE extension to enhance security. We recommend that you always enable this feature.</para>
+                    /// </summary>
+                    [NameInMap("PkceEnabled")]
+                    [Validation(Required=false)]
+                    public bool? PkceEnabled { get; set; }
+
+                    /// <summary>
+                    /// <para>The preset vendor or custom configuration. Optional. Default value: custom.</para>
+                    /// </summary>
+                    [NameInMap("ProviderVendor")]
+                    [Validation(Required=false)]
+                    public string ProviderVendor { get; set; }
+
+                    /// <summary>
                     /// <para>The scope in the OAuth protocol, which specifies the permission scope.</para>
-                    /// <remarks>
-                    /// <para>The Scope configuration of the OAuth credential provider serves as the default value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth access token, the Scope configuration of the credential provider is used for token issuance.</para>
-                    /// </remarks>
-                    /// <remarks>
-                    /// <para>Notice: Multiple Scope values are separated by spaces.</para>
-                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>example:test_01 example:test_02</para>
@@ -131,6 +175,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     [NameInMap("Scope")]
                     [Validation(Required=false)]
                     public string Scope { get; set; }
+
+                    /// <summary>
+                    /// <para>The redirect URI automatically generated by the system when the credential provider is created. Configure this value as the redirect_uri in the OAuth provider.</para>
+                    /// </summary>
+                    [NameInMap("SystemRedirectUri")]
+                    [Validation(Required=false)]
+                    public string SystemRedirectUri { get; set; }
 
                     /// <summary>
                     /// <para>The token endpoint of the OAuth protocol.</para>
@@ -145,10 +196,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The list of credential IDs that correspond to the sensitive configuration of the credential provider.</para>
-                /// <remarks>
-                /// <para>The system securely stores the sensitive configuration of the credential provider as credentials.</para>
-                /// </remarks>
+                /// <para>The list of credential IDs that correspond to the sensitive configurations of the credential provider.</para>
                 /// </summary>
                 [NameInMap("ProviderCredentialIds")]
                 [Validation(Required=false)]
@@ -158,10 +206,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             /// <summary>
             /// <para>The creation type of the credential provider. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>system_init: Created by the system.</description></item>
-            /// <item><description>user_custom: Created by the user.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>user_custom</para>
@@ -181,7 +225,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CredentialProviderId { get; set; }
 
             /// <summary>
-            /// <para>The credential provider identifier.</para>
+            /// <para>The business identifier of the credential provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_example_identifier</para>
@@ -191,7 +235,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CredentialProviderIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The credential provider name.</para>
+            /// <para>The name of the credential provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_example_name</para>
@@ -202,10 +246,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             /// <summary>
             /// <para>The credential provider type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>oauth: OAuth credential provider.</description></item>
-            /// <item><description>jwt: JWT credential provider.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>oauth</para>
@@ -215,7 +255,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CredentialProviderType { get; set; }
 
             /// <summary>
-            /// <para>The description.</para>
+            /// <para>The description of the credential provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is an example description</para>
@@ -236,10 +276,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             /// <summary>
             /// <para>The credential provider status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>enabled: Enabled.</description></item>
-            /// <item><description>disabled: Disabled.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -249,7 +285,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time of the credential provider. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the credential provider was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
@@ -271,7 +307,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by this call.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>

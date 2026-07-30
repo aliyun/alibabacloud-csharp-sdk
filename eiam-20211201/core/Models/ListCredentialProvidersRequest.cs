@@ -32,10 +32,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public class ListCredentialProvidersRequestFilter : TeaModel {
             /// <summary>
             /// <para>The filter condition name. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CredentialProviderName: the credential provider name.</description></item>
-            /// <item><description>CredentialProviderIdentifier: the credential provider identifier.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>CredentialProviderName</para>

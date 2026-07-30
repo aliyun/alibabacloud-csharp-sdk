@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
     public class CreateCredentialProviderRequest : TeaModel {
         /// <summary>
         /// <para>The idempotency token that ensures the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The list of allowed JWT issuers.</para>
                 /// <remarks>
-                /// <para>The list can contain up to 200 entries.</para>
+                /// <para>The list length cannot exceed 200.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("AllowedTokenIssuers")]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public bool? DerivedShortTokenEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The validity period of the JWT. Unit: seconds.</para>
+                /// <para>The validity duration of the JWT. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>900</para>
@@ -85,7 +85,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public CreateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig OAuthProviderConfig { get; set; }
             public class CreateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig : TeaModel {
                 /// <summary>
-                /// <para>The client_id in the OAuth protocol, which is the client ID.</para>
+                /// <para>The endpoint address used to guide users through authorization. Conditionally required: required when AuthorizationFlow=user_federation and ProviderVendor=custom. For preset vendors, this can be automatically populated through DiscoveryUrl.</para>
+                /// </summary>
+                [NameInMap("AuthorizationEndpoint")]
+                [Validation(Required=false)]
+                public string AuthorizationEndpoint { get; set; }
+
+                /// <summary>
+                /// <para>The OAuth authorization flow type. Valid values: m2m: machine-to-machine (2LO, Client Credentials). user_federation: user federation (3LO, Authorization Code).</para>
+                /// </summary>
+                [NameInMap("AuthorizationFlow")]
+                [Validation(Required=false)]
+                public string AuthorizationFlow { get; set; }
+
+                /// <summary>
+                /// <para>The client_id in the OAuth protocol.</para>
                 /// <remarks>
                 /// <para>The length cannot exceed 128 characters.</para>
                 /// </remarks>
@@ -99,7 +113,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ClientId { get; set; }
 
                 /// <summary>
-                /// <para>The client_secret in the OAuth protocol, which is the client secret.</para>
+                /// <para>The client_secret in the OAuth protocol.</para>
                 /// <remarks>
                 /// <para>The length cannot exceed 1024 characters.</para>
                 /// </remarks>
@@ -113,14 +127,46 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ClientSecret { get; set; }
 
                 /// <summary>
-                /// <para>The scope in the OAuth protocol, which specifies the permission scope.</para>
+                /// <para>The Discovery document URL used to automatically retrieve OAuth endpoint configurations. Conditionally optional: used when AuthorizationFlow=user_federation. If DiscoveryUrl is not provided, you must manually configure fields such as TokenEndpoint and AuthorizationEndpoint.</para>
+                /// </summary>
+                [NameInMap("DiscoveryUrl")]
+                [Validation(Required=false)]
+                public string DiscoveryUrl { get; set; }
+
+                [NameInMap("Issuer")]
+                [Validation(Required=false)]
+                public string Issuer { get; set; }
+
+                /// <summary>
+                /// <para>The PKCE code_challenge generation method. Default value: s256.</para>
+                /// </summary>
+                [NameInMap("PkceChallengeMethod")]
+                [Validation(Required=false)]
+                public string PkceChallengeMethod { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether to use the PKCE extension to enhance security. We recommend that you always enable this feature.</para>
+                /// </summary>
+                [NameInMap("PkceEnabled")]
+                [Validation(Required=false)]
+                public bool? PkceEnabled { get; set; }
+
+                /// <summary>
+                /// <para>The preset vendor or custom configuration. Optional. Default value: custom.</para>
+                /// </summary>
+                [NameInMap("ProviderVendor")]
+                [Validation(Required=false)]
+                public string ProviderVendor { get; set; }
+
+                /// <summary>
+                /// <para>The scope in the OAuth protocol, which defines the permission range.</para>
                 /// <remarks>
-                /// <para>The Scope configuration on the credential provider serves as the default value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for issuance.</para>
+                /// <para>The Scope configuration on the credential provider serves as the fallback value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for issuance.</para>
                 /// </remarks>
                 /// <remarks>
                 /// <para>Notice: Separate multiple Scope values with spaces.</para>
                 /// </remarks>
-                /// <para>The following restrictions apply to each individual Scope value:</para>
+                /// <para>Restrictions for each individual Scope value:</para>
                 /// <ol>
                 /// <item><description>Allowed characters: lowercase letters, digits, and the special characters <c>|/:_-.</c></description></item>
                 /// <item><description>Must contain at least one lowercase letter or digit.</description></item>
@@ -138,9 +184,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The token endpoint of the OAuth protocol.</para>
                 /// <remarks>
-                /// <para>The value must start with <c>http://</c> or <c>https://</c>, and the length cannot exceed 1024 characters.</para>
+                /// <para>Must start with <c>http://</c> or <c>https://</c>, and the length cannot exceed 1024 characters.</para>
                 /// </remarks>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/token">https://example.com/token</a></para>
@@ -154,7 +199,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The business identifier of the credential provider.</para>
+        /// <para>The identifier of the credential provider.</para>
         /// <remarks>
         /// <para>Allowed characters include uppercase and lowercase letters, digits, and the special characters <c>.-_</c>. The length cannot exceed 64 characters.</para>
         /// </remarks>
@@ -184,8 +229,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The type of the credential provider. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>oauth: OAuth credential provider</description></item>
-        /// <item><description>jwt: JWT credential provider</description></item>
+        /// <item><description>oauth: OAuth credential provider.</description></item>
+        /// <item><description>jwt: JWT credential provider.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
