@@ -1951,7 +1951,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a job.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1997,7 +1997,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a job.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2043,7 +2043,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a job.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2062,7 +2062,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a job.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">

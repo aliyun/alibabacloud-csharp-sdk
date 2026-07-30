@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayNameSearchMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter jobs that have assigned-node execution enabled.</para>
+        /// <para>Filters jobs based on whether running on specified nodes is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? FromAllWorkspaces { get; set; }
 
         /// <summary>
-        /// <para>Uses full-text index to retrieve the images field. Supports Chinese and English tokenization.</para>
+        /// <para>Retrieves nodes by performing a full-text index on the images field. Supports Chinese and English tokenization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pytorch</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The field name for numeric range filtering. Must be used together with NumericRangeMin or NumericRangeMax.</para>
+        /// <para>The field name for numeric range filtering. Must be used together with NumericRangeMin/NumericRangeMax.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RequestGPU</para>
@@ -192,11 +192,11 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The off-peak resource information. Valid values:</para>
+        /// <para>The idle resource information. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ForbiddenQuotaOverSold</description></item>
         /// <item><description>ForceQuotaOverSold</description></item>
-        /// <item><description>AcceptQuotaOverSold-true (true indicates the job actually used off-peak resources)</description></item>
+        /// <item><description>AcceptQuotaOverSold-true (true indicates the job actually used idle resources)</description></item>
         /// <item><description>AcceptQuotaOverSold-false (false indicates the job actually used guaranteed resources)</description></item>
         /// </list>
         /// 
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string OversoldInfo { get; set; }
 
         /// <summary>
-        /// <para>The page number to return in a paged query. Minimum value: 1. Default value: 1. Paging starts from page 1.</para>
+        /// <para>The page number to return in a paged query. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>Filters jobs created by the specified pipeline ID.</para>
+        /// <para>Filters jobs created by the specified workflow ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>flow-*******</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PipelineId { get; set; }
 
         /// <summary>
-        /// <para>Uses full-text index to retrieve the node failed reason field. Supports Chinese and English tokenization.</para>
+        /// <para>Retrieves nodes by performing a full-text index on the node failed reason field. Supports Chinese and English tokenization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OOM</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ReasonSearch { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. For information about how to obtain the dedicated resource group ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</para>
+        /// <para>The resource group ID. For information about how to query the dedicated resource group ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r*****</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource quota, used to filter the job list. Supports fuzzy match. Wildcards are not supported. Default value: empty, which indicates no filtering by resource quota.</para>
+        /// <para>Filters the job list by the resource quota name. Supports fuzzy match. Wildcards are not supported. Default value: empty, which indicates no filtering by resource quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quota***</para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? ShowOwn { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort results. Valid values:</para>
+        /// <para>The field by which to sort results:</para>
         /// <list type="bullet">
         /// <item><description>DisplayName</description></item>
         /// <item><description>JobType</description></item>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query range. The job creation time is used for filtering. Default value: the current time minus 7 days. If neither StartTime nor EndTime is specified, jobs created in the last 7 days are returned by default.</para>
+        /// <para>The start time of the query range. The job creation time is used for filtering. Default value: the current time minus 7 days. If neither StartTime nor EndTime is specified, jobs from the last 7 days are returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-04-16T07:25:34Z</para>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public Dictionary<string, string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The template ID, used to filter jobs created from the specified template.</para>
+        /// <para>The template ID. Filters jobs created from the specified template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tmlabc123</para>
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TimeRangeField { get; set; }
 
         /// <summary>
-        /// <para>Uses full-text index to retrieve the user_command field. Supports Chinese and English tokenization.</para>
+        /// <para>Retrieves nodes by performing a full-text index on the user_command field. Supports Chinese and English tokenization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python train.py</para>
@@ -386,7 +386,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserCommandSearch { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the job submitter, used to filter the job list.</para>
+        /// <para>Filters the job list by the user ID of the job submitter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20**************</para>
@@ -396,7 +396,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserIdForFilter { get; set; }
 
         /// <summary>
-        /// <para>The username of the job submitter, used to filter the job list. Supports fuzzy match. Wildcards are not supported. Default value: empty, which indicates no filtering by username.</para>
+        /// <para>Filters the job list by the username of the job submitter. Supports fuzzy match. Wildcards are not supported. Default value: empty, which indicates no filtering by username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test***</para>
@@ -406,7 +406,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Username { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.&lt;props=&quot;china&quot;&gt; For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1****</para>

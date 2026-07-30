@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The visibility of the job. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PUBLIC: Visible to all users in this workspace.</description></item>
-        /// <item><description>PRIVATE (default): Visible only to you and administrators in this workspace.</description></item>
-        /// </list>
+        /// <para>The visibility of the task. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>PRIVATE</para>
@@ -125,7 +121,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The local mount path. This is an optional parameter. If left empty, the mount path specified in the data source is used.</para>
+            /// <para>The local mount path. This is an optional parameter. The default value is empty, which indicates that the mount path in the data source is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/mnt/data/</para>
@@ -161,7 +157,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The job running duration, in seconds.</para>
+        /// <para>The job duration, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3602</para>
@@ -178,7 +174,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public JobElasticSpec ElasticSpec { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the debugger is enabled for the job.</para>
+        /// <para>Specifies whether the debugger task is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -215,7 +211,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtFailedTime { get; set; }
 
         /// <summary>
-        /// <para>The job finish time (UTC).</para>
+        /// <para>The time when the task finished (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T15:36:08Z</para>
@@ -306,7 +302,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public List<GetJobResponseBodyPods> Pods { get; set; }
         public class GetJobResponseBodyPods : TeaModel {
             /// <summary>
-            /// <para>The pod running duration.</para>
+            /// <para>The pod duration.</para>
             /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
@@ -343,14 +339,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtStartTime { get; set; }
 
             /// <summary>
-            /// <para>The historical pods.</para>
+            /// <para>The history pods.</para>
             /// </summary>
             [NameInMap("HistoryPods")]
             [Validation(Required=false)]
             public List<GetJobResponseBodyPodsHistoryPods> HistoryPods { get; set; }
             public class GetJobResponseBodyPodsHistoryPods : TeaModel {
                 /// <summary>
-                /// <para>The pod running duration.</para>
+                /// <para>The pod duration.</para>
                 /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
@@ -414,7 +410,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 public string PodId { get; set; }
 
                 /// <summary>
-                /// <para>The IP addresses of the pod.</para>
+                /// <para>The pod IP addresses.</para>
                 /// </summary>
                 [NameInMap("PodIps")]
                 [Validation(Required=false)]
@@ -451,11 +447,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The pod sub-status, such as preemption status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Normal</description></item>
-                /// <item><description>Evicted</description></item>
-                /// </list>
+                /// <para>The pod substatus, such as preemption status. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -502,7 +494,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>The pod ID. You can use this ID with the GetPodLogs and GetPodEvents APIs to retrieve detailed logs and events of the pod.</para>
+            /// <para>The pod ID. You can use this ID with the GetPodLogs and GetPodEvents APIs to retrieve detailed logs and events for the pod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Worker</para>
@@ -512,7 +504,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string PodId { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses of the pod.</para>
+            /// <para>The pod IP addresses.</para>
             /// </summary>
             [NameInMap("PodIps")]
             [Validation(Required=false)]
@@ -540,13 +532,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
             /// <summary>
             /// <para>The pod status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Pending</description></item>
-            /// <item><description>Running</description></item>
-            /// <item><description>Succeeded</description></item>
-            /// <item><description>Failed</description></item>
-            /// <item><description>Unknown</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -556,11 +541,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The pod sub-status, such as preemption status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Normal</description></item>
-            /// <item><description>Evicted</description></item>
-            /// </list>
+            /// <para>The pod substatus, such as preemption status. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -570,7 +551,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string SubStatus { get; set; }
 
             /// <summary>
-            /// <para>The pod type, which corresponds to a JobSpec in the JobSpecs parameter of CreateJob.</para>
+            /// <para>The pod type, which corresponds to a JobSpec in JobSpecs of CreateJob.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Worker</para>
@@ -610,7 +591,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ReasonCode { get; set; }
 
         /// <summary>
-        /// <para>The detailed description of the status.</para>
+        /// <para>The detailed description of the status detail.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Job is stopped by user.</para>
@@ -640,7 +621,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource level used by the job at runtime.</para>
+        /// <para>The resource level used when the job runs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>L0</para>
@@ -667,7 +648,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public List<GetJobResponseBodyRestartRecord> RestartRecord { get; set; }
         public class GetJobResponseBodyRestartRecord : TeaModel {
             /// <summary>
-            /// <para>The list of fault information.</para>
+            /// <para>The list of fault error messages.</para>
             /// </summary>
             [NameInMap("DetailErrorInfoList")]
             [Validation(Required=false)]
@@ -702,7 +683,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The fault message.</para>
+                /// <para>The fault error message.</para>
                 /// </summary>
                 [NameInMap("ErrorMsg")]
                 [Validation(Required=false)]
@@ -723,7 +704,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 public string Node { get; set; }
 
                 /// <summary>
-                /// <para>The instance.</para>
+                /// <para>The pod.</para>
                 /// </summary>
                 [NameInMap("Pod")]
                 [Validation(Required=false)]
@@ -739,7 +720,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             }
 
             /// <summary>
-            /// <para>The job restart count.</para>
+            /// <para>The number of job restarts.</para>
             /// </summary>
             [NameInMap("JobRestartCount")]
             [Validation(Required=false)]
@@ -760,21 +741,21 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string OccurTime { get; set; }
 
             /// <summary>
-            /// <para>The reason.</para>
+            /// <para>The reason for the restart.</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The restart duration.</para>
+            /// <para>The restart duration, in seconds.</para>
             /// </summary>
             [NameInMap("RestartDurationInSec")]
             [Validation(Required=false)]
             public long? RestartDurationInSec { get; set; }
 
             /// <summary>
-            /// <para>The restart failure reason.</para>
+            /// <para>The reason for the restart failure.</para>
             /// </summary>
             [NameInMap("RestartFailReason")]
             [Validation(Required=false)]
@@ -801,7 +782,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>The number of retries used and the maximum number of retries for the job.</para>
+        /// <para>The used retry count and maximum retry count for the job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0/10</para>
@@ -823,7 +804,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SchedulingStrategy { get; set; }
 
         /// <summary>
-        /// <para>The additional parameter settings of the job.</para>
+        /// <para>The additional parameter settings for the job.</para>
         /// </summary>
         [NameInMap("Settings")]
         [Validation(Required=false)]
@@ -831,21 +812,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The job running status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Creating</description></item>
-        /// <item><description>Queuing</description></item>
-        /// <item><description>Bidding (currently only for Lingjun spot jobs)</description></item>
-        /// <item><description>EnvPreparing</description></item>
-        /// <item><description>SanityChecking</description></item>
-        /// <item><description>Running</description></item>
-        /// <item><description>Restarting</description></item>
-        /// <item><description>Stopping</description></item>
-        /// <item><description>SucceededReserving</description></item>
-        /// <item><description>FailedReserving</description></item>
-        /// <item><description>Succeeded</description></item>
-        /// <item><description>Failed</description></item>
-        /// <item><description>Stopped</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Stopped</para>
@@ -855,14 +821,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The historical statuses.</para>
+        /// <para>The status history.</para>
         /// </summary>
         [NameInMap("StatusHistory")]
         [Validation(Required=false)]
         public List<StatusTransitionItem> StatusHistory { get; set; }
 
         /// <summary>
-        /// <para>The job sub-status, such as preemption retry status.</para>
+        /// <para>The job substatus, such as preemption retry status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Restarting</para>
@@ -927,15 +893,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public class GetJobResponseBodyUserVpc : TeaModel {
             /// <summary>
             /// <para>The default routing. This parameter is valid only for general computing resources. Valid values:</para>
-            /// <para>eth0: uses the default network interface controller (NIC) to access external networks through a public gateway.
-            /// eth1: uses the user elastic network interfaces (ENIs) to access external networks through a private gateway.</para>
             /// </summary>
             [NameInMap("DefaultRoute")]
             [Validation(Required=false)]
             public string DefaultRoute { get; set; }
 
             /// <summary>
-            /// <para>The extended CIDR blocks, for example, 192.168.0.1/24.</para>
+            /// <para>The extended CIDR blocks. Example: 192.168.0.1/24.</para>
             /// </summary>
             [NameInMap("ExtendedCidrs")]
             [Validation(Required=false)]

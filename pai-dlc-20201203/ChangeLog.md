@@ -1,3 +1,6 @@
+2026-07-30 Version: 1.11.1
+- Generated csharp 2020-12-03 for pai-dlc.
+
 2026-07-28 Version: 1.11.0
 - Support API CreateSignal.
 - Support API GetSignal.

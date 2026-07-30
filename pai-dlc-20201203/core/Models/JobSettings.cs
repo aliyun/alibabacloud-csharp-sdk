@@ -78,6 +78,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Driver { get; set; }
 
+        [NameInMap("ElasticSpotJobMaxRestartTimes")]
+        [Validation(Required=false)]
+        public int? ElasticSpotJobMaxRestartTimes { get; set; }
+
         /// <summary>
         /// <para>The CPU affinity setting. This setting is effective only when using general computing subscription resources.</para>
         /// 
@@ -193,7 +197,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobReservedPolicy { get; set; }
 
         /// <summary>
-        /// <para>The output model configuration. This parameter is currently effective only in federated training scenarios.</para>
+        /// <para>The output model configuration. This parameter is currently effective only in joint training scenarios.</para>
         /// </summary>
         [NameInMap("ModelConfig")]
         [Validation(Required=false)]
