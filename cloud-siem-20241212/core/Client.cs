@@ -1221,6 +1221,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["DetectionRuleType"] = request.DetectionRuleType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionRules))
+            {
+                body["DetectionRules"] = request.DetectionRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityMappings))
             {
                 body["EntityMappings"] = request.EntityMappings;
@@ -1406,6 +1410,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionRuleType))
             {
                 body["DetectionRuleType"] = request.DetectionRuleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionRules))
+            {
+                body["DetectionRules"] = request.DetectionRules;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityMappings))
             {
@@ -4260,6 +4268,178 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteNormalizationRuleVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a normalization schema.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNormalizationSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNormalizationSchemaResponse
+        /// </returns>
+        public DeleteNormalizationSchemaResponse DeleteNormalizationSchemaWithOptions(DeleteNormalizationSchemaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NormalizationSchemaId))
+            {
+                body["NormalizationSchemaId"] = request.NormalizationSchemaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NormalizationSchemaType))
+            {
+                body["NormalizationSchemaType"] = request.NormalizationSchemaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNormalizationSchema",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNormalizationSchemaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a normalization schema.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNormalizationSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNormalizationSchemaResponse
+        /// </returns>
+        public async Task<DeleteNormalizationSchemaResponse> DeleteNormalizationSchemaWithOptionsAsync(DeleteNormalizationSchemaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NormalizationSchemaId))
+            {
+                body["NormalizationSchemaId"] = request.NormalizationSchemaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NormalizationSchemaType))
+            {
+                body["NormalizationSchemaType"] = request.NormalizationSchemaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNormalizationSchema",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNormalizationSchemaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a normalization schema.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNormalizationSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNormalizationSchemaResponse
+        /// </returns>
+        public DeleteNormalizationSchemaResponse DeleteNormalizationSchema(DeleteNormalizationSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteNormalizationSchemaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a normalization schema.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNormalizationSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNormalizationSchemaResponse
+        /// </returns>
+        public async Task<DeleteNormalizationSchemaResponse> DeleteNormalizationSchemaAsync(DeleteNormalizationSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteNormalizationSchemaWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10142,7 +10322,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10185,6 +10365,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentStatus))
             {
                 body["IncidentStatus"] = request.IncidentStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentStatusList))
+            {
+                body["IncidentStatusList"] = request.IncidentStatusList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentTags))
             {
@@ -10278,7 +10462,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10321,6 +10505,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentStatus))
             {
                 body["IncidentStatus"] = request.IncidentStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentStatusList))
+            {
+                body["IncidentStatusList"] = request.IncidentStatusList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncidentTags))
             {
@@ -10414,7 +10602,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10438,7 +10626,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
+        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12625,7 +12813,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12702,7 +12890,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12779,7 +12967,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12802,7 +12990,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. Refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15248,6 +15436,214 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDataBatchIngestionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a collector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00 (UTC+8). No notifications are sent outside this time range.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataConnectorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataConnectorResponse
+        /// </returns>
+        public UpdateDataConnectorResponse UpdateDataConnectorWithOptions(UpdateDataConnectorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthConfigId))
+            {
+                body["AuthConfigId"] = request.AuthConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthConfigProduct))
+            {
+                body["AuthConfigProduct"] = request.AuthConfigProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthConfigVendor))
+            {
+                body["AuthConfigVendor"] = request.AuthConfigVendor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorConfig))
+            {
+                body["DataConnectorConfig"] = request.DataConnectorConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorId))
+            {
+                body["DataConnectorId"] = request.DataConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorStatus))
+            {
+                body["DataConnectorStatus"] = request.DataConnectorStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataConnector",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataConnectorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a collector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00 (UTC+8). No notifications are sent outside this time range.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataConnectorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataConnectorResponse
+        /// </returns>
+        public async Task<UpdateDataConnectorResponse> UpdateDataConnectorWithOptionsAsync(UpdateDataConnectorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthConfigId))
+            {
+                body["AuthConfigId"] = request.AuthConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthConfigProduct))
+            {
+                body["AuthConfigProduct"] = request.AuthConfigProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthConfigVendor))
+            {
+                body["AuthConfigVendor"] = request.AuthConfigVendor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorConfig))
+            {
+                body["DataConnectorConfig"] = request.DataConnectorConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorId))
+            {
+                body["DataConnectorId"] = request.DataConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataConnectorStatus))
+            {
+                body["DataConnectorStatus"] = request.DataConnectorStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataConnector",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataConnectorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a collector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00 (UTC+8). No notifications are sent outside this time range.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataConnectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataConnectorResponse
+        /// </returns>
+        public UpdateDataConnectorResponse UpdateDataConnector(UpdateDataConnectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDataConnectorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a collector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Notifications are subject to frequency and time restrictions.
+        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00 (UTC+8). No notifications are sent outside this time range.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateDataConnectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataConnectorResponse
+        /// </returns>
+        public async Task<UpdateDataConnectorResponse> UpdateDataConnectorAsync(UpdateDataConnectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDataConnectorWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -9,8 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListQueryViewsResponseBody : TeaModel {
+        [NameInMap("LogProjectName")]
+        [Validation(Required=false)]
+        public string LogProjectName { get; set; }
+
+        [NameInMap("LogRegionId")]
+        [Validation(Required=false)]
+        public string LogRegionId { get; set; }
+
+        [NameInMap("LogStoreName")]
+        [Validation(Required=false)]
+        public string LogStoreName { get; set; }
+
         /// <summary>
-        /// <para>The maximum number of results to return per request when using the NextToken-based pagination. Valid values: 1 to 100. Default value: 50.</para>
+        /// <para>The maximum number of results to return when you use the NextToken-based pagination method. Valid values: 1 to 100. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</para>

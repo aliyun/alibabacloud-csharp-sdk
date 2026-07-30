@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The region where the threat analysis data management center is located. Specify the management center region based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: the asset is in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: the asset is outside China.</description></item>
+        /// <item><description>cn-hangzhou: Your assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Your assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member to which the administrator switches the view.</para>
+        /// <para>The user ID that the administrator uses to switch to another member\&quot;s perspective.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public double? ColdStorageUsedCapacity { get; set; }
 
             /// <summary>
-            /// <para>The storage region of user logs.</para>
+            /// <para>The storage region of user-side logs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataStorageRegionId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the storage region can be modified. By default, the storage region cannot be modified. Contact your account manager to reset the region. The region can be reset only once. Valid values:</para>
+            /// <para>Indicates whether the storage region can be modified. By default, modification is not allowed. Contact the product manager to reset the region. The region can be reset only once. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>allow: The storage region can be modified.</description></item>
-            /// <item><description>deny: The storage region cannot be modified.</description></item>
+            /// <item><description>allow: Modification is allowed.</description></item>
+            /// <item><description>deny: Modification is not allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataStorageRegionPermission { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity purchased in the subscription scenario.</para>
+            /// <para>The storage capacity purchased in the prepaid scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataStorageUsedCapacityDetail { get; set; }
 
             /// <summary>
-            /// <para>The name of the Simple Log Service project that stores user logs.</para>
+            /// <para>The name of the Simple Log Service (SLS) project that stores user logs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun-cloudsiem-data-171835723111****-cn-shanghai</para>
@@ -90,8 +90,20 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [Validation(Required=false)]
             public string LogProject { get; set; }
 
+            [NameInMap("LogProjectState")]
+            [Validation(Required=false)]
+            public string LogProjectState { get; set; }
+
+            [NameInMap("LogProjectStateChangeAllowed")]
+            [Validation(Required=false)]
+            public bool? LogProjectStateChangeAllowed { get; set; }
+
+            [NameInMap("LogServiceDisabled")]
+            [Validation(Required=false)]
+            public bool? LogServiceDisabled { get; set; }
+
             /// <summary>
-            /// <para>The details of the Logstores for normalized data.</para>
+            /// <para>The details of Logstores for normalized data.</para>
             /// </summary>
             [NameInMap("NormalizationLogStores")]
             [Validation(Required=false)]
@@ -118,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public int? LogStoreTtl { get; set; }
 
                 /// <summary>
-                /// <para>The hot storage capacity used.</para>
+                /// <para>The hot storage used capacity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.333</para>
@@ -237,7 +249,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string LogStoreName { get; set; }
 
                 /// <summary>
-                /// <para>The time-to-live (TTL) of the Logstore.</para>
+                /// <para>The Logstore TTL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>90</para>
@@ -247,7 +259,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public int? LogStoreTtl { get; set; }
 
                 /// <summary>
-                /// <para>The used capacity of the Logstore.</para>
+                /// <para>The Logstore used capacity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11.111</para>
@@ -278,8 +290,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 /// <summary>
                 /// <para>The group to which the log belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>host: host logs.</description></item>
-                /// <item><description>security: security logs.</description></item>
+                /// <item><description>host: Host logs.</description></item>
+                /// <item><description>security: Security logs.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -290,7 +302,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string LogDeliveryGroup { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether log delivery can be toggled. Log delivery cannot be enabled if the service is not purchased. Valid values:</para>
+                /// <para>Indicates whether you are allowed to toggle the log delivery switch. Log delivery cannot be performed if the service is not purchased. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>allow: Allowed.</description></item>
                 /// <item><description>deny: Not allowed.</description></item>
@@ -306,8 +318,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 /// <summary>
                 /// <para>The log delivery status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>enable: log delivery is enabled.</description></item>
-                /// <item><description>disable: log delivery is disabled.</description></item>
+                /// <item><description>enable: Log delivery is enabled.</description></item>
+                /// <item><description>disable: Log delivery is disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -338,7 +350,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string LogName { get; set; }
 
                 /// <summary>
-                /// <para>The default log query conditions for the log. When multiple logs are stored in the same Logstore, log query conditions are required to query individual logs.</para>
+                /// <para>The default log query conditions for the log. When multiple logs are stored in the same Logstore, query conditions are required to perform a log query for a specific log.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{\&quot;<b>topic</b>\&quot;:\&quot;sas-net-block\&quot;}]</para>
@@ -382,7 +394,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public int? LogStoreTtl { get; set; }
 
                 /// <summary>
-                /// <para>The hot storage capacity used.</para>
+                /// <para>The hot storage used capacity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.333</para>
@@ -394,7 +406,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The list of legacy SIEM V1 Logstores.</para>
+            /// <para>The list of SIEM V1 legacy Logstores.</para>
             /// </summary>
             [NameInMap("UnusedLogStores")]
             [Validation(Required=false)]
@@ -421,7 +433,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public int? LogStoreTtl { get; set; }
 
                 /// <summary>
-                /// <para>The hot storage capacity used.</para>
+                /// <para>The hot storage used capacity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.333</para>
