@@ -4,6 +4,12 @@
 - Update API ListConfigs: add response parameters Body.Configs.$.ConfigId.
 
 
+2026-07-30 Version: 6.2.1
+- Update API GetPermission: add request parameters CallerAccessKeyId.
+- Update API GetPermission: add request parameters CallerSecurityToken.
+- Update API ListConfigs: add response parameters Body.Configs.$.ConfigId.
+
+
 2026-06-25 Version: 6.2.0
 - Support API CreateWorkspaceRole.
 - Support API DeleteWorkspaceRoles.
