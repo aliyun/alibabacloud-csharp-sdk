@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The total capacity of the team space.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1073741824</para>
+        /// <para>32212254720</para>
         /// </summary>
         [NameInMap("TotalSize")]
         [Validation(Required=false)]

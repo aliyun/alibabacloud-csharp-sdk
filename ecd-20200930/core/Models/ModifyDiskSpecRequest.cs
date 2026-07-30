@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment.</para>
         /// <list type="bullet">
-        /// <item><description><para>If set to <c>true</c>, ensure your account has a sufficient balance. Otherwise, an abnormal order is generated.</para>
-        /// </description></item>
-        /// <item><description><para>If set to <c>false</c>, log on to the console. Then, go to the <b>Expenses and Costs</b> page to pay for the order using the returned order ID.</para>
-        /// </description></item>
+        /// <item><description>If you set this parameter to <c>true</c>, ensure that your account balance is sufficient. Otherwise, abnormal orders are generated.</description></item>
+        /// <item><description>If you set this parameter to <c>false</c>, log on to the console and go to the <b>Expenses and Costs</b> page to complete the payment based on the returned order ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud desktop.</para>
+        /// <para>The cloud computer ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID. Call a pricing inquiry API to get a list of applicable promotion IDs.</para>
+        /// <para>The promotion ID. You can call the pricing API to obtain the list of matched promotion IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_promotion_option_id_for_blank</para>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of supported regions for WUYING Workspace.</para>
+        /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ResellerOwnerUid { get; set; }
 
         /// <summary>
-        /// <para>The performance level of the system disk. You can set the performance level for Graphics or High-frequency workspaces.</para>
+        /// <para>The performance level of the system cloud disk. You can set the disk performance level when the cloud computer specification is Enterprise Graphics or High Frequency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -72,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RootDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The performance level of the data disk. You can set the performance level for Graphics or High-frequency workspaces.</para>
+        /// <para>The performance level of the data cloud disk. You can set the disk performance level when the cloud computer specification is Enterprise Graphics or High Frequency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>

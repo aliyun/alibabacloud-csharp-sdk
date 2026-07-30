@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The end date of the query in <c>YYYY-MM-DD</c> format. You can query data within the last 90 days.</para>
+        /// <para>The end date of the query. Format: YYYY-MM-DD. Supports querying data within a maximum of 90 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-19</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return. The default value is 5, and the maximum value is 200.</para>
+        /// <para>The number of results to return. Default value: 5. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. You can obtain this token from the response to the previous request.</para>
+        /// <para>The paging token for the next query. Obtained from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The start date of the query in <c>YYYY-MM-DD</c> format. You can query data within the last 90 days.</para>
+        /// <para>The start date of the query. Format: YYYY-MM-DD. Supports querying data within a maximum of 90 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-07</para>

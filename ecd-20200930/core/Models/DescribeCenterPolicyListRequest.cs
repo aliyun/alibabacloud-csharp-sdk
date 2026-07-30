@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ModelLibrary { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query. Paging starts from page 1.<br>Default value: 1.</para>
+        /// <para>The page number of the current page in a paging query.<br>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paged query. Paging is used to return results in batches.</para>
+        /// <para>The maximum number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

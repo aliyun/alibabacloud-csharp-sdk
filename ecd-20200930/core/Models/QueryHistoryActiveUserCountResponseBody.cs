@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class QueryHistoryActiveUserCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The active user statistics.</para>
+        /// <para>The active user count metrics.</para>
         /// </summary>
         [NameInMap("ActiveUserCount")]
         [Validation(Required=false)]
         public QueryHistoryActiveUserCountResponseBodyActiveUserCount ActiveUserCount { get; set; }
         public class QueryHistoryActiveUserCountResponseBodyActiveUserCount : TeaModel {
             /// <summary>
-            /// <para>The number of daily active users.</para>
+            /// <para>The daily active user count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? DailyActiveUserCount { get; set; }
 
             /// <summary>
-            /// <para>The number of monthly active users.</para>
+            /// <para>The monthly active user count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>

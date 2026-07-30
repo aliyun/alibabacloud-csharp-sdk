@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules> AuthorizeAccessPolicyRules { get; set; }
             public class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAuthorizeAccessPolicyRules : TeaModel {
                 /// <summary>
-                /// <para>The client access IP CIDR block, in IPv4 CIDR notation.</para>
+                /// <para>The client access IP CIDR block in IPv4 CIDR format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.100.XX.XX/16</para>
@@ -85,14 +85,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The list of security group control rules.</para>
+            /// <para>The list of security group rules.</para>
             /// </summary>
             [NameInMap("AuthorizeSecurityPolicyRules")]
             [Validation(Required=false)]
             public List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules> AuthorizeSecurityPolicyRules { get; set; }
             public class DescribeCenterPolicyListResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules : TeaModel {
                 /// <summary>
-                /// <para>The target of the security group control rule, which is an IPv4 CIDR block.</para>
+                /// <para>The object of the security group rule, which is an IPv4 CIDR block.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.100.XX.XX/16</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string CidrIp { get; set; }
 
                 /// <summary>
-                /// <para>The description of the security group control rule.</para>
+                /// <para>The description of the security group rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The protocol type of the security group control rule.</para>
+                /// <para>The protocol type of the security group rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tcp</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string IpProtocol { get; set; }
 
                 /// <summary>
-                /// <para>The authorization policy of the security group control rule.</para>
+                /// <para>The authorization policy of the security group rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>accept</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Policy { get; set; }
 
                 /// <summary>
-                /// <para>The port range of the security group control rule.</para>
+                /// <para>The port range of the security group rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22/22</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string PortRange { get; set; }
 
                 /// <summary>
-                /// <para>The priority of the security group control rule. A smaller value indicates a higher priority.</para>
+                /// <para>The priority of the security group rule. A smaller value indicates a higher priority.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Priority { get; set; }
 
                 /// <summary>
-                /// <para>The direction of the security group control rule.</para>
+                /// <para>The direction of the security group rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>inflow</para>
@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DeviceType { get; set; }
 
                 /// <summary>
-                /// <para>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</para>
+                /// <para>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0x0781</para>
@@ -683,7 +683,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string LocalDrive { get; set; }
 
             /// <summary>
-            /// <para>The maximum reconnection retry time when the cloud desktop is disconnected due to external reasons. Valid values: 30 to 7200. Unit: seconds.</para>
+            /// <para>The maximum reconnection retry time when the cloud desktop is disconnected due to objective reasons. Valid values: 30 to 7200. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -754,7 +754,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MemorySingleRateLimit { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the restart button is provided in the cloud desktop floating ball when connecting through a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</para>
+            /// <para>Indicates whether the restart button is provided in the cloud desktop floating ball when connecting through mobile clients (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</para>
             /// <remarks>
             /// <para>Applicable only to mobile clients V7.4 or later.</para>
             /// </remarks>
@@ -771,7 +771,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MobileSafeMenu { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the shutdown button is provided in the cloud desktop floating ball when connecting through a mobile client (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</para>
+            /// <para>Indicates whether the shutdown button is provided in the cloud desktop floating ball when connecting through mobile clients (Android client&lt;props=&quot;china&quot;&gt; and iOS client).</para>
             /// <remarks>
             /// <para>Applicable only to mobile clients V7.4 or later.</para>
             /// </remarks>
@@ -825,8 +825,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The network redirection policy details.</para>
             /// <remarks>
-            /// <para>This feature is in invitational preview and is not publicly available.
-            /// .</para>
+            /// <para>This feature is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("NetRedirectRule")]
@@ -964,7 +963,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RecordContent { get; set; }
 
             /// <summary>
-            /// <para>The expiration period of custom screen recording files. Default value: 30. Unit: days.</para>
+            /// <para>The expiration time of custom screen recording files. Default value: 30 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -1021,7 +1020,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RecordingAudio { get; set; }
 
             /// <summary>
-            /// <para>The duration of each screen recording file. Unit: minutes. Recording files are automatically split and uploaded to the storage space based on the specified duration. Files are rolled over when they reach 300 MB.</para>
+            /// <para>The duration of screen recording files. Unit: minutes. Recording files are automatically split and uploaded to the storage space based on the specified duration. Files are rolled over when they reach 300 MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -1031,7 +1030,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? RecordingDuration { get; set; }
 
             /// <summary>
-            /// <para>The screen recording end time, in the format of HH:MM:SS. This value is meaningful only when Recording is set to period.</para>
+            /// <para>The screen recording end time in the format of HH:MM:SS. This value is meaningful only when Recording is set to period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08:59:00</para>
@@ -1061,7 +1060,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? RecordingFps { get; set; }
 
             /// <summary>
-            /// <para>The screen recording start time, in the format of HH:MM:SS. This value is meaningful only when Recording is set to period.</para>
+            /// <para>The screen recording start time in the format of HH:MM:SS. This value is meaningful only when Recording is set to period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08:00:00</para>
@@ -1081,7 +1080,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RecordingUserNotify { get; set; }
 
             /// <summary>
-            /// <para>The notification message displayed to end users about screen recording.</para>
+            /// <para>The notification message displayed to end users about screen recording being enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Screen recording is enabled.</para>
@@ -1284,7 +1283,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public long? UsbRuleType { get; set; }
 
                 /// <summary>
-                /// <para>The vendor ID. For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</para>
+                /// <para>The vendor ID. See <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB Vendor IDs (VIDs)</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>04**</para>
@@ -1400,7 +1399,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? WatermarkColor { get; set; }
 
             /// <summary>
-            /// <para>If the <c>WatermarkType</c> parameter is set to <c>custom</c>, you must also specify the custom text content by using the <c>WatermarkCustomText</c> parameter.</para>
+            /// <para>If the WatermarkType parameter is set to <c>custom</c>, you must also specify the custom text content by using the WatermarkCustomText parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom-watermark</para>

@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<ModifyTemplateRequestDataDiskList> DataDiskList { get; set; }
         public class ModifyTemplateRequestDataDiskList : TeaModel {
             /// <summary>
-            /// <para>The performance level of the data disk. The default value is <c>AutoPL</c>.</para>
+            /// <para>The performance level of the data cloud disk. Default value: <c>AutoPL</c>.</para>
             /// </summary>
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The size of the data disk. Unit: GiB. The value must be between 40 and 2040, inclusive. The step size is 10 GiB.</para>
+            /// <para>The size of the data cloud disk. Unit: GiB. Valid values: 40 to 2040. The value must be a multiple of 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The default language to set when the WUYING Workspace starts. This parameter is valid only when you create a WUYING Workspace from an OS image.</para>
+        /// <para>The default language that is set when the cloud computer starts. This parameter takes effect only when a system image is used to create the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -57,10 +57,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The description of the template. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It must be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// </description></item>
-        /// <item><description><para>It can contain Chinese characters, letters, digits, spaces, and special characters. Use line breaks to start a new line.</para>
-        /// </description></item>
+        /// <item><description>The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description can contain Chinese characters, letters, digits, spaces, and special characters. Line breaks are supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WUYING Workspace image. You can find the ID on the Image Management page. OS images and custom images are supported.</para>
+        /// <para>The ID of the cloud computer image. You can query the ID on the image management page. System images and custom images are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-gx2x1dhsmusr2****</para>
@@ -103,9 +101,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? PostPaidAfterUsedUp { get; set; }
 
         /// <summary>
-        /// <para>The region-specific template configurations. You can specify configurations for multiple regions. The system matches the configuration based on the specific region.</para>
+        /// <para>The region-specific template configurations. Multiple configurations are supported. The configuration that matches the specific region is used.</para>
         /// <remarks>
-        /// <para>You can specify configurations for up to 20 regions.</para>
+        /// <para>A maximum of 20 region configurations are supported.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RegionConfigList")]
@@ -113,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<ModifyTemplateRequestRegionConfigList> RegionConfigList { get; set; }
         public class ModifyTemplateRequestRegionConfigList : TeaModel {
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The office network ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-709****</para>
@@ -123,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to obtain a list of regions that WUYING Workspace supports.</para>
+            /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -133,7 +131,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud desktop instance type.</para>
+            /// <para>The cloud computer specification ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eds.enterprise_office.8c16g</para>
@@ -153,7 +151,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SnapshotPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The subnet ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-adjrehad1****</para>
@@ -163,7 +161,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SubnetId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable disk encryption.</para>
+            /// <para>Specifies whether to enable cloud disk encryption.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -173,7 +171,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnable { get; set; }
 
             /// <summary>
-            /// <para>The ID of the KMS key to use when disk encryption is enabled.</para>
+            /// <para>The ID of the KMS key used when cloud disk encryption is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a7b3c0c8-b3a2-4876-b1cc-116dddc9****</para>
@@ -185,7 +183,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-a5fqjjqaejt***</para>
@@ -195,7 +193,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Tags for the cloud computer, in key-value format. You can specify up to 20 tags.</para>
+        /// <para>The tags of the cloud computer in key-value format. A maximum of 20 tags can be specified.</para>
         /// </summary>
         [NameInMap("ResourceTagList")]
         [Validation(Required=false)]
@@ -238,9 +236,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The type of the system disk.</para>
+        /// <para>The type of the system cloud disk.</para>
         /// <remarks>
-        /// <para>Enhanced SSD (ESSD) disks are supported only by cloud computers with high clock speeds and powerful graphics capabilities.</para>
+        /// <para>Only high-frequency and GPU-accelerated cloud computer specifications support ESSD cloud disks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -251,9 +249,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SystemDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The size of the system disk. Unit: GiB. The value must be between 40 and 500, inclusive. The step size is 10 GiB.</para>
+        /// <para>The size of the system cloud disk. Unit: GiB. Valid values: 40 to 500. The value must be a multiple of 10.</para>
         /// <remarks>
-        /// <para>The system disk size cannot be smaller than the size of the image.</para>
+        /// <para>The system cloud disk size cannot be smaller than the size of the configured image.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -277,12 +275,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The name of the template. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It must be 2 to 126 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>It must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// </description></item>
-        /// <item><description><para>It can contain letters, digits, Chinese characters, colons (:), underscores (_), and hyphens (-). It cannot contain periods (.).</para>
-        /// </description></item>
+        /// <item><description>The name must be 2 to 126 characters in length and can contain letters and Chinese characters.</description></item>
+        /// <item><description>The name must start with a letter or a Chinese character. The name cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), or hyphens (-). Periods (.) are not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -293,7 +288,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the configuration group.</para>
+        /// <para>The configuration group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bcc-dweha*****</para>

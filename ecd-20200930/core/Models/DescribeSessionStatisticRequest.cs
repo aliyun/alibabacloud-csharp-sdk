@@ -32,10 +32,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The query interval. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>60</para>
-        /// </description></item>
-        /// <item><description><para>120</para>
-        /// </description></item>
+        /// <item><description>60</description></item>
+        /// <item><description>120</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies to search for session information by region ID. This parameter is used to filter desktop information of a specific region.</para>
+        /// <para>The region ID used to filter desktop information for a specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

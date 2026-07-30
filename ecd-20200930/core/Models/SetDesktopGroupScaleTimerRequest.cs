@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetDesktopGroupScaleTimerRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud computer pool.</para>
+        /// <para>The cloud computer pool ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The information about the scheduled auto scaling task.</para>
+        /// <para>The list of scheduled task information for automatic scaling.</para>
         /// </summary>
         [NameInMap("ScaleTimerInfos")]
         [Validation(Required=false)]
         public List<SetDesktopGroupScaleTimerRequestScaleTimerInfos> ScaleTimerInfos { get; set; }
         public class SetDesktopGroupScaleTimerRequestScaleTimerInfos : TeaModel {
             /// <summary>
-            /// <para>One option for the auto scaling policy. This option specifies the number of cloud computers that you want to create in the cloud computer pool. Valid values: 0 to 200.</para>
+            /// <para>The number of cloud computers to purchase. This is one of the scaling policy parameters. Valid values: 0 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? BuyResAmount { get; set; }
 
             /// <summary>
-            /// <para>The cron expression of the trigger time.</para>
+            /// <para>The cron expression for the trigger time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 12 ? * 1</para>
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Cron { get; set; }
 
             /// <summary>
-            /// <para>The keep-alive duration of a session after the session is disconnected. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session always keeps alive.</para>
-            /// <para>If a session is disconnected by the end user or accidentally due to a factor and the end user does not re-establish a connection with the session within the keep-alive duration, the session expires and unsaved data is deleted. If the end user successfully re-establishes a connection with the session within the keep-alive duration, the end user returns to the session and can still access the original data.</para>
+            /// <para>The duration for which a session is retained after disconnection. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</para>
+            /// <para>When a session is disconnected because the user actively disconnects or because of other unexpected factors, the retention period starts from the time of disconnection. If the user does not reconnect to the session within the retention period, the session is logged off and all unsaved data is destroyed. If the user reconnects within the retention period, the user can still access the original session and the data that existed before the disconnection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>180000</para>
@@ -71,13 +71,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The load balancing policy for the multi-session cloud computer pool.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>0: depth-first</para>
-            /// </description></item>
-            /// <item><description><para>1: breadth first.</para>
-            /// </description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -87,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? LoadPolicy { get; set; }
 
             /// <summary>
-            /// <para>One option for the auto scaling policy. This option specifies the maximum number of cloud computers that you can create in the cloud computer pool. Valid values: 0 to 200.</para>
+            /// <para>The maximum number of cloud computers. This is one of the scaling policy parameters. Valid values: 0 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -97,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MaxResAmount { get; set; }
 
             /// <summary>
-            /// <para>One option for the auto scaling policy. This option specifies the minimum number of cloud computers that you must create in the cloud computer pool. Valid values: 0 to 200.</para>
+            /// <para>The minimum number of cloud computers. This is one of the scaling policy parameters. Valid values: 0 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -107,9 +100,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MinResAmount { get; set; }
 
             /// <summary>
-            /// <para>The threshold for the ratio of connected sessions. This parameter is the condition that triggers auto scaling in a multi-session cloud computer pool. Formula:</para>
-            /// <para><c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</c>.</para>
-            /// <para>When the specified threshold is reached, new cloud computers are automatically created. When the specified threshold is not reached, idle cloud computers are released.</para>
+            /// <para>The session occupancy threshold, which is used as the trigger condition for automatic scaling of the multi-session cloud computer pool. The session occupancy is calculated by using the following formula:</para>
+            /// <para><c>Session occupancy = Number of attached sessions / (Total number of cloud computer resources × Maximum number of sessions supported per cloud computer) × 100%</c></para>
+            /// <para>When the session occupancy reaches this threshold, new cloud computers are created. When the session occupancy does not reach this threshold, excess cloud computers are deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.85</para>
@@ -119,37 +112,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public float? RatioThreshold { get; set; }
 
             /// <summary>
-            /// <para>The type of the auto scaling policy.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>drop</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>normal</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>peak</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>rise</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>The policy type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rise</para>

@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The data disks.</para>
+        /// <para>The data disk size and specification configurations.</para>
         /// </summary>
         [NameInMap("DataDiskList")]
         [Validation(Required=false)]
         public List<CreateTemplateRequestDataDiskList> DataDiskList { get; set; }
         public class CreateTemplateRequestDataDiskList : TeaModel {
             /// <summary>
-            /// <para>The PL of the data disk. Default value: <c>AutoPL</c>.</para>
+            /// <para>The data disk performance level. Default value: <c>AutoPL</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AutoPL</para>
@@ -51,11 +51,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The size of the data disk. Unit: GiB. Valid values: 40 to 2040. Increments: 10 GiB.</para>
+            /// <para>The data cloud disk size. Unit: GiB. Valid values: 40 to 2040, in increments of 10 GiB.</para>
             /// <remarks>
-            /// <para>Notice: </para>
+            /// <para>Notice: The larger the standard SSD or ESSD cloud disk capacity, the higher the performance level (PL) available (for example, PL2 is available for capacities above 460 GiB). Higher performance levels incur higher costs. Select the ESSD cloud disk performance level (PL) based on your requirements.</para>
             /// </remarks>
-            /// <para>The larger the ESSD disk capacity, the higher the available PL (for example, PL2 is available for disks larger than 460 GiB). A higher PL comes with a higher cost. Select an ESSD based on your specific needs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -67,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The default language of cloud computers during startup. This parameter takes effect only when cloud computers are created from system images.</para>
+        /// <para>The default language set when the cloud computer starts. This parameter takes effect only when a system image is used to create the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -77,12 +76,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DefaultLanguage { get; set; }
 
         /// <summary>
-        /// <para>The template description. It must meet the following criteria:</para>
+        /// <para>The description of the template. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It can be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// </description></item>
-        /// <item><description><para>It can contain letters, digits, and special characters, including spaces. Note: You can use carriage returns to break lines.</para>
-        /// </description></item>
+        /// <item><description>The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description can contain Chinese characters, letters, digits, spaces, and special characters. Line breaks are supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer image. You can query image IDs on the Images page. System images and custom images are supported.</para>
+        /// <para>The cloud computer image ID. You can query this value on the image management page. System images and custom images are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desktopimage-windows-server-2022-64-asp</para>
@@ -111,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy group.</para>
+        /// <para>The ID of the global policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-8hlryfn331******</para>
@@ -125,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? PostPaidAfterUsedUp { get; set; }
 
         /// <summary>
-        /// <para>The service type. Set the value to <c>CloudDesktop</c>.</para>
+        /// <para>The product type. Set the value to <c>CloudDesktop</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CloudDesktop</para>
@@ -135,9 +132,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The regions of the template. You can create cloud computers by using a template only within the same region as the template itself.</para>
+        /// <para>The region-specific template configurations. Multiple configurations are supported. The configuration that matches the specific region is used.</para>
         /// <remarks>
-        /// <para>You can specify up to 20 regions.</para>
+        /// <para>You can configure up to 20 regions.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RegionConfigList")]
@@ -155,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+            /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -165,7 +162,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud computer type.</para>
+            /// <para>The cloud computer specification ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eds.enterprise_office.8c16g</para>
@@ -175,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceInstanceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the automatic snapshot policy.</para>
+            /// <para>The automatic snapshot policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-35fvn8m21pnx2****</para>
@@ -205,7 +202,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnable { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Key Management Service (KMS) key that you want to use to encrypt disks. You can call the <a href="t22712.xdita#"></a>operation to query KMS keys.</para>
+            /// <para>The KMS key ID used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a7b3c0c8-b3a2-4876-b1cc-*********</para>
@@ -217,7 +214,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-4knxmfneq1e******</para>
@@ -227,7 +224,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags added to cloud computers. Specify tags in key-value pairs. You can specify up to 20 tags.</para>
+        /// <para>The cloud computer tags in key-value format. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("ResourceTagList")]
         [Validation(Required=false)]
@@ -256,7 +253,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The site configurations.</para>
+        /// <para>The site configuration management.</para>
         /// </summary>
         [NameInMap("SiteConfigList")]
         [Validation(Required=false)]
@@ -285,9 +282,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The performance level (PL) of the system disk.</para>
+        /// <para>The system disk type.</para>
         /// <remarks>
-        /// <para>Only cloud computers of the Graphics or High Frequency type support Enterprise SSDs (ESSDs).</para>
+        /// <para>Only high frequency and graphics cloud computer specifications support ESSD disks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -298,9 +295,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SystemDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The size of the system disk. Unit: GiB. Valid values: 40 to 500. Increments: 10 GiB.</para>
+        /// <para>The system disk size. Unit: GiB. Valid values: 40 to 500, in increments of 10 GiB.</para>
         /// <remarks>
-        /// <para>The system disk size must be at least as large as the configured image size.</para>
+        /// <para>The system disk size cannot be smaller than the image size.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -311,14 +308,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? SystemDiskSize { get; set; }
 
         /// <summary>
-        /// <para>The template name. It must meet the following criteria:</para>
+        /// <para>The name of the template. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>It can be 2 to 126 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>It must begin with a letter and cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// </description></item>
-        /// <item><description><para>It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Note: Periods (.) are not supported in the name.</para>
-        /// </description></item>
+        /// <item><description>The name must be 2 to 126 characters in length and can contain letters and Chinese characters.</description></item>
+        /// <item><description>The name must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), or hyphens (-). Periods (.) are not supported.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -330,7 +324,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduled task group.</para>
+        /// <para>The configuration group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccg-0caoeogrk9m5****</para>

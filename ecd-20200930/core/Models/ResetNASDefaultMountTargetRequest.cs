@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ResetNASDefaultMountTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the NAS file system.</para>
+        /// <para>The NAS file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class BindConfigGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the configuration group.</para>
+        /// <para>The configuration group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccg-0chlk9b65lj****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E54EB497-D7B7-5F04-B744-D8DFA7B******</para>

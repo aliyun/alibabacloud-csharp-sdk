@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetConnectionTicketResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud computer.</para>
+        /// <para>The cloud computer ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Before you use the credential, you must Base64 decode the content of the credential, save the credential as an xxx.ica file, and then open the file. Python sample code:</para>
+        /// <para>The ticket used to connect to the user instance. Before using the ticket, decode its content with Base64 and save it as an xxx.ica file, then open the file. Python code example:</para>
         /// <pre><c>import base64
         /// response = {
         ///     &quot;Ticket&quot;: &quot;W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********&quot;,
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the connection task.</para>
+        /// <para>The ID of the cloud computer connection task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2afbad19-778a-4fc5-9674-1f19c638****</para>
@@ -71,29 +71,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The task status.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>FAILED: The credential fails to be obtained.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>RUNNING: The credential is being obtained.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>FINISHED: The credential is obtained.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>FINISHED</para>
@@ -103,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The credentials for connecting to the cloud computer.</para>
+        /// <para>The connection credential for the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</para>

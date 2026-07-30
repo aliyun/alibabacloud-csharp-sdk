@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class QueryHistoryMetricDistributionRequest : TeaModel {
         /// <summary>
-        /// <para>The end date of the query period. The date must be in the <c>YYYY-MM-DD</c> format. The default value is T-1.</para>
+        /// <para>The end date for statistics. Format: &quot;YYYY-MM-DD&quot;. Default value: T-1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-01</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The name of the metric to query.</para>
+        /// <para>The monitoring metrics type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LOAD_SCORE</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>An array of custom value ranges.</para>
+        /// <para>The custom value ranges.</para>
         /// </summary>
         [NameInMap("Ranges")]
         [Validation(Required=false)]
         public List<QueryHistoryMetricDistributionRequestRanges> Ranges { get; set; }
         public class QueryHistoryMetricDistributionRequestRanges : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to include the maximum value in the range. The default value is <c>false</c>.</para>
+            /// <para>Specifies whether to include the maximum value. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? IncludeMax { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to include the minimum value in the range. The default value is <c>true</c>.</para>
+            /// <para>Specifies whether to include the minimum value. Default value: true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? IncludeMin { get; set; }
 
             /// <summary>
-            /// <para>The label for the value range. This label is returned in the response.</para>
+            /// <para>The range label, which is used in the response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>label-02\&quot;</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Label { get; set; }
 
             /// <summary>
-            /// <para>The maximum value of the value range.</para>
+            /// <para>The maximum value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public float? Max { get; set; }
 
             /// <summary>
-            /// <para>The minimum value of the value range.</para>
+            /// <para>The minimum value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The start date of the query period. The date must be in the <c>YYYY-MM-DD</c> format. The default value is T-1.</para>
+        /// <para>The start date for statistics. Format: &quot;YYYY-MM-DD&quot;. Default value: T-1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-01</para>

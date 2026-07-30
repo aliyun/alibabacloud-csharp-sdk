@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class BindConfigGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the configuration group.</para>
+        /// <para>The configuration group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. Set the value to <c>cn-shanghai</c>.</para>
+        /// <para>The region ID. This operation is not region-specific. Set this parameter to <c>cn-shanghai</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resources to which you want to bind the configuration group.</para>
+        /// <para>The resource information to associate.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceInfos")]
@@ -39,11 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<BindConfigGroupRequestResourceInfos> ResourceInfos { get; set; }
         public class BindConfigGroupRequestResourceInfos : TeaModel {
             /// <summary>
-            /// <para>The service type of the resource.</para>
-            /// <para>Valid value:</para>
-            /// <list type="bullet">
-            /// <item><description>CLOUD_DESKTOP: the cloud computer service.</description></item>
-            /// </list>
+            /// <para>The product type to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLOUD_DESKTOP</para>
@@ -53,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-1bo4xotjvwyon****</para>
@@ -63,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the resource.</para>
+            /// <para>The region where the resource resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -73,14 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceRegionId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>RESOURCE_GROUP: the resource group</para>
-            /// </description></item>
-            /// <item><description><para>CLOUD_DESKTOP: the cloud computer service.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLOUD_DESKTOP</para>

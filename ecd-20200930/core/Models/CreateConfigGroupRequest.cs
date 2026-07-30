@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateConfigGroupRequest : TeaModel {
         /// <summary>
-        /// <para>An array of scheduled task configurations.</para>
+        /// <para>The configuration information of scheduled tasks. This parameter is a list.</para>
         /// </summary>
         [NameInMap("ConfigTimers")]
         [Validation(Required=false)]
         public List<CreateConfigGroupRequestConfigTimers> ConfigTimers { get; set; }
         public class CreateConfigGroupRequestConfigTimers : TeaModel {
             /// <summary>
-            /// <para>Whether to allow end users to configure the scheduled task.</para>
+            /// <para>Specifies whether to allow end users to configure scheduled tasks on their own.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,11 +27,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? AllowClientSetting { get; set; }
 
             /// <summary>
-            /// <para>The cron expression for the scheduled task.</para>
+            /// <para>The cron expression of the scheduled task.</para>
             /// <remarks>
-            /// <para>Notice: </para>
+            /// <para>Notice: Specify the time in UTC. For example, to specify 00:00 (UTC+8) every day, use 0 0 16 ? * 1,2,3,4,5,6,7.</notice></para>
             /// </remarks>
-            /// <para>The cron expression is based on UTC. For example, to run a task at 00:00 China Standard Time (UTC+8) every day, set this parameter to <c>0 0 16 ? * 1,2,3,4,5,6,7</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 16 ? * 1,2,3,4,5,6,7</para>
@@ -41,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CronExpression { get; set; }
 
             /// <summary>
-            /// <para>Whether to forcefully execute the scheduled task.</para>
+            /// <para>Specifies whether to forcibly execute the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -65,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? NotificationTime { get; set; }
 
             /// <summary>
-            /// <para>The operation to perform for the scheduled task. This parameter is valid only when <c>TimerType</c> is set to <c>NoConnect</c>.</para>
+            /// <para>The operation type of the scheduled task. Currently, only disconnect scheduled tasks support this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Shutdown</para>
@@ -75,14 +74,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OperationType { get; set; }
 
             /// <summary>
-            /// <para>The process whitelist for smart detection. If a process from this whitelist is running, the inactivity-based scheduled task does not run.</para>
+            /// <para>The process whitelist for intelligent detection of no-operation scheduled tasks. If a specified process is running, the no-operation scheduled task is not triggered.</para>
             /// </summary>
             [NameInMap("ProcessWhitelist")]
             [Validation(Required=false)]
             public List<string> ProcessWhitelist { get; set; }
 
             /// <summary>
-            /// <para>The reset type for the cloud desktop.</para>
+            /// <para>The reset type of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RESET_TYPE_SYSTEM</para>
@@ -96,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<CreateConfigGroupRequestConfigTimersSegmentTimers> SegmentTimers { get; set; }
             public class CreateConfigGroupRequestConfigTimersSegmentTimers : TeaModel {
                 /// <summary>
-                /// <para>The execution time for a one-time scheduled task, specified as a UNIX timestamp in milliseconds.</para>
+                /// <para>The specified time point for executing a scheduled task. After this parameter is specified, the scheduled task is executed at the specified time point.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1764660600967</para>
@@ -118,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public bool? Enforce { get; set; }
 
                 /// <summary>
-                /// <para>The image ID for a scheduled task that changes the image of a cloud desktop.</para>
+                /// <para>The image ID to change to. This parameter is used for image change scheduled tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>m-5b0vjqbiqu010XXXXXX</para>
@@ -136,7 +135,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public List<string> IpSegments { get; set; }
 
                 /// <summary>
-                /// <para>The amount of inactive time, in seconds, before the screen automatically locks. This parameter applies only to Active Directory desktops.</para>
+                /// <para>The lock screen time point for the no-operation lock screen feature. This parameter cannot be used for non-AD desktops.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1800</para>
@@ -207,7 +206,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string TimerType { get; set; }
 
             /// <summary>
-            /// <para>The trigger condition for inactivity-based scheduled tasks.</para>
+            /// <para>The trigger configuration type of the no-operation scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Standard</para>
@@ -240,7 +239,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The product to which the configuration group applies.</para>
+        /// <para>The product type used by the configuration group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -251,7 +250,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This feature is not region-specific. You must set this parameter to cn-shanghai.</para>
+        /// <para>The region ID. This feature is not region-specific. Set this parameter to <c>cn-shanghai</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateDriveRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of your Alibaba Cloud account.</para>
+        /// <para>The Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1202****</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the storage resource.</para>
+        /// <para>The storage resource ID.</para>
         /// <remarks>
-        /// <para>Call the DescribeDrives operation to retrieve the storage resource ID.</para>
+        /// <para>You can call the DescribeDrives operation to obtain this value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DriveName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the external storage resource.</para>
+        /// <para>The external storage resource ID.</para>
         /// <remarks>
-        /// <para>Call the DescribeDrives operation to retrieve the external storage resource ID.</para>
+        /// <para>You can call the DescribeDrives operation to obtain this value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -90,14 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the storage resource.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>NAS: File Storage NAS</para>
-        /// </description></item>
-        /// <item><description><para>PDS: Drive and Photo Service</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The storage resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NAS</para>
@@ -107,14 +100,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The usage of the storage resource.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>DESKTOP: data disk space</para>
-        /// </description></item>
-        /// <item><description><para>USER_PROFILE: space for personal data of the user</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The purpose of the storage resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER_PROFILE</para>

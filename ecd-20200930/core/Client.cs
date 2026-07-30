@@ -2826,7 +2826,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a configuration group to resources.</para>
+        /// <para>Associates a configuration group with a cloud computer or resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2876,7 +2876,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a configuration group to resources.</para>
+        /// <para>Associates a configuration group with a cloud computer or resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2926,7 +2926,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a configuration group to resources.</para>
+        /// <para>Associates a configuration group with a cloud computer or resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2944,7 +2944,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a configuration group to resources.</para>
+        /// <para>Associates a configuration group with a cloud computer or resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8130,7 +8130,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a configuration group. A configuration group contains settings for scheduled tasks on cloud desktops.</para>
+        /// <para>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a cloud computer center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8192,7 +8192,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a configuration group. A configuration group contains settings for scheduled tasks on cloud desktops.</para>
+        /// <para>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a cloud computer center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8254,7 +8254,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a configuration group. A configuration group contains settings for scheduled tasks on cloud desktops.</para>
+        /// <para>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a cloud computer center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8272,7 +8272,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a configuration group. A configuration group contains settings for scheduled tasks on cloud desktops.</para>
+        /// <para>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a cloud computer center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10842,22 +10842,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a NAS file system.</para>
+        /// <para>Creates a NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</description></item>
-        /// <item><description>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</description></item>
-        /// <item><description>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase resource packages to offset the storage usage.
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.
-        /// &lt;props=&quot;intl&quot;&gt;</description></item>
-        /// <item><description>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</description></item>
-        /// <item><description>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</description></item>
-        /// <item><description>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase storage packages to offset the storage usage.
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.</description></item>
+        /// <item><description>You can create one NAS file system for each standard office network to enable file sharing among cloud computers within the office network.</description></item>
+        /// <item><description>The system performs automatic creation of a general-purpose NAS file system (with storage-optimized and compute-optimized instance storage types, offering capacities of 10 PiB and 1 PiB respectively) and generates a default mount target.</description></item>
+        /// <item><description>The NAS file system uses pay-as-you-go billing by default. You are charged based on the actual storage usage. You can also purchase resource plans to offset the storage usage.
+        /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Create shared storage NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10891,6 +10885,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["OfficeSiteId"] = request.OfficeSiteId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
+            {
+                query["ProtocolType"] = request.ProtocolType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -10920,22 +10918,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a NAS file system.</para>
+        /// <para>Creates a NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</description></item>
-        /// <item><description>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</description></item>
-        /// <item><description>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase resource packages to offset the storage usage.
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.
-        /// &lt;props=&quot;intl&quot;&gt;</description></item>
-        /// <item><description>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</description></item>
-        /// <item><description>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</description></item>
-        /// <item><description>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase storage packages to offset the storage usage.
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.</description></item>
+        /// <item><description>You can create one NAS file system for each standard office network to enable file sharing among cloud computers within the office network.</description></item>
+        /// <item><description>The system performs automatic creation of a general-purpose NAS file system (with storage-optimized and compute-optimized instance storage types, offering capacities of 10 PiB and 1 PiB respectively) and generates a default mount target.</description></item>
+        /// <item><description>The NAS file system uses pay-as-you-go billing by default. You are charged based on the actual storage usage. You can also purchase resource plans to offset the storage usage.
+        /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Create shared storage NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10969,6 +10961,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["OfficeSiteId"] = request.OfficeSiteId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
+            {
+                query["ProtocolType"] = request.ProtocolType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -10998,22 +10994,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a NAS file system.</para>
+        /// <para>Creates a NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</description></item>
-        /// <item><description>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</description></item>
-        /// <item><description>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase resource packages to offset the storage usage.
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.
-        /// &lt;props=&quot;intl&quot;&gt;</description></item>
-        /// <item><description>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</description></item>
-        /// <item><description>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</description></item>
-        /// <item><description>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase storage packages to offset the storage usage.
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.</description></item>
+        /// <item><description>You can create one NAS file system for each standard office network to enable file sharing among cloud computers within the office network.</description></item>
+        /// <item><description>The system performs automatic creation of a general-purpose NAS file system (with storage-optimized and compute-optimized instance storage types, offering capacities of 10 PiB and 1 PiB respectively) and generates a default mount target.</description></item>
+        /// <item><description>The NAS file system uses pay-as-you-go billing by default. You are charged based on the actual storage usage. You can also purchase resource plans to offset the storage usage.
+        /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Create shared storage NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11032,22 +11022,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a NAS file system.</para>
+        /// <para>Creates a NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</description></item>
-        /// <item><description>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</description></item>
-        /// <item><description>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase resource packages to offset the storage usage.
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.
-        /// &lt;props=&quot;intl&quot;&gt;</description></item>
-        /// <item><description>Each standard workspace can create one NAS file system to meet the need for sharing files between cloud desktops in the workspace.</description></item>
-        /// <item><description>The system will automatically create a general-purpose NAS file system (with storage specifications of Capacity and Performance, with capacities of 10 PiB and 1 PiB respectively) and generate a default mount point.</description></item>
-        /// <item><description>The NAS file system uses pay-as-you-go by default. You need to pay for the actual storage usage. You can also purchase storage packages to offset the storage usage.
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Creating Shared Storage NAS</a>.</description></item>
+        /// <item><description>You can create one NAS file system for each standard office network to enable file sharing among cloud computers within the office network.</description></item>
+        /// <item><description>The system performs automatic creation of a general-purpose NAS file system (with storage-optimized and compute-optimized instance storage types, offering capacities of 10 PiB and 1 PiB respectively) and generates a default mount target.</description></item>
+        /// <item><description>The NAS file system uses pay-as-you-go billing by default. You are charged based on the actual storage usage. You can also purchase resource plans to offset the storage usage.
+        /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Create shared storage NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13654,15 +13638,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</para>
+        /// <para>Creates a custom cloud computer template. A cloud computer template is a collection of cloud computer configurations that reduces the configuration steps and accelerates the creation of cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following item:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</description></item>
-        /// <item><description>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn\&quot;t match the region where the template is used to create a cloud computer, those parameters will not take effect.</description></item>
+        /// <item><description>Most parameters in an instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. The validity of parameter values is verified only when you create an instance.</description></item>
+        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you use the template to create a cloud computer, these parameters do not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13795,15 +13779,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</para>
+        /// <para>Creates a custom cloud computer template. A cloud computer template is a collection of cloud computer configurations that reduces the configuration steps and accelerates the creation of cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following item:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</description></item>
-        /// <item><description>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn\&quot;t match the region where the template is used to create a cloud computer, those parameters will not take effect.</description></item>
+        /// <item><description>Most parameters in an instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. The validity of parameter values is verified only when you create an instance.</description></item>
+        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you use the template to create a cloud computer, these parameters do not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13936,15 +13920,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</para>
+        /// <para>Creates a custom cloud computer template. A cloud computer template is a collection of cloud computer configurations that reduces the configuration steps and accelerates the creation of cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following item:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</description></item>
-        /// <item><description>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn\&quot;t match the region where the template is used to create a cloud computer, those parameters will not take effect.</description></item>
+        /// <item><description>Most parameters in an instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. The validity of parameter values is verified only when you create an instance.</description></item>
+        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you use the template to create a cloud computer, these parameters do not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13963,15 +13947,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom cloud computer template. A cloud computer template (or simply &quot;template&quot;) simplifies the process of creating cloud computers by providing a predefined set of configurations. This eliminates the need to manually configure each setting, saving significant time and effort.</para>
+        /// <para>Creates a custom cloud computer template. A cloud computer template is a collection of cloud computer configurations that reduces the configuration steps and accelerates the creation of cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following item:</para>
+        /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Most parameters in templates are optional. When you create a template, Elastic Desktop Service (EDS) does not validate the existence or correctness of the parameter values you specify. The parameter values in the template are only verified when you use the template to create cloud computers.</description></item>
-        /// <item><description>For parameters that include the region attribute in the template, it\&quot;s important to note that if the specified region doesn\&quot;t match the region where the template is used to create a cloud computer, those parameters will not take effect.</description></item>
+        /// <item><description>Most parameters in an instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. The validity of parameter values is verified only when you create an instance.</description></item>
+        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you use the template to create a cloud computer, these parameters do not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13986,6 +13970,210 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device the next time they log on to a Cloud Desktop.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVirtualBridgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirtualBridgeResponse
+        /// </returns>
+        public CreateVirtualBridgeResponse CreateVirtualBridgeWithOptions(CreateVirtualBridgeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeLevel))
+            {
+                query["BridgeLevel"] = request.BridgeLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVirtualBridge",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVirtualBridgeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device the next time they log on to a Cloud Desktop.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVirtualBridgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirtualBridgeResponse
+        /// </returns>
+        public async Task<CreateVirtualBridgeResponse> CreateVirtualBridgeWithOptionsAsync(CreateVirtualBridgeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeLevel))
+            {
+                query["BridgeLevel"] = request.BridgeLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVirtualBridge",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVirtualBridgeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device the next time they log on to a Cloud Desktop.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVirtualBridgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirtualBridgeResponse
+        /// </returns>
+        public CreateVirtualBridgeResponse CreateVirtualBridge(CreateVirtualBridgeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateVirtualBridgeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device the next time they log on to a Cloud Desktop.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateVirtualBridgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirtualBridgeResponse
+        /// </returns>
+        public async Task<CreateVirtualBridgeResponse> CreateVirtualBridgeAsync(CreateVirtualBridgeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateVirtualBridgeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15562,7 +15750,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a drive.</para>
+        /// <para>Deletes a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15608,7 +15796,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a drive.</para>
+        /// <para>Deletes a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15654,7 +15842,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a drive.</para>
+        /// <para>Deletes a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15672,7 +15860,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a drive.</para>
+        /// <para>Deletes a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17806,12 +17994,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes custom cloud computer templates.</para>
+        /// <para>Deletes a custom cloud computer template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deleting a template does not affect cloud computers created from it or the associated resources.</para>
+        /// <para>After the template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17857,12 +18045,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes custom cloud computer templates.</para>
+        /// <para>Deletes a custom cloud computer template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deleting a template does not affect cloud computers created from it or the associated resources.</para>
+        /// <para>After the template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17908,12 +18096,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes custom cloud computer templates.</para>
+        /// <para>Deletes a custom cloud computer template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deleting a template does not affect cloud computers created from it or the associated resources.</para>
+        /// <para>After the template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17931,12 +18119,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes custom cloud computer templates.</para>
+        /// <para>Deletes a custom cloud computer template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deleting a template does not affect cloud computers created from it or the associated resources.</para>
+        /// <para>After the template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17950,6 +18138,154 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTemplatesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to Cloud Desktop.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVirtualBridgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirtualBridgeResponse
+        /// </returns>
+        public DeleteVirtualBridgeResponse DeleteVirtualBridgeWithOptions(DeleteVirtualBridgeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVirtualBridge",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVirtualBridgeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to Cloud Desktop.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVirtualBridgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirtualBridgeResponse
+        /// </returns>
+        public async Task<DeleteVirtualBridgeResponse> DeleteVirtualBridgeWithOptionsAsync(DeleteVirtualBridgeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVirtualBridge",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVirtualBridgeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to Cloud Desktop.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVirtualBridgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirtualBridgeResponse
+        /// </returns>
+        public DeleteVirtualBridgeResponse DeleteVirtualBridge(DeleteVirtualBridgeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteVirtualBridgeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to Cloud Desktop.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteVirtualBridgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirtualBridgeResponse
+        /// </returns>
+        public async Task<DeleteVirtualBridgeResponse> DeleteVirtualBridgeAsync(DeleteVirtualBridgeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteVirtualBridgeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18998,7 +19334,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of region-free policies.</para>
+        /// <para>Queries the details of regionless policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19072,7 +19408,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of region-free policies.</para>
+        /// <para>Queries the details of regionless policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19146,7 +19482,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of region-free policies.</para>
+        /// <para>Queries the details of regionless policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19164,7 +19500,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of region-free policies.</para>
+        /// <para>Queries the details of regionless policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20262,7 +20598,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the configuration group list information.</para>
+        /// <para>Queries the list of configuration groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20336,7 +20672,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the configuration group list information.</para>
+        /// <para>Queries the list of configuration groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20410,7 +20746,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the configuration group list information.</para>
+        /// <para>Queries the list of configuration groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20428,7 +20764,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the configuration group list information.</para>
+        /// <para>Queries the list of configuration groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21219,7 +21555,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</para>
+        /// <para>This is a centralized API operation that supports queries only from the Shanghai and Singapore sites.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21322,7 +21658,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</para>
+        /// <para>This is a centralized API operation that supports queries only from the Shanghai and Singapore sites.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21425,7 +21761,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</para>
+        /// <para>This is a centralized API operation that supports queries only from the Shanghai and Singapore sites.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21448,7 +21784,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</para>
+        /// <para>This is a centralized API operation that supports queries only from the Shanghai and Singapore sites.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23574,7 +23910,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data report export tasks.</para>
+        /// <para>Queries the list of data report export tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23640,7 +23976,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data report export tasks.</para>
+        /// <para>Queries the list of data report export tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23706,7 +24042,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data report export tasks.</para>
+        /// <para>Queries the list of data report export tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23724,7 +24060,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data report export tasks.</para>
+        /// <para>Queries the list of data report export tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24406,7 +24742,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of all recent cloud desktops and their usage duration records.</para>
+        /// <para>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24530,7 +24866,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of all recent cloud desktops and their usage duration records.</para>
+        /// <para>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24654,7 +24990,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of all recent cloud desktops and their usage duration records.</para>
+        /// <para>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24682,7 +25018,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of all recent cloud desktops and their usage duration records.</para>
+        /// <para>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24710,13 +25046,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries for batch information from the execution history of scheduled tasks and returns aggregated results.</para>
+        /// <para>Queries the batch information of scheduled task execution history and returns aggregated execution results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This API uses a centralized endpoint. You can call this API only from the China (Shanghai) or Singapore (Singapore) regions.</description></item>
+        /// <item><description>This operation uses a centralized endpoint. The access points are Shanghai or Singapore. Calls from other regions are not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24783,13 +25119,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries for batch information from the execution history of scheduled tasks and returns aggregated results.</para>
+        /// <para>Queries the batch information of scheduled task execution history and returns aggregated execution results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This API uses a centralized endpoint. You can call this API only from the China (Shanghai) or Singapore (Singapore) regions.</description></item>
+        /// <item><description>This operation uses a centralized endpoint. The access points are Shanghai or Singapore. Calls from other regions are not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24856,13 +25192,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries for batch information from the execution history of scheduled tasks and returns aggregated results.</para>
+        /// <para>Queries the batch information of scheduled task execution history and returns aggregated execution results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This API uses a centralized endpoint. You can call this API only from the China (Shanghai) or Singapore (Singapore) regions.</description></item>
+        /// <item><description>This operation uses a centralized endpoint. The access points are Shanghai or Singapore. Calls from other regions are not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24881,13 +25217,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries for batch information from the execution history of scheduled tasks and returns aggregated results.</para>
+        /// <para>Queries the batch information of scheduled task execution history and returns aggregated execution results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This API uses a centralized endpoint. You can call this API only from the China (Shanghai) or Singapore (Singapore) regions.</description></item>
+        /// <item><description>This operation uses a centralized endpoint. The access points are Shanghai or Singapore. Calls from other regions are not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24906,7 +25242,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the scheduled task execution records for EDS across all regions.</para>
+        /// <para>Queries the execution records of scheduled tasks for cloud computers across regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25000,7 +25336,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the scheduled task execution records for EDS across all regions.</para>
+        /// <para>Queries the execution records of scheduled tasks for cloud computers across regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25094,7 +25430,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the scheduled task execution records for EDS across all regions.</para>
+        /// <para>Queries the execution records of scheduled tasks for cloud computers across regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25112,7 +25448,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the scheduled task execution records for EDS across all regions.</para>
+        /// <para>Queries the execution records of scheduled tasks for cloud computers across regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26510,7 +26846,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries NAS file systems.</para>
+        /// <para>Queries NAS file system information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26572,7 +26908,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries NAS file systems.</para>
+        /// <para>Queries NAS file system information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26634,7 +26970,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries NAS file systems.</para>
+        /// <para>Queries NAS file system information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26652,7 +26988,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries NAS file systems.</para>
+        /// <para>Queries NAS file system information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26990,6 +27326,190 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries virtual bridge information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deleting an office network, ensure that the following operations are completed:</para>
+        /// <list type="bullet">
+        /// <item><description>All cloud computers in the office network are released.</description></item>
+        /// <item><description>Related data that needs to be retained is backed up.<remarks>
+        /// <para>Warning: Related resources and data cannot be recovered after deletion. Proceed with caution.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeOfficeSiteBridgeInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOfficeSiteBridgeInfoResponse
+        /// </returns>
+        public DescribeOfficeSiteBridgeInfoResponse DescribeOfficeSiteBridgeInfoWithOptions(DescribeOfficeSiteBridgeInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeOfficeSiteBridgeInfo",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeOfficeSiteBridgeInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual bridge information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deleting an office network, ensure that the following operations are completed:</para>
+        /// <list type="bullet">
+        /// <item><description>All cloud computers in the office network are released.</description></item>
+        /// <item><description>Related data that needs to be retained is backed up.<remarks>
+        /// <para>Warning: Related resources and data cannot be recovered after deletion. Proceed with caution.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeOfficeSiteBridgeInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOfficeSiteBridgeInfoResponse
+        /// </returns>
+        public async Task<DescribeOfficeSiteBridgeInfoResponse> DescribeOfficeSiteBridgeInfoWithOptionsAsync(DescribeOfficeSiteBridgeInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeOfficeSiteBridgeInfo",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeOfficeSiteBridgeInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual bridge information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deleting an office network, ensure that the following operations are completed:</para>
+        /// <list type="bullet">
+        /// <item><description>All cloud computers in the office network are released.</description></item>
+        /// <item><description>Related data that needs to be retained is backed up.<remarks>
+        /// <para>Warning: Related resources and data cannot be recovered after deletion. Proceed with caution.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeOfficeSiteBridgeInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOfficeSiteBridgeInfoResponse
+        /// </returns>
+        public DescribeOfficeSiteBridgeInfoResponse DescribeOfficeSiteBridgeInfo(DescribeOfficeSiteBridgeInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeOfficeSiteBridgeInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virtual bridge information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deleting an office network, ensure that the following operations are completed:</para>
+        /// <list type="bullet">
+        /// <item><description>All cloud computers in the office network are released.</description></item>
+        /// <item><description>Related data that needs to be retained is backed up.<remarks>
+        /// <para>Warning: Related resources and data cannot be recovered after deletion. Proceed with caution.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeOfficeSiteBridgeInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOfficeSiteBridgeInfoResponse
+        /// </returns>
+        public async Task<DescribeOfficeSiteBridgeInfoResponse> DescribeOfficeSiteBridgeInfoAsync(DescribeOfficeSiteBridgeInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeOfficeSiteBridgeInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Gets all properties of an office network, including its ID, name, status, and creation time.</para>
         /// </summary>
         /// 
@@ -27174,12 +27694,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metrics such as the online user count and the assigned user count.</para>
+        /// <para>Queries metrics such as the number of online users and the number of users with assigned desktops.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the resource types and product types of Elastic Desktop Service.</para>
+        /// <para>Make sure that you are familiar with the resource types and product types of WUYING Workspace before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27233,12 +27753,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metrics such as the online user count and the assigned user count.</para>
+        /// <para>Queries metrics such as the number of online users and the number of users with assigned desktops.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the resource types and product types of Elastic Desktop Service.</para>
+        /// <para>Make sure that you are familiar with the resource types and product types of WUYING Workspace before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27292,12 +27812,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metrics such as the online user count and the assigned user count.</para>
+        /// <para>Queries metrics such as the number of online users and the number of users with assigned desktops.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the resource types and product types of Elastic Desktop Service.</para>
+        /// <para>Make sure that you are familiar with the resource types and product types of WUYING Workspace before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27315,12 +27835,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metrics such as the online user count and the assigned user count.</para>
+        /// <para>Queries metrics such as the number of online users and the number of users with assigned desktops.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the resource types and product types of Elastic Desktop Service.</para>
+        /// <para>Make sure that you are familiar with the resource types and product types of WUYING Workspace before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29802,14 +30322,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the session statistics of a region.</para>
+        /// <para>Queries session statistics information across all regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This is a central operation and can be called only by using services in the China (Shanghai) region.</description></item>
-        /// <item><description>You can query session statistics for the past hour.</description></item>
+        /// <item><description>This is a centralized API operation that can be called only through the service in the China (Shanghai) region.</description></item>
+        /// <item><description>You can query real-time statistics for up to 1 hour.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29872,14 +30392,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the session statistics of a region.</para>
+        /// <para>Queries session statistics information across all regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This is a central operation and can be called only by using services in the China (Shanghai) region.</description></item>
-        /// <item><description>You can query session statistics for the past hour.</description></item>
+        /// <item><description>This is a centralized API operation that can be called only through the service in the China (Shanghai) region.</description></item>
+        /// <item><description>You can query real-time statistics for up to 1 hour.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29942,14 +30462,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the session statistics of a region.</para>
+        /// <para>Queries session statistics information across all regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This is a central operation and can be called only by using services in the China (Shanghai) region.</description></item>
-        /// <item><description>You can query session statistics for the past hour.</description></item>
+        /// <item><description>This is a centralized API operation that can be called only through the service in the China (Shanghai) region.</description></item>
+        /// <item><description>You can query real-time statistics for up to 1 hour.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29968,14 +30488,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the session statistics of a region.</para>
+        /// <para>Queries session statistics information across all regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This is a central operation and can be called only by using services in the China (Shanghai) region.</description></item>
-        /// <item><description>You can query session statistics for the past hour.</description></item>
+        /// <item><description>This is a centralized API operation that can be called only through the service in the China (Shanghai) region.</description></item>
+        /// <item><description>You can query real-time statistics for up to 1 hour.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30738,7 +31258,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified configuration group.</para>
+        /// <para>Queries the details of a specified configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30784,7 +31304,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified configuration group.</para>
+        /// <para>Queries the details of a specified configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30830,7 +31350,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified configuration group.</para>
+        /// <para>Queries the details of a specified configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30848,7 +31368,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details for a specified configuration group.</para>
+        /// <para>Queries the details of a specified configuration group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33822,12 +34342,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the credential that is used to connect to a cloud desktop.</para>
+        /// <para>Retrieves the connection credential for a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation will expire in 10 minutes.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33905,12 +34425,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the credential that is used to connect to a cloud desktop.</para>
+        /// <para>Retrieves the connection credential for a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation will expire in 10 minutes.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33988,12 +34508,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the credential that is used to connect to a cloud desktop.</para>
+        /// <para>Retrieves the connection credential for a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation will expire in 10 minutes.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34011,12 +34531,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the credential that is used to connect to a cloud desktop.</para>
+        /// <para>Retrieves the connection credential for a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation will expire in 10 minutes.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36322,6 +36842,178 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries a list of virtual bridges.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the Wuying terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListVirtualBridgesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirtualBridgesResponse
+        /// </returns>
+        public ListVirtualBridgesResponse ListVirtualBridgesWithOptions(ListVirtualBridgesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirtualBridges",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirtualBridgesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of virtual bridges.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the Wuying terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListVirtualBridgesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirtualBridgesResponse
+        /// </returns>
+        public async Task<ListVirtualBridgesResponse> ListVirtualBridgesWithOptionsAsync(ListVirtualBridgesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirtualBridges",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirtualBridgesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of virtual bridges.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the Wuying terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListVirtualBridgesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirtualBridgesResponse
+        /// </returns>
+        public ListVirtualBridgesResponse ListVirtualBridges(ListVirtualBridgesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVirtualBridgesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of virtual bridges.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the Wuying terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListVirtualBridgesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirtualBridgesResponse
+        /// </returns>
+        public async Task<ListVirtualBridgesResponse> ListVirtualBridgesAsync(ListVirtualBridgesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVirtualBridgesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Locks a multi-factor authentication (MFA) device that is in the NORMAL state.</para>
         /// </summary>
         /// 
@@ -37734,7 +38426,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a disk file or folder, such as the file name.</para>
+        /// <para>Modifies the attributes of a cloud disk file or folder, such as the file name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37800,7 +38492,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a disk file or folder, such as the file name.</para>
+        /// <para>Modifies the attributes of a cloud disk file or folder, such as the file name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37866,7 +38558,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a disk file or folder, such as the file name.</para>
+        /// <para>Modifies the attributes of a cloud disk file or folder, such as the file name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37884,7 +38576,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a disk file or folder, such as the file name.</para>
+        /// <para>Modifies the attributes of a cloud disk file or folder, such as the file name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39874,7 +40566,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of a configuration group.</para>
+        /// <para>Modifies the basic information of a configuration group, including the name and description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39928,7 +40620,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of a configuration group.</para>
+        /// <para>Modifies the basic information of a configuration group, including the name and description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39982,7 +40674,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of a configuration group.</para>
+        /// <para>Modifies the basic information of a configuration group, including the name and description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40000,7 +40692,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of a configuration group.</para>
+        /// <para>Modifies the basic information of a configuration group, including the name and description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42114,14 +42806,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the performance level of a cloud desktop\&quot;s system disk or data disk.</para>
+        /// <para>Modifies the performance level of the system cloud disk or data cloud disk of a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a WUYING Workspace, you can define its specifications using a custom template. Graphics and High-frequency workspaces use Enhanced SSDs (ESSDs) by default, which lets you set the disk capacity and performance level. You can modify the performance level of the system disk or data disk as needed.</para>
+        /// <para>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office cloud computers use ESSDs by default and support setting disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</para>
         /// <remarks>
-        /// <para>Only Graphics and High-frequency WUYING Workspaces support modifying the disk performance level.</para>
+        /// <para>Only Enterprise Graphics and High Frequency Office cloud computers support changing disk performance levels.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -42188,14 +42880,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the performance level of a cloud desktop\&quot;s system disk or data disk.</para>
+        /// <para>Modifies the performance level of the system cloud disk or data cloud disk of a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a WUYING Workspace, you can define its specifications using a custom template. Graphics and High-frequency workspaces use Enhanced SSDs (ESSDs) by default, which lets you set the disk capacity and performance level. You can modify the performance level of the system disk or data disk as needed.</para>
+        /// <para>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office cloud computers use ESSDs by default and support setting disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</para>
         /// <remarks>
-        /// <para>Only Graphics and High-frequency WUYING Workspaces support modifying the disk performance level.</para>
+        /// <para>Only Enterprise Graphics and High Frequency Office cloud computers support changing disk performance levels.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -42262,14 +42954,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the performance level of a cloud desktop\&quot;s system disk or data disk.</para>
+        /// <para>Modifies the performance level of the system cloud disk or data cloud disk of a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a WUYING Workspace, you can define its specifications using a custom template. Graphics and High-frequency workspaces use Enhanced SSDs (ESSDs) by default, which lets you set the disk capacity and performance level. You can modify the performance level of the system disk or data disk as needed.</para>
+        /// <para>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office cloud computers use ESSDs by default and support setting disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</para>
         /// <remarks>
-        /// <para>Only Graphics and High-frequency WUYING Workspaces support modifying the disk performance level.</para>
+        /// <para>Only Enterprise Graphics and High Frequency Office cloud computers support changing disk performance levels.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -42288,14 +42980,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the performance level of a cloud desktop\&quot;s system disk or data disk.</para>
+        /// <para>Modifies the performance level of the system cloud disk or data cloud disk of a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a WUYING Workspace, you can define its specifications using a custom template. Graphics and High-frequency workspaces use Enhanced SSDs (ESSDs) by default, which lets you set the disk capacity and performance level. You can modify the performance level of the system disk or data disk as needed.</para>
+        /// <para>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office cloud computers use ESSDs by default and support setting disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</para>
         /// <remarks>
-        /// <para>Only Graphics and High-frequency WUYING Workspaces support modifying the disk performance level.</para>
+        /// <para>Only Enterprise Graphics and High Frequency Office cloud computers support changing disk performance levels.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -42886,12 +43578,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the mount target of a File Storage NAS (NAS) file system.</para>
+        /// <para>Modifies the mount target of a NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> operation to create a mount target.</para>
+        /// <para>When a NAS file system is created, the system automatically generates a mount target. By default, the mount target does not need to be modified. If the mount target is accidentally deleted, you need to specify a new mount target for the NAS file system of the workspace. You can call <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> to create a mount target.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42941,12 +43633,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the mount target of a File Storage NAS (NAS) file system.</para>
+        /// <para>Modifies the mount target of a NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> operation to create a mount target.</para>
+        /// <para>When a NAS file system is created, the system automatically generates a mount target. By default, the mount target does not need to be modified. If the mount target is accidentally deleted, you need to specify a new mount target for the NAS file system of the workspace. You can call <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> to create a mount target.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42996,12 +43688,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the mount target of a File Storage NAS (NAS) file system.</para>
+        /// <para>Modifies the mount target of a NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> operation to create a mount target.</para>
+        /// <para>When a NAS file system is created, the system automatically generates a mount target. By default, the mount target does not need to be modified. If the mount target is accidentally deleted, you need to specify a new mount target for the NAS file system of the workspace. You can call <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> to create a mount target.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43019,12 +43711,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the mount target of a File Storage NAS (NAS) file system.</para>
+        /// <para>Modifies the mount target of a NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a NAS file system, a mount target is automatically generated. By default, the mount target does not need to be changed. If the mount target is deleted by misoperation, you must specify a new mount target for the NAS file system in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> operation to create a mount target.</para>
+        /// <para>When a NAS file system is created, the system automatically generates a mount target. By default, the mount target does not need to be modified. If the mount target is accidentally deleted, you need to specify a new mount target for the NAS file system of the workspace. You can call <a href="https://help.aliyun.com/document_detail/62621.html">CreateMountTarget</a> to create a mount target.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43706,6 +44398,194 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyOfficeSiteAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the bridge information for behavior management.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only AD office networks in the <c>ERROR</c> or <c>REGISTERING</c> state support modifications to domain name and DNS-related parameters, including <c>DomainName</c>, <c>SubDomainName</c>, <c>DnsAddress.N</c>, and <c>SubDomainDnsAddress.N</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyOfficeSiteBridgeInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOfficeSiteBridgeInfoResponse
+        /// </returns>
+        public ModifyOfficeSiteBridgeInfoResponse ModifyOfficeSiteBridgeInfoWithOptions(ModifyOfficeSiteBridgeInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeLevel))
+            {
+                query["BridgeLevel"] = request.BridgeLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeType))
+            {
+                query["BridgeType"] = request.BridgeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableBridge))
+            {
+                query["EnableBridge"] = request.EnableBridge;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.License))
+            {
+                query["License"] = request.License;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyOfficeSiteBridgeInfo",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyOfficeSiteBridgeInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the bridge information for behavior management.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only AD office networks in the <c>ERROR</c> or <c>REGISTERING</c> state support modifications to domain name and DNS-related parameters, including <c>DomainName</c>, <c>SubDomainName</c>, <c>DnsAddress.N</c>, and <c>SubDomainDnsAddress.N</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyOfficeSiteBridgeInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOfficeSiteBridgeInfoResponse
+        /// </returns>
+        public async Task<ModifyOfficeSiteBridgeInfoResponse> ModifyOfficeSiteBridgeInfoWithOptionsAsync(ModifyOfficeSiteBridgeInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeLevel))
+            {
+                query["BridgeLevel"] = request.BridgeLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeType))
+            {
+                query["BridgeType"] = request.BridgeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableBridge))
+            {
+                query["EnableBridge"] = request.EnableBridge;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.License))
+            {
+                query["License"] = request.License;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyOfficeSiteBridgeInfo",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyOfficeSiteBridgeInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the bridge information for behavior management.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only AD office networks in the <c>ERROR</c> or <c>REGISTERING</c> state support modifications to domain name and DNS-related parameters, including <c>DomainName</c>, <c>SubDomainName</c>, <c>DnsAddress.N</c>, and <c>SubDomainDnsAddress.N</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyOfficeSiteBridgeInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOfficeSiteBridgeInfoResponse
+        /// </returns>
+        public ModifyOfficeSiteBridgeInfoResponse ModifyOfficeSiteBridgeInfo(ModifyOfficeSiteBridgeInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyOfficeSiteBridgeInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the bridge information for behavior management.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only AD office networks in the <c>ERROR</c> or <c>REGISTERING</c> state support modifications to domain name and DNS-related parameters, including <c>DomainName</c>, <c>SubDomainName</c>, <c>DnsAddress.N</c>, and <c>SubDomainDnsAddress.N</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyOfficeSiteBridgeInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyOfficeSiteBridgeInfoResponse
+        /// </returns>
+        public async Task<ModifyOfficeSiteBridgeInfoResponse> ModifyOfficeSiteBridgeInfoAsync(ModifyOfficeSiteBridgeInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyOfficeSiteBridgeInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -45342,14 +46222,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies all parameters of a custom WUYING Workspace template.</para>
+        /// <para>Modifies all parameters of a custom cloud computer template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: 
-        /// This operation updates all parameters. To ensure compatibility with the default upgrade logic, any parameter that you do not specify is set to empty.</para>
+        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in templates, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -45478,14 +46357,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies all parameters of a custom WUYING Workspace template.</para>
+        /// <para>Modifies all parameters of a custom cloud computer template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: 
-        /// This operation updates all parameters. To ensure compatibility with the default upgrade logic, any parameter that you do not specify is set to empty.</para>
+        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in templates, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -45614,14 +46492,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies all parameters of a custom WUYING Workspace template.</para>
+        /// <para>Modifies all parameters of a custom cloud computer template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: 
-        /// This operation updates all parameters. To ensure compatibility with the default upgrade logic, any parameter that you do not specify is set to empty.</para>
+        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in templates, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -45640,14 +46517,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies all parameters of a custom WUYING Workspace template.</para>
+        /// <para>Modifies all parameters of a custom cloud computer template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: 
-        /// This operation updates all parameters. To ensure compatibility with the default upgrade logic, any parameter that you do not specify is set to empty.</para>
+        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in templates, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -45666,12 +46542,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and template description.</para>
+        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
+        /// <para>This operation only modifies the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45721,12 +46597,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and template description.</para>
+        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
+        /// <para>This operation only modifies the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45776,12 +46652,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and template description.</para>
+        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
+        /// <para>This operation only modifies the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45799,12 +46675,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and template description.</para>
+        /// <para>Modifies the basic information of a custom cloud computer template, including the template name and description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to modify only the name and description of a custom cloud computer template. To change other parameters of the template, call the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</para>
+        /// <para>This operation only modifies the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45822,7 +46698,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify configuration group settings, such as those for scheduled tasks.</para>
+        /// <para>Modifies the settings of a configuration group, such as scheduled task configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45880,7 +46756,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify configuration group settings, such as those for scheduled tasks.</para>
+        /// <para>Modifies the settings of a configuration group, such as scheduled task configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45938,7 +46814,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify configuration group settings, such as those for scheduled tasks.</para>
+        /// <para>Modifies the settings of a configuration group, such as scheduled task configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45956,7 +46832,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify configuration group settings, such as those for scheduled tasks.</para>
+        /// <para>Modifies the settings of a configuration group, such as scheduled task configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46282,6 +47158,366 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Changes the specifications of a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to a cloud desktop.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVirtualBridgeLevelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVirtualBridgeLevelResponse
+        /// </returns>
+        public ModifyVirtualBridgeLevelResponse ModifyVirtualBridgeLevelWithOptions(ModifyVirtualBridgeLevelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeLevel))
+            {
+                query["BridgeLevel"] = request.BridgeLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyVirtualBridgeLevel",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyVirtualBridgeLevelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications of a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to a cloud desktop.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVirtualBridgeLevelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVirtualBridgeLevelResponse
+        /// </returns>
+        public async Task<ModifyVirtualBridgeLevelResponse> ModifyVirtualBridgeLevelWithOptionsAsync(ModifyVirtualBridgeLevelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeLevel))
+            {
+                query["BridgeLevel"] = request.BridgeLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyVirtualBridgeLevel",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyVirtualBridgeLevelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications of a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to a cloud desktop.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVirtualBridgeLevelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVirtualBridgeLevelResponse
+        /// </returns>
+        public ModifyVirtualBridgeLevelResponse ModifyVirtualBridgeLevel(ModifyVirtualBridgeLevelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyVirtualBridgeLevelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications of a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting an MFA device unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The corresponding AD user must bind a new MFA device when logging on to a cloud desktop.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVirtualBridgeLevelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVirtualBridgeLevelResponse
+        /// </returns>
+        public async Task<ModifyVirtualBridgeLevelResponse> ModifyVirtualBridgeLevelAsync(ModifyVirtualBridgeLevelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyVirtualBridgeLevelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only custom images in the active (Available) state can be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVirtualBridgeStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVirtualBridgeStatusResponse
+        /// </returns>
+        public ModifyVirtualBridgeStatusResponse ModifyVirtualBridgeStatusWithOptions(ModifyVirtualBridgeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyVirtualBridgeStatus",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyVirtualBridgeStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only custom images in the active (Available) state can be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVirtualBridgeStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVirtualBridgeStatusResponse
+        /// </returns>
+        public async Task<ModifyVirtualBridgeStatusResponse> ModifyVirtualBridgeStatusWithOptionsAsync(ModifyVirtualBridgeStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyVirtualBridgeStatus",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyVirtualBridgeStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only custom images in the active (Available) state can be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVirtualBridgeStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVirtualBridgeStatusResponse
+        /// </returns>
+        public ModifyVirtualBridgeStatusResponse ModifyVirtualBridgeStatus(ModifyVirtualBridgeStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyVirtualBridgeStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only custom images in the active (Available) state can be modified.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyVirtualBridgeStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVirtualBridgeStatusResponse
+        /// </returns>
+        public async Task<ModifyVirtualBridgeStatusResponse> ModifyVirtualBridgeStatusAsync(ModifyVirtualBridgeStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyVirtualBridgeStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Moves a file or folder in a cloud disk to a new location.</para>
         /// </summary>
         /// 
@@ -46450,16 +47686,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical daily and monthly active user counts for a specified date.</para>
+        /// <para>Queries the historical daily active user count and monthly active user count for a specified date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>AliUid</c> parameter is automatically resolved from your AccessKey pair and does not need to be specified in the request.</description></item>
-        /// <item><description>The <c>BusinessChannel</c> parameter defaults to Enterprise Edition, but you can select other business channels.</description></item>
-        /// <item><description>By default, the query returns data for the previous day (T-1). To query for a different day, use the <c>DataDate</c> parameter in YYYY-MM-DD format.</description></item>
+        /// <item><description>The <c>AliUid</c> parameter is automatically parsed from the AK/SK and does not need to be manually provided.</description></item>
+        /// <item><description><c>BusinessChannel</c> defaults to Enterprise Edition, but you can also select other business channels.</description></item>
+        /// <item><description><c>DataDate</c> supports a custom statistical date and defaults to the previous day (T-1). Ensure that the input format is &quot;YYYY-MM-DD&quot;.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46502,16 +47738,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical daily and monthly active user counts for a specified date.</para>
+        /// <para>Queries the historical daily active user count and monthly active user count for a specified date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>AliUid</c> parameter is automatically resolved from your AccessKey pair and does not need to be specified in the request.</description></item>
-        /// <item><description>The <c>BusinessChannel</c> parameter defaults to Enterprise Edition, but you can select other business channels.</description></item>
-        /// <item><description>By default, the query returns data for the previous day (T-1). To query for a different day, use the <c>DataDate</c> parameter in YYYY-MM-DD format.</description></item>
+        /// <item><description>The <c>AliUid</c> parameter is automatically parsed from the AK/SK and does not need to be manually provided.</description></item>
+        /// <item><description><c>BusinessChannel</c> defaults to Enterprise Edition, but you can also select other business channels.</description></item>
+        /// <item><description><c>DataDate</c> supports a custom statistical date and defaults to the previous day (T-1). Ensure that the input format is &quot;YYYY-MM-DD&quot;.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46554,16 +47790,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical daily and monthly active user counts for a specified date.</para>
+        /// <para>Queries the historical daily active user count and monthly active user count for a specified date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>AliUid</c> parameter is automatically resolved from your AccessKey pair and does not need to be specified in the request.</description></item>
-        /// <item><description>The <c>BusinessChannel</c> parameter defaults to Enterprise Edition, but you can select other business channels.</description></item>
-        /// <item><description>By default, the query returns data for the previous day (T-1). To query for a different day, use the <c>DataDate</c> parameter in YYYY-MM-DD format.</description></item>
+        /// <item><description>The <c>AliUid</c> parameter is automatically parsed from the AK/SK and does not need to be manually provided.</description></item>
+        /// <item><description><c>BusinessChannel</c> defaults to Enterprise Edition, but you can also select other business channels.</description></item>
+        /// <item><description><c>DataDate</c> supports a custom statistical date and defaults to the previous day (T-1). Ensure that the input format is &quot;YYYY-MM-DD&quot;.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46582,16 +47818,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical daily and monthly active user counts for a specified date.</para>
+        /// <para>Queries the historical daily active user count and monthly active user count for a specified date.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>AliUid</c> parameter is automatically resolved from your AccessKey pair and does not need to be specified in the request.</description></item>
-        /// <item><description>The <c>BusinessChannel</c> parameter defaults to Enterprise Edition, but you can select other business channels.</description></item>
-        /// <item><description>By default, the query returns data for the previous day (T-1). To query for a different day, use the <c>DataDate</c> parameter in YYYY-MM-DD format.</description></item>
+        /// <item><description>The <c>AliUid</c> parameter is automatically parsed from the AK/SK and does not need to be manually provided.</description></item>
+        /// <item><description><c>BusinessChannel</c> defaults to Enterprise Edition, but you can also select other business channels.</description></item>
+        /// <item><description><c>DataDate</c> supports a custom statistical date and defaults to the previous day (T-1). Ensure that the input format is &quot;YYYY-MM-DD&quot;.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46850,19 +48086,20 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical distribution of a specific metric over a specified time period.</para>
+        /// <para>Queries the historical distribution of a specific metric within a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API queries the value distribution for specific metrics, such as CPU usage and memory usage, within a given date range. You can define custom value ranges for more detailed statistics. The API supports both the enterprise edition and commercial edition. By default, it returns statistics for the previous day (T-1).</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation queries the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Two business channels are supported: Enterprise Edition and Commercial Edition. By default, T-1 (yesterday) data statistics are used.</para>
         /// <list type="bullet">
-        /// <item><description><b>BusinessChannel</b>: Defaults to the enterprise edition. The commercial edition is also available.</description></item>
-        /// <item><description><b>StartDate &amp; EndDate</b>: Both default to T-1 (the previous day). The date must be in the <c>YYYY-MM-DD</c> format.</description></item>
-        /// <item><description><b>MetricName</b>: The metric to query. For a list of valid metrics, see the parameter description in this topic.</description></item>
-        /// <item><description><b>Ranges</b>: Defines multiple value ranges for a more detailed analysis. For each range, you can set a minimum value, a maximum value, and whether to include these boundary values.</description></item>
+        /// <item><description><b>BusinessChannel</b>: Enterprise Edition by default. Commercial Edition is optional.</description></item>
+        /// <item><description><b>StartDate &amp; EndDate</b>: Default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</description></item>
+        /// <item><description><b>MetricName</b>: The name of the specific metric to query. Refer to the valid metric list provided in the documentation.</description></item>
+        /// <item><description><b>Ranges</b>: Allows you to define multiple custom value ranges for more granular data analytics. Each range can have a minimum value, a maximum value, and whether to include border values.</description></item>
         /// </list>
+        /// <h2>Settings</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -46916,19 +48153,20 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical distribution of a specific metric over a specified time period.</para>
+        /// <para>Queries the historical distribution of a specific metric within a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API queries the value distribution for specific metrics, such as CPU usage and memory usage, within a given date range. You can define custom value ranges for more detailed statistics. The API supports both the enterprise edition and commercial edition. By default, it returns statistics for the previous day (T-1).</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation queries the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Two business channels are supported: Enterprise Edition and Commercial Edition. By default, T-1 (yesterday) data statistics are used.</para>
         /// <list type="bullet">
-        /// <item><description><b>BusinessChannel</b>: Defaults to the enterprise edition. The commercial edition is also available.</description></item>
-        /// <item><description><b>StartDate &amp; EndDate</b>: Both default to T-1 (the previous day). The date must be in the <c>YYYY-MM-DD</c> format.</description></item>
-        /// <item><description><b>MetricName</b>: The metric to query. For a list of valid metrics, see the parameter description in this topic.</description></item>
-        /// <item><description><b>Ranges</b>: Defines multiple value ranges for a more detailed analysis. For each range, you can set a minimum value, a maximum value, and whether to include these boundary values.</description></item>
+        /// <item><description><b>BusinessChannel</b>: Enterprise Edition by default. Commercial Edition is optional.</description></item>
+        /// <item><description><b>StartDate &amp; EndDate</b>: Default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</description></item>
+        /// <item><description><b>MetricName</b>: The name of the specific metric to query. Refer to the valid metric list provided in the documentation.</description></item>
+        /// <item><description><b>Ranges</b>: Allows you to define multiple custom value ranges for more granular data analytics. Each range can have a minimum value, a maximum value, and whether to include border values.</description></item>
         /// </list>
+        /// <h2>Settings</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -46982,19 +48220,20 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical distribution of a specific metric over a specified time period.</para>
+        /// <para>Queries the historical distribution of a specific metric within a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API queries the value distribution for specific metrics, such as CPU usage and memory usage, within a given date range. You can define custom value ranges for more detailed statistics. The API supports both the enterprise edition and commercial edition. By default, it returns statistics for the previous day (T-1).</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation queries the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Two business channels are supported: Enterprise Edition and Commercial Edition. By default, T-1 (yesterday) data statistics are used.</para>
         /// <list type="bullet">
-        /// <item><description><b>BusinessChannel</b>: Defaults to the enterprise edition. The commercial edition is also available.</description></item>
-        /// <item><description><b>StartDate &amp; EndDate</b>: Both default to T-1 (the previous day). The date must be in the <c>YYYY-MM-DD</c> format.</description></item>
-        /// <item><description><b>MetricName</b>: The metric to query. For a list of valid metrics, see the parameter description in this topic.</description></item>
-        /// <item><description><b>Ranges</b>: Defines multiple value ranges for a more detailed analysis. For each range, you can set a minimum value, a maximum value, and whether to include these boundary values.</description></item>
+        /// <item><description><b>BusinessChannel</b>: Enterprise Edition by default. Commercial Edition is optional.</description></item>
+        /// <item><description><b>StartDate &amp; EndDate</b>: Default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</description></item>
+        /// <item><description><b>MetricName</b>: The name of the specific metric to query. Refer to the valid metric list provided in the documentation.</description></item>
+        /// <item><description><b>Ranges</b>: Allows you to define multiple custom value ranges for more granular data analytics. Each range can have a minimum value, a maximum value, and whether to include border values.</description></item>
         /// </list>
+        /// <h2>Settings</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -47012,19 +48251,20 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical distribution of a specific metric over a specified time period.</para>
+        /// <para>Queries the historical distribution of a specific metric within a specified time range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API queries the value distribution for specific metrics, such as CPU usage and memory usage, within a given date range. You can define custom value ranges for more detailed statistics. The API supports both the enterprise edition and commercial edition. By default, it returns statistics for the previous day (T-1).</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation queries the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Two business channels are supported: Enterprise Edition and Commercial Edition. By default, T-1 (yesterday) data statistics are used.</para>
         /// <list type="bullet">
-        /// <item><description><b>BusinessChannel</b>: Defaults to the enterprise edition. The commercial edition is also available.</description></item>
-        /// <item><description><b>StartDate &amp; EndDate</b>: Both default to T-1 (the previous day). The date must be in the <c>YYYY-MM-DD</c> format.</description></item>
-        /// <item><description><b>MetricName</b>: The metric to query. For a list of valid metrics, see the parameter description in this topic.</description></item>
-        /// <item><description><b>Ranges</b>: Defines multiple value ranges for a more detailed analysis. For each range, you can set a minimum value, a maximum value, and whether to include these boundary values.</description></item>
+        /// <item><description><b>BusinessChannel</b>: Enterprise Edition by default. Commercial Edition is optional.</description></item>
+        /// <item><description><b>StartDate &amp; EndDate</b>: Default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</description></item>
+        /// <item><description><b>MetricName</b>: The name of the specific metric to query. Refer to the valid metric list provided in the documentation.</description></item>
+        /// <item><description><b>Ranges</b>: Allows you to define multiple custom value ranges for more granular data analytics. Each range can have a minimum value, a maximum value, and whether to include border values.</description></item>
         /// </list>
+        /// <h2>Settings</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -47042,19 +48282,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries and ranks historical usage duration by end user or desktop.</para>
+        /// <para>Queries and sorts historical usage duration by user or desktop dimension.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Date range</b>: You can query data within the last 90 days.</description></item>
-        /// <item><description><b>Pagination</b>: This operation uses the<c>NextToken</c> parameter for pagination. To retrieve the next page of results, use the <c>NextToken</c> value from the previous response.</description></item>
-        /// <item><description><b>Default and maximum limits</b>: This operation returns 5 records by default, with a maximum of 200 records per page.</description></item>
-        /// <item><description><b>Authentication</b>: This operation uses an AccessKey for authentication.</description></item>
-        /// <item><description><b>Caller account information</b>: You do not need to specify an Alibaba Cloud account ID (AliUid). The system automatically resolves it.</description></item>
-        /// <item><description><b>Billing</b>: This API operation is free of charge.</description></item>
+        /// <item><description><b>Date range</b>: Supports querying data within a maximum of 90 days.</description></item>
+        /// <item><description><b>Paged query</b>: Pagination is implemented through the <c>NextToken</c> parameter, which is obtained from the previous response.</description></item>
+        /// <item><description><b>Default and maximum limits</b>: 5 records are returned by default, with a maximum of 200.</description></item>
+        /// <item><description><b>Authentication</b>: Uses AccessKey for identity verification.</description></item>
+        /// <item><description><b>Caller account information</b>: You do not need to manually pass in AliUid. The system automatically parses it.</description></item>
+        /// <item><description><b>Billing</b>: This API call is free of charge.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47113,19 +48353,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries and ranks historical usage duration by end user or desktop.</para>
+        /// <para>Queries and sorts historical usage duration by user or desktop dimension.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Date range</b>: You can query data within the last 90 days.</description></item>
-        /// <item><description><b>Pagination</b>: This operation uses the<c>NextToken</c> parameter for pagination. To retrieve the next page of results, use the <c>NextToken</c> value from the previous response.</description></item>
-        /// <item><description><b>Default and maximum limits</b>: This operation returns 5 records by default, with a maximum of 200 records per page.</description></item>
-        /// <item><description><b>Authentication</b>: This operation uses an AccessKey for authentication.</description></item>
-        /// <item><description><b>Caller account information</b>: You do not need to specify an Alibaba Cloud account ID (AliUid). The system automatically resolves it.</description></item>
-        /// <item><description><b>Billing</b>: This API operation is free of charge.</description></item>
+        /// <item><description><b>Date range</b>: Supports querying data within a maximum of 90 days.</description></item>
+        /// <item><description><b>Paged query</b>: Pagination is implemented through the <c>NextToken</c> parameter, which is obtained from the previous response.</description></item>
+        /// <item><description><b>Default and maximum limits</b>: 5 records are returned by default, with a maximum of 200.</description></item>
+        /// <item><description><b>Authentication</b>: Uses AccessKey for identity verification.</description></item>
+        /// <item><description><b>Caller account information</b>: You do not need to manually pass in AliUid. The system automatically parses it.</description></item>
+        /// <item><description><b>Billing</b>: This API call is free of charge.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47184,19 +48424,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries and ranks historical usage duration by end user or desktop.</para>
+        /// <para>Queries and sorts historical usage duration by user or desktop dimension.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Date range</b>: You can query data within the last 90 days.</description></item>
-        /// <item><description><b>Pagination</b>: This operation uses the<c>NextToken</c> parameter for pagination. To retrieve the next page of results, use the <c>NextToken</c> value from the previous response.</description></item>
-        /// <item><description><b>Default and maximum limits</b>: This operation returns 5 records by default, with a maximum of 200 records per page.</description></item>
-        /// <item><description><b>Authentication</b>: This operation uses an AccessKey for authentication.</description></item>
-        /// <item><description><b>Caller account information</b>: You do not need to specify an Alibaba Cloud account ID (AliUid). The system automatically resolves it.</description></item>
-        /// <item><description><b>Billing</b>: This API operation is free of charge.</description></item>
+        /// <item><description><b>Date range</b>: Supports querying data within a maximum of 90 days.</description></item>
+        /// <item><description><b>Paged query</b>: Pagination is implemented through the <c>NextToken</c> parameter, which is obtained from the previous response.</description></item>
+        /// <item><description><b>Default and maximum limits</b>: 5 records are returned by default, with a maximum of 200.</description></item>
+        /// <item><description><b>Authentication</b>: Uses AccessKey for identity verification.</description></item>
+        /// <item><description><b>Caller account information</b>: You do not need to manually pass in AliUid. The system automatically parses it.</description></item>
+        /// <item><description><b>Billing</b>: This API call is free of charge.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47215,19 +48455,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries and ranks historical usage duration by end user or desktop.</para>
+        /// <para>Queries and sorts historical usage duration by user or desktop dimension.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Date range</b>: You can query data within the last 90 days.</description></item>
-        /// <item><description><b>Pagination</b>: This operation uses the<c>NextToken</c> parameter for pagination. To retrieve the next page of results, use the <c>NextToken</c> value from the previous response.</description></item>
-        /// <item><description><b>Default and maximum limits</b>: This operation returns 5 records by default, with a maximum of 200 records per page.</description></item>
-        /// <item><description><b>Authentication</b>: This operation uses an AccessKey for authentication.</description></item>
-        /// <item><description><b>Caller account information</b>: You do not need to specify an Alibaba Cloud account ID (AliUid). The system automatically resolves it.</description></item>
-        /// <item><description><b>Billing</b>: This API operation is free of charge.</description></item>
+        /// <item><description><b>Date range</b>: Supports querying data within a maximum of 90 days.</description></item>
+        /// <item><description><b>Paged query</b>: Pagination is implemented through the <c>NextToken</c> parameter, which is obtained from the previous response.</description></item>
+        /// <item><description><b>Default and maximum limits</b>: 5 records are returned by default, with a maximum of 200.</description></item>
+        /// <item><description><b>Authentication</b>: Uses AccessKey for identity verification.</description></item>
+        /// <item><description><b>Caller account information</b>: You do not need to manually pass in AliUid. The system automatically parses it.</description></item>
+        /// <item><description><b>Billing</b>: This API call is free of charge.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48910,6 +50150,202 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Renews a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RenewVirtualBridgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewVirtualBridgeResponse
+        /// </returns>
+        public RenewVirtualBridgeResponse RenewVirtualBridgeWithOptions(RenewVirtualBridgeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenewVirtualBridge",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenewVirtualBridgeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RenewVirtualBridgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewVirtualBridgeResponse
+        /// </returns>
+        public async Task<RenewVirtualBridgeResponse> RenewVirtualBridgeWithOptionsAsync(RenewVirtualBridgeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeId))
+            {
+                query["BridgeId"] = request.BridgeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenewVirtualBridge",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenewVirtualBridgeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RenewVirtualBridgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewVirtualBridgeResponse
+        /// </returns>
+        public RenewVirtualBridgeResponse RenewVirtualBridge(RenewVirtualBridgeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RenewVirtualBridgeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a virtual bridge.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RenewVirtualBridgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewVirtualBridgeResponse
+        /// </returns>
+        public async Task<RenewVirtualBridgeResponse> RenewVirtualBridgeAsync(RenewVirtualBridgeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RenewVirtualBridgeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Resets cloud desktops in a shared cloud desktop group.</para>
         /// </summary>
         /// 
@@ -49122,12 +50558,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the mount target of a File Storage NAS (NAS) file system.</para>
+        /// <para>Resets the mount point of a NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.</para>
+        /// <para>When a NAS file system is created, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49173,12 +50609,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the mount target of a File Storage NAS (NAS) file system.</para>
+        /// <para>Resets the mount point of a NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.</para>
+        /// <para>When a NAS file system is created, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49224,12 +50660,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the mount target of a File Storage NAS (NAS) file system.</para>
+        /// <para>Resets the mount point of a NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.</para>
+        /// <para>When a NAS file system is created, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49247,12 +50683,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the mount target of a File Storage NAS (NAS) file system.</para>
+        /// <para>Resets the mount point of a NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a NAS file system, a mount target is automatically generated. By default, you do not need to modify the mount target of the NAS file system. If the mount target is disabled, you need to reset the mount target of the NAS file system.</para>
+        /// <para>When a NAS file system is created, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -49938,7 +51374,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures an auto scaling policy for a multi-session cloud computer. Elastic Desktop Service allows multiple end users to share a cloud computer in a multi-session cloud computer pool. This helps save costs.</para>
+        /// <para>Sets an automatic scaling policy for multi-session cloud computers. Multi-session cloud computers allow multiple users to connect to the same cloud computer simultaneously, which reduces costs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49988,7 +51424,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures an auto scaling policy for a multi-session cloud computer. Elastic Desktop Service allows multiple end users to share a cloud computer in a multi-session cloud computer pool. This helps save costs.</para>
+        /// <para>Sets an automatic scaling policy for multi-session cloud computers. Multi-session cloud computers allow multiple users to connect to the same cloud computer simultaneously, which reduces costs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50038,7 +51474,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures an auto scaling policy for a multi-session cloud computer. Elastic Desktop Service allows multiple end users to share a cloud computer in a multi-session cloud computer pool. This helps save costs.</para>
+        /// <para>Sets an automatic scaling policy for multi-session cloud computers. Multi-session cloud computers allow multiple users to connect to the same cloud computer simultaneously, which reduces costs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50056,7 +51492,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures an auto scaling policy for a multi-session cloud computer. Elastic Desktop Service allows multiple end users to share a cloud computer in a multi-session cloud computer pool. This helps save costs.</para>
+        /// <para>Sets an automatic scaling policy for multi-session cloud computers. Multi-session cloud computers allow multiple users to connect to the same cloud computer simultaneously, which reduces costs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51794,7 +53230,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the transmission and approval result for a submitted file.</para>
+        /// <para>Submits the approval result for a file transfer task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51848,7 +53284,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the transmission and approval result for a submitted file.</para>
+        /// <para>Submits the approval result for a file transfer task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51902,7 +53338,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the transmission and approval result for a submitted file.</para>
+        /// <para>Submits the approval result for a file transfer task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51920,7 +53356,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the transmission and approval result for a submitted file.</para>
+        /// <para>Submits the approval result for a file transfer task.</para>
         /// </summary>
         /// 
         /// <param name="request">

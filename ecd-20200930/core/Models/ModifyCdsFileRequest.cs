@@ -10,25 +10,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyCdsFileRequest : TeaModel {
         /// <summary>
-        /// <para>The enterprise drive ID.</para>
+        /// <para>The enterprise cloud disk ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou+cds-64326*****</para>
+        /// <para>cn-hangzhou+cds-643267****</para>
         /// </summary>
         [NameInMap("CdsId")]
         [Validation(Required=false)]
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The processing policy when a file with the same name appears.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>refuse: If you want to create a file that uses the same name as an existing file in the cloud, the system denies your request and returns the details of the existing file.</description></item>
-        /// <item><description>auto_rename: automatically renames a file if the file has the same name as an existing file in the cloud. By default, the current point in time is appended to the end of the original file name. Example: xxx20240102_150405.</description></item>
-        /// <item><description>ignore: allows the file to be with the same name.</description></item>
-        /// <item><description>over_write: After you create a file that uses the same name as an existing file in the cloud, the new file overwrites the existing file.</description></item>
-        /// </list>
+        /// <para>The conflict resolution policy when a file with the same name exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ignore</para>
@@ -38,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ConflictPolicy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who uses the network disk.</para>
+        /// <para>The ID of the user who uses the cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user01</para>
@@ -48,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</para>
+        /// <para>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,18 +52,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The name of the file.</para>
+        /// <para>The file name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test.txt</para>
+        /// <para>NewFileName.txt</para>
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team space.</para>
+        /// <para>The team space ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-i1ruuudp92qpj****</para>
@@ -80,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

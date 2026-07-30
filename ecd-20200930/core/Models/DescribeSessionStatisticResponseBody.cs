@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The statistics.</para>
+        /// <para>The statistics information.</para>
         /// </summary>
         [NameInMap("Statistic")]
         [Validation(Required=false)]
         public List<DescribeSessionStatisticResponseBodyStatistic> Statistic { get; set; }
         public class DescribeSessionStatisticResponseBodyStatistic : TeaModel {
             /// <summary>
-            /// <para>The total number of sessions in the time range.</para>
+            /// <para>The total number of sessions within the interval.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The total number of sessions returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

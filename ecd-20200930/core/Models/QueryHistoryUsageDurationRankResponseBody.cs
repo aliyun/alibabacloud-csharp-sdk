@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class QueryHistoryUsageDurationRankResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. If this parameter is not returned, there are no more results.</para>
+        /// <para>The paging token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAWvmfbFWy0uSlxZ6pIAKAnuwt1ezsRqxI6hPibm27fMH</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of matching entries.</para>
+        /// <para>The total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94</para>
@@ -40,14 +40,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of usage duration metrics.</para>
+        /// <para>The list of user usage duration metrics.</para>
         /// </summary>
         [NameInMap("UsageDurationList")]
         [Validation(Required=false)]
         public List<QueryHistoryUsageDurationRankResponseBodyUsageDurationList> UsageDurationList { get; set; }
         public class QueryHistoryUsageDurationRankResponseBodyUsageDurationList : TeaModel {
             /// <summary>
-            /// <para>The <b>charge type</b>. Valid values: <c>POST_PAID</c> (post-paid), <c>PRE_PAID</c> (pre-paid), <c>MONTH_PACKAGE</c> (monthly subscription), and <c>DURATION</c> (duration package).</para>
+            /// <para>The billing type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>POST_PAID: pay-as-you-go.</description></item>
+            /// <item><description>PRE_PAID: subscription.</description></item>
+            /// <item><description>MONTH_PACKAGE: monthly package.</description></item>
+            /// <item><description>DURATION: duration-based package.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
@@ -57,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para><b>The ID of the cloud desktop.</b></para>
+            /// <para>The cloud desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-8cndajrdrd424sb99</para>
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para><b>The name of the cloud desktop.</b></para>
+            /// <para>The cloud desktop name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestName</para>
@@ -77,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para><b>The end user ID.</b></para>
+            /// <para>The end user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>endUserId</para>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The <b>usage duration</b>, in seconds. Note: This is a <c>Long</c> value. Ensure your client can handle the precision.</para>
+            /// <para>The usage duration, in seconds. This value is of the Long type. Handle precision conversion on the frontend.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20000</para>

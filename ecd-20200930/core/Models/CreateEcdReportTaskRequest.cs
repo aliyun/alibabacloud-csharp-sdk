@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <item><description>IncludeAssignedUser: specifies whether users are assigned.</description></item>
             /// <item><description>ResourceGroupId: the resource group ID.</description></item>
             /// <item><description>PolicyId: the policy ID.</description></item>
-            /// <item><description>Tag:{Tag Key}: the cloud computer tag. To query by multiple tags, pass in multiple Filter objects.</description></item>
+            /// <item><description>Tag:{Tag key}: the cloud computer tag. To query by multiple tags, pass in multiple Filter objects.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateNASFileSystemRequest : TeaModel {
         /// <summary>
-        /// <para>Description of the NAS file system.</para>
+        /// <para>The description of the NAS file system.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Whether the file system is encrypted. Uses KMS service-managed keys to encrypt the file system\&quot;s on-disk data. No decryption is required when reading and writing encrypted data.</para>
+        /// <para>Specifies whether the file system uses a KMS-managed key to encrypt data stored on the file system. Encrypted data does not need to be decrypted during read and write operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,16 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EncryptType { get; set; }
 
         /// <summary>
-        /// <para>Name of the NAS file system.
-        /// The file name must follow these rules:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Length: 2 to 128 English or Chinese characters.</para>
-        /// </description></item>
-        /// <item><description><para>Must start with an uppercase or lowercase letter or a Chinese character, cannot start with http\:// or https\://.</para>
-        /// </description></item>
-        /// <item><description><para>Can include numbers, underscores (_), or hyphens (-).</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The NAS file system name. The name must meet the following requirements: The name must be 2 to 128 characters in length and can contain letters and Chinese characters. The name must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, underscores (_), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testNAS</para>
@@ -49,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Workspace ID.</para>
+        /// <para>The office network ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,8 +50,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
+        [NameInMap("ProtocolType")]
+        [Validation(Required=false)]
+        public string ProtocolType { get; set; }
+
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Storage specification type of the NAS file system.</para>
+        /// <para>The storage type of the NAS file system.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Capacity</para>

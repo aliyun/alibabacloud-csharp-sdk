@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetConnectionTicketRequest : TeaModel {
         /// <summary>
-        /// <para>The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started. Parameter description in the command:</para>
+        /// <para>Specifies a custom user-mode application that is automatically launched after the credential is obtained.</para>
         /// <list type="bullet">
-        /// <item><description><para>appPath: the path of the application startup file. Example: <c>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</c>. Use double slashes (\) as the delimiter. Type of the parameter value: string.</para>
-        /// </description></item>
-        /// <item><description><para>appParameter: the startup arguments of the application. Example: <c>&quot;meetingid 000 meetingname aaa&quot;</c>. Separate multiple arguments with spaces. Type of the parameter value: string.</para>
-        /// </description></item>
+        /// <item><description>appPath: String. The path of the application startup file. Example: <c>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</c>. Use double backslashes (\\) as path separators.</description></item>
+        /// <item><description>appParameter: String. The application startup parameters. Example: <c>&quot;meetingid 000 meetingname aaa&quot;</c>. Separate parameters with spaces.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CommandContent { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer for which you want to generate a connection credential. This parameter is required.</para>
+        /// <para>The ID of the cloud computer for which you want to generate a connection credential. This parameter is required to generate the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -50,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user of the cloud computer. The end user must be the current end user of the cloud computer.</para>
+        /// <para>The username of the authorized user of the cloud computer. You must specify an existing authorized user of the cloud computer to generate the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -64,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password of the current end user of the cloud computer.</para>
+        /// <para>The password of the authorized user of the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ab123456</para>
@@ -74,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click <b>About</b> on the client logon page to view the identifier of the client.</para>
+        /// <para>The unique identifier of the client. If you use the Apsara Uni-manager client, you can view this parameter in the <b>About</b> dialog box on the client logon page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28c80e90-f71e-4c23-93d6-1225329cf949</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the region. Set the value to <c>cn-shanghai</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-shanghai</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

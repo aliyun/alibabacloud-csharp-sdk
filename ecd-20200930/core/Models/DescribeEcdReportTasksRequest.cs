@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Maximum value: 200.</para>
+        /// <para>The number of entries per page. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20。</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The sub-type of the report export task.</para>
+        /// <para>The subtype of the report task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESKTOP</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SubType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the report export task.</para>
+        /// <para>The report task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ret-sfkdsjfi*****</para>
@@ -61,11 +61,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The type of the report.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>RESOURCE_REPORT</description></item>
-        /// </list>
+        /// <para>The report type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RESOURCE_REPORT</para>

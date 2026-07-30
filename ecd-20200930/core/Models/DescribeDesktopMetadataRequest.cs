@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not yet available for use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,6 +99,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The private IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>192.168.1.1</para>
+        /// </summary>
         [NameInMap("NetworkInterfaceIp")]
         [Validation(Required=false)]
         public string NetworkInterfaceIp { get; set; }

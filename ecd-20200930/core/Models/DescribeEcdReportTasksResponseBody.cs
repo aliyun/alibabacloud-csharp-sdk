@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeEcdReportTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The report export tasks.</para>
+        /// <para>The list of report tasks.</para>
         /// </summary>
         [NameInMap("ExportTaskList")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The error code returned.</para>
+            /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-14T07:46:49.000+00:00</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was last modified.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-14T07:46:49.000+00:00</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public float? Progress { get; set; }
 
             /// <summary>
-            /// <para>The name of the report file.</para>
+            /// <para>The report file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestFileName</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ReportFileName { get; set; }
 
             /// <summary>
-            /// <para>The task status.</para>
+            /// <para>The report task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -94,11 +94,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The sub-type of the report export task.</para>
-            /// <para>Valid value:</para>
-            /// <list type="bullet">
-            /// <item><description>DESKTOP: cloud computer</description></item>
-            /// </list>
+            /// <para>The subtype of the report task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DESKTOP</para>
@@ -108,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SubType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the report export task.</para>
+            /// <para>The report task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ret-asdfkjg*****</para>
@@ -118,11 +114,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The type of the report.</para>
-            /// <para>Valid value:</para>
-            /// <list type="bullet">
-            /// <item><description>RESOURCE_REPORT</description></item>
-            /// </list>
+            /// <para>The report type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RESOURCE_REPORT</para>

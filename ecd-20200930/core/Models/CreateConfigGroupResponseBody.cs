@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateConfigGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Configuration group ID.</para>
+        /// <para>The configuration group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccg-0ctwi5zbswtql****</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>Result message.</para>
+        /// <para>The creation result.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE9472BC-0B5D-5458-85CD-C52BDD******</para>

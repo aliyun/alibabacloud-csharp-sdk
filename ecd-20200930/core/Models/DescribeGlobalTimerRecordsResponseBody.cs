@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeGlobalTimerRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</para>
+        /// <para>The token for the next query. If NextToken is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6mnFXZiT7NdvGNgkInJ****</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The result information.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<DescribeGlobalTimerRecordsResponseBodyResults> Results { get; set; }
         public class DescribeGlobalTimerRecordsResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The type of action performed.</para>
+            /// <para>The type of action that was performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>REBOOT</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BatchId { get; set; }
 
             /// <summary>
-            /// <para>The recorded information during the execution of the scheduled task.</para>
+            /// <para>The record information during the execution of the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The cloud desktop ID.</para>
+            /// <para>The cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-0c951fy9arnk9****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The cloud desktop name.</para>
+            /// <para>The cloud computer name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DesktopName</para>
@@ -107,6 +107,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopName { get; set; }
 
             /// <summary>
+            /// <para>The display result name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SKIPPED</para>
             /// </summary>
@@ -143,6 +145,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceParentId { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether the task can be retried.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -151,7 +155,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? Retryable { get; set; }
 
             /// <summary>
-            /// <para>The scheduled task group ID.</para>
+            /// <para>The ID of the scheduled task group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ccg-xxxx</para>
@@ -161,6 +165,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string TimerGroupId { get; set; }
 
             /// <summary>
+            /// <para>The timer record ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>t-xxx</para>
             /// </summary>

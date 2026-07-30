@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateDriveResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The value 200 indicates that the request was successful.</para>
+        /// <para>The response code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public CreateDriveResponseBodyDrive Drive { get; set; }
         public class CreateDriveResponseBodyDrive : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1202****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AliUid { get; set; }
 
             /// <summary>
-            /// <para>The description of the storage resource.</para>
+            /// <para>The storage resource description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the storage resource.</para>
+            /// <para>The storage resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dom-aaaa****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DomainId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user-level storage resource.</para>
+            /// <para>The user-level storage resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dri-aaaa****</para>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DriveId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the external user-level storage resource.</para>
+            /// <para>The external user-level storage resource ID.</para>
             /// <remarks>
-            /// <para>A value is returned for this parameter only if ResourceType is set to PDS.</para>
+            /// <para>This parameter is returned only when the storage resource type is PDS.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ExternalDriveId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the external user.</para>
+            /// <para>The external user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:user01@cn-hangzhou.120">user01@cn-hangzhou.120</a>****</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ExternalUserId { get; set; }
 
             /// <summary>
-            /// <para>The time when the storage resource was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-02T08:42:26.000+00:00</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the storage resource was last modified.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-07T02:46:04.000+00:00</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID.</para>
+            /// <para>ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the storage resource.</para>
+            /// <para>The storage resource name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test****</para>
@@ -145,21 +145,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The status of the user-level storage resource.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>INIT: initializing</para>
-            /// </description></item>
-            /// <item><description><para>MAINTAIN: maintaining</para>
-            /// </description></item>
-            /// <item><description><para>DELETING</para>
-            /// </description></item>
-            /// <item><description><para>INVALID</para>
-            /// </description></item>
-            /// <item><description><para>NORMAL</para>
-            /// </description></item>
-            /// <item><description><para>FAIL: failed</para>
-            /// </description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -169,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The total amount of the user-level storage resource capacity.</para>
+            /// <para>The total capacity of the user-level storage resource.</para>
             /// <remarks>
             /// <para>Unit: bytes.</para>
             /// </remarks>
@@ -182,14 +167,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? TotalSize { get; set; }
 
             /// <summary>
-            /// <para>The usage of the storage resource.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>DESKTOP: data disk space</para>
-            /// </description></item>
-            /// <item><description><para>USER_PROFILE: space for personal data of the user</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The purpose of the storage resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USER_PROFILE</para>
@@ -199,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The amount of user-level storage resource capacity used.</para>
+            /// <para>The used capacity of the user-level storage resource.</para>
             /// <remarks>
             /// <para>Unit: bytes.</para>
             /// </remarks>
@@ -234,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B7AA****</para>

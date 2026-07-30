@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDrivesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the storage resources.</para>
+        /// <para>The list of storage resource IDs.</para>
         /// </summary>
         [NameInMap("DomainIds")]
         [Validation(Required=false)]
         public List<string> DomainIds { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <list type="bullet">
         /// <item><description>Maximum value: 500.</description></item>
         /// <item><description>Default value: 20.</description></item>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that there are no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAA****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -51,12 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the storage resource.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>NAS: NAS storage</description></item>
-        /// <item><description>PDS: PDS storage</description></item>
-        /// </list>
+        /// <para>The storage resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NAS</para>

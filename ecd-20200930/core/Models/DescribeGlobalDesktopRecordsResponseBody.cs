@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The specific operating system version.</para>
+            /// <para>The specific operating system model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Windows 10</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>The protocol type. Valid values:</para>
+            /// <para>The protocol type.</para>
             /// <list type="bullet">
             /// <item><description>HDX</description></item>
             /// <item><description>ASP</description></item>

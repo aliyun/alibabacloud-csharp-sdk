@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("ClientType")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12OERSLDO7M3****</para>
+        /// <para>111810122200F0C24CF7F1BF-<em>05AY</em>***</para>
         /// </summary>
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>alice</para>
+        /// <para>moli</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]

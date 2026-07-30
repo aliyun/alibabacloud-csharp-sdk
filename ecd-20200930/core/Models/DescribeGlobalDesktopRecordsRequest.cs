@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop IDs. You can specify 1 to 100 IDs.</para>
+        /// <para>The cloud desktop ID. You can specify 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopStatusList { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop type. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported cloud desktop type IDs.</para>
+        /// <para>The cloud desktop specification. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported specification IDs for cloud desktops.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eds.enterprise_office.2c4g</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The sort field. If not specified, results are sorted by creation time in descending order. Valid values:</para>
+        /// <para>The sort field. If this parameter is not specified, results are sorted by creation time in descending order. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>uptime: sorts by cloud desktop uptime.</description></item>
         /// </list>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number for a paged query.<br>Default value: 1.</para>
+        /// <para>The page number of the current page in a paged query. Paging starts from page 1.<br>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Valid values:</para>
+        /// <para>The region ID.</para>
         /// <list type="bullet">
         /// <item><description>Shanghai</description></item>
         /// <item><description>Singapore</description></item>

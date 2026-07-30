@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopType { get; set; }
 
             /// <summary>
-            /// <para>The time when the cloud desktop expires. This value is returned only for cloud desktops whose billable methods is subscription.</para>
+            /// <para>The time when the cloud desktop expires. This value is returned only for cloud desktops that use the subscription billable method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-31T15:59Z</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The local name of the region where the cloud desktop resides.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>China (Shanghai)</para>
+            /// <para>华东2（上海）</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The start time of the cloud desktop.</para>
+            /// <para>The time when the cloud desktop was started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-06T08:31Z</para>

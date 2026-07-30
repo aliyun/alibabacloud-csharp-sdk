@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeGlobalTimerRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The batch ID for a scheduled task execution.</para>
+        /// <para>The batch ID of the scheduled task execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccg-****</para>
@@ -20,13 +20,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BatchId { get; set; }
 
         /// <summary>
-        /// <para>A list of cloud desktop IDs.</para>
+        /// <para>The list of cloud computer IDs.</para>
         /// </summary>
         [NameInMap("DesktopIds")]
         [Validation(Required=false)]
         public List<string> DesktopIds { get; set; }
 
         /// <summary>
+        /// <para>The display result name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FAILED</para>
         /// </summary>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DisplayResultName { get; set; }
 
         /// <summary>
-        /// <para>The scheduled task group ID.</para>
+        /// <para>The ID of the scheduled task group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ccg-0cvfvf6u1enx1****</para>
@@ -45,9 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Maximum value: 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the next query.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to list the regions available in Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Wuying Workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> ResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by execution status. Valid values:</para>
+        /// <para>Filters results by execution result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCEED</para>
@@ -91,6 +91,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResultCategory { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the task can be retried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -99,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? Retryable { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to filter by. Only records for cloud desktops in this region are returned.</para>
+        /// <para>The region ID used to filter cloud computer information for a specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -109,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SearchRegionId { get; set; }
 
         /// <summary>
-        /// <para>The execution result of the scheduled task. Valid values:</para>
+        /// <para>The execution result of the scheduled task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -119,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TimerResult { get; set; }
 
         /// <summary>
-        /// <para>The types of scheduled tasks.</para>
+        /// <para>The list of scheduled tasks.</para>
         /// </summary>
         [NameInMap("TimerTypes")]
         [Validation(Required=false)]

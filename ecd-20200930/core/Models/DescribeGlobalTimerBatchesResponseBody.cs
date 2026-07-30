@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The token to use to retrieve the next page of results. This parameter is returned only when more results are available.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that there are no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>E54EB497-D7B7-5F04-B744-D8DFA7B******</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of batches.</para>
+        /// <para>The list of results.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<DescribeGlobalTimerBatchesResponseBodyResults> Results { get; set; }
         public class DescribeGlobalTimerBatchesResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The ID of the batch.</para>
+            /// <para>The batch ID of the scheduled task execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ccg-0cvfvf6u1enx1****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BatchId { get; set; }
 
             /// <summary>
-            /// <para>The time when the batch was created.</para>
+            /// <para>The time when the record was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-03T08:27:29Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The number of failed tasks.</para>
+            /// <para>The number of tasks that failed to execute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? FailedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of running tasks.</para>
+            /// <para>The number of tasks that are currently running.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? RunningCount { get; set; }
 
             /// <summary>
-            /// <para>The number of skipped tasks.</para>
+            /// <para>The number of tasks that were skipped.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? SkippedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of successfully executed tasks.</para>
+            /// <para>The total number of tasks that were executed successfully.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

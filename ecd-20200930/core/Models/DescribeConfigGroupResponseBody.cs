@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeConfigGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration groups.</para>
+        /// <para>The configuration group information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeConfigGroupResponseBodyData> Data { get; set; }
         public class DescribeConfigGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of resources that are bound to the configuration group.</para>
+            /// <para>The number of resources bound to the configuration group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? BindCount { get; set; }
 
             /// <summary>
-            /// <para>The number of bound cloud computers.</para>
+            /// <para>The quantity information of resources bound to the configuration group.</para>
             /// </summary>
             [NameInMap("BindCountMap")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the configuration group.</para>
+            /// <para>The configuration group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ccg-0cid8v30an12****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>Used for frontend display. The system scheduled task description uses a code.</para>
+            /// <para>Used for frontend display. The code for the system scheduled task description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InnerTimerDesc { get; set; }
 
             /// <summary>
-            /// <para>Used for frontend display; maps the system scheduled task name to a code.</para>
+            /// <para>Used for frontend display. The mapping code for the system scheduled task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</para>
@@ -74,21 +74,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InnerTimerName { get; set; }
 
             /// <summary>
-            /// <para>Used for system scheduled task checks. The current scheduled task does not support detach or attach operations.</para>
+            /// <para>Used by system scheduled task check. The current scheduled task does not support unbinding or binding.</para>
             /// </summary>
             [NameInMap("IsBind")]
             [Validation(Required=false)]
             public bool? IsBind { get; set; }
 
             /// <summary>
-            /// <para>Used for system scheduled task checks. The current scheduled task does not support modification.</para>
+            /// <para>Used by system scheduled task check. The current scheduled task does not support modification.</para>
             /// </summary>
             [NameInMap("IsUpdate")]
             [Validation(Required=false)]
             public bool? IsUpdate { get; set; }
 
             /// <summary>
-            /// <para>The name of the configuration group.</para>
+            /// <para>The configuration group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Scheduled task</para>
@@ -98,11 +98,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The service type of the configuration group.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CLOUD_DESKTOP: the cloud computer service.</description></item>
-            /// </list>
+            /// <para>The product type used by the configuration group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLOUD_DESKTOP</para>
@@ -112,14 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The state of the configuration group.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>AVAILABLE: The configuration group is available.</description></item>
-            /// <item><description>UNAVAILABLE: The configuration group is deleted.</description></item>
-            /// <item><description>DELETING: The configuration group is being deleted.</description></item>
-            /// <item><description>UPDATING: The configuration group is being modified.</description></item>
-            /// </list>
+            /// <para>The configuration group status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AVAILABLE</para>
@@ -129,11 +118,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the configuration group.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Timer: the scheduled task type.</description></item>
-            /// </list>
+            /// <para>The configuration group type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Timer</para>
@@ -145,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -165,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -175,7 +160,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
