@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string ExperimentType { get; set; }
 
+        [NameInMap("pipelineName")]
+        [Validation(Required=false)]
+        public string PipelineName { get; set; }
+
         [NameInMap("planId")]
         [Validation(Required=false)]
         public string PlanId { get; set; }

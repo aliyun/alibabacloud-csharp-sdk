@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Input { get; set; }
 
+        [NameInMap("pipelineName")]
+        [Validation(Required=false)]
+        public string PipelineName { get; set; }
+
         /// <summary>
         /// <para>The experiment plan name.</para>
         /// 

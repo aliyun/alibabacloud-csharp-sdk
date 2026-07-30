@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class CreateExperimentPlanRequest : TeaModel {
         /// <summary>
-        /// <para>The associated dataset ID. If this parameter is not specified, the execution phase processes in simple mode.</para>
+        /// <para>The ID of the associated dataset. If this parameter is not specified, the execution phase processes in simple mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rca_benckmark_eval</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The evaluator list. If configured, evaluation is automatically triggered when the experiment completes.</para>
+        /// <para>The list of evaluators. After configuration, evaluation can be automatically triggered when the experiment completes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_correctness&quot;, &quot;name&quot;: &quot;Builtin.agent_correctness&quot;, &quot;type&quot;: &quot;AGENT&quot;, &quot;resultName&quot;: &quot;Builtin.agent_correctness&quot;, &quot;resultType&quot;: &quot;score&quot;, &quot;variableMapping&quot;: {&quot;input&quot;: &quot;experiment_input&quot;, &quot;output&quot;: &quot;experiment_output&quot;, &quot;expected_output&quot;: &quot;dataset.ground_truth_json&quot;}, &quot;filters&quot;: {&quot;query&quot;: &quot;&quot;, &quot;sample&quot;: &quot;100&quot;}, &quot;config&quot;: {&quot;variables&quot;: [], &quot;prompt&quot;: &quot;&quot;}}, {&quot;evaluatorRef&quot;: &quot;rca-toxicity-safety-accuracy&quot;, &quot;name&quot;: &quot;rca-toxicity-safety-accuracy&quot;, &quot;type&quot;: &quot;AGENT&quot;, &quot;resultName&quot;: &quot;rca-toxicity-safety-accuracy&quot;, &quot;resultType&quot;: &quot;score&quot;, &quot;variableMapping&quot;: {&quot;input&quot;: &quot;experiment_input&quot;, &quot;output&quot;: &quot;experiment_output&quot;, &quot;question&quot;: &quot;dataset.question&quot;, &quot;expected_output&quot;: &quot;dataset.ground_truth_json&quot;, &quot;payload_json&quot;: &quot;dataset.payload_json&quot;}, &quot;filters&quot;: {&quot;query&quot;: &quot;&quot;, &quot;sample&quot;: &quot;100&quot;}, &quot;config&quot;: {&quot;variables&quot;: [], &quot;prompt&quot;: &quot;&quot;}}]</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ExperimentType { get; set; }
 
         /// <summary>
-        /// <para>The experiment configuration list. A maximum of 5 entries are supported. For offline experiments, this parameter can be omitted or set to an empty array. For online experiments, at least one entry is required.</para>
+        /// <para>The list of experiment configurations. A maximum of 5 configurations are supported. For offline experiments, this parameter can be omitted or set to an empty array. For online experiments, at least one configuration is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,14 +65,18 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>Optional.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;question&quot;: &quot;How do I request a refund?&quot;}</para>
+        /// <para>{&quot;question&quot;: &quot;How do I get a refund?&quot;}</para>
         /// </summary>
         [NameInMap("input")]
         [Validation(Required=false)]
         public Dictionary<string, object> Input { get; set; }
 
+        [NameInMap("pipelineName")]
+        [Validation(Required=false)]
+        public string PipelineName { get; set; }
+
         /// <summary>
-        /// <para>The experiment plan name. The name must be unique within the same AgentSpace under the same account.</para>
+        /// <para>The experiment plan name. The name must be unique within the same AgentSpace and account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string QuerySql { get; set; }
 
         /// <summary>
-        /// <para>The list of selected data item IDs in partial dataset mode. Use this parameter together with <c>datasetId</c>.</para>
+        /// <para>The list of selected data item IDs in partial dataset mode. This parameter must be used together with <c>datasetId</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;019ef4d5-a0f0-7114-832d-5542d771cd8c&quot;, &quot;019f1729-be9b-7769-a006-8e98023ad7ad&quot;]</para>

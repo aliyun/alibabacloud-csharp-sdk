@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
-    public class ListDatasetsRequest : TeaModel {
+    public class ListDatasetsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The dataset name.</para>
         /// 
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         [NameInMap("labels")]
         [Validation(Required=false)]
-        public Dictionary<string, List<string>> Labels { get; set; }
+        public string LabelsShrink { get; set; }
 
         /// <summary>
         /// <para>The maximum number of results to return.</para>

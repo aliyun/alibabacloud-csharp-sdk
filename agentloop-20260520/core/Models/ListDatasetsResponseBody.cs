@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             [Validation(Required=false)]
             public bool? IsFavorite { get; set; }
 
+            [NameInMap("labels")]
+            [Validation(Required=false)]
+            public Dictionary<string, List<string>> Labels { get; set; }
+
             /// <summary>
             /// <para>The region ID.</para>
             /// 

@@ -1582,7 +1582,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start execution.</para>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1626,6 +1626,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["input"] = request.Input;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
+            {
+                body["pipelineName"] = request.PipelineName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
             {
                 body["planName"] = request.PlanName;
@@ -1665,7 +1669,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start execution.</para>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1709,6 +1713,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["input"] = request.Input;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
+            {
+                body["pipelineName"] = request.PipelineName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
             {
                 body["planName"] = request.PlanName;
@@ -1748,7 +1756,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start execution.</para>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1772,7 +1780,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start execution.</para>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4897,12 +4905,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query an experiment plan</para>
+        /// <para>Queries an experiment plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the GetExperimentPlan operation to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</para>
+        /// <para>Calls GetExperimentPlan to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4942,12 +4950,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query an experiment plan</para>
+        /// <para>Queries an experiment plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the GetExperimentPlan operation to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</para>
+        /// <para>Calls GetExperimentPlan to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4987,12 +4995,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query an experiment plan</para>
+        /// <para>Queries an experiment plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the GetExperimentPlan operation to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</para>
+        /// <para>Calls GetExperimentPlan to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5011,12 +5019,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query an experiment plan</para>
+        /// <para>Queries an experiment plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the GetExperimentPlan operation to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</para>
+        /// <para>Calls GetExperimentPlan to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6004,7 +6012,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <para>Queries a list of datasets.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListDatasetsRequest
         /// </param>
         /// <param name="headers">
@@ -6017,13 +6025,23 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <returns>
         /// ListDatasetsResponse
         /// </returns>
-        public ListDatasetsResponse ListDatasetsWithOptions(string agentSpace, ListDatasetsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListDatasetsResponse ListDatasetsWithOptions(string agentSpace, ListDatasetsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListDatasetsShrinkRequest request = new ListDatasetsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
+            {
+                request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "labels", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
                 query["datasetName"] = request.DatasetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
+            {
+                query["labels"] = request.LabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -6058,7 +6076,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <para>Queries a list of datasets.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListDatasetsRequest
         /// </param>
         /// <param name="headers">
@@ -6071,13 +6089,23 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <returns>
         /// ListDatasetsResponse
         /// </returns>
-        public async Task<ListDatasetsResponse> ListDatasetsWithOptionsAsync(string agentSpace, ListDatasetsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListDatasetsResponse> ListDatasetsWithOptionsAsync(string agentSpace, ListDatasetsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListDatasetsShrinkRequest request = new ListDatasetsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
+            {
+                request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "labels", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetName))
             {
                 query["datasetName"] = request.DatasetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
+            {
+                query["labels"] = request.LabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -9630,6 +9658,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["input"] = request.Input;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
+            {
+                body["pipelineName"] = request.PipelineName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
             {
                 body["planName"] = request.PlanName;
@@ -9716,6 +9748,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
             {
                 body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
+            {
+                body["pipelineName"] = request.PipelineName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
             {

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The creation result. The value is <c>created</c> if the operation is successful.</para>
+        /// <para>The creation result. The value is <c>created</c> upon success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>created</para>

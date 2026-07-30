@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class GetExperimentPlanResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time, in millisecond Unix timestamp.</para>
+        /// <para>The creation time. This value is a millisecond-level UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782816000000</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>对比 checkout Agent 基线与优化版本</para>
+        /// <para>Compare the checkout Agent baseline with the optimized version.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -73,11 +73,15 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>Optional.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;question&quot;: &quot;如何退款？&quot;}</para>
+        /// <para>{&quot;question&quot;: &quot;How do I request a refund?&quot;}</para>
         /// </summary>
         [NameInMap("input")]
         [Validation(Required=false)]
         public Dictionary<string, object> Input { get; set; }
+
+        [NameInMap("pipelineName")]
+        [Validation(Required=false)]
+        public string PipelineName { get; set; }
 
         /// <summary>
         /// <para>The experiment plan ID.</para>
@@ -140,7 +144,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The update time, in millisecond Unix timestamp.</para>
+        /// <para>The update time. This value is a millisecond-level UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782816600000</para>
