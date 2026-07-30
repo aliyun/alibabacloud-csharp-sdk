@@ -29,10 +29,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The Operator installation status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>deployed: installed</description></item>
-            /// <item><description>not-deploy: not installed</description></item>
-            /// <item><description>failed: installation failed</description></item>
-            /// <item><description>unknown: unknown status.</description></item>
+            /// <item><description>deployed: Installed.</description></item>
+            /// <item><description>not-deploy: Not installed.</description></item>
+            /// <item><description>failed: Installation failed.</description></item>
+            /// <item><description>unknown: Unknown status.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

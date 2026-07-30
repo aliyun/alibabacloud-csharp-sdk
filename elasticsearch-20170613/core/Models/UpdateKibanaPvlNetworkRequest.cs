@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<string> SecurityGroups { get; set; }
 
         /// <summary>
-        /// <para>Used to ensure the idempotency of the request.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class RestartInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The restart parameter information.</para>
+        /// 
         /// <b>Example:</b>
         /// <ol>
         /// <item><description>restart nodes example:
@@ -32,7 +34,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Body { get; set; }
 
         /// <summary>
-        /// <para>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and can contain a maximum of 64 ASCII characters.</para>
+        /// <para>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>
@@ -42,7 +44,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully restart the cluster regardless of the cluster status.</para>
+        /// <para>Specifies whether to ignore the cluster status and forcibly restart the cluster.</para>
+        /// <list type="bullet">
+        /// <item><description>true: ignores the cluster status</description></item>
+        /// <item><description>false (default): does not ignore the cluster status</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the cloud managed feature for the index is disabled. Valid values:</para>
+        /// <para>Indicates whether the cloud-managed feature for the index is disabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: The feature is disabled.</para>
         /// </description></item>

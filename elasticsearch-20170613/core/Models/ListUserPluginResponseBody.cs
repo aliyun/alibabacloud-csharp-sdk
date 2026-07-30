@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListUserPluginResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response header information.</para>
+        /// <para>The response headers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;totalCount\&quot;: 1, \&quot;X-Total-Count\&quot;: 1}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public Dictionary<string, object> Headers { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5EEF8FAE-EEDD***</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return Result array</para>
+        /// <para>The result array.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListUserPluginResponseBodyResult> Result { get; set; }
         public class ListUserPluginResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>List of plugins with the same name</para>
+            /// <para>The list of plug-ins with the same name.</para>
             /// </summary>
             [NameInMap("bingoPlugins")]
             [Validation(Required=false)]
             public List<ListUserPluginResponseBodyResultBingoPlugins> BingoPlugins { get; set; }
             public class ListUserPluginResponseBodyResultBingoPlugins : TeaModel {
                 /// <summary>
-                /// <para>Plugin Description.</para>
+                /// <para>The plug-in description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The plugin***</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Elasticsearch version of the plugin.</para>
+                /// <para>The Elasticsearch version of the plug-in.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8.17.0</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string ElasticsearchVersion { get; set; }
 
                 /// <summary>
-                /// <para>Plugin UUID</para>
+                /// <para>The unique identifier of the plug-in.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CAEQaRiBgIDI2tie6hkiIGIwM2I3MjZmNjk3YzR***</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string FileVersion { get; set; }
 
                 /// <summary>
-                /// <para>Plugin Name.</para>
+                /// <para>The plug-in name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dynamic-name</para>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Plugin Source. Valid values:</para>
+                /// <para>The plug-in source. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>USER: Custom plugin  </description></item>
-                /// <item><description>SYSTEM: Preset system plugin</description></item>
+                /// <item><description>USER: custom plug-in.</description></item>
+                /// <item><description>SYSTEM: system preset plug-in.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -98,16 +98,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>Plugin Status</para>
+                /// <para>The plug-in status. Valid values: </para>
                 /// <list type="bullet">
-                /// <item><description>INSTALLED,</description></item>
-                /// <item><description>UNINSTALLED,</description></item>
-                /// <item><description>INSTALLING,</description></item>
-                /// <item><description>UNINSTALLING,</description></item>
-                /// <item><description>UPGRADING,</description></item>
-                /// <item><description>FAILED,</description></item>
-                /// <item><description>UNKNOWN,</description></item>
-                /// <item><description>UPLOADING,</description></item>
+                /// <item><description>INSTALLED</description></item>
+                /// <item><description>UNINSTALLED</description></item>
+                /// <item><description>INSTALLING</description></item>
+                /// <item><description>UNINSTALLING</description></item>
+                /// <item><description>UPGRADING</description></item>
+                /// <item><description>FAILED</description></item>
+                /// <item><description>UNKNOWN</description></item>
+                /// <item><description>UPLOADING</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string State { get; set; }
 
                 /// <summary>
-                /// <para>Plugin Version.</para>
+                /// <para>The plug-in version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8.17.0</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>Plugin Name.</para>
+            /// <para>The plug-in name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ct-test</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Plugin Source.</para>
+            /// <para>The plug-in source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USER</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>Plugin Status.</para>
+            /// <para>The plug-in status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UNINSTALLED</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>Plugin Version.</para>
+            /// <para>The plug-in version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.17.0</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListPipelineRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page for a paged query. Valid values: 1 to 200. Default value: 1.</para>
+        /// <para>The page number of the current page in a paged query. Valid values: 1 to 200. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string PipelineId { get; set; }
 
         /// <summary>
-        /// <para>The number of pipelines per page for a paged query. Valid values: 1 to 200.</para>
+        /// <para>The number of pipelines per page in a paged query. Valid values: 1 to 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

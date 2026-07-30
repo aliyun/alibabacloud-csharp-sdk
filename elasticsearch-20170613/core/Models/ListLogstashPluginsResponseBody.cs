@@ -67,15 +67,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SpecificationUrl { get; set; }
 
             /// <summary>
-            /// <para>The plugin status. Valid values:</para>
+            /// <para>Creation status of the plugin. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INSTALLED: installed</description></item>
-            /// <item><description>UNINSTALLED: not installed</description></item>
-            /// <item><description>INSTALLING: being installed</description></item>
-            /// <item><description>UNINSTALLING: being uninstalled</description></item>
-            /// <item><description>UPGRADING: being upgraded</description></item>
-            /// <item><description>FAILED: installation failed</description></item>
-            /// <item><description>UNKNOWN: the cluster is disconnected and the creation status cannot be retrieved.</description></item>
+            /// <item><description>INSTALLED: Installed.</description></item>
+            /// <item><description>UNINSTALLED: Not installed.</description></item>
+            /// <item><description>INSTALLING: Being installed.</description></item>
+            /// <item><description>UNINSTALLING: Being uninstalled.</description></item>
+            /// <item><description>UPGRADING: Being upgraded.</description></item>
+            /// <item><description>FAILED: Installation failed.</description></item>
+            /// <item><description>UNKNOWN: The cluster is disconnected and creation status cannot be retrieved.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

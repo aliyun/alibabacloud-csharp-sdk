@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result. Valid values:</para>
+        /// <para>The result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The tag-resource relationships are created.</description></item>
-        /// <item><description>false: The tag-resource relationships failed to be created.</description></item>
+        /// <item><description>true: The tag-resource relationship is created.</description></item>
+        /// <item><description>false: The tag-resource relationship failed to be created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

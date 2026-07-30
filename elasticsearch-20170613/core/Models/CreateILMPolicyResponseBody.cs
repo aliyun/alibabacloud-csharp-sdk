@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the lifecycle policy that is created.</para>
+        /// <para>The name of the lifecycle policy created by the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-policy</para>

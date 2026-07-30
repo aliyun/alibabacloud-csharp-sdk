@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs to query. The value is in JSON array format and can contain up to 20 items.</para>
+        /// <para>The list of instance IDs to query. The value is in JSON array format and supports up to 20 items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;es-cn-aaa&quot;,&quot;es-cn-bbb&quot;]</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The number of entries per page in Settings for paged query and paging. This field is deprecated.</para>
+        /// <para>The number of entries per page for paged query. This is a deprecated field. Settings for paging are no longer supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The list of tags to query. The value is in JSON string format and can contain up to 20 items.</para>
+        /// <para>The list of tags to query. The value is in JSON string format and contains up to 20 items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;key&quot;:&quot;env&quot;, &quot;value&quot;:&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;, &quot;value&quot;:&quot;IT&quot;}]</para>

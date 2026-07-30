@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public bool? AdvancedDedicateMaster { get; set; }
 
             /// <summary>
-            /// <para>The deployment mode and architecture type:
-            /// exclusive: basic management and control
-            /// public: cloud-native management and control</para>
+            /// <para>The deployment mode and architecture type. Valid values:
+            /// exclusive: basic management and control.
+            /// public: cloud-native management and control.</para>
             /// 
             /// <b>Example:</b>
             /// <para>public</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ArchType { get; set; }
 
             /// <summary>
-            /// <para>The configuration of client nodes.</para>
+            /// <para>The client node configuration.</para>
             /// </summary>
             [NameInMap("clientNodeConfiguration")]
             [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The node specifications. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
+                /// <para>The node specifications. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.sn2ne.large</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// <para>The description of node specifications.</para>
+                /// <para>The node specifications description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1C 2G</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The configuration of elastic data nodes.</para>
+            /// <para>The elastic data node configuration.</para>
             /// </summary>
             [NameInMap("elasticDataNodeConfiguration")]
             [Validation(Required=false)]
@@ -206,11 +206,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? Disk { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether disk encryption is enabled for the node. Valid values:</para>
+                /// <para>Indicates whether cloud disk encryption is enabled for the node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: Disk encryption is enabled.</para>
+                /// <item><description><para>true: Enabled.</para>
                 /// </description></item>
-                /// <item><description><para>false: Disk encryption is not enabled.</para>
+                /// <item><description><para>false: Disabled.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -224,11 +224,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The storage type of the node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>cloud_ssd: standard SSD</para>
+                /// <item><description><para>cloud_ssd: standard SSD.</para>
                 /// </description></item>
-                /// <item><description><para>cloud_essd: enhanced SSD (ESSD)</para>
+                /// <item><description><para>cloud_essd: ESSD.</para>
                 /// </description></item>
-                /// <item><description><para>cloud_efficiency: ultra disk</para>
+                /// <item><description><para>cloud_efficiency: ultra disk.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The node specifications. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
+                /// <para>The node specifications. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.sn2ne.large</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// <para>The description of node specifications.</para>
+                /// <para>The node specifications description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1C 2G</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The expiration time of the instance.</para>
+            /// <para>The time when the instance expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1715826092044</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EsVersion { get; set; }
 
             /// <summary>
-            /// <para>The extended configurations of the cluster.</para>
+            /// <para>The extension parameter settings of the cluster.</para>
             /// </summary>
             [NameInMap("extendConfigs")]
             [Validation(Required=false)]
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string IsNewDeployment { get; set; }
 
             /// <summary>
-            /// <para>The configuration of Kibana nodes.</para>
+            /// <para>The Kibana node configuration.</para>
             /// </summary>
             [NameInMap("kibanaConfiguration")]
             [Validation(Required=false)]
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The node specifications. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
+                /// <para>The node specifications. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.n4.small</para>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// <para>The description of node specifications.</para>
+                /// <para>The node specifications description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1C 2G</para>
@@ -368,21 +368,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The public network access whitelist for Kibana nodes of the cluster.</para>
+            /// <para>The public access whitelist for the Kibana nodes of the cluster.</para>
             /// </summary>
             [NameInMap("kibanaIPWhitelist")]
             [Validation(Required=false)]
             public List<string> KibanaIPWhitelist { get; set; }
 
             /// <summary>
-            /// <para>The private network access whitelist for Kibana nodes of the cluster.</para>
+            /// <para>The private network access whitelist for the Kibana nodes of the cluster.</para>
             /// </summary>
             [NameInMap("kibanaPrivateIPWhitelist")]
             [Validation(Required=false)]
             public List<string> KibanaPrivateIPWhitelist { get; set; }
 
             /// <summary>
-            /// <para>The configuration of master nodes.</para>
+            /// <para>The master node configuration.</para>
             /// </summary>
             [NameInMap("masterConfiguration")]
             [Validation(Required=false)]
@@ -419,7 +419,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The node specifications. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
+                /// <para>The node specifications. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.sn2ne.large</para>
@@ -429,7 +429,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// <para>The description of node specifications.</para>
+                /// <para>The node specifications description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1C 2G</para>
@@ -468,7 +468,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The zone where the instance is deployed.</para>
+                /// <para>The zone in which the instance resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-e</para>
@@ -488,7 +488,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VswitchId { get; set; }
 
                 /// <summary>
-                /// <para>The whitelist group settings for the public and private networks of the cluster.</para>
+                /// <para>The whitelist group settings for public and private network access to the cluster.</para>
                 /// </summary>
                 [NameInMap("whiteIpGroupList")]
                 [Validation(Required=false)]
@@ -505,7 +505,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string GroupName { get; set; }
 
                     /// <summary>
-                    /// <para>The IP address whitelist.</para>
+                    /// <para>The network whitelist.</para>
                     /// </summary>
                     [NameInMap("ips")]
                     [Validation(Required=false)]
@@ -536,7 +536,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? NodeAmount { get; set; }
 
             /// <summary>
-            /// <para>The configuration of data nodes.</para>
+            /// <para>The data node configuration.</para>
             /// </summary>
             [NameInMap("nodeSpec")]
             [Validation(Required=false)]
@@ -553,10 +553,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? Disk { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether disk encryption is used. Valid values:</para>
+                /// <para>Indicates whether disk encryption is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Disk encryption is used.</description></item>
-                /// <item><description>false: Disk encryption is not used.</description></item>
+                /// <item><description>true: Enabled.</description></item>
+                /// <item><description>false: Disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -569,9 +569,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The storage type of the node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>cloud_ssd: standard SSD</para>
+                /// <item><description><para>cloud_ssd: standard SSD.</para>
                 /// </description></item>
-                /// <item><description><para>cloud_efficiency: ultra disk</para>
+                /// <item><description><para>cloud_efficiency: ultra disk.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -583,7 +583,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The performance level of the ESSD. This parameter is required when diskType is cloud_essd. Valid values: PL1, PL2, and PL3.</para>
+                /// <para>The performance level (PL) of the ESSD. This parameter is required when diskType is set to cloud_essd. Valid values: PL1, PL2, and PL3.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PL1</para>
@@ -593,7 +593,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>The node specifications. For more information about the specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
+                /// <para>The node specifications. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.n4.small</para>
@@ -603,7 +603,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// <para>The description of node specifications.</para>
+                /// <para>The node specifications description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1C 2G</para>
@@ -617,9 +617,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>prepaid</b>: subscription</para>
+            /// <item><description><para><b>prepaid</b>: subscription.</para>
             /// </description></item>
-            /// <item><description><para><b>postpaid</b>: pay-as-you-go</para>
+            /// <item><description><para><b>postpaid</b>: pay-as-you-go.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -633,7 +633,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The access port of the instance.</para>
             /// <remarks>
-            /// <para>Notice: When the instance is being created or the instance status is abnormal, this value may be empty or 0.</para>
+            /// <para>Notice: When the instance is being created or is in an abnormal state, this value may be empty or 0.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -644,13 +644,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The status of the pay-as-you-go service that is overlaid on a subscription instance. Valid values:</para>
+            /// <para>The status of the pay-as-you-go service that is associated with the subscription instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>active</b>: normal</para>
+            /// <item><description><para><b>active</b>: Normal.</para>
             /// </description></item>
-            /// <item><description><para><b>closed</b>: closed</para>
+            /// <item><description><para><b>closed</b>: Closed.</para>
             /// </description></item>
-            /// <item><description><para><b>indebt</b>: frozen due to overdue payment</para>
+            /// <item><description><para><b>indebt</b>: Frozen due to overdue payment.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -679,7 +679,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The public network access whitelist for the Elasticsearch cluster.</para>
+            /// <para>The public access whitelist for the Elasticsearch cluster.</para>
             /// </summary>
             [NameInMap("publicIpWhitelist")]
             [Validation(Required=false)]
@@ -696,7 +696,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance is a service VPC.</para>
+            /// <para>Indicates whether the instance is a service VPC instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -708,15 +708,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>active: normal</para>
+            /// <item><description><para>active: Normal.</para>
             /// </description></item>
-            /// <item><description><para>activating: taking effect</para>
+            /// <item><description><para>activating: Taking effect.</para>
             /// </description></item>
-            /// <item><description><para>inactive: frozen</para>
+            /// <item><description><para>inactive: Frozen.</para>
             /// </description></item>
-            /// <item><description><para>invalid: invalid. The cluster does not exist or is inaccessible. In this case, some fields in the API response may be missing, such as domain and kibanaDomain.</para>
+            /// <item><description><para>invalid: Invalid. The cluster does not exist or is inaccessible. In this case, some fields in the response may be missing, such as domain and kibanaDomain.</para>
             /// </description></item>
-            /// <item><description><para>unknown: unknown. The cluster does not exist or is inaccessible. In this case, some fields in the API response may be missing, such as domain and kibanaDomain.</para>
+            /// <item><description><para>unknown: Unknown. The cluster does not exist or is inaccessible. In this case, some fields in the response may be missing, such as domain and kibanaDomain.</para>
             /// </description></item>
             /// </list>
             /// 

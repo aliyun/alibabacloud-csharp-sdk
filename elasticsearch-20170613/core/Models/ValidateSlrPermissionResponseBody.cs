@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>Indicates whether the service-linked role has been created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The role has been created.</description></item>
-        /// <item><description>false: The role has not been created.</description></item>
+        /// <item><description>true: Created.</description></item>
+        /// <item><description>false: Not created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

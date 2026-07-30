@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GrayPublishRequest : TeaModel {
         /// <summary>
-        /// <para>Change ID</para>
+        /// <para>The change ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ea8d33aa4371c3499d0***</para>

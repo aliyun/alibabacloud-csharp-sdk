@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The status of each collector on the ECS instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>heartOk: normal heartbeat.</description></item>
-            /// <item><description>heartLost: abnormal heartbeat.</description></item>
-            /// <item><description>uninstalled: not installed.</description></item>
-            /// <item><description>failed: installation failed.</description></item>
+            /// <item><description>heartOk: Normal heartbeat.</description></item>
+            /// <item><description>heartLost: Abnormal heartbeat.</description></item>
+            /// <item><description>uninstalled: Not installed.</description></item>
+            /// <item><description>failed: Installation failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>Indicates whether Cloud Assistant is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enabled.</description></item>
-            /// <item><description>false: not enabled.</description></item>
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Not enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EcsInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The list of IP address information of the ECS instance.</para>
+            /// <para>The list of IP address information for the ECS instance.</para>
             /// </summary>
             [NameInMap("ipAddress")]
             [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Host { get; set; }
 
                 /// <summary>
-                /// <para>The type of the IP address. Valid values:</para>
+                /// <para>The IP address type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>public: public IP address.</description></item>
                 /// <item><description>private: private IP address.</description></item>
@@ -143,12 +143,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The status of the ECS instance. Valid values:</para>
+            /// <para>The ECS instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>running: running.</description></item>
-            /// <item><description>starting: starting.</description></item>
-            /// <item><description>stopping: stopping.</description></item>
-            /// <item><description>stopped: stopped.</description></item>
+            /// <item><description>running: Running.</description></item>
+            /// <item><description>starting: Starting.</description></item>
+            /// <item><description>stopping: Stopping.</description></item>
+            /// <item><description>stopped: Stopped.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

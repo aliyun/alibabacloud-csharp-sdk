@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The log level. Valid values: trace, debug, info, warn, and error. GC logs do not have a level.</para>
+            /// <para>The log level. Valid values include trace, debug, info, warn, and error. GC logs do not have a level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>info</para>

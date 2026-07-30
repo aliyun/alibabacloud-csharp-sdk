@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page Settings for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

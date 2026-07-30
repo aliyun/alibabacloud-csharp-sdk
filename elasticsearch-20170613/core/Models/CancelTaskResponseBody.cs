@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the operation. Valid values:</para>
+        /// <para>The result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The task was canceled.</description></item>
+        /// <item><description>true: The task is canceled.</description></item>
         /// <item><description>false: The task failed to be canceled.</description></item>
         /// </list>
         /// 

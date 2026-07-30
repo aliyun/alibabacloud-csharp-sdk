@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>Indicates whether the Grafana dashboard list is retrieved. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: succeeded.</description></item>
-        /// <item><description>false: failed.</description></item>
+        /// <item><description>true: The list is retrieved.</description></item>
+        /// <item><description>false: The retrieval failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

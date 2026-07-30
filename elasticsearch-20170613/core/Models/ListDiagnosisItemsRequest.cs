@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <item><description>zh: Simplified Chinese</description></item>
         /// <item><description>zt: Traditional Chinese</description></item>
         /// <item><description>es: Spanish</description></item>
-        /// <item><description>fr: French.</description></item>
+        /// <item><description>fr: French</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

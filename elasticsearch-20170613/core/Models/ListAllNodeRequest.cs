@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListAllNodeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return monitoring information for the nodes. Valid values:</para>
+        /// <para>Specifies whether to return monitoring information for nodes. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true (default): Returns monitoring information.</para>
         /// </description></item>

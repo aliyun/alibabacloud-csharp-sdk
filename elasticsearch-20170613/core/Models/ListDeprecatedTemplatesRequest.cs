@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number Settings for a paged query. Paging is used to retrieve results.</para>
+        /// <para>The page number settings for a paged query. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page Settings for a paged query. Paging is used to retrieve results.</para>
+        /// <para>The number of entries per page settings for a paged query. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

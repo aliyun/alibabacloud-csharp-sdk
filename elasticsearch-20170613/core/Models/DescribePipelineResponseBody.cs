@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned pipeline information. For more information, see <a href="https://www.elastic.co/guide/en/logstash/6.7/logstash-settings-file.html">logstash.yml</a>.</para>
+        /// <para>The pipeline information. For more information, see <a href="https://www.elastic.co/guide/en/logstash/6.7/logstash-settings-file.html">logstash.yml</a>.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <list type="bullet">
             /// <item><description>NOT_DEPLOYED: not deployed.</description></item>
             /// <item><description>RUNNING: running.</description></item>
-            /// <item><description>DELETED: deleted. This status is not displayed in the console.</description></item>
+            /// <item><description>DELETED: deleted (this status is not displayed in the console).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? QueueCheckPointWrites { get; set; }
 
             /// <summary>
-            /// <para>The total capacity of the queue, in bytes. Unit: MB.</para>
+            /// <para>The total capacity of the queue in bytes. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>

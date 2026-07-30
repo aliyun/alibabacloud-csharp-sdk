@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the deletion is successful. Valid values:</para>
+        /// <para>Indicates whether the endpoint is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The deletion is successful.</para>
+        /// <item><description><para>true: The endpoint is deleted.</para>
         /// </description></item>
-        /// <item><description><para>false: The deletion failed.</para>
+        /// <item><description><para>false: The endpoint failed to be deleted.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The endpoint status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disconnected: not connected.</para>
+            /// <item><description><para>Disconnected: disconnected.</para>
             /// </description></item>
             /// <item><description><para>Connected: connected.</para>
             /// </description></item>

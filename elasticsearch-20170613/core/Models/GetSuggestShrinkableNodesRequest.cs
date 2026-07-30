@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetSuggestShrinkableNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The expected number of removable nodes to retrieve.</para>
+        /// <para>The expected number of nodes available for scale-in to retrieve.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

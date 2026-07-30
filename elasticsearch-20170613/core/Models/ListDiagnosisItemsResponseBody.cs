@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListDiagnosisItemsResponseBodyResult> Result { get; set; }
         public class ListDiagnosisItemsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The diagnostic item description.</para>
+            /// <para>The description of the diagnostic item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>诊断集群写数据是否有堆积当集群的数据写入存在堆积时，会造成BulkReject异常，可能会导致数据丢失，且会造成系统资源消耗严重</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public bool? EsApiRequired { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic item identifier.</para>
+            /// <para>The identifier of the diagnostic item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ClusterBulkRejectDiagnostic</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The diagnostic item name.</para>
+            /// <para>The name of the diagnostic item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>索引写入BulkReject诊断</para>

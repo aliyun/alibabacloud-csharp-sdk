@@ -14,11 +14,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Body { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run to check whether zone node migration is feasible. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: performs only a validation check without executing the migration task.</description></item>
-        /// <item><description>false: executes the migration task after the validation check succeeds.</description></item>
-        /// </list>
+        /// <para>Specifies whether to perform a dry run of the zone node migration. A value of true indicates that only validation is performed without executing the migration task. A value of false indicates that the migration task is executed after validation passes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

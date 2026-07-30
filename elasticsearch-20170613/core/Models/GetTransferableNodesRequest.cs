@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The type of node for data migration. <b>WORKER</b> indicates a hot node. <b>WORKER_WARM</b> indicates a warm node.</para>
+        /// <para>The type of nodes for data migration. <b>WORKER</b> indicates hot nodes. <b>WORKER_WARM</b> indicates warm nodes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

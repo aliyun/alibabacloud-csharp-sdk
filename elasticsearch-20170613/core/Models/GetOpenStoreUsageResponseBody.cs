@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? CurrentUsage { get; set; }
 
             /// <summary>
-            /// <para>The OpenStore storage usage on the previous day. Unit: bytes.</para>
+            /// <para>The OpenStore storage usage of the previous day. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>184320</para>

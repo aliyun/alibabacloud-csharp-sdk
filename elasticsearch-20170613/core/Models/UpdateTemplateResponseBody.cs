@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the scenario-specific template configuration is modified. Valid values:</para>
+        /// <para>Indicates whether the scenario-specific template configuration is modified.</para>
         /// <list type="bullet">
         /// <item><description>true: The modification is successful.</description></item>
         /// <item><description>false: The modification failed.</description></item>

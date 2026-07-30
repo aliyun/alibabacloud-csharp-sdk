@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateFalconSeekRequest : TeaModel {
         /// <summary>
-        /// <para>true: Enabled, false: shutdown</para>
+        /// <para>Specifies whether to enable the FalconSeek cloud-native kernel feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Enable the feature.</description></item>
+        /// <item><description>false: Disable the feature.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("enable")]

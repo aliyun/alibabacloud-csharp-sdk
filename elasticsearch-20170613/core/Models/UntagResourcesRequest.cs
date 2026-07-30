@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The list of resources to delete.</para>
+        /// <para>The list of resources from which you want to delete tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;es-cn-09k1rocex0006****&quot;,&quot;es-cn-oew1rgiev0009****&quot;]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set this to <b>INSTANCE</b>.</para>
+        /// <para>The resource type. Set the value to <b>INSTANCE</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INSTANCE</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags to delete. A maximum of 20 items can be specified.</para>
+        /// <para>The list of tag keys to delete. A maximum of 20 items can be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;tagKey1&quot;,&quot;tagKey2&quot;]</para>

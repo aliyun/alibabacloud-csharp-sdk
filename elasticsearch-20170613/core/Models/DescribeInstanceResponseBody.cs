@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The source type of the dictionary file. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: Object Storage Service (OSS). Make sure that the OSS bucket has public read permissions.</description></item>
+                /// <item><description>OSS: OSS open storage (the OSS bucket must be publicly readable).</description></item>
                 /// <item><description>ORIGIN: Open-source Elasticsearch.</description></item>
                 /// <item><description>UPLOAD: Uploaded file.</description></item>
                 /// </list>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The source type of the dictionary file. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: Object Storage Service (OSS). Make sure that the OSS bucket has public read permissions.</description></item>
+                /// <item><description>OSS: OSS open storage (the OSS bucket must be publicly readable).</description></item>
                 /// <item><description>ORIGIN: Open-source Elasticsearch.</description></item>
                 /// <item><description>UPLOAD: Uploaded file.</description></item>
                 /// </list>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether internal-facing access to Kibana is enabled. Valid values:</para>
+            /// <para>Indicates whether internal-facing private network access to Kibana is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>true: Enabled.</para>
             /// </description></item>
@@ -427,7 +427,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The private endpoints for each zone of an HP_ALILB multi-zone instance.</para>
+            /// <para>The private endpoints for each zone of HP_ALILB multi-zone instances.</para>
             /// </summary>
             [NameInMap("endpoints")]
             [Validation(Required=false)]
@@ -476,14 +476,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public Dictionary<string, object> EsConfig { get; set; }
 
             /// <summary>
-            /// <para>The internal-facing access blacklist (deprecated).</para>
+            /// <para>The internal-facing private network access blacklist (deprecated).</para>
             /// </summary>
             [NameInMap("esIPBlacklist")]
             [Validation(Required=false)]
             public List<string> EsIPBlacklist { get; set; }
 
             /// <summary>
-            /// <para>The internal-facing access whitelist (deprecated).</para>
+            /// <para>The internal-facing private network access whitelist (deprecated).</para>
             /// </summary>
             [NameInMap("esIPWhitelist")]
             [Validation(Required=false)]
@@ -539,7 +539,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public bool? HaveKibana { get; set; }
 
             /// <summary>
-            /// <para>The IK dictionary hot update configuration.</para>
+            /// <para>The IK hot update dictionary configuration.</para>
             /// </summary>
             [NameInMap("ikHotDicts")]
             [Validation(Required=false)]
@@ -568,7 +568,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The source type of the dictionary file. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: Uses OSS.</description></item>
+                /// <item><description>OSS: Uses OSS open storage.</description></item>
                 /// <item><description>ORIGIN: Retains the previously uploaded dictionary.</description></item>
                 /// </list>
                 /// 
@@ -580,9 +580,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the dictionary to update. Valid values:</para>
+                /// <para>The type of dictionary to update. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>MAIN: IK main dictionary</description></item>
+                /// <item><description>MAIN: IK main dictionary.</description></item>
                 /// <item><description>STOP: IK stopword dictionary.</description></item>
                 /// </list>
                 /// 
@@ -600,10 +600,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public bool? Inited { get; set; }
 
             /// <summary>
-            /// <para>The edition of the instance. Valid values:</para>
+            /// <para>The edition type of the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>x-pack: Commercial Edition.</description></item>
-            /// <item><description>advanced/IS: Advanced Edition.</description></item>
+            /// <item><description>advanced/IS: Enhanced Edition.</description></item>
             /// <item><description>community: Basic Edition.</description></item>
             /// </list>
             /// 
@@ -936,7 +936,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <para>The disk type of the node. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>cloud_ssd: standard SSD</description></item>
-                /// <item><description>cloud_efficiency: ultra disk.</description></item>
+                /// <item><description>cloud_efficiency: ultra disk</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -947,7 +947,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The performance level (PL) of the ESSD. This parameter is required when diskType is set to cloud_essd. Valid values: PL1, PL2, and PL3.</para>
+                /// <para>The performance level (PL) of the ESSD cloud disk. This parameter is required when diskType is set to cloud_essd. Valid values: PL1, PL2, and PL3. When diskType is set to cloud_ssd, the disk type is standard SSD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PL1</para>
@@ -1217,7 +1217,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string VpcInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether warm data nodes are enabled. Valid values:</para>
+            /// <para>Indicates whether warm data nodes is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>true: Enabled.</para>
             /// </description></item>
@@ -1328,7 +1328,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <para>The zone status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>ISOLATION: offline</description></item>
-                /// <item><description>NORMAL: normal.</description></item>
+                /// <item><description>NORMAL: normal</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

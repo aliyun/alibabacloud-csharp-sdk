@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Host { get; set; }
 
             /// <summary>
-            /// <para>The node name of the cloud-native ACK-based cluster. You can call the <a href="https://help.aliyun.com/document_detail/183958.html">ListAllNode</a> operation to obtain the node name.</para>
+            /// <para>The node name of the cloud-native ACK cluster. You can call the <a href="https://help.aliyun.com/document_detail/183958.html">ListAllNode</a> operation to obtain the node name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-pl32xxxxxxx-data-f-1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the node in the instance. For example, the zone ID of China (Shanghai) Zone C is cn-shanghai-c.</para>
+            /// <para>The zone ID of the instance node. For example, the zone ID of Shanghai Zone C is cn-shanghai-c.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai-c</para>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to ignore the cluster health status.</para>
+        /// <para>Specifies whether to ignore the cluster health status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: ignores the cluster health status.</description></item>
-        /// <item><description>false (default): does not ignore the cluster health status.</description></item>
+        /// <item><description>true: Ignored.</description></item>
+        /// <item><description>false (default): Not ignored.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

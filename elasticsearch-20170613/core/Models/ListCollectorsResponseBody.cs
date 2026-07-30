@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the collector is validated only without being created. Valid values:</para>
+            /// <para>Indicates whether the collector is validated and created. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Only validates without creating.</description></item>
-            /// <item><description>false: Validates and creates.</description></item>
+            /// <item><description>true: Only validated, not created.</description></item>
+            /// <item><description>false: Validated and created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <list type="bullet">
                 /// <item><description>collectorTargetInstance: the collector Output</description></item>
                 /// <item><description>collectorDeployMachine: the deployment machine of the collector</description></item>
-                /// <item><description>collectorElasticsearchForKibana: the Elasticsearch instance that supports Kibana dashboards.</description></item>
+                /// <item><description>collectorElasticsearchForKibana: the Elasticsearch instance that supports Kibana dashboards</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The type of instance specified in the collector Output. Valid values: elasticsearch, logstash. This parameter is displayed when <b>configType</b> is <b>collectorTargetInstance</b>.</para>
+                /// <para>The type of instance specified in the collector Output. Supported values: elasticsearch, logstash. This parameter is displayed when <b>configType</b> is <b>collectorTargetInstance</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch</para>
@@ -194,10 +194,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public List<ListCollectorsResponseBodyResultExtendConfigsMachines> Machines { get; set; }
                 public class ListCollectorsResponseBodyResultExtendConfigsMachines : TeaModel {
                     /// <summary>
-                    /// <para>The status of each collector on the ECS instance. Valid values:</para>
+                    /// <para>The status of the collector on the ECS instance. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>heartOk: The heartbeat is normal.</description></item>
-                    /// <item><description>heartLost: The heartbeat is abnormal.</description></item>
+                    /// <item><description>heartOk: Normal heartbeat.</description></item>
+                    /// <item><description>heartLost: Abnormal heartbeat.</description></item>
                     /// <item><description>uninstalled: Not installed.</description></item>
                     /// <item><description>failed: Installation failed.</description></item>
                     /// </list>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string AgentStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The list of ECS machine IDs.</para>
+                    /// <para>The ECS machine ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>i-bp13y63575oypr9d****</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 }
 
                 /// <summary>
-                /// <para>The transmission protocol, which must be consistent with the access protocol of the instance specified in the collector Output. Valid values: HTTP, HTTPS. This parameter is displayed when <b>configType</b> is <b>collectorTargetInstance</b>.</para>
+                /// <para>The transmission protocol, which must be consistent with the access protocol of the instance specified in the collector Output. Supported values: HTTP, HTTPS. This parameter is displayed when <b>configType</b> is <b>collectorTargetInstance</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <list type="bullet">
                 /// <item><description><para>ECSInstanceId: ECS</para>
                 /// </description></item>
-                /// <item><description><para>ACKCluster: Container Kubernetes.</para>
+                /// <item><description><para>ACKCluster: Container Kubernetes</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ResId { get; set; }
 
             /// <summary>
-            /// <para>The collector type. Valid values: fileBeat, metricBeat, heartBeat, and auditBeat.</para>
+            /// <para>The collector type. Supported values: fileBeat, metricBeat, heartBeat, and auditBeat.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fileBeat</para>

@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
+        /// <para>The number of entries per page for the paged query. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

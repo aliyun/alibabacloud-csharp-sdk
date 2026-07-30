@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The tag information of the ECS instance. The tag key (tagKey) and tag value (tagValue) must be included.</para>
+        /// <para>The tag information of the ECS instance. Must include the tag key (tagKey) and tag value (tagValue).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;tagKey&quot;:&quot;abc&quot;,&quot;tagValue&quot;:&quot;xyz&quot;}]</para>

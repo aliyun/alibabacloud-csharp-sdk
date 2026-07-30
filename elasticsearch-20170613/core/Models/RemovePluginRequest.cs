@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class RemovePluginRequest : TeaModel {
         /// <summary>
-        /// <para>Request body.</para>
+        /// <para>The request body.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[

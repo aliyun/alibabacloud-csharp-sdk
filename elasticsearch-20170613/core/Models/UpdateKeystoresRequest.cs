@@ -10,21 +10,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateKeystoresRequest : TeaModel {
         /// <summary>
-        /// <para>Delete keystore configuration</para>
+        /// <para>Removes keystore configurations.</para>
         /// </summary>
         [NameInMap("remove")]
         [Validation(Required=false)]
         public List<string> Remove { get; set; }
 
         /// <summary>
-        /// <para>Add or update keystore</para>
+        /// <para>Adds or updates the keystore.</para>
         /// </summary>
         [NameInMap("update")]
         [Validation(Required=false)]
         public Dictionary<string, string> Update { get; set; }
 
         /// <summary>
-        /// <para>Whether to force the change. false: non-forced, true: forced</para>
+        /// <para>Specifies whether to forcibly apply the change. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false: The change is not forcibly applied.</description></item>
+        /// <item><description>true: The change is forcibly applied.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListStatsEventRecordsRequest : TeaModel {
+        [NameInMap("endTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
         /// <summary>
-        /// <para>Event type</para>
+        /// <para>The event type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UserOperator</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>Event level</para>
+        /// <para>The event level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Info</para>
@@ -29,8 +33,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string Level { get; set; }
 
+        [NameInMap("startTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
+
         /// <summary>
-        /// <para>Status of the management event</para>
+        /// <para>The event status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Executed</para>

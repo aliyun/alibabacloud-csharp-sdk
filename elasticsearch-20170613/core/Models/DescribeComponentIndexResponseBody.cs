@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public DescribeComponentIndexResponseBodyResult Result { get; set; }
         public class DescribeComponentIndexResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The metadata, which is used to store information such as remarks.</para>
+            /// <para>The metadata, which is used to store remarks and other information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;description&quot;: &quot;set number of shards to one&quot; }</para>

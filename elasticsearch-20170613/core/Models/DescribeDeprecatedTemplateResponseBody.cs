@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public DescribeDeprecatedTemplateResponseBodyResult Result { get; set; }
         public class DescribeDeprecatedTemplateResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Indicates whether automatic creation of a data stream is enabled. Valid values:</para>
+            /// <para>Indicates whether automatic creation of a data stream is enabled at the same time. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Automatic creation of a data stream is enabled.</description></item>
-            /// <item><description>false: Automatic creation of a data stream is not enabled.</description></item>
+            /// <item><description>true: Yes.</description></item>
+            /// <item><description>false: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

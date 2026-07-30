@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public ListTagResourcesResponseBodyHeaders Headers { get; set; }
         public class ListTagResourcesResponseBodyHeaders : TeaModel {
             /// <summary>
-            /// <para>The resource count of TagResource resources found.</para>
+            /// <para>The resource count of TagResource entries found.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

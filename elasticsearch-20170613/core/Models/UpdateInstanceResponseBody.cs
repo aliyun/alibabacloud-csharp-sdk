@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>实例的私网访问域名。</para>
+            /// <para>The internal-facing access endpoint of the instance for private network access.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-abc.elasticsearch.aliyuncs.com</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>节点规格。</para>
+                /// <para>The node specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.n4.small</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>节点规格。</para>
+                /// <para>The node specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.sn2ne.large</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The storage type of the node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>cloud_ssd: standard SSD</description></item>
+                /// <item><description>cloud_ssd: standard SSD.</description></item>
                 /// <item><description>cloud_efficiency: ultra disk.</description></item>
                 /// </list>
                 /// 
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>节点规格。</para>
+                /// <para>The node specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.sn2ne.xlarge</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>prepaid: subscription</description></item>
+            /// <item><description>prepaid: subscription.</description></item>
             /// <item><description>postpaid: pay-as-you-go.</description></item>
             /// </list>
             /// 
@@ -252,9 +252,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>active: Normal</description></item>
-            /// <item><description>activating: Taking effect</description></item>
-            /// <item><description>inactive: Frozen</description></item>
+            /// <item><description>active: Normal.</description></item>
+            /// <item><description>activating: Taking effect.</description></item>
+            /// <item><description>inactive: Frozen.</description></item>
             /// <item><description>invalid: Invalid.</description></item>
             /// </list>
             /// 

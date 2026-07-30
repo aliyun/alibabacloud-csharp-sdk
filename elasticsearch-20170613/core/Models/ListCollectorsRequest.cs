@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <list type="bullet">
         /// <item><description><para>ECS: ECS instance</para>
         /// </description></item>
-        /// <item><description><para>ACK: Container Kubernetes cluster.</para>
+        /// <item><description><para>ACK: Container Kubernetes cluster</para>
         /// </description></item>
         /// </list>
         /// 

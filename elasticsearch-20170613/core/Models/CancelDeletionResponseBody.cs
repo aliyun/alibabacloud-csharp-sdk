@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <para>Indicates whether the instance is recovered. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The instance is recovered.</description></item>
-        /// <item><description>false: The instance failed to be recovered.</description></item>
+        /// <item><description>false: The instance is not recovered.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

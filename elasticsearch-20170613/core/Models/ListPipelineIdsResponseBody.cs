@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public bool? Available { get; set; }
 
             /// <summary>
-            /// <para>The error code returned when the pipeline is unavailable.</para>
+            /// <para>The error code when the pipeline is unavailable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the pipeline is unavailable.</para>
+            /// <para>The error message when the pipeline is unavailable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The pipeline ID created in Kibana.</para>
+            /// <para>The pipeline ID created on Kibana.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testKibanaManagement</para>

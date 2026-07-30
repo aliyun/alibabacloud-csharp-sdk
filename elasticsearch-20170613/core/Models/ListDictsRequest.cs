@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string AnalyzerType { get; set; }
 
         /// <summary>
-        /// <para>The name of the file to filter.</para>
+        /// <para>The file name used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_MAIN.dic</para>

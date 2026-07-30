@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The instance labels.</para>
+            /// <para>The instance tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public List<DescribeLogstashResponseBodyResultZoneInfos> ZoneInfos { get; set; }
             public class DescribeLogstashResponseBodyResultZoneInfos : TeaModel {
                 /// <summary>
-                /// <para>The status of the zone. Valid values:</para>
+                /// <para>The zone status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>ISOLATION: offline.</description></item>
                 /// <item><description>NORMAL: Normal.</description></item>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The instance configuration.</para>
+            /// <para>The instance configuration information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;slowlog.threshold.warn&quot;: &quot;2s&quot;,&quot;slowlog.threshold.info&quot;: &quot;1s&quot;,&quot;slowlog.threshold.debug&quot;: &quot;500ms&quot;,&quot;slowlog.threshold.trace&quot;: &quot;100ms&quot; }</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ls-cn-abc</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? NodeAmount { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the node.</para>
+            /// <para>The configuration information of the node.</para>
             /// </summary>
             [NameInMap("nodeSpec")]
             [Validation(Required=false)]
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The specification of the node.</para>
+                /// <para>The node specification.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.sn1ne.large</para>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>prepaid: subscription</description></item>
-            /// <item><description>postpaid: pay-as-you-go.</description></item>
+            /// <item><description>postpaid: pay-as-you-go</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>The version of the instance.</para>
+            /// <para>The instance version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7.4.0_with_X-Pack</para>

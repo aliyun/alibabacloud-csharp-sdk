@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>Specifies whether to display only managed indexes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: displays only managed indexes.</para>
+        /// <item><description><para>true: Only managed indexes are displayed.</para>
         /// </description></item>
-        /// <item><description><para>false (default): displays all indexes.</para>
+        /// <item><description><para>false (default): All indexes are displayed.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CreateComponentIndexRequest : TeaModel {
         /// <summary>
-        /// <para>The metadata, which is used to store information such as remarks.</para>
+        /// <para>The metadata, which is used to store remarks and other information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{       &quot;description&quot;: &quot;set number of shards to one&quot;   }</para>

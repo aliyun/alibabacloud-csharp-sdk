@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result. Valid values:</para>
+        /// <para>The returned result:</para>
         /// <list type="bullet">
-        /// <item><description>true: The migration was successful.</description></item>
+        /// <item><description>true: The migration is successful.</description></item>
         /// <item><description>false: The migration failed.</description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CapacityPlanRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether complex aggregate query is required. Valid values:</para>
+        /// <para>Specifies whether complex aggregation query is required. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Required.</description></item>
         /// <item><description>false (default): Not required.</description></item>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <item><description>dailyIncrement: daily data growth</description></item>
             /// <item><description>dailyIncrement: daily incremental documents</description></item>
             /// <item><description>retentionTime: data retention period</description></item>
-            /// <item><description>replica: replica settings.</description></item>
+            /// <item><description>replica: replica settings</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <para>The disk data type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>hot: hot data</description></item>
-            /// <item><description>warm: warm data.</description></item>
+            /// <item><description>warm: warm data</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <para>The data unit or time unit. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Data units: MiB, GiB, TB, PB</description></item>
-            /// <item><description>Time units: DAYS, WEEKS, MONTHS, YEARS.</description></item>
+            /// <item><description>Time units: DAYS, WEEKS, MONTHS, YEARS</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>The metric information, including disk usage, search and write operations, and aggregation requests.</para>
+        /// <para>The metric information for disk usage, search and write operations, and aggregation requests.</para>
         /// </summary>
         [NameInMap("metric")]
         [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <para>The search or write metric code. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>write: write</description></item>
-            /// <item><description>search: search.</description></item>
+            /// <item><description>search: search</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <para>The search or write peak type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>common: normal</description></item>
-            /// <item><description>peak: peak.</description></item>
+            /// <item><description>peak: peak</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <item><description>analysisVisualization: data analytics scenario</description></item>
         /// <item><description>dbAcceleration: database acceleration scenario</description></item>
         /// <item><description>search: search scenario</description></item>
-        /// <item><description>log: log scenario.</description></item>
+        /// <item><description>log: log scenario</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

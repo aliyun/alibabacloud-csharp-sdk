@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The return result:</para>
+        /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The interrupted change was resumed successfully.</description></item>
+        /// <item><description>true: The interrupted change is resumed.</description></item>
         /// <item><description>false: The interrupted change failed to be resumed.</description></item>
         /// </list>
         /// 

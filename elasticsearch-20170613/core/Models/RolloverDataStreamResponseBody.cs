@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The rollover succeeded.</para>
+        /// <item><description><para>true: The rollover was successful.</para>
         /// </description></item>
         /// <item><description><para>false: The rollover failed.</para>
         /// </description></item>

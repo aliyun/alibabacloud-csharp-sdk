@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The start time of automatic backup.</para>
+            /// <para>The automatic backup start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 01 ? * * *</para>

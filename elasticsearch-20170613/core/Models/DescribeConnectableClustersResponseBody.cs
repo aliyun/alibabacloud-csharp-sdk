@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<DescribeConnectableClustersResponseBodyResult> Result { get; set; }
         public class DescribeConnectableClustersResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The instance ID of instances that can establish private network peering.</para>
+            /// <para>The instance IDs that can establish private network peering.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-xxx</para>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The automatic backup time configuration, specified as a Quartz Cron expression.</para>
+            /// <para>The automatic backup time configuration, which uses a Quartz Cron expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 01 ? * * *</para>

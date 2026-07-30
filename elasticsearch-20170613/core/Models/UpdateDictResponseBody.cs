@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The source type of the dictionary file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OSS: Object Storage Service (OSS).</description></item>
-            /// <item><description>ORIGIN: Retains the previously uploaded dictionary.</description></item>
+            /// <item><description>OSS: OSS open storage.</description></item>
+            /// <item><description>ORIGIN: retains the previously uploaded dictionary.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The type of the dictionary. Valid values:</para>
+            /// <para>The dictionary type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>MAIN: IK main dictionary.</description></item>
+            /// <item><description>MAIN: IK main tokenizer dictionary.</description></item>
             /// <item><description>STOP: IK stopword dictionary.</description></item>
             /// </list>
             /// 

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The HTTPS protocol is disabled.</description></item>
-        /// <item><description>false: The HTTPS protocol failed to be disabled.</description></item>
+        /// <item><description>false: Failed to disable the HTTPS protocol.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

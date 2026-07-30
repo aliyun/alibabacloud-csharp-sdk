@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to perform only a dry run without creating the collector. Valid values:</para>
+            /// <para>Indicates whether the collector is only validated without being created. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Only validates the request without creating the collector.</description></item>
-            /// <item><description>false: Validates the request and creates the collector.</description></item>
+            /// <item><description>true: Only validates without creating.</description></item>
+            /// <item><description>false: Validates and creates.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,8 +83,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The configuration type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>collectorTargetInstance: the collector Output</description></item>
-                /// <item><description>collectorDeployMachine: the deployment machine of the collector</description></item>
+                /// <item><description>collectorTargetInstance: the collector Output.</description></item>
+                /// <item><description>collectorDeployMachine: the deployment machine of the collector.</description></item>
                 /// <item><description>collectorElasticsearchForKibana: the Elasticsearch instance that supports Kibana Dashboard.</description></item>
                 /// </list>
                 /// 
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public List<string> Hosts { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance associated with the collector. When <b>configType</b> is set to <b>collectorTargetInstance</b>, this parameter indicates the instance ID of the collector Output. When <b>configType</b> is set to <b>collectorDeployMachines</b> and <b>type</b> is set to <b>ACKCluster</b>, this parameter indicates the ACK (Container Kubernetes) cluster ID.</para>
+                /// <para>The ID of the instance associated with the collector. When <b>configType</b> is set to <b>collectorTargetInstance</b>, this is the instance ID of the collector Output. When <b>configType</b> is set to <b>collectorDeployMachines</b> and <b>type</b> is set to <b>ACKCluster</b>, this is the ACK (Container Kubernetes) cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>es-cn-n6w1o1****</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The number of pods in the ACK cluster from which data is successfully collected.</para>
+                /// <para>The number of pods that are successfully collected in the ACK cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string SuccessPodsCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of pods in the ACK cluster from which data is collected.</para>
+                /// <para>The total number of pods collected in the ACK cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <para>The type of machine on which the collector is deployed. This parameter is displayed when <b>configType</b> is set to <b>collectorDeployMachine</b>. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>ECSInstanceId: ECS</description></item>
-                /// <item><description>ACKCluster: Container Kubernetes.</description></item>
+                /// <item><description>ACKCluster: Container Kubernetes</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The collector status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>activing: being activated</description></item>
+            /// <item><description>activing: being activated.</description></item>
             /// <item><description>active: activated.</description></item>
             /// </list>
             /// 

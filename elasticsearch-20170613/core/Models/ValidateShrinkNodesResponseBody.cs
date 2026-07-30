@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The result. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The nodes can be scaled in.</description></item>
         /// <item><description>false: The nodes cannot be scaled in.</description></item>

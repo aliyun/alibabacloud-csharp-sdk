@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class PluginAnalysisResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return Result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<PluginAnalysisResponseBodyResult> Result { get; set; }
         public class PluginAnalysisResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Plugin Description.</para>
+            /// <para>The plug-in description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>plugin description</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Plugin version.</para>
+            /// <para>The plug-in version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.17.0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ElasticsearchVersion { get; set; }
 
             /// <summary>
-            /// <para>Plugin Name.</para>
+            /// <para>The plug-in name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>plugin_name</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Plugin security policy.</para>
+            /// <para>The security policy of the plug-in.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SecurityPolicy { get; set; }
 
             /// <summary>
-            /// <para>Plugin Version.</para>
+            /// <para>The plug-in version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.17.0</para>

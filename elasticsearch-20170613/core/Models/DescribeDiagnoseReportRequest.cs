@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DescribeDiagnoseReportRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the intelligent diagnostic report. Default value: the browser language. Valid values:</para>
+        /// <para>The language in which the intelligent diagnostic report is generated. Default value: browser language. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>en: English</description></item>
         /// <item><description>zh: Simplified Chinese</description></item>

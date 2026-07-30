@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <list type="bullet">
             /// <item><description>FAILED: failed</description></item>
             /// <item><description>EXECUTED: executed</description></item>
-            /// <item><description>EXECUTING: executing.</description></item>
+            /// <item><description>EXECUTING: executing</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <list type="bullet">
             /// <item><description>INFO: information</description></item>
             /// <item><description>WARN: warning</description></item>
-            /// <item><description>CRITICAL: critical.</description></item>
+            /// <item><description>CRITICAL: critical</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,12 +138,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ECS:AUTO_RESTART: Automatic restart of an ECS node.</description></item>
-            /// <item><description>Instance:InstanceFailure.Reboot:Executed: ECS instance reboot completed (instance error).</description></item>
-            /// <item><description>Instance:InstanceFailure.Reboot:Executing: ECS instance reboot started (instance error).</description></item>
-            /// <item><description>Instance:SystemFailure.Reboot:Executed: ECS instance reboot completed (system error).</description></item>
-            /// <item><description>Instance:SystemFailure.Reboot:Executing: ECS instance reboot started (system error).</description></item>
-            /// <item><description>Instance:SystemFailure.Reboot:Failed: ECS instance reboot failed (system error).</description></item>
+            /// <item><description>ECS:AUTO_RESTART: ECS node automatic restart.</description></item>
+            /// <item><description>Instance:InstanceFailure.Reboot:Executed: ECS instance restart completed (ECS instance error).</description></item>
+            /// <item><description>Instance:InstanceFailure.Reboot:Executing: ECS instance restart started (instance error).</description></item>
+            /// <item><description>Instance:SystemFailure.Reboot:Executed: ECS instance restart completed (system error).</description></item>
+            /// <item><description>Instance:SystemFailure.Reboot:Executing: ECS instance restart started (system error).</description></item>
+            /// <item><description>Instance:SystemFailure.Reboot:Failed: ECS instance restart failed (system error).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

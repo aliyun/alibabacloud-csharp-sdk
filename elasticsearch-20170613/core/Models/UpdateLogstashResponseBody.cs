@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>Indicates whether the instance information is modified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The instance information is modified.</description></item>
-        /// <item><description>false: The instance information failed to be modified.</description></item>
+        /// <item><description>true: Succeeded.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

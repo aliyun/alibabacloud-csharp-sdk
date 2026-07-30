@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Coordinating node configuration.</para>
+        /// <para>The client node configuration.</para>
         /// </summary>
         [NameInMap("clientNodeConfiguration")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Elastic node configuration.</para>
+        /// <para>The elastic node configuration.</para>
         /// </summary>
         [NameInMap("elasticDataNodeConfiguration")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <item><description>5.5.3_with_X-Pack</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The versions listed above may not include all versions supported by Elasticsearch instances. You can call the <a href="https://help.aliyun.com/document_detail/254099.html">GetRegionConfiguration</a> operation to view the actually supported versions.</para>
+        /// <para>The versions listed above may not include all versions supported by Elasticsearch instances. Call the <a href="https://help.aliyun.com/document_detail/254099.html">GetRegionConfiguration</a> operation to view the actual supported versions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EsVersion { get; set; }
 
         /// <summary>
-        /// <para>The edition type:</para>
+        /// <para>The edition type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>x-pack: creates a commercial edition instance, or a kernel-enhanced edition instance without Indexing Service or OpenStore enabled.</description></item>
         /// <item><description>IS: creates a kernel-enhanced edition instance with Indexing Service or OpenStore enabled.</description></item>
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string InstanceCategory { get; set; }
 
         /// <summary>
-        /// <para>Kibana node configuration.</para>
+        /// <para>The Kibana node configuration.</para>
         /// <remarks>
-        /// <para>We strongly recommend that you enable the Kibana node.</para>
+        /// <para>We strongly recommend that you enable Kibana nodes.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("kibanaConfiguration")]
@@ -93,9 +93,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public KibanaNodeConfiguration KibanaConfiguration { get; set; }
 
         /// <summary>
-        /// <para>Dedicated master node configuration.</para>
+        /// <para>The dedicated master node configuration.</para>
         /// <remarks>
-        /// <para>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you use createInstance to create an instance with next-generation cloud disk dedicated master nodes, you must specify the instance family with the <c>.new</c> suffix, for example, elasticsearch.sn1ne.large.new.</para>
+        /// <para>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call createInstance to create an instance with next-generation cloud disk-based dedicated master nodes, specify the instance family with the <c>.new</c> suffix. Example: elasticsearch.sn1ne.large.new.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("masterConfiguration")]
@@ -103,9 +103,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public MasterNodeConfiguration MasterConfiguration { get; set; }
 
         /// <summary>
-        /// <para>Network configuration.</para>
+        /// <para>The network configuration.</para>
         /// <remarks>
-        /// <para>Specifying IP whitelists is not supported when creating an instance.</para>
+        /// <para>You cannot specify an IP whitelist when creating an instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -125,9 +125,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? NodeAmount { get; set; }
 
         /// <summary>
-        /// <para>Data node configuration.</para>
+        /// <para>The data node configuration.</para>
         /// <remarks>
-        /// <para>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you use createInstance to create an instance with next-generation cloud disk data nodes, you must specify the instance family with the <c>.new</c> suffix, for example, elasticsearch.sn1ne.large.new.</para>
+        /// <para>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call createInstance to create an instance with next-generation cloud disk-based data nodes, specify the instance family with the <c>.new</c> suffix. Example: elasticsearch.sn1ne.large.new.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("nodeSpec")]
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public NodeSpec NodeSpec { get; set; }
 
         /// <summary>
-        /// <para>The billing details of the subscription instance. This parameter is required when you create a subscription instance.</para>
+        /// <para>The payment details of the subscription instance. This parameter is required when you create a subscription instance.</para>
         /// </summary>
         [NameInMap("paymentInfo")]
         [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>postpaid: pay-as-you-go.</description></item>
+        /// <item><description>postpaid: pay-as-you-go billing method.</description></item>
         /// <item><description>prepaid: subscription.</description></item>
         /// </list>
         /// 
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Instance tags.</para>
+        /// <para>The instance tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>Cold data node configuration.</para>
+        /// <para>The warm node configuration. Warm nodes are used to store cold data that is migrated from data nodes.</para>
         /// </summary>
         [NameInMap("warmNodeConfiguration")]
         [Validation(Required=false)]
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? ZoneCount { get; set; }
 
         /// <summary>
-        /// <para>Used to ensure the idempotency of the request. The parameter value is generated by the client and must be unique across different requests. The value cannot exceed 64 ASCII characters.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. The value is generated by the client and must be unique among different requests. The maximum length is 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>

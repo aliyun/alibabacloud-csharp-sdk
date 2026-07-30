@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Fixed value: INSTANCE.</para>
+        /// <para>The resource type. Set to INSTANCE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INSTANCE</para>

@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<ListComponentIndicesResponseBodyResult> Result { get; set; }
         public class ListComponentIndicesResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The information about the index templates that reference this composable template.</para>
+            /// <para>The information about index templates that reference this composable template.</para>
             /// </summary>
             [NameInMap("composed")]
             [Validation(Required=false)]
@@ -93,8 +93,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                             /// <summary>
                             /// <para>The index compression method. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description>LZ4: the default compression algorithm of Elasticsearch. It provides fast compression and decompression but a relatively lower compression ratio.</description></item>
-                            /// <item><description>best_compression: uses the best_compression algorithm for compression, which provides a higher compression ratio.</description></item>
+                            /// <item><description>LZ4: The default compression algorithm of Elasticsearch. It provides fast compression and decompression but a relatively lower compression ratio.</description></item>
+                            /// <item><description>best_compression: Uses the best_compression algorithm for compression, which provides a higher compression ratio.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>

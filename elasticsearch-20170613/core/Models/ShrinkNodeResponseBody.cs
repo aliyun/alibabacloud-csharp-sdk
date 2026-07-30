@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The result of the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The scale-in operation succeeded.</description></item>
-        /// <item><description>false: The scale-in operation failed.</description></item>
+        /// <item><description>true: The node shrinking succeeded.</description></item>
+        /// <item><description>false: The node shrinking failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

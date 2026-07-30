@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VpcInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The port number used to access the cluster.</para>
+                /// <para>The access port of the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9200</para>

@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The result of the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The data stream was deleted.</para>
+        /// <item><description><para>true: The data stream is deleted.</para>
         /// </description></item>
         /// <item><description><para>false: The data stream failed to be deleted.</para>
         /// </description></item>

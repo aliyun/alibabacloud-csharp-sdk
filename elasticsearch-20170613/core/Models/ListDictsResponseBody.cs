@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDictsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response headers.</para>
+        /// <para>The response header information.</para>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<ListDictsResponseBodyResult> Result { get; set; }
         public class ListDictsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The publicly accessible download URL. The URL is valid for 90 seconds.</para>
+            /// <para>The public download URL. The URL is valid for 90 seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&OSSAccessKeyId=LTAI*****V9&Signature=PNPO********BBGsJDO4V3VfU4sE%3D">http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&amp;OSSAccessKeyId=LTAI*****V9&amp;Signature=PNPO********BBGsJDO4V3VfU4sE%3D</a></para>
@@ -88,9 +88,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The type of the IK dictionary. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>MAIN: main tokenization dictionary.</para>
+            /// <item><description><para>MAIN: Main tokenizer dictionary.</para>
             /// </description></item>
-            /// <item><description><para>STOP: stopword dictionary.</para>
+            /// <item><description><para>STOP: Stopword dictionary.</para>
             /// </description></item>
             /// </list>
             /// 

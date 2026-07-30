@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The service-linked role is created.</description></item>
-        /// <item><description>false: The service-linked role failed to be created.</description></item>
+        /// <item><description>true: Created.</description></item>
+        /// <item><description>false: Failed to create.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

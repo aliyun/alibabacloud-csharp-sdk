@@ -74,9 +74,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The edition type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>advanced: Advanced Edition</para>
+            /// <item><description><para>advanced: Advanced Edition.</para>
             /// </description></item>
-            /// <item><description><para>x-pack: Commercial Edition</para>
+            /// <item><description><para>x-pack: Commercial Edition.</para>
             /// </description></item>
             /// <item><description><para>community: Community Edition.</para>
             /// </description></item>
@@ -129,13 +129,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The disk type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>cloud_essd: ESSD</para>
+                /// <item><description><para>cloud_essd: ESSD.</para>
                 /// </description></item>
-                /// <item><description><para>cloud_ssd: standard SSD</para>
+                /// <item><description><para>cloud_ssd: standard SSD.</para>
                 /// </description></item>
-                /// <item><description><para>cloud_efficiency: ultra cloud disk</para>
+                /// <item><description><para>cloud_efficiency: ultra cloud disk.</para>
                 /// </description></item>
-                /// <item><description><para>local_ssd: local SSD</para>
+                /// <item><description><para>local_ssd: local SSD.</para>
                 /// </description></item>
                 /// <item><description><para>local_efficiency: local ultra disk.</para>
                 /// </description></item>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The memory size of the specifications for the current node role.</para>
+                /// <para>The memory size of the specification for the current node role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -161,15 +161,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>WORKER: data node</para>
+                /// <item><description><para>WORKER: data node.</para>
                 /// </description></item>
-                /// <item><description><para>WORKER_WARM: warm node</para>
+                /// <item><description><para>WORKER_WARM: warm node.</para>
                 /// </description></item>
-                /// <item><description><para>MASTER: dedicated master node</para>
+                /// <item><description><para>MASTER: dedicated master node.</para>
                 /// </description></item>
-                /// <item><description><para>KIBANA: Kibana node</para>
+                /// <item><description><para>KIBANA: Kibana node.</para>
                 /// </description></item>
-                /// <item><description><para>COORDINATING: client node</para>
+                /// <item><description><para>COORDINATING: client node.</para>
                 /// </description></item>
                 /// <item><description><para>ELASTIC_WORKER: elastic node.</para>
                 /// </description></item>

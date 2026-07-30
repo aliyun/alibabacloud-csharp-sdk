@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the instance node. For example, the ID of Zone C in the China (Shanghai) region is cn-shanghai-c.</para>
+            /// <para>The zone ID of the instance node. For example, the zone ID for Shanghai Zone C is cn-shanghai-c.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai-c</para>

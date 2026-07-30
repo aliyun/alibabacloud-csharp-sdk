@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>Indicates whether the data stream is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: enabled.</para>
+            /// <item><description><para>true: Enabled.</para>
             /// </description></item>
-            /// <item><description><para>false (default): not enabled.</para>
+            /// <item><description><para>false (default): Not enabled.</para>
             /// </description></item>
             /// </list>
             /// 

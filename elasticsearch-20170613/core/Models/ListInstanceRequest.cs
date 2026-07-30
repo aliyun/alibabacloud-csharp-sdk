@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance name. Fuzzy search is supported. For example, if you search for all instances matching <b>abc</b>, all instances named <b>abc</b>, <b>abcde</b>, <b>xyabc</b>, and <b>xabcy</b> may be returned.</para>
+        /// <para>The instance name. Fuzzy match is supported. For example, if you search for <b>abc</b>, instances named <b>abc</b>, <b>abcde</b>, <b>xyabc</b>, and <b>xabcy</b> may be returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyunes_test1</para>
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EsVersion { get; set; }
 
         /// <summary>
-        /// <para>The edition type of the instance. Valid values:</para>
+        /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>x-pack: Commercial Edition</para>
         /// </description></item>
-        /// <item><description><para>advanced/IS: Enhanced Edition</para>
+        /// <item><description><para>advanced/IS: Advanced Edition</para>
         /// </description></item>
         /// <item><description><para>community: Basic Edition</para>
         /// </description></item>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
         /// <summary>
         /// <para>The page number of the instance list.
-        /// Start value: <b>1</b>, default value: <b>1</b>.</para>
+        /// Minimum value: <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paginated queries. Maximum value: <b>100</b>, default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for paging queries. Maximum value: <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) where the instance is deployed.</para>
+        /// <para>The ID of the virtual private cloud (VPC) in which the instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp16k1dvzxtmagcva****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListUserPluginRequest : TeaModel {
         /// <summary>
-        /// <para>Plugin Name.</para>
+        /// <para>The plug-in name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-plugin</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Page number for paging the plugin list.</para>
+        /// <para>The page number of the plug-in list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Page { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

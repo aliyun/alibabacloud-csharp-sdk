@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateKibanaSsoRequest : TeaModel {
         /// <summary>
-        /// <para>true: Enabled; false: shutdown</para>
+        /// <para>Specifies whether to enable Alibaba Cloud account authentication for Kibana. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Enable.</description></item>
+        /// <item><description>false: Disable.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

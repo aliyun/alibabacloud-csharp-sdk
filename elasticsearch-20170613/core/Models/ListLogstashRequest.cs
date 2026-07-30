@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Default value: 20.</para>
+        /// <para>The number of entries per page in Settings for paging. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

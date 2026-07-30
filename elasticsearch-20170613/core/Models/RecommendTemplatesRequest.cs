@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <item><description>log: log scenario</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Commercial model instances support the general-purpose, data analytics, database acceleration, and search scenarios. Advanced Edition instances support only the log scenario.</para>
+        /// <para>Standard instances support general-purpose, data analytics, database acceleration, and search scenarios. Advanced Edition supports only the log scenario.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

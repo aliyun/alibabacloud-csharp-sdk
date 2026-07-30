@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result. Valid values:</para>
+        /// <para>The result of the operation. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: The index template was deleted.</para>
         /// </description></item>

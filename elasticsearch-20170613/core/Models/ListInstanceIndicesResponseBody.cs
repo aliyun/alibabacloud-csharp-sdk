@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string IsManaged { get; set; }
 
             /// <summary>
-            /// <para>The managed status of the index. Valid values:</para>
+            /// <para>The index management status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>following: Managed.</para>
             /// </description></item>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>If this parameter is empty, the index is not managed by a lifecycle policy.</para>
+            /// <para>If this value is empty, the index is not managed by a lifecycle policy.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

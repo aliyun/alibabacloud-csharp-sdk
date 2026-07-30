@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListEcsInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of ECS instance IDs. The value can be a JSON array that consists of up to 100 instance IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>The list of ECS instance IDs. The value can be a JSON array that consists of up to 100 instance IDs separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;i-bp13y63575oypr9d****&quot;,&quot;i-bp1gyhphjaj73jsr****&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EcsInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the ECS instance.</para>
+        /// <para>The ECS instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>Instance tags of the ECS instance. The following fields must be included:</para>
+        /// <para>The ECS instance tags. The following fields must be included:</para>
         /// <list type="bullet">
-        /// <item><description>tagKey: instance tag key.</description></item>
-        /// <item><description>tagValue: instance tag value.</description></item>
+        /// <item><description>tagKey: the tag key.</description></item>
+        /// <item><description>tagValue: the tag value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC where the ECS instance resides.</para>
+        /// <para>The VPC ID of the ECS instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp16k1dvzxtmagcva****</para>

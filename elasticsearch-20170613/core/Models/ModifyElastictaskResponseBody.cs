@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The target number of elastic data nodes during peak hours.</para>
+                /// <para>The number of elastic data nodes during peak hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The target number of elastic data nodes during off-peak hours.</para>
+                /// <para>The number of elastic data nodes during off-peak hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>

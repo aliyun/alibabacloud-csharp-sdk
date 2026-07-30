@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <list type="bullet">
             /// <item><description><para>Normal: Normal.</para>
             /// </description></item>
-            /// <item><description><para>FinancialLocked: Locked due to overdue payment.</para>
+            /// <item><description><para>FinancialLocked: Financial lock.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <list type="bullet">
             /// <item><description><para>Creating: Being created.</para>
             /// </description></item>
-            /// <item><description><para>Active: Available.</para>
+            /// <item><description><para>Active: Active.</para>
             /// </description></item>
             /// <item><description><para>Pending: Being modified.</para>
             /// </description></item>

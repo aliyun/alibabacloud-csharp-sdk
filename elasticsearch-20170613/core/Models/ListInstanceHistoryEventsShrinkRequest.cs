@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>Specifies whether to sort in descending order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true (default): Yes.</description></item>
-            /// <item><description>false: No.</description></item>
+            /// <item><description>true (default): yes</description></item>
+            /// <item><description>false: no</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <list type="bullet">
             /// <item><description>event_time: event creation time</description></item>
             /// <item><description>event_execute_start_time: event execution time</description></item>
-            /// <item><description>event_execute_finish_time: event completion time.</description></item>
+            /// <item><description>event_execute_finish_time: event completion time</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EventCreateStartTime { get; set; }
 
         /// <summary>
-        /// <para>The lifecycle status of the event.</para>
+        /// <para>The lifecycle status object of the event.</para>
         /// </summary>
         [NameInMap("eventCycleStatus")]
         [Validation(Required=false)]
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string NodeIP { get; set; }
 
         /// <summary>
-        /// <para>The starting document offset. The value must be a non-negative integer. Default value: 0.</para>
+        /// <para>The starting document offset. The value must be a non-negative number. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of events to return. The value must be a non-negative integer. Default value: 10.</para>
+        /// <para>The number of events to return. The value must be a non-negative number. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>Indicates whether the template matches a data stream. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: matched</description></item>
+            /// <item><description>true: matched.</description></item>
             /// <item><description>false: not matched.</description></item>
             /// </list>
             /// 
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public ListDeprecatedTemplatesResponseBodyResultTemplate Template { get; set; }
             public class ListDeprecatedTemplatesResponseBodyResultTemplate : TeaModel {
                 /// <summary>
-                /// <para>The alias configuration of the template.</para>
+                /// <para>The aliases configuration of the template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;{}&quot;</para>

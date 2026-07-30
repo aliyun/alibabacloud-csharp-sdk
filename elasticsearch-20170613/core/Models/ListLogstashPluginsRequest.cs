@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging settings. Minimum value: 1. Maximum value: 200.</para>
+        /// <para>The number of entries per page for paging. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <para>The plugin source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>USER: custom plugin</description></item>
-        /// <item><description>SYSTEM: system preset plugin.</description></item>
+        /// <item><description>SYSTEM: system preset plugin</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

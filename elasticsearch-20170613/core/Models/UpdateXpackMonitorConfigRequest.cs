@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>Specifies whether to enable X-Pack monitoring. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enable X-Pack monitoring.</description></item>
-        /// <item><description>false: Disable X-Pack monitoring.</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Not enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

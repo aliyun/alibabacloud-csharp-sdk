@@ -58,11 +58,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The data stream status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Green: healthy.</para>
+            /// <item><description><para>Green: Healthy.</para>
             /// </description></item>
-            /// <item><description><para>Yellow: warning.</para>
+            /// <item><description><para>Yellow: Warning.</para>
             /// </description></item>
-            /// <item><description><para>Red: abnormal.</para>
+            /// <item><description><para>Red: Abnormal.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -113,11 +113,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The index status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Green: healthy.</para>
+                /// <item><description><para>Green: Healthy.</para>
                 /// </description></item>
-                /// <item><description><para>Yellow: warning.</para>
+                /// <item><description><para>Yellow: Warning.</para>
                 /// </description></item>
-                /// <item><description><para>Red: abnormal.</para>
+                /// <item><description><para>Red: Abnormal.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -139,13 +139,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public bool? IsManaged { get; set; }
 
                 /// <summary>
-                /// <para>The managed status of the index. Valid values:</para>
+                /// <para>The index managed status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>following: managed.</para>
+                /// <item><description><para>following: Managed.</para>
                 /// </description></item>
-                /// <item><description><para>closing: being unmanaged.</para>
+                /// <item><description><para>closing: Being unmanaged.</para>
                 /// </description></item>
-                /// <item><description><para>closed: not managed.</para>
+                /// <item><description><para>closed: Not managed.</para>
                 /// </description></item>
                 /// </list>
                 /// 

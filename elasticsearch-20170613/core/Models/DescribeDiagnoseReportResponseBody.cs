@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string DiagnosisMode { get; set; }
 
             /// <summary>
-            /// <para>The overall health status of the cluster in the report. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</para>
+            /// <para>The overall health of the cluster in the report. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YELLOW</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Health { get; set; }
 
             /// <summary>
-            /// <para>The ID of the diagnosed instance.</para>
+            /// <para>The instance ID of the diagnosed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-abc</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The method used to trigger the health diagnosis. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</para>
+            /// <para>The method used to trigger the health diagnostics. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</para>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>

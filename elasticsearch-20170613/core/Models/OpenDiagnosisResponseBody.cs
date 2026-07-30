@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>Indicates whether the intelligent O&amp;M feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>true: Succeeded.</description></item>
         /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the alert message was sent. Valid values: true (sent) and false (failed to send).</para>
+        /// <para>Indicates whether the alert message is sent. Valid values: true (sent) and false (failed to send).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The password used to log on to Kibana.</para>
+        /// <para>The password for logging on to Kibana.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string PipelineManagementType { get; set; }
 
         /// <summary>
-        /// <para>The username used to log on to Kibana.</para>
+        /// <para>The username for logging on to Kibana.</para>
         /// 
         /// <b>Example:</b>
         /// <para>elastic</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// <para>A unique token used to ensure idempotence of the request. The client generates this value. The value must be unique across different requests and can contain up to 64 ASCII characters.</para>
+        /// <para>A unique token used to ensure idempotency of the request. The client generates this value. It must be unique across different requests and cannot exceed 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>

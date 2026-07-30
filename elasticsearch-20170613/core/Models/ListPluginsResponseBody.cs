@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The URL of the plugin documentation.</para>
+            /// <para>The URL of the plugin specification document.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxx.html">https://xxxx.html</a></para>

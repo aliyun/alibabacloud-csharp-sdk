@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<GetEmonMonitorDataResponseBodyResult> Result { get; set; }
         public class GetEmonMonitorDataResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The real-time metric monitoring data, in the format of <c>{timestamp:data}</c>.</para>
+            /// <para>The real-time metric monitoring data. Format: <c>{timestamp:data}</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;1586249280&quot;: 465.1980465119913, &quot;1586249300&quot;: 213.45243650423305 }</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public float? Integrity { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the request reaches the server. This parameter is used for troubleshooting.</para>
+            /// <para>The timestamp when the request reaches the server. This is used for troubleshooting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1522127381471</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Metric { get; set; }
 
             /// <summary>
-            /// <para>If the queries contain wildcards, the result includes multiple matched time series datasets. The summary aggregates the values of these time series at each time point based on the aggregator type specified in the query. Currently, only avg is supported as the aggregation method.</para>
+            /// <para>If the queries contain wildcards, the result includes multiple matching time series data sequences. The summary is the aggregation of the values across these time series at each time point, based on the aggregator type specified in the query. Currently, only avg is supported as the aggregation method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

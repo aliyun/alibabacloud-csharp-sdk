@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <para>The source type of the dictionary file. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>OSS: uses OSS open storage.</description></item>
-            /// <item><description>ORIGIN: retains a previously uploaded dictionary.</description></item>
+            /// <item><description>ORIGIN: retains the previously uploaded dictionary.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

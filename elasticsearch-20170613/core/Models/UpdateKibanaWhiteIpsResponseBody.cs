@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public List<string> KibanaIPWhitelist { get; set; }
 
             /// <summary>
-            /// <para>The Kibana internal-facing whitelist.</para>
+            /// <para>The Kibana private network access whitelist.</para>
             /// </summary>
             [NameInMap("kibanaPrivateIPWhitelist")]
             [Validation(Required=false)]

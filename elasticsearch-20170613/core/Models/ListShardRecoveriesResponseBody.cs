@@ -97,13 +97,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SourceNode { get; set; }
 
             /// <summary>
-            /// <para>The stage of the data recovery process. Valid values:</para>
+            /// <para>The stage of data recovery. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>done: Recovery is complete.</para>
             /// </description></item>
-            /// <item><description><para>finalize: Cleanup operations are in progress.</para>
+            /// <item><description><para>finalize: Cleanup work is in progress.</para>
             /// </description></item>
-            /// <item><description><para>index: Reading index metadata and copying bytes from the source to the target.</para>
+            /// <item><description><para>index: Reading index metadata and copying bytes from source to target.</para>
             /// </description></item>
             /// <item><description><para>init: Recovery has not started.</para>
             /// </description></item>

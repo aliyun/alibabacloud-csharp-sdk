@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The source type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: OSS open storage. Make sure that the OSS bucket has public-read permission.</description></item>
+                /// <item><description>OSS: OSS open storage (the OSS bucket must be publicly readable).</description></item>
                 /// <item><description>ORIGIN: retains the previously uploaded dictionary.</description></item>
                 /// </list>
                 /// 
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The internal endpoint of the instance.</para>
+            /// <para>The internal network access address of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-nif1q8auz0003****.elasticsearch.aliyuncs.com</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The configuration of Kibana nodes.</para>
+            /// <para>The Kibana node configuration.</para>
             /// </summary>
             [NameInMap("kibanaConfiguration")]
             [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? Amount { get; set; }
 
                 /// <summary>
-                /// <para>The storage size of the node. Unit: GB.</para>
+                /// <para>The storage space size of the node. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The public network access address for Kibana.</para>
+            /// <para>The Kibana public network access address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-nif1q8auz0003****.kibana.elasticsearch.aliyuncs.com</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string KibanaDomain { get; set; }
 
             /// <summary>
-            /// <para>The public port for Kibana.</para>
+            /// <para>The Kibana public network port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5601</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? KibanaPort { get; set; }
 
             /// <summary>
-            /// <para>The configuration of master nodes.</para>
+            /// <para>The master node configuration.</para>
             /// </summary>
             [NameInMap("masterConfiguration")]
             [Validation(Required=false)]
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? Amount { get; set; }
 
                 /// <summary>
-                /// <para>The storage size of the node. Unit: GB.</para>
+                /// <para>The storage space size of the node. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The virtual private cloud (VPC) ID.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-bp16k1dvzxtmagcva****</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The number of data nodes of the instance.</para>
+            /// <para>The number of data nodes in the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -313,14 +313,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? NodeAmount { get; set; }
 
             /// <summary>
-            /// <para>The configuration of data nodes.</para>
+            /// <para>The data node configuration.</para>
             /// </summary>
             [NameInMap("nodeSpec")]
             [Validation(Required=false)]
             public MoveResourceGroupResponseBodyResultNodeSpec NodeSpec { get; set; }
             public class MoveResourceGroupResponseBodyResultNodeSpec : TeaModel {
                 /// <summary>
-                /// <para>The storage size of the node. Unit: GB.</para>
+                /// <para>The storage space size of the node. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string PublicDomain { get; set; }
 
             /// <summary>
-            /// <para>The public port.</para>
+            /// <para>The public network port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9200</para>
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <item><description>active: Normal.</description></item>
             /// <item><description>activating: Taking effect.</description></item>
             /// <item><description>inactive: Frozen.</description></item>
-            /// <item><description>invalid: Expired.</description></item>
+            /// <item><description>invalid: Invalid.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The source type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: OSS open storage. Make sure that the OSS bucket has public-read permission.</description></item>
+                /// <item><description>OSS: OSS open storage (the OSS bucket must be publicly readable).</description></item>
                 /// <item><description>ORIGIN: retains the previously uploaded dictionary.</description></item>
                 /// </list>
                 /// 

@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The status of the instance. Valid values: active (Normal), activating (Taking Effect), inactive (Frozen), and invalid (Expired).</para>
+            /// <para>The instance status. Valid values: active (Normal), activating (taking effect), inactive (frozen), and invalid (expired).</para>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>

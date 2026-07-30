@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string BucketName { get; set; }
 
                 /// <summary>
-                /// <para>The MD5 checksum (ETag) of the OSS file, in uppercase.</para>
+                /// <para>The MD5 checksum (ETag) of the OSS file in uppercase.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2ABAB5E70BBF631145647F6BE533****</para>
@@ -78,9 +78,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The dictionary type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>MAIN: primary tokenization dictionary</para>
+            /// <item><description><para>MAIN: primary token dictionary</para>
             /// </description></item>
-            /// <item><description><para>STOP: stopword dictionary.</para>
+            /// <item><description><para>STOP: stopword dictionary</para>
             /// </description></item>
             /// </list>
             /// 

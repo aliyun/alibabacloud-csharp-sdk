@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The CPU usage.</para>
             /// <remarks>
-            /// <para>When <b>extended</b> is set to <b>true</b> and the monitoring information of the node is being synchronized, the parameter value returns null. In this case, wait 10 seconds and send the request again to retrieve the value.</para>
+            /// <para>When <b>extended</b> is set to <b>true</b> and the monitoring information of the node is being synchronized, the parameter value returns null. In this case, wait 10 seconds and resend the request to obtain the value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <item><description>WORKER: hot node</description></item>
             /// <item><description>WORKER_WARM: warm node</description></item>
             /// <item><description>COORDINATING: client node</description></item>
-            /// <item><description>KIBANA: Kibana node.</description></item>
+            /// <item><description>KIBANA: Kibana node</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

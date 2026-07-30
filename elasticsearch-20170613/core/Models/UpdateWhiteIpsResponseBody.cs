@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public UpdateWhiteIpsResponseBodyResult Result { get; set; }
         public class UpdateWhiteIpsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The private network internal-facing access whitelist (deprecated).</para>
+            /// <para>The private network access whitelist (deprecated).</para>
             /// </summary>
             [NameInMap("esIPWhitelist")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public List<string> Ips { get; set; }
 
                     /// <summary>
-                    /// <para>The whitelist type. The value is fixed as PRIVATE_ES, which indicates the private network internal-facing access whitelist.</para>
+                    /// <para>The whitelist type. The value is fixed as PRIVATE_ES, which indicates the private network access whitelist.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PRIVATE_ES</para>

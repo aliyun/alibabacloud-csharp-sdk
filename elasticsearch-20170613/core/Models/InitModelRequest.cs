@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class InitModelRequest : TeaModel {
         /// <summary>
-        /// <para>API key for the AI Search Open Platform</para>
+        /// <para>The API key for the AISearch open platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>Service registration endpoint of the AI Search Open Platform</para>
+        /// <para>The service registration address of the AISearch open platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>HTTP protocol type</para>
+        /// <para>The HTTP protocol type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,22 +43,22 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string HttpSchema { get; set; }
 
         /// <summary>
-        /// <para>Specify the models to initialize. If empty, all built-in models will be initialized.</para>
+        /// <para>The models to initialize. If this parameter is left empty, all built-in models are initialized.</para>
         /// </summary>
         [NameInMap("models")]
         [Validation(Required=false)]
         public List<InitModelRequestModels> Models { get; set; }
         public class InitModelRequestModels : TeaModel {
             /// <summary>
-            /// <para>Model category  </para>
+            /// <para>The model type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>a. Text embedding: text_embedding  </description></item>
-            /// <item><description>b. Reranking: rerank  </description></item>
-            /// <item><description>c. Document segmentation: doc_split  </description></item>
-            /// <item><description>d. Large Language Model (LLM) service: completion  </description></item>
-            /// <item><description>e. Query analysis: query_analyze  </description></item>
-            /// <item><description>f. Document content parsing: doc_analyze  </description></item>
-            /// <item><description>g. Image content parsing: img_analyze</description></item>
+            /// <item><description>text_embedding: text embedding</description></item>
+            /// <item><description>rerank: reranking</description></item>
+            /// <item><description>doc_split: document splitting</description></item>
+            /// <item><description>completion: large language model service</description></item>
+            /// <item><description>query_analyze: query analysis</description></item>
+            /// <item><description>doc_analyze: document content parsing</description></item>
+            /// <item><description>img_analyze: image content parsing</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ModelType { get; set; }
 
             /// <summary>
-            /// <para>Service ID of the Search Open Platform</para>
+            /// <para>The service ID of the AISearch open platform.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ops-text-embedding-**</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>Workspace.</para>
+        /// <para>The workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

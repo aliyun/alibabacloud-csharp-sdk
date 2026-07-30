@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>Indicates whether the Grafana alert list is retrieved. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The alert list is retrieved.</description></item>
-        /// <item><description>false: The alert list failed to be retrieved.</description></item>
+        /// <item><description>true: Succeeded.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the index template.</para>
+        /// <para>The index template details.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public bool? DataStream { get; set; }
 
             /// <summary>
-            /// <para>The Policy Name of the lifecycle epoch.</para>
+            /// <para>The lifecycle policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cube_default_ilm_policy</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public List<string> IndexPatterns { get; set; }
 
             /// <summary>
-            /// <para>The name of the index template.</para>
+            /// <para>The index template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>data-stream-default</para>

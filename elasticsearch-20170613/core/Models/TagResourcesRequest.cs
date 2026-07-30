@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set this parameter to INSTANCE.</para>
+        /// <para>The resource type. The value is fixed as INSTANCE.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

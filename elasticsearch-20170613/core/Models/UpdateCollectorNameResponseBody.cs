@@ -62,10 +62,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the collector is validated only without being created. Valid values:</para>
+            /// <para>Indicates whether the collector is validated and created. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Only validates without updating.</description></item>
-            /// <item><description>false: Validates and updates.</description></item>
+            /// <item><description>true: Only validated, not updated.</description></item>
+            /// <item><description>false: Validated and updated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public List<string> Hosts { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance associated with the collector. When <b>configType</b> is <b>collectorTargetInstance</b>, this is the instance ID of the collector Output. When <b>configType</b> is <b>collectorDeployMachines</b> and <b>type</b> is <b>ACKCluster</b>, this is the ACK cluster ID.</para>
+                /// <para>The instance ID associated with the collector. When <b>configType</b> is <b>collectorTargetInstance</b>, this is the instance ID of the collector Output. When <b>configType</b> is <b>collectorDeployMachines</b> and <b>type</b> is <b>ACKCluster</b>, this is the ACK cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>es-cn-n6w1o1****</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <para>The collector version. The supported versions depend on the type of machine on which the collector is deployed:</para>
             /// <list type="bullet">
             /// <item><description>ECS: 6.8.5_with_community</description></item>
-            /// <item><description>ACK: 6.8.13_with_community.</description></item>
+            /// <item><description>ACK: 6.8.13_with_community</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

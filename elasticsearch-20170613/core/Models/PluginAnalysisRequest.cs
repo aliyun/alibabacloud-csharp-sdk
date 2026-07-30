@@ -10,8 +10,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class PluginAnalysisRequest : TeaModel {
         /// <summary>
-        /// <para>Request body parameters  </para>
-        /// <pre><code class="language-json">
+        /// <para>The request body parameters.</para>
+        /// <pre><code class="language-[">  {
+        ///     &quot;name&quot;: &quot;plugin_name.zip&quot;,// plugin name
+        ///     &quot;ossObject&quot;: {
+        ///       &quot;bucketName&quot;: &quot;bucketName&quot;,// oss bucket name
+        ///       &quot;key&quot;: &quot;my_plugin_dir/plugin_name.zip&quot; // oss file name 
+        ///     }
+        ///   }
+        /// ]
+        /// `
         /// </c></pre>
         /// 
         /// <b>Example:</b>
@@ -28,10 +36,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Body { get; set; }
 
         /// <summary>
-        /// <para>Whether to perform pre-upgrade validation:  </para>
+        /// <para>Specifies whether to perform a pre-upload check. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Validate only  </description></item>
-        /// <item><description>false: Upload directly</description></item>
+        /// <item><description>true: Only performs the check.</description></item>
+        /// <item><description>false: Directly uploads the plug-in.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string RepoPath { get; set; }
 
             /// <summary>
-            /// <para>The name of the referenced repository.</para>
+            /// <para>The referenced repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun_snapshot_from_es-cn-6ja1ro4jt000c****</para>

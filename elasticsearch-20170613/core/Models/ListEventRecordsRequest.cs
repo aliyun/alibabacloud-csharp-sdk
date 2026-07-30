@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListEventRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>Start time for event query.</para>
+        /// <para>The start time of the event query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1746516590000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string BeginTime { get; set; }
 
         /// <summary>
-        /// <para>End time for event query.</para>
+        /// <para>The end time of the event query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1746775790000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Page number for paged query.</para>
+        /// <para>The page number for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page for paged query.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>Object content used for filtering. This parameter is optional. If empty, event records for all instances are returned. Note: The value passed must correspond to the selected filter type.</para>
+        /// <para>The filter object content. If this parameter is left empty, event records of all instances are returned. The value varies based on the filter type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>**</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string TermContent { get; set; }
 
         /// <summary>
-        /// <para>Object type used for filtering. This parameter is optional. If empty, event records of all types are returned.</para>
+        /// <para>The filter object type. If this parameter is left empty, event records of all types are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceId</para>

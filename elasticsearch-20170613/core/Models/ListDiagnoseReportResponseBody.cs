@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     /// <list type="bullet">
                     /// <item><description>TEXT: text description</description></item>
                     /// <item><description>CONSOLE_API: console-triggered</description></item>
-                    /// <item><description>ES_API: API-triggered.</description></item>
+                    /// <item><description>ES_API: API-triggered</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <list type="bullet">
             /// <item><description>SYSTEM: automatically triggered by the system</description></item>
             /// <item><description>INNER: internally triggered</description></item>
-            /// <item><description>USER: manually triggered by the user.</description></item>
+            /// <item><description>USER: manually triggered by the user</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

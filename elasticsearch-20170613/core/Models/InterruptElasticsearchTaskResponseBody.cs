@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class InterruptElasticsearchTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is returned only when an exception occurs.</para>
+        /// <para>The error code. This parameter is displayed only when an exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceStatusNotSupportCurrentAction</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message. This parameter is returned only when an exception occurs.</para>
+        /// <para>The error message. This parameter is displayed only when an exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The cluster is running tasks or in an error status. Try again later.</para>

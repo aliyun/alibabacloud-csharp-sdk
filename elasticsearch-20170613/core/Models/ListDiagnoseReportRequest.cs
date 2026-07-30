@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <para>The end timestamp of the query. Unit: milliseconds.</para>
         /// <list type="bullet">
         /// <item><description>Minimum value: 1000000000000</description></item>
-        /// <item><description>Maximum value: 2000000000000.</description></item>
+        /// <item><description>Maximum value: 2000000000000</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <item><description>zh: Simplified Chinese</description></item>
         /// <item><description>zt: Traditional Chinese</description></item>
         /// <item><description>es: Spanish</description></item>
-        /// <item><description>fr: French.</description></item>
+        /// <item><description>fr: French</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <para>The start timestamp of the query. Unit: milliseconds.</para>
         /// <list type="bullet">
         /// <item><description>Minimum value: 1000000000000</description></item>
-        /// <item><description>Maximum value: 2000000000000.</description></item>
+        /// <item><description>Maximum value: 2000000000000</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <list type="bullet">
         /// <item><description>SYSTEM (default): automatically triggered by the system</description></item>
         /// <item><description>INNER: internally triggered</description></item>
-        /// <item><description>USER: manually triggered by the user.</description></item>
+        /// <item><description>USER: manually triggered by the user</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

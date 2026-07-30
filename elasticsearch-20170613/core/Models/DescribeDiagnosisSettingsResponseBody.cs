@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string DiagnosisMode { get; set; }
 
             /// <summary>
-            /// <para>The scenario of intelligent O&amp;M.</para>
+            /// <para>The common scenarios of intelligent diagnosis and optimization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Business Search</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public List<string> SelectedItems { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the intelligent O&amp;M scenario was last updated.</para>
+            /// <para>The UNIX timestamp when the intelligent diagnosis and optimization common scenarios were last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1588994035385</para>

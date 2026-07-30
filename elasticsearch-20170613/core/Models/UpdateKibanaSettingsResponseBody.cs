@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The Kibana language was modified.</description></item>
+        /// <item><description>true: The Kibana language is modified.</description></item>
         /// <item><description>false: The Kibana language failed to be modified.</description></item>
         /// </list>
         /// 

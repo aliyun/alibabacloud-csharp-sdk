@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <item><description>staticSettings: elasticsearch.yml configuration</description></item>
             /// <item><description>ilmPolicy: index lifecycle configuration</description></item>
             /// <item><description>indexTemplate: index template configuration</description></item>
-            /// <item><description>dynamicSettings: cluster dynamic configuration.</description></item>
+            /// <item><description>dynamicSettings: cluster dynamic configuration</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

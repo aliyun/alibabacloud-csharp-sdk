@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpgradeInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Result body</para>
+        /// <para>The result body.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public UpgradeInfoResponseBodyResult Result { get; set; }
         public class UpgradeInfoResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Upgrade information.</para>
+            /// <para>The upgrade information.</para>
             /// </summary>
             [NameInMap("UpgradeInfo")]
             [Validation(Required=false)]
             public UpgradeInfoResponseBodyResultUpgradeInfo UpgradeInfo { get; set; }
             public class UpgradeInfoResponseBodyResultUpgradeInfo : TeaModel {
                 /// <summary>
-                /// <para>Current repo version.</para>
+                /// <para>The current repo version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.7.3</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string CurRepoVersion { get; set; }
 
                 /// <summary>
-                /// <para>Upgradable repo version.</para>
+                /// <para>The repo version available for upgrade.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.7.3</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string UpdateRepoVersion { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether an upgradable version exists.</para>
+                /// <para>Indicates whether an upgradeable version is available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public bool? Upgrade { get; set; }
 
                 /// <summary>
-                /// <para>Current Milvus version</para>
+                /// <para>The current kernel version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.2.4</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string CurApackVersion { get; set; }
 
                 /// <summary>
-                /// <para>Current ES version</para>
+                /// <para>The current Elasticsearch version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8.17.0</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string CurEsVersion { get; set; }
 
                 /// <summary>
-                /// <para>Upgradable Milvus version.</para>
+                /// <para>The kernel version available for upgrade.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.2.4</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string UpgradeApackVersion { get; set; }
 
                 /// <summary>
-                /// <para>Upgradable ES version</para>
+                /// <para>The Elasticsearch version available for upgrade.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8.17.0</para>

@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>Indicates whether private network access for Kibana is created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The operation is successful.</description></item>
-        /// <item><description>false: The operation failed.</description></item>
+        /// <item><description>true: Succeeded.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
