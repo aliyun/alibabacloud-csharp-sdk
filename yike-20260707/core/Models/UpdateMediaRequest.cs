@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class UpdateMediaRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to update the Tags field in append mode.</para>
+        /// </summary>
         [NameInMap("AppendTags")]
         [Validation(Required=false)]
         public bool? AppendTags { get; set; }
@@ -18,6 +21,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
+        /// <para>The cover image URL. This parameter is valid only for video media assets.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://bullet-time-20240910.oss-cn-shanghai.aliyuncs.com/ice-generated/a97255309a7c71f093d3e7f6d75a6302/snapshots/normal/2a4030b1950443048f3e3f81489d57eb-00001.jpg">https://bullet-time-20240910.oss-cn-shanghai.aliyuncs.com/ice-generated/a97255309a7c71f093d3e7f6d75a6302/snapshots/normal/2a4030b1950443048f3e3f81489d57eb-00001.jpg</a></para>
         /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string CoverURL { get; set; }
 
         /// <summary>
+        /// <para>The description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The dynamic metadata.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string DynamicMetaData { get; set; }
 
         /// <summary>
+        /// <para>The media type of the media asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></para>
         /// </summary>
@@ -50,6 +61,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string InputURL { get; set; }
 
         /// <summary>
+        /// <para>The media asset ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
         /// </summary>
@@ -58,14 +71,18 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string MediaId { get; set; }
 
         /// <summary>
+        /// <para>The tags. Separate multiple tags with commas.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>剪映动画</para>
+        /// <para>CapCut animation.</para>
         /// </summary>
         [NameInMap("MediaTags")]
         [Validation(Required=false)]
         public string MediaTags { get; set; }
 
         /// <summary>
+        /// <para>The title.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>title</para>
         /// </summary>
@@ -74,6 +91,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Title { get; set; }
 
         /// <summary>
+        /// <para>The user data. The maximum length is 1024 bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>

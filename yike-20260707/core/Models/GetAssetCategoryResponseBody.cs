@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetAssetCategoryResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The category details.</para>
+        /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public GetAssetCategoryResponseBodyCategory Category { get; set; }
         public class GetAssetCategoryResponseBodyCategory : TeaModel {
             /// <summary>
+            /// <para>The category ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>50</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public long? CategoryId { get; set; }
 
             /// <summary>
+            /// <para>The category name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>scenery</para>
             /// </summary>
@@ -30,6 +37,13 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string CategoryName { get; set; }
 
             /// <summary>
+            /// <para>The category level. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: level-1 category.</description></item>
+            /// <item><description><b>1</b>: level-2 category.</description></item>
+            /// <item><description><b>2</b>: level-3 category.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +52,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public long? Level { get; set; }
 
             /// <summary>
+            /// <para>The parent category ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -48,6 +64,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>
         /// </summary>
@@ -55,11 +73,16 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of subcategories.</para>
+        /// </summary>
         [NameInMap("SubCategories")]
         [Validation(Required=false)]
         public List<GetAssetCategoryResponseBodySubCategories> SubCategories { get; set; }
         public class GetAssetCategoryResponseBodySubCategories : TeaModel {
             /// <summary>
+            /// <para>The category ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>55</para>
             /// </summary>
@@ -68,6 +91,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public long? CategoryId { get; set; }
 
             /// <summary>
+            /// <para>The category name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sea</para>
             /// </summary>
@@ -76,6 +101,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string CategoryName { get; set; }
 
             /// <summary>
+            /// <para>The category level.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -84,6 +111,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public long? Level { get; set; }
 
             /// <summary>
+            /// <para>The parent category ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>50</para>
             /// </summary>
@@ -92,6 +121,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public long? ParentId { get; set; }
 
             /// <summary>
+            /// <para>The total number of subcategories.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -102,6 +133,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         }
 
         /// <summary>
+        /// <para>The number of subcategories.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

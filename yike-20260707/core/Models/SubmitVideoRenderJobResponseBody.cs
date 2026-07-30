@@ -8,40 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
-    public class GetYikeJobCreditResponseBody : TeaModel {
+    public class SubmitVideoRenderJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The credit deduction status.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>200</para>
         /// </summary>
-        [NameInMap("CreditStatus")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public string CreditStatus { get; set; }
+        public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The actual credits consumed.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>20</para>
-        /// </summary>
-        [NameInMap("JobCreditCost")]
-        [Validation(Required=false)]
-        public double? JobCreditCost { get; set; }
-
-        /// <summary>
-        /// <para>The task ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ag_12412424****</para>
+        /// <para>68ca759e798b40b4903b255*******</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>

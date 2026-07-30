@@ -44,13 +44,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Retrieves information about multiple media assets in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -96,13 +95,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Retrieves information about multiple media assets in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -148,13 +146,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Retrieves information about multiple media assets in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -172,13 +169,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Retrieves information about multiple media assets in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -196,12 +192,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建分类</para>
+        /// <para>Creates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分类最多支持三级分类，每级分类最多支持创建 100 个子分类。</para>
+        /// <para>Categories support up to three levels, and each level supports up to 100 subcategories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -247,12 +243,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建分类</para>
+        /// <para>Creates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分类最多支持三级分类，每级分类最多支持创建 100 个子分类。</para>
+        /// <para>Categories support up to three levels, and each level supports up to 100 subcategories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -298,12 +294,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建分类</para>
+        /// <para>Creates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分类最多支持三级分类，每级分类最多支持创建 100 个子分类。</para>
+        /// <para>Categories support up to three levels, and each level supports up to 100 subcategories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -321,12 +317,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建分类</para>
+        /// <para>Creates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分类最多支持三级分类，每级分类最多支持创建 100 个子分类。</para>
+        /// <para>Categories support up to three levels, and each level supports up to 100 subcategories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -344,12 +340,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除分类</para>
+        /// <para>Deletes a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>此接口会同时删除其子分类（包括二级分类和三级分类），请慎重操作。</para>
+        /// <para>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -391,12 +387,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除分类</para>
+        /// <para>Deletes a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>此接口会同时删除其子分类（包括二级分类和三级分类），请慎重操作。</para>
+        /// <para>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -438,12 +434,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除分类</para>
+        /// <para>Deletes a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>此接口会同时删除其子分类（包括二级分类和三级分类），请慎重操作。</para>
+        /// <para>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -461,12 +457,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除分类</para>
+        /// <para>Deletes a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>此接口会同时删除其子分类（包括二级分类和三级分类），请慎重操作。</para>
+        /// <para>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -484,7 +480,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -534,7 +530,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -584,7 +580,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -602,7 +598,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -620,7 +616,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询分类</para>
+        /// <para>Retrieves the information of a specified category and the list of its subcategories (immediate child categories).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -662,7 +658,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询分类</para>
+        /// <para>Retrieves the information of a specified category and the list of its subcategories (immediate child categories).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -704,7 +700,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询分类</para>
+        /// <para>Retrieves the information of a specified category and the list of its subcategories (immediate child categories).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -722,7 +718,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询分类</para>
+        /// <para>Retrieves the information of a specified category and the list of its subcategories (immediate child categories).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -740,7 +736,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询图片生成任务</para>
+        /// <para>Queries an image generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -782,7 +778,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询图片生成任务</para>
+        /// <para>Queries an image generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -824,7 +820,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询图片生成任务</para>
+        /// <para>Queries an image generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -842,7 +838,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询图片生成任务</para>
+        /// <para>Queries an image generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1020,13 +1016,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询媒资内容理解作业</para>
+        /// <para>Queries a media asset content understanding job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Description</h2>
+        /// <para>This API is used to query a media asset content understanding job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1068,13 +1064,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询媒资内容理解作业</para>
+        /// <para>Queries a media asset content understanding job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Description</h2>
+        /// <para>This API is used to query a media asset content understanding job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1116,13 +1112,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询媒资内容理解作业</para>
+        /// <para>Queries a media asset content understanding job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Description</h2>
+        /// <para>This API is used to query a media asset content understanding job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1140,13 +1136,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询媒资内容理解作业</para>
+        /// <para>Queries a media asset content understanding job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Description</h2>
+        /// <para>This API is used to query a media asset content understanding job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1164,7 +1160,127 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频生成任务</para>
+        /// <para>Queries a creative script generation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRemakeScriptJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRemakeScriptJobResponse
+        /// </returns>
+        public GetRemakeScriptJobResponse GetRemakeScriptJobWithOptions(GetRemakeScriptJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRemakeScriptJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRemakeScriptJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a creative script generation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRemakeScriptJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRemakeScriptJobResponse
+        /// </returns>
+        public async Task<GetRemakeScriptJobResponse> GetRemakeScriptJobWithOptionsAsync(GetRemakeScriptJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRemakeScriptJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRemakeScriptJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a creative script generation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRemakeScriptJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRemakeScriptJobResponse
+        /// </returns>
+        public GetRemakeScriptJobResponse GetRemakeScriptJob(GetRemakeScriptJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRemakeScriptJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a creative script generation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRemakeScriptJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRemakeScriptJobResponse
+        /// </returns>
+        public async Task<GetRemakeScriptJobResponse> GetRemakeScriptJobAsync(GetRemakeScriptJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRemakeScriptJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1210,7 +1326,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频生成任务</para>
+        /// <para>Queries a video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1256,7 +1372,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频生成任务</para>
+        /// <para>Queries a video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1274,7 +1390,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频生成任务</para>
+        /// <para>Queries a video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1292,7 +1408,127 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻主账户会员计划及积分情况</para>
+        /// <para>查询爆款新视频渲染任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoRenderJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoRenderJobResponse
+        /// </returns>
+        public GetVideoRenderJobResponse GetVideoRenderJobWithOptions(GetVideoRenderJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoRenderJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoRenderJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询爆款新视频渲染任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoRenderJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoRenderJobResponse
+        /// </returns>
+        public async Task<GetVideoRenderJobResponse> GetVideoRenderJobWithOptionsAsync(GetVideoRenderJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoRenderJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoRenderJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询爆款新视频渲染任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoRenderJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoRenderJobResponse
+        /// </returns>
+        public GetVideoRenderJobResponse GetVideoRenderJob(GetVideoRenderJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVideoRenderJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询爆款新视频渲染任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoRenderJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoRenderJobResponse
+        /// </returns>
+        public async Task<GetVideoRenderJobResponse> GetVideoRenderJobAsync(GetVideoRenderJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVideoRenderJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the membership plan and credit information for a Yike primary account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1326,7 +1562,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻主账户会员计划及积分情况</para>
+        /// <para>Retrieves the membership plan and credit information for a Yike primary account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1360,7 +1596,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻主账户会员计划及积分情况</para>
+        /// <para>Retrieves the membership plan and credit information for a Yike primary account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1378,7 +1614,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻主账户会员计划及积分情况</para>
+        /// <para>Retrieves the membership plan and credit information for a Yike primary account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1396,7 +1632,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻任务实际消耗积分</para>
+        /// <para>Queries the actual credit consumption of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1438,7 +1674,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻任务实际消耗积分</para>
+        /// <para>Queries the actual credit consumption of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1480,7 +1716,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻任务实际消耗积分</para>
+        /// <para>Queries the actual credit consumption of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1498,7 +1734,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻任务实际消耗积分</para>
+        /// <para>Queries the actual credit consumption of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1516,13 +1752,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入媒资</para>
+        /// <para>Imports a media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API is used to query media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1612,13 +1848,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入媒资</para>
+        /// <para>Imports a media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API is used to query media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1708,13 +1944,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入媒资</para>
+        /// <para>Imports a media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API is used to query media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1732,13 +1968,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入媒资</para>
+        /// <para>Imports a media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API is used to query media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1756,7 +1992,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出分类</para>
+        /// <para>Retrieves a paginated list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1802,7 +2038,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出分类</para>
+        /// <para>Retrieves a paginated list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1848,7 +2084,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出分类</para>
+        /// <para>Retrieves a paginated list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1866,7 +2102,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出分类</para>
+        /// <para>Retrieves a paginated list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1884,7 +2120,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索媒资</para>
+        /// <para>Returns media asset information that matches the specified filter conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1946,7 +2182,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索媒资</para>
+        /// <para>Returns media asset information that matches the specified filter conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2008,7 +2244,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索媒资</para>
+        /// <para>Returns media asset information that matches the specified filter conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2026,7 +2262,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索媒资</para>
+        /// <para>Returns media asset information that matches the specified filter conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2044,7 +2280,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交图像生成接口</para>
+        /// <para>Submits an image generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2122,7 +2358,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交图像生成接口</para>
+        /// <para>Submits an image generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2200,7 +2436,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交图像生成接口</para>
+        /// <para>Submits an image generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2218,7 +2454,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交图像生成接口</para>
+        /// <para>Submits an image generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2404,7 +2640,163 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频生成接口</para>
+        /// <para>提交爆款复刻新脚本生成任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该 API 用于根据内容理解的结果与新商品/模特信息，仿写生成新的口播脚本。此外，支持通过UserData字段传递自定义参数，在回调时原样返回。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitRemakeScriptJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitRemakeScriptJobResponse
+        /// </returns>
+        public SubmitRemakeScriptJobResponse SubmitRemakeScriptJobWithOptions(SubmitRemakeScriptJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemakeParams))
+            {
+                query["RemakeParams"] = request.RemakeParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemakeType))
+            {
+                query["RemakeType"] = request.RemakeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitRemakeScriptJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitRemakeScriptJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交爆款复刻新脚本生成任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该 API 用于根据内容理解的结果与新商品/模特信息，仿写生成新的口播脚本。此外，支持通过UserData字段传递自定义参数，在回调时原样返回。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitRemakeScriptJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitRemakeScriptJobResponse
+        /// </returns>
+        public async Task<SubmitRemakeScriptJobResponse> SubmitRemakeScriptJobWithOptionsAsync(SubmitRemakeScriptJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemakeParams))
+            {
+                query["RemakeParams"] = request.RemakeParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemakeType))
+            {
+                query["RemakeType"] = request.RemakeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitRemakeScriptJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitRemakeScriptJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交爆款复刻新脚本生成任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该 API 用于根据内容理解的结果与新商品/模特信息，仿写生成新的口播脚本。此外，支持通过UserData字段传递自定义参数，在回调时原样返回。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitRemakeScriptJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitRemakeScriptJobResponse
+        /// </returns>
+        public SubmitRemakeScriptJobResponse SubmitRemakeScriptJob(SubmitRemakeScriptJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitRemakeScriptJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交爆款复刻新脚本生成任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该 API 用于根据内容理解的结果与新商品/模特信息，仿写生成新的口播脚本。此外，支持通过UserData字段传递自定义参数，在回调时原样返回。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitRemakeScriptJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitRemakeScriptJobResponse
+        /// </returns>
+        public async Task<SubmitRemakeScriptJobResponse> SubmitRemakeScriptJobAsync(SubmitRemakeScriptJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitRemakeScriptJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2486,7 +2878,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频生成接口</para>
+        /// <para>Submits a video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2568,7 +2960,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频生成接口</para>
+        /// <para>Submits a video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2586,7 +2978,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频生成接口</para>
+        /// <para>Submits a video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2604,20 +2996,156 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频翻译任务</para>
+        /// <para>提交爆款新视频渲染任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoRenderJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoRenderJobResponse
+        /// </returns>
+        public SubmitVideoRenderJobResponse SubmitVideoRenderJobWithOptions(SubmitVideoRenderJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Script))
+            {
+                query["Script"] = request.Script;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Settings))
+            {
+                query["Settings"] = request.Settings;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVideoRenderJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVideoRenderJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交爆款新视频渲染任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoRenderJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoRenderJobResponse
+        /// </returns>
+        public async Task<SubmitVideoRenderJobResponse> SubmitVideoRenderJobWithOptionsAsync(SubmitVideoRenderJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Script))
+            {
+                query["Script"] = request.Script;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Settings))
+            {
+                query["Settings"] = request.Settings;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVideoRenderJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVideoRenderJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交爆款新视频渲染任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoRenderJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoRenderJobResponse
+        /// </returns>
+        public SubmitVideoRenderJobResponse SubmitVideoRenderJob(SubmitVideoRenderJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitVideoRenderJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交爆款新视频渲染任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoRenderJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoRenderJobResponse
+        /// </returns>
+        public async Task<SubmitVideoRenderJobResponse> SubmitVideoRenderJobAsync(SubmitVideoRenderJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitVideoRenderJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a video translation task that supports subtitle translation, voice translation, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 支持多种视频翻译功能，包括字幕翻译和声音翻译。</description></item>
-        /// <item><description><c>JobType</c> 参数定义了任务类型，如 <c>SubtitleTranslate</c>和<c>VoiceTranslate</c> 。</description></item>
-        /// <item><description><c>Input</c> 和 <c>Output</c> 参数分别指定了输入资源和输出路径。</description></item>
-        /// <item><description><c>JobParameters</c> 包含了语言配置和其他能力开关，如 <c>SourceLanguage</c>、<c>TargetLanguage</c>、<c>NeedDetext</c> 和 <c>NeedVisualTranslate</c> 等。</description></item>
-        /// <item><description><c>EditingConfig</c> 可以用来指定最终剪辑合成的样式配置。</description></item>
-        /// <item><description><c>ClientToken</c> 是一个可选参数，用于保证请求的幂等性。</description></item>
-        /// <item><description>请确保所有必填字段都已正确填写，否则可能会导致请求失败。</description></item>
+        /// <item><description>This API supports multiple video translation features, including subtitle translation and voice translation.</description></item>
+        /// <item><description>The <c>JobType</c> parameter defines the task type, such as <c>SubtitleTranslate</c> and <c>VoiceTranslate</c>.</description></item>
+        /// <item><description>The <c>Input</c> and <c>Output</c> parameters specify the input resource and output path, respectively.</description></item>
+        /// <item><description><c>JobParameters</c> contains language configuration and other feature switches, such as <c>SourceLanguage</c>, <c>TargetLanguage</c>, <c>NeedDetext</c>, and <c>NeedVisualTranslate</c>.</description></item>
+        /// <item><description><c>EditingConfig</c> can be used to specify the style configuration for the final editing and compositing.</description></item>
+        /// <item><description><c>ClientToken</c> is an optional parameter used to ensure the idempotence of the request.</description></item>
+        /// <item><description>Ensure that all required fields are correctly filled in. Otherwise, the request may fail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2688,20 +3216,20 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频翻译任务</para>
+        /// <para>Submits a video translation task that supports subtitle translation, voice translation, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 支持多种视频翻译功能，包括字幕翻译和声音翻译。</description></item>
-        /// <item><description><c>JobType</c> 参数定义了任务类型，如 <c>SubtitleTranslate</c>和<c>VoiceTranslate</c> 。</description></item>
-        /// <item><description><c>Input</c> 和 <c>Output</c> 参数分别指定了输入资源和输出路径。</description></item>
-        /// <item><description><c>JobParameters</c> 包含了语言配置和其他能力开关，如 <c>SourceLanguage</c>、<c>TargetLanguage</c>、<c>NeedDetext</c> 和 <c>NeedVisualTranslate</c> 等。</description></item>
-        /// <item><description><c>EditingConfig</c> 可以用来指定最终剪辑合成的样式配置。</description></item>
-        /// <item><description><c>ClientToken</c> 是一个可选参数，用于保证请求的幂等性。</description></item>
-        /// <item><description>请确保所有必填字段都已正确填写，否则可能会导致请求失败。</description></item>
+        /// <item><description>This API supports multiple video translation features, including subtitle translation and voice translation.</description></item>
+        /// <item><description>The <c>JobType</c> parameter defines the task type, such as <c>SubtitleTranslate</c> and <c>VoiceTranslate</c>.</description></item>
+        /// <item><description>The <c>Input</c> and <c>Output</c> parameters specify the input resource and output path, respectively.</description></item>
+        /// <item><description><c>JobParameters</c> contains language configuration and other feature switches, such as <c>SourceLanguage</c>, <c>TargetLanguage</c>, <c>NeedDetext</c>, and <c>NeedVisualTranslate</c>.</description></item>
+        /// <item><description><c>EditingConfig</c> can be used to specify the style configuration for the final editing and compositing.</description></item>
+        /// <item><description><c>ClientToken</c> is an optional parameter used to ensure the idempotence of the request.</description></item>
+        /// <item><description>Ensure that all required fields are correctly filled in. Otherwise, the request may fail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2772,20 +3300,20 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频翻译任务</para>
+        /// <para>Submits a video translation task that supports subtitle translation, voice translation, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 支持多种视频翻译功能，包括字幕翻译和声音翻译。</description></item>
-        /// <item><description><c>JobType</c> 参数定义了任务类型，如 <c>SubtitleTranslate</c>和<c>VoiceTranslate</c> 。</description></item>
-        /// <item><description><c>Input</c> 和 <c>Output</c> 参数分别指定了输入资源和输出路径。</description></item>
-        /// <item><description><c>JobParameters</c> 包含了语言配置和其他能力开关，如 <c>SourceLanguage</c>、<c>TargetLanguage</c>、<c>NeedDetext</c> 和 <c>NeedVisualTranslate</c> 等。</description></item>
-        /// <item><description><c>EditingConfig</c> 可以用来指定最终剪辑合成的样式配置。</description></item>
-        /// <item><description><c>ClientToken</c> 是一个可选参数，用于保证请求的幂等性。</description></item>
-        /// <item><description>请确保所有必填字段都已正确填写，否则可能会导致请求失败。</description></item>
+        /// <item><description>This API supports multiple video translation features, including subtitle translation and voice translation.</description></item>
+        /// <item><description>The <c>JobType</c> parameter defines the task type, such as <c>SubtitleTranslate</c> and <c>VoiceTranslate</c>.</description></item>
+        /// <item><description>The <c>Input</c> and <c>Output</c> parameters specify the input resource and output path, respectively.</description></item>
+        /// <item><description><c>JobParameters</c> contains language configuration and other feature switches, such as <c>SourceLanguage</c>, <c>TargetLanguage</c>, <c>NeedDetext</c>, and <c>NeedVisualTranslate</c>.</description></item>
+        /// <item><description><c>EditingConfig</c> can be used to specify the style configuration for the final editing and compositing.</description></item>
+        /// <item><description><c>ClientToken</c> is an optional parameter used to ensure the idempotence of the request.</description></item>
+        /// <item><description>Ensure that all required fields are correctly filled in. Otherwise, the request may fail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2804,20 +3332,20 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频翻译任务</para>
+        /// <para>Submits a video translation task that supports subtitle translation, voice translation, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 支持多种视频翻译功能，包括字幕翻译和声音翻译。</description></item>
-        /// <item><description><c>JobType</c> 参数定义了任务类型，如 <c>SubtitleTranslate</c>和<c>VoiceTranslate</c> 。</description></item>
-        /// <item><description><c>Input</c> 和 <c>Output</c> 参数分别指定了输入资源和输出路径。</description></item>
-        /// <item><description><c>JobParameters</c> 包含了语言配置和其他能力开关，如 <c>SourceLanguage</c>、<c>TargetLanguage</c>、<c>NeedDetext</c> 和 <c>NeedVisualTranslate</c> 等。</description></item>
-        /// <item><description><c>EditingConfig</c> 可以用来指定最终剪辑合成的样式配置。</description></item>
-        /// <item><description><c>ClientToken</c> 是一个可选参数，用于保证请求的幂等性。</description></item>
-        /// <item><description>请确保所有必填字段都已正确填写，否则可能会导致请求失败。</description></item>
+        /// <item><description>This API supports multiple video translation features, including subtitle translation and voice translation.</description></item>
+        /// <item><description>The <c>JobType</c> parameter defines the task type, such as <c>SubtitleTranslate</c> and <c>VoiceTranslate</c>.</description></item>
+        /// <item><description>The <c>Input</c> and <c>Output</c> parameters specify the input resource and output path, respectively.</description></item>
+        /// <item><description><c>JobParameters</c> contains language configuration and other feature switches, such as <c>SourceLanguage</c>, <c>TargetLanguage</c>, <c>NeedDetext</c>, and <c>NeedVisualTranslate</c>.</description></item>
+        /// <item><description><c>EditingConfig</c> can be used to specify the style configuration for the final editing and compositing.</description></item>
+        /// <item><description><c>ClientToken</c> is an optional parameter used to ensure the idempotence of the request.</description></item>
+        /// <item><description>Ensure that all required fields are correctly filled in. Otherwise, the request may fail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2836,12 +3364,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒资分类</para>
+        /// <para>Updates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建媒资分类后，可调用本接口通过分类 ID 来定位并更新媒资分类的名称。</para>
+        /// <para>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2887,12 +3415,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒资分类</para>
+        /// <para>Updates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建媒资分类后，可调用本接口通过分类 ID 来定位并更新媒资分类的名称。</para>
+        /// <para>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2938,12 +3466,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒资分类</para>
+        /// <para>Updates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建媒资分类后，可调用本接口通过分类 ID 来定位并更新媒资分类的名称。</para>
+        /// <para>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2961,12 +3489,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新媒资分类</para>
+        /// <para>Updates a media asset category.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建媒资分类后，可调用本接口通过分类 ID 来定位并更新媒资分类的名称。</para>
+        /// <para>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2984,13 +3512,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateMedia</para>
+        /// <para>Updates media asset information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API is used to query media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3068,13 +3596,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateMedia</para>
+        /// <para>Updates media asset information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API is used to query media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3152,13 +3680,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateMedia</para>
+        /// <para>Updates media asset information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API is used to query media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3176,13 +3704,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateMedia</para>
+        /// <para>Updates media asset information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API is used to query media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">

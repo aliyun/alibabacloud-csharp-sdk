@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class CreateAssetCategoryRequest : TeaModel {
         /// <summary>
+        /// <para>The category name.</para>
+        /// <para>Maximum length: 64 bytes.</para>
+        /// <para>UTF-8 encoding.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +23,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string CategoryName { get; set; }
 
         /// <summary>
+        /// <para>The parent category ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

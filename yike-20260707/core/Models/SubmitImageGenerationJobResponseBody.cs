@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitImageGenerationJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ag_68ca759b4903b255*******</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>

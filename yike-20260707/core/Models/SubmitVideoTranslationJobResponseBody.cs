@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitVideoTranslationJobResponseBody : TeaModel {
         /// <summary>
+        /// <para><c>data.JobId</c></para>
+        /// 
         /// <b>Example:</b>
         /// <para>vtj_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para><c>requestId</c></para>
+        /// 
         /// <b>Example:</b>
         /// <para>request-id</para>
         /// </summary>

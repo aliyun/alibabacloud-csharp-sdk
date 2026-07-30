@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitVideoTranslationJobRequest : TeaModel {
         /// <summary>
+        /// <para>The user-level idempotency key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>3e761e9d11edba640c42a1b7</b></b></para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The job description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>description</para>
         /// </summary>
@@ -26,6 +30,13 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The input configuration JSON string:</para>
+        /// <list type="bullet">
+        /// <item><description>Video</description></item>
+        /// <item><description>Audio</description></item>
+        /// <item><description>Subtitle</description></item>
+        /// </list>
+        /// <para><notice>Currently, only OSS addresses under the calling account are supported as input.</notice></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +47,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Input { get; set; }
 
         /// <summary>
+        /// <para>The job parameters JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +58,11 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobParameters { get; set; }
 
         /// <summary>
+        /// <para>The job type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SubtitleTranslate</description></item>
+        /// <item><description>VoiceTranslate</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +73,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobType { get; set; }
 
         /// <summary>
+        /// <para>The output configuration JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Output { get; set; }
 
         /// <summary>
+        /// <para>If not specified, the service generates a default title.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>title</para>
         /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Title { get; set; }
 
         /// <summary>
+        /// <para>The custom user data JSON string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>

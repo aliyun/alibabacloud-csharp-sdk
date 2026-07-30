@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class CreateAssetCategoryResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The media asset category information.</para>
+        /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public CreateAssetCategoryResponseBodyCategory Category { get; set; }
         public class CreateAssetCategoryResponseBodyCategory : TeaModel {
             /// <summary>
+            /// <para>The ID of the created category.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>45</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public long? CategoryId { get; set; }
 
             /// <summary>
+            /// <para>The media asset category information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>see below</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string CategoryName { get; set; }
 
             /// <summary>
+            /// <para>The category level. The first-level category has a level of 0, the second-level category has a level of 1, and the third-level category has a level of 2.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public long? Level { get; set; }
 
             /// <summary>
+            /// <para>The parent category ID. If the ParentId parameter is set to empty or a value less than 1, the default return value is -1, which indicates that the created category is a root directory.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>-1</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>
         /// </summary>
