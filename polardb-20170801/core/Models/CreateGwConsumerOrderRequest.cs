@@ -21,7 +21,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The expiration time of the API key in ISO 8601 format. The value must be later than the current time.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2027-07-23T03:09:08Z</para>
@@ -42,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The number of API keys to generate, which corresponds to the number of resource plans to purchase. Valid values: 1 to 30.</para>
+        /// <para>The number of API keys to generate, which is the number of resource plans to order. Valid values: 1 to 30.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,10 +54,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The specification tier of the resource plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>basic: 3000 points per plan.</description></item>
-        /// <item><description>advanced: 6000 points per plan.</description></item>
-        /// <item><description>pro: 9000 points per plan.</description></item>
+        /// <item><description>basic</description></item>
+        /// <item><description>advanced</description></item>
+        /// <item><description>pro</description></item>
         /// </list>
+        /// <para>Each value represents the number of credits for a single key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
