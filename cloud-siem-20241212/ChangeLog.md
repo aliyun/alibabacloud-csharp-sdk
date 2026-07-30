@@ -15,6 +15,23 @@
 - Update API ListQueryViews: add response parameters Body.LogStoreName.
 
 
+2026-07-30 Version: 2.5.0
+- Support API DeleteNormalizationSchema.
+- Support API UpdateDataConnector.
+- Update API CreateDetectionRule: add request parameters DetectionRules.
+- Update API GetDataStorage: add response parameters Body.Data.LogProjectState.
+- Update API GetDataStorage: add response parameters Body.Data.LogProjectStateChangeAllowed.
+- Update API GetDataStorage: add response parameters Body.Data.LogServiceDisabled.
+- Update API ListIncidents: add request parameters IncidentStatusList.
+- Update API ListIncidents: add response parameters Body.Incidents.$.AlertInfos.
+- Update API ListIncidents: add response parameters Body.Incidents.$.AttckTactics.
+- Update API ListIncidents: add response parameters Body.Incidents.$.EntityInfos.
+- Update API ListIncidents: add response parameters Body.Incidents.$.IncidentDescription.
+- Update API ListQueryViews: add response parameters Body.LogProjectName.
+- Update API ListQueryViews: add response parameters Body.LogRegionId.
+- Update API ListQueryViews: add response parameters Body.LogStoreName.
+
+
 2026-07-06 Version: 2.4.0
 - Support API ListDataConnectors.
 - Support API UpdateAlert.
