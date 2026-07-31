@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class BatchApplyAdviceByIdListRequest : TeaModel {
         /// <summary>
-        /// <para>The date on which you want to apply the suggestion. Format: yyyyMMdd.</para>
+        /// <para>The date when the suggestions were generated. Format: yyyyMMdd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20221115</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? AdviceDate { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the suggestions that you want to apply. Separate multiple IDs with commas (,).</para>
+        /// <para>The list of suggestion IDs to apply in batches. Separate multiple suggestion IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>c2589ff3-e86c-4f19-80c8-2aeb7dd9****,53414470-ebf4-4a53-a312-8a1ad8fd****,6e8dce84-fec8-4b0b-9c04-b0cea12c****,b3b9703d-55ca-47e0-96dd-6a4a9dbf****</para>
@@ -29,19 +29,28 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string AdviceIdList { get; set; }
 
+        /// <summary>
+        /// <para>The adoption type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DROP_INDEX</para>
+        /// </summary>
         [NameInMap("ApplyType")]
         [Validation(Required=false)]
         public string ApplyType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to immediately start a build task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("BuildImmediately")]
         [Validation(Required=false)]
         public bool? BuildImmediately { get; set; }
 
         /// <summary>
         /// <para>The cluster ID.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

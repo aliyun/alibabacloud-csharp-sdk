@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The source IP address.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to view the resource groups, database names, usernames, and source IP addresses for the SQL statements that meet the specified query conditions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ClientIp { get; set; }
 
         /// <summary>
-        /// <para>The Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster ID.</para>
+        /// <para>The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to view the details of all clusters in your account, including cluster IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database on which the SQL statements are executed.</para>
+        /// <para>The database where the SQL statement is executed.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to view the resource groups, database names, usernames, and source IP addresses for the SQL statements that meet the specified query conditions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,15 +50,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end of the time range to query. Specify the time in the UNIX timestamp format. The time must be in milliseconds.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
         /// <item><description><para>The end time must be later than the start time.</para>
         /// </description></item>
-        /// <item><description><para>The maximum time range that can be specified is 24 hours.</para>
+        /// <item><description><para>The interval between the start time and the end time cannot exceed 24 hours.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1633017540000</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The query keyword of the SQL statements.</para>
+        /// <para>Filters the queries by the keywords contained in the SQL statements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>select</para>
@@ -78,12 +78,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The language of file titles and error messages. Valid values:</para>
+        /// <para>The language of the file title and some error messages in the downloaded file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): simplified Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
-        /// <item><description><b>ja</b>: Japanese.</description></item>
-        /// <item><description><b>zh-tw</b>: traditional Chinese.</description></item>
+        /// <item><description><para><b>zh</b>: Simplified Chinese (default).</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
+        /// <item><description><para><b>ja</b>: Japanese.</para>
+        /// </description></item>
+        /// <item><description><para><b>zh-tw</b>: Traditional Chinese.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum peak memory of the SQL statements. Unit: bytes.</para>
+        /// <para>The maximum peak memory of the SQL statement. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>89000000</para>
@@ -104,7 +108,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? MaxPeakMemory { get; set; }
 
         /// <summary>
-        /// <para>The maximum scan size of the SQL statements. Unit: bytes.</para>
+        /// <para>The maximum scan size of the target SQL statement. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024000000</para>
@@ -114,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? MaxScanSize { get; set; }
 
         /// <summary>
-        /// <para>The minimum peak memory of the SQL statements. Unit: bytes.</para>
+        /// <para>The minimum peak memory of the SQL statement. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -124,7 +128,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? MinPeakMemory { get; set; }
 
         /// <summary>
-        /// <para>The minimum scan size of the SQL statements. Unit: bytes.</para>
+        /// <para>The minimum scan size of the SQL statement. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -134,29 +138,44 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? MinScanSize { get; set; }
 
         /// <summary>
-        /// <para>The order in which to sort the SQL statements by field, which contains the <c>Field</c> and <c>Type</c> fields. Specify the order in the JSON format. Example: <c>[{&quot;Field&quot;:&quot;StartTime&quot;, &quot;Type&quot;: &quot;desc&quot;}]</c>. Fields:</para>
+        /// <para>The sorting order of the SQL statements. This parameter is a JSON array that is ordered by the sequence of the input array. It contains the <c>Field</c> and <c>Type</c> fields. Example: <c>[{&quot;Field&quot;:&quot;StartTime&quot;, &quot;Type&quot;: &quot;desc&quot; }]</c>. The fields are described as follows:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Field</c> specifies the field that is used to sort the SQL statements. Valid values:</para>
+        /// <item><description><para><c>Field</c> specifies the field by which to sort the SQL statements. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>StartTime</c>: the execution start time.</description></item>
-        /// <item><description><c>Status</c>: the execution status.</description></item>
-        /// <item><description><c>UserName</c>: the username.</description></item>
-        /// <item><description><c>Cost</c>: the execution duration.</description></item>
-        /// <item><description><c>PeakMemory</c>: the peak memory.</description></item>
-        /// <item><description><c>ScanSize</c>: the amount of data that is scanned.</description></item>
-        /// <item><description><c>Database</c>: the name of the database.</description></item>
-        /// <item><description><c>ClientIp</c>: the source IP address.</description></item>
-        /// <item><description><c>ResourceGroup</c>: the name of the resource group.</description></item>
-        /// <item><description><c>QueueTime</c>: the amount of time that is consumed for queuing.</description></item>
-        /// <item><description><c>OutputRows</c>: the number of output rows.</description></item>
-        /// <item><description><c>OutputDataSize</c>: the amount of output data.</description></item>
-        /// <item><description><c>ResourceCostRank</c>: the execution duration rank of operators that are used in the SQL statements. This value takes effect only when <c>QueryCondition</c> is set to <c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</c>.</description></item>
+        /// <item><description><para><c>StartTime</c>: the start time of the execution.</para>
+        /// </description></item>
+        /// <item><description><para><c>Status</c>: the execution state.</para>
+        /// </description></item>
+        /// <item><description><para><c>UserName</c>: the username.</para>
+        /// </description></item>
+        /// <item><description><para><c>Cost</c>: the execution duration.</para>
+        /// </description></item>
+        /// <item><description><para><c>PeakMemory</c>: the peak memory.</para>
+        /// </description></item>
+        /// <item><description><para><c>ScanSize</c>: the amount of scanned data.</para>
+        /// </description></item>
+        /// <item><description><para><c>Database</c>: the database name.</para>
+        /// </description></item>
+        /// <item><description><para><c>ClientIp</c>: the source IP address.</para>
+        /// </description></item>
+        /// <item><description><para><c>ResourceGroup</c>: the resource group.</para>
+        /// </description></item>
+        /// <item><description><para><c>QueueTime</c>: the amount of time that the query waited in a queue.</para>
+        /// </description></item>
+        /// <item><description><para><c>OutputRows</c>: the number of output rows.</para>
+        /// </description></item>
+        /// <item><description><para><c>OutputDataSize</c>: the amount of output data.</para>
+        /// </description></item>
+        /// <item><description><para><c>ResourceCostRank</c>: the ranking of the execution duration of an operator in the SQL statement. This field is returned only when <c>QueryCondition</c> is set to <c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</c>.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>Type</c> specifies the sorting order. Valid values (case-insensitive):</para>
+        /// <item><description><para><c>Type</c> specifies the sorting type. Valid values (case-insensitive):</para>
         /// <list type="bullet">
-        /// <item><description><c>Desc</c>: descending order.</description></item>
-        /// <item><description><c>Asc</c>: ascending order.</description></item>
+        /// <item><description><para><c>Desc</c>: descending order.</para>
+        /// </description></item>
+        /// <item><description><para><c>Asc</c>: ascending order.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -169,7 +188,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. The value must be an integer that is greater than 0. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -181,9 +200,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -194,7 +216,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The SQL pattern ID.</para>
+        /// <para>The ID of the SQL pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5575924945138******</para>
@@ -204,11 +226,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PatternId { get; set; }
 
         /// <summary>
-        /// <para>The query condition for SQL statements, which can contain the <c>Type</c>, <c>Value</c>, <c>Min</c>, and <c>Max</c> fields. Specify the condition in the JSON format. <c>Type</c> specifies the query dimension. Valid values for Type: <c>maxCost</c>, <c>status</c>, and <c>cost</c>. <c>Value</c>, <c>Min</c>, or <c>Max</c> specifies the query range for the dimension. Valid values:</para>
+        /// <para>The conditions for the SQL query. This parameter is a JSON string that contains fields such as Type, <c>Value</c>, <c>Min</c>, and <c>Max</c>. The <c>Type</c> field indicates the query dimension. Valid values for <c>Type</c>: <c>maxCost</c>, <c>status</c>, and <c>cost</c>. The <c>Value</c>, <c>Min</c>, and <c>Max</c> fields specify the query range for the dimension. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>{&quot;Type&quot;:&quot;maxCost&quot;,&quot;Value&quot;:&quot;100&quot;}</c>: queries the top 100 most time-consuming SQL statements. Set <c>Value</c> to 100.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</c>: queries the executed SQL statements. You can set <c>Value</c> to <c>running</c> to query the SQL statements that are being executed. You can also set Value to <c>failed</c> to query the SQL statements that failed to be executed.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;10&quot;,&quot;Max&quot;:&quot;200&quot;}</c>: queries the SQL statements whose execution duration is in the range of 10 to 200 milliseconds. You can also specify custom values for the Min and Max fields.</description></item>
+        /// <item><description><para><c>{&quot;Type&quot;:&quot;maxCost&quot;,&quot;Value&quot;:&quot;100&quot;}</c>: queries the details of the top 100 SQL statements that have the longest execution durations. The <c>Value</c> field can only be set to 100.</para>
+        /// </description></item>
+        /// <item><description><para><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</c>: queries the details of completed SQL statements. You can also set <c>Value</c> to <c>running</c> or <c>failed</c> to query SQL statements that are running or have failed.</para>
+        /// </description></item>
+        /// <item><description><para><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;10&quot;,&quot;Max&quot;:&quot;200&quot;}</c>: queries the details of SQL statements whose execution durations are between 10 ms and 200 ms. You can customize the minimum and maximum execution durations. Unit: milliseconds.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -219,9 +244,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string QueryCondition { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to view the regions and zones supported by AnalyticDB for MySQL, including region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -233,9 +258,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group to which the SQL statements belong.</para>
+        /// <para>The resource group to which the SQL statement belongs.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to view the resource groups, database names, usernames, and source IP addresses for the SQL statements that meet the specified query conditions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -246,9 +271,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourceGroup { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start of the time range to query. Specify the time in the UNIX timestamp format. The time must be in milliseconds.</para>
         /// <remarks>
-        /// <para> You can query data only within the last 14 days.</para>
+        /// <para>Only data from the last 14 days can be queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -259,7 +284,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The username that is used to execute the SQL statements. You can call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to query the resource groups, database names, usernames, and source IP addresses of the SQL statements that meet a query condition.</para>
+        /// <para>The username used to execute the SQL statement.
+        /// Call the <a href="https://help.aliyun.com/document_detail/308210.html">DescribeDiagnosisDimensions</a> operation to view the resource groups, database names, usernames, and source IP addresses for the SQL statements that meet the specified query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_user</para>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The name of the detection item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Oversized non-partitioned tables</para>
+            /// <para>Oversized non-partitioned table</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

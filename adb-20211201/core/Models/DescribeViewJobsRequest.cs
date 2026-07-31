@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeViewJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>am-bp1ub9grke1****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The owner of the view.</para>
+        /// <para>The owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>admin</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterOwner { get; set; }
 
         /// <summary>
-        /// <para>The name of the view.</para>
+        /// <para>The view name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_mv</para>
@@ -40,11 +40,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterViewName { get; set; }
 
         /// <summary>
-        /// <para>The type of the view.</para>
+        /// <para>The view type.</para>
         /// <para>Valid values:</para>
-        /// <para>\-VIRTUAL_VIEW</para>
-        /// <para>\-MATERIALIZED_VIEW</para>
-        /// <para>This parameter is empty by default.</para>
+        /// <list type="bullet">
+        /// <item><description>VIRTUAL_VIEW</description></item>
+        /// <item><description>MATERIALIZED_VIEW</description></item>
+        /// </list>
+        /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MATERIALIZED_VIEW</para>
@@ -54,16 +56,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterViewType { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting. Valid values for Type:</para>
+        /// <para>The sort field.</para>
+        /// <para>Valid values for the sort order:</para>
         /// <list type="bullet">
-        /// <item><description>Asc.</description></item>
-        /// <item><description>Desc.</description></item>
+        /// <item><description>Asc</description></item>
+        /// <item><description>Desc</description></item>
         /// </list>
-        /// <para>Valid values for Field:</para>
+        /// <para>Valid values for the sort field:</para>
         /// <list type="bullet">
-        /// <item><description>StartTime.</description></item>
-        /// <item><description>EndTime;</description></item>
-        /// <item><description>ScheduledStartTime;</description></item>
+        /// <item><description>StartTime</description></item>
+        /// <item><description>EndTime</description></item>
+        /// <item><description>ScheduledStartTime</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

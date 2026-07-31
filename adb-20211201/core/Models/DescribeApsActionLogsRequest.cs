@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-02-11T09:30:00Z</para>
+        /// <para>2023-02-11T09:30Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-02-11T08:30:00Z</para>
+        /// <para>2023-02-11T08:30Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

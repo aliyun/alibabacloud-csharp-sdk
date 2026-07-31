@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAccountPrivilegesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The name of the database account whose privileges you want to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The columns that you want to query. You can use this parameter to query the permissions of the database account on specific columns. This parameter is available only if the PrivilegeType parameter is set to Column.</para>
+        /// <para>Filters the results by column name. This parameter is used only when <c>PrivilegeType</c> is set to <c>Column</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>col1</para>
@@ -31,7 +31,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ColumnPrivilegeObject { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The databases that you want to query. You can use this parameter to query the permissions of the database account on specific databases. This parameter is available only if the PrivilegeType parameter is set to Database, Table, or Column.</para>
+        /// <para>Filters the results by database name. This parameter is used only when <c>PrivilegeType</c> is set to <c>Database</c>, <c>Table</c>, or <c>Column</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>db1</para>
@@ -52,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatabasePrivilegeObject { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start at 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +63,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20.</para>
+        /// <para>The number of entries per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -72,7 +73,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The permission level that you want to query. You can call the <c>DescribeEnabledPrivileges</c> operation to query the permission level of the database account.</para>
+        /// <para>The privilege level to query. To obtain the valid values for this parameter, call the <c>DescribeEnabledPrivileges</c> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Global</para>
@@ -82,7 +83,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PrivilegeType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +94,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tables that you want to query. You can use this parameter to query the permissions of the database account on specific tables. This parameter can be used together with the DatabasePrivilegeObject parameter. This parameter is available only if the PrivilegeType parameter is set to Table or Column.</para>
+        /// <para>Filters the results by table name. You can use this parameter with <c>DatabasePrivilegeObject</c> to refine the search. This parameter is used only when <c>PrivilegeType</c> is set to <c>Table</c> or <c>Column</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>table1</para>

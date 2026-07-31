@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The array of webhooks.</para>
+        /// <para>The webhook array.</para>
         /// </summary>
         [NameInMap("Webhook")]
         [Validation(Required=false)]
         public List<UpdateApsWebhookRequestWebhook> Webhook { get; set; }
         public class UpdateApsWebhookRequestWebhook : TeaModel {
             /// <summary>
-            /// <para>Signed key.</para>
+            /// <para>The signing key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ABC**</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The name of the webhook.</para>
+            /// <para>The webhook name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleWebhookName</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The URL of the request.</para>
+            /// <para>The request URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/webhook">https://example.com/webhook</a></para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Url { get; set; }
 
             /// <summary>
-            /// <para>The ID of the webhook.</para>
+            /// <para>Webhook ID。</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -80,7 +80,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? WebhookId { get; set; }
 
             /// <summary>
-            /// <para>The notification method. Valid values: dingtalk. lark.</para>
+            /// <para>The notification method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>dingtalk: DingTalk.</description></item>
+            /// <item><description>lark: Lark.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>dingtalk</para>

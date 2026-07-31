@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Pattern匹配的最少慢查询个数</para>
+        /// <para>The minimum number of slow queries matched by a pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? MinRewriteQueryCount { get; set; }
 
         /// <summary>
-        /// <para>最小可加速的Pattern数量</para>
+        /// <para>The minimum number of patterns that can be accelerated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The time range for scanning data. Unit: days. Default value: 3.</para>
+        /// <para>The scan time range. Unit: days. Default value: 3.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? ScanQueriesRange { get; set; }
 
         /// <summary>
-        /// <para>This parameter is valid only when SchedulingPolicy is set to weekly. Valid values:</para>
+        /// <para>Valid only when SchedulingPolicy is set to weekly. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Monday</description></item>
         /// <item><description>Tuesday</description></item>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <item><description>Saturday</description></item>
         /// <item><description>Sunday</description></item>
         /// </list>
-        /// <para>Separate multiple days with commas (,).</para>
+        /// <para>Separate multiple days with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Monday;Wednesday</para>
@@ -107,9 +107,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchedulingDay { get; set; }
 
         /// <summary>
-        /// <para>The scheduling policy of the recommendation task. Valid values:</para>
-        /// <para>daily</para>
-        /// <para>weekly</para>
+        /// <para>The recommendation policy. Valid values:</para>
+        /// <para>daily: scheduled on a daily basis.</para>
+        /// <para>weekly: scheduled on a weekly basis.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchedulingPolicy { get; set; }
 
         /// <summary>
-        /// <para>慢查询阈值</para>
+        /// <para>The slow query threshold.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? SlowQueryThreshold { get; set; }
 
         /// <summary>
-        /// <para>The execution time of the recommendation task. Specify the time in the HH:MM:SS format.</para>
+        /// <para>The execution time of the task. Format: HH:MM:SS.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeTableAccessCountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,24 +25,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The order by which to sort query results. Specify the parameter value in the JSON string format. Example: <c>[{&quot;Field&quot;:&quot;TableSchema&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. Fields in the request parameter:</para>
+        /// <para>Sorts the query results by a specified field. The value is a JSON string. Example: <c>[{&quot;Field&quot;:&quot;TableSchema&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Field</c> specifies the field by which to sort the query results. Valid values:</para>
-        /// <list type="bullet">
+        /// <item><description><c>Field</c> specifies the field by which to sort. Valid values:<list type="bullet">
         /// <item><description><c>TableSchema</c>: the name of the database to which the table belongs.</description></item>
-        /// <item><description><c>TableName</c>: the name of the table.</description></item>
-        /// <item><description><c>AccessCount</c>: the number of accesses to the table.</description></item>
+        /// <item><description><c>TableName</c>: the table name.</description></item>
+        /// <item><description><c>AccessCount</c>: the number of times the table is accessed.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>Type</c> specifies the sorting order. Valid values:</para>
-        /// <list type="bullet">
+        /// <item><description><c>Type</c> specifies the sort order. Valid values:<list type="bullet">
         /// <item><description><c>Asc</c>: ascending order.</description></item>
         /// <item><description><c>Desc</c>: descending order.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, query results are sorted in ascending order based on the database and the table.</para>
+        /// <para>If this parameter is not specified, the results are sorted by the database name of the table in ascending order by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,7 +51,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,9 +88,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range to query, in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// <remarks>
-        /// <para> Only data within the last 30 days can be queried.</para>
+        /// <para>Only data within the last 30 days can be queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -104,7 +103,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The name of the table.</para>
         /// <remarks>
-        /// <para> If you leave this parameter empty, the number of accesses to all tables in the cluster on a date is returned.</para>
+        /// <para>If this parameter is left empty, the access frequency data of all tables in the cluster within the specified date range is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

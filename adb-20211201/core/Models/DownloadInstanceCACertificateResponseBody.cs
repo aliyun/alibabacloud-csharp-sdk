@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DownloadInstanceCACertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The OSS URL of the downloaded certificate.</para>
+        /// <para>The certificate download path.</para>
         /// </summary>
         [NameInMap("DownloadUrl")]
         [Validation(Required=false)]

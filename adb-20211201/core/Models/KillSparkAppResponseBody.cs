@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The name of the application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>LAKEHOUSE-1-1</para>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>amv-bp1c3em7b2e****</para>
+            /// <para>amv-bp11q28kvl688****</para>
             /// </summary>
             [NameInMap("DBClusterId")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The error message returned.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[Advisor] Advisor feature is not available for instance: am-2ze292w4fyglwxxxx</para>
+            /// <para>[Advisor] Advisor feature is not available for instance: amv-bp11q28kvl688****</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>running</para>
+            /// <para>KILLED</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]

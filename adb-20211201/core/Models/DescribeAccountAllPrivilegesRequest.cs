@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAccountAllPrivilegesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The database account name for the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The cluster ID for the Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+        /// &lt;props=&quot;intl&quot;&gt;The cluster ID for the Data Lakehouse Edition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the start position marker from which to return results. If you receive a response indicating that the results are truncated, set this parameter to the value of the <c>Marker</c> parameter in the response that you received.</para>
+        /// <para>If the response is truncated, use the <c>Marker</c> value from the response in this field to retrieve the next set of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

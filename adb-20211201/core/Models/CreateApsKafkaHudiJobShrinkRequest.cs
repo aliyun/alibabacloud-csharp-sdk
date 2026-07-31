@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateApsKafkaHudiJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The Resource Access Management (RAM) role that is created for the trusted Alibaba Cloud account. For more information, see Create a RAM role for a trusted Alibaba Cloud account. The ARN of the RAM role that grants AnalyticDB for MySQL permission to access resources in the source account. Required for cross-account data ingestion.</para>
+        /// <para>The RAM role of a trusted entity that is an Alibaba Cloud account. For more information about how to create a RAM role, see Create a RAM role for a trusted Alibaba Cloud account.
+        /// The Alibaba Cloud account that owns the AnalyticDB for MySQL cluster must be added as a trusted account to the RAM role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aps</para>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AcrossRole { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the source Kafka belongs.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the source Kafka instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123************</para>
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AcrossUid { get; set; }
 
         /// <summary>
-        /// <para>The advanced configurations.</para>
+        /// <para>The advanced configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -52,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to view the cluster IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters in the destination region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,12 +64,20 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The Kafka message type. Valid values: json, general_canal_json, mongo_canal_json, dataworks_json, and shareplex_json.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>json</para>
+        /// </summary>
         [NameInMap("DataFormatType")]
         [Validation(Required=false)]
         public string DataFormatType { get; set; }
 
         /// <summary>
-        /// <para>Enumeration value and description. Single: The source is a single-row JSON record. Multi: source is a JSON array. Output a single JSON record.</para>
+        /// <para>The valid values and their descriptions are as follows:
+        /// Single: The source is a single-line JSON record.
+        /// Multi: The source is a JSON array. A single JSON record is returned as the output.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Single</para>
@@ -88,7 +97,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? DatasourceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the user-defined database.</para>
+        /// <para>The user-defined name of the database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +108,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>The full synchronization configuration.</para>
+        /// <para>The configuration for full synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2ACU</para>
@@ -109,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FullComputeUnit { get; set; }
 
         /// <summary>
-        /// <para>The HUDI configuration of the destination.</para>
+        /// <para>The Hudi configuration for the destination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hoodie.keep.min.commits=20</para>
@@ -119,7 +128,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string HudiAdvancedConfig { get; set; }
 
         /// <summary>
-        /// <para>The incremental synchronization configuration.</para>
+        /// <para>The configuration for incremental synchronization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,7 +139,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string IncrementalComputeUnit { get; set; }
 
         /// <summary>
-        /// <para>The number of layers that are parsed for nested JSON fields. Valid values: 0: Nested JSON fields are not parsed. 1: parses one layer. 2: Two layers are parsed. 3: Three layers are parsed. 4: Four layers are parsed. By default, one layer is parsed. For more information about how nested JSON fields are parsed, see the Examples of schema fields parsed with different numbers of layers section of this topic.</para>
+        /// <para>The number of nested JSON layers to parse. Valid values:
+        /// 0: No parsing is performed.
+        /// 1: One layer is parsed.
+        /// 2: Two layers are parsed.
+        /// 3: Three layers are parsed.
+        /// 4: Four layers are parsed.
+        /// By default, one layer is parsed. For more information about the JSON parsing policy for nested data, see JSON parsing levels and schema field inference examples.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -140,7 +155,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? JsonParseLevel { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Apache Kafka instance. You can get it in the Kafka console.</para>
+        /// <para>The ID of the Kafka instance. Obtain the ID from the Kafka console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -150,7 +165,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string KafkaClusterId { get; set; }
 
         /// <summary>
-        /// <para>Kafka Topic ID. You can get it in the Kafka console.</para>
+        /// <para>The ID of the Kafka topic. Obtain the ID from the Kafka console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -170,7 +185,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? LakehouseId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to fetch in a single batch.</para>
+        /// <para>The number of entries to consume in a single batch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000</para>
@@ -180,7 +195,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? MaxOffsetsPerTrigger { get; set; }
 
         /// <summary>
-        /// <para>The path of the destination data lakehouse in an Object Storage Service (OSS) bucket.</para>
+        /// <para>The destination lakehouse address. This must be a complete OSS path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://test-xx-zzz/yyy/</para>
@@ -190,7 +205,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string OssLocation { get; set; }
 
         /// <summary>
-        /// <para>The format of the output data.</para>
+        /// <para>The output data format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HUDI</para>
@@ -210,7 +225,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PartitionSpecsShrink { get; set; }
 
         /// <summary>
-        /// <para>The primary key settings. Contains the uuid policy and mapping policy. The explanation is as follows. Uuid policy: &quot;Strategy&quot;: &quot;uuid&quot;. Mapping policy: &quot;Strategy&quot;: &quot;mapping&quot;, &quot;Values&quot;:[ &quot;f1&quot;, &quot;f2&quot; ], &quot;RecordVersionField&quot;,&quot;xxx&quot; The meaning of the RecordVersionField is the HUDI record version.</para>
+        /// <para>The primary key settings. This parameter supports the UUID policy and the mapping policy. The policies are described as follows.
+        /// UUID policy: &quot;Strategy&quot;: &quot;uuid&quot;.
+        /// Mapping policy:
+        /// &quot;Strategy&quot;: &quot;mapping&quot;,
+        /// &quot;Values&quot;:[
+        /// &quot;f1&quot;,
+        /// &quot;f2&quot;
+        /// ],
+        /// &quot;RecordVersionField&quot;,&quot;xxx&quot;
+        /// \<c>RecordVersionField\\</c> specifies the Hudi record version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;Strategy&quot;: &quot;mapping&quot;</para>
@@ -220,7 +244,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PrimaryKeyDefinition { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -231,7 +255,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group name.</para>
+        /// <para>The name of the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -242,7 +266,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourceGroup { get; set; }
 
         /// <summary>
-        /// <para>地域ID。</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -252,7 +276,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SourceRegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the position from which to start consuming messages. Valid values: begin_cursor/end_cursor/timestamp Each corresponds to the earliest /latest /specified time respectively.</para>
+        /// <para>The initial consumer offset for Kafka.
+        /// Valid values:
+        /// begin_cursor, end_cursor, and timestamp.
+        /// These values correspond to the earliest offset, the latest offset, and a specified time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -263,7 +290,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StartingOffsets { get; set; }
 
         /// <summary>
-        /// <para>The name of the user-defined table.</para>
+        /// <para>The user-defined name of the table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -274,7 +301,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>The rules for generating the destination database.</para>
+        /// <para>The generation rule for the destination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -284,7 +311,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TargetGenerateRule { get; set; }
 
         /// <summary>
-        /// <para>The destination type.</para>
+        /// <para>The type of the destination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The default log path.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oss://path/to/log</para>
+            /// <para>oss://testBucketname/to/log</para>
             /// </summary>
             [NameInMap("DefaultLogPath")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The modifier ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1111111</para>
+            /// <para>11111111</para>
             /// </summary>
             [NameInMap("ModifiedUid")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The recorded log path.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oss://path/to/log</para>
+            /// <para>oss://testBucketname/to/log</para>
             /// </summary>
             [NameInMap("RecordedLogPath")]
             [Validation(Required=false)]

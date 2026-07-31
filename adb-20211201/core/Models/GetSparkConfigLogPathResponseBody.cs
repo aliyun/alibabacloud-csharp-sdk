@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The default log path.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oss://aliyun-oa-adb-spark-1111-oss-cn-hanghzou/spark-logs</para>
+            /// <para>oss://aliyun-oa-adb-spark-****-oss-cn-hanghzou/spark-logs</para>
             /// </summary>
             [NameInMap("DefaultLogPath")]
             [Validation(Required=false)]

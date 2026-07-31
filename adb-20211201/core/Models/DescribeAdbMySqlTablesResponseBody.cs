@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAdbMySqlTablesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The message returned for the operation. Valid values:</para>
+        /// <para>Additional information about the call. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Success</b> is returned if the operation is successful.</description></item>
-        /// <item><description>An error message is returned if the operation fails.</description></item>
+        /// <item><description><para><b>Success</b> is returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>A specific error code is returned if the request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7A7D49E3-5585-5DF8-B62C-75C46B4991DC</para>
@@ -44,10 +46,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Schema { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The operation is successful.</description></item>
-        /// <item><description><b>false</b>: The operation fails.</description></item>
+        /// <item><description><para><b>true</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +62,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The names of tables.</para>
+        /// <para>Information about the tables.</para>
         /// </summary>
         [NameInMap("Tables")]
         [Validation(Required=false)]

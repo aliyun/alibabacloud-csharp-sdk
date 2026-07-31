@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ApplyAdviceByIdRequest : TeaModel {
         /// <summary>
-        /// <para>The date on which you want to apply the suggestion. Format: yyyyMMdd.</para>
+        /// <para>The date when the suggestion was generated. Format: yyyyMMdd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20221101</para>
@@ -29,10 +29,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string AdviceId { get; set; }
 
+        /// <summary>
+        /// <para>The adoption type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DROP_INDEX</para>
+        /// </summary>
         [NameInMap("ApplyType")]
         [Validation(Required=false)]
         public string ApplyType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to immediately start the build task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("BuildImmediately")]
         [Validation(Required=false)]
         public bool? BuildImmediately { get; set; }

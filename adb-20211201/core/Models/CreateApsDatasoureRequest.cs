@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The information about the Databricks data source.</para>
+        /// <para>The Databricks data source information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public CreateApsDatasoureRequestDatabricksInfo DatabricksInfo { get; set; }
         public class CreateApsDatasoureRequestDatabricksInfo : TeaModel {
             /// <summary>
-            /// <para>The token that is used to access Databricks.</para>
+            /// <para>The access token.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AccessToken { get; set; }
 
             /// <summary>
-            /// <para>The URL of the workspace.</para>
+            /// <para>The workspace URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxx</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The description of the data source.</para>
+        /// <para>The data source description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the data source.</para>
+        /// <para>The data source name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source.</para>
+        /// <para>The data source type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceType { get; set; }
 
         /// <summary>
-        /// <para>The information about the Hive data source.</para>
+        /// <para>The Hive data source information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public CreateApsDatasoureRequestHiveInfo HiveInfo { get; set; }
         public class CreateApsDatasoureRequestHiveInfo : TeaModel {
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the host.</para>
+            /// <para>The host configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string HostConfig { get; set; }
 
             /// <summary>
-            /// <para>The URL of the Hive Metastore.</para>
+            /// <para>The MetaStore endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string MetaStoreUri { get; set; }
 
             /// <summary>
-            /// <para>The security group ID.</para>
+            /// <para>The security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-uf*******h</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The information about the source Apache Kafka instance.</para>
+        /// <para>The Kafka information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public CreateApsDatasoureRequestKafkaInfo KafkaInfo { get; set; }
         public class CreateApsDatasoureRequestKafkaInfo : TeaModel {
             /// <summary>
-            /// <para>The ID of the Apache Kafka instance.</para>
+            /// <para>The Kafka instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string KafkaClusterId { get; set; }
 
             /// <summary>
-            /// <para>The topic of the Apache Kafka instance.</para>
+            /// <para>The assigned Kafka topic name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The information about the source PolarDB for MySQL cluster.</para>
+        /// <para>The PolarDB for MySQL data source information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -207,10 +207,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public CreateApsDatasoureRequestPolarDBMysqlInfo PolarDBMysqlInfo { get; set; }
         public class CreateApsDatasoureRequestPolarDBMysqlInfo : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the data source is a cross-account resource. Valid values:</para>
+            /// <para>Specifies whether cross-account access is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: The current network instance is a cross-account resource.</description></item>
+            /// <item><description><b>false</b>: The current network instance is a resource within the current account.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Across { get; set; }
 
             /// <summary>
-            /// <para>The name of the cross-account role.</para>
+            /// <para>The cross-account role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-role</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AcrossRole { get; set; }
 
             /// <summary>
-            /// <para>The cross-account UID.</para>
+            /// <para>The UID of the cross-account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789*</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AcrossUid { get; set; }
 
             /// <summary>
-            /// <para>The URL used to connect to the custom ApsaraDB RDS for MySQL instance.</para>
+            /// <para>The custom RDS endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The security group ID.</para>
+            /// <para>The security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-******</para>
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SecurityGroup { get; set; }
 
             /// <summary>
-            /// <para>The username used to access the instance.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-user-name</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The information about the source PolarDB-X instance.</para>
+        /// <para>The PolarDB-X data source information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public CreateApsDatasoureRequestPolarDBXInfo PolarDBXInfo { get; set; }
         public class CreateApsDatasoureRequestPolarDBXInfo : TeaModel {
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The OceanBase cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The information about the source ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The ApsaraDB RDS for MySQL data source information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -341,7 +341,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public CreateApsDatasoureRequestRdsMysqlInfo RdsMysqlInfo { get; set; }
         public class CreateApsDatasoureRequestRdsMysqlInfo : TeaModel {
             /// <summary>
-            /// <para>The URL used to connect to the read-only instance.</para>
+            /// <para>The read-only instance endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -361,7 +361,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The password of the database account of the instance.</para>
+            /// <para>The password.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The security group ID.</para>
+            /// <para>The security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-******</para>
@@ -391,10 +391,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SecurityGroup { get; set; }
 
             /// <summary>
-            /// <para>The name of the database account of the instance.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>user</para>
+            /// <para>Username.</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -414,7 +414,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The information about the source Simple Log Service (SLS) instance or cluster.</para>
+        /// <para>The Simple Log Service (SLS) information for the data source to be created.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -426,7 +426,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public CreateApsDatasoureRequestSlsInfo SlsInfo { get; set; }
         public class CreateApsDatasoureRequestSlsInfo : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the data source is a cross-account resource.</para>
+            /// <para>Specifies whether cross-account access is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -436,7 +436,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Across { get; set; }
 
             /// <summary>
-            /// <para>The name of the cross-account role.</para>
+            /// <para>The role name for cross-account access.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yyy</para>
@@ -446,7 +446,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AcrossRole { get; set; }
 
             /// <summary>
-            /// <para>The cross-account UID.</para>
+            /// <para>The UID of the cross-account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
@@ -456,7 +456,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AcrossUid { get; set; }
 
             /// <summary>
-            /// <para>The SLS project.</para>
+            /// <para>The Simple Log Service (SLS) project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-project</para>
@@ -466,7 +466,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The region ID of the source cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -476,7 +476,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SourceRegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the SLS Logstore.</para>
+            /// <para>sls logstore。</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-store</para>

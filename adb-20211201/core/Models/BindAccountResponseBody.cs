@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class BindAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DFF27323-3868-5F8A-917D-5D1D06B6BC0D</para>

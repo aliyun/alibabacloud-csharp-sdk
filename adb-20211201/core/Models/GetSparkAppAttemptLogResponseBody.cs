@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>amv-clusterxxx</para>
+            /// <para>amv-bp1bg858bo8c****</para>
             /// </summary>
             [NameInMap("DBClusterId")]
             [Validation(Required=false)]

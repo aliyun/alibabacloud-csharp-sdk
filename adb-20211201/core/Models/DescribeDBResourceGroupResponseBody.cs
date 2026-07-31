@@ -10,38 +10,154 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried resource groups.</para>
+        /// <para>The list of resource group information.</para>
         /// </summary>
         [NameInMap("GroupsInfo")]
         [Validation(Required=false)]
         public List<DescribeDBResourceGroupResponseBodyGroupsInfo> GroupsInfo { get; set; }
         public class DescribeDBResourceGroupResponseBodyGroupsInfo : TeaModel {
+            [NameInMap("AtmConfig")]
+            [Validation(Required=false)]
+            public DescribeDBResourceGroupResponseBodyGroupsInfoAtmConfig AtmConfig { get; set; }
+            public class DescribeDBResourceGroupResponseBodyGroupsInfoAtmConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("AuthNodeNum")]
+                [Validation(Required=false)]
+                public string AuthNodeNum { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>8ACU</para>
+                /// </summary>
+                [NameInMap("AuthNodeSpec")]
+                [Validation(Required=false)]
+                public string AuthNodeSpec { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("InsertNodeNum")]
+                [Validation(Required=false)]
+                public string InsertNodeNum { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>8ACU</para>
+                /// </summary>
+                [NameInMap("InsertNodeSpec")]
+                [Validation(Required=false)]
+                public string InsertNodeSpec { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
+                [NameInMap("SelectNodeCacheSize")]
+                [Validation(Required=false)]
+                public string SelectNodeCacheSize { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("SelectNodeNum")]
+                [Validation(Required=false)]
+                public string SelectNodeNum { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>8ACU</para>
+                /// </summary>
+                [NameInMap("SelectNodeSpec")]
+                [Validation(Required=false)]
+                public string SelectNodeSpec { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
+                [NameInMap("StorageNodeDiskSize")]
+                [Validation(Required=false)]
+                public string StorageNodeDiskSize { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>essd_pl1</para>
+                /// </summary>
+                [NameInMap("StorageNodeDiskType")]
+                [Validation(Required=false)]
+                public string StorageNodeDiskType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("StorageNodeNum")]
+                [Validation(Required=false)]
+                public string StorageNodeNum { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>8ACU</para>
+                /// </summary>
+                [NameInMap("StorageNodeSpec")]
+                [Validation(Required=false)]
+                public string StorageNodeSpec { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The automatic stop interval, in the format of a number followed by m (minutes). The value ranges from 0m or 5m to 10080m. A value of 0m indicates that automatic stop is disabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0m</para>
+            /// </summary>
             [NameInMap("AutoStopInterval")]
             [Validation(Required=false)]
             public string AutoStopInterval { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>The classification of the resource group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>SQL</description></item>
+            /// <item><description>SparkSQL</description></item>
+            /// <item><description>MultiCluster</description></item>
+            /// <item><description>AI</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>N/A</para>
+            /// <para>SQL</para>
+            /// </summary>
+            [NameInMap("Classification")]
+            [Validation(Required=false)]
+            public string Classification { get; set; }
+
+            /// <summary>
+            /// <para>A reserved parameter. Not applicable.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Reserved parameter</para>
             /// </summary>
             [NameInMap("ClusterMode")]
             [Validation(Required=false)]
             public string ClusterMode { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>A reserved parameter. Not applicable.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>N/A</para>
+            /// <para>Reserved parameter</para>
             /// </summary>
             [NameInMap("ClusterSizeResource")]
             [Validation(Required=false)]
             public string ClusterSizeResource { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource group was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</para>
+            /// <para>The time when the resource group was created. The time is in UTC and in the format of <i>yyyy-MM-ddTHH:mm:ssZ</i>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-29T03:34:30Z</para>
@@ -51,7 +167,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The minimum amount of elastic computing resources.</para>
+            /// <para>The minimum elastic computing resources. Unit: ACUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16ACU</para>
@@ -61,12 +177,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ElasticMinComputeResource { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the preemptible instance feature is enabled for the resource group. After the preemptible instance feature is enabled, you are charged for resources at a lower unit price but the resources are probably released. Valid values:</para>
+            /// <para>Indicates whether the spot instance feature is enabled for the resource group. When the spot instance feature is enabled, the unit price of resources is reduced, but the resources may be released. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>True</b></description></item>
-            /// <item><description><b>False</b></description></item>
+            /// <item><description><b>True</b>: The spot instance feature is enabled.</description></item>
+            /// <item><description><b>False</b>: The spot instance feature is disabled.</description></item>
             /// </list>
-            /// <para>The True value is returned only for job resource groups.</para>
+            /// <para>Only Job-type resource groups can be set to True.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -75,30 +191,63 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string EnableSpot { get; set; }
 
+            /// <summary>
+            /// <para>The engine type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AnalyticDB</para>
+            /// </summary>
             [NameInMap("Engine")]
             [Validation(Required=false)]
             public string Engine { get; set; }
 
+            /// <summary>
+            /// <para>The engine parameters.</para>
+            /// </summary>
             [NameInMap("EngineParams")]
             [Validation(Required=false)]
             public Dictionary<string, object> EngineParams { get; set; }
 
+            /// <summary>
+            /// <para>The GPU time-sharing elastic plan.</para>
+            /// </summary>
             [NameInMap("GpuElasticPlan")]
             [Validation(Required=false)]
             public DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan GpuElasticPlan { get; set; }
             public class DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan : TeaModel {
+                /// <summary>
+                /// <para>Indicates whether the plan is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("Enabled")]
                 [Validation(Required=false)]
                 public bool? Enabled { get; set; }
 
+                /// <summary>
+                /// <para>The list of rules.</para>
+                /// </summary>
                 [NameInMap("Rules")]
                 [Validation(Required=false)]
                 public List<DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules> Rules { get; set; }
                 public class DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules : TeaModel {
+                    /// <summary>
+                    /// <para>The end time, specified as a cron expression. The interval must be at least 1 hour.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0 0 3 * * ?</para>
+                    /// </summary>
                     [NameInMap("EndCronExpression")]
                     [Validation(Required=false)]
                     public string EndCronExpression { get; set; }
 
+                    /// <summary>
+                    /// <para>The start time, specified as a cron expression. The interval must be at least 1 hour.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0 0 2 * * ?</para>
+                    /// </summary>
                     [NameInMap("StartCronExpression")]
                     [Validation(Required=false)]
                     public string StartCronExpression { get; set; }
@@ -108,7 +257,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The name of the resource group.</para>
+            /// <para>The resource group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1</para>
@@ -118,14 +267,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource group. Valid values:</para>
+            /// <para>The resource group type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Interactive</b></description></item>
-            /// <item><description><b>Job</b></description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</para>
+            /// <item><description><b>Job</b><remarks>
+            /// <para>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Job</para>
@@ -135,7 +284,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string GroupType { get; set; }
 
             /// <summary>
-            /// <para>The Resource Access Management (RAM) user that is associated with the resource group.</para>
+            /// <para>The Resource Access Management (RAM) users attached to the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testb,testc</para>
@@ -145,17 +294,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string GroupUsers { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>A reserved parameter. Not applicable.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>N/A</para>
+            /// <para>Reserved parameter</para>
             /// </summary>
             [NameInMap("MaxClusterCount")]
             [Validation(Required=false)]
             public int? MaxClusterCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum amount of reserved computing resources.</para>
+            /// <para>The maximum reserved computing resources. Unit: ACUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>512ACU</para>
@@ -164,29 +313,39 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string MaxComputeResource { get; set; }
 
+            /// <summary>
+            /// <para>The maximum number of GPUs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("MaxGpuQuantity")]
             [Validation(Required=false)]
             public int? MaxGpuQuantity { get; set; }
 
             /// <summary>
+            /// <para>The job routing rule message.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SUCCESS</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>A reserved parameter. Not applicable.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>N/A</para>
+            /// <para>Reserved parameter</para>
             /// </summary>
             [NameInMap("MinClusterCount")]
             [Validation(Required=false)]
             public int? MinClusterCount { get; set; }
 
             /// <summary>
-            /// <para>The minimum amount of reserved computing resources.</para>
+            /// <para>The minimum reserved computing resources. Unit: ACUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0ACU</para>
@@ -195,15 +354,26 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string MinComputeResource { get; set; }
 
+            /// <summary>
+            /// <para>The minimum number of GPUs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("MinGpuQuantity")]
             [Validation(Required=false)]
             public int? MinGpuQuantity { get; set; }
 
+            /// <summary>
+            /// <para>The Ray configuration information.</para>
+            /// </summary>
             [NameInMap("RayConfig")]
             [Validation(Required=false)]
             public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig RayConfig { get; set; }
             public class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig : TeaModel {
                 /// <summary>
+                /// <para>The Ray application configuration.</para>
+                /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
                 /// </summary>
@@ -212,6 +382,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig AppConfig { get; set; }
                 public class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig : TeaModel {
                     /// <summary>
+                    /// <para>The Ray application name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>app01</para>
                     /// </summary>
@@ -220,6 +392,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string AppName { get; set; }
 
                     /// <summary>
+                    /// <para>The Ray application type.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>IsaacLab</para>
                     /// </summary>
@@ -228,6 +402,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string AppType { get; set; }
 
                     /// <summary>
+                    /// <para>The image configuration.</para>
+                    /// 
                     /// <b>if can be null:</b>
                     /// <c>true</c>
                     /// </summary>
@@ -236,6 +412,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector ImageSelector { get; set; }
                     public class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfigImageSelector : TeaModel {
                         /// <summary>
+                        /// <para>The image.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>lab2.10.0-ray2.43.0</para>
                         /// </summary>
@@ -244,6 +422,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public string Image { get; set; }
 
                         /// <summary>
+                        /// <para>The inference engine.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>vLLM</para>
                         /// </summary>
@@ -252,6 +432,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         public string InferenceEngine { get; set; }
 
                         /// <summary>
+                        /// <para>The LLM model.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>Deepseek-R1</para>
                         /// </summary>
@@ -263,11 +445,25 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
                 }
 
+                /// <summary>
+                /// <para>The Ray cluster type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>BASIC: basic type, non-high-availability</para>
+                /// </description></item>
+                /// <item><description><para>HIGH_AVAILABILITY: high-availability type</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>BASIC</para>
+                /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether ENI is enabled.</para>
+                /// 
                 /// <b>if can be null:</b>
                 /// <c>false</c>
                 /// </summary>
@@ -275,23 +471,49 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public bool? EnableUserEni { get; set; }
 
+                /// <summary>
+                /// <para>The allocation unit of the head node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("HeadAllocateUnit")]
                 [Validation(Required=false)]
                 public string HeadAllocateUnit { get; set; }
 
+                /// <summary>
+                /// <para>The disk size of the head node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100Gi</para>
+                /// </summary>
                 [NameInMap("HeadDiskCapacity")]
                 [Validation(Required=false)]
                 public string HeadDiskCapacity { get; set; }
 
+                /// <summary>
+                /// <para>The node specifications of the head node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ADB.MLLarge.2</para>
+                /// </summary>
                 [NameInMap("HeadSpec")]
                 [Validation(Required=false)]
                 public string HeadSpec { get; set; }
 
+                /// <summary>
+                /// <para>The resource type of the head node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cpu</para>
+                /// </summary>
                 [NameInMap("HeadSpecType")]
                 [Validation(Required=false)]
                 public string HeadSpecType { get; set; }
 
                 /// <summary>
+                /// <para>The Ray cluster address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://ray-cluster-address.example.com">http://ray-cluster-address.example.com</a></para>
                 /// </summary>
@@ -300,6 +522,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string RayClusterAddress { get; set; }
 
                 /// <summary>
+                /// <para>The Ray Dashboard address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://ray-dashboard-address.example.com">http://ray-dashboard-address.example.com</a></para>
                 /// </summary>
@@ -308,6 +532,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string RayDashboardAddress { get; set; }
 
                 /// <summary>
+                /// <para>The Ray Grafana address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://ray-grafana-address.example.com">http://ray-grafana-address.example.com</a></para>
                 /// </summary>
@@ -315,11 +541,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string RayGrafanaAddress { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1.2.3.4:8100</para>
+                /// </summary>
+                [NameInMap("RayServePublicAddress")]
+                [Validation(Required=false)]
+                public string RayServePublicAddress { get; set; }
+
+                /// <summary>
+                /// <para>The list of storage mounts.</para>
+                /// </summary>
                 [NameInMap("StorageMounts")]
                 [Validation(Required=false)]
                 public List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts> StorageMounts { get; set; }
                 public class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts : TeaModel {
                     /// <summary>
+                    /// <para>The mount path.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>/mnt/data01</para>
                     /// </summary>
@@ -328,6 +567,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string MountPath { get; set; }
 
                     /// <summary>
+                    /// <para>The storage ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -337,11 +578,20 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
                 }
 
+                [NameInMap("UserDefinedRequirements")]
+                [Validation(Required=false)]
+                public string UserDefinedRequirements { get; set; }
+
+                /// <summary>
+                /// <para>The list of Ray worker groups.</para>
+                /// </summary>
                 [NameInMap("WorkerGroups")]
                 [Validation(Required=false)]
                 public List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups> WorkerGroups { get; set; }
                 public class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups : TeaModel {
                     /// <summary>
+                    /// <para>The allocation unit.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -350,6 +600,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string AllocateUnit { get; set; }
 
                     /// <summary>
+                    /// <para>The name of the Ray worker group.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>g01</para>
                     /// </summary>
@@ -358,6 +610,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string GroupName { get; set; }
 
                     /// <summary>
+                    /// <para>The maximum number of workers.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -366,6 +620,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public int? MaxWorkerQuantity { get; set; }
 
                     /// <summary>
+                    /// <para>The minimum number of workers.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -374,6 +630,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public int? MinWorkerQuantity { get; set; }
 
                     /// <summary>
+                    /// <para>The disk size per worker.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>100G</para>
                     /// </summary>
@@ -382,6 +640,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string WorkerDiskCapacity { get; set; }
 
                     /// <summary>
+                    /// <para>The worker specification name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>large</para>
                     /// </summary>
@@ -390,6 +650,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string WorkerSpecName { get; set; }
 
                     /// <summary>
+                    /// <para>The Ray worker resource type.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>CPU</para>
                     /// </summary>
@@ -402,14 +664,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The job resubmission rules.</para>
+            /// <para>The job routing rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<DescribeDBResourceGroupResponseBodyGroupsInfoRules> Rules { get; set; }
             public class DescribeDBResourceGroupResponseBodyGroupsInfoRules : TeaModel {
                 /// <summary>
-                /// <para>The name of the resource group.</para>
+                /// <para>The resource group name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user_default</para>
@@ -419,7 +681,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The execution duration of the query. Unit: milliseconds.</para>
+                /// <para>The query execution time threshold. Unit: milliseconds (ms).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>180000</para>
@@ -429,7 +691,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string QueryTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the destination resource group.</para>
+                /// <para>The name of the target resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>job</para>
@@ -441,15 +703,36 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>A reserved parameter. Not applicable.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>N/A</para>
+            /// <para>Reserved parameter</para>
             /// </summary>
             [NameInMap("RunningClusterCount")]
             [Validation(Required=false)]
             public int? RunningClusterCount { get; set; }
 
+            /// <summary>
+            /// <para>The scale-out policy of the resource group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>AutoScaling: enables the AutoScaling automatic scaling policy.</description></item>
+            /// <item><description>Disable: disables automatic scaling.</description></item>
+            /// <item><description>MultiCluster: enables the MultiCluster automatic scaling policy.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AutoScaling</para>
+            /// </summary>
+            [NameInMap("ScalePolicy")]
+            [Validation(Required=false)]
+            public string ScalePolicy { get; set; }
+
+            /// <summary>
+            /// <para>The specification name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ADB.MLLarge.2</para>
+            /// </summary>
             [NameInMap("SpecName")]
             [Validation(Required=false)]
             public string SpecName { get; set; }
@@ -457,9 +740,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The status of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>creating</b>: The resource group is being created.</description></item>
-            /// <item><description><b>ok</b>: The resource group is created.</description></item>
-            /// <item><description><b>pendingdelete</b>: The resource group is pending to be deleted.</description></item>
+            /// <item><description><b>creating</b>: being created</description></item>
+            /// <item><description><b>ok</b>: created</description></item>
+            /// <item><description><b>pendingdelete</b>: pending deletion</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -469,12 +752,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The name of the target resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("TargetResourceGroupName")]
             [Validation(Required=false)]
             public string TargetResourceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource group was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</para>
+            /// <para>The time when the resource group was last updated. The time is in UTC and in the format of <i>yyyy-MM-ddTHH:mm:ssZ</i>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-31T03:34:30Z</para>

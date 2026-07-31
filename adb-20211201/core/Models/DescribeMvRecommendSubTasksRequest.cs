@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeMvRecommendSubTasksRequest : TeaModel {
         /// <summary>
-        /// <para>Fixed system value (non-modifiable).</para>
+        /// <para>A static value. This parameter cannot be modified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Modification is not supported.</para>
         /// </summary>
         [NameInMap("ActionInner")]
         [Validation(Required=false)]
@@ -27,22 +30,30 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Fixed system value (non-modifiable).</para>
+        /// <para>A static value. This parameter cannot be modified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Modification is not supported.</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The sorting field. Valid values for Type:</para>
+        /// <para>The sorting criteria.
+        /// Valid values for \<c>Type\\</c>:</para>
         /// <list type="bullet">
-        /// <item><description>Asc.</description></item>
-        /// <item><description>Desc.</description></item>
+        /// <item><description><para>Asc</para>
+        /// </description></item>
+        /// <item><description><para>Desc</para>
+        /// </description></item>
         /// </list>
-        /// <para>Valid values for Field:</para>
+        /// <para>Valid values for \<c>Field\\</c>:</para>
         /// <list type="bullet">
-        /// <item><description>StartTime;</description></item>
-        /// <item><description>EndTime;</description></item>
+        /// <item><description><para>StartTime</para>
+        /// </description></item>
+        /// <item><description><para>EndTime</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +74,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -93,7 +104,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? SubtaskId { get; set; }
 
         /// <summary>
-        /// <para>The name of the recommendation task.</para>
+        /// <para>The name of the materialized view recommendation task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_task_1</para>

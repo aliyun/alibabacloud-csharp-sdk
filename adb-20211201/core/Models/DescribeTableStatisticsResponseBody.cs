@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
-        /// <summary>
-        /// <para>The queried table statistics.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeTableStatisticsResponseBodyItems Items { get; set; }
@@ -30,135 +27,50 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public List<DescribeTableStatisticsResponseBodyItemsTableStatisticRecords> TableStatisticRecords { get; set; }
             public class DescribeTableStatisticsResponseBodyItemsTableStatisticRecords : TeaModel {
-                /// <summary>
-                /// <para>The size of cold data. Unit: bytes.</para>
-                /// <remarks>
-                /// <para> This parameter is supported only for AnalyticDB for MySQL clusters of V3.1.3.4 or later.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>4428120064</para>
-                /// </summary>
                 [NameInMap("ColdDataSize")]
                 [Validation(Required=false)]
                 public long? ColdDataSize { get; set; }
 
-                /// <summary>
-                /// <para>The data size of the table. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>15592</para>
-                /// </summary>
                 [NameInMap("DataSize")]
                 [Validation(Required=false)]
                 public long? DataSize { get; set; }
 
-                /// <summary>
-                /// <para>The size of hot data. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1048576</para>
-                /// </summary>
                 [NameInMap("HotDataSize")]
                 [Validation(Required=false)]
                 public long? HotDataSize { get; set; }
 
-                /// <summary>
-                /// <para>The data size of indexes. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3076</para>
-                /// </summary>
                 [NameInMap("IndexSize")]
                 [Validation(Required=false)]
                 public long? IndexSize { get; set; }
 
-                /// <summary>
-                /// <para>The data size of other data. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1048576</para>
-                /// </summary>
                 [NameInMap("OtherSize")]
                 [Validation(Required=false)]
                 public long? OtherSize { get; set; }
 
-                /// <summary>
-                /// <para>The number of partitions.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("PartitionCount")]
                 [Validation(Required=false)]
                 public long? PartitionCount { get; set; }
 
-                /// <summary>
-                /// <para>The data size of the primary key index. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>16340</para>
-                /// </summary>
                 [NameInMap("PrimaryKeyIndexSize")]
                 [Validation(Required=false)]
                 public long? PrimaryKeyIndexSize { get; set; }
 
-                /// <summary>
-                /// <para>The number of rows in the table.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("RowCount")]
                 [Validation(Required=false)]
                 public long? RowCount { get; set; }
 
-                /// <summary>
-                /// <para>The name of the database.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test_schema</para>
-                /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }
 
-                /// <summary>
-                /// <para>The percentage of the table size. Unit: %.</para>
-                /// <remarks>
-                /// <para> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>66.23</para>
-                /// </summary>
                 [NameInMap("SpaceRatio")]
                 [Validation(Required=false)]
                 public double? SpaceRatio { get; set; }
 
-                /// <summary>
-                /// <para>The name of the table.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test_table</para>
-                /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }
 
-                /// <summary>
-                /// <para>The total data size of the table. Unit: bytes.</para>
-                /// <remarks>
-                /// <para> The following formulas can be used to calculate the total data size:</para>
-                /// </remarks>
-                /// <list type="bullet">
-                /// <item><description>Formula 1: Total data size = Hot data size + Cold data size.</description></item>
-                /// <item><description>Formula 2: Total data size = Data size of table records + Data size of regular indexes + Data size of primary key indexes + Data size of other data.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1577</para>
-                /// </summary>
                 [NameInMap("TotalSize")]
                 [Validation(Required=false)]
                 public long? TotalSize { get; set; }

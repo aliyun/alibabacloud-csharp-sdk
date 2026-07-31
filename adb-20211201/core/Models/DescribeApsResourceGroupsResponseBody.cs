@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeApsResourceGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried resource groups.</para>
+        /// <para>The information about the resource groups.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeApsResourceGroupsResponseBodyData Data { get; set; }
         public class DescribeApsResourceGroupsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The queried resource groups.</para>
+            /// <para>The resource groups.</para>
             /// </summary>
             [NameInMap("ResourceGroups")]
             [Validation(Required=false)]
@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// <para>Indicates whether the resource group is available. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>True</b></para>
+                /// </description></item>
+                /// <item><description><para><b>False</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -37,6 +39,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public bool? Available { get; set; }
 
+                /// <summary>
+                /// <para>The resource gradient values.</para>
+                /// </summary>
                 [NameInMap("CuOptions")]
                 [Validation(Required=false)]
                 public List<long?> CuOptions { get; set; }
@@ -54,11 +59,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// <para>The type of the resource group. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Interactive</b></description></item>
-                /// <item><description><b>Job</b></description></item>
+                /// <item><description><para><b>Interactive</b></para>
+                /// </description></item>
+                /// <item><description><para><b>Job</b></para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</para>
+                /// <para>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource groups</a>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -69,7 +76,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string GroupType { get; set; }
 
                 /// <summary>
-                /// <para>The amount of remaining computing resources. Unit: ACUs.</para>
+                /// <para>The remaining computing resources, in ACU.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>512</para>
@@ -79,10 +86,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public int? LeftComputeResource { get; set; }
 
                 /// <summary>
-                /// <para>The maximum amount of reserved computing resources. Unit: ACUs.</para>
+                /// <para>The maximum reserved computing resources, in ACU.</para>
                 /// <list type="bullet">
-                /// <item><description>If the value of GroupType is <b>Interactive</b>, the amount of reserved computing resources that are not allocated in the cluster is returned in increments of 16 ACUs.</description></item>
-                /// <item><description>If the value of GroupType is <b>Job</b>, the amount of reserved computing resources that are not allocated in the cluster is returned in increments of 8 ACUs.</description></item>
+                /// <item><description><para>If GroupType is <b>Interactive</b>, the maximum reserved computing resources are the current unallocated resources of the cluster, and the step size is 16 ACU.</para>
+                /// </description></item>
+                /// <item><description><para>If GroupType is <b>Job</b>, the maximum reserved computing resources are the current unallocated resources of the cluster, and the step size is 8 ACU.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -93,10 +102,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public int? MaxComputeResource { get; set; }
 
                 /// <summary>
-                /// <para>The minimum amount of reserved computing resources. Unit: ACUs.</para>
+                /// <para>The minimum reserved computing resources, in ACU.</para>
                 /// <list type="bullet">
-                /// <item><description>If the value of GroupType is <b>Interactive</b>, 16 is returned.</description></item>
-                /// <item><description>If the value of GroupType is <b>Job</b>, 0 is returned.</description></item>
+                /// <item><description><para>If GroupType is <b>Interactive</b>, the minimum reserved computing resources are 16 ACU.</para>
+                /// </description></item>
+                /// <item><description><para>If GroupType is <b>Job</b>, the minimum reserved computing resources are 0 ACU.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -109,10 +120,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The step size of resources. Unit: AnalyticDB compute units (ACUs).</para>
+            /// <para>The step size of the resource group, in ACU.</para>
             /// <list type="bullet">
-            /// <item><description>If the value of GroupType is <b>Interactive</b>, 16 is returned.</description></item>
-            /// <item><description>If the value of GroupType is <b>Job</b>, 8 is returned.</description></item>
+            /// <item><description><para>If GroupType is <b>Interactive</b>, the step size is 16 ACU.</para>
+            /// </description></item>
+            /// <item><description><para>If GroupType is <b>Job</b>, the step size is 8 ACU.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,10 +148,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>Additional information about the call. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, a success message is returned.</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description><para>Success is returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>An error code is returned if the request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -161,8 +176,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>True</b></para>
+        /// </description></item>
+        /// <item><description><para><b>False</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>2022-08-30T12:10:00Z</para>
+        /// <para>2022-08-30</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

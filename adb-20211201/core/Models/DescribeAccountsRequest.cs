@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The database account.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the information about all database accounts in the cluster is returned.</para>
+        /// <para>If you do not specify this parameter, information about all database accounts is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,10 +35,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the cluster. Valid values:</para>
+        /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AnalyticDB</b> (default): the AnalyticDB for MySQL engine.</description></item>
-        /// <item><description><b>Clickhouse</b>: the wide table engine.</description></item>
+        /// <item><description><para><b>AnalyticDB</b> (default): the AnalyticDB for MySQL engine</para>
+        /// </description></item>
+        /// <item><description><para><b>Clickhouse</b>: the LindormTable engine</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

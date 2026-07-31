@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetTableObjectsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The description of the table.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterDescription { get; set; }
 
         /// <summary>
-        /// <para>The owner of the table.</para>
+        /// <para>The owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>admin</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterOwner { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>The table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_tbl</para>
@@ -51,11 +51,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterTblName { get; set; }
 
         /// <summary>
-        /// <para>The type of the table.</para>
-        /// <para>Valid values:</para>
-        /// <para>DIMENSION_TABLE</para>
-        /// <para>FACT_TABLE</para>
-        /// <para>EXTERNAL_TABLE</para>
+        /// <para>The table type.
+        /// Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DIMENSION_TABLE</description></item>
+        /// <item><description>FACT_TABLE</description></item>
+        /// <item><description>EXTERNAL_TABLE</description></item>
+        /// </list>
         /// <para>Default value: null.</para>
         /// 
         /// <b>Example:</b>
@@ -66,18 +68,20 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterTblType { get; set; }
 
         /// <summary>
-        /// <para>The order in which the fields to be returned are sorted.</para>
-        /// <para>Valid values:</para>
+        /// <para>The sorting field.</para>
+        /// <para>Valid values for Type:</para>
         /// <list type="bullet">
         /// <item><description>Asc</description></item>
         /// <item><description>Desc</description></item>
         /// </list>
-        /// <para>Values for fields:</para>
-        /// <para>TableName</para>
-        /// <para>TableSize</para>
-        /// <para>CreateTime</para>
-        /// <para>UpdateTime</para>
-        /// <para>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;TableName&quot;};</para>
+        /// <para>Valid values for Field:</para>
+        /// <list type="bullet">
+        /// <item><description>TableName</description></item>
+        /// <item><description>TableSize</description></item>
+        /// <item><description>CreateTime</description></item>
+        /// <item><description>UpdateTime</description></item>
+        /// </list>
+        /// <para>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;TableName&quot;}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;TableName&quot;}</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value is an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>30</description></item>
         /// <item><description>50</description></item>
@@ -113,7 +117,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the cluster resides.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

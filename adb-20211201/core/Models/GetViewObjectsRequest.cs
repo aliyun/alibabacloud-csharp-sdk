@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The owner of the view.</para>
+        /// <para>The owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>admin</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterOwner { get; set; }
 
         /// <summary>
-        /// <para>The name of the view.</para>
+        /// <para>The view name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_filter</para>
@@ -41,10 +41,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterViewName { get; set; }
 
         /// <summary>
-        /// <para>The type of the view.</para>
+        /// <para>The view type.</para>
         /// <para>Valid values:</para>
-        /// <para>\-VIRTUAL_VIEW</para>
-        /// <para>\-MATERIALIZED_VIEW</para>
+        /// <list type="bullet">
+        /// <item><description>VIRTUAL_VIEW</description></item>
+        /// <item><description>MATERIALIZED_VIEW</description></item>
+        /// </list>
         /// <para>Default value: null.</para>
         /// 
         /// <b>Example:</b>
@@ -55,14 +57,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FilterViewType { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the query results. Valid values for Type:</para>
+        /// <para>The sorting field.</para>
+        /// <para>Valid values for Type:</para>
         /// <list type="bullet">
         /// <item><description>Asc</description></item>
         /// <item><description>Desc</description></item>
         /// </list>
-        /// <para>Valid values for Field: -ViewName</para>
-        /// <para>\-CreateTime</para>
-        /// <para>\-UpdateTime</para>
+        /// <para>Valid values for Field:</para>
+        /// <list type="bullet">
+        /// <item><description>ViewName</description></item>
+        /// <item><description>CreateTime</description></item>
+        /// <item><description>UpdateTime</description></item>
+        /// </list>
         /// <para>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;ViewName&quot;}.</para>
         /// 
         /// <b>Example:</b>
@@ -85,9 +91,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><b>30</b> (default).</description></item>
+        /// <item><description><b>50</b>.</description></item>
+        /// <item><description><b>100</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +115,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb_demo</para>
@@ -119,6 +125,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SchemaName { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to display the base table information of materialized views.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

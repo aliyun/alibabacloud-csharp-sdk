@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeTableAccessCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried tables.</para>
+        /// <para>The table usage details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeTableAccessCountResponseBodyItems> Items { get; set; }
         public class DescribeTableAccessCountResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The number of accesses to the table.</para>
+            /// <para>The number of times the table was accessed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AccessCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cluster to which the table belongs.</para>
+            /// <para>The cluster ID of the cluster to which the table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amv-2ze627uzpkh8a8****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The date when the table was accessed.</para>
+            /// <para>The date on which the table was used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-26</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ReportDate { get; set; }
 
             /// <summary>
-            /// <para>The name of the table.</para>
+            /// <para>The table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CUSTOMER</para>

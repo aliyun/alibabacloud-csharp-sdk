@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The details about the access denial.</para>
         /// <remarks>
-        /// <para> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</para>
+        /// <para>This field is returned only when RAM authentication fails.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The delete status.</para>
+        /// <para>The deletion result. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>SUCCESS</b>: Succeeded.</description></item>
+        /// <item><description><b>FAILED</b>: Failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>

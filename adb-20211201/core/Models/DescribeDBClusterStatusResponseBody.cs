@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried cluster states.</para>
+        /// <para>The cluster status list.</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class SparkAnalyzeLogTask : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>amv-adbxxxxx</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The analysis result of the task.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public LogAnalyzeResult Result { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the task matched a rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? RuleMatched { get; set; }
 
         /// <summary>
+        /// <para>The time when the task was started. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1672123543000</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? StartedTimeInMillis { get; set; }
 
         /// <summary>
+        /// <para>The time when the task was submitted. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1672123543000</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? SubmittedTimeInMillis { get; set; }
 
         /// <summary>
+        /// <para>The error message returned if the task fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Driver log not found</para>
         /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TaskErrMsg { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Spark log analysis task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? TaskId { get; set; }
 
         /// <summary>
+        /// <para>The state of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WAITING</para>
         /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TaskState { get; set; }
 
         /// <summary>
+        /// <para>The time when the task was terminated. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1672123543000</para>
         /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? TerminatedTimeInMillis { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who submitted the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13719918xxx</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateApsHiveJobRequest : TeaModel {
         /// <summary>
-        /// <para>The advanced configurations.</para>
+        /// <para>The advanced configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -22,19 +22,19 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AdvancedConfig { get; set; }
 
         /// <summary>
-        /// <para>The policy to handle tables with the same name in the destination cluster.</para>
+        /// <para>The policy for handling databases and tables with the same name at the destination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Intercept: reports error and aborts.
-        /// Ignore: ignores and continues migrating the relevant tables.
-        /// Skip: skips related tables and only migrates other tables.</para>
+        /// Ignore: ignores and continues.
+        /// Skip: skips relevant tables.</para>
         /// </summary>
         [NameInMap("ConflictStrategy")]
         [Validation(Required=false)]
         public string ConflictStrategy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
+        /// <para>The AnalyticDB for MySQL cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? DatasourceId { get; set; }
 
         /// <summary>
-        /// <para>The number of AnalyticDB compute units (ACUs) required for data migration.</para>
+        /// <para>The number of AnalyticDB compute units (ACUs) required for the migration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FullComputeUnit { get; set; }
 
         /// <summary>
-        /// <para>The path of the destination data lakehouse in an Object Storage Service (OSS) bucket.</para>
+        /// <para>The destination lakehouse address, which is a full OSS path.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OssLocation")]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string OssLocation { get; set; }
 
         /// <summary>
-        /// <para>The number of tasks that are allowed in parallel.</para>
+        /// <para>The number of parallel tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -84,9 +84,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? Parallelism { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID of the O&amp;M event.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourceGroup { get; set; }
 
         /// <summary>
-        /// <para>The expression that allows objects to be synchronized.</para>
+        /// <para>The expression that specifies the objects allowed for synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SyncAllowExpression { get; set; }
 
         /// <summary>
-        /// <para>The expression that denies objects to be synchronized.</para>
+        /// <para>The expression that specifies the objects allowed for synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The name of the workload.</para>
+        /// <para>The workload name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

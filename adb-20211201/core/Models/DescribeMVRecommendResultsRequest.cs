@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeMVRecommendResultsRequest : TeaModel {
         /// <summary>
-        /// <para>Fixed system value (non-modifiable).</para>
+        /// <para>A static value. This parameter cannot be modified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Modification is not supported.</para>
         /// </summary>
         [NameInMap("ActionInner")]
         [Validation(Required=false)]
@@ -27,7 +30,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Fixed system value (non-modifiable).</para>
+        /// <para>A static value. This parameter cannot be modified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Modification is not supported.</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -74,6 +80,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The subquery ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSQLPatternsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</para>
+        /// <para>Details about the access denial. This parameter is returned only if RAM authentication fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The queried SQL patterns.</para>
+        /// <para>A list of SQL patterns.</para>
         /// </summary>
         [NameInMap("PatternDetails")]
         [Validation(Required=false)]
         public List<DescribeSQLPatternsResponseBodyPatternDetails> PatternDetails { get; set; }
         public class DescribeSQLPatternsResponseBodyPatternDetails : TeaModel {
             /// <summary>
-            /// <para>The IP address of the SQL client that commits the SQL pattern.</para>
+            /// <para>The client IP address used to submit the queries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.xx.xx</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AccessIp { get; set; }
 
             /// <summary>
-            /// <para>The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.</para>
+            /// <para>The average execution time of queries matching this pattern. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>234.78</para>
@@ -74,12 +74,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public double? AverageExecutionTime { get; set; }
 
+            /// <summary>
+            /// <para>The average CPU cost for queries that match this pattern. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("AverageOperatorCost")]
             [Validation(Required=false)]
             public double? AverageOperatorCost { get; set; }
 
             /// <summary>
-            /// <para>The average peak memory usage of the SQL pattern within the query time range. Unit: bytes.</para>
+            /// <para>The average peak memory usage of queries matching this pattern. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>234.22</para>
@@ -89,7 +95,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? AveragePeakMemory { get; set; }
 
             /// <summary>
-            /// <para>The average total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.</para>
+            /// <para>The average duration of queries matching this pattern. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -98,12 +104,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public double? AverageQueryTime { get; set; }
 
+            /// <summary>
+            /// <para>The average scan time for queries that match this pattern. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("AverageScanCost")]
             [Validation(Required=false)]
             public double? AverageScanCost { get; set; }
 
             /// <summary>
-            /// <para>The average amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.</para>
+            /// <para>The average amount of data scanned by queries matching this pattern. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>234149.23</para>
@@ -113,13 +125,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? AverageScanSize { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the execution of the SQL pattern can be intercepted. Valid values:</para>
+            /// <para>Indicates whether queries that match this pattern can be blocked. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: The queries can be blocked.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The queries cannot be blocked.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> Only SELECT and INSERT statements can be intercepted.</para>
+            /// <para>Currently, AnalyticDB for MySQL allows you to block only SELECT and INSERT statements.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -130,7 +144,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Blockable { get; set; }
 
             /// <summary>
-            /// <para>The number of failed queries executed in association with the SQL pattern within the query time range.</para>
+            /// <para>The number of failed queries that match this pattern.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18</para>
@@ -140,7 +154,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? FailedCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.</para>
+            /// <para>The maximum execution time of a query matching this pattern. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2142</para>
@@ -149,12 +163,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public long? MaxExecutionTime { get; set; }
 
+            /// <summary>
+            /// <para>The maximum CPU cost for a query that matches this pattern. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("MaxOperatorCost")]
             [Validation(Required=false)]
             public double? MaxOperatorCost { get; set; }
 
             /// <summary>
-            /// <para>The maximum peak memory usage of the SQL pattern within the query time range. Unit: bytes.</para>
+            /// <para>The maximum peak memory usage of a query matching this pattern. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>234149</para>
@@ -164,7 +184,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? MaxPeakMemory { get; set; }
 
             /// <summary>
-            /// <para>The maximum total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.</para>
+            /// <para>The maximum duration of a query matching this pattern. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2341</para>
@@ -173,12 +193,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public long? MaxQueryTime { get; set; }
 
+            /// <summary>
+            /// <para>The maximum scan time for a query that matches this pattern. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("MaxScanCost")]
             [Validation(Required=false)]
             public double? MaxScanCost { get; set; }
 
             /// <summary>
-            /// <para>The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.</para>
+            /// <para>The maximum amount of data scanned by a query matching this pattern. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32212254</para>
@@ -187,16 +213,28 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public long? MaxScanSize { get; set; }
 
+            /// <summary>
+            /// <para>The total CPU cost of queries matching this pattern as a percentage of the total CPU cost for all queries. Unit: %.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("OperatorCostPercentage")]
             [Validation(Required=false)]
             public double? OperatorCostPercentage { get; set; }
 
+            /// <summary>
+            /// <para>The total CPU cost for all queries that match this pattern. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("OperatorCostSum")]
             [Validation(Required=false)]
             public double? OperatorCostSum { get; set; }
 
             /// <summary>
-            /// <para>The earliest commit time of the SQL pattern within the query time range.</para>
+            /// <para>The submission time of the first query that matches this pattern within the specified time range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-06 05:06:00</para>
@@ -215,16 +253,28 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string PatternId { get; set; }
 
+            /// <summary>
+            /// <para>The total peak memory usage of queries matching this pattern as a percentage of the total peak memory usage for all queries. Unit: %.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("PeakMemoryPercentage")]
             [Validation(Required=false)]
             public double? PeakMemoryPercentage { get; set; }
 
+            /// <summary>
+            /// <para>The sum of the peak memory usage for all queries that match this pattern. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("PeakMemorySum")]
             [Validation(Required=false)]
             public double? PeakMemorySum { get; set; }
 
             /// <summary>
-            /// <para>The number of queries executed in association with the SQL pattern within the query time range.</para>
+            /// <para>The number of executed queries that match this pattern.</para>
             /// 
             /// <b>Example:</b>
             /// <para>345</para>
@@ -233,16 +283,28 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public long? QueryCount { get; set; }
 
+            /// <summary>
+            /// <para>The total query time of queries matching this pattern as a percentage of the total query time for all queries. Unit: %.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("QueryTimePercentage")]
             [Validation(Required=false)]
             public double? QueryTimePercentage { get; set; }
 
+            /// <summary>
+            /// <para>The total query duration for all queries that match this pattern. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("QueryTimeSum")]
             [Validation(Required=false)]
             public double? QueryTimeSum { get; set; }
 
             /// <summary>
-            /// <para>The statement of the SQL pattern.</para>
+            /// <para>The SQL pattern.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SELECT * FROM KEPLER_META_NODE_STATIC_INFO WHERE elastic_node = ? OR (elastic_node = ? AND enable = ?)</para>
@@ -251,24 +313,48 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string SQLPattern { get; set; }
 
+            /// <summary>
+            /// <para>The total scan cost of queries matching this pattern as a percentage of the total scan cost for all queries. Unit: %.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("ScanCostPercentage")]
             [Validation(Required=false)]
             public double? ScanCostPercentage { get; set; }
 
+            /// <summary>
+            /// <para>The total scan cost for all queries that match this pattern. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("ScanCostSum")]
             [Validation(Required=false)]
             public double? ScanCostSum { get; set; }
 
+            /// <summary>
+            /// <para>The total amount of data scanned by queries matching this pattern as a percentage of the total data scanned by all queries. Unit: %.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
+            /// </summary>
             [NameInMap("ScanSizePercentage")]
             [Validation(Required=false)]
             public double? ScanSizePercentage { get; set; }
 
+            /// <summary>
+            /// <para>The total amount of data scanned by all queries that match this pattern. Unit: bytes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("ScanSizeSum")]
             [Validation(Required=false)]
             public double? ScanSizeSum { get; set; }
 
             /// <summary>
-            /// <para>The tables scanned based on the SQL pattern.</para>
+            /// <para>The tables scanned by the SQL pattern.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tpch.orders</para>
@@ -278,7 +364,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Tables { get; set; }
 
             /// <summary>
-            /// <para>The name of the database account that is used to commit the SQL pattern.</para>
+            /// <para>The name of the database user who submitted the matching SQL statements.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -293,14 +379,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F3174013-5B7A-5A47-9FE0-6B5D397BD86B</para>
+        /// <para>F3174013-5B7A-5A47-9FE0-6B5D397BD86A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateSparkTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The application type. Valid values:</para>
+        /// <para>The templatetype of the application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SQL</b></description></item>
-        /// <item><description><b>STREAMING</b></description></item>
-        /// <item><description><b>BATCH</b></description></item>
+        /// <item><description><b>SQL</b>: SQL application</description></item>
+        /// <item><description><b>STREAMING</b>: streaming application</description></item>
+        /// <item><description><b>BATCH</b>: batch application</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You do not need to specify this parameter when Type is set to folder.</para>
+        /// <para>You do not need to configure this parameter when the application template type is folder.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AppType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,9 +51,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the directory to which the application template belongs.</para>
+        /// <para>The ID of the folder to which the application template belongs.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/456218.html">GetSparkTemplateFolderTree</a> operation to query the directory ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/456218.html">GetSparkTemplateFolderTree</a> operation to query the folder ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,10 +65,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ParentId { get; set; }
 
         /// <summary>
-        /// <para>The type of the application template. Valid values:</para>
+        /// <para>The templatetype of the application template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>folder</b>: directory.</description></item>
-        /// <item><description><b>file</b>: application.</description></item>
+        /// <item><description><b>folder</b>: folder</description></item>
+        /// <item><description><b>file</b>: application</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

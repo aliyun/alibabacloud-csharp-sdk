@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClusterPerformanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specific region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</para>
+        /// <para>The end time of the query. The time is in UTC and uses the <em>yyyy-MM-ddTHH:mmZ</em> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-11T15:01Z</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The queried performance metrics.</para>
+        /// <para>The cluster performance metrics.</para>
         /// </summary>
         [NameInMap("Performances")]
         [Validation(Required=false)]
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The queried performance metric data.</para>
+            /// <para>The time series data for the metric.</para>
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]
             public List<DescribeDBClusterPerformanceResponseBodyPerformancesSeries> Series { get; set; }
             public class DescribeDBClusterPerformanceResponseBodyPerformancesSeries : TeaModel {
                 /// <summary>
-                /// <para>The name of the performance metric value. For more information about the performance metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Metric overview</a>.</para>
+                /// <para>The name of the performance metric. This parameter is the Value Name of the monitoring metric. For more information, see <a href="https://help.aliyun.com/document_detail/2863211.html">Overview of Monitoring Items</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AnalyticDB_Storage_CPU_Avg_Usage_Percentage</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The tags that are added to the cluster.</para>
+                /// <para>A JSON string that contains the tags for the metric series.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{instance_name: &quot;am-***&quot;}</para>
@@ -76,12 +76,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string Tags { get; set; }
 
+                /// <summary>
+                /// <para>A key for internal internationalization (i18n). You can safely ignore this parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AnalyticDB_RP_WaitTime</para>
+                /// </summary>
                 [NameInMap("TranslateKey")]
                 [Validation(Required=false)]
                 public string TranslateKey { get; set; }
 
                 /// <summary>
-                /// <para>The values of the performance metric at different points in time.</para>
+                /// <para>An array of data points for the time series.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -90,7 +96,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The unit of the performance metric.</para>
+            /// <para>The unit of the monitoring metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>%</para>
@@ -112,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time is displayed in UTC.</para>
+        /// <para>The start time of the query. The time is in UTC and uses the <em>yyyy-MM-ddTHH:mmZ</em> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-10T23:56Z</para>

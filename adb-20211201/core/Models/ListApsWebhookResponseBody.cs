@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListApsWebhookResponseBody : TeaModel {
         /// <summary>
-        /// <para>API status or POP error code.</para>
+        /// <para>The API status code or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleRequestId</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The array of webhooks.</para>
+        /// <para>The webhook array.</para>
         /// </summary>
         [NameInMap("Webhook")]
         [Validation(Required=false)]
         public List<ListApsWebhookResponseBodyWebhook> Webhook { get; set; }
         public class ListApsWebhookResponseBodyWebhook : TeaModel {
             /// <summary>
-            /// <para>Signing key</para>
+            /// <para>The signing key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>your_secret_key</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The name of the webhook.</para>
+            /// <para>The webhook name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>webhook_name</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Url { get; set; }
 
             /// <summary>
-            /// <para>The ID of the webhook that you want to delete.</para>
+            /// <para>The webhook ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b>35</b>*</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string WebhookId { get; set; }
 
             /// <summary>
-            /// <para>Webhook type.</para>
+            /// <para>The webhook type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dingtalk</para>

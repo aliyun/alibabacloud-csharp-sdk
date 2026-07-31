@@ -21,8 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para><b>JobType</b>\
-        /// Job type. SLS or OSS Export Task: ResultExport.</para>
+        /// <para><b>JobType</b><br>The task type. Set this parameter to ResultExport for SLS or OSS export tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ResultExport</para>

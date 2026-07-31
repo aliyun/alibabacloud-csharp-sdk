@@ -10,9 +10,25 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateDBClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup set that you want to use to restore data.</para>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("AINodeNumber")]
+        [Validation(Required=false)]
+        public int? AINodeNumber { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ADB.MLPlus.4</para>
+        /// </summary>
+        [NameInMap("AINodeSpec")]
+        [Validation(Required=false)]
+        public string AINodeSpec { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the backup set used for restoration from a backup set.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612318.html">DescribeBackups</a> operation to query the backup sets of the cluster.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612318.html">DescribeBackups</a> operation to query the backup list of the cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +39,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string BackupSetId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the source cluster.</para>
+        /// <para>The region of the source cluster.</para>
         /// <remarks>
-        /// <para> This parameter must be specified for cloning clusters across regions.</para>
+        /// <para>This parameter is required for cross-region cloning.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,9 +52,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CloneSourceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The amount of reserved computing resources. Valid values: 0ACU to 4096ACU. The value must be in increments of 16ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</para>
+        /// <para>The compute reserved resources. Valid values: 0 ACU to 4096 ACU, in increments of 16. 1 ACU is approximately equivalent to 1 core and 4 GB of memory.</para>
         /// <remarks>
-        /// <para> This parameter must be specified with a unit.</para>
+        /// <para>Include the unit when specifying this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,7 +68,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The description of the cluster.</para>
         /// <list type="bullet">
         /// <item><description>The description cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The description must be 2 to 256 characters in length</description></item>
+        /// <item><description>The description must be 2 to 256 characters in length.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +79,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The network type of the cluster. Set the value to <b>VPC</b>.</para>
+        /// <para>The network type of the cluster. Only <b>VPC</b> (Virtual Private Cloud) is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -73,7 +89,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The version of the cluster. Set the value to <b>5.0</b>.</para>
+        /// <para>The version of the Data Lakehouse Edition cluster. Valid values: <b>5.0</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +100,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable disk encryption.</para>
+        /// <para>Specifies whether to enable cloud disk encryption.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -94,10 +110,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? DiskEncryption { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:</para>
+        /// <para>Specifies whether to allocate all compute reserved resources to the default resource group (user_default). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default)</description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b> (default): All compute reserved resources are allocated to the default resource group.</description></item>
+        /// <item><description><b>false</b>: Not all compute reserved resources are allocated to the default resource group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,14 +123,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public bool? EnableDefaultResourcePool { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable SSL encryption. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: SSL encryption is enabled.</description></item>
+        /// <item><description><b>false</b>: SSL encryption is disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("EnableSSL")]
         [Validation(Required=false)]
         public bool? EnableSSL { get; set; }
 
         /// <summary>
-        /// <para>The ID of the key that is used to encrypt disk data.</para>
+        /// <para>The ID of the key used to encrypt cloud disk data.</para>
         /// <remarks>
-        /// <para> This parameter must be specified only when disk encryption is enabled.</para>
+        /// <para>This parameter is used only when cloud disk encryption is enabled for the AnalyticDB for MySQL cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -125,7 +151,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string KmsId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cluster. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
         /// <item><description><b>Prepaid</b>: subscription.</description></item>
@@ -146,7 +172,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <item><description><b>Month</b>: subscription on a monthly basis.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter must be specified when PayType is set to Prepaid.</para>
+        /// <para>This parameter is required when PayType is set to Prepaid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -157,9 +183,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The product form of the cluster. Valid values:</para>
+        /// <para>The product form. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IntegrationForm</b>: integrated.</description></item>
+        /// <item><description><b>IntegrationForm</b>: integrated form.</description></item>
         /// <item><description><b>LegacyForm</b>: Data Lakehouse Edition.</description></item>
         /// </list>
         /// 
@@ -171,14 +197,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ProductForm { get; set; }
 
         /// <summary>
-        /// <para>The edition of the cluster. Valid values:</para>
+        /// <para>The product version. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>BasicVersion</b>: Basic Edition.</description></item>
-        /// <item><description><b>EnterpriseVersion</b>: Enterprise Edition.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> This parameter must be specified only when ProductForm is set to IntegrationForm.</para>
+        /// <item><description><b>EnterpriseVersion</b>: Enterprise Edition.<remarks>
+        /// <para>This parameter is required only when ProductForm is set to IntegrationForm.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>BasicVersion</para>
@@ -188,9 +214,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ProductVersion { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of a specific Data Lakehouse Edition cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -202,14 +228,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of reserved resource nodes.</para>
+        /// <para>The number of reserved nodes. </para>
         /// <list type="bullet">
-        /// <item><description>For Enterprise Edition, the default value is 3 and the step size is 3.</description></item>
-        /// <item><description>For Basic Edition, the default value is 1.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> This parameter must be specified only when ProductForm is set to IntegrationForm.</para>
+        /// <item><description>Enterprise Edition uses 3 nodes by default, in increments of 3.</description></item>
+        /// <item><description>Basic Edition uses 1 node by default.<remarks>
+        /// <para>This parameter is required only when ProductForm is set to IntegrationForm.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -219,7 +245,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? ReservedNodeCount { get; set; }
 
         /// <summary>
-        /// <para>The specifications of reserved resource nodes. Unit: ACUs.</para>
+        /// <para>The node specifications of reserved nodes, in ACUs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8ACU</para>
@@ -249,10 +275,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RestoreToTime { get; set; }
 
         /// <summary>
-        /// <para>The method that you want to use to restore data. Valid values:</para>
+        /// <para>The restoration method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>backup</b>: restores data from a backup set. You must also specify the <b>BackupSetId</b> and <b>SourceDBClusterId</b> parameters.</description></item>
-        /// <item><description><b>timepoint</b>: restores data to a point in time. You must also specify the <b>RestoreToTime</b> and <b>SourceDBClusterId</b> parameters.</description></item>
+        /// <item><description><b>timepoint</b>: restores data to a specific point in time. You must also specify the <b>RestoreToTime</b> and <b>SourceDBClusterId</b> parameters.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -263,9 +289,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RestoreType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the secondary vSwitch.</para>
+        /// <para>The secondary vSwitch ID.</para>
         /// <remarks>
-        /// <para> You cannot set this parameter to a value that is the same as that of the VSwitchId parameter.</para>
+        /// <para>The value of this parameter must be different from the value of the VSwitchId parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -276,9 +302,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SecondaryVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the secondary zone.</para>
+        /// <para>The secondary zone ID.</para>
         /// <remarks>
-        /// <para> You cannot set this parameter to a value that is the same as that of the ZoneId parameter.</para>
+        /// <para>The value of this parameter must be different from the value of the ZoneId parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -289,7 +315,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SecondaryZoneId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>The instance ID of the source AnalyticDB for MySQL Data Warehouse Edition cluster. If this parameter is specified, the Data Lakehouse Edition cluster is used to recover from the Data Warehouse Edition cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-bp1r053byu48p****</para>
@@ -299,9 +325,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SourceDbClusterId { get; set; }
 
         /// <summary>
-        /// <para>The amount of reserved storage resources. Valid values: 0ACU to 2064ACU. The value must be in increments of 24ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</para>
+        /// <para>The storage reserved resources. Valid values: 0 ACU to 2064 ACU, in increments of 24. 1 ACU is approximately equivalent to 1 core and 4 GB of memory.</para>
         /// <remarks>
-        /// <para> This parameter must be specified with a unit.</para>
+        /// <para>Include the unit when specifying this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -312,16 +338,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StorageResource { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the cluster.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDBClusterRequestTag> Tag { get; set; }
         public class CreateDBClusterRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of <c>Tag.N.Key</c> is paired with a value of <c>Tag.N.Value</c>.</para>
+            /// <para>The tag key. You can use tags to filter the cluster list. You can specify up to 20 tag pairs. The value of N for each tag pair must be unique and must be a consecutive integer that starts from 1. The value of <c>Tag.N.Key</c> corresponds to the value of <c>Tag.N.Value</c>.</para>
             /// <remarks>
-            /// <para> The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -332,9 +358,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the cluster. You can use tags to filter clusters. Valid values of N: 1 to 20. The values that you specify for N must be unique and consecutive integers that start from 1. Each value of <c>Tag.N.Key</c> is paired with a value of <c>Tag.N.Value</c>.</para>
+            /// <para>The tag value. You can use tags to filter the cluster list. You can specify up to 20 tag pairs. The value of N for each tag pair must be unique and must be a consecutive integer that starts from 1. The value of <c>Tag.N.Key</c> corresponds to the value of <c>Tag.N.Value</c>.</para>
             /// <remarks>
-            /// <para> The tag value can be up to 64 characters in length and cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 64 characters in length and cannot start with <c>aliyun</c>, <c>acs:</c>, <c>http://</c>, or <c>https://</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -347,27 +373,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The subscription period of the subscription cluster.</para>
+        /// <para>The subscription duration of the subscription cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when Period is set to Year: 1, 2, and 3 (integer)</description></item>
-        /// <item><description>Valid values when Period is set to Month: 1 to 9 (integer)</description></item>
+        /// <item><description>When <b>Period</b> is set to Year, the value of UsedTime ranges from 1 to 3 (integer).</description></item>
+        /// <item><description>When <b>Period</b> is set to Month, the value of UsedTime ranges from 1 to 9 (integer).</description></item>
         /// </list>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is required if the PayType parameter is set to Prepaid.</description></item>
-        /// <item><description>Longer subscription periods offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</description></item>
-        /// </list>
+        /// <para>This parameter is required when PayType is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("UsedTime")]
         [Validation(Required=false)]
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID of the cluster.</para>
+        /// <para>The virtual private cloud (VPC) ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -378,7 +401,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the cluster.</para>
+        /// <para>The vSwitch ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -389,9 +412,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the cluster.</para>
+        /// <para>The zone ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent zone list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the zone ID of a specific Data Lakehouse Edition cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

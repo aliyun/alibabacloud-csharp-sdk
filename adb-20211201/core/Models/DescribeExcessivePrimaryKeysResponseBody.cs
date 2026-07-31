@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The detection result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>OK</para>
+            /// <para>Multiple tables are detected with excessive primary keys.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The name of the detection item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Excessive primary keys detection</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The queried primary key fields.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2</para>
+            /// <para>id,date</para>
             /// </summary>
             [NameInMap("PrimaryKeyColumns")]
             [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The number of primary key fields.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3</para>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("PrimaryKeyCount")]
             [Validation(Required=false)]

@@ -10,27 +10,27 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListSparkAppsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListSparkAppsResponseBodyData Data { get; set; }
         public class ListSparkAppsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Details of the applications. Fields in the response parameter:</para>
+            /// <para>The list of application information. Response parameter description:</para>
             /// <list type="bullet">
-            /// <item><description><b>Data</b>: the data of the Spark application template.</description></item>
-            /// <item><description><b>EstimateExecutionCpuTimeInSeconds</b>: the amount of time it takes to consume CPU resources for running the Spark application. Unit: milliseconds.</description></item>
+            /// <item><description><b>Data</b>: the Spark application template data.</description></item>
+            /// <item><description><b>EstimateExecutionCpuTimeInSeconds</b>: the CPU time consumed to execute the Spark application, in milliseconds (ms).</description></item>
             /// <item><description><b>LogRootPath</b>: the storage path of log files.</description></item>
-            /// <item><description><b>LastAttemptId</b>: the most recent attempt ID.</description></item>
-            /// <item><description><b>WebUiAddress</b>: the web UI URL.</description></item>
-            /// <item><description><b>SubmittedTimeInMillis</b>: the time when the Spark application was submitted. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</description></item>
-            /// <item><description><b>StartedTimeInMillis</b>: the time when the Spark application was created. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</description></item>
-            /// <item><description><b>LastUpdatedTimeInMillis</b>: the time when the Spark application was last updated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</description></item>
-            /// <item><description><b>TerminatedTimeInMillis</b>: the time when the Spark application task was terminated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</description></item>
-            /// <item><description><b>DBClusterId</b>: the ID of the cluster on which the Spark application runs.</description></item>
+            /// <item><description><b>LastAttemptId</b>: the retry ID.</description></item>
+            /// <item><description><b>WebUiAddress</b>: the Web UI address.</description></item>
+            /// <item><description><b>SubmittedTimeInMillis</b>: the time when the Spark application was submitted, in UNIX timestamp format, in milliseconds (ms).</description></item>
+            /// <item><description><b>StartedTimeInMillis</b>: the time when the Spark application was created, in UNIX timestamp format, in milliseconds (ms).</description></item>
+            /// <item><description><b>LastUpdatedTimeInMillis</b>: the time when the Spark application was last updated, in UNIX timestamp format, in milliseconds (ms).</description></item>
+            /// <item><description><b>TerminatedTimeInMillis</b>: the time when the Spark application stopped execution, in UNIX timestamp format, in milliseconds (ms).</description></item>
+            /// <item><description><b>DBClusterId</b>: the ID of the cluster that executed the Spark application.</description></item>
             /// <item><description><b>ResourceGroupName</b>: the name of the job resource group.</description></item>
-            /// <item><description><b>DurationInMillis</b>: the amount of time it takes to run the Spark application. Unit: milliseconds.</description></item>
+            /// <item><description><b>DurationInMillis</b>: the execution duration of the Spark application, in milliseconds (ms).</description></item>
             /// </list>
             /// </summary>
             [NameInMap("AppInfoList")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<SparkAppInfo> AppInfoList { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D65A809F-34CE-4550-9BC1-0ED21ETG380</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

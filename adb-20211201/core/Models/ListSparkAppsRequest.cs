@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ListSparkAppsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,12 +21,45 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The filter conditions defined as a JSON-formatted string. The following valid KEY values and their meanings are supported in the JSON string:</para>
+        /// <list type="bullet">
+        /// <item><description>SubmittedTimeRange: the start time.</description></item>
+        /// <item><description>TerminatedTimeRange: the end time.</description></item>
+        /// <item><description>AppStates: the status of the Spark job.</description></item>
+        /// <item><description>AppId: the ID of the Spark job.</description></item>
+        /// <item><description>AppNameRegex: the regular expression for the name of the Spark job.</description></item>
+        /// <item><description>Tag: the tag information.</description></item>
+        /// <item><description>ResourceGroupName: the name of the resource group.</description></item>
+        /// </list>
+        /// <para>For the start time and end time filter conditions, specify the range by using the following substructure:</para>
+        /// <list type="bullet">
+        /// <item><description>Min: the lower bound of the time range. A value of null indicates no limit.</description></item>
+        /// <item><description>Max: the upper bound of the time range. A value of null indicates no limit.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        /// &quot;SubmittedTimeRang&quot;: {
+        ///     &quot;Max&quot;: 10000,
+        ///     &quot;Min&quot;: 0
+        ///   },
+        ///   &quot;TerminatedTimeRange&quot;: {
+        ///     &quot;Max&quot;: 10000,
+        ///     &quot;Min&quot;: 0
+        ///   },
+        ///   &quot;AppStates&quot;: [&quot;STARTING&quot;],
+        ///   &quot;AppId&quot;: &quot;adc&quot;,
+        ///   &quot;AppNameRegex&quot;: &quot;cde&quot;,
+        ///   &quot;AttemptId&quot;: &quot;abc-001&quot;
+        /// }</para>
+        /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public string Filters { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer. Default value: <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,9 +70,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>10</b></description></item>
+        /// <item><description><b>10</b> (default)</description></item>
         /// <item><description><b>50</b></description></item>
         /// <item><description><b>100</b></description></item>
         /// </list>

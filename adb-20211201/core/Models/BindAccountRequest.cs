@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class BindAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The standard account of the cluster.</para>
+        /// <para>A standard database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>ID of the cluster. Applies to Enterprise Edition, Basic Edition, or Data Lakehouse Edition clusters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,8 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RAM user.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>ID of the Alibaba Cloud RAM user to bind.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1444832459****</para>
@@ -41,6 +40,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("RamUser")]
         [Validation(Required=false)]
         public string RamUser { get; set; }
+
+        /// <summary>
+        /// <para>List of Alibaba Cloud RAM user IDs to bind. You can bind only one RAM user at a time. If you specify this parameter, the RamUser parameter is ignored.</para>
+        /// </summary>
+        [NameInMap("RamUserList")]
+        [Validation(Required=false)]
+        public List<string> RamUserList { get; set; }
 
     }
 

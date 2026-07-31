@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeJobResourceUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The API status or POP error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The queried resource usage.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeJobResourceUsageResponseBodyData Data { get; set; }
         public class DescribeJobResourceUsageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+            /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amv-clusterxxx</para>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// <para>The end time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The end time. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-23T16:00:00Z</para>
@@ -47,21 +48,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The AnalyticDB compute unit (ACU) usage of the job resource group.</para>
+            /// <para>The ACU usage of the job resource group.</para>
             /// </summary>
             [NameInMap("JobAcuUsage")]
             [Validation(Required=false)]
             public List<DescribeJobResourceUsageResponseBodyDataJobAcuUsage> JobAcuUsage { get; set; }
             public class DescribeJobResourceUsageResponseBodyDataJobAcuUsage : TeaModel {
                 /// <summary>
-                /// <para>The ACU usage.</para>
+                /// <para>The ACU resource usage details.</para>
                 /// </summary>
                 [NameInMap("AcuUsageDetail")]
                 [Validation(Required=false)]
                 public DescribeJobResourceUsageResponseBodyDataJobAcuUsageAcuUsageDetail AcuUsageDetail { get; set; }
                 public class DescribeJobResourceUsageResponseBodyDataJobAcuUsageAcuUsageDetail : TeaModel {
                     /// <summary>
-                    /// <para>The number of ACUs for the elastic resources.</para>
+                    /// <para>The number of elastic ACU resources.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>16ACU</para>
@@ -71,7 +72,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public float? ElasticAcuNumber { get; set; }
 
                     /// <summary>
-                    /// <para>The number of ACUs for the reserved resources.</para>
+                    /// <para>The number of reserved ACU resources.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>16ACU</para>
@@ -81,7 +82,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public float? ReservedAcuNumber { get; set; }
 
                     /// <summary>
-                    /// <para>The number of spot ACUs.</para>
+                    /// <para>The number of spot instance ACU resources.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>16ACU</para>
@@ -91,7 +92,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public float? SpotAcuNumber { get; set; }
 
                     /// <summary>
-                    /// <para>The percent of spot ACUs.</para>
+                    /// <para>The percentage of spot instance resources in the total elastic resources.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.9</para>
@@ -101,7 +102,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public float? SpotAcuPercentage { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of ACUs.</para>
+                    /// <para>The total number of ACU resources.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>32ACU</para>
@@ -113,7 +114,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The end time of the job. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// <para>The end time of the job. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-05-23T16:00:00Z</para>
@@ -133,7 +134,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string JobId { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the job. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// <para>The start time of the job. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-05-22T16:00:00Z</para>
@@ -152,22 +153,44 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string ResourceGroupName { get; set; }
 
+                [NameInMap("SparkAppName")]
+                [Validation(Required=false)]
+                public string SparkAppName { get; set; }
+
+                /// <summary>
+                /// <para>Indicates whether the hot pool is used.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("UseCachePool")]
                 [Validation(Required=false)]
                 public bool? UseCachePool { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The page number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
+            /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The start time. Format: yyyy-MM-ddTHH:mmZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-22T16:00:00Z</para>
@@ -176,6 +199,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
+            /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
             public int? TotalCount { get; set; }

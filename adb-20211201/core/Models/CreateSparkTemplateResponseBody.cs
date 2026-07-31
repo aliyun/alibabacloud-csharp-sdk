@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateSparkTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation result.</para>
+        /// <para>The result of creating the application template.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateSparkTemplateResponseBodyData Data { get; set; }
         public class CreateSparkTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the application template is created. Valid values:</para>
+            /// <para>Indicates whether the creation is successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>True</b></description></item>
-            /// <item><description><b>False</b></description></item>
+            /// <item><description><b>True</b>: Successful.</description></item>
+            /// <item><description><b>False</b>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

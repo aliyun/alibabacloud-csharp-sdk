@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The language that is used for the region and zone names indicated by the LocalName parameter in the response parameters. Valid values:</para>
+        /// <para>The language used for the names of regions and zones (the LocalName values in the response). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh-CN</b> (default): simplified Chinese.</description></item>
+        /// <item><description><b>zh-CN</b>: simplified Chinese (default).</description></item>
         /// <item><description><b>en-US</b>: English.</description></item>
         /// <item><description><b>ja</b>: Japanese.</description></item>
         /// </list>
@@ -32,6 +32,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

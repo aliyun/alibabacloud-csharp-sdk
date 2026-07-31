@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>amv-clusterxxx</para>
+            /// <para>amv-bp1h405854m****</para>
             /// </summary>
             [NameInMap("DBClusterId")]
             [Validation(Required=false)]

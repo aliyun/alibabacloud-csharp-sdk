@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAuditLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,15 +35,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. The time must be in UTC and in the <c>yyyy-MM-ddTHH:mmZ</c> format.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
         /// <item><description><para>The end time must be later than the start time.</para>
         /// </description></item>
-        /// <item><description><para>The maximum time range that can be specified is 24 hours.</para>
+        /// <item><description><para>The time range cannot exceed 24 hours.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-12T17:08Z</para>
@@ -52,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The IP address and port number of the client that is used to execute the SQL statement.</para>
+        /// <para>The client IP address and port number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100.104.XX.XX:43908</para>
@@ -62,27 +63,40 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string HostAddress { get; set; }
 
         /// <summary>
-        /// <para>The order in which to sort the retrieved entries by field. Specify this parameter in the JSON format. The value is an ordered array that uses the order of the input array and contains <c>Field</c> and <c>Type</c>. Example: <c>[{&quot;Field&quot;:&quot;ExecutionStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;},{&quot;Field&quot;:&quot;ScanRows&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. Fields:</para>
+        /// <para>Specifies the fields for sorting the results. The value is a JSON string that is an array of objects. The order of objects in the array defines the sort priority. Each object contains the<c>Field</c> and<c>Type</c> parameters. Example: <c>[{&quot;Field&quot;:&quot;ExecutionStartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;},{&quot;Field&quot;:&quot;ScanRows&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Field</c>: the field that is used to sort the retrieved entries. Valid values:</para>
+        /// <item><description><para><c>Field</c>: the field by which to sort the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HostAddress</b>: the IP address of the client that is used to connect to the database.</description></item>
-        /// <item><description><b>UserName</b>: the username.</description></item>
-        /// <item><description><b>ExecutionStartTime</b>: the start time of the query execution.</description></item>
-        /// <item><description><b>QueryTime</b>: the amount of time consumed to execute the SQL statement.</description></item>
-        /// <item><description><b>PeakMemoryUsage</b>: the maximum memory usage when the SQL statement is executed.</description></item>
-        /// <item><description><b>ScanRows</b>: the number of rows to be scanned from a data source in the task.</description></item>
-        /// <item><description><b>ScanSize</b>: the amount of data to be scanned.</description></item>
-        /// <item><description><b>ScanTime</b>: the total amount of time consumed to scan data.</description></item>
-        /// <item><description><b>PlanningTime</b>: the amount of time consumed to generate execution plans.</description></item>
-        /// <item><description><b>WallTime</b>: the accumulated CPU Time values of all operators in the query on each node.</description></item>
-        /// <item><description><b>ProcessID</b>: the process ID.</description></item>
+        /// <item><description><para><b>HostAddress</b>: the client IP address.</para>
+        /// </description></item>
+        /// <item><description><para><b>UserName</b>: the username.</para>
+        /// </description></item>
+        /// <item><description><para><b>ExecutionStartTime</b>: the execution start time of the SQL statement.</para>
+        /// </description></item>
+        /// <item><description><para><b>QueryTime</b>: the execution duration.</para>
+        /// </description></item>
+        /// <item><description><para><b>PeakMemoryUsage</b>: the peak memory usage of the SQL statement.</para>
+        /// </description></item>
+        /// <item><description><para><b>ScanRows</b>: the number of rows scanned by a task that involves a data source.</para>
+        /// </description></item>
+        /// <item><description><para><b>ScanSize</b>: the amount of data scanned.</para>
+        /// </description></item>
+        /// <item><description><para><b>ScanTime</b>: the time taken for the data scan.</para>
+        /// </description></item>
+        /// <item><description><para><b>PlanningTime</b>: the time taken to generate the execution plan.</para>
+        /// </description></item>
+        /// <item><description><para><b>WallTime</b>: the total CPU time of all operators on all nodes.</para>
+        /// </description></item>
+        /// <item><description><para><b>ProcessID</b>: the process ID.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>Type</c>: the sorting type of the retrieved entries. Valid values:</para>
+        /// <item><description><para><c>Type</c>: the sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Desc</b>: descending order.</description></item>
-        /// <item><description><b>Asc</b>: ascending order.</description></item>
+        /// <item><description><para><b>Desc</b>: descending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>Asc</b>: ascending order.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -95,10 +109,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The sorting order of the retrieved entries. Valid values:</para>
+        /// <para>The sort order for the results based on execution time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b>: sorts the retrieved entries by time in ascending order.</description></item>
-        /// <item><description><b>desc</b>: sorts the retrieved entries by time in descending order.</description></item>
+        /// <item><description><para><b>asc</b>: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>desc</b>: descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,7 +133,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -127,12 +143,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The page size. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>10</b> (default)</description></item>
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>10</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -146,14 +166,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>none</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("ProxyUser")]
         [Validation(Required=false)]
         public string ProxyUser { get; set; }
 
         /// <summary>
-        /// <para>The keyword based on which audit logs are queried. You can set this parameter to a value of the STRING type.</para>
+        /// <para>A keyword used to perform a fuzzy search on the returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb</para>
@@ -163,9 +183,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string QueryKeyword { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query available regions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -187,16 +207,23 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The type of the SQL statement. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DELETE</b></description></item>
-        /// <item><description><b>SELECT</b></description></item>
-        /// <item><description><b>UPDATE</b></description></item>
-        /// <item><description><b>INSERT INTO SELECT</b></description></item>
-        /// <item><description><b>ALTER</b></description></item>
-        /// <item><description><b>DROP</b></description></item>
-        /// <item><description><b>CREATE</b></description></item>
+        /// <item><description><para><b>DELETE</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SELECT</b></para>
+        /// </description></item>
+        /// <item><description><para><b>UPDATE</b></para>
+        /// </description></item>
+        /// <item><description><para><b>INSERT INTO SELECT</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ALTER</b></para>
+        /// </description></item>
+        /// <item><description><para><b>DROP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>CREATE</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can query only a single type of SQL statements at a time. If you leave this parameter empty, all types of SQL statements are queried.</para>
+        /// <para>You can specify only one type per request. If this parameter is not specified, all types are queried by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -207,9 +234,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SqlType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
+        /// <para>The start of the time range to query. The time must be in UTC and in the <c>yyyy-MM-ddTHH:mmZ</c> format.</para>
         /// <remarks>
-        /// <para>SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried.</para>
+        /// <para>You can query SQL audit logs only when this feature is enabled. Logs are available for the last 30 days. If you disable and then re-enable SQL audit, only logs generated after the feature was re-enabled are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -220,10 +247,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the execution of the SQL statement succeeds. Valid values:</para>
+        /// <para>Indicates whether the SQL statement was successfully executed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The SQL statement succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The SQL statement failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -234,7 +263,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Succeed { get; set; }
 
         /// <summary>
-        /// <para>The username that is used to execute the SQL statement.</para>
+        /// <para>The username that executed the SQL statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

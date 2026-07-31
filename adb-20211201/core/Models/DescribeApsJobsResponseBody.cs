@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The progress.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>30: The progress is 30%.</para>
+            /// <para>30: progress 30%</para>
             /// </summary>
             [NameInMap("Projress")]
             [Validation(Required=false)]

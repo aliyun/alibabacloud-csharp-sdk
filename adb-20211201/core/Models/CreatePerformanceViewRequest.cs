@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreatePerformanceViewRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the view.</para>
+        /// <para>The type of the original monitoring dashboard from which the current monitoring dashboard is copied. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Basic</b>: basic dashboard.</description></item>
+        /// <item><description><b>Advanced</b>: advanced dashboard.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Basic</para>
@@ -20,9 +24,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string CreateFromViewType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the cluster ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +39,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:</para>
+        /// <para>Specifies whether to populate the keys from the original monitoring dashboard when viewing the monitoring dashboard. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b></description></item>
@@ -58,7 +63,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the supported regions and zones, including region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,7 +83,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The information about the monitoring view.</para>
+        /// <para>The details of the monitoring dashboard.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ViewDetail")]
@@ -86,7 +91,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public CreatePerformanceViewRequestViewDetail ViewDetail { get; set; }
         public class CreatePerformanceViewRequestViewDetail : TeaModel {
             /// <summary>
-            /// <para>The metric categories.</para>
+            /// <para>The list of metric categories.</para>
             /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
@@ -95,10 +100,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// <para>The name of the metric category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Node</b></description></item>
-                /// <item><description><b>DiskData</b></description></item>
-                /// <item><description><b>WorkLoad</b></description></item>
-                /// <item><description><b>ResourceGroup</b></description></item>
+                /// <item><description><b>Node</b>: node resource metrics.</description></item>
+                /// <item><description><b>DiskData</b>: disk metrics.</description></item>
+                /// <item><description><b>WorkLoad</b>: workload metrics.</description></item>
+                /// <item><description><b>ResourceGroup</b>: resource group metrics.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -109,14 +114,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The metrics.</para>
+                /// <para>The list of metrics.</para>
                 /// </summary>
                 [NameInMap("Keys")]
                 [Validation(Required=false)]
                 public List<CreatePerformanceViewRequestViewDetailCategoriesKeys> Keys { get; set; }
                 public class CreatePerformanceViewRequestViewDetailCategoriesKeys : TeaModel {
                     /// <summary>
-                    /// <para>The name of the metric.</para>
+                    /// <para>The key of the metric.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AnalyticDB_CPU</para>
@@ -126,7 +131,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string KeyName { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to select the metric. Valid values:</para>
+                    /// <para>Specifies whether the metric is selected. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>true</b></description></item>
                     /// <item><description><b>false</b></description></item>
@@ -144,7 +149,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable the filter interaction feature. Valid values:</para>
+            /// <para>Indicates whether the linkage chart is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b></description></item>
             /// <item><description><b>false</b></description></item>
@@ -158,7 +163,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? ChartLinked { get; set; }
 
             /// <summary>
-            /// <para>The number of charts to display in each row.</para>
+            /// <para>The number of charts displayed per row.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -170,11 +175,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The name of the view.</para>
+        /// <para>The name of the monitoring dashboard.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>viewname</para>
+        /// <para>Custom-All metrics-2 columns-Linked</para>
         /// </summary>
         [NameInMap("ViewName")]
         [Validation(Required=false)]

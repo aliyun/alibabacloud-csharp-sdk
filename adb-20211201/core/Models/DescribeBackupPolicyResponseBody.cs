@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of days for which data backup files are retained.</para>
+        /// <para>The number of days to retain data backups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether log backup is enabled. Valid values:</para>
+        /// <para>Indicates whether real-time log backup is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b></description></item>
-        /// <item><description><b>Disable</b></description></item>
+        /// <item><description><para><b>Enable</b>: enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>Disable</b>: disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EnableBackupLog { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which the log backup files are retained.</para>
+        /// <para>The number of days to retain log backups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -44,15 +46,22 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? LogBackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The cycle based on which backups are performed. If more than one day of the week is specified, the days of the week are separated by commas (,). Valid value:</para>
+        /// <para>The data backup cycle. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Monday</description></item>
-        /// <item><description>Tuesday</description></item>
-        /// <item><description>Wednesday</description></item>
-        /// <item><description>Thursday</description></item>
-        /// <item><description>Friday</description></item>
-        /// <item><description>Saturday</description></item>
-        /// <item><description>Sunday</description></item>
+        /// <item><description><para>Monday</para>
+        /// </description></item>
+        /// <item><description><para>Tuesday</para>
+        /// </description></item>
+        /// <item><description><para>Wednesday</para>
+        /// </description></item>
+        /// <item><description><para>Thursday</para>
+        /// </description></item>
+        /// <item><description><para>Friday</para>
+        /// </description></item>
+        /// <item><description><para>Saturday</para>
+        /// </description></item>
+        /// <item><description><para>Sunday</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +72,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The data backup time. The time is in the HH:mmZ-HH:mmZ format. The time is displayed in UTC.</para>
+        /// <para>The data backup time. The time is in the HH:mmZ-HH:mmZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15:00Z-16:00Z</para>

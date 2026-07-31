@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetADBSparkNecessaryRAMPermissionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetADBSparkNecessaryRAMPermissionsResponseBodyData Data { get; set; }
         public class GetADBSparkNecessaryRAMPermissionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>When permission check fails, returns diagnostic information related to permission check failure.</para>
+            /// <para>The diagnostic information returned when the permission check fails.</para>
             /// </summary>
             [NameInMap("DeniedDetail")]
             [Validation(Required=false)]
             public GetADBSparkNecessaryRAMPermissionsResponseBodyDataDeniedDetail DeniedDetail { get; set; }
             public class GetADBSparkNecessaryRAMPermissionsResponseBodyDataDeniedDetail : TeaModel {
                 /// <summary>
-                /// <para>The name of the RAM action that failed the authentication.</para>
+                /// <para>The name of the RAM action for which authentication failed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ListSparkApps</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>The type of the policy denial. Valid values:</para>
+                /// <para>The type of access policy denial. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ImplicitDeny: Resource owner has not configured relevant permission policies for the current user, default denial of unauthorized operations.</description></item>
-                /// <item><description>ExplicitDeny: RAM policies configured by the resource owner explicitly deny the current user access to corresponding resources</description></item>
+                /// <item><description>ImplicitDeny: The resource owner has not configured a relevant access policy for the current user. Unauthorized operations are denied by default.</description></item>
+                /// <item><description>ExplicitDeny: The RAM policy configured by the resource owner explicitly denies the current user authorization to access the corresponding resource.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -48,13 +48,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string NoPermissionType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the policy that causes the access denied error.</para>
+                /// <para>The type of the policy that caused the permission denial. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ControlPolicy: control policy</description></item>
-                /// <item><description>SessionPolicy: Temporary Token additional permission policy</description></item>
-                /// <item><description>AssumeRolePolicy: RAM role trust policy</description></item>
-                /// <item><description>AccountLevelIdentityBasedPolicy: Principal policy within account authorization scope, including custom policies and system policies</description></item>
-                /// <item><description>ResourceGroupLevelIdentityBasedPolicy: Principal policy within resource group authorization scope, including custom policies and system policies.</description></item>
+                /// <item><description>ControlPolicy: control policy.</description></item>
+                /// <item><description>SessionPolicy: an additional permission policy attached to a temporary token.</description></item>
+                /// <item><description>AssumeRolePolicy: the trust policy of a RAM role.</description></item>
+                /// <item><description>AccountLevelIdentityBasedPolicy: an identity-access policy at the account authorization scope, including custom policies and system policies.</description></item>
+                /// <item><description>ResourceGroupLevelIdentityBasedPolicy: an identity-access policy at the resource group authorization scope, including custom policies and system policies.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// <para>The identity type of the current user. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>SubUser: a RAM user</description></item>
-                /// <item><description>AssumedRoleUser: a RAM role</description></item>
+                /// <item><description>SubUser: Resource Access Management (RAM) user.</description></item>
+                /// <item><description>AssumedRoleUser: RAM role.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string PrincipalType { get; set; }
 
                 /// <summary>
-                /// <para>Authentication object information, can be the current user\&quot;s RAM account ID, or the role information corresponding to the current visitor.</para>
+                /// <para>The information about the authentication target, which can be the Resource Access Management (RAM) users ID of the current user or the role information of the current accessor.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>223345695632****</para>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>Check whether the use has the basic permissions to use Analytic DB for Spark.</para>
+            /// <para>Indicates whether the current user has the basic permissions to use ADB Spark. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The check is passed and the basic permissions are granted.</description></item>
-            /// <item><description>false: The check fails and some permissions are missing.</description></item>
+            /// <item><description>true: The check is passed. The user has the basic permissions.</description></item>
+            /// <item><description>false: The check failed. The user is missing some permissions.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public bool? Passed { get; set; }
 
             /// <summary>
-            /// <para>Based on diagnostic information, recommends configurations for customers to perform in the RAM system.</para>
+            /// <para>The recommended RAM configuration based on the diagnostic information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Grant the system RAM policy \&quot;AliyunADBDeveloperAccess\&quot; to current RAM user can quickly solve this issue.</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>642F3512-C628-5D0C-8815-F6670C****</para>

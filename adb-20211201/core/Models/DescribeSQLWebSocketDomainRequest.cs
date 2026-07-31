@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> API to query the details of all clusters in your account, including cluster IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,14 +22,26 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The application module name.</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>SQLWebSocket</c>: The module for SQL development.</para>
+        /// </description></item>
+        /// <item><description><para><c>Assistant</c>: The module for the intelligent assistant.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Assistant</para>
+        /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public string Module { get; set; }
 
         /// <summary>
-        /// <para>The region ID</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> API to query the region IDs supported by AnalyticDB for MySQL.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

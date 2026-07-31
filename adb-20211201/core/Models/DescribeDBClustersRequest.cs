@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the cluster.</para>
+        /// <para>The cluster description.</para>
         /// <list type="bullet">
-        /// <item><description>The description cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The description must be 2 to 256 characters in length</description></item>
+        /// <item><description><para>Cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// </description></item>
+        /// <item><description><para>The description must be 2 to 256 characters long.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,8 +26,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
-        /// <para>If you do not specify this parameter, the information about all clusters that reside in the region is returned.</para>
+        /// <para>The cluster ID.</para>
+        /// <para>If you omit this parameter, the operation returns information about all clusters in the specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-bp1r053byu48p****</para>
@@ -35,17 +37,26 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterIds { get; set; }
 
         /// <summary>
-        /// <para>The status of the cluster. Valid values:</para>
+        /// <para>The cluster status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Preparing</b></description></item>
-        /// <item><description><b>Creating</b></description></item>
-        /// <item><description><b>Running</b></description></item>
-        /// <item><description><b>Deleting</b></description></item>
-        /// <item><description><b>Restoring</b></description></item>
-        /// <item><description><b>ClassChanging</b></description></item>
-        /// <item><description><b>NetAddressCreating</b></description></item>
-        /// <item><description><b>NetAddressDeleting</b></description></item>
-        /// <item><description><b>NetAddressModifying</b></description></item>
+        /// <item><description><para><b>Preparing</b>: The cluster is preparing.</para>
+        /// </description></item>
+        /// <item><description><para><b>Creating</b>: The cluster is being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>Running</b>: The cluster is running.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleting</b>: The cluster is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>Restoring</b>: The cluster is being restored from a backup.</para>
+        /// </description></item>
+        /// <item><description><para><b>ClassChanging</b>: The cluster specifications are changing.</para>
+        /// </description></item>
+        /// <item><description><para><b>NetAddressCreating</b>: A network connection is being created for the cluster.</para>
+        /// </description></item>
+        /// <item><description><para><b>NetAddressDeleting</b>: The network connection of the cluster is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>NetAddressModifying</b>: The network connection of the cluster is being modified.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,11 +67,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterStatus { get; set; }
 
         /// <summary>
-        /// <para>The version number corresponding to the edition of the cluster. Valid values:</para>
+        /// <para>The cluster version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>3.0</b>: Data Warehouse Edition.</description></item>
-        /// <item><description><b>5.0</b> (default): includes Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</description></item>
-        /// <item><description><b>All</b>: all editions, including Data Warehouse Edition, Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</description></item>
+        /// <item><description><para><b>3.0</b>: Data Warehouse edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>5.0</b> (default): Includes the Lakehouse, Enterprise, and Basic editions.</para>
+        /// </description></item>
+        /// <item><description><para><b>All</b>: All editions, including the Data Warehouse, Lakehouse, Enterprise, and Basic editions.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +85,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterVersion { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,11 +95,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of entries to return on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,13 +113,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The edition of the cluster. Valid values:</para>
+        /// <para>The product version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>EnterpriseVersion</b>: Enterprise Edition.</description></item>
-        /// <item><description><b>BasicVersion</b>: Basic Edition.</description></item>
+        /// <item><description><para><b>EnterpriseVersion</b>: Enterprise edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>BasicVersion</b>: Basic edition.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you leave this parameter empty, the information about clusters of all editions is returned.</para>
+        /// <para>If you omit this parameter, the operation returns clusters of all product versions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -113,9 +132,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ProductVersion { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the IDs of available regions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -127,7 +146,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. If you do not specify this parameter, the information about all resource groups in the cluster is returned.</para>
+        /// <para>The ID of the resource group. If you omit this parameter, the operation returns information about clusters in all resource groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-4690g37929****</para>
@@ -137,7 +156,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to the cluster.</para>
+        /// <para>The tags to filter clusters by.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

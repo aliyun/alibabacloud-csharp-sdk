@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The array of webhooks.</para>
+        /// <para>The webhook array.</para>
         /// </summary>
         [NameInMap("Webhook")]
         [Validation(Required=false)]

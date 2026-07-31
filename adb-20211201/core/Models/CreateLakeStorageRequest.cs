@@ -10,8 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateLakeStorageRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.
-        /// You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -21,7 +22,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL cluster with which you want to associate the lake storage.</para>
+        /// <para>The instance ID of the ADB instance attached to the lake storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amv-******</para>
@@ -41,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The permissions that you want to grant on the lake storage to the Alibaba Cloud account besides the permissions that are automatically granted to the Resource Access Management (RAM) user or the Alibaba Cloud account.</para>
+        /// <para>When lake storage is created, permissions are automatically granted to the Resource Access Management (RAM) users performing the operation and the Alibaba Cloud account. You can increase additional Alibaba Cloud account authorizations here.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -65,7 +66,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Account { get; set; }
 
             /// <summary>
-            /// <para>The read permissions.</para>
+            /// <para>The read permission.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -89,7 +90,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The write permissions.</para>
+            /// <para>The write permission.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -103,7 +104,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>RegionId</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

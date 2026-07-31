@@ -49,7 +49,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;DatabaseName&quot;}.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;DbName&quot;}</para>
+        /// <para>{
+        ///       &quot;Type&quot;: &quot;Desc&quot;,
+        ///       &quot;Field&quot;: &quot;DatabaseName&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]

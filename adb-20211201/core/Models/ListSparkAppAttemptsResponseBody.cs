@@ -17,51 +17,36 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public ListSparkAppAttemptsResponseBodyData Data { get; set; }
         public class ListSparkAppAttemptsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The queried attempts. Fields in the response parameter:</para>
+            /// <para>The list of retry information. Metric description:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>AttemptId</b>: the attempt ID.</para>
-            /// </description></item>
-            /// <item><description><para><b>State</b>: the state of the Spark application. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>SUBMITTED</b></description></item>
-            /// <item><description><b>STARTING</b></description></item>
-            /// <item><description><b>RUNNING</b></description></item>
-            /// <item><description><b>FAILING</b></description></item>
-            /// <item><description><b>FAILED</b></description></item>
-            /// <item><description><b>KILLING</b></description></item>
-            /// <item><description><b>KILLED</b></description></item>
-            /// <item><description><b>SUCCEEDING</b></description></item>
-            /// <item><description><b>COMPLETED</b></description></item>
-            /// <item><description><b>FATAL</b></description></item>
-            /// <item><description><b>UNKNOWN</b></description></item>
+            /// <item><description><b>AttemptId</b>: the retry ID.</description></item>
+            /// <item><description><b>State</b>: the execute status of the application. Valid values:<list type="bullet">
+            /// <item><description><b>SUBMITTED</b>: commit.</description></item>
+            /// <item><description><b>STARTING</b>: starting.</description></item>
+            /// <item><description><b>RUNNING</b>: executing.</description></item>
+            /// <item><description><b>FAILING</b>: the node failed and the environment is being cleaned up.</description></item>
+            /// <item><description><b>FAILED</b>: failed.</description></item>
+            /// <item><description><b>KILLING</b>: aborting the task and cleaning up the environment.</description></item>
+            /// <item><description><b>KILLED</b>: the task is aborted.</description></item>
+            /// <item><description><b>SUCCEEDING</b>: the node execution is complete and the environment is being cleaned up.</description></item>
+            /// <item><description><b>COMPLETED</b>: the node execution is complete.</description></item>
+            /// <item><description><b>FATAL</b>: unexpected failure.</description></item>
+            /// <item><description><b>UNKNOWN</b>: unknown fault.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>Message</b>: the alert message that is returned. If no alert is generated, null is returned.</para>
-            /// </description></item>
-            /// <item><description><para><b>Data</b> the data of the Spark application template.</para>
-            /// </description></item>
-            /// <item><description><para><b>EstimateExecutionCpuTimeInSeconds</b>: the amount of time that is required to consume CPU resources for running the Spark application. Unit: milliseconds.</para>
-            /// </description></item>
-            /// <item><description><para><b>LogRootPath</b>: the storage path of log files.</para>
-            /// </description></item>
-            /// <item><description><para><b>LastAttemptId</b>: the ID of the last attempt.</para>
-            /// </description></item>
-            /// <item><description><para><b>WebUiAddress</b>: the web UI URL.</para>
-            /// </description></item>
-            /// <item><description><para><b>SubmittedTimeInMillis</b>: the time when the Spark application was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
-            /// </description></item>
-            /// <item><description><para><b>StartedTimeInMillis</b>: the time when the Spark application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
-            /// </description></item>
-            /// <item><description><para><b>LastUpdatedTimeInMillis</b>: the time when the Spark application was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
-            /// </description></item>
-            /// <item><description><para><b>TerminatedTimeInMillis</b>: the time when the Spark application task was terminated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
-            /// </description></item>
-            /// <item><description><para><b>DBClusterId</b>: the ID of the cluster on which the Spark application runs.</para>
-            /// </description></item>
-            /// <item><description><para><b>ResourceGroupName</b>: the name of the job resource group.</para>
-            /// </description></item>
-            /// <item><description><para><b>DurationInMillis</b>: the amount of time that is required to run the Spark application. Unit: milliseconds.</para>
-            /// </description></item>
+            /// <item><description><b>Message</b>: the alerting message. This parameter is empty if no alerting is generated.</description></item>
+            /// <item><description><b>Data</b>: the Spark application template data.</description></item>
+            /// <item><description><b>EstimateExecutionCpuTimeInSeconds</b>: the CPU time consumed to execute the Spark application, in milliseconds (ms).</description></item>
+            /// <item><description><b>LogRootPath</b>: the storage path of log files.</description></item>
+            /// <item><description><b>LastAttemptId</b>: the ID of the last retry.</description></item>
+            /// <item><description><b>WebUiAddress</b>: the web UI address.</description></item>
+            /// <item><description><b>SubmittedTimeInMillis</b>: the time when the Spark application was committed. This value is a UNIX timestamp in milliseconds (ms).</description></item>
+            /// <item><description><b>StartedTimeInMillis</b>: the time when the Spark application was created. This value is a UNIX timestamp in milliseconds (ms).</description></item>
+            /// <item><description><b>LastUpdatedTimeInMillis</b>: the time when the Spark application was last updated. This value is a UNIX timestamp in milliseconds (ms).</description></item>
+            /// <item><description><b>TerminatedTimeInMillis</b>: the time when the Spark application stopped executing. This value is a UNIX timestamp in milliseconds (ms).</description></item>
+            /// <item><description><b>DBClusterId</b>: the ID of the cluster that executes the Spark application.</description></item>
+            /// <item><description><b>ResourceGroupName</b>: the name of the Job-type resource group.</description></item>
+            /// <item><description><b>DurationInMillis</b>: the execution duration of the Spark application, in milliseconds (ms).</description></item>
             /// </list>
             /// </summary>
             [NameInMap("AttemptInfoList")]
@@ -89,7 +74,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

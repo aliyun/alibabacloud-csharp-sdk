@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeSchemasResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The queried databases.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeSchemasResponseBodyItems Items { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public List<DescribeSchemasResponseBodyItemsSchema> Schema { get; set; }
             public class DescribeSchemasResponseBodyItemsSchema : TeaModel {
-                /// <summary>
-                /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>amv-bp11q28kvl688****</para>
-                /// </summary>
                 [NameInMap("DBClusterId")]
                 [Validation(Required=false)]
                 public string DBClusterId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the database.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>adb_demo</para>
-                /// </summary>
                 [NameInMap("SchemaName")]
                 [Validation(Required=false)]
                 public string SchemaName { get; set; }

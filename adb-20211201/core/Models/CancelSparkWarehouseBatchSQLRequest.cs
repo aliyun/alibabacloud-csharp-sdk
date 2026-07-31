@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CancelSparkWarehouseBatchSQLRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the client, which can be up to 16 characters in length. Specify a descriptive name that makes it easy to identify.</para>
+        /// <para>The client name for auxiliary recording. The value is a meaningful string of up to 16 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DMS</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The query ID of the Spark SQL statement.</para>
+        /// <para>The execution ID of the Spark SQL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

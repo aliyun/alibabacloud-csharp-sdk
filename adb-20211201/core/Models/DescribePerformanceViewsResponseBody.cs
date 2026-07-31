@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The name of the view.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Basic</para>
+            /// <para>Custom-1</para>
             /// </summary>
             [NameInMap("ViewName")]
             [Validation(Required=false)]

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeClusterAccessWhiteListResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The queried IP address whitelists.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeClusterAccessWhiteListResponseBodyItems Items { get; set; }
@@ -20,36 +17,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [Validation(Required=false)]
             public List<DescribeClusterAccessWhiteListResponseBodyItemsIPArray> IPArray { get; set; }
             public class DescribeClusterAccessWhiteListResponseBodyItemsIPArray : TeaModel {
-                /// <summary>
-                /// <para>The attribute of the IP address whitelist.</para>
-                /// <remarks>
-                /// <para> The IP address whitelists that have the <b>hidden</b> attribute are not displayed in the console. These IP address whitelists are used to access services such as Data Transmission Service (DTS) and PolarDB.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>hidden</para>
-                /// </summary>
                 [NameInMap("DBClusterIPArrayAttribute")]
                 [Validation(Required=false)]
                 public string DBClusterIPArrayAttribute { get; set; }
 
-                /// <summary>
-                /// <para>The name of the IP address whitelist.</para>
-                /// <para>Each cluster supports up to 50 IP address whitelists.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("DBClusterIPArrayName")]
                 [Validation(Required=false)]
                 public string DBClusterIPArrayName { get; set; }
 
-                /// <summary>
-                /// <para>The IP addresses in the IP address whitelist. Up to 500 IP addresses can be returned. Multiple IP addresses are separated by commas (,).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>127.0.xx.xx</para>
-                /// </summary>
                 [NameInMap("SecurityIPList")]
                 [Validation(Required=false)]
                 public string SecurityIPList { get; set; }

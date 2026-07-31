@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeEnabledPrivilegesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried permission level and permissions.</para>
+        /// <para>The supported permission levels and the list of permissions.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -19,13 +19,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The description of the permission level.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>全局权限</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The queried permissions.</para>
+            /// <para>The list of supported permissions.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Privileges")]
@@ -33,14 +36,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<DescribeEnabledPrivilegesResponseBodyDataPrivileges> Privileges { get; set; }
             public class DescribeEnabledPrivilegesResponseBodyDataPrivileges : TeaModel {
                 /// <summary>
-                /// <para>The description of the permission.</para>
+                /// <para>The permission description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>查询数据</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The name of the permission.</para>
+                /// <para>The permission name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>select</para>

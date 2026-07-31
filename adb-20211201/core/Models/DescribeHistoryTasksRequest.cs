@@ -50,10 +50,6 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         /// <summary>
         /// <para>The number of the page to return. Valid range: positive integers. Default value: 1</para>
         /// 
@@ -93,10 +89,6 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
 
         /// <summary>
         /// <para>The state of the task. Valid values:</para>

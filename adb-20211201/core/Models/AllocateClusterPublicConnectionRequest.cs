@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class AllocateClusterPublicConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix of the public endpoint.</para>
+        /// <para>The prefix of the public connection address.</para>
         /// <list type="bullet">
-        /// <item><description>The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.</description></item>
-        /// <item><description>The prefix can be up to 30 characters in length.</description></item>
+        /// <item><description><para>It must begin with a lowercase letter and can contain only lowercase letters, digits, and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>It must be no more than 30 characters long.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The cluster ID of an Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The cluster ID of a Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,10 +38,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the cluster. Valid values:</para>
+        /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AnalyticDB</b> (default): the AnalyticDB for MySQL engine.</description></item>
-        /// <item><description><b>Clickhouse</b>: the wide table engine.</description></item>
+        /// <item><description><para><b>AnalyticDB</b> (default): the AnalyticDB for MySQL engine.</para>
+        /// </description></item>
+        /// <item><description><para><b>Clickhouse</b>: the wide table engine.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,6 +52,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
+
+        [NameInMap("ResourceGroupName")]
+        [Validation(Required=false)]
+        public string ResourceGroupName { get; set; }
 
     }
 

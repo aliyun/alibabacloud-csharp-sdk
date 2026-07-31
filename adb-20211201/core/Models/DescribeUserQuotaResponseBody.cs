@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The available elastic AnalyticDB compute units (ACUs).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>512ACU</para>
+        /// <para>512 ACU</para>
         /// </summary>
         [NameInMap("ElasticACU")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The available reserved computing resources.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>48ACU</para>
+        /// <para>48 ACU</para>
         /// </summary>
         [NameInMap("ReserverdCompteACU")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The available reserved storage resources.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>24ACU</para>
+        /// <para>24 ACU</para>
         /// </summary>
         [NameInMap("ReserverdStorageACU")]
         [Validation(Required=false)]

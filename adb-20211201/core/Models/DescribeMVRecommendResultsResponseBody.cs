@@ -16,12 +16,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public DescribeMVRecommendResultsResponseBodyData Data { get; set; }
         public class DescribeMVRecommendResultsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>A list of materialized view recommendation results.</para>
+            /// </summary>
             [NameInMap("MvRecommendResultModels")]
             [Validation(Required=false)]
             public List<OpenStructMVRecommendResultModel> MvRecommendResultModels { get; set; }
 
             /// <summary>
-            /// <para>The page number. Default value: <b>1</b>.</para>
+            /// <para>The page number. The default value is <b>1</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -31,11 +34,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Valid values:</para>
+            /// <para>The number of entries per page. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>30</b> (default).</description></item>
-            /// <item><description><b>50</b>.</description></item>
-            /// <item><description><b>100</b>.</description></item>
+            /// <item><description><para><b>30</b> (Default)</para>
+            /// </description></item>
+            /// <item><description><para><b>50</b></para>
+            /// </description></item>
+            /// <item><description><para><b>100</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,7 +84,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
@@ -88,7 +94,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

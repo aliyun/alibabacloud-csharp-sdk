@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreatePerformanceViewResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
-        /// <remarks>
-        /// <para> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</para>
-        /// </remarks>
+        /// <para>The details of the access denial. This field is returned only when RAM authentication fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -33,8 +30,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The creation result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SUCCESS</b></description></item>
-        /// <item><description><b>FAILED</b></description></item>
+        /// <item><description><b>SUCCESS</b>: succeeded.</description></item>
+        /// <item><description><b>FAILED</b>: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

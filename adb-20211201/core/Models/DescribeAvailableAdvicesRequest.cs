@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeAvailableAdvicesRequest : TeaModel {
         /// <summary>
-        /// <para>The date when the suggestion is generated. Specify the date in the yyyyMMdd format.</para>
+        /// <para>The date when the advice was generated, in the <c>yyyyMMdd</c> format.</para>
         /// <remarks>
-        /// <para> Suggestions are generated after analysis after midnight every day. You must specify a date that is at least one day earlier than the current date. For example, if the current date is 20240627, you must specify 20240626 or an earlier date.</para>
+        /// <para>Advice is generated daily. To query for advice, specify a date at least one day before the current date. For example, if you query on June 27, 2024, set this parameter to <c>20240626</c> or an earlier date.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? AdviceDate { get; set; }
 
         /// <summary>
-        /// <para>The type of the suggestion. Valid values:</para>
+        /// <para>The type of advice. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INDEX</b>: index optimization.</description></item>
-        /// <item><description><b>TIERING</b>: hot and cold data optimization.</description></item>
+        /// <item><description><para><b>INDEX</b>: index optimization.</para>
+        /// </description></item>
+        /// <item><description><para><b>TIERING</b>: hot and cold data tiering.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used to query information by table name.</para>
+        /// <para>The keyword for a fuzzy search on table names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>you_table_name</para>
@@ -58,12 +60,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The display language of suggestions. Valid values:</para>
+        /// <para>The display language for the advice. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): simplified Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
-        /// <item><description><b>ja</b>: Japanese.</description></item>
-        /// <item><description><b>zh-tw</b>: traditional Chinese.</description></item>
+        /// <item><description><para><b>zh</b>: Simplified Chinese (default).</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
+        /// <item><description><para><b>ja</b>: Japanese.</para>
+        /// </description></item>
+        /// <item><description><para><b>zh-tw</b>: Traditional Chinese.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,24 +80,29 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The order by which to sort query results. Specify the parameter value in the JSON format. Example: <c>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>.</para>
+        /// <para>Specifies the sort order for the results. The value is a JSON string. Example: <c>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</c>. The JSON string contains the following key-value pairs:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Field</c> specifies the field by which to sort the query results. Valid values:</para>
+        /// <item><description><para><c>Field</c>: the field to sort by. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>SchemaName</c>: the name of the database.</description></item>
-        /// <item><description><c>TableName</c>: the name of the table.</description></item>
-        /// <item><description><c>Benefit</c>: the expected benefits of the applied optimization suggestion.</description></item>
+        /// <item><description><para><c>SchemaName</c>: the database name.</para>
+        /// </description></item>
+        /// <item><description><para><c>TableName</c>: the table name.</para>
+        /// </description></item>
+        /// <item><description><para><c>Benefit</c>: the expected benefit.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>Type</c> specifies the sorting order. Valid values:</para>
+        /// <item><description><para><c>Type</c>: the sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>Asc</c>: ascending order.</description></item>
-        /// <item><description><c>Desc</c>: descending order.</description></item>
+        /// <item><description><para><c>Asc</c>: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><c>Desc</c>: descending order.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the query results are sorted in descending order based on the Benefit field.</para>
+        /// <para>By default, results are sorted by expected benefit in descending order.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -102,7 +113,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. The value must be an integer that is greater than 0. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -114,9 +125,12 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,7 +152,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the table in the DatabaseName.TableName format.</para>
+        /// <para>A concatenation of the database name and the table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tpch.lineitem</para>

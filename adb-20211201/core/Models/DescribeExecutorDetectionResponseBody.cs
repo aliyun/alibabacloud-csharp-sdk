@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <para>The information about the detection result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Large amounts of memory resources are used by the Aggregation operator.</para>
+            /// <para>检测到Aggregation算子消耗内存资源较多</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                         /// <para>The property information about the operator.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>GROUP BY field: uid</para>
+                        /// <para>Group By字段：uid</para>
                         /// </summary>
                         [NameInMap("OperatorInfo")]
                         [Validation(Required=false)]

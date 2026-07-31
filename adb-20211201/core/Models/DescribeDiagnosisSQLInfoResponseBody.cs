@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDiagnosisSQLInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried execution information, including the SQL statement, statistics, execution plan, and operator information.</para>
+        /// <para>The execution details of the SQL statement, including the detailed SQL statement, statistics information, execution plan, and operator information.</para>
         /// </summary>
         [NameInMap("DiagnosisSQLInfo")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried execution information by stage.</para>
+        /// <para>The stage-level execution information of the query.</para>
         /// </summary>
         [NameInMap("StageInfos")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ExecutionType { get; set; }
 
             /// <summary>
-            /// <para>The total amount of input data in the stage. Unit: bytes.</para>
+            /// <para>The total input data size of the stage, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2341</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? InputRows { get; set; }
 
             /// <summary>
-            /// <para>The total amount of time consumed by all operators in the stage. Unit: milliseconds.</para>
+            /// <para>The cumulative operator duration of the stage, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2341</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? OperatorCost { get; set; }
 
             /// <summary>
-            /// <para>The total amount of output data in the stage. Unit: bytes.</para>
+            /// <para>The total output data size of the stage, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2341</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public long? OutputRows { get; set; }
 
             /// <summary>
-            /// <para>The total peak memory of the stage. Unit: bytes.</para>
+            /// <para>The total peak memory of the stage, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2341</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public double? Progress { get; set; }
 
             /// <summary>
-            /// <para>The stage ID.</para>
+            /// <para>StageID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>Stage[26]</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string StageId { get; set; }
 
             /// <summary>
-            /// <para>The state of the stage.</para>
+            /// <para>The status of the stage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>

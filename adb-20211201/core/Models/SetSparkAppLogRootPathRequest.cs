@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>am-dbclusterid</para>
+        /// <para>amv-bp169ea59k****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>The path of Object Storage Service (OSS) logs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://path/to/log</para>
+        /// <para>oss://testBucketname/to/log</para>
         /// </summary>
         [NameInMap("OssLogPath")]
         [Validation(Required=false)]

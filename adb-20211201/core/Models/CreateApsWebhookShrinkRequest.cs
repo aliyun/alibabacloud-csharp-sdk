@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. Valid value: Task type. SLS or OSS Export Task: ResultExport.</para>
+        /// <para>The task type. Valid values:</para>
+        /// <para>ResultExport: SLS/OSS export task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which to create the dedicated block storage cluster.</para>
+        /// <para>The region ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The array of webhooks.</para>
+        /// <para>The webhook array.</para>
         /// </summary>
         [NameInMap("Webhook")]
         [Validation(Required=false)]

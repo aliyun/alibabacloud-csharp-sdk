@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The information about the Databricks data source.</para>
+        /// <para>The Databricks data source information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatabricksInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The description of the data source.</para>
+        /// <para>The data source description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the data source.</para>
+        /// <para>The data source name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceName { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source.</para>
+        /// <para>The data source type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DatasourceType { get; set; }
 
         /// <summary>
-        /// <para>The information about the Hive data source.</para>
+        /// <para>The Hive data source information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string HiveInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The information about the source Apache Kafka instance.</para>
+        /// <para>The Kafka information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The information about the source PolarDB for MySQL cluster.</para>
+        /// <para>The PolarDB for MySQL data source information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PolarDBMysqlInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The information about the source PolarDB-X instance.</para>
+        /// <para>The PolarDB-X data source information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string PolarDBXInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The information about the source ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The ApsaraDB RDS for MySQL data source information.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The information about the source Simple Log Service (SLS) instance or cluster.</para>
+        /// <para>The Simple Log Service (SLS) information for the data source to be created.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

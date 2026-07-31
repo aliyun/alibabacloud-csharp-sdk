@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Operation succeeded</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

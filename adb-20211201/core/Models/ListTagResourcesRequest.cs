@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The cluster ID. You can specify N cluster IDs. Valid values of N: 1 to 50.</para>
         /// <remarks>
-        /// <para> You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</para>
+        /// <para>You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The tag key. You can specify N tag keys. The tag key cannot be an empty string. Valid values of N: 1 to 20.</para>
             /// <remarks>
-            /// <para> You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</para>
+            /// <para>You must specify at least one of the ResourceId.N and Tag.N.Key parameters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

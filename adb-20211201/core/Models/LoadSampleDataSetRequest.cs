@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>amv-2ze0z517o1mgp66a</para>
+        /// <para>amv-2ze0z517o1mg****</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
