@@ -3649,7 +3649,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>Creates an APS link from Simple Log Service (SLS) to an AnalyticDB data warehouse.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3829,7 +3829,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>Creates an APS link from Simple Log Service (SLS) to an AnalyticDB data warehouse.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4009,7 +4009,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>Creates an APS link from Simple Log Service (SLS) to an AnalyticDB data warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4027,7 +4027,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</para>
+        /// <para>Creates an APS link from Simple Log Service (SLS) to an AnalyticDB data warehouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10109,14 +10109,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table columns for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the column information of a specified table in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10134,6 +10134,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Catalog))
+            {
+                query["Catalog"] = request.Catalog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -10171,14 +10175,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table columns for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the column information of a specified table in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10196,6 +10200,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Catalog))
+            {
+                query["Catalog"] = request.Catalog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -10233,14 +10241,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table columns for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the column information of a specified table in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10259,14 +10267,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about table columns for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Queries the column information of a specified table in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10429,14 +10437,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of databases for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Lists all databases in a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10454,6 +10462,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Catalog))
+            {
+                query["Catalog"] = request.Catalog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -10483,14 +10495,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of databases for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Lists all databases in a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10508,6 +10520,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Catalog))
+            {
+                query["Catalog"] = request.Catalog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -10537,14 +10553,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of databases for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Lists all databases in a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10563,14 +10579,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of databases for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Lists all databases in a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Regional public endpoint: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Regional Virtual Private Cloud (VPC) endpoint: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10733,14 +10749,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists information about all tables in a specified database of a cluster.</para>
+        /// <para>Lists all tables in a specified database of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. For example, <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. For example, <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10758,6 +10774,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Catalog))
+            {
+                query["Catalog"] = request.Catalog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -10791,14 +10811,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists information about all tables in a specified database of a cluster.</para>
+        /// <para>Lists all tables in a specified database of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. For example, <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. For example, <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10816,6 +10836,10 @@ namespace AlibabaCloud.SDK.Adb20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Catalog))
+            {
+                query["Catalog"] = request.Catalog;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -10849,14 +10873,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists information about all tables in a specified database of a cluster.</para>
+        /// <para>Lists all tables in a specified database of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. For example, <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. For example, <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10875,14 +10899,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists information about all tables in a specified database of a cluster.</para>
+        /// <para>Lists all tables in a specified database of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint for a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. For example, <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint for a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. For example, <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 

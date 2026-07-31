@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? ColumnCount { get; set; }
 
         /// <summary>
-        /// <para>Details of the columns.</para>
+        /// <para>The column information.</para>
         /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
         public List<DescribeAdbMySqlColumnsResponseBodyColumns> Columns { get; set; }
         public class DescribeAdbMySqlColumnsResponseBodyColumns : TeaModel {
             /// <summary>
-            /// <para>The comments of the column.</para>
+            /// <para>The column comment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The name of the column.</para>
+            /// <para>The column name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>id</para>
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the operation. Valid values:</para>
+        /// <para>The additional information about the call result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Success</b> is returned if the operation is successful.</description></item>
-        /// <item><description>An error message is returned if the operation fails.</description></item>
+        /// <item><description>If the request was successful, <b>Success</b> is returned. </description></item>
+        /// <item><description>If the request failed, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A9F013CD-0222-595E-8157-445969B97F03</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adb_demo</para>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Schema { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The operation is successful.</description></item>
-        /// <item><description><b>false</b>: The operation fails.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>The table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
