@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class RejectOperationTaskApprovalRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the O&amp;M task approval.</para>
+        /// <para>The O&amp;M task approval ID.</para>
         /// <remarks>
         /// <para>You can call the ListTodoOpsTaskApprovals operation to query this parameter.</para>
         /// </remarks>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The region ID of the bastion host.</para>
         /// <remarks>
-        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The users returned.</para>
+        /// <para>The list of users returned.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The end time of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The end time of the validity period of the user, in seconds (UNIX timestamp format).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672502400</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? EffectiveEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the validity period of the user. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The start time of the validity period of the user, in seconds (UNIX timestamp format).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669630029</para>
@@ -87,12 +87,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required if LanguageStatus is set to Custom. Valid values:</para>
+            /// <para>The language for message notifications. This parameter is required when LanguageStatus is set to Custom. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>zh-cn</b>: simplified Chinese.</para>
-            /// </description></item>
-            /// <item><description><para><b>en</b>: English.</para>
-            /// </description></item>
+            /// <item><description><b>zh-cn</b>: Simplified Chinese</description></item>
+            /// <item><description><b>en</b>: English</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,12 +101,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether notifications are sent in the language specified in the global settings or a custom language.</para>
+            /// <para>The language setting for message notifications. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Global</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Custom</b></para>
-            /// </description></item>
+            /// <item><description><b>Global</b>: follows the global settings</description></item>
+            /// <item><description><b>Custom</b>: custom</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,46 +125,27 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Mobile { get; set; }
 
             /// <summary>
-            /// <para>The location where the mobile phone number of the user is registered. Valid values:</para>
+            /// <para>The country code of the mobile phone number of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>CN</b>: the Chinese mainland, whose international dialing code is +86.</para>
-            /// </description></item>
-            /// <item><description><para><b>HK</b>: Hong Kong (China), whose international dialing code is +852.</para>
-            /// </description></item>
-            /// <item><description><para><b>MO</b>: Macao (China), whose international dialing code is +853.</para>
-            /// </description></item>
-            /// <item><description><para><b>TW</b>: Taiwan (China), whose international dialing code is +886.</para>
-            /// </description></item>
-            /// <item><description><para><b>RU</b>: Russia, whose international dialing code is +7.</para>
-            /// </description></item>
-            /// <item><description><para><b>SG</b>: Singapore, whose international dialing code is +65.</para>
-            /// </description></item>
-            /// <item><description><para><b>MY</b>: Malaysia, whose international dialing code is +60.</para>
-            /// </description></item>
-            /// <item><description><para><b>ID</b>: Indonesia, whose international dialing code is +62.</para>
-            /// </description></item>
-            /// <item><description><para><b>DE</b>: Germany, whose international dialing code is +49.</para>
-            /// </description></item>
-            /// <item><description><para><b>AU</b>: Australia, whose international dialing code is +61.</para>
-            /// </description></item>
-            /// <item><description><para><b>US</b>: US, whose international dialing code is +1.</para>
-            /// </description></item>
-            /// <item><description><para><b>AE</b>: United Arab Emirates, whose international dialing code is +971.</para>
-            /// </description></item>
-            /// <item><description><para><b>JP:</b> Japan, whose international dialing code is +81.</para>
-            /// </description></item>
-            /// <item><description><para><b>GB</b>: UK, whose international dialing code is +44.</para>
-            /// </description></item>
-            /// <item><description><para><b>IN</b>: India, whose international dialing code is +91.</para>
-            /// </description></item>
-            /// <item><description><para><b>KR</b>: Republic of Korea, whose international dialing code is +82.</para>
-            /// </description></item>
-            /// <item><description><para><b>PH</b>: Philippines, whose international dialing code is +63.</para>
-            /// </description></item>
-            /// <item><description><para><b>CH</b>: Switzerland, whose international dialing code is +41.</para>
-            /// </description></item>
-            /// <item><description><para><b>SE</b>: Sweden, whose international dialing code is +46.</para>
-            /// </description></item>
+            /// <item><description><b>CN</b>: the Chinese mainland (+86)</description></item>
+            /// <item><description><b>HK</b>: Hong Kong (China) (+852)</description></item>
+            /// <item><description><b>MO</b>: Macao (China) (+853)</description></item>
+            /// <item><description><b>TW</b>: Taiwan (China) (+886)</description></item>
+            /// <item><description><b>RU</b>: Russia (+7)</description></item>
+            /// <item><description><b>SG</b>: Singapore (+65)</description></item>
+            /// <item><description><b>MY</b>: Malaysia (+60)</description></item>
+            /// <item><description><b>ID</b>: Indonesia (+62)</description></item>
+            /// <item><description><b>DE</b>: Germany (+49)</description></item>
+            /// <item><description><b>AU</b>: Australia (+61)</description></item>
+            /// <item><description><b>US</b>: United States (+1)</description></item>
+            /// <item><description><b>AE</b>: Dubai (+971)</description></item>
+            /// <item><description><b>JP</b>: Japan (+81)</description></item>
+            /// <item><description><b>GB</b>: United Kingdom (+44)</description></item>
+            /// <item><description><b>IN</b>: India (+91)</description></item>
+            /// <item><description><b>KR</b>: South Korea (+82)</description></item>
+            /// <item><description><b>PH</b>: Philippines (+63)</description></item>
+            /// <item><description><b>CH</b>: Switzerland (+41)</description></item>
+            /// <item><description><b>SE</b>: Sweden (+46)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,12 +156,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string MobileCountryCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether password reset is required upon the next logon. Valid values:</para>
+            /// <para>Indicates whether the password must be reset upon next logon. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b>: The password must be reset.</description></item>
+            /// <item><description><b>false</b>: The password does not need to be reset.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -195,16 +170,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public bool? NeedResetPassword { get; set; }
 
             /// <summary>
-            /// <para>The type of the user. Valid values:</para>
+            /// <para>The source of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Local</b>: a local user.</para>
-            /// </description></item>
-            /// <item><description><para><b>Ram</b>: a RAM user.</para>
-            /// </description></item>
-            /// <item><description><para><b>AD</b>: an AD-authenticated user.</para>
-            /// </description></item>
-            /// <item><description><para><b>LDAP</b>: an LDAP-authenticated user.</para>
-            /// </description></item>
+            /// <item><description><b>Local</b>: local user</description></item>
+            /// <item><description><b>Ram</b>: Resource Access Management (RAM) user</description></item>
+            /// <item><description><b>AD</b>: AD user</description></item>
+            /// <item><description><b>LDAP</b>: LDAP user</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -215,9 +186,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the user.</para>
+            /// <para>The unique identity of the user.</para>
             /// <remarks>
-            /// <para>This parameter uniquely identifies a RAM user of the bastion host. A value is returned for this parameter if <b>Source</b> is set to <b>Ram</b>. No value is returned for this parameter if <b>Source</b> is set to <b>Local</b>.</para>
+            /// <para>This parameter is the unique identity of the Resource Access Management (RAM) user that corresponds to the bastion host user. This parameter is returned when the user source is a RAM user (that is, <b>Source</b> is set to <b>Ram</b>). If the user source is a local user (that is, <b>Source</b> is set to <b>Local</b>), this parameter is empty.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -228,21 +199,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string SourceUserId { get; set; }
 
             /// <summary>
-            /// <para>An array of the enabled two-factor authentication methods.</para>
+            /// <para>The array of enabled two-factor authentication methods.</para>
             /// </summary>
             [NameInMap("TwoFactorMethods")]
             [Validation(Required=false)]
             public List<string> TwoFactorMethods { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether two-factor authentication is enabled for the user. Valid values:</para>
+            /// <para>The two-factor authentication status of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Global</b>: The global setting applies.</para>
-            /// </description></item>
-            /// <item><description><para><b>Disable</b>: Two-factor authentication is disabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>Enable</b>: Two-factor authentication is enabled. The user-specific setting for the authentication method applies.</para>
-            /// </description></item>
+            /// <item><description><b>Global</b>: follows the global settings</description></item>
+            /// <item><description><b>Disable</b>: two-factor authentication disabled</description></item>
+            /// <item><description><b>Enable</b>: two-factor authentication enabled, follows individual user settings</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -273,7 +241,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string UserName { get; set; }
 
             /// <summary>
-            /// <para>An array that lists the states of users.</para>
+            /// <para>The user status array.</para>
             /// </summary>
             [NameInMap("UserState")]
             [Validation(Required=false)]

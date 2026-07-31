@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <list type="bullet">
             /// <item><description><b>FixTime</b>: scheduled execution.</description></item>
             /// <item><description><b>CycleInterval</b>: periodic execution.</description></item>
-            /// <item><description><b>Manual</b>: manually triggered by a user.</description></item>
+            /// <item><description><b>Manual</b>: manually triggered by the user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

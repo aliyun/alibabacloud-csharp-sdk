@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public List<RejectOperationTaskApprovalResponseBodyResults> Results { get; set; }
         public class RejectOperationTaskApprovalResponseBodyResults : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>OK</para>
+            /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }

@@ -80,7 +80,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
                 {"cn-zhengzhou-nebula-1", "yundun-bastionhost.aliyuncs.com"},
                 {"eu-west-1-oxs", "yundun-bastionhost.aliyuncs.com"},
                 {"rus-west-1-pop", "yundun-bastionhost.aliyuncs.com"},
+                {"na-south-1", "bastionhost.na-south-1.aliyuncs.com"},
                 {"cn-zhengzhou-jva", "yundun-bastionhost.aliyuncs.com"},
+                {"ap-southeast-7", "bastionhost.ap-southeast-7.aliyuncs.com"},
                 {"ap-southeast-6", "bastionhost.ap-southeast-6.aliyuncs.com"},
                 {"ap-northeast-2", "bastionhost.ap-northeast-2.aliyuncs.com"},
             };
@@ -1084,7 +1086,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O&amp;M task request.</para>
+        /// <para>Approves an O&amp;M task execution request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1134,7 +1136,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O&amp;M task request.</para>
+        /// <para>Approves an O&amp;M task execution request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1184,7 +1186,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O&amp;M task request.</para>
+        /// <para>Approves an O&amp;M task execution request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1202,7 +1204,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O&amp;M task request.</para>
+        /// <para>Approves an O&amp;M task execution request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6848,7 +6850,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns all instance attributes, such as its instance ID and description.</para>
+        /// <para>Queries all attribute information of an instance, such as the instance ID and instance description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6894,7 +6896,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns all instance attributes, such as its instance ID and description.</para>
+        /// <para>Queries all attribute information of an instance, such as the instance ID and instance description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6940,7 +6942,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns all instance attributes, such as its instance ID and description.</para>
+        /// <para>Queries all attribute information of an instance, such as the instance ID and instance description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6958,7 +6960,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns all instance attributes, such as its instance ID and description.</para>
+        /// <para>Queries all attribute information of an instance, such as the instance ID and instance description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8552,7 +8554,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables public network access for a specified Bastionhost instance.</para>
+        /// <para>Enables the public access switch for a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8598,7 +8600,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables public network access for a specified Bastionhost instance.</para>
+        /// <para>Enables the public access switch for a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8644,7 +8646,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables public network access for a specified Bastionhost instance.</para>
+        /// <para>Enables the public access switch for a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8662,7 +8664,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables public network access for a specified Bastionhost instance.</para>
+        /// <para>Enables the public access switch for a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9032,7 +9034,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified O&amp;M task for an administrator.</para>
+        /// <para>Queries the details of a specified O&amp;M task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9084,7 +9086,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified O&amp;M task for an administrator.</para>
+        /// <para>Queries the details of a specified O&amp;M task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9136,7 +9138,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified O&amp;M task for an administrator.</para>
+        /// <para>Queries the details of a specified O&amp;M task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9154,7 +9156,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified O&amp;M task for an administrator.</para>
+        /// <para>Queries the details of a specified O&amp;M task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11384,7 +11386,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a user of a bastion host.</para>
+        /// <para>Retrieves the details of a specified Bastionhost user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11434,7 +11436,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a user of a bastion host.</para>
+        /// <para>Retrieves the details of a specified Bastionhost user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11484,7 +11486,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a user of a bastion host.</para>
+        /// <para>Retrieves the details of a specified Bastionhost user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11502,7 +11504,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a user of a bastion host.</para>
+        /// <para>Retrieves the details of a specified Bastionhost user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16340,13 +16342,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the O&amp;M requests that require approval.</para>
+        /// <para>Retrieves the list of O&amp;M applications that require approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the operations and maintenance (O\&amp;M) requests that require administrator approval.
-        /// The queries per second (QPS) limit for this operation is 10 per user. Exceeding this limit triggers throttling, which can affect your business. Plan your calls accordingly.</para>
+        /// <para>Retrieves the list of O&amp;M applications that require approval for an administrator.
+        /// The China site Chinese QPS limit for this API is 10 requests per second. If this limit is exceeded, throttling is triggered, which may affect your business. Call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16404,13 +16406,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the O&amp;M requests that require approval.</para>
+        /// <para>Retrieves the list of O&amp;M applications that require approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the operations and maintenance (O\&amp;M) requests that require administrator approval.
-        /// The queries per second (QPS) limit for this operation is 10 per user. Exceeding this limit triggers throttling, which can affect your business. Plan your calls accordingly.</para>
+        /// <para>Retrieves the list of O&amp;M applications that require approval for an administrator.
+        /// The China site Chinese QPS limit for this API is 10 requests per second. If this limit is exceeded, throttling is triggered, which may affect your business. Call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16468,13 +16470,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the O&amp;M requests that require approval.</para>
+        /// <para>Retrieves the list of O&amp;M applications that require approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the operations and maintenance (O\&amp;M) requests that require administrator approval.
-        /// The queries per second (QPS) limit for this operation is 10 per user. Exceeding this limit triggers throttling, which can affect your business. Plan your calls accordingly.</para>
+        /// <para>Retrieves the list of O&amp;M applications that require approval for an administrator.
+        /// The China site Chinese QPS limit for this API is 10 requests per second. If this limit is exceeded, throttling is triggered, which may affect your business. Call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16492,13 +16494,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the O&amp;M requests that require approval.</para>
+        /// <para>Retrieves the list of O&amp;M applications that require approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the operations and maintenance (O\&amp;M) requests that require administrator approval.
-        /// The queries per second (QPS) limit for this operation is 10 per user. Exceeding this limit triggers throttling, which can affect your business. Plan your calls accordingly.</para>
+        /// <para>Retrieves the list of O&amp;M applications that require approval for an administrator.
+        /// The China site Chinese QPS limit for this API is 10 requests per second. If this limit is exceeded, throttling is triggered, which may affect your business. Call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17140,7 +17142,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves pending automated O&amp;M approval requests.</para>
+        /// <para>Retrieves the list of pending automated O&amp;M approval requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17202,7 +17204,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves pending automated O&amp;M approval requests.</para>
+        /// <para>Retrieves the list of pending automated O&amp;M approval requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17264,7 +17266,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves pending automated O&amp;M approval requests.</para>
+        /// <para>Retrieves the list of pending automated O&amp;M approval requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17282,7 +17284,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves pending automated O&amp;M approval requests.</para>
+        /// <para>Retrieves the list of pending automated O&amp;M approval requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17604,7 +17606,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of users of a bastion host.</para>
+        /// <para>Retrieves the list of users for a specified bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17686,7 +17688,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of users of a bastion host.</para>
+        /// <para>Retrieves the list of users for a specified bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17768,7 +17770,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of users of a bastion host.</para>
+        /// <para>Retrieves the list of users for a specified bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17786,7 +17788,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of users of a bastion host.</para>
+        /// <para>Retrieves the list of users for a specified bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19624,7 +19626,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a specified Bastionhost instance.</para>
+        /// <para>Modifies the information of a specified bastion host instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19674,7 +19676,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a specified Bastionhost instance.</para>
+        /// <para>Modifies the information of a specified bastion host instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19724,7 +19726,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a specified Bastionhost instance.</para>
+        /// <para>Modifies the information of a specified bastion host instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19742,7 +19744,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a specified Bastionhost instance.</para>
+        /// <para>Modifies the information of a specified bastion host instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21816,7 +21818,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rejects an O&amp;M task approval.</para>
+        /// <para>Rejects an O&amp;M task execution request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21866,7 +21868,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rejects an O&amp;M task approval.</para>
+        /// <para>Rejects an O&amp;M task execution request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21916,7 +21918,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rejects an O&amp;M task approval.</para>
+        /// <para>Rejects an O&amp;M task execution request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21934,7 +21936,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rejects an O&amp;M task approval.</para>
+        /// <para>Rejects an O&amp;M task execution request.</para>
         /// </summary>
         /// 
         /// <param name="request">
