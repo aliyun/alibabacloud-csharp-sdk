@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDeploymentSetsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Details of deployment sets.</para>
-        /// </summary>
         [NameInMap("DeploymentSets")]
         [Validation(Required=false)]
         public DescribeDeploymentSetsResponseBodyDeploymentSets DeploymentSets { get; set; }
@@ -121,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -131,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID of the deployment set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -151,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of deployment sets.</para>
+        /// <para>The total number of queried deployment sets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

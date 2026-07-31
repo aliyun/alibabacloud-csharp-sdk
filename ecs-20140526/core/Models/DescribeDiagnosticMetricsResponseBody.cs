@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</para>
+            /// <para>Indicates whether a script needs to be executed in the guest OS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -77,14 +77,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The operating system type supported by the diagnostic metric. Valid values:</para>
+            /// <para>The supported operating system. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Windows</para>
-            /// </description></item>
-            /// <item><description><para>Linux</para>
-            /// </description></item>
-            /// <item><description><para>All: Windows and Linux</para>
-            /// </description></item>
+            /// <item><description>Windows: Windows operating systems are supported.</description></item>
+            /// <item><description>Linux: Linux operating systems are supported.</description></item>
+            /// <item><description>All: both Windows and Linux operating systems are supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

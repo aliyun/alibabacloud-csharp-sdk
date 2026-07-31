@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNetworkInterfacePermissionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the ENI permission.</para>
+        /// <para>The information about the network interface controller (NIC) permissions.</para>
         /// </summary>
         [NameInMap("NetworkInterfacePermission")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// <para>The ENI ID.</para>
+            /// <para>The ID of the network interface controller (NIC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-bp14v2sdd3v8htln****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The ENI permission ID.</para>
+            /// <para>The ID of the network interface controller (NIC) permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-perm-bp1cs4lwn56lfb****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfacePermissionId { get; set; }
 
             /// <summary>
-            /// <para>The ENI permission.</para>
+            /// <para>The network interface controller (NIC) permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InstanceAttach</para>
@@ -57,12 +57,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Permission { get; set; }
 
             /// <summary>
-            /// <para>The ENI permission state. Valid values:</para>
+            /// <para>The status of the network interface controller (NIC) permission. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The permission is being granted.</description></item>
-            /// <item><description>Granted: The permission has been granted.</description></item>
-            /// <item><description>Revoking: The permission is being revoked.</description></item>
-            /// <item><description>Revoked: The permission has been revoked.</description></item>
+            /// <item><description>Pending: Authorization in progress.</description></item>
+            /// <item><description>Granted: Authorization granted.</description></item>
+            /// <item><description>Revoking: Authorization being revoked.</description></item>
+            /// <item><description>Revoked: Authorization revoked.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

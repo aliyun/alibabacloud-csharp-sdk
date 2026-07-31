@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceMonitorDataRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (<c>ss</c>) is not <c>00</c>, the time is rounded up to the next minute.</para>
+        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (<c>ss</c>) is not <c>00</c>, the time is automatically rounded up to the next minute.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance ID of the instance to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,13 +40,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The interval at which to retrieve monitoring data. Unit: seconds. Valid values:</para>
+        /// <para>The interval at which to retrieve monitoring data. Unit: seconds. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>60</para>
+        /// <item><description><ol start="60">
+        /// <item><description></description></item>
+        /// </ol>
         /// </description></item>
-        /// <item><description><para>600</para>
+        /// <item><description><ol start="600">
+        /// <item><description></description></item>
+        /// </ol>
         /// </description></item>
-        /// <item><description><para>3600</para>
+        /// <item><description><ol start="3600">
+        /// <item><description></description></item>
+        /// </ol>
         /// </description></item>
         /// </list>
         /// <para>Default value: 60.</para>
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (<c>ss</c>) is not <c>00</c>, the time is rounded up to the next minute.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (<c>ss</c>) is not <c>00</c>, the time is automatically rounded up to the next minute.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

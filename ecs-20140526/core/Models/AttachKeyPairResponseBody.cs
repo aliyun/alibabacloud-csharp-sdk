@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AttachKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of instances to which the key pair failed to be bound.</para>
+        /// <para>The number of instances to which the key pair failed to be attached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of instances to which the key pair is bound.</para>
+        /// <para>The total number of instances to which the key pair is attached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

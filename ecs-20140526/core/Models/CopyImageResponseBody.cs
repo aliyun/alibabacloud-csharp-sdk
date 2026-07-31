@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CopyImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the image copy.</para>
+        /// <para>The ID of the copied image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-bp1h46wfpjsjastd****</para>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The IDs of diagnostic metrics.</para>
+        /// <para>The list of diagnostic metrics.</para>
         /// </summary>
         [NameInMap("MetricIds")]
         [Validation(Required=false)]
         public List<string> MetricIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the diagnostic metric sets.</para>
+        /// <para>The ID of the diagnostic metric set.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MetricSetName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

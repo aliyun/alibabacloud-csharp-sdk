@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances to which you attempted to attach the instance RAM role.</para>
+        /// <para>The total number of instances to which the instance RAM role is attached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

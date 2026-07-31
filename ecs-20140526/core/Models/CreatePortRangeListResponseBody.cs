@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreatePortRangeListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the port list.</para>
+        /// <para>The ID of the port list that was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prl-2ze9743****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CopyImageRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the value, but you ensure sure that the value is unique among different requests. <b>The token can contain only ASCII characters and cannot exceed 64 characters in length.</b> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the image copy. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the copied image. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a description example.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the new image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot contain <c>http://</c> or <c>https://</c>. The name cannot start with <c>acs:</c> or <c>aliyun</c>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the copied image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <c>aliyun</c> or <c>acs:</c>. The name cannot contain <c>http://</c> or <c>https://</c>. The name can contain digits, periods (.), colons (:), underscores (_), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>YourImageName</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationImageName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination region to which the source custom image is copied.</para>
+        /// <para>The ID of the destination region to which the image is copied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -50,12 +50,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationRegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Specifies whether to check the image used by the instance supports hot migration. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
-        /// </description></item>
+        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>false: performs a dry run and sends the Normal request. If the request passes the dry run, a 2XX HTTP status code is returned and the operation is performed.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -68,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is unavailable.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,14 +77,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EncryptAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to encrypt the new image.</para>
+        /// <para>Specifies whether to encrypt the copied image.</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: encrypts the copied image.</description></item>
+        /// <item><description>false: does not encrypt the copied image.</description></item>
+        /// <item><description>Not specified: determined by the backend. For more information, see the supplementary description below.</description></item>
         /// </list>
-        /// <para>Default value: false.</para>
+        /// <para>Default value: not specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -107,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the key used to encrypt the image copy.</para>
+        /// <para>The ID of the key used to encrypt the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e522b26d-abf6-4e0d-b5da-04b7******3c</para>
@@ -125,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the source custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the source custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -136,9 +133,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which to assign the new image. If you do not specify this parameter, the new image is assigned to the default resource group.</para>
+        /// <para>The resource group ID of the copied image. If you do not set this parameter, the copied image belongs to the default resource group.</para>
         /// <remarks>
-        /// <para>If you call the CopyImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify <c>ResourceGroupId</c>, the <c>Forbidden: User not authorized to operate on the specified resource</c> error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CopyImage operation again.</para>
+        /// <para>If you are a Resource Access Management (RAM) user and invoke this operation with <c>ResourceGroupId</c> left empty, and the RAM user does not have permissions on the default resource group, the error message <c>Forbidden: User not authorized to operate on the specified resource</c> is returned. Settings a resource group ID that the RAM user has permissions on, or grant the RAM user permissions on the default resource group by using the corresponding Alibaba Cloud account before you invoke this operation again.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -157,14 +154,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CopyImageRequestTag> Tag { get; set; }
         public class CopyImageRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the image copy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag key of the copied image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c> or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -174,7 +171,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the image copy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the copied image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

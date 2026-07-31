@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskChargeTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>true (default): The payment is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled.</para>
-        /// </description></item>
-        /// <item><description><para>false: An order is generated but no payment is made. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, log on to the <b>Expenses and Costs console</b>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a>, and pay for the order.</para>
-        /// </description></item>
+        /// <item><description>true (default): Automatic payment is enabled. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated, and you can only void the order. </description></item>
+        /// <item><description>false: An order is generated without automatic payment. If your account balance is insufficient, an unpaid order is generated. You can log on to the Alibaba Cloud <b>Expenses and Costs</b> console and go to the &lt;props=&quot;china&quot;&gt;<ph><a href="https://usercenter2.aliyun.com/order/list">Orders</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://usercenter2-intl.aliyun.com/order/list">Orders</a></ph> page to complete the payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>token</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -36,15 +34,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The new billing method of the disk. Valid values:</para>
+        /// <para>The billing method of the disk. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>PrePaid (default): changes the billing method from pay-as-you-go to subscription.</para>
-        /// </description></item>
-        /// <item><description><para>PostPaid: changes the billing method from subscription to pay-as-you-go.</para>
-        /// </description></item>
+        /// <item><description>PrePaid (default): The pay-as-you-go data disk is converted to a subscription data disk. </description></item>
+        /// <item><description>PostPaid: The subscription data disk is converted to a pay-as-you-go data disk.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>When you change the billing method of a pay-as-you-go disk to subscription, the billing cycle of the disk is automatically synchronized with that of the associated ECS instance.</para>
+        /// <para>When you convert a pay-as-you-go disk to subscription, the billing cycle of the capacity fee is automatically synchronized with the associated ECS instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of disks. The value is a JSON array that consists of up to 16 disk IDs. Separate the disk IDs with commas (,).</para>
+        /// <para>The list of disk IDs. The value is a JSON array that contains up to 16 IDs separated by commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to which disks are attached.</para>
+        /// <para>The instance ID of the instance to which the disk is attached.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

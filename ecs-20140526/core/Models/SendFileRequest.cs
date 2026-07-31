@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class SendFileRequest : TeaModel {
         /// <summary>
-        /// <para>Ensures request idempotence. Generate a parameter value from your client and ensure that this parameter value is unique across different requests. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The content of the file. The file must not exceed 32 KB in size after it is encoded in Base64.</para>
+        /// <para>The content of the file. The file content cannot exceed 32 KB after Base64 encoding.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>ContentType</c> is set to <c>PlainText</c>, the value of Content is in plaintext.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>ContentType</c> is set to <c>Base64</c>, the value of Content is Base64-encoded.</para>
-        /// </description></item>
+        /// <item><description>If <c>ContentType</c> is set to <c>PlainText</c>, this parameter specifies the plain text content.</description></item>
+        /// <item><description>If <c>ContentType</c> is set to <c>Base64</c>, this parameter specifies the Base64-encoded content.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,10 +37,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The content type of the file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PlainText: The file content is not encoded.</para>
-        /// </description></item>
-        /// <item><description><para>Base64: The file content is encoded in Base64.</para>
-        /// </description></item>
+        /// <item><description>PlainText: plain text.</description></item>
+        /// <item><description>Base64: Base64-encoded.</description></item>
         /// </list>
         /// <para>Default value: PlainText.</para>
         /// 
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The description of the file. The description can be up to 512 characters in length and can contain any characters.</para>
+        /// <para>The description of the file. The full character set is supported. The description cannot exceed 512 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a test file.</para>
@@ -64,9 +60,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The group of the file. This parameter takes effect only on Linux instances. Default value: root. The value can be up to 64 characters in length.</para>
+        /// <para>The group of the file. This parameter takes effect only on Linux instances. Default value: root. The value cannot exceed 64 characters in length.</para>
         /// <remarks>
-        /// <para>If you want to use a non-root user group, make sure that the user group exists in the instances.</para>
+        /// <para>If you specify a different user group, make sure that the user group exists on the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,8 +73,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string FileGroup { get; set; }
 
         /// <summary>
-        /// <para>The permissions on the file. This parameter takes effect only on Linux instances. You can configure this parameter in the same way as you configure the chmod command.</para>
-        /// <para>Default value: 0644, which indicates that the owner of the file has the read and write permissions on the file and that the user group of the file and other users have the read-only permissions on the file.</para>
+        /// <para>The permissions on the file. This parameter takes effect only on Linux instances. You can configure this parameter in the same way as you run the chmod command.</para>
+        /// <para>Default value: 0644, which indicates that the owner has read and write permissions, and the group and other users have read-only permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0644</para>
@@ -88,9 +84,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string FileMode { get; set; }
 
         /// <summary>
-        /// <para>The owner of the file. This parameter takes effect only on Linux instances. Default value: root. The value can be up to 64 characters in length.</para>
+        /// <para>The owner of the file. This parameter takes effect only on Linux instances. Default value: root. The value cannot exceed 64 characters in length.</para>
         /// <remarks>
-        /// <para>If you want to use a non-root user, make sure that the user exists in the instances.</para>
+        /// <para>If you specify a different user, make sure that the user exists on the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -101,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string FileOwner { get; set; }
 
         /// <summary>
-        /// <para>The IDs of instances to which to send the file. You can specify up to 50 instance IDs in each request. Valid values of N: 1 to 50.</para>
+        /// <para>The IDs of the ECS instances to which you want to send the file. You can specify up to 50 instance IDs. Valid values of N: 1 to 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the file. The name can be up to 255 characters in length and can contain any characters.</para>
+        /// <para>The name of the file. The full character set is supported. The name cannot exceed 255 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -123,12 +119,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to overwrite a file in the destination directory if the file has the same name as the sent file.</para>
+        /// <para>Specifies whether to overwrite a file with the same name in the destination directory. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: Overwrite the file.</description></item>
+        /// <item><description>false: Do not overwrite the file.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -148,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance to which to send the file. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the target ECS instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -159,11 +153,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. When you specify this parameter, take note of the following items:</para>
+        /// <para>The ID of the resource group for file sending. If you specify this parameter:</para>
         /// <list type="bullet">
-        /// <item><description><para>The instance specified by the InstanceId parameter must belong to the specified resource group.</para>
+        /// <item><description><para>The ECS instances specified by InstanceId must belong to this resource group.</para>
         /// </description></item>
-        /// <item><description><para>If you specify this parameter, you can call the <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a> operation to query file sending results in the specified resource group.</para>
+        /// <item><description><para>You can filter file sending results by specifying this parameter when you call <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -183,16 +177,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the file sending task.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<SendFileRequestTag> Tag { get; set; }
         public class SendFileRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all the tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The key of the tag for file sending. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all the specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> to query the resources.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -202,7 +196,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
+            /// <para>The value of the tag for file sending. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
             /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -215,7 +209,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The destination directory on the instance to which to send the file. If the specified directory does not exist, the system creates the directory on the instance. The value cannot exceed 255 characters in length.</para>
+        /// <para>The destination directory on the target ECS instances where the file is sent. If the directory does not exist, it is automatically created. The directory path cannot exceed 255 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -226,12 +220,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TargetDir { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for the file sending task. Unit: seconds.</para>
+        /// <para>The timeout period for sending the file. Unit: seconds.</para>
         /// <list type="bullet">
-        /// <item><description><para>A timeout error occurs when a file cannot be sent because the process slows down or because a specific module or Cloud Assistant Agent does not exist.</para>
-        /// </description></item>
-        /// <item><description><para>If the specified timeout period is less than 10 seconds, the system sets the timeout period to 10 seconds to ensure that the file can be sent to the instances.</para>
-        /// </description></item>
+        /// <item><description>A timeout may occur when the file cannot be sent due to a process issue, a missing module, or a missing Cloud Assistant Agent.</description></item>
+        /// <item><description>If the specified timeout period is less than 10 seconds, the system automatically sets the timeout period to 10 seconds to ensure successful delivery.</description></item>
         /// </list>
         /// <para>Default value: 60.</para>
         /// 

@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// <para>The hourly price of a reserved instance with the no upfront or partial upfront payment option.</para>
+                /// <para>The hourly price of a reserved instance with no upfront or partial upfront payment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>

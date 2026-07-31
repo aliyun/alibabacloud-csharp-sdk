@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The maximum number of entries per page for paging queries. Maximum value: 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is not set or is set to a value less than 10, the default value is 10.</description></item>
-        /// <item><description>If the value is set to a value greater than 100, the default value is 100.</description></item>
+        /// <item><description>When no value is set or the value is set to less than 10, the default value is 10.</description></item>
+        /// <item><description>When the value is set to greater than 100, the default value is 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>

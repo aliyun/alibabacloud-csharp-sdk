@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDiagnosticMetricSetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the diagnostic metric set, which is the unique identifier of the set.</para>
+        /// <para>The unique ID of the diagnostic metric set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dms-o7ymuutup5l*****</para>

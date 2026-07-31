@@ -10,13 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiagnosticReportsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is left empty, the default value is 10.</para>
-        /// </description></item>
-        /// <item><description><para>If you set this parameter to a value that is greater than 100, the default value is 100.</para>
-        /// </description></item>
+        /// <item><description>If this parameter is not specified, the default value is 10.</description></item>
+        /// <item><description>If the specified value is greater than 100, the default value is 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
+        /// <para>The pagination token. Set this parameter to the <c>NextToken</c> value returned in the previous call. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,32 +46,27 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of diagnostic reports.</para>
+        /// <para>The list of diagnostic report IDs.</para>
         /// </summary>
         [NameInMap("ReportIds")]
         [Validation(Required=false)]
         public List<string> ReportIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resources. You can specify up to 100 resource IDs.</para>
+        /// <para>The list of resource IDs. A maximum of 100 IDs are supported.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The severity level of the diagnostic report. Valid values:</para>
+        /// <para>The severity level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Unknown: The diagnostic did not start, failed to run, or unexpectedly exited without a diagnosis.</para>
-        /// </description></item>
-        /// <item><description><para>Normal: No exceptions were detected.</para>
-        /// </description></item>
-        /// <item><description><para>Info: Diagnostic information was recorded and may be related to exceptions.</para>
-        /// </description></item>
-        /// <item><description><para>Warn: Diagnostic information was recorded and may indicate exceptions.</para>
-        /// </description></item>
-        /// <item><description><para>Critical: Critical exceptions were detected.</para>
-        /// </description></item>
+        /// <item><description>Unknown: The initial state, which indicates that the diagnosis has not started or the diagnosis process exited unexpectedly. No diagnostic conclusion is available.</description></item>
+        /// <item><description>Normal: The diagnosis is normal. No issues are found.</description></item>
+        /// <item><description>Info: Related information is available and may be associated with exceptions.</description></item>
+        /// <item><description>Warn: Related information is available and may cause exceptions.</description></item>
+        /// <item><description>Critical: Critical exceptions exist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,14 +77,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The status of the diagnostic report. Valid values:</para>
+        /// <para>The report status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>InProgress</para>
-        /// </description></item>
-        /// <item><description><para>Failed</para>
-        /// </description></item>
-        /// <item><description><para>Finished</para>
-        /// </description></item>
+        /// <item><description>InProgress: The diagnosis is in progress.</description></item>
+        /// <item><description>Failed: The diagnosis failed.</description></item>
+        /// <item><description>Finished: The diagnosis is complete.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

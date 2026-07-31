@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The network interface controller (NIC) ID.</para>
+        /// <para>The ID of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-bp1iqejowblx6h8j****</para>

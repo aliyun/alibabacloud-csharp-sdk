@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the security group. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>. The name can contain characters that are categorized as letters in Unicode, including Chinese characters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
+        /// <para>The name of the security group. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>. The name can contain characters that are categorized as letter in Unicode, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>Default value: null. The name is not modified.</para>
         /// 
         /// <b>Example:</b>

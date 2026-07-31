@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class ModifyDiskSpecRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not available for general use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,22 +22,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationZoneId { get; set; }
 
         /// <summary>
-        /// <para>The new disk category of the cloud disk. Valid values:</para>
+        /// <para>The new type of the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cloud_essd: ESSD</para>
+        /// <item><description><para>cloud_essd: enterprise SSD.</para>
         /// </description></item>
-        /// <item><description><para>cloud_auto: ESSD AutoPL disk</para>
+        /// <item><description><para>cloud_auto: ESSD AutoPL disk.</para>
         /// </description></item>
-        /// <item><description><para>cloud_ssd: standard SSD</para>
+        /// <item><description><para>cloud_ssd: standard SSD.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </description></item>
-        /// <item><description><para>cloud_efficiency: utra disk</para>
+        /// <item><description><para>cloud_essd_entry: ESSD Entry disk.</para>
+        /// </description></item>
+        /// <item><description><para>cloud_efficiency: ultra disk.</para>
         /// </description></item>
         /// </list>
-        /// <para>This parameter is empty by default, which indicates that the disk category is not changed.</para>
+        /// <para>Default value: empty, which indicates that the disk type is not changed.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The preceding values are listed in descending order of disk performance. Subscription disks cannot be downgraded.</description></item>
+        /// <item><description>The valid values above are listed in descending order of disk performance. If the disk is a subscription disk, downgrading is not allowed.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>ESSD Entry disks can be changed only to enterprise SSDs or ESSD AutoPL disks. For more information, see <a href="https://help.aliyun.com/document_detail/161980.html">Change the disk type</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The disk ID.</para>
+        /// <para>The ID of the disk.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,11 +66,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</para>
         /// </description></item>
-        /// <item><description><para>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
+        /// <item><description><para>false: performs a dry run and performs the actual request. If the check succeeds, a 2XX HTTP status code is returned and the disk type or ESSD performance level is changed.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -84,16 +91,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The disk performance specifications.</para>
+        /// <para>The disk performance control parameters.</para>
         /// </summary>
         [NameInMap("PerformanceControlOptions")]
         [Validation(Required=false)]
         public ModifyDiskSpecRequestPerformanceControlOptions PerformanceControlOptions { get; set; }
         public class ModifyDiskSpecRequestPerformanceControlOptions : TeaModel {
             /// <summary>
-            /// <para>The new IOPS rate of the cloud disk. You can modify the IOPS rate of only cloud disks in dedicated block storage clusters.</para>
-            /// <para>Valid values: 900 to maximum IOPS per disk (with an increment of 100).</para>
-            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Block storage performance</a>.</para>
+            /// <para>The target IOPS of the disk. Only the IOPS of disks in a dedicated storage cluster can be modified.</para>
+            /// <para>Valid values: 900 to the maximum IOPS per disk, in increments of 100.</para>
+            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Disk performance</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000</para>
@@ -103,9 +110,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? IOPS { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to reset the IOPS rate and throughput of the cloud disk. This parameter takes effect only when the cloud disk belongs to a dedicated block storage cluster.</para>
-            /// <para>After you specify this parameter, PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput do not take effect.</para>
-            /// <para>Set the value to All, which indicates that the IOPS rate and throughput of the cloud disk are reset to the initial values.</para>
+            /// <para>Resets the disk performance. Only disks in a dedicated storage cluster are supported.</para>
+            /// <para>If this parameter is specified, the PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput parameters do not take effect.</para>
+            /// <para>The only valid value is All, which resets the disk IOPS and throughput to their initial values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>All</para>
@@ -115,9 +122,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Recover { get; set; }
 
             /// <summary>
-            /// <para>The new throughput of the cloud disk. You can change the throughput of only cloud disks in dedicated block storage clusters. Unit: MB/s.</para>
-            /// <para>Valid values: 60 to maximum throughput per disk.</para>
-            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Block storage performance</a>.</para>
+            /// <para>The target throughput of the disk. Only the throughput of disks in a dedicated storage cluster can be modified. Unit: MB/s.</para>
+            /// <para>Valid values: 60 to the maximum throughput per disk.</para>
+            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Disk performance</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -129,16 +136,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The new performance level of the ESSD. Valid values:</para>
+        /// <para>The new performance level (PL) of the ESSD. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</para>
-        /// </description></item>
-        /// <item><description><para>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</para>
-        /// </description></item>
-        /// <item><description><para>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</para>
-        /// </description></item>
-        /// <item><description><para>PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</para>
-        /// </description></item>
+        /// <item><description>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</description></item>
+        /// <item><description>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</description></item>
+        /// <item><description>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</description></item>
+        /// <item><description>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</description></item>
         /// </list>
         /// <para>Default value: PL1.</para>
         /// 
@@ -150,11 +153,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk.</para>
-        /// <para>Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
-        /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
+        /// <para>Specifies whether to modify the provisioned read/write IOPS of an ESSD AutoPL disk.</para>
+        /// <para>Valid values: 0 to min{50000, 1000 × Capacity - Baseline performance}.</para>
+        /// <para>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</para>
         /// <remarks>
-        /// <para>This parameter is available only if you set <c>DiskCategory</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</para>
+        /// <para>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the provisioned performance of an ESSD AutoPL disk</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

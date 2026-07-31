@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyCloudAssistantSettingsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of upgrading the Cloud Assistant agent.</para>
+        /// <para>The Cloud Assistant Agent upgrade configuration.</para>
         /// </summary>
         [NameInMap("AgentUpgradeConfig")]
         [Validation(Required=false)]
         public string AgentUpgradeConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The configurations of delivering records to OSS.</para>
+        /// <para>The OSS delivery configuration.</para>
         /// </summary>
         [NameInMap("OssDeliveryConfig")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of resource usage for Cloud Assistant. This setting takes effect only when the version of the Cloud Assistant agent is not earlier than the following versions:</para>
+        /// <para>The Cloud Assistant resource usage configuration. This parameter takes effect only when the Cloud Assistant Agent version meets the following minimum requirements:</para>
         /// <list type="bullet">
         /// <item><description><para>Windows: 2.1.4.1065</para>
         /// </description></item>
@@ -64,23 +64,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceUsageConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the Session Manager feature.</para>
+        /// <para>The Cloud Assistant session feature configuration.</para>
         /// </summary>
         [NameInMap("SessionManagerConfig")]
         [Validation(Required=false)]
         public string SessionManagerConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the service configurations. Valid values:</para>
+        /// <para>The service configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>SessionManagerDelivery</c>: the configurations of delivering session records.</para>
-        /// </description></item>
-        /// <item><description><para><c>InvocationDelivery</c>: the configurations of delivering command execution records.</para>
-        /// </description></item>
-        /// <item><description><para><c>AgentUpgradeConfig</c>: the configurations of upgrading the Cloud Assistant agent.</para>
-        /// </description></item>
-        /// <item><description><para><c>SessionManagerConfig</c>: the configurations of Cloud Assistant Session Manager.</para>
-        /// </description></item>
+        /// <item><description>SessionManagerDelivery: session operation log delivery.</description></item>
+        /// <item><description>InvocationDelivery: task execution log delivery.</description></item>
+        /// <item><description>AgentUpgradeConfig: Cloud Assistant Agent upgrade configuration.</description></item>
+        /// <item><description>SessionManagerConfig: Cloud Assistant SessionManager configuration.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -92,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SettingType { get; set; }
 
         /// <summary>
-        /// <para>The configurations of delivering records to SLS.</para>
+        /// <para>The Simple Log Service (SLS) delivery configuration.</para>
         /// </summary>
         [NameInMap("SlsDeliveryConfig")]
         [Validation(Required=false)]

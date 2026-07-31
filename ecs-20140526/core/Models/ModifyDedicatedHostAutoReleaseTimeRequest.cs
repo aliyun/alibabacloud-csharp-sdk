@@ -10,16 +10,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDedicatedHostAutoReleaseTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
+        /// <para>The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <list type="bullet">
-        /// <item><description><para>The automatic release time must be at least 30 minutes later than the current time.</para>
-        /// </description></item>
-        /// <item><description><para>The automatic release time can be up to 3 years earlier than the current time.</para>
-        /// </description></item>
-        /// <item><description><para>If the value of the seconds (ss) is not 00, it is automatically set to 00.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>AutoReleaseTime</c> is not configured, the automatic release feature is disabled, and the dedicated host will not be automatically released.</para>
-        /// </description></item>
+        /// <item><description>The release time must be at least 30 minutes from the current time.</description></item>
+        /// <item><description>The release time must be at most 3 years from the current time.</description></item>
+        /// <item><description>If the value of seconds (ss) is not 00, it is automatically set to 00.</description></item>
+        /// <item><description>If you do not specify the AutoReleaseTime parameter, automatic release is canceled and the dedicated host is no longer automatically released at the scheduled time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoReleaseTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dedicated host.</para>
+        /// <para>The ID of the dedicated host for which to set automatic release.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

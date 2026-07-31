@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for the elasticity assurance service query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results.</para>
+        /// <para>The pagination token for the next query of elasticity assurance services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of matching entries.</para>
+        /// <para>The total number of entries that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartImagePipelineExecutionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the image creation task.</para>
+        /// <para>The ID of the building task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exec-5fb8facb8ed7427c****</para>

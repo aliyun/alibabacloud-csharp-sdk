@@ -17,12 +17,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeImageFromFamilyResponseBodyImage Image { get; set; }
         public class DescribeImageFromFamilyResponseBodyImage : TeaModel {
             /// <summary>
-            /// <para>The architecture of the image. Valid values:</para>
+            /// <para>The system architecture type of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>i386</para>
-            /// </description></item>
-            /// <item><description><para>x86_64</para>
-            /// </description></item>
+            /// <item><description>i386</description></item>
+            /// <item><description>x86_64</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the volume.</para>
+            /// <para>The description of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDescription</para>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The name of the image family.</para>
+            /// <para>The image family.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testImageFamily</para>
@@ -125,14 +123,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The alias of the image owner. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>system: public images provided by Alibaba Cloud</para>
-            /// </description></item>
-            /// <item><description><para>self: your custom images</para>
-            /// </description></item>
-            /// <item><description><para>others: shared images from other Alibaba Cloud accounts</para>
-            /// </description></item>
-            /// <item><description><para>marketplace: Alibaba Cloud Marketplace images</para>
-            /// </description></item>
+            /// <item><description>system: public image.</description></item>
+            /// <item><description>self: your custom image.</description></item>
+            /// <item><description>others: shared image from other users.</description></item>
+            /// <item><description>marketplace: Alibaba Cloud Marketplace image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -163,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? IsCopied { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the custom image was shared to other Alibaba Cloud accounts.</para>
+            /// <para>Indicates whether the custom image has been shared with other users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -173,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string IsSelfShared { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether you have subscribed to the service terms of the image product corresponding to the image product code.</para>
+            /// <para>Indicates whether you have subscribed to the Terms of Service for the image product that corresponds to the product code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -193,7 +187,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? IsSupportCloudinit { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image can be used on I/O optimized instances.</para>
+            /// <para>Indicates whether the image can run on an I/O optimized instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -203,7 +197,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? IsSupportIoOptimized { get; set; }
 
             /// <summary>
-            /// <para>The display name of the operating system in Chinese.</para>
+            /// <para>The China-locale display name of the operating system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba Cloud Linux 2.1903</para>
@@ -215,10 +209,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The type of the operating system. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>windows</para>
-            /// </description></item>
-            /// <item><description><para>linux</para>
-            /// </description></item>
+            /// <item><description>windows</description></item>
+            /// <item><description>linux</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -229,7 +221,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string OSType { get; set; }
 
             /// <summary>
-            /// <para>The operating system.</para>
+            /// <para>The operating system platform.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Aliyun</para>
@@ -249,7 +241,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The image creation progress in percentage.</para>
+            /// <para>The image creation progress, in percent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -269,16 +261,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// <para>The state of the image. Valid values:</para>
+            /// <para>The status of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>UnAvailable</para>
-            /// </description></item>
-            /// <item><description><para>Available</para>
-            /// </description></item>
-            /// <item><description><para>Creating</para>
-            /// </description></item>
-            /// <item><description><para>CreateFailed</para>
-            /// </description></item>
+            /// <item><description>UnAvailable: unavailable</description></item>
+            /// <item><description>Available: available</description></item>
+            /// <item><description>Creating: being created</description></item>
+            /// <item><description>CreateFailed: failed to be created</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -309,12 +297,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the image has been used to create ECS instances. Valid values:</para>
+            /// <para>The type of resource that references the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>instance: The image was used to create one or more ECS instances.</para>
-            /// </description></item>
-            /// <item><description><para>none: The image was not used to create ECS instances.</para>
-            /// </description></item>
+            /// <item><description>instance: One or more ECS instances have been created from the image.</description></item>
+            /// <item><description>none: No ECS instances have been created from the image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -327,7 +313,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

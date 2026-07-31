@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The list of NIC permission IDs. Number of elements in the list: 1 to 100.</para>
+        /// <para>The list of network interface controller (NIC) permission IDs. Number of elements in the list: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-perm-bp1cs4lwn56lfb****</para>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the NIC permission list.</para>
+        /// <para>The page number of the network interface controller (NIC) permission list.</para>
         /// <para>Minimum value: 1</para>
-        /// <para>Default value: 1.</para>
+        /// <para>Default value: 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries per page for the paged query.</para>
         /// <para>Maximum value: 100</para>
-        /// <para>Default value: 10.</para>
+        /// <para>Default value: 10</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region of the network interface controller (NIC) permissions. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region of the network interface controller (NIC) permissions. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

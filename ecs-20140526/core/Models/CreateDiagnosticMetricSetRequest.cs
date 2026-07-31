@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.</para>
+        /// <para>The list of diagnostic metrics. A maximum of 100 metrics are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MetricIds")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MetricSetName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
+        /// <para>The type of the resource to diagnose.</para>
         /// <para>Default value: instance.</para>
         /// <para>This parameter is required.</para>
         /// 

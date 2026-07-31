@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of a disk for which you want to create a snapshot-consistent group. You can specify disk IDs across instances within the same zone. Valid values of N: 1 to 16. A snapshot-consistent group can contain up to 16 disks with a total capacity of up to 32 TiB.</para>
+        /// <para>The ID of a disk for which you want to create a snapshot-consistent group. You can specify disk IDs across instances within the same zone. Valid values of N: 1 to 128. A snapshot-consistent group can contain up to 128 disks with a total capacity of no more than 256 TiB.</para>
         /// <para>Take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>This parameter cannot be specified together with <c>ExcludeDiskId.N</c>.</description></item>
-        /// <item><description>If you specify <c>InstanceId</c>, this parameter can only be set to disks attached to the specified instance and no longer supports specifying disk IDs across multiple instances.</description></item>
+        /// <item><description>If you specify <c>InstanceId</c>, this parameter can only be set to disks attached to the specified instance, and cross-instance disk IDs are not supported.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("DiskId")]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> DiskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of a disk in the instance for which you do not want to create a snapshot. After you specify this parameter, the snapshot-consistent group does not contain the snapshot of the specified disk. Valid values of N: 1 to 16.</para>
+        /// <para>The ID of a disk in the instance for which you do not want to create a snapshot. After you specify this parameter, the snapshot-consistent group does not contain the snapshot of the specified disk. Valid values of N: 1 to 128.</para>
         /// <para>Default value: null, which indicates that snapshots are created for all disks in the instance.</para>
         /// <remarks>
         /// <para>This parameter cannot be specified together with <c>DiskId.N</c>.</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. Standard snapshots of enterprise SSDs are upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required.</para>
+        /// <para>This parameter is deprecated. Standard snapshots of enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,11 +84,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? InstantAccess { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which the snapshot instant access feature remains active. Unit: days. Valid values: 1 to 65535.</para>
+        /// <para>The number of days for which the snapshot instant access feature is active. Unit: days. Valid values: 1 to 65535.</para>
         /// <para>This parameter takes effect only when <c>InstantAccess=true</c>. The snapshot instant access feature is automatically shutdown when the specified duration expires.</para>
-        /// <para>Default value: null, which indicates that the instant access duration is the same as the snapshot release period.</para>
+        /// <para>Default value: null, which indicates that the instant access feature is active until the snapshot is released.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. Standard snapshots of enterprise SSDs are upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required.</para>
+        /// <para>This parameter is deprecated. Standard snapshots of enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

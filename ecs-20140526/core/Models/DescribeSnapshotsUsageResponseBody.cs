@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of snapshots stored in the current region.</para>
+        /// <para>The total number of snapshots in the current region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SnapshotCount { get; set; }
 
         /// <summary>
-        /// <para>The total size of snapshots stored in the current region. Unit: bytes.</para>
+        /// <para>The total snapshot size in the current region. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>122</para>

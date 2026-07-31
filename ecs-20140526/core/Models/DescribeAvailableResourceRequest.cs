@@ -103,8 +103,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether the instance is an I/O optimized instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>none: non-I/O optimized instance.</description></item>
-        /// <item><description>optimized: I/O optimized instance.</description></item>
+        /// <item><description>none: non-I/O optimization.</description></item>
+        /// <item><description>optimized: I/O optimization.</description></item>
         /// </list>
         /// <para>Default value: optimized.</para>
         /// 
@@ -200,8 +200,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After 1 hour, the system compares the bid price with the market price and checks the inventory to determine whether to retain automatic release the instance.</description></item>
-        /// <item><description>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the inventory to determine whether to retain automatic release the instance.</description></item>
+        /// <item><description>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After 1 hour, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</description></item>
+        /// <item><description>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</description></item>
         /// </list>
         /// <para>Alibaba Cloud sends an ECS system event notification 5 minutes before the instance is released. Spot instances are billed by second. Select an appropriate protection period based on the expected task execution duration.</para>
         /// <remarks>
@@ -219,11 +219,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The bidding policy for pay-as-you-go instances. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>NoSpot: a regular pay-as-you-go instance.</description></item>
-        /// <item><description>SpotWithPriceLimit: a spot instance with a maximum price limit.</description></item>
-        /// <item><description>SpotAsPriceGo: a spot instance priced at the market price with the pay-as-you-go price as the upper limit.</description></item>
+        /// <item><description>SpotWithPriceLimit: a spot instance with a maximum bid price.</description></item>
+        /// <item><description>SpotAsPriceGo: a spot instance for which the system automatically bids at up to the pay-as-you-go price.</description></item>
         /// </list>
         /// <para>Default value: NoSpot.</para>
-        /// <para>This parameter takes effect only when InstanceChargeType is set to <c>PostPaid</c>.</para>
+        /// <para>This parameter takes effect only when <c>InstanceChargeType</c> is set to <c>PostPaid</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NoSpot</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Default value description:</para>
         /// <list type="bullet">
         /// <item><description>If InstanceType is set to a retired instance type, the default value is <c>cloud</c>.</description></item>
-        /// <item><description>In other cases, the default value is <c>cloud_efficiency</c>.&lt;props=&quot;china&quot;&gt;After January 30, 2026, for instance types that support only cloud_essd, the default value is changed from cloud_efficiency to cloud_essd PL0. For more information, see <a href="https://www.aliyun.com/notice/117844">Change notice</a>.</description></item>
+        /// <item><description>In other cases, the default value is <c>cloud_efficiency</c>.&lt;props=&quot;china&quot;&gt; After January 30, 2026, for instance types that support only cloud_essd, the default value is changed from cloud_efficiency to cloud_essd PL0. For more information, see <a href="https://www.aliyun.com/notice/117844">Change notice</a>.</description></item>
         /// </list>
         /// <remarks>
         /// <para>When ResourceType is set to instance and DestinationResource is set to DataDisk, the SystemDiskCategory parameter is required. If you do not specify this parameter, the default value takes effect.</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The zone ID.</para>
-        /// <para>Default value: null. The operation returns resources that match the query conditions across all zones in the specified region (RegionId).</para>
+        /// <para>Default value: null. All zones in the specified region (RegionId) that match the query conditions are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-e</para>

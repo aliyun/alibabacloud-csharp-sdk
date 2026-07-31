@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ListPluginStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID. You can specify up to 50 instances in a single request. Valid values of N: 1 to 50.</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
-        /// <para>Valid values: 1 to 50.</para>
+        /// <para>The maximum number of entries per page for a paged query.</para>
+        /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -29,13 +29,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.</para>
+        /// <para>The plugin name. The full character set is supported. The name can be up to 255 characters in length.</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is not specified, the status of all Cloud Assistant plug-ins that are installed on the specified instances are queried.</para>
-        /// <para>\<em>\</em></para>
-        /// <para><b>Note</b> If this parameter is not specified, only a single instance ID can be specified.</para>
+        /// <item><description><para>If you do not specify this parameter, the status of all installed plugins on the instance is queried.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, you can specify only one instance ID.</para>
+        /// </remarks>
         /// </description></item>
-        /// <item><description><para>If this parameter is specified, the status of the specified Cloud Assistant plug-in is queried.</para>
+        /// <item><description><para>If you specify this parameter, the status of the specified plugin on the instances is queried.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -66,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter is about to go offline. Use NextToken and MaxResults to perform a paging query instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter is about to go offline. Use NextToken and MaxResults to perform a paging query instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

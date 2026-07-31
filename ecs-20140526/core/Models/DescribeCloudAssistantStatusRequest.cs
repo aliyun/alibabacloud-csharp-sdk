@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeCloudAssistantStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The list of instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1iudwa5b1tqa****</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. If you specify <b>InstanceId</b>, this parameter does not take effect.</para>
-        /// <para>Valid values: 1 to 50.</para>
+        /// <para>The maximum number of entries per page for a paged query. If <b>InstanceId</b> is specified, this parameter is ignored.</para>
+        /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -44,12 +44,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The operating system type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Windows</para>
-        /// </description></item>
-        /// <item><description><para>Linux</para>
-        /// </description></item>
-        /// <item><description><para>FreeBSD</para>
-        /// </description></item>
+        /// <item><description>Windows</description></item>
+        /// <item><description>Linux</description></item>
+        /// <item><description>FreeBSD</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -81,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

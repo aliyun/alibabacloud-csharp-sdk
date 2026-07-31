@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region to which the resource belongs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource from which you want to unbind tags. For example, when the resource type (ResourceType) is instance, the resource ID is the instance ID.</para>
+        /// <para>The ID of the resource from which you want to unbind tags. For example, when ResourceType is set to instance, ResourceId refers to the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,12 +47,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>instance: ECS instance.</description></item>
-        /// <item><description>disk: disk.</description></item>
+        /// <item><description>disk: cloud disk.</description></item>
         /// <item><description>snapshot: snapshot.</description></item>
         /// <item><description>image: image.</description></item>
         /// <item><description>securitygroup: security group.</description></item>
         /// <item><description>volume: storage volume.</description></item>
-        /// <item><description>eni: elastic network interface (ENI).</description></item>
+        /// <item><description>eni: Elastic Network Interface (ENI).</description></item>
         /// <item><description>ddh: dedicated host.</description></item>
         /// <item><description>keypair: SSH key pair.</description></item>
         /// <item><description>launchtemplate: launch template.</description></item>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<RemoveTagsRequestTag> Tag { get; set; }
         public class RemoveTagsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string once specified. The tag key can be up to 64 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
+            /// <para>The tag key of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string once specified. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
+            /// <para>The tag value of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. The tag value cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

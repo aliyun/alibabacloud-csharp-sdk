@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The natural language that is used to filter response results. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:  </para>
+        /// <para>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: simplified Chinese.</description></item>
-        /// <item><description>zh-TW: traditional Chinese.</description></item>
+        /// <item><description>zh-CN: Simplified Chinese.</description></item>
+        /// <item><description>zh-TW: Traditional Chinese.</description></item>
         /// <item><description>en-US: English.</description></item>
         /// <item><description>ja: Japanese.</description></item>
         /// <item><description>fr: French.</description></item>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The billing method supported by resources in the active zone. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values: </para>
+        /// <para>The billing method supported by resources in the zone. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>PrePaid: subscription.</description></item>
         /// <item><description>PostPaid: pay-as-you-go.</description></item>

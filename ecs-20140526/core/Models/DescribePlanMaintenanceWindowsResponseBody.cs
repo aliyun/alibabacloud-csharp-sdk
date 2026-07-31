@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The type of resources for which the O&amp;M window is configured.</para>
+                /// <para>The resource type for which the O&amp;M window is configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Tag</para>
@@ -161,14 +161,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The recurrence cycle of the window.</para>
+            /// <para>The recurring cycle of the window.</para>
             /// </summary>
             [NameInMap("TimePeriod")]
             [Validation(Required=false)]
             public DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriod TimePeriod { get; set; }
             public class DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriod : TeaModel {
                 /// <summary>
-                /// <para>The type of the recurrence cycle. Valid values:</para>
+                /// <para>The cycle type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Daily: daily recurrence.</description></item>
                 /// <item><description>Weekly: weekly recurrence.</description></item>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string PeriodUnit { get; set; }
 
                 /// <summary>
-                /// <para>The time ranges within the recurrence cycle of the O&amp;M window (in UTC).</para>
+                /// <para>The time ranges within the recurring cycle of the O&amp;M window (UTC time zone).</para>
                 /// </summary>
                 [NameInMap("RangeList")]
                 [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned under the current query conditions. This parameter is optional and may not be returned by default.</para>
+        /// <para>The total number of entries that match the query conditions. This parameter is optional and may not be returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

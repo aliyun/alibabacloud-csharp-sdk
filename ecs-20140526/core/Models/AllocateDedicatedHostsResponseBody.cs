@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// <remarks>
-        /// <para>This parameter has a return value only when the dedicated host is a subscription one (request parameter <b>ChargeType set to PrePaid</b>).</para>
+        /// <para>This parameter is returned only when you create subscription dedicated hosts (the request parameter <b>ChargeType=PrePaid</b>).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E2A664A6-2933-4C64-88AE-5033D003****</para>

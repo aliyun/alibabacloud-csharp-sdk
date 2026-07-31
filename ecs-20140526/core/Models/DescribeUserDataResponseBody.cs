@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The user data of the instance.</para>
         /// <remarks>
-        /// <para>If no user data is configured for the instance, an empty string is returned.</para>
+        /// <para>If no user data exists for the instance, an empty string is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

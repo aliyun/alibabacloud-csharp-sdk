@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceAutoRenewAttributeResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The auto-renewal attributes of the instances.</para>
-        /// </summary>
         [NameInMap("InstanceRenewAttributes")]
         [Validation(Required=false)]
         public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes InstanceRenewAttributes { get; set; }
@@ -79,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances that are returned.</para>
+        /// <para>The total number of instances returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

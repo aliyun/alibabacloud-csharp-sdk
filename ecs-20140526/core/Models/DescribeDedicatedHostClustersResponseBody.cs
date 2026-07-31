@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the dedicated host cluster list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of dedicated host clusters.</para>
+        /// <para>The total number of dedicated hosts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

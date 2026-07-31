@@ -22,44 +22,44 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The Base64-encoded content of the command.</para>
         /// <list type="bullet">
-        /// <item><description><para>The value of this parameter must be Base64-encoded, and the script content cannot exceed 18 KB in size after Base64 encoding.</para>
+        /// <item><description><para>The value of this parameter must be Base64-encoded and cannot exceed 18 KB in size after Base64 encoding.</para>
         /// </description></item>
-        /// <item><description><para>The command content supports custom parameters. To enable the custom parameter feature, set <c>EnableParameter=true</c>:</para>
+        /// <item><description><para>The command content supports custom parameters. To enable the custom parameter feature, specify <c>EnableParameter=true</c>:</para>
         /// <list type="bullet">
-        /// <item><description>Custom parameters are defined by enclosing them in <c>{{}}</c>. Spaces and line breaks before and after the parameter name within <c>{{}}</c> are ignored.</description></item>
+        /// <item><description>Custom parameters are defined by enclosing the parameter name in <c>{{}}</c>. Spaces and line breaks before and after the parameter name in <c>{{}}</c> are ignored.</description></item>
         /// <item><description>The number of custom parameters cannot exceed 20.</description></item>
         /// <item><description>Custom parameter names can contain letters (a-z, A-Z), digits (0-9), hyphens (-), and underscores (_). The acs:: prefix for specifying non-built-in environment parameters is not supported. Other characters are not supported. Parameter names are case-insensitive.</description></item>
         /// <item><description>Each parameter name cannot exceed 64 bytes in length.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>You can specify built-in environment parameters as custom parameters. When the command is run, Cloud Assistant automatically replaces them with the corresponding values from the environment without requiring manual assignment. The following built-in environment parameters are supported:</para>
+        /// <item><description><para>You can specify built-in environment parameters as custom parameters. When the command is run, Cloud Assistant automatically replaces the parameters with the corresponding values from the environment. The following built-in environment parameters are supported:</para>
         /// <list type="bullet">
         /// <item><description><para><c>{{ACS::RegionId}}</c>: the region ID.</para>
         /// </description></item>
         /// <item><description><para><c>{{ACS::AccountId}}</c>: the UID of the Alibaba Cloud account.</para>
         /// </description></item>
-        /// <item><description><para><c>{{ACS::InstanceId}}</c>: the instance ID. When a command is sent to multiple instances and you want to use <c>{{ACS::InstanceId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than:</para>
+        /// <item><description><para><c>{{ACS::InstanceId}}</c>: the instance ID. When the command is sent to multiple instances, to specify <c>{{ACS::InstanceId}}</c> as a built-in environment parameter, make sure that Cloud Assistant Agent is not earlier than the following versions:</para>
         /// <list type="bullet">
         /// <item><description>Linux: 2.2.3.309</description></item>
         /// <item><description>Windows: 2.1.3.309</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>{{ACS::InstanceName}}</c>: the instance name. When a command is sent to multiple instances and you want to use <c>{{ACS::InstanceName}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than:</para>
+        /// <item><description><para><c>{{ACS::InstanceName}}</c>: the instance name. When the command is sent to multiple instances, to specify <c>{{ACS::InstanceName}}</c> as a built-in environment parameter, make sure that Cloud Assistant Agent is not earlier than the following versions:</para>
         /// <list type="bullet">
         /// <item><description>Linux: 2.2.3.344</description></item>
         /// <item><description>Windows: 2.1.3.344</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>{{ACS::InvokeId}}</c>: the command execution ID. To use <c>{{ACS::InvokeId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than:</para>
+        /// <item><description><para><c>{{ACS::InvokeId}}</c>: the command execution ID. To specify <c>{{ACS::InvokeId}}</c> as a built-in environment parameter, make sure that Cloud Assistant Agent is not earlier than the following versions:</para>
         /// <list type="bullet">
         /// <item><description>Linux: 2.2.3.309</description></item>
         /// <item><description>Windows: 2.1.3.309</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>{{ACS::CommandId}}</c>: the command ID. When you run a command by calling the <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> operation and want to use <c>{{ACS::CommandId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than:</para>
+        /// <item><description><para><c>{{ACS::CommandId}}</c>: the command ID. When you run a command by calling the <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> operation, to specify <c>{{ACS::CommandId}}</c> as a built-in environment parameter, make sure that Cloud Assistant Agent is not earlier than the following versions:</para>
         /// <list type="bullet">
         /// <item><description>Linux: 2.2.3.309</description></item>
-        /// <item><description>Windows: 2.1.3.309.</description></item>
+        /// <item><description>Windows: 2.1.3.309</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// <para>Default value: Base64.</para>
         /// <remarks>
-        /// <para>If an invalid value is specified, it is treated as Base64.</para>
+        /// <para>If you specify an invalid value, the value is treated as Base64.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the command uses custom parameters.</para>
+        /// <para>Specifies whether to use custom parameters in the command.</para>
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class CreateCommandRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
             /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The maximum timeout period for the command to run on the ECS instance. Unit: seconds. If the command cannot be run for any reason, a timeout occurs. After the timeout, the command process is forcefully terminated by canceling the PID of the command.</para>
+        /// <para>The maximum timeout period for the command to run on the ECS instance. Unit: seconds. If the command cannot be run for some reason, a timeout occurs. After the command times out, the command process is forcefully terminated by canceling the PID of the command.</para>
         /// <para>Default value: 60.</para>
         /// 
         /// <b>Example:</b>
@@ -233,10 +233,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The directory where the command is run on the ECS instance. The value cannot exceed 200 characters in length.</para>
+        /// <para>The directory where the command is run on the ECS instance. The directory cannot exceed 200 characters in length.</para>
         /// <para>Default value: </para>
         /// <list type="bullet">
-        /// <item><description>Linux instances: the home directory of the root user, which is <c>/root</c>.  </description></item>
+        /// <item><description>Linux instances: the home directory of the root user, which is the <c>/root</c> directory.  </description></item>
         /// <item><description>Windows instances: the directory where the Cloud Assistant Agent process is located, such as <c>C:\\Windows\\System32</c>.</description></item>
         /// </list>
         /// <remarks>

@@ -14,10 +14,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly delete the custom image. Valid values:</para>
+        /// <para>Specifies whether to force delete the custom image. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>true: Forcibly deletes the custom image, ignoring whether the image is currently used by other instances.</description></item>
-        /// <item><description>false: Normally deletes the custom image. Before deletion, the system checks whether the image is currently used by other instances.</description></item>
+        /// <item><description>true: Force deletes the custom image, regardless of whether the image is being used by other instances.</description></item>
+        /// <item><description>false: Deletes the custom image only after checking that the image is not being used by other instances.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>The image ID. If the specified custom image does not exist, the request will be ignored.</para>
+        /// <para>The image ID. If the specified custom image does not exist, the request is ignored.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

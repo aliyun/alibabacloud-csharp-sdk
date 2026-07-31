@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The batch operation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>AllTogether: In this mode, if all instances are restarted, a success message is returned. If an instance fails the verification, all instances fail to be restarted and an error message is returned.</para>
+        /// <item><description><para>AllTogether: In this mode, a success message is returned if all instances are restarted. If any instance fails validation, all instances fail to restart and an error message is returned.</para>
         /// </description></item>
-        /// <item><description><para>SuccessFirst: In this mode, each instance is restarted separately. The response contains the operation results of each instance.</para>
+        /// <item><description><para>SuccessFirst: In this mode, each instance is restarted separately. The response includes the operation result for each instance.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: AllTogether.</para>
@@ -27,15 +27,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string BatchOptimization { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, <c>DRYRUN.SUCCESS</c> is returned.</description></item>
-        /// </list>
+        /// <item><description><para>true: performs only a dry run without restarting the instance. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check passes, <c>DRYRUN.SUCCESS</c> is returned.</para>
         /// <remarks>
-        /// <para>If you set <c>BatchOptimization</c> to <c>SuccessFirst</c> and <c>DryRun</c> to true, only <c>DRYRUN.SUCCESS</c> is returned regardless of whether the request passes the dry run.</para>
+        /// <para>If the BatchOptimization parameter is set to <c>SuccessFirst</c>, the dry run result for <c>DryRun=true</c> returns only <c>DRYRUN.SUCCESS</c>.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>false: performs a dry run and sends the request. If the request passes the dry run, the instance is restarted.</description></item>
+        /// </description></item>
+        /// <item><description><para>false: performs a dry run and sends the request. After the check passes, the instance is restarted.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully restart the instance. Valid values:</para>
+        /// <para>Specifies whether to force restart the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: forcefully restarts the instance. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on the instance is lost.</para>
+        /// <item><description><para>true: forces a restart. This is equivalent to a power-off operation. Cached data that has not been written to storage devices is lost.</para>
         /// </description></item>
-        /// <item><description><para>false: normally restarts the instance.</para>
+        /// <item><description><para>false: performs a normal restart.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? ForceReboot { get; set; }
 
         /// <summary>
-        /// <para>The IDs of ECS instances. Valid values of N: 1 to 100.</para>
+        /// <para>The instance ID array. Array length: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

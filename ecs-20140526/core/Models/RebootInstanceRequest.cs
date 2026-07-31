@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RebootInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and available ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para>false: performs a dry run and sends the request. If the request passes the dry run, the ECS instance is restarted.</para>
-        /// </description></item>
+        /// <item><description>true: performs only a dry run. The instance is not restarted. The system checks whether required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether ECS resources are available. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>false: performs a dry run and sends the request. If the check succeeds, the instance is restarted.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -27,11 +25,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully stop the ECS instance before the instance is restarted. Valid values:</para>
+        /// <para>Specifies whether to forcefully stop ECS instance before restarting it. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: forcefully stops the ECS instance. If you set this parameter to true, this operation is equivalent to a power-off operation. Cache data that is not written to storage devices on the instance is lost.</para>
+        /// <item><description><para>true: Forcefully stops ECS instance. This is equivalent to a power-off operation. Cached data that has not been written to storage devices is lost.</para>
         /// </description></item>
-        /// <item><description><para>false: normally stops the ECS instance.</para>
+        /// <item><description><para>false: Normally stops ECS instance.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -44,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? ForceStop { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

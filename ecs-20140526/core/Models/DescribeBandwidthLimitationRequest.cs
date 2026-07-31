@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeBandwidthLimitationRequest : TeaModel {
         /// <summary>
-        /// <para>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
+        /// <para>The billing method of the instance. For more details, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>PrePaid: subscription.</description></item>
         /// <item><description>PostPaid: pay-as-you-go.</description></item>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The operation type for querying public bandwidth limits. Valid values:</para>
+        /// <para>The type of operation for which to query the public bandwidth limits. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>Upgrade: upgrades the public bandwidth.</description></item>
         /// <item><description>Downgrade: downgrades the public bandwidth.</description></item>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The resource ID.</para>
         /// <remarks>
-        /// <para>When you set the OperationType parameter to Upgrade or Downgrade, the ResourceId parameter is required.</para>
+        /// <para>The ResourceId parameter is required when you set OperationType to Upgrade or Downgrade.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -92,15 +92,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The bidding strategy for pay-as-you-go instances. Valid values:</para>
+        /// <para>The bidding policy for the pay-as-you-go instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>NoSpot: a regular pay-as-you-go instance.</description></item>
-        /// <item><description>SpotWithPriceLimit: a preemptible instance with a user-defined maximum hourly price.</description></item>
-        /// <item><description>SpotAsPriceGo: a preemptible instance priced at the market price at the time of purchase.</description></item>
+        /// <item><description>NoSpot: The instance is a regular pay-as-you-go instance.</description></item>
+        /// <item><description>SpotWithPriceLimit: The instance is a spot instance with a user-defined maximum hourly price.</description></item>
+        /// <item><description>SpotAsPriceGo: The instance is a spot instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
         /// </list>
         /// <para>Default value: NoSpot.</para>
         /// <remarks>
-        /// <para>The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.</para>
+        /// <para>The SpotStrategy parameter takes effect only when InstanceChargeType is set to PostPaid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

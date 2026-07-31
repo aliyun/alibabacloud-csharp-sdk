@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: performs only a dry run. The system checks the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
-        /// </description></item>
+        /// <item><description>true: performs only a dry run. The instance is not started. The system checks whether the AccessKey pair is valid, whether Resource Access Management (RAM) users are granted required permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</description></item>
+        /// <item><description>false: performs a dry run and sends the request. If the check succeeds, a 2XX HTTP status code is returned and the instance is started.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -27,13 +25,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restore the ECS instance to the initial health state on startup if a local disk fails. This parameter is applicable to ECS instances that are equipped with local disks, such as d1, i1, and i2 instances. Valid values:</para>
+        /// <para>Specifies whether to recover the instance to its initial health state when a local disk fails. This parameter is applicable to instances that use local disks, such as instances in the d1, i1, or i2 instance families. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: restores the ECS instance to the initial health state on startup.</para>
-        /// <para>\<em>\</em></para>
-        /// <para><b>Warning</b>: After the ECS instance is restored to the initial health state, data stored on the local disks of the instance is lost.</para>
+        /// <item><description><para>true: Recovers the instance to its initial health state.</para>
+        /// <remarks>
+        /// <para>Warning: All data stored on the local disks of the instance is lost.</para>
+        /// </remarks>
         /// </description></item>
-        /// <item><description><para>false: does not restore the ECS instance to the initial health state on startup. The instance remains in the current state.</para>
+        /// <item><description><para>false: Does not perform any action and maintains the current state.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -46,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? InitLocalDisk { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance that you want to start.</para>
+        /// <para>The instance ID of the instance that you want to start.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

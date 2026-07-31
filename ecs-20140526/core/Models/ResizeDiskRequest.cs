@@ -10,62 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResizeDiskRequest : TeaModel {
         /// <summary>
-        /// <para>The new disk capacity. Unit: GiB. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>For a system disk:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Basic disk (cloud): 20 to 500.</para>
-        /// </description></item>
-        /// <item><description><para>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.</para>
-        /// <list type="bullet">
-        /// <item><description><para>PL0 ESSD: 1 to 2048.</para>
-        /// </description></item>
-        /// <item><description><para>PL1 ESSD: 20 to 2048.</para>
-        /// </description></item>
-        /// <item><description><para>PL2 ESSD: 461 to 2048.</para>
-        /// </description></item>
-        /// <item><description><para>PL3 ESSD: 1261 to 2048.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>ESSD AutoPL disk: 1 to 2048.</para>
-        /// </description></item>
-        /// <item><description><para>Other disk categories: 20 to 2048.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>For a data disk:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Ultra disk (cloud_efficiency): 20 to 32768.</para>
-        /// </description></item>
-        /// <item><description><para>Standard SSD (cloud_ssd): 20 to 32768.</para>
-        /// </description></item>
-        /// <item><description><para>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.\<c>\\</c> To query the performance level of an ESSD, call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query disk information and check the <c>PerformanceLevel</c> value in the response.</para>
-        /// <list type="bullet">
-        /// <item><description><para>PL0 ESSD: 1 to 65536.</para>
-        /// </description></item>
-        /// <item><description><para>PL1 ESSD: 20 to 65536.</para>
-        /// </description></item>
-        /// <item><description><para>PL2 ESSD: 461 to 65536.</para>
-        /// </description></item>
-        /// <item><description><para>PL3 ESSD: 1261 to 65536.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Basic disk (cloud): 5 to 2000.</para>
-        /// </description></item>
-        /// <item><description><para>ESSD AutoPL disk (cloud_auto): 1 to 65536.</para>
-        /// </description></item>
-        /// <item><description><para>Standard elastic ephemeral disk (elastic_ephemeral_disk_standard): 64 to 8192.</para>
-        /// </description></item>
-        /// <item><description><para>Premium elastic ephemeral disk (elastic_ephemeral_disk_premium): 64 to 8192.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>The new disk capacity must be larger than the original disk capacity. Otherwise, an error is reported.</para>
-        /// </remarks>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -75,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query available disk IDs.</para>
+        /// <para>The disk ID. You can call <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> to query disk IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,28 +31,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The new disk capacity. Unit: GiB. Valid values:</para>
+        /// <para>The new disk capacity that you want to expand to. Unit: GiB. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>System disk:</para>
         /// <list type="bullet">
-        /// <item><description><para>Basic disk (cloud): 20 to 500.</para>
-        /// </description></item>
-        /// <item><description><para>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.</para>
-        /// <list type="bullet">
-        /// <item><description><para>Valid values when SystemDisk.PerformanceLevel is set to PL0: 1 to 2048.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values when SystemDisk.PerformanceLevel is set to PL1: 20 to 2048.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values when SystemDisk.PerformanceLevel is set to PL2: 461 to 2048.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values when SystemDisk.PerformanceLevel is set to PL3: 1261 to 2048.</para>
-        /// </description></item>
+        /// <item><description>Basic disk: 20 to 500.</description></item>
+        /// <item><description>Enterprise SSD:<list type="bullet">
+        /// <item><description>PL0: 1 to 2048.</description></item>
+        /// <item><description>PL1: 20 to 2048.</description></item>
+        /// <item><description>PL2: 461 to 2048.</description></item>
+        /// <item><description>PL3: 1261 to 2048.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>ESSD AutoPL disk: 1 to 2048.</para>
-        /// </description></item>
-        /// <item><description><para>Other disk categories: 20 to 2048.</para>
-        /// </description></item>
+        /// <item><description>ESSD AutoPL disk: 1 to 2048.</description></item>
+        /// <item><description>Other disk types: 20 to 2048.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Data disk:</para>
@@ -116,31 +53,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description><para>Standard SSD (cloud_ssd): 20 to 32768.</para>
         /// </description></item>
-        /// <item><description><para>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.\<c>\\</c> To query the performance level of an ESSD, call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query disk information and check the <c>PerformanceLevel</c> value in the response.</para>
+        /// <item><description><para>Enterprise SSD (cloud_essd): The valid values depend on the value of <c>PerformanceLevel</c>. You can call <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> to query disk information and then check the valid values based on the <c>PerformanceLevel</c> parameter in the response.</para>
         /// <list type="bullet">
-        /// <item><description><para>PL0 ESSD: 1 to 65536.</para>
-        /// </description></item>
-        /// <item><description><para>PL1 ESSD: 20 to 65536.</para>
-        /// </description></item>
-        /// <item><description><para>PL2 ESSD: 461 to 65536.</para>
-        /// </description></item>
-        /// <item><description><para>PL3 ESSD: 1261 to 65536.</para>
-        /// </description></item>
+        /// <item><description>PL0: 1 to 65536.</description></item>
+        /// <item><description>PL1: 20 to 65536.</description></item>
+        /// <item><description>PL2: 461 to 65536.</description></item>
+        /// <item><description>PL3: 1261 to 65536.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Basic disk (cloud): 5 to 2000.</para>
         /// </description></item>
-        /// <item><description><para>ESSD AutoPL disk (cloud_auto): 1 to 65536.</para>
+        /// <item><description><para>ESSD AutoPL disk (cloud_auto): 1 to 65536.
+        /// &lt;props=&quot;china&quot;&gt;</para>
         /// </description></item>
-        /// <item><description><para>Standard elastic ephemeral disk (elastic_ephemeral_disk_standard): 64 to 8192.</para>
+        /// <item><description><para>ESSD Entry disk (cloud_essd_entry): 10 to 32768.</para>
         /// </description></item>
-        /// <item><description><para>Premium elastic ephemeral disk (elastic_ephemeral_disk_premium): 64 to 8192.</para>
+        /// <item><description><para>Elastic ephemeral disk - Standard (elastic_ephemeral_disk_standard): 64 to 8,192.</para>
+        /// </description></item>
+        /// <item><description><para>Elastic ephemeral disk - Premium (elastic_ephemeral_disk_premium): 64 to 8,192.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>The new disk capacity must be larger than the original disk capacity. Otherwise, an error is reported.</para>
+        /// <para>The specified new disk capacity must be greater than the original disk capacity. Otherwise, an error is returned.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -168,11 +104,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The method that you want to use to resize the disk. Valid values:</para>
+        /// <para>The method used to expand the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>offline (default): resizes the disk offline. After resizing a disk offline, you must <a href="https://help.aliyun.com/document_detail/25440.html">restart the instance</a> in the console or call an API operation <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> make the operation take effect.</para>
+        /// <item><description><para>offline (default): offline expansion. After the expansion, you must restart the instance in the console by following the instructions in <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a> or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the changes to take effect.</para>
         /// </description></item>
-        /// <item><description><para>online: resizes the disk online without the need to restart the instance. You can resize ultra disks, standard SSDs, ESSDs, and elastic ephemeral disks online.</para>
+        /// <item><description><para>online: online expansion. The expansion takes effect without restarting the instance. Supported disk types include ultra disks, standard SSDs, enterprise SSDs, and elastic ephemeral disks.</para>
         /// </description></item>
         /// </list>
         /// 

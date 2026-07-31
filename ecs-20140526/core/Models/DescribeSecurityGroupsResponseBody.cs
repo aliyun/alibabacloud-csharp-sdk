@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSecurityGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token returned in this call. If this value is empty when you use MaxResults and NextToken for paging, no more data is available.</para>
+        /// <para>The pagination token returned in this invoke. If this value is empty when you use MaxResults and NextToken for paged query with paging, no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The current page number.</para>
         /// <remarks>
-        /// <para>This parameter will be offline. Use NextToken and MaxResults for paging.</para>
+        /// <para>This parameter will be offline soon. Use NextToken and MaxResults for paged query and paging operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The number of entries per page.</para>
         /// <remarks>
-        /// <para>This parameter will be offline. Use NextToken and MaxResults for paging.</para>
+        /// <para>This parameter will be offline soon. Use NextToken and MaxResults for paged query and paging operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of security groups. This parameter is not returned when you use <c>MaxResults</c> and <c>NextToken</c> for parameter query.</para>
+        /// <para>The total number of security groups. This parameter is not returned when you use <c>MaxResults</c> and <c>NextToken</c> parameter query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

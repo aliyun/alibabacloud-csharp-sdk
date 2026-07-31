@@ -309,6 +309,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? SecondaryEniQueueNumber { get; set; }
 
+                [NameInMap("SecurityOptions")]
+                [Validation(Required=false)]
+                public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSecurityOptions SecurityOptions { get; set; }
+                public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSecurityOptions : TeaModel {
+                    [NameInMap("SecureBootSupport")]
+                    [Validation(Required=false)]
+                    public string SecureBootSupport { get; set; }
+
+                }
+
                 [NameInMap("SupportedBootModes")]
                 [Validation(Required=false)]
                 public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes SupportedBootModes { get; set; }
@@ -328,7 +338,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The pagination token returned by this call.</para>
+        /// <para>The query token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>

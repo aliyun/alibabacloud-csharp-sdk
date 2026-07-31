@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstancesFullStatusRequestEventPublishTime EventPublishTime { get; set; }
         public class DescribeInstancesFullStatusRequestEventPublishTime : TeaModel {
             /// <summary>
-            /// <para>The end of the time range during which system events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The end of the time range during which the events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-07T00:00:00Z</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string End { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the time range during which system events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The start of the time range during which the events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-30T00:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstancesFullStatusRequestNotBefore NotBefore { get; set; }
         public class DescribeInstancesFullStatusRequestNotBefore : TeaModel {
             /// <summary>
-            /// <para>The end of the time range during which O\&amp;M tasks related to scheduled system events are executed. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The end of the time range during which the events are scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-30T00:00:00Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string End { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the time range during which O\&amp;M tasks related to scheduled system events are executed. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The start of the time range during which the events are scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-07T00:00:00Z</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The IDs of the system events. You can specify up to 100 event IDs in a single request.</para>
+        /// <para>The list of event IDs. You can specify up to 100 event IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e-bp1hygp5b04o56l0****</para>
@@ -72,22 +72,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> EventId { get; set; }
 
         /// <summary>
-        /// <para>The type of the system event. This parameter is valid only when InstanceEventType.N is not specified. Valid values:</para>
+        /// <para>The type of a system event. The EventType parameter takes effect only when InstanceEventType.N is not specified. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</para>
-        /// </description></item>
-        /// <item><description><para>SystemFailure.Reboot: The instance is restarted due to a system failure.</para>
-        /// </description></item>
-        /// <item><description><para>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</para>
-        /// </description></item>
-        /// <item><description><para>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</para>
-        /// </description></item>
-        /// <item><description><para>InstanceExpiration.Delete: The subscription instance is released due to expiration.</para>
-        /// </description></item>
-        /// <item><description><para>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</para>
-        /// </description></item>
-        /// <item><description><para>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</para>
-        /// </description></item>
+        /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance. </description></item>
+        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system failure.</description></item>
+        /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</description></item>
+        /// <item><description>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</description></item>
+        /// <item><description>InstanceExpiration.Delete: The subscription instance is released due to expiration.</description></item>
+        /// <item><description>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
+        /// <item><description>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,22 +91,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The health status of the instance. Valid values:</para>
+        /// <para>The health status of the instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>Impaired</para>
-        /// </description></item>
-        /// <item><description><para>Warning: The instance performance may be degraded due to maintenance or technical issues.</para>
-        /// </description></item>
-        /// <item><description><para>Maintaining</para>
-        /// </description></item>
-        /// <item><description><para>Initializing</para>
-        /// </description></item>
-        /// <item><description><para>InsufficientData</para>
-        /// </description></item>
-        /// <item><description><para>NotApplicable</para>
-        /// </description></item>
+        /// <item><description>Impaired: The service is impaired. </description></item>
+        /// <item><description>Warning: The instance performance may be degraded due to maintenance.</description></item>
+        /// <item><description>Maintaining: The instance is under maintenance.</description></item>
+        /// <item><description>Initializing: The instance is being initialized. </description></item>
+        /// <item><description>InsufficientData: The data is insufficient. </description></item>
+        /// <item><description>NotApplicable: Not applicable.</description></item>
         /// </list>
-        /// <para>All the values are case-sensitive.</para>
+        /// <para>The values are case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Initializing</para>
@@ -123,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HealthStatus { get; set; }
 
         /// <summary>
-        /// <para>The types of system events. You can specify up to 30 event types in a single request.</para>
+        /// <para>The list of instance system event types. You can specify up to 30 instance event types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceExpiration.Stop</para>
@@ -133,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceEventType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances. You can specify up to 100 instance IDs in a single request.</para>
+        /// <para>The list of instance IDs. You can specify up to 100 instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp67acfmxazb4p****</para>
@@ -151,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer.</para>
+        /// <para>The page number of the results. Valid values: positive integers.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -173,7 +160,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -192,14 +179,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The lifecycle status of the instance. Valid values:</para>
+        /// <para>The lifecycle status of the instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>Starting</para>
-        /// </description></item>
-        /// <item><description><para>Running</para>
-        /// </description></item>
-        /// <item><description><para>Stopped</para>
-        /// </description></item>
+        /// <item><description>Starting: The instance is being started.</description></item>
+        /// <item><description>Running: The instance is running.</description></item>
+        /// <item><description>Stopped: The instance is stopped.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

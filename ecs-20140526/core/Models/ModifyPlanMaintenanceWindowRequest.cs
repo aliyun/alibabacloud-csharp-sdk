@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The resource type for the O&amp;M window configuration.</para>
+            /// <para>The type of resource to which the O&amp;M window applies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tag</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyPlanMaintenanceWindowRequestTimePeriod TimePeriod { get; set; }
         public class ModifyPlanMaintenanceWindowRequestTimePeriod : TeaModel {
             /// <summary>
-            /// <para>The cycle type. Valid values: Daily and Weekly.</para>
+            /// <para>The type of the cycle. Valid values: Daily and Weekly.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Year</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The time ranges of the O&amp;M window recurring cycle (UTC time zone).</para>
+            /// <para>The time ranges of the recurring O&amp;M window cycle (UTC time zone).</para>
             /// </summary>
             [NameInMap("RangeList")]
             [Validation(Required=false)]

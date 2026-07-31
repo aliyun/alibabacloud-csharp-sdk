@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
-        /// <item><description>false: performs a dry run and sends the Normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the authorization is verified.</description></item>
+        /// <item><description>false: performs a dry run and sends the Normal request. If the request passes the dry run, a 2XX HTTP status code is returned and the authorization is verified.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? IsQueryEcsCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for paging query. If you set this parameter, the <c>MaxResults</c> and <c>NextToken</c> paging method is used.</para>
+        /// <para>The maximum number of entries per page for a paged query. Settings this parameter indicates that the <c>MaxResults</c> and <c>NextToken</c> combination is used for paging.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous request. You do not need to set this parameter for the first request.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be offline. Use NextToken and MaxResults for paging.</para>
+        /// <para>This parameter will be offline soon. Use NextToken and MaxResults for paged query and paging operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be offline. Use NextToken and MaxResults for paging.</para>
+        /// <para>This parameter will be offline soon. Use NextToken and MaxResults for paged query and paging operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group.</para>
+        /// <para>The security group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp67acfmxazb4p****</para>

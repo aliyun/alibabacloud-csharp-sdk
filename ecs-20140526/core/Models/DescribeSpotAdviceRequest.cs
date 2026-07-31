@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSpotAdviceRequest : TeaModel {
         /// <summary>
-        /// <para>The number of vCPUs of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+        /// <para>The number of vCPUs of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Cores { get; set; }
 
         /// <summary>
-        /// <para>The number of GPUs that a GPU-accelerated instance has. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/108496.html">GPU-accelerated compute optimized instance types</a>.</para>
+        /// <para>The number of GPUs of the GPU-accelerated instance. For more information, see <a href="https://help.aliyun.com/document_detail/108496.html">Overview of GPU-accelerated instances</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -32,16 +32,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The GPU type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>NVIDIA P4</para>
-        /// </description></item>
-        /// <item><description><para>NVIDIA T4</para>
-        /// </description></item>
-        /// <item><description><para>NVIDIA P100</para>
-        /// </description></item>
-        /// <item><description><para>NVIDIA V100</para>
-        /// </description></item>
+        /// <item><description>NVIDIA P4</description></item>
+        /// <item><description>NVIDIA T4</description></item>
+        /// <item><description>NVIDIA P100 </description></item>
+        /// <item><description>NVIDIA V100</description></item>
         /// </list>
-        /// <para>This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see <a href="https://help.aliyun.com/document_detail/108496.html">GPU-accelerated compute-optimized and vGPU-accelerated instance families</a>.</para>
+        /// <para>Default value: null, which indicates that all types are queried. For more information, see <a href="https://help.aliyun.com/document_detail/108496.html">Overview of GPU-accelerated instances</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NVIDIA T4</para>
@@ -53,14 +49,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The level of the instance family. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>EntryLevel.</para>
-        /// </description></item>
-        /// <item><description><para>EnterpriseLevel.</para>
-        /// </description></item>
-        /// <item><description><para>CreditEntryLevel. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</para>
-        /// </description></item>
+        /// <item><description>EntryLevel: entry level.</description></item>
+        /// <item><description>EnterpriseLevel: enterprise level.</description></item>
+        /// <item><description>CreditEntryLevel: credit-based entry level. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instances</a>.</description></item>
         /// </list>
-        /// <para>This parameter is left empty by default, which indicates that instance families at all levels are queried.</para>
+        /// <para>Default value: null, which indicates that all levels are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EntryLevel</para>
@@ -70,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// <para>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+        /// <para>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c5</para>
@@ -80,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>The instance types. You can specify up to 10 instance types.</para>
+        /// <para>The list of instance types. You can specify up to 10 instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c5.large</para>
@@ -90,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>The memory size of the instance type. Unit: GiB. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+        /// <para>The memory size of the instance type. Unit: GiB. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.0</para>
@@ -100,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public float? Memory { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of vCPUs of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+        /// <para>The minimum number of vCPUs of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -110,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinCores { get; set; }
 
         /// <summary>
-        /// <para>The minimum memory size of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+        /// <para>The minimum memory size of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.0</para>
@@ -128,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,7 +141,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The zone ID.</para>
-        /// <para>This parameter is left empty by default, which indicates that all zones in the specified region are queried.</para>
+        /// <para>Default value: null, which indicates that all zones in the specified region are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>

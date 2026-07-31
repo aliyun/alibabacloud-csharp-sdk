@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfaceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The elastic IP address that is associated with the primary private IP address of the elastic network interface.</para>
+        /// <para>The Elastic IP Address (EIP) associated with the secondary private IP address of the network interface controller (NIC).</para>
         /// </summary>
         [NameInMap("AssociatedPublicIp")]
         [Validation(Required=false)]
         public DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp AssociatedPublicIp { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp : TeaModel {
             /// <summary>
-            /// <para>The ID of the elastic IP address.</para>
+            /// <para>The ID of the EIP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string AllocationId { get; set; }
 
             /// <summary>
-            /// <para>The public IP address.</para>
+            /// <para>The EIP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><c>116.62.**.**</c></para>
@@ -82,13 +82,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The index of the physical network card to which the elastic network interface is attached.</para>
-            /// <list type="bullet">
-            /// <item><description><para>This parameter is not returned if the elastic network interface is <c>Available</c>, or if no index was specified during attachment.</para>
-            /// </description></item>
-            /// <item><description><para>If the elastic network interface is <c>InUse</c> and an index was specified during attachment, this parameter returns the index of the physical network card.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The index of the network card to which the ENI is attached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -159,21 +153,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The connection tracking configuration.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2865958.html">Connection timeout management</a>.</para>
-        /// <remarks>
-        /// <para>This parameter is returned only if the <c>Attribute</c> parameter is set to <c>connectionTrackingConfiguration</c> in the request.</para>
-        /// </remarks>
+        /// <para>The collection of network connectivity tracking configuration information.</para>
         /// </summary>
         [NameInMap("ConnectionTrackingConfiguration")]
         [Validation(Required=false)]
         public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration ConnectionTrackingConfiguration { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration : TeaModel {
             /// <summary>
-            /// <para>The timeout period for TCP connections in the <c>TIME_WAIT</c> and <c>FIN-WAIT-2</c> states. Unit: seconds. Valid values: an integer from 3 to 15.</para>
-            /// <remarks>
-            /// <para>For ECS instances used with a Network Load Balancer (NLB) or Classic Load Balancer (CLB), the default timeout for connections in the <c>TIME_WAIT</c> state is 15 seconds.</para>
-            /// </remarks>
+            /// <para>The timeout period for a TCP connection in the TIME_WAIT or CLOSED state. Unit: seconds. Valid values: an integer from 3 to 15.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -183,7 +170,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpClosedAndTimeWaitTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for established TCP connections. Unit: seconds. Valid values: 30, 60, 80, 100, 200, 300, 500, 700, and 910.</para>
+            /// <para>The timeout period for an established TCP connection. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</para>
             /// 
             /// <b>Example:</b>
             /// <para>910</para>
@@ -193,10 +180,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpEstablishedTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for UDP streams. Unit: seconds. Valid values: 10, 20, 30, 60, 80, and 100.</para>
-            /// <remarks>
-            /// <para>For ECS instances used with a Network Load Balancer (NLB) or Classic Load Balancer (CLB), the default UDP timeout is 100 seconds.</para>
-            /// </remarks>
+            /// <para>The timeout period for a UDP flow. Unit: seconds. Valid values: [10, 20, 30, 60, 80, 100].</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -208,7 +192,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The time when the elastic network interface was created.</para>
+        /// <para>The time when the network interface controller (NIC) was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-12-25T12:31:31Z</para>
@@ -218,13 +202,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to release the elastic network interface when the associated instance is released.</para>
-        /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The interface is released.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The interface is retained.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>Indicates whether the ENI is retained when the associated instance is released. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -234,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DeleteOnRelease { get; set; }
 
         /// <summary>
-        /// <para>The description of the elastic network interface.</para>
+        /// <para>The description of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -252,7 +230,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not publicly available.</para>
+            /// <para>This parameter is not yet available for use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -283,10 +261,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the instance to which the elastic network interface is attached.</para>
-        /// <remarks>
-        /// <para>This parameter is not returned if the elastic network interface is managed by another Alibaba Cloud service.</para>
-        /// </remarks>
+        /// <para>The ID of the instance to which the network interface controller (NIC) is attached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1e2l6djkndyuli****</para>
@@ -339,12 +314,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Ipv6Address { get; set; }
 
+                [NameInMap("Primary")]
+                [Validation(Required=false)]
+                public bool? Primary { get; set; }
+
             }
 
         }
 
         /// <summary>
-        /// <para>The MAC address of the elastic network interface.</para>
+        /// <para>The MAC address of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:16:3e:12:<b>:</b></para>
@@ -354,7 +333,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MacAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the elastic network interface.</para>
+        /// <para>The ID of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-bp125p95hhdhn3ot****</para>
@@ -364,7 +343,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the elastic network interface.</para>
+        /// <para>The name of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-eni-name</para>
@@ -374,14 +353,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The communication parameters of the elastic network interface.</para>
+        /// <para>The traffic parameters of the network interface controller (NIC).</para>
         /// </summary>
         [NameInMap("NetworkInterfaceTrafficConfig")]
         [Validation(Required=false)]
         public DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig NetworkInterfaceTrafficConfig { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyNetworkInterfaceTrafficConfig : TeaModel {
             /// <summary>
-            /// <para>The communication mode of the elastic network interface.</para>
+            /// <para>The communication mode of the network interface controller (NIC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>HighPerformance</para>
@@ -391,7 +370,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfaceTrafficMode { get; set; }
 
             /// <summary>
-            /// <para>The number of queues for the elastic network interface.</para>
+            /// <para>The number of queues supported by the network interface controller (NIC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -401,7 +380,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? QueueNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of queue pairs for the RDMA-enabled elastic network interface.</para>
+            /// <para>The number of queues supported by the RDMA ENI.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -413,16 +392,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The communication mode of the elastic network interface. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><c>Standard</c>: Uses TCP communication.</para>
-        /// </description></item>
-        /// <item><description><para><c>HighPerformance</c>: Uses the Elastic RDMA Interface (ERI) for RDMA communication.</para>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>The <c>HighPerformance</c> value is supported only by RDMA-enhanced instances, such as the c7re family.</para>
-        /// </remarks>
+        /// <para>The communication mode of the network interface controller (NIC). Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard</para>
@@ -432,7 +402,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceTrafficMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account to which the elastic network interface belongs.</para>
+        /// <para>The ID of the account that owns the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -442,7 +412,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The primary private IP address of the elastic network interface.</para>
+        /// <para>The private network IP address of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>10.1.**.**</c></para>
@@ -486,28 +456,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The QoS settings.</para>
+        /// <para>The QoS rate limiting settings.</para>
         /// </summary>
         [NameInMap("QoSConfig")]
         [Validation(Required=false)]
         public DescribeNetworkInterfaceAttributeResponseBodyQoSConfig QoSConfig { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyQoSConfig : TeaModel {
             /// <summary>
-            /// <para>Indicates whether QoS is enabled.</para>
+            /// <para>Indicates whether QoS rate limiting is enabled.</para>
             /// </summary>
             [NameInMap("EnableQoS")]
             [Validation(Required=false)]
             public bool? EnableQoS { get; set; }
 
             /// <summary>
-            /// <para>The QoS settings.</para>
+            /// <para>The QoS rate limiting settings.</para>
             /// </summary>
             [NameInMap("QoS")]
             [Validation(Required=false)]
             public DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS QoS { get; set; }
             public class DescribeNetworkInterfaceAttributeResponseBodyQoSConfigQoS : TeaModel {
                 /// <summary>
-                /// <para>The maximum inbound bandwidth on the internal network.</para>
+                /// <para>The maximum inbound internal bandwidth limit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50000</para>
@@ -517,7 +487,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? BandwidthRx { get; set; }
 
                 /// <summary>
-                /// <para>The maximum outbound bandwidth on the internal network.</para>
+                /// <para>The maximum outbound internal bandwidth limit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50000</para>
@@ -527,7 +497,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? BandwidthTx { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of connections.</para>
+                /// <para>The maximum number of sessions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50000</para>
@@ -537,7 +507,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? ConcurrentConnections { get; set; }
 
                 /// <summary>
-                /// <para>The inbound packet transmission rate on the internal network. Unit: packets per second (pps).</para>
+                /// <para>The inbound internal network packet forwarding rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50000</para>
@@ -547,7 +517,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? PpsRx { get; set; }
 
                 /// <summary>
-                /// <para>The outbound packet transmission rate on the internal network. Unit: packets per second (pps).</para>
+                /// <para>The outbound internal network packet forwarding rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50000</para>
@@ -561,31 +531,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The number of queues supported by the elastic network interface.</para>
-        /// <list type="bullet">
-        /// <item><description><para>For a primary network interface, this parameter returns the default number of queues for the instance type.</para>
-        /// </description></item>
-        /// <item><description><para>For a secondary network interface:</para>
-        /// <list type="bullet">
-        /// <item><description><para>If the interface is in the <c>InUse</c> state:</para>
-        /// <list type="bullet">
-        /// <item><description><para>If the queue number was not modified, the default value for the instance type is returned.</para>
-        /// </description></item>
-        /// <item><description><para>If the queue number was modified, the new value is returned.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>If the secondary network interface is in the <c>Available</c> state:</para>
-        /// <list type="bullet">
-        /// <item><description><para>If the queue number was not modified, this parameter is not returned.</para>
-        /// </description></item>
-        /// <item><description><para>If the queue number was modified, the new value is returned.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
+        /// <para>The number of queues supported by the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -617,10 +563,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the enterprise resource group to which the elastic network interface belongs. If you use this parameter to filter resources, the number of resources cannot exceed 1,000.</para>
-        /// <remarks>
-        /// <para>Resources in the default resource group cannot be filtered.</para>
-        /// </remarks>
+        /// <para>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -640,7 +583,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the virtual service provider (VSP) for the elastic network interface.</para>
+        /// <para>The ID of the Virtual Network Operator (VNO) to which the network interface controller (NIC) belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678910</para>
@@ -650,7 +593,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ServiceID { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the elastic network interface is managed by an Alibaba Cloud service or a VSP.</para>
+        /// <para>Indicates whether the user of the network interface controller (NIC) is an Alibaba Cloud service or a VNO.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -717,19 +660,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? SourceDestCheck { get; set; }
 
         /// <summary>
-        /// <para>The status of the elastic network interface. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><c>Available</c>: The elastic network interface is available.</para>
-        /// </description></item>
-        /// <item><description><para><c>Attaching</c>: The elastic network interface is being attached.</para>
-        /// </description></item>
-        /// <item><description><para><c>InUse</c>: The elastic network interface is attached.</para>
-        /// </description></item>
-        /// <item><description><para><c>Detaching</c>: The elastic network interface is being detached.</para>
-        /// </description></item>
-        /// <item><description><para><c>Deleting</c>: The elastic network interface is being deleted.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The status of the network interface controller (NIC). Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>
@@ -771,13 +702,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TcpOptionAddressEnabled { get; set; }
 
         /// <summary>
-        /// <para>The type of the elastic network interface. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><c>Primary</c>: The primary network interface.</para>
-        /// </description></item>
-        /// <item><description><para><c>Secondary</c>: The secondary network interface.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The type of the network interface controller (NIC). Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Secondary</para>
@@ -787,7 +712,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch to which the elastic network interface is connected.</para>
+        /// <para>The ID of the vSwitch to which the network interface controller (NIC) belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1s5fnvk4gn2tws0****</para>
@@ -797,7 +722,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the elastic network interface belongs.</para>
+        /// <para>The ID of the VPC to which the network interface controller (NIC) belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp67acfmxazb4p****</para>
@@ -807,7 +732,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone.</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-g</para>

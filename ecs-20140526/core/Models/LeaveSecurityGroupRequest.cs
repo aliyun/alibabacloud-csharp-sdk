@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>If you configure this parameter, you cannot configure <c>NetworkInterfaceId</c>.</para>
+        /// <para>If you specify this parameter, leave NetworkInterfaceId empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ENI ID.</para>
+        /// <para>The Elastic Network Interface (ENI) ID.</para>
         /// <remarks>
-        /// <para>If you configure this parameter, you cannot configure <c>InstanceId</c>.</para>
+        /// <para>If you specify this parameter, leave InstanceId empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,12 +44,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you want to remove an instance from a security group, you do not need to specify a region ID.</para>
-        /// </description></item>
-        /// <item><description><para>If you want to remove an ENI from a security group, you must specify the ID of the region in which the ENI resides.</para>
-        /// </description></item>
+        /// <item><description>You do not need to specify the region ID when removing an instance from a security group.</description></item>
+        /// <item><description>You must specify the region ID of the Elastic Network Interface (ENI) when removing an ENI from a security group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

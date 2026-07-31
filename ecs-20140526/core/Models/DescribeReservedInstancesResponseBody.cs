@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeReservedInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the reserved instance list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

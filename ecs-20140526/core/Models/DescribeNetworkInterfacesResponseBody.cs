@@ -113,6 +113,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                         [Validation(Required=false)]
                         public string Ipv6Address { get; set; }
 
+                        [NameInMap("Primary")]
+                        [Validation(Required=false)]
+                        public bool? Primary { get; set; }
+
                     }
 
                 }
@@ -258,7 +262,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -268,10 +272,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
-        /// <remarks>
-        /// <para>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</para>
-        /// </remarks>
+        /// <para>The paging query parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -281,10 +282,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
-        /// <remarks>
-        /// <para>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</para>
-        /// </remarks>
+        /// <para>The paging query parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -304,10 +302,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of ENIs.</para>
-        /// <remarks>
-        /// <para>If you specify the <c>MaxResults</c> and <c>NextToken</c> parameters to perform a paged query, the value of the <c>TotalCount</c> response parameter is invalid.</para>
-        /// </remarks>
+        /// <para>The total number of Elastic Network Interfaces (ENIs) returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

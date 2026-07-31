@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned results.</para>
+        /// <para>The page number of the query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

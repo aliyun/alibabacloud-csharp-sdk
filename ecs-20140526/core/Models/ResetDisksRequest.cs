@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResetDisksRequest : TeaModel {
         /// <summary>
-        /// <para>The disks to roll back. You can specify up to 10 disks.</para>
+        /// <para>The list of cloud disks.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Disk")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<ResetDisksRequestDisk> Disk { get; set; }
         public class ResetDisksRequestDisk : TeaModel {
             /// <summary>
-            /// <para>The ID of the disk to roll back.</para>
+            /// <para>The ID of the cloud disk to be rolled back. Valid values of N: 1 to 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-j6cf7l0ewidb78lq****</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the snapshot from an instance snapshot that is used to roll back the disk.</para>
+            /// <para>The snapshot ID that corresponds to the specified cloud disk in the instance snapshot. Valid values of N: 1 to 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-j6cdofbycydvg7ey****</para>
@@ -42,10 +42,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: performs a dry run to check the request. The disks are not rolled back. The check verifies required parameters, the request format, and resource states. If the request fails the check, the operation returns an error message. If the request passes the check, the operation returns the <c>DryRunOperation</c> error code.</para>
-        /// </description></item>
-        /// <item><description><para>false: sends a normal request. After the request passes the check, the operation rolls back the disks.</para>
-        /// </description></item>
+        /// <item><description>true: performs a dry run without actually rolling back the cloud disks. The system checks whether required parameters are specified, whether the request format is valid, and whether resource status constraints are met. If the check fails, the corresponding error message is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description>false: performs a dry run and sends the request. If the check succeeds, the cloud disk rollback operation is initiated.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -65,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest Alibaba Cloud regions.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

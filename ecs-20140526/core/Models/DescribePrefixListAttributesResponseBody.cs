@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePrefixListAttributesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IP address family of the prefix list. Valid values:</para>
+        /// <para>The address family of the prefix list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>IPv4</para>
-        /// </description></item>
-        /// <item><description><para>IPv6</para>
-        /// </description></item>
+        /// <item><description>IPv4</description></item>
+        /// <item><description>IPv6</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries in the prefix list.</para>
+        /// <para>The maximum number of entries that the prefix list supports.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -76,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxEntries { get; set; }
 
         /// <summary>
-        /// <para>The ID of the prefix list.</para>
+        /// <para>The prefix list ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-x1j1k5ykzqlixdcy****</para>

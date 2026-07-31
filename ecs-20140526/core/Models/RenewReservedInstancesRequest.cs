@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class RenewReservedInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal.</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: enables auto-renewal.</description></item>
+        /// <item><description>false: does not enable auto-renewal.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -27,8 +25,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.</para>
-        /// <para>Valid values: 12 and 36. Default value: 12.</para>
+        /// <para>The auto-renewal period, in months. This parameter takes effect only when AutoRenew is set to true.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;Valid values: 12 and 36. Default value: 12.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><para>If PeriodUnit is set to Month, valid values are 1, 12, 36, and 60. Default value: 1.</para>
+        /// </description></item>
+        /// <item><description><para>If PeriodUnit is set to Year, valid values are 12, 36, and 60. Default value: 12.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -38,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>token</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -56,8 +61,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the reserved instance.</para>
-        /// <para>Valid values: 1 and 3.</para>
+        /// <para>The duration of the reserved instance.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;Valid values: 1 and 3.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><para>If PeriodUnit is set to Year, valid values are 1, 3, and 5.</para>
+        /// </description></item>
+        /// <item><description><para>If PeriodUnit is set to Month, the valid value is 1.</para>
+        /// </description></item>
+        /// </list>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -68,8 +80,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the validity period of the reserved instance.</para>
-        /// <para>Set the value to Year.</para>
+        /// <para>The unit of the duration of the reserved instance.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;Valid values: Year.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;Default value: Year.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Valid values: Year and Month.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Default value: Month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Year</para>
@@ -80,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The region ID of the reserved instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -90,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the reserved instances.</para>
+        /// <para>The reserved instance ID.</para>
         /// </summary>
         [NameInMap("ReservedInstanceId")]
         [Validation(Required=false)]

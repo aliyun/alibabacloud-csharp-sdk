@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance families that support the deployment strategy.</para>
+        /// <para>The instance families that support the specified deployment set strategy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.i2g,ecs.i1,ecs.i2ne,ecs.i2gne</para>

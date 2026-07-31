@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceAutoReleaseTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The automatic release time of the instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
+        /// <para>The automatic release time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the value of seconds (<c>ss</c>) is not <c>00</c>, the time is automatically rounded to the nearest minute based on the value of minutes (<c>mm</c>).</para>
+        /// <item><description><para>If the value of seconds (<c>ss</c>) is not <c>00</c>, the time is automatically set to the start of the current minute (<c>mm</c>).</para>
         /// </description></item>
-        /// <item><description><para>The release time must be at least 30 minutes later than the current time.</para>
+        /// <item><description><para>The earliest release time must be at least 30 minutes after the current time.</para>
         /// </description></item>
-        /// <item><description><para>The release time must be at most three years later than the current time.</para>
+        /// <item><description><para>The latest release time cannot be more than three years from the current time.</para>
         /// </description></item>
         /// </list>
-        /// <para>If <c>AutoReleaseTime</c> is not configured, the automatic release feature is disabled, and the instance will not be automatically released.</para>
+        /// <para>If you do not specify the AutoReleaseTime parameter, the automatic release feature is canceled and the ECS instance is no longer automatically released.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-01-01T01:02:03Z</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoReleaseTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID of the ECS instance for which to configure automatic release.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

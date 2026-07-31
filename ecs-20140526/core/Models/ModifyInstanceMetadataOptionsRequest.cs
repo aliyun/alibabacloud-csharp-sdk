@@ -12,14 +12,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable the access channel for instance metadata. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>enabled</para>
-        /// </description></item>
-        /// <item><description><para>disabled</para>
-        /// </description></item>
+        /// <item><description>enabled: Enable the access channel.</description></item>
+        /// <item><description>disabled: Disable the access channel.</description></item>
         /// </list>
         /// <para>Default value: enabled.</para>
         /// <remarks>
-        /// <para>For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Obtain instance metadata</a>.</para>
+        /// <para>For more information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Overview of instance metadata</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -32,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not publicly available.</para>
+        /// <para>This parameter is not available for use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,16 +41,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? HttpPutResponseHopLimit { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</para>
+        /// <para>Specifies whether to forcefully use the security hardening mode when you access instance metadata. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>optional: does not forcefully use the security hardening mode (IMDSv2).</para>
-        /// </description></item>
-        /// <item><description><para>required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</para>
-        /// </description></item>
+        /// <item><description>optional: The security hardening mode is not forcefully used.</description></item>
+        /// <item><description>required: The security hardening mode is forcefully used. After you set this parameter to required, you cannot access instance metadata in normal mode.</description></item>
         /// </list>
         /// <para>Default value: optional.</para>
         /// <remarks>
-        /// <para>For more information about modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Obtain instance metadata</a>.</para>
+        /// <para>For more information about instance metadata access modes, see <a href="https://help.aliyun.com/document_detail/150575.html">Instance metadata access modes</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HttpTokens { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp67acfmxaz****</para>
@@ -73,17 +69,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the access channel for instance metadata. Valid values:</para>
+        /// <para>Specifies whether to enable the access tag feature for instance metadata. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>enabled</para>
-        /// </description></item>
-        /// <item><description><para>disabled</para>
-        /// </description></item>
+        /// <item><description>enabled: Enable the feature.</description></item>
+        /// <item><description>disabled: Disable the feature.</description></item>
         /// </list>
-        /// <para>Default value: disabled.</para>
-        /// <remarks>
-        /// <para>The tag key must be a combination of letters, digits, @, colons (:), underscores (_), hyphens (-), periods (.), equal signs (=), and commas (,). The tag key cannot be &quot;.&quot; or &quot;..&quot;. Otherwise, the tag key cannot be accessed in the metadata.</para>
-        /// </remarks>
+        /// <para>Default value: disabled.
+        /// <notice>
+        /// Tag keys must be combinations of letters, digits, at signs (@), colons (:), underscores (_), hyphens (-), periods (.), equal signs (=), and commas (,). Tag keys cannot be &quot;.&quot; or &quot;..&quot;, or the tags cannot be accessed in the metadata.
+        /// </notice></para>
         /// 
         /// <b>Example:</b>
         /// <para>disabled</para>
@@ -97,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region in which the instance resides. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

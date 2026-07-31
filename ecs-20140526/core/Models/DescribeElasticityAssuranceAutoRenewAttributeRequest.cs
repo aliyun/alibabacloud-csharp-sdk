@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeElasticityAssuranceAutoRenewAttributeRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class DescribeElasticityAssuranceAutoRenewAttributeRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>弹性保障服务ID列表。</para>
-            /// <para><b>限制</b>：单次查询的弹性保障服务数量最多不超过50个。</para>
+            /// <para>The list of elasticity assurance service IDs.</para>
+            /// <para><b>Limit</b>: You can query up to 50 elasticity assurance services at a time.</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]

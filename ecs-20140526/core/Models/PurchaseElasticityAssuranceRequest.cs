@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public PurchaseElasticityAssuranceRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class PurchaseElasticityAssuranceRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The ID of the elasticity assurance.</para>
+            /// <para>The ID of the elastic capacity reservation service.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -25,12 +25,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The type of the private pool with which you want to associate the elasticity assurance. Valid values:</para>
+            /// <para>The matching mode of the elastic capacity reservation service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Open: open private pool. If you use the elasticity assurance to create Elastic Compute Service (ECS) instances, the open private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the ECS instances.</para>
-            /// </description></item>
-            /// <item><description><para>Target: targeted private pool. If you use the elasticity assurance to create ECS instances, the specified private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the private pool, the ECS instances fail to be created.</para>
-            /// </description></item>
+            /// <item><description>Open: open mode. The system automatically matches the capacity of open private pools when instances are started. If no matching private pool capacity is available, public pool resources are used to start the instances.</description></item>
+            /// <item><description>Target: targeted mode. Instances are started by using the capacity of the specified private pool. If the specified private pool capacity is unavailable, the instances fail to start.</description></item>
             /// </list>
             /// <para>Default value: Open.</para>
             /// 
@@ -44,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>token</c> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -62,12 +60,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the elasticity assurance. The unit of the validity period is determined by the PeriodUnit value. Valid values:</para>
+        /// <para>The purchase duration. The unit of the duration is determined by the PeriodUnit parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>When PeriodUnit is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</para>
-        /// </description></item>
-        /// <item><description><para>When PeriodUnit is set to Year, valid values are 1, 2, 3, 4, and 5.</para>
-        /// </description></item>
+        /// <item><description>If PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
+        /// <item><description>If PeriodUnit is set to Year: 1, 2, 3, 4, and 5.</description></item>
         /// </list>
         /// <para>Default value: 1.</para>
         /// 
@@ -79,12 +75,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the validity period of the elasticity assurance. Valid values:</para>
+        /// <para>The unit of the purchase duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Month</para>
-        /// </description></item>
-        /// <item><description><para>Year</para>
-        /// </description></item>
+        /// <item><description>Month: month.</description></item>
+        /// <item><description>Year: year.</description></item>
         /// </list>
         /// <para>Default value: Year.</para>
         /// 
@@ -96,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which to purchase the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the elastic capacity reservation service. You can call <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The time when the elasticity assurance takes effect. The default value is the time when the elasticity assurance is created. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
+        /// <para>The effective period of the elastic capacity reservation service. By default, the service takes effect when this operation is invoked. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-06-18T00:00:00Z</para>

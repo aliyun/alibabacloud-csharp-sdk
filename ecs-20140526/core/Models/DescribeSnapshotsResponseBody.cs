@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults for paging instead.</para>
+        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults for paging instead.</para>
+        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to complete paging query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of snapshots.</para>
         /// <remarks>
-        /// <para>When you use <c>MaxResults</c> and <c>NextToken</c> parameters for paging, the returned <c>TotalCount</c> parameter value is invalid.</para>
+        /// <para>When you use <c>MaxResults</c> and <c>NextToken</c> parameters for paging query, the returned <c>TotalCount</c> parameter value is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

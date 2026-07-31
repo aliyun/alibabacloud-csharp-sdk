@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteActivationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the activation code and its usage information.</para>
+        /// <para>The information about the activation code and its usage.</para>
         /// </summary>
         [NameInMap("Activation")]
         [Validation(Required=false)]
         public DeleteActivationResponseBodyActivation Activation { get; set; }
         public class DeleteActivationResponseBodyActivation : TeaModel {
             /// <summary>
-            /// <para>The ID of the activation code.</para>
+            /// <para>The activation code ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4ECEEE12-56F1-4FBC-9AB1-890F1234****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ActivationId { get; set; }
 
             /// <summary>
-            /// <para>The time when the activation code was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T06:00:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that were deregistered.</para>
+            /// <para>The number of deregistered instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses of the hosts that are allowed to use the activation code.</para>
+            /// <para>The IP addresses of hosts that are allowed to use the activation code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.0.0/0</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string IpAddressRange { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that were registered.</para>
+            /// <para>The number of registered instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>false: The disk is not released together with the instance. The disk is retained as a pay-as-you-go data disk.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
-        /// <para>When you set this parameter, take note of the following items:</para>
+        /// <para>Take note of the following items when you set this parameter:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <c>DeleteWithInstance</c> to <c>false</c> and the ECS instance is locked for security reasons, meaning that <c>OperationLocks</c> contains <c>&quot;LockReason&quot; : &quot;security&quot;</c>, this parameter is ignored when the instance is released, and the disk is released together with the instance.</para>
+        /// <item><description><para>If you set <c>DeleteWithInstance</c> to <c>false</c> and the ECS instance is locked for security reasons, meaning that <c>OperationLocks</c> contains <c>&quot;LockReason&quot; : &quot;security&quot;</c>, this attribute is ignored when the ECS instance is released, and the disk is released together with the instance.</para>
         /// </description></item>
-        /// <item><description><para>If the disk to be attached is an <c>elastic ephemeral disk</c>, you must set <c>DeleteWithInstance</c> to <c>true</c>.</para>
+        /// <item><description><para>If the destination disk is an <c>elastic ephemeral disk</c>, you must set <c>DeleteWithInstance</c> to <c>true</c>.</para>
         /// </description></item>
         /// <item><description><para>Disks with the multi-attach feature enabled do not support this parameter.</para>
         /// </description></item>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the disk to be attached. The disk (<c>DiskId</c>) and the instance (<c>InstanceId</c>) must be in the same zone.</para>
         /// <remarks>
-        /// <para>Both data disks and system disks can be attached. For related constraints, see the operation description section above.</para>
+        /// <para>You can attach data disks and system disks. For related constraints, see the operation description section above.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description><para>Windows Server instances: SSH key pairs are not supported. Even if this parameter is specified, only the <c>Password</c> configuration takes effect.</para>
         /// </description></item>
-        /// <item><description><para>Linux instances: The password-based logon method is disabled by default.</para>
+        /// <item><description><para>Linux instances: The password logon method is disabled by default.</para>
         /// </description></item>
         /// </list>
         /// 

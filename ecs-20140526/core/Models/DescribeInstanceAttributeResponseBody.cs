@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>PayByTraffic: pay-by-traffic.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>In <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidths are used as upper limits for bandwidths and are not guaranteed. When resource contention occurs, the peak bandwidths may be limited. If your workloads require guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
+            /// <para>In <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance metrics. When resource contention occurs, the peak bandwidths may be limited. If you require guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>The EIP.</para>
+            /// <para>The EIP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><c>30.21.**.**</c></para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the Jumbo Frame feature is enabled for the ECS instance. Valid values:</para>
+        /// <para>Indicates whether the Jumbo frame feature is enabled for the ECS instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: enabled.</para>
         /// </description></item>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>vpc: virtual private cloud (VPC).</description></item>
+        /// <item><description>vpc: Virtual Private Cloud (VPC).</description></item>
         /// <item><description>classic: classic network. The classic network is deprecated. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Deprecation notice</a>.</description></item>
         /// </list>
         /// 
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>PayByTraffic: pay-by-traffic.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>In <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidths are used as upper limits for bandwidths and are not guaranteed. When resource contention occurs, the peak bandwidths may be limited. If your workloads require guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
+        /// <para>In <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance metrics. When resource contention occurs, the peak bandwidths may be limited. If you require guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeInstanceAttributeResponseBodyNetworkOptions : TeaModel {
             /// <summary>
             /// <para>The bandwidth weight.</para>
-            /// <para>Different instance types support different values. Call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the bandwidth weight values supported by the current instance type.</para>
+            /// <para>Different instance types support different values. You can call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the bandwidth weight values supported by the current instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Vpc-L1</para>
@@ -368,7 +368,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string BandwidthWeighting { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</para>
+            /// <para>Indicates whether the Jumbo frame feature is enabled for the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>true: enabled.</para>
             /// </description></item>
@@ -462,6 +462,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        [NameInMap("SecurityOptions")]
+        [Validation(Required=false)]
+        public DescribeInstanceAttributeResponseBodySecurityOptions SecurityOptions { get; set; }
+        public class DescribeInstanceAttributeResponseBodySecurityOptions : TeaModel {
+            [NameInMap("EnableSecureBoot")]
+            [Validation(Required=false)]
+            public bool? EnableSecureBoot { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The serial number of the instance.</para>
         /// 
@@ -492,9 +502,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Indicates whether the instance continues to be billed after it is stopped. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>KeepCharging: The instance continues to be billed after it is stopped. Inventory resources are reserved for the instance.</description></item>
-        /// <item><description>StopCharging: The instance is not billed after it is stopped. After the instance is stopped, its resources such as vCPUs, memory, and public IP addresses are released. Whether the instance can be restarted depends on resource availability in the current region.</description></item>
-        /// <item><description>Not-applicable: The instance does not support the No Fees for Stopped Instances feature.</description></item>
+        /// <item><description>KeepCharging: The instance continues to be billed after it is stopped. Resources such as vCPUs, memory, and public IP addresses are retained.</description></item>
+        /// <item><description>StopCharging: The instance is not billed after it is stopped. Resources such as vCPUs, memory, and public IP addresses are released. Whether the instance can be restarted depends on resource availability in the current region.</description></item>
+        /// <item><description>Not-applicable: The instance does not support the economical mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

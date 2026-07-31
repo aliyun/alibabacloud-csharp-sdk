@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The disk migration task ID.</para>
+        /// <para>The task ID of the disk migration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-bp67acfmxazb4p****</para>

@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the maintenance attribute list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

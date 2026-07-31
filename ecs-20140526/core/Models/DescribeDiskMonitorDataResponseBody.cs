@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned for disk usage information, which is the number of periods.</para>
+        /// <para>The total number of returned entries of cloud disk usage information, which is the number of periods.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

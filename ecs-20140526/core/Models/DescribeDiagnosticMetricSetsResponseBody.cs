@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the diagnostic metrics.</para>
+            /// <para>The list of diagnostic metrics.</para>
             /// </summary>
             [NameInMap("MetricIds")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MetricSetName { get; set; }
 
             /// <summary>
-            /// <para>The resource type supported by the diagnostic metric set.</para>
+            /// <para>The supported resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance</para>
@@ -66,10 +66,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The type of the diagnostic metric set. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>User: user-defined diagnostic metric set</para>
-            /// </description></item>
-            /// <item><description><para>Common: common diagnostic metric set</para>
-            /// </description></item>
+            /// <item><description>User: user.</description></item>
+            /// <item><description>Common: common.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

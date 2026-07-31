@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeDisksFullStatusRequestEventTime EventTime { get; set; }
         public class DescribeDisksFullStatusRequestEventTime : TeaModel {
             /// <summary>
-            /// <para>The end of the time range to query occurred events.</para>
+            /// <para>The end of the time range during which to query events.</para>
             /// <para>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string End { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the time range to query occurred events.</para>
+            /// <para>The start of the time range during which to query events.</para>
             /// <para>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of EBS device N. Valid values of N: 1 to 100.</para>
+        /// <para>The block storage ID. Valid values of N: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-bp67acfmxazb4p****</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> DiskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of event N. Valid values of N: 1 to 100.</para>
+        /// <para>The event ID. Valid values of N: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e-bp67acfmxazb4p****</para>
@@ -58,16 +58,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> EventId { get; set; }
 
         /// <summary>
-        /// <para>The event type of the EBS device. Valid values:</para>
+        /// <para>The event type of the block storage device. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>Degraded: The performance of the EBS device is degraded.</para>
-        /// </description></item>
-        /// <item><description><para>SeverelyDegraded: The performance of the EBS device is severely degraded.</para>
-        /// </description></item>
-        /// <item><description><para>Stalled: The performance of the EBS device is severely affected.</para>
-        /// </description></item>
-        /// <item><description><para>ErrorDetected: The local disk is damaged.</para>
-        /// </description></item>
+        /// <item><description>Degraded: The block storage performance is degraded.</description></item>
+        /// <item><description>SeverelyDegraded: The block storage performance is severely degraded.</description></item>
+        /// <item><description>Stalled: The block storage performance is severely impacted.</description></item>
+        /// <item><description>ErrorDetected: A local disk is damaged.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,18 +74,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The health status of the EBS device. Valid values:</para>
+        /// <para>The health status of the block storage device. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>Impaired: The EBS device is damaged.</para>
-        /// </description></item>
-        /// <item><description><para>Warning: The performance of the EBS device is degraded.</para>
-        /// </description></item>
-        /// <item><description><para>Initializing: The EBS device is being initialized.</para>
-        /// </description></item>
-        /// <item><description><para>InsufficientData: The status cannot be determined due to insufficient data.</para>
-        /// </description></item>
-        /// <item><description><para>NotApplicable: The EBS device cannot be used.</para>
-        /// </description></item>
+        /// <item><description>Impaired: temporarily unreadable and unwritable.</description></item>
+        /// <item><description>Warning: degraded service.</description></item>
+        /// <item><description>Initializing: being initialized.</description></item>
+        /// <item><description>InsufficientData: insufficient data.</description></item>
+        /// <item><description>NotApplicable: not applicable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +99,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. The value must be a positive integer.</para>
+        /// <para>The page number of the query result. Valid values: positive integers.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -130,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the EBS device. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the block storage device. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -141,7 +132,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the EBS device belongs. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</para>
+        /// <para>The ID of the resource group to which the block storage resource belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2kkmhmhs****</para>
@@ -159,20 +150,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The lifecycle status of the EBS device. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk status</a>. Valid values:</para>
+        /// <para>The lifecycle status of the block storage device. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk status table</a>. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>In_use: The EBS device is in use.</para>
-        /// </description></item>
-        /// <item><description><para>Available: The EBS device can be attached.</para>
-        /// </description></item>
-        /// <item><description><para>Attaching: The EBS device is being attached.</para>
-        /// </description></item>
-        /// <item><description><para>Detaching: The EBS device is being detached.</para>
-        /// </description></item>
-        /// <item><description><para>Creating: The EBS device is being created.</para>
-        /// </description></item>
-        /// <item><description><para>ReIniting: The EBS device is being initialized.</para>
-        /// </description></item>
+        /// <item><description>In_use: in use.</description></item>
+        /// <item><description>Available: to be attached.</description></item>
+        /// <item><description>Attaching: being attached.</description></item>
+        /// <item><description>Detaching: being detached.</description></item>
+        /// <item><description>Creating: being created.</description></item>
+        /// <item><description>ReIniting: being initialized.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -183,15 +168,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the EBS device.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDisksFullStatusRequestTag> Tag { get; set; }
         public class DescribeDisksFullStatusRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the EBS device. A key-value pair consists of a key specified by the Tag.N.Key parameter and a value specified by the <c>Tag.N.Value</c> parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.</para>
-            /// <para>Up to 1,000 resources with the specified tags can be returned in the response.</para>
+            /// <para>The tag key attached to the block storage resource. N specifies that you can set one or more tag keys. The value of N in this parameter corresponds to the value of N in the <c>Tag.N.Value</c> parameter to form a key-value pair. Valid values of N: 1 to 20.</para>
+            /// <para>If you use a single tag to filter resources, the number of resources with the tag cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources that are attached to all specified tags cannot exceed 1,000.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -201,7 +186,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the EBS device. A key-value pair consists of a key specified by the <c>Tag.N.Key</c> parameter and a value specified by the Tag.N.Value parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value attached to the block storage resource. N specifies that you can set one or more tag values. The value of N in this parameter corresponds to the value of N in the <c>Tag.N.Key</c> parameter to form a key-value pair. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The index of the network card specified for the ENI.</para>
         /// <remarks>
-        /// <para>Valid values of NetworkCardIndex depend on the instance family. If the instance type does not support network cards, you cannot specify this parameter. If the instance type supports network cards, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> for valid values.</para>
+        /// <para>The valid values of NetworkCardIndex depend on the instance family. If the instance type does not support NetworkCard, you cannot specify this parameter. If the instance type supports NetworkCard, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> for valid values.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trunk ENI.</para>
+        /// <para>The trunk ENI ID.</para>
         /// <remarks>
         /// <para>This parameter is not yet available.</para>
         /// </remarks>

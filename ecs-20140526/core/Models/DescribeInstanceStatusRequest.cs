@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster to which the ECS instances belong.</para>
+        /// <para>The cluster ID of the instances.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. We recommend that you do not use this parameter.</para>
+        /// <para>Notice: This parameter is deprecated and is not recommended.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of ECS instances. You can specify 1 to 100 instance IDs.</para>
-        /// <para>Example: [&quot;i-bp1j4i2jdf3owlhe\<em>\</em>\<em>\</em>&quot;, &quot;i-bp1j4i2jdf3o1234\<em>\</em>\<em>\</em>&quot;].</para>
+        /// <para>The instance ID array. Array length: 1 to 100.</para>
+        /// <para>Example: [&quot;i-bp1j4i2jdf3owlhe****&quot;, &quot;i-bp1j4i2jdf3o1234****&quot;].</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1j4i2jdf3owlhe****</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
+        /// <para>The page number of the instance status list.</para>
+        /// <para>Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 50.</para>
+        /// <para>The number of entries per page for paging. Valid values: 1 to 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// <para>The zone to which the instances belong. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the most recent zone list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-d</para>

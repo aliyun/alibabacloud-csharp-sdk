@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDedicatedHostAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically renew the subscription. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal for the subscription dedicated host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: Enables auto-renewal for the subscription dedicated host.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: Disables auto-renewal for the subscription dedicated host.</para>
         /// </description></item>
         /// </list>
-        /// <para>Default value: false</para>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -27,21 +27,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically renew the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.</para>
-        /// <para>If auto-renewal is enabled for the subscription ECS instances hosted on the subscription dedicated hosts, you can specify this parameter to automatically renew the dedicated hosts along with the subscription ECS instances. When the subscription ECS instances hosted on your dedicated hosts are automatically renewed, the subscription dedicated hosts are also automatically renewed if the expiration time of the dedicated hosts is earlier than the expiration time of the renewed instances. Take note of the following items:</para>
-        /// <para>When the subscription dedicated hosts are configured to be automatically renewed along with the subscription ECS instances hosted on the dedicated hosts, the system checks the expiration time of the renewed instances and selects a minimum renewal duration for the dedicated hosts so that the dedicated hosts are renewed by a duration that ends later than the expiration time of the renewed instances. For more information about supported renewal durations, see the descriptions of the <c>PeriodUnit</c> and <c>Duration</c> parameters.</para>
-        /// <para>For example, assume that a dedicated host expires on January 15 of the current year. Subscription ECS instances hosted on the dedicated host are configured to be automatically renewed to November 15 of the same year. The expiration time of the dedicated host is earlier than the expiration time of the ECS instances by 10 months. In this case, the system selects a renewal duration of 12 months (a minimum duration calculated based on a <c>Duration</c> value of 12 and a <c>PeriodUnit</c> value of Month) for the dedicated host. This ensures that the dedicated host expires later than the ECS instances.</para>
+        /// <para>Specifies whether to enable auto-renewal for the dedicated host to follow the subscription ECS instances on the host.</para>
+        /// <para>If your dedicated host (DDH) uses the subscription billing method and the subscription ECS instances on the DDH have auto-renewal enabled, you can use this parameter to configure the DDH to automatically renew along with the ECS instances. When an ECS instance on the DDH is automatically renewed, if the DDH expires earlier than the new expiration time of the ECS instance, the DDH is also automatically renewed. The principle of DDH auto-renewal following ECS instances is as follows:</para>
+        /// <para>The DDH automatically determines the new expiration time of the corresponding ECS instance, and then selects the minimum renewal period that is greater than the ECS instance expiration time and meets the DDH renewal cycle. For details about the supported renewal cycles of DDHs, see the metric descriptions of the PeriodUnit and Duration parameters.</para>
+        /// <para>Example: A subscription DDH expires on January 15 of the current year. After a subscription ECS instance on the DDH is automatically renewed, the ECS instance expiration is extended to November 15 of the current year. The DDH lifecycle is 10 months shorter than the ECS instance lifecycle. In this case, the DDH selects the minimum renewal period that is greater than 10 months and meets the DDH renewal cycle, which is 12 months (PeriodUnit=Month and Duration=12).</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>AutoRenewWithEcs: automatically renews the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.</para>
-        /// </description></item>
-        /// <item><description><para>StopRenewWithEcs: does not automatically renew the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.</para>
-        /// </description></item>
-        /// <item><description><para>NoOperation: does not change the current settings for the dedicated hosts.</para>
-        /// </description></item>
+        /// <item><description>AutoRenewWithEcs: Enables auto-renewal following the subscription ECS instances on the dedicated host.</description></item>
+        /// <item><description>StopRenewWithEcs: Disables auto-renewal following the subscription ECS instances on the dedicated host.</description></item>
+        /// <item><description>NoOperation: Does not change the current settings of the dedicated host.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you set this parameter to AutoRenewWithEcs, make sure that <c>AutoRenew</c> is set to true to enable auto-renewal for the dedicated hosts. Otherwise, the subscription dedicated hosts are not automatically renewed along with the subscription ECS instances hosted on the dedicated hosts.</para>
+        /// <para>If you set this parameter to AutoRenewWithEcs, make sure that auto-renewal is enabled for the dedicated host (AutoRenew=true). Otherwise, this parameter only changes the parameter value, and the actual auto-renewal feature following ECS instances does not take effect.</para>
         /// </remarks>
         /// <para>Default value: NoOperation.</para>
         /// 
@@ -53,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoRenewWithEcs { get; set; }
 
         /// <summary>
-        /// <para>The IDs of dedicated hosts. You can specify up to 100 subscription dedicated host IDs. Separate the IDs with commas (,).</para>
+        /// <para>The IDs of dedicated hosts. You can specify up to 100 subscription dedicated host IDs. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,12 +61,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostIds { get; set; }
 
         /// <summary>
-        /// <para>The renewal duration.</para>
+        /// <para>The renewal period. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values when PeriodUnit is set to Month: 1 and 12</para>
-        /// </description></item>
-        /// <item><description><para>Valid values when PeriodUnit is set to Year: 1 and 12</para>
-        /// </description></item>
+        /// <item><description>If PeriodUnit is set to Week: 1, 2, 3, and 4.</description></item>
+        /// <item><description>If PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</description></item>
+        /// <item><description>If PeriodUnit is set to Year: 1, 2, 3, 4, and 5.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>If PeriodUnit is set to Month: 1 and 12.</description></item>
+        /// <item><description>If PeriodUnit is set to Year: 1 and 12.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,13 +91,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The unit of the renewal period. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><para>Month</para>
-        /// </description></item>
-        /// <item><description><para>Year</para>
-        /// </description></item>
+        /// <item><description>Week</description></item>
+        /// <item><description>Month</description></item>
+        /// <item><description>Year</description></item>
         /// </list>
-        /// <para>Default value: Month</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>Month</description></item>
+        /// <item><description>Year</description></item>
+        /// </list>
+        /// <para>Default value: Month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -116,13 +123,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically renew the subscription dedicated host. The <c>RenewalStatus</c> parameter takes precedence over the <c>AutoRenew</c> parameter. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal for the subscription dedicated host. The RenewalStatus parameter takes precedence over the AutoRenew parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>AutoRenewal: The dedicated hosts are automatically renewed.</para>
+        /// <item><description><para>AutoRenewal: Enables auto-renewal.</para>
         /// </description></item>
-        /// <item><description><para>Normal: The dedicated hosts are not automatically renewed, and renewal notifications are sent.</para>
+        /// <item><description><para>Normal: Disables auto-renewal but the system still sends expiration notifications.</para>
         /// </description></item>
-        /// <item><description><para>NotRenewal: The dedicated hosts are not automatically renewed, and no expiration notification is sent. A notification of no renewal is automatically sent three days before the end of the current subscription cycle. You can change the value of this parameter from NotRenewal to Normal and manually renew the dedicated hosts by calling the <a href="https://help.aliyun.com/document_detail/134250.html">RenewDedicatedHosts</a> operation. Alternatively, you can renew the dedicated hosts by setting this parameter to AutoRenewal.</para>
+        /// <item><description><para>NotRenewal: Disables auto-renewal and the system does not send expiration notifications. Three days before expiration, the system automatically sends a non-renewal notification. You can change the value of this parameter to Normal for a dedicated host, and then manually renew the host by calling <a href="https://help.aliyun.com/document_detail/134250.html">RenewDedicatedHosts</a> or set the value to AutoRenewal to enable auto-renewal.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteDiagnosticMetricSetsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of diagnostic metric sets. You can specify up to 10 set IDs.</para>
+        /// <para>The list of diagnostic metric set IDs. You can specify up to 10 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MetricSetIds")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> MetricSetIds { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

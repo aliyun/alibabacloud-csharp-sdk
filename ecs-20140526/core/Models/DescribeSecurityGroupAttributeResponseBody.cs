@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The internal network connectivity policy of the security group. Valid values: </para>
+        /// <para>The network connectivity policy within the security group. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>Accept: service interconnection.</description></item>
         /// <item><description>Drop: internal isolation.</description></item>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InnerAccessPolicy { get; set; }
 
         /// <summary>
-        /// <para>The paging token returned in this call. When you use <c>MaxResults</c> and <c>NextToken</c> for paging query, if this value is empty, no more data is available.</para>
+        /// <para>The query token (Token) returned in this call. When you use <c>MaxResults</c> and <c>NextToken</c> for paged query, if this value is empty, no more data is available. This indicates that paging is complete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>

@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page when automatic snapshot policies are displayed in paging mode.</para>
+        /// <para>The number of entries per page when automatic snapshot policies are returned with pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

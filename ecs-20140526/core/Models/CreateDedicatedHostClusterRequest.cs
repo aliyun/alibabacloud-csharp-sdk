@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDedicatedHostClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the host group. It must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
-        /// <para>This parameter is left empty by default.</para>
+        /// <para>The name of the dedicated host cluster. The name must be 2 to 128 characters in length and can contain letters, digits, and Unicode characters that are categorized as letter characters. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>Default value: null.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myDDHCluster</para>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostClusterName { get; set; }
 
         /// <summary>
-        /// <para>The description of the host group. It must be 2 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// <para>This parameter is left empty by default.</para>
+        /// <para>The description of the dedicated host cluster. The description must be 2 to 256 characters in length. The description cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>Default value: null.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This-is-my-DDHCluster</para>
@@ -32,12 +32,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
-        /// </description></item>
+        /// <item><description>true: sends a check request without querying resource status. The system checks the request for potential issues, including invalid AccessKey pairs, the authorization status of the Resource Access Management (RAM) user, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>false: sends a Normal request. If the request passes the check, a 2XX HTTP status code is returned and the resource status is queried.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -57,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the dedicated host cluster. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID of the host group.</para>
+        /// <para>The ID of the resource group to which the dedicated host cluster belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -86,14 +84,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the host group.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDedicatedHostClusterRequestTag> Tag { get; set; }
         public class CreateDedicatedHostClusterRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be no more than 64 characters in length, and can neither contain <c>http://</c> or <c>https://</c> nor start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag key of the dedicated host cluster. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -103,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. Valid values of N: 1 to 20. The tag value cannot be an empty string. It can be no more than 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -115,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The zone ID of the host group. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// <para>The zone ID of the dedicated host cluster. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the zones in a region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

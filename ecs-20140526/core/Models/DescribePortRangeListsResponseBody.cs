@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePortRangeListsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. If the return value is empty, no more data is returned.</para>
+        /// <para>The pagination token returned in this call. If this value is empty, no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Details of the port lists.</para>
+        /// <para>The port range list information.</para>
         /// </summary>
         [NameInMap("PortRangeLists")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? AssociationCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the port list was created.</para>
+            /// <para>The time when the port range list was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-04T07:11Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the port list.</para>
+            /// <para>The description of the port range list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is description.</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries in the port list.</para>
+            /// <para>The maximum number of entries supported by the port range list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? MaxEntries { get; set; }
 
             /// <summary>
-            /// <para>The ID of the port list.</para>
+            /// <para>The ID of the port range list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prl-2ze9743****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PortRangeListId { get; set; }
 
             /// <summary>
-            /// <para>The name of the port list.</para>
+            /// <para>The name of the port range list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PortRangeListNameSample</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PortRangeListName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which to assign the port list.</para>
+            /// <para>The ID of the resource group to which the port range list belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-2zeg82g****</para>
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The tags of the port list.</para>
+            /// <para>The tags of the port range list.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribePortRangeListsResponseBodyPortRangeListsTags> Tags { get; set; }
             public class DescribePortRangeListsResponseBodyPortRangeListsTags : TeaModel {
                 /// <summary>
-                /// <para>The key of tag N.</para>
+                /// <para>The tag key of the port range list.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag N.</para>
+                /// <para>The tag value of the port range list.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestValue</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateSimulatedSystemEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the system event. Valid values:</para>
+        /// <para>The type of the system event. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</description></item>
-        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system error.</description></item>
+        /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance. </description></item>
+        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system error. </description></item>
         /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance error.</description></item>
         /// <item><description>SystemMaintenance.Stop: The instance is stopped due to system maintenance.</description></item>
         /// <item><description>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</description></item>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The scheduled start time of the event. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>For unexpected events caused by system errors or instance errors, after the event is created, the event enters the Executing state. In this case, the NotBefore parameter specifies the time when the event enters the Executed state.</para>
+        /// <para>For abnormal events caused by system errors or instance errors, the event is already in the Executing state after it is created. In this case, the NotBefore parameter specifies the time when the event enters the Executed state.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

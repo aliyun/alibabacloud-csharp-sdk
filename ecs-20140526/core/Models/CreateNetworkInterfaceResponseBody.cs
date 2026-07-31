@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNetworkInterfaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The description of the elastic network interface.</para>
+        /// <para>The description of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// <para>The IPv4 prefixes that are assigned to the elastic network interface.</para>
-        /// </summary>
         [NameInMap("Ipv4PrefixSets")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodyIpv4PrefixSets Ipv4PrefixSets { get; set; }
@@ -38,9 +35,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// <para>The IPv6 prefixes that are assigned to the elastic network interface.</para>
-        /// </summary>
         [NameInMap("Ipv6PrefixSets")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodyIpv6PrefixSets Ipv6PrefixSets { get; set; }
@@ -57,9 +51,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// <para>The IPv6 addresses that are assigned to the elastic network interface.</para>
-        /// </summary>
         [NameInMap("Ipv6Sets")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodyIpv6Sets Ipv6Sets { get; set; }
@@ -72,12 +63,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string Ipv6Address { get; set; }
 
+                [NameInMap("Primary")]
+                [Validation(Required=false)]
+                public bool? Primary { get; set; }
+
             }
 
         }
 
         /// <summary>
-        /// <para>The MAC address of the elastic network interface.</para>
+        /// <para>The MAC address of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:16:3e:12:<b>:</b></para>
@@ -87,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MacAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the elastic network interface.</para>
+        /// <para>The ID of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-bp14v2sdd3v8htln****</para>
@@ -97,7 +92,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the elastic network interface.</para>
+        /// <para>The name of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-eni-name</para>
@@ -107,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that owns the elastic network interface.</para>
+        /// <para>The ID of the account that owns the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -117,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The primary private IP address of the elastic network interface.</para>
+        /// <para>The private IP address of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>172.17.**.**</c></para>
@@ -126,9 +121,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
 
-        /// <summary>
-        /// <para>The private IP addresses that are assigned to the elastic network interface.</para>
-        /// </summary>
         [NameInMap("PrivateIpSets")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodyPrivateIpSets PrivateIpSets { get; set; }
@@ -169,9 +161,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        /// <summary>
-        /// <para>The IDs of the security groups to which the elastic network interface belongs.</para>
-        /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodySecurityGroupIds SecurityGroupIds { get; set; }
@@ -183,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the distributor for the elastic network interface.</para>
+        /// <para>The Virtual Network Operator (VNO) ID associated with the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678910</para>
@@ -193,7 +182,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ServiceID { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the elastic network interface is managed by a cloud service or a distributor.</para>
+        /// <para>Indicates whether the user of the network interface controller (NIC) is an Alibaba Cloud service or a VNO.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -215,7 +204,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? SourceDestCheck { get; set; }
 
         /// <summary>
-        /// <para>The status of the elastic network interface.</para>
+        /// <para>The status of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>
@@ -224,9 +213,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        /// <summary>
-        /// <para>The tags of the elastic network interface.</para>
-        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public CreateNetworkInterfaceResponseBodyTags Tags { get; set; }
@@ -248,7 +234,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The type of the elastic network interface.</para>
+        /// <para>The type of the network interface controller (NIC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Secondary</para>
@@ -258,7 +244,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The ID of the vSwitch in the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp16usj2p27htro3****</para>
@@ -268,7 +254,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the elastic network interface belongs.</para>
+        /// <para>The ID of the VPC to which the ENI belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1j7w3gc1cexjqd****</para>
@@ -278,7 +264,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone.</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-e</para>

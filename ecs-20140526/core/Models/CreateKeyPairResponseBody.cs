@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// <para>The fingerprint of the key pair. The public key fingerprint format is defined by RFC 4716 and uses the MD5 message digest algorithm. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</para>
+        /// <para>The fingerprint of the key pair. The fingerprint uses the MD5 message-digest algorithm based on the public key fingerprint format defined in RFC 4716. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC4716</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>89:f0:ba:62:ac:b8:aa:e1:61:5e:fd:81:69:86:6d:6b:f0:c0:5a:**</para>

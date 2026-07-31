@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeResourceByTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of resources.</para>
+        /// <para>The total number of returned resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

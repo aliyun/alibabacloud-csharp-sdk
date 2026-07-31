@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNatGatewayResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The IDs of the EIP bandwidth plans.</para>
-        /// </summary>
         [NameInMap("BandwidthPackageIds")]
         [Validation(Required=false)]
         public CreateNatGatewayResponseBodyBandwidthPackageIds BandwidthPackageIds { get; set; }
@@ -22,9 +19,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// <para>The IDs of the forwarding tables.</para>
-        /// </summary>
         [NameInMap("ForwardTableIds")]
         [Validation(Required=false)]
         public CreateNatGatewayResponseBodyForwardTableIds ForwardTableIds { get; set; }
@@ -35,16 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// <para>The ID of the NAT gateway.</para>
-        /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
         public string NatGatewayId { get; set; }
 
-        /// <summary>
-        /// <para>The ID of the request.</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

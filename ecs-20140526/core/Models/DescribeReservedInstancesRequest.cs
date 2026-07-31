@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeReservedInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The allocation type of the reserved instances. Valid values:</para>
+        /// <para>The allocation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Normal: queries all reserved instances that belong to the current account.</para>
-        /// </description></item>
-        /// <item><description><para>Shared: queries the reserved instances that are shared between the current main account and linked accounts.</para>
-        /// </description></item>
+        /// <item><description>Normal: queries reserved instances under the current account.</description></item>
+        /// <item><description>Shared: queries reserved instances that have been shared between the current account and linked accounts.</description></item>
         /// </list>
         /// <para>Default value: Normal.</para>
         /// 
@@ -27,9 +25,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AllocationType { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the reserved instance. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
+        /// <para>The instance type that the reserved instance can be applied to. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>. </para>
         /// <remarks>
-        /// <para>Specify the instance type that you selected when you purchased the reserved instance. If the reserved instance is a regional reserved instance, it can be used to offset the bills of instance types that belong to the same instance family as the specified instance type, regardless of instance specifications.</para>
+        /// <para>This is the instance type selected when you purchased the reserved instance. During actual deduction, region-level reserved instances support size-flexible deduction within the same instance family.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The instance family of the reserved instance. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
+        /// <para>The instance family that the reserved instance can be applied to. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g5</para>
@@ -50,12 +48,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>The reason why the reserved instance is locked. Valid values:</para>
+        /// <para>The lock type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>financial: The reserved instance is locked because the account has overdue payments or the service expires.</para>
-        /// </description></item>
-        /// <item><description><para>security: The reserved instance is locked due to security reasons.</para>
-        /// </description></item>
+        /// <item><description>financial: The account has an overdue payment or the service has expired.</description></item>
+        /// <item><description>security: Locked for security reasons.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,14 +62,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LockReason { get; set; }
 
         /// <summary>
-        /// <para>The payment option of the reserved instance. Valid values:</para>
+        /// <para>The payment type of the reserved instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>No Upfront</para>
-        /// </description></item>
-        /// <item><description><para>Partial Upfront</para>
-        /// </description></item>
-        /// <item><description><para>All Upfront</para>
-        /// </description></item>
+        /// <item><description>No Upfront: no upfront.</description></item>
+        /// <item><description>Partial Upfront: partial upfront.</description></item>
+        /// <item><description>All Upfront: all upfront.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number of the reserved instance list. Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -103,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -114,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the reserved instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the reserved instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -125,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of reserved instances. You can specify up to 100 IDs of reserved instances.</para>
+        /// <para>The IDs of reserved instances. Array length: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ri-bpzhex2ulpzf53****</para>
@@ -137,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the reserved instance.</para>
         /// <remarks>
-        /// <para>Only exact search is supported.</para>
+        /// <para>Only exact match is supported. Fuzzy match is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -156,12 +149,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The scope level of the reserved instance. Valid values:</para>
+        /// <para>The scope of the reserved instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Region: regional</para>
-        /// </description></item>
-        /// <item><description><para>Zone: zonal</para>
-        /// </description></item>
+        /// <item><description>Region: regional.</description></item>
+        /// <item><description>Zone: zonal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The status of the reserved instances.</para>
+        /// <para>The statuses of reserved instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -182,16 +173,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The tags of the reserved instance. You can specify up to 20 tags.</para>
+        /// <para>The tags. Array length: 1 to 20.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeReservedInstancesRequestTag> Tag { get; set; }
         public class DescribeReservedInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the reserved instance. The tag key cannot be empty and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</para>
+            /// <para>The tag key of the reserved instance. The tag key cannot be an empty string and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
             /// <remarks>
-            /// <para>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -202,7 +193,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the reserved instance. The tag value cannot be empty and can be up to 128 characters in length. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the reserved instance. The tag value cannot be an empty string and can be up to 128 characters in length. It cannot start with acs: and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -214,7 +205,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The zone ID of the reserved instance. This parameter is valid and required if you set Scope to Zone. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// <para>The zone ID of the instance. This parameter is required and takes effect only when Scope is set to Zone. You can call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the zone list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-z</para>

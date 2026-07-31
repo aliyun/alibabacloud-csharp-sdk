@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Sends a check request without releasing the instance. The system checks whether the required parameters are specified, the request format is valid, business requirements are met, and ECS resources are sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
-        /// <item><description>false (default): Sends a normal request. After the request passes the check, the instance is directly deleted.</description></item>
+        /// <item><description>true: Sends a check request without releasing the instance. The system checks whether the required parameters are specified, the request format is valid, business limitations are met, and ECS resources are available. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description>false (default): Sends a normal request. After the check succeeds, the instance is directly deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether to forcefully release a <b>running</b> (<c>Running</c>) instance.</para>
         /// <list type="bullet">
         /// <item><description>true: Forcefully releases a <b>running</b> (<c>Running</c>) instance.</description></item>
-        /// <item><description>false: Releases the instance in the normal way. The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
+        /// <item><description>false: Releases the instance normally. The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>Warning: A forceful release is equivalent to a power-off. Temporary data in the instance memory and storage is erased and cannot be recovered..</para>
+        /// <para>Warning: A forceful release is equivalent to a power-off. All in-memory data and temporary data in storage are erased and cannot be recovered.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether to use the forced shutdown policy when releasing a <b>running</b> (<c>Running</c>) instance. This parameter takes effect only when <c>Force=true</c>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Forcefully shuts down and releases the instance. This is equivalent to a typical power-off operation. The instance directly enters the resource release process.<remarks>
-        /// <para>Warning: A forceful release is equivalent to a power-off. Temporary data in the instance memory and storage is erased and cannot be recovered.</para>
+        /// <para>Warning: A forceful release is equivalent to a power-off. All in-memory data and temporary data in storage are erased and cannot be recovered.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>false: Before the instance is released, the system preferentially performs a standard shutdown process. This mode causes the instance release to take several minutes. You can configure service draining actions during the operating system shutdown to reduce noise in your business systems.</description></item>
+        /// <item><description>false: Before the instance is released, the system preferentially performs a standard shutdown process. This mode causes the instance release to take several minutes. You can configure business draining actions during the operating system shutdown to reduce noise in the business system.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 

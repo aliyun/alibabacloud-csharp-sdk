@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeletePhysicalConnectionRequest : TeaModel {
-        /// <summary>
-        /// <para>A client-generated, case-sensitive token used to ensure request idempotency. This token must be unique across all requests and contain a maximum of 64 ASCII characters.</para>
-        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -25,7 +22,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the physical connection.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PhysicalConnectionId")]
@@ -33,7 +29,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the physical connection.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstanceHistoryEventsRequestEventPublishTime EventPublishTime { get; set; }
         public class DescribeInstanceHistoryEventsRequestEventPublishTime : TeaModel {
             /// <summary>
-            /// <para>The end of the time range during which the system event is published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The end of the time range to query the publish time of system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-01T06:32:31Z</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string End { get; set; }
 
             /// <summary>
-            /// <para>The start of the time range during which the system event is published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The start of the time range to query the publish time of system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-30T06:32:31Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeInstanceHistoryEventsRequestNotBefore NotBefore { get; set; }
         public class DescribeInstanceHistoryEventsRequestNotBefore : TeaModel {
             /// <summary>
-            /// <para>The end of the time range during which the system event is scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The end of the time range to query the scheduled execution time of system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-12-01T06:32:31Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string End { get; set; }
 
             /// <summary>
-            /// <para>The start of the time range during which the system event is scheduled to execute. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+            /// <para>The start of the time range to query the scheduled execution time of system events. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-11-30T06:32:31Z</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>Executing: The event is being executed.</description></item>
         /// <item><description>Executed: The event has been executed.</description></item>
         /// <item><description>Canceled: The event has been canceled.</description></item>
-        /// <item><description>Failed: The event execution failed.</description></item>
+        /// <item><description>Failed: The event failed to be executed.</description></item>
         /// <item><description>Inquiring: The event is being inquired.</description></item>
         /// </list>
         /// 
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter must be an instance system event, not a disk system event.</para>
+        /// <para>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter can only be an instance system event, not a disk system event.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not yet available for use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -128,14 +128,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImpactLevel { get; set; }
 
         /// <summary>
-        /// <para>One or more lifecycle statuses of the system event. Valid values of N: 1 to 7. Specify multiple values in a repeated list format. Valid values:</para>
+        /// <para>One or more lifecycle statuses of system events. Valid values of N: 1 to 7. Specify multiple values in a repeated list format. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Scheduled: The event is waiting to be executed.</description></item>
         /// <item><description>Avoided: The event has been avoided.</description></item>
         /// <item><description>Executing: The event is being executed.</description></item>
         /// <item><description>Executed: The event has been executed.</description></item>
         /// <item><description>Canceled: The event has been canceled.</description></item>
-        /// <item><description>Failed: The event execution failed.</description></item>
+        /// <item><description>Failed: The event failed to be executed.</description></item>
         /// <item><description>Inquiring: The event is being inquired.</description></item>
         /// </list>
         /// 
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceEventCycleStatus { get; set; }
 
         /// <summary>
-        /// <para>One or more types of the system event. Valid values of N: 1 to 30. Specify multiple values in a repeated list format. Valid values:</para>
+        /// <para>One or more types of system events. Valid values of N: 1 to 30. Specify multiple values in a repeated list format. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</description></item>
         /// <item><description>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</description></item>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter must be an instance system event, not a disk system event.</para>
+        /// <para>For more information about event types, see <a href="https://help.aliyun.com/document_detail/66574.html">System event overview</a>. The value of this parameter can only be an instance system event, not a disk system event.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f1c9fa9de5752***</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be deprecated. Use MaxResults or NextToken for paginated queries instead.</para>
+        /// <para>This parameter will be deprecated. Use MaxResults and NextToken for pagination queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be deprecated. Use MaxResults or NextToken for paginated queries instead.</para>
+        /// <para>This parameter will be deprecated. Use MaxResults and NextToken for pagination queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

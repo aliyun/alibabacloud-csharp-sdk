@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class DescribeTagsRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. To ensure compatibility, use other parameters.</para>
+        /// <para>This parameter is about to be deprecated. To ensure compatibility, use other parameters instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource to which the tag is attached. For example, if the resource type (ResourceType) is instance, the resource ID is the instance ID.</para>
+        /// <para>The ID of the resource to which the tag is attached. For example, if ResourceType is set to instance, ResourceId indicates the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-946ntx4wr****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>image: image.</description></item>
         /// <item><description>securitygroup: security group.</description></item>
         /// <item><description>volume: storage volume.</description></item>
-        /// <item><description>eni: network interface controller (NIC).</description></item>
+        /// <item><description>eni: Elastic Network Interface (ENI).</description></item>
         /// <item><description>ddh: dedicated host.</description></item>
         /// <item><description>keypair: SSH key pair.</description></item>
         /// <item><description>launchtemplate: launch template.</description></item>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

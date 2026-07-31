@@ -10,29 +10,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyCloudAssistantSettingsRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of upgrading the Cloud Assistant agent.</para>
+        /// <para>The Cloud Assistant Agent upgrade configuration.</para>
         /// </summary>
         [NameInMap("AgentUpgradeConfig")]
         [Validation(Required=false)]
         public ModifyCloudAssistantSettingsRequestAgentUpgradeConfig AgentUpgradeConfig { get; set; }
         public class ModifyCloudAssistantSettingsRequestAgentUpgradeConfig : TeaModel {
             /// <summary>
-            /// <para>A list of time windows during which the agent is allowed to be upgraded. The time windows are accurate to minutes and are in UTC by default.</para>
-            /// <para>The interval between two consecutive time windows must be at least 1 hour.</para>
-            /// <para>Format: StartTime(HH:mm)-EndTime(HH:mm).</para>
-            /// <para>For example, [
+            /// <para>The list of time windows during which upgrades are allowed. The time can be specified down to the minute. The default time zone is UTC.</para>
+            /// <para>The interval between time windows cannot be less than 1 hour.</para>
+            /// <para>Format: Start time (HH:mm)-End time (HH:mm).</para>
+            /// <para>Example: [
             /// &quot;02:00-03:00&quot;,
             /// &quot;05:00-06:00&quot;
             /// ]
-            /// indicates that the agent can be upgraded from 2:00 to 3:00 and from 5:00 to 6:00 every day in UTC.</para>
+            /// This indicates that upgrades are allowed daily from 02:00 to 03:00 and from 05:00 to 06:00 in the UTC time zone.</para>
             /// </summary>
             [NameInMap("AllowedUpgradeWindow")]
             [Validation(Required=false)]
             public List<string> AllowedUpgradeWindow { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to immediately check the version and perform an update when the Cloud Assistant agent is started. Default value: true.</para>
-            /// <para>This setting takes effect only when the version of the Cloud Assistant agent is not earlier than the following versions:</para>
+            /// <para>Specifies whether the Cloud Assistant Agent checks for updates and performs an upgrade immediately upon startup. Default value: true.</para>
+            /// <para>This parameter takes effect only when the Cloud Assistant Agent version meets the following minimum requirements:</para>
             /// <list type="bullet">
             /// <item><description><para>Windows: 2.1.4.1065</para>
             /// </description></item>
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? BootstrapUpgrade { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to disallow the Cloud Assistant agent to check for or perform updates. Default value: false.</para>
-            /// <para>This setting takes effect only when the version of the Cloud Assistant agent is not earlier than the following versions:</para>
+            /// <para>Specifies whether to prevent the Cloud Assistant Agent from checking for and performing updates. Default value: false.</para>
+            /// <para>This parameter takes effect only when the Cloud Assistant Agent version meets the following minimum requirements:</para>
             /// <list type="bullet">
             /// <item><description><para>Windows: 2.1.4.1065</para>
             /// </description></item>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? DisableUpgrade { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable custom upgrade configurations for the agent. If you set this parameter to false, the agent attempts to upgrade every 30 minutes by default.</para>
+            /// <para>Specifies whether to enable the custom Agent upgrade configuration. If this parameter is set to false, the system attempts to upgrade the Agent every 30 minutes by default.</para>
             /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
@@ -76,13 +76,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The time zone of the time windows for agent upgrade. Default value: UTC.
-            /// The following formats are supported for the time zone:</para>
+            /// <para>The time zone for the allowed upgrade time windows. Default value: UTC.
+            /// The time zone can be specified in the following formats:</para>
             /// <list type="bullet">
-            /// <item><description><para>Time zone name: for example, Asia/Shanghai (China/Shanghai time) and America/Los_Angeles (US/Los Angeles time).</para>
-            /// </description></item>
-            /// <item><description><para>Offset from Greenwich Mean Time (GMT): for example, GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). The hour part cannot have a leading zero.</para>
-            /// </description></item>
+            /// <item><description>Full time zone name, such as Asia/Shanghai or America/Los_Angeles.</description></item>
+            /// <item><description>GMT offset from Greenwich Mean Time, such as GMT+8:00 or GMT-7:00. Leading zeros are not supported for the hour value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The configurations of delivering records to OSS.</para>
+        /// <para>The OSS delivery configuration.</para>
         /// </summary>
         [NameInMap("OssDeliveryConfig")]
         [Validation(Required=false)]
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the feature of delivering records to OSS. Default value: false.</para>
+            /// <para>Specifies whether to enable delivery to OSS. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -124,10 +122,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The OSS encryption algorithm. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>AES256</para>
-            /// </description></item>
-            /// <item><description><para>SM4</para>
-            /// </description></item>
+            /// <item><description>AES256</description></item>
+            /// <item><description>SM4</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string EncryptionAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>The ID of the customer master key (CMK) when KMS encryption is used.</para>
+            /// <para>The ID of the customer master key (CMK) when the encryption method is set to KMS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a807****7a70e</para>
@@ -148,14 +144,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string EncryptionKeyId { get; set; }
 
             /// <summary>
-            /// <para>The OSS encryption mode. Valid values:</para>
+            /// <para>The OSS encryption method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Inherit: inherits the bucket encryption.</para>
-            /// </description></item>
-            /// <item><description><para>OssManaged: uses OSS-managed server-side encryption.</para>
-            /// </description></item>
-            /// <item><description><para>KMS: uses KMS encryption.</para>
-            /// </description></item>
+            /// <item><description>Inherit: inherits the encryption method of the bucket.</description></item>
+            /// <item><description>OssManaged: OSS-managed encryption.</description></item>
+            /// <item><description>KMS: Key Management Service (KMS) encryption.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,14 +159,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string EncryptionType { get; set; }
 
             /// <summary>
-            /// <para>The prefix of the directory in the OSS bucket. The following limits apply:</para>
+            /// <para>The directory prefix of the OSS bucket. The following limits apply:</para>
             /// <list type="bullet">
-            /// <item><description><para>The prefix can be up to 254 characters in length.</para>
-            /// </description></item>
-            /// <item><description><para>The prefix cannot start with a forward slash (/) or a backslash ().</para>
-            /// </description></item>
+            /// <item><description>The prefix cannot exceed 254 characters in length.</description></item>
+            /// <item><description>The prefix cannot start with a forward slash (/) or a backslash (\).</description></item>
             /// </list>
-            /// <para>Note: If you want to deliver records to the root directory of the bucket, enter &quot;&quot;. To clear the prefix that is previously set, enter &quot;&quot;.</para>
+            /// <remarks>
+            /// <para>Note: Set this parameter to an empty string (&quot;&quot;) if no directory prefix is required. If a prefix was previously configured and is no longer needed, set this parameter to an empty string (&quot;&quot;) to clear it.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>sessionmanager/audit</para>
@@ -193,7 +186,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -212,7 +205,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of resource usage for Cloud Assistant. This setting takes effect only when the version of the Cloud Assistant agent is not earlier than the following versions:</para>
+        /// <para>The Cloud Assistant resource usage configuration. This parameter takes effect only when the Cloud Assistant Agent version meets the following minimum requirements:</para>
         /// <list type="bullet">
         /// <item><description><para>Windows: 2.1.4.1065</para>
         /// </description></item>
@@ -225,9 +218,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyCloudAssistantSettingsRequestResourceUsageConfig ResourceUsageConfig { get; set; }
         public class ModifyCloudAssistantSettingsRequestResourceUsageConfig : TeaModel {
             /// <summary>
-            /// <para>The maximum CPU usage that is allowed for the main process of the Cloud Assistant agent.</para>
+            /// <para>The maximum CPU usage allowed for the Cloud Assistant Agent main process.</para>
             /// <list type="bullet">
-            /// <item><description><para>Unit: %.</para>
+            /// <item><description><para>Unit: percentage.</para>
             /// </description></item>
             /// <item><description><para>Valid values: 10 to 95.</para>
             /// </description></item>
@@ -243,7 +236,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? CpuLimit { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to retain the script file of a command in the Cloud Assistant directory after the command execution is complete.
+            /// <para>Specifies whether to retain the script file in the Cloud Assistant directory after command execution is complete.
             /// Default value: false.</para>
             /// 
             /// <b>Example:</b>
@@ -254,14 +247,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? KeepScriptFile { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of Cloud Assistant log files that can be retained.</para>
+            /// <para>The maximum number of Cloud Assistant log files to retain.</para>
             /// <list type="bullet">
-            /// <item><description><para>Default value: 30.</para>
-            /// </description></item>
-            /// <item><description><para>Minimum value: 7.</para>
-            /// </description></item>
-            /// <item><description><para>Maximum value: 365.</para>
-            /// </description></item>
+            /// <item><description>Default value: 30.</description></item>
+            /// <item><description>Minimum value: 7.</description></item>
+            /// <item><description>Maximum value: 365.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -272,14 +262,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? LogFileCountLimit { get; set; }
 
             /// <summary>
-            /// <para>The maximum size of a single Cloud Assistant log file. You must specify a unit (B, KB, or MB).</para>
+            /// <para>The maximum size of a single Cloud Assistant log file. You must specify the unit (B|KB|MB).</para>
             /// <list type="bullet">
-            /// <item><description><para>Default value: 100 MB.</para>
-            /// </description></item>
-            /// <item><description><para>Minimum value: 10 MB.</para>
-            /// </description></item>
-            /// <item><description><para>Maximum value: 1024 MB.</para>
-            /// </description></item>
+            /// <item><description>Default value: 100MB.</description></item>
+            /// <item><description>Minimum value: 10MB.</description></item>
+            /// <item><description>Maximum value: 1024MB.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -290,14 +277,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string LogSizeLimit { get; set; }
 
             /// <summary>
-            /// <para>The maximum memory usage that is allowed for the main process of the Cloud Assistant agent. You must specify a unit (B, KB, or MB).</para>
+            /// <para>The maximum memory usage allowed for the Cloud Assistant Agent main process. You must specify the unit (B|KB|MB).</para>
             /// <list type="bullet">
-            /// <item><description><para>Default value: 50 MB.</para>
-            /// </description></item>
-            /// <item><description><para>Minimum value: 35 MB.</para>
-            /// </description></item>
-            /// <item><description><para>Maximum value: 1024 MB.</para>
-            /// </description></item>
+            /// <item><description>Default value: 50MB.</description></item>
+            /// <item><description>Minimum value: 35MB.</description></item>
+            /// <item><description>Maximum value: 1024MB.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -308,12 +292,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MemoryLimit { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of consecutive times that CPU or memory usage can exceed the specified limits. If the limits are consecutively exceeded for the specified number of times, the Cloud Assistant agent is automatically stopped.</para>
+            /// <para>The maximum number of consecutive times that CPU or memory resources usage can exceed the limit before the Cloud Assistant Agent automatically stops running.</para>
             /// <list type="bullet">
-            /// <item><description><para>Default value: 3.</para>
-            /// </description></item>
-            /// <item><description><para>Minimum value: 3.</para>
-            /// </description></item>
+            /// <item><description>Default value: 3.</description></item>
+            /// <item><description>Minimum value: 3.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -326,23 +308,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The configurations of the Session Manager feature.</para>
+        /// <para>The Cloud Assistant session feature configuration.</para>
         /// </summary>
         [NameInMap("SessionManagerConfig")]
         [Validation(Required=false)]
         public ModifyCloudAssistantSettingsRequestSessionManagerConfig SessionManagerConfig { get; set; }
         public class ModifyCloudAssistantSettingsRequestSessionManagerConfig : TeaModel {
             /// <summary>
-            /// <para>The switch for the Session Manager feature. Valid values:</para>
+            /// <para>Specifies whether to enable the Cloud Assistant session feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: enables the feature.</para>
-            /// </description></item>
-            /// <item><description><para>false: disables the feature.</para>
-            /// </description></item>
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
             /// </list>
             /// <para>Note:</para>
             /// <list type="bullet">
-            /// <item><description>After you enable or disable the Session Manager feature, the setting takes effect for all regions.</description></item>
+            /// <item><description>Enabling or disabling the session feature takes effect across all regions.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -355,16 +335,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The type of the service configurations. Valid values:</para>
+        /// <para>The service configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>SessionManagerDelivery</c>: the configurations of delivering session records.</para>
-        /// </description></item>
-        /// <item><description><para><c>InvocationDelivery</c>: the configurations of delivering command execution records.</para>
-        /// </description></item>
-        /// <item><description><para><c>AgentUpgradeConfig</c>: the configurations of upgrading the Cloud Assistant agent.</para>
-        /// </description></item>
-        /// <item><description><para><c>SessionManagerConfig</c>: the configurations of Cloud Assistant Session Manager.</para>
-        /// </description></item>
+        /// <item><description>SessionManagerDelivery: session operation log delivery.</description></item>
+        /// <item><description>InvocationDelivery: task execution log delivery.</description></item>
+        /// <item><description>AgentUpgradeConfig: Cloud Assistant Agent upgrade configuration.</description></item>
+        /// <item><description>SessionManagerConfig: Cloud Assistant SessionManager configuration.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -376,14 +352,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SettingType { get; set; }
 
         /// <summary>
-        /// <para>The configurations of delivering records to SLS.</para>
+        /// <para>The Simple Log Service (SLS) delivery configuration.</para>
         /// </summary>
         [NameInMap("SlsDeliveryConfig")]
         [Validation(Required=false)]
         public ModifyCloudAssistantSettingsRequestSlsDeliveryConfig SlsDeliveryConfig { get; set; }
         public class ModifyCloudAssistantSettingsRequestSlsDeliveryConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable the feature of delivering records to SLS.
+            /// <para>Specifies whether to enable delivery to SLS.
             /// Default value: false.</para>
             /// 
             /// <b>Example:</b>

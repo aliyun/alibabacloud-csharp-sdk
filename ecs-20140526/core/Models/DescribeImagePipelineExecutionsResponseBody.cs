@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelineExecutionsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The details of the image pipeline executions.</para>
-        /// </summary>
         [NameInMap("ImagePipelineExecution")]
         [Validation(Required=false)]
         public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecution ImagePipelineExecution { get; set; }
@@ -85,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -95,7 +92,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token returned in this call. Use this token to retrieve the next page of results. For more information, see the operation description.</para>
+        /// <para>The pagination token returned in this call. For more information about how to use this token, see the operation description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -115,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of image pipeline executions.</para>
+        /// <para>The total number of image components returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

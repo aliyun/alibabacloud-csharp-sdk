@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ActionType { get; set; }
 
         /// <summary>
-        /// <para>The list of filter conditions for querying resources.</para>
+        /// <para>The list of filter conditions used to query resources.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]

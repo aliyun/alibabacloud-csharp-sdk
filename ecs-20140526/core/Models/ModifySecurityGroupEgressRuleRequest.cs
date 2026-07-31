@@ -41,11 +41,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination security group to which you want to grant access permissions. Specify at least one of <c>DestGroupId</c> and <c>DestCidrIp</c>.</para>
+        /// <para>The ID of the destination security group for which you want to configure access permissions. Set at least one of <c>DestGroupId</c> and <c>DestCidrIp</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Specify at least one of DestGroupId, DestCidrIp, Ipv6DestCidrIp, and DestPrefixListId.</description></item>
-        /// <item><description>If DestGroupId is specified but DestCidrIp is not specified, the NicType parameter can only be set to intranet.</description></item>
-        /// <item><description>If both DestGroupId and DestCidrIp are specified, DestCidrIp takes precedence.</description></item>
+        /// <item><description>Set at least one of DestGroupId, DestCidrIp, Ipv6DestCidrIp, and DestPrefixListId.</description></item>
+        /// <item><description>If DestGroupId is specified but DestCidrIp is not specified, the NicType parameter can be set only to intranet.</description></item>
+        /// <item><description>If both DestGroupId and DestCidrIp are specified, DestCidrIp takes precedence by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestGroupId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account that owns the destination security group when you set a cross-account security group rule.</para>
+        /// <para>The Alibaba Cloud account that manages the destination security group when you set a security group rule across accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:EcsforCloud@Alibaba.com">EcsforCloud@Alibaba.com</a></para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestGroupOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that owns the destination security group when you set a cross-account security group rule.</para>
+        /// <para>The ID of the Alibaba Cloud account that manages the destination security group when you set a security group rule across accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The destination IPv6 Classless Inter-Domain Routing (CIDR) block. CIDR format and IPv6 format IP address range are supported.</para>
         /// <remarks>
-        /// <para>Only VPC-type IP addresses are supported. This parameter and <c>DestCidrIp</c> cannot be specified at the same time. Settings for both parameters simultaneously are not allowed.</para>
+        /// <para>Only VPC-type IP addresses are supported. This parameter and <c>DestCidrIp</c> cannot be specified at the same time. Settings for this parameter and <c>DestCidrIp</c> are mutually exclusive.</para>
         /// </remarks>
         /// <para>Default value: null.</para>
         /// 
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The source IPv6 Classless Inter-Domain Routing (CIDR) block. CIDR format and IPv6 format IP address range are supported.</para>
         /// <remarks>
-        /// <para>Only VPC-type IP addresses are supported. This parameter and <c>SourceCidrIp</c> cannot be specified at the same time. Settings for both parameters simultaneously are not allowed.</para>
+        /// <para>Only VPC-type IP addresses are supported. Settings for this parameter and <c>SourceCidrIp</c> are mutually exclusive.</para>
         /// </remarks>
         /// <para>Default value: null.</para>
         /// 
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Ipv6SourceCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The network interface type.</para>
+        /// <para>The network interface controller (NIC) type.</para>
         /// <remarks>
         /// <para>When you modify a rule by specifying the security group rule ID, this parameter cannot be modified. To make such a change, add a new rule and then delete the current rule.</para>
         /// </remarks>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The security group rule ID. You can call <a href="https://help.aliyun.com/document_detail/2679845.html">DescribeSecurityGroupAttribute</a> to query the security group rule ID.</para>
+        /// <para>The security group rule ID. You can call <a href="https://help.aliyun.com/document_detail/2679845.html">DescribeSecurityGroupAttribute</a> to query security group rule IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sgr-bp67acfmxazb4q****</para>

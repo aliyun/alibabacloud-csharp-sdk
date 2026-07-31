@@ -255,6 +255,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Obsolete]
                 public string NvmeSupport { get; set; }
 
+                [NameInMap("RepairItems")]
+                [Validation(Required=false)]
+                public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetRepairItems RepairItems { get; set; }
+                public class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetRepairItems : TeaModel {
+                    [NameInMap("RepairItem")]
+                    [Validation(Required=false)]
+                    public List<string> RepairItem { get; set; }
+
+                }
+
                 [NameInMap("RepairMode")]
                 [Validation(Required=false)]
                 public string RepairMode { get; set; }
@@ -310,7 +320,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page for a paginated query.</para>
+        /// <para>The maximum number of entries per page for paging queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -320,7 +330,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. This value is returned if the results are paginated.</para>
+        /// <para>The pagination token returned in this call. For more information about how to use it, refer to the operation description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -340,7 +350,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of image pipelines that match the query criteria.</para>
+        /// <para>The total number of image templates returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

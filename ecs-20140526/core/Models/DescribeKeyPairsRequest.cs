@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? IncludePublicKey { get; set; }
 
         /// <summary>
-        /// <para>The fingerprint of the key pair. The fingerprint uses the message-digest algorithm 5 (MD5) based on the public key fingerprint format defined in RFC 4716. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</para>
+        /// <para>The fingerprint of the key pair. The public key fingerprint format is defined in RFC 4716 and uses the MD5 message digest algorithm. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABC1234567</para>
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string KeyPairFingerPrint { get; set; }
 
         /// <summary>
-        /// <para>The name of the key pair. You can use regular expressions for fuzzy search, with the asterisk (*) to match child table expressions. Examples:</para>
+        /// <para>The name of the key pair. Fuzzy search with regular expressions is supported. You can use an asterisk (*) to match subexpressions. Examples:</para>
         /// <list type="bullet">
-        /// <item><description><c>*SshKey</c>: searches for key pair names that end with SshKey, including SshKey.</description></item>
-        /// <item><description><c>SshKey*</c>: searches for key pair names that start with SshKey, including SshKey.</description></item>
-        /// <item><description><c>*SshKey*</c>: searches for key pair names that contain SshKey, including SshKey.</description></item>
+        /// <item><description><c>*SshKey</c>: queries key pair names that end with SshKey, including SshKey.</description></item>
+        /// <item><description><c>SshKey*</c>: queries key pair names that start with SshKey, including SshKey.</description></item>
+        /// <item><description><c>*SshKey*</c>: queries key pair names that contain SshKey, including SshKey.</description></item>
         /// <item><description><c>SshKey</c>: exact match of SshKey.</description></item>
         /// </list>
         /// 
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging queries. Settings: Maximum value: 50.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>

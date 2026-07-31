@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the order. This parameter is returned only when <c>InstanceChargeType</c> is set to PrePaid.</para>
+        /// <para>The order ID. This parameter is returned only when you create subscription ECS instances (request parameter <c>InstanceChargeType=PrePaid</c>).</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The transaction price.</para>
+        /// <para>The transaction price of the order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.165</para>

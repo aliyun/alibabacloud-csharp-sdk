@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResetDiskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk that you want to roll back.</para>
+        /// <para>The ID of the cloud disk to be rolled back.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to check the validity of the request without actually making the request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para>false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.</para>
-        /// </description></item>
+        /// <item><description>true: performs a dry run without actually rolling back the cloud disk. The system checks whether required parameters are specified, whether the request format is valid, and whether resource status constraints are met. If the check fails, the corresponding error message is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description>false: performs a dry run and sends the request. If the check succeeds, the cloud disk rollback operation is initiated.</description></item>
         /// </list>
-        /// <para>Default value: false</para>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -54,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot that you want to use to roll back the cloud disk.</para>
+        /// <para>The ID of the snapshot to use for rolling back the cloud disk.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

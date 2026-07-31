@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoProvisioningGroupsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The auto provisioning groups.</para>
-        /// </summary>
         [NameInMap("AutoProvisioningGroups")]
         [Validation(Required=false)]
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroups AutoProvisioningGroups { get; set; }
@@ -283,7 +280,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of auto provisioning groups found.</para>
+        /// <para>The total number of queried auto-provisioning groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

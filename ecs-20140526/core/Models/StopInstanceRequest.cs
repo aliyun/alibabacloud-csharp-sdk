@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StopInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter will be deprecated soon and is retained only for compatibility purposes. Ignore this parameter when you call this operation.</para>
+        /// <para>This parameter is about to be deprecated and is retained only for compatibility purposes. Ignore this parameter when you call this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The instance is not stopped. The system checks whether required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether ECS inventory is sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>true: performs only a dry run. The instance is not stopped. The system checks whether the required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether the ECS inventory is sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// <item><description>false: performs a dry run and sends the request. The instance is stopped after the check succeeds.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not available for use.</para>
+        /// <para>This parameter is in invitational preview and is not available for general use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <para>If the instance does not support the economical mode, no error is returned on the API side. Stopping the instance takes priority. Instance types that do not support the economical mode include instances with local disks and subscription instances.</para>
+        /// <para>If the instance does not support the economical mode, the API does not return an error. Stopping the instance takes priority. Instance types that do not support the economical mode include instances with local disks and subscription instances.</para>
         /// <list type="bullet">
         /// <item><description>KeepCharging: standard stop mode. The instance continues to be billed after it is stopped.</description></item>
         /// </list>

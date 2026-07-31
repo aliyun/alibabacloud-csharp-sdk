@@ -10,22 +10,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:</para>
+        /// <para>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description><para>zh-CN: Simplified Chinese</para>
-        /// </description></item>
-        /// <item><description><para>zh_TW: Traditional Chinese</para>
-        /// </description></item>
-        /// <item><description><para>en-US: English</para>
-        /// </description></item>
-        /// <item><description><para>ja: Japanese</para>
-        /// </description></item>
-        /// <item><description><para>fr: French</para>
-        /// </description></item>
-        /// <item><description><para>de: German</para>
-        /// </description></item>
-        /// <item><description><para>ko: Korean</para>
-        /// </description></item>
+        /// <item><description>zh-CN: simplified Chinese.</description></item>
+        /// <item><description>zh-TW: traditional Chinese.</description></item>
+        /// <item><description>en-US: English.</description></item>
+        /// <item><description>ja: Japanese.</description></item>
+        /// <item><description>fr: French.</description></item>
+        /// <item><description>de: German.</description></item>
+        /// <item><description>ko: Korean.</description></item>
         /// </list>
         /// <para>Default value: zh-CN.</para>
         /// 
@@ -37,16 +30,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.
-        /// Valid values:</para>
+        /// <para>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para>PostPaid: pay-as-you-go.
-        /// SpotWithPriceLimit: spot instance for which a maximum hourly price is specified.</para>
-        /// </description></item>
-        /// <item><description><para>SpotAsPriceGo: spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</para>
-        /// </description></item>
+        /// <item><description>PrePaid: subscription. If you set this parameter to PrePaid, confirm that your account supports balance payment or credit payment. Otherwise, the InvalidPayMethod error is returned.</description></item>
+        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// <item><description>SpotWithPriceLimit: spot instance with a maximum price limit.</description></item>
+        /// <item><description>SpotAsPriceGo: spot instance priced at the market price with the pay-as-you-go price as the upper limit.</description></item>
         /// </list>
         /// <para>Default value: PostPaid.</para>
         /// 
@@ -74,16 +63,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>instance: Elastic Compute Service (ECS) instance</para>
-        /// </description></item>
-        /// <item><description><para>disk: disk</para>
-        /// </description></item>
-        /// <item><description><para>reservedinstance: reserved instance</para>
-        /// </description></item>
-        /// <item><description><para>scu: storage capacity unit (SCU)</para>
-        /// </description></item>
+        /// <item><description>instance: ECS instance.</description></item>
+        /// <item><description>disk: cloud disk.</description></item>
+        /// <item><description>reservedinstance: reserved instance.</description></item>
+        /// <item><description>scu: storage capacity unit (SCU).</description></item>
         /// </list>
         /// <para>Default value: instance.</para>
         /// 

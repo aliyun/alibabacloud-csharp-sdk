@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class InvokeCommandRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</para>
+        /// <para>The command ID. You can call <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> to query all available command IDs. </para>
         /// <remarks>
-        /// <para>Common Cloud Assistant commands can be run based on their names. For more information, see <a href="https://help.aliyun.com/document_detail/429635.html">View and run common Cloud Assistant commands</a>.</para>
+        /// <para>You can run public commands by specifying the command name. For more information, see <a href="https://help.aliyun.com/document_detail/429635.html">View and run Cloud Assistant public commands</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,22 +34,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the container. Only 64-bit hexadecimal strings are supported. You can use container IDs that are prefixed with <c>docker://</c>, <c>containerd://</c>, or <c>cri-o://</c> to specify container runtimes.</para>
-        /// <para>Take note of the following items:</para>
+        /// <para>The container ID. Only 64-bit hexadecimal strings are supported. Container IDs that are prefixed with <c>docker://</c>, <c>containerd://</c>, or <c>cri-o://</c> are supported to specify the container runtime.</para>
+        /// <para>Usage notes:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</para>
+        /// <item><description><para>If you specify this parameter, Cloud Assistant runs the script in the specified container of the instance.</para>
         /// </description></item>
-        /// <item><description><para>If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</para>
+        /// <item><description><para>If you specify this parameter, the command can be run only on Linux instances that have Cloud Assistant Agent 2.2.3.344 or later installed.</para>
         /// <list type="bullet">
-        /// <item><description><para>For information about how to query the version of Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</para>
-        /// </description></item>
-        /// <item><description><para>For information about how to upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.</para>
-        /// </description></item>
+        /// <item><description>To view the Cloud Assistant Agent version, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</description></item>
+        /// <item><description>To upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>If this parameter is specified, the <c>Username</c> parameter that is specified in a request to call this operation and the <c>WorkingDir</c> parameter that is specified in a request to call the <a href="https://help.aliyun.com/document_detail/64844.html">CreateCommand</a> operation do not take effect. You can run the command only in the default working directory of the container by using the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</para>
+        /// <item><description><para>If you specify this parameter, the <c>Username</c> parameter specified in this operation and the <c>WorkingDir</c> parameter specified in <a href="https://help.aliyun.com/document_detail/64844.html">CreateCommand</a> do not take effect. The command is run only by the default user in the default working directory of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</para>
         /// </description></item>
-        /// <item><description><para>If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to <c>#!/usr/bin/python</c> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</para>
+        /// <item><description><para>If you specify this parameter, only shell scripts can be run in Linux containers. You cannot use a format such as <c>#!/usr/bin/python</c> at the beginning of a script to specify an interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -61,22 +59,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the container.</para>
-        /// <para>Take note of the following items:</para>
+        /// <para>The container name.</para>
+        /// <para>Usage notes:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</para>
+        /// <item><description><para>If you specify this parameter, Cloud Assistant runs the script in the specified container of the instance.</para>
         /// </description></item>
-        /// <item><description><para>If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</para>
+        /// <item><description><para>If you specify this parameter, the command can be run only on Linux instances that have Cloud Assistant Agent 2.2.3.344 or later installed.</para>
         /// <list type="bullet">
-        /// <item><description><para>For information about how to query the version of Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</para>
-        /// </description></item>
-        /// <item><description><para>For information about how to upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.</para>
-        /// </description></item>
+        /// <item><description>To view the Cloud Assistant Agent version, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</description></item>
+        /// <item><description>To upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>If this parameter is specified, the <c>Username</c> parameter that is specified in a request to call this operation and the <c>WorkingDir</c> parameter that is specified in a request to call the <a href="https://help.aliyun.com/document_detail/64844.html">CreateCommand</a> operation do not take effect. You can run the command only in the default working directory of the container by using the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</para>
+        /// <item><description><para>If you specify this parameter, the <c>Username</c> parameter specified in this operation and the <c>WorkingDir</c> parameter specified in <a href="https://help.aliyun.com/document_detail/64844.html">CreateCommand</a> do not take effect. The command is run only by the default user in the default working directory of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</para>
         /// </description></item>
-        /// <item><description><para>If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to <c>#!/usr/bin/python</c> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</para>
+        /// <item><description><para>If you specify this parameter, only shell scripts can be run in Linux containers. You cannot use a format such as <c>#!/usr/bin/python</c> at the beginning of a script to specify an interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -88,40 +84,33 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ContainerName { get; set; }
 
         /// <summary>
-        /// <para>The schedule on which to run the command. You can configure a command to run at a fixed interval based on a rate expression, run only once at a specific time, or run at specific times based on a cron expression.</para>
+        /// <para>The schedule on which the command is run. Three types of scheduled execution are supported: fixed interval (Rate expression-based), one-time execution at a specified time, and clock-based scheduling (Cron expression-based).</para>
         /// <list type="bullet">
-        /// <item><description><para>To run a command at a fixed interval, use a rate expression to specify the interval. You can specify the interval in seconds, minutes, hours, or days. This option is suitable for scenarios in which tasks need to be executed at a fixed interval. Specify the interval in the following format: <c>rate(&lt;Execution interval value&gt;&lt;Execution interval unit&gt;)</c>. For example, specify <c>rate(5m)</c> to run the command every 5 minutes. When you specify an interval, take note of the following limits:</para>
+        /// <item><description><para>Fixed interval execution: Based on a Rate expression, the command is run at a set interval. The interval can be specified in seconds (s), minutes (m), hours (h), or days (d). This is suitable for scenarios that require execution at fixed intervals. Format: <c>rate(&lt;interval value&gt;&lt;interval unit&gt;)</c>. For example, to run the command every 5 minutes, use <c>rate(5m)</c>. Fixed interval execution has the following limits:</para>
         /// <list type="bullet">
-        /// <item><description><para>The interval can be anywhere from 60 seconds to 7 days, but must be longer than the timeout period of the scheduled task.</para>
-        /// </description></item>
-        /// <item><description><para>The interval is the amount of time that elapses between two consecutive executions. The interval is irrelevant to the amount of time that is required to run the command once. For example, assume that you set the interval to 5 minutes and that it takes 2 minutes to run the command each time. Each time the command is run, the system waits 3 minutes before the system runs the command again.</para>
-        /// </description></item>
-        /// <item><description><para>A task is not immediately executed after the task is created. For example, assume that you set the interval to 5 minutes for a task. The task begins to be executed 5 minutes after it is created.</para>
-        /// </description></item>
+        /// <item><description>The interval must not exceed 7 days or be less than 60 seconds, and must be greater than the timeout period of the scheduled task.</description></item>
+        /// <item><description>The interval is based on a fixed frequency and is unrelated to the actual execution time of the task. For example, if the command is set to run every 5 minutes and the task takes 2 minutes to complete, the next round starts 3 minutes after the task completes.</description></item>
+        /// <item><description>The task is not run immediately upon creation. For example, if the command is set to run every 5 minutes, it does not run immediately when the task is created. Instead, it starts running 5 minutes after the task is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>To run a command only once at a specific time, specify a point in time and a time zone. Specify the point in time in the <c>at(yyyy-MM-dd HH:mm:ss &lt;Time zone&gt;)</c> format, which indicates <c>at(Year-Month-Day Hour:Minute:Second &lt;Time zone&gt;)</c>. If you do not specify a time zone, the Coordinated Universal Time (UTC) time zone is used by default. You can specify a time zone in the following forms:</para>
+        /// <item><description><para>One-time execution at a specified time: The command is run once at the specified time zone and time. Format: <c>at(yyyy-MM-dd HH:mm:ss &lt;time zone&gt;)</c>. If no time zone is specified, UTC is used by default. The time zone can be specified in the following formats:</para>
         /// <list type="bullet">
-        /// <item><description><para>The time zone name. Examples: <c>Asia/Shanghai</c> and <c>America/Los_Angeles</c>.</para>
-        /// </description></item>
-        /// <item><description><para>The time offset from GMT. Examples: <c>GMT+8:00</c> (UTC+8) and <c>GMT-7:00</c> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</para>
-        /// </description></item>
-        /// <item><description><para>The time zone abbreviation. Only UTC is supported.</para>
-        /// </description></item>
+        /// <item><description>Full time zone name: For example, <c>Asia/Shanghai</c> or <c>America/Los_Angeles</c>.</description></item>
+        /// <item><description>GMT offset from Greenwich Mean Time: For example, <c>GMT+8:00</c> or <c>GMT-7:00</c>. When using the GMT format, leading zeros are not supported in the hour field.</description></item>
+        /// <item><description>Time zone abbreviation: Only UTC (Coordinated Universal Time) is supported.</description></item>
         /// </list>
-        /// <para>For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to <c>at(2022-06-06 13:15:30 Asia/Shanghai)</c>. To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to <c>at(2022-06-06 13:15:30 GMT-7:00)</c>.</para>
+        /// <para>For example, to run the command once at 13:15:30 on June 6, 2022 in the Asia/Shanghai time zone, use: <c>at(2022-06-06 13:15:30 Asia/Shanghai)</c>. To run the command once at 13:15:30 on June 6, 2022 in GMT-7:00, use: <c>at(2022-06-06 13:15:30 GMT-7:00)</c>.</para>
         /// </description></item>
-        /// <item><description><para>To run a command at specific times, use a cron expression to define the schedule. Specify a schedule in the <c>&lt;Cron expression&gt; &lt;Time zone&gt;</c> format. The cron expression is in the <c>&lt;seconds&gt; &lt;minutes&gt; &lt;hours&gt; &lt;day of the month&gt; &lt;month&gt; &lt;day of the week&gt; &lt;year (optional)&gt;</c> format. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zone of the instance on which you want to run the command is used by default. For more information about cron expressions, see <a href="https://help.aliyun.com/document_detail/64769.html">Cron expressions</a>. You can specify a time zone in the following forms:</para>
+        /// <item><description><para>Clock-based scheduling (Cron expression-based): Based on a Cron expression, the command is run according to the specified schedule. Format: <c>&lt;seconds&gt; &lt;minutes&gt; &lt;hours&gt; &lt;day of month&gt; &lt;month&gt; &lt;day of week&gt; &lt;year (optional)&gt; &lt;time zone&gt;</c>. The scheduled execution time is calculated based on the Cron expression in the specified time zone. If no time zone is specified, the system time zone of the instance running the scheduled task is used. For more information about Cron expressions, see <a href="https://help.aliyun.com/document_detail/64769.html">Cron expressions</a>. The time zone can be specified in the following formats:</para>
         /// <list type="bullet">
-        /// <item><description><para>The time zone name. Examples: <c>Asia/Shanghai</c> and <c>America/Los_Angeles</c>.</para>
-        /// </description></item>
-        /// <item><description><para>The time offset from GMT. Examples: <c>GMT+8:00</c> (UTC+8) and <c>GMT-7:00</c> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</para>
-        /// </description></item>
-        /// <item><description><para>The time zone abbreviation. Only UTC is supported. For example, to configure a command to run at 10:15:00 every day in 2022 (Shanghai time), set the schedule to <c>0 15 10 ? * * 2022 Asia/Shanghai</c>. To configure a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the schedule to <c>0 0/30 10-11 * * ? 2022 GMT+8:00</c>. To configure a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 in UTC, set the schedule to <c>0 0/5 14 * 10 ? 2022/2 UTC</c>.</para>
-        /// </description></item>
+        /// <item><description>Full time zone name: For example, <c>Asia/Shanghai</c> or <c>America/Los_Angeles</c>.</description></item>
+        /// <item><description>GMT offset from Greenwich Mean Time: For example, <c>GMT+8:00</c> or <c>GMT-7:00</c>. When using the GMT format, leading zeros are not supported in the hour field.</description></item>
+        /// <item><description>Time zone abbreviation: Only UTC (Coordinated Universal Time) is supported.
+        /// For example, to run the command once a day at 10:15 in the Asia/Shanghai time zone in 2022, use <c>0 15 10 ? * * 2022 Asia/Shanghai</c>. To run the command every 30 minutes from 10:00 to 11:30 every day in GMT+8:00 in 2022, use <c>0 0/30 10-11 * * ? 2022 GMT+8:00</c>. To run the command every 5 minutes from 14:00 to 14:55 every day in October every two years starting from 2022 in UTC, use <c>0 0/5 14 * 10 ? 2022/2 UTC</c>.</description></item>
         /// </list>
-        /// <para>\<em>\</em></para>
-        /// <para><b>Note</b> The minimum interval must be 10 seconds or more and cannot be shorter than the timeout period of scheduled executions.</para>
+        /// <remarks>
+        /// <para>The minimum interval must be greater than or equal to the timeout period of the scheduled task and no less than 10 seconds.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// </summary>
@@ -130,8 +119,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Frequency { get; set; }
 
         /// <summary>
-        /// <para>The IDs of instances on which you want to run the command. You can specify up to 100 instance IDs in each request. Valid values of N: 1 to 100.</para>
-        /// <para>You can apply for a quota increase in the Quota Center console. The quota name is Maximum number of instances supported for command execution.</para>
+        /// <para>The list of instances on which to run the command. You can specify up to 100 instance IDs. Valid values of N: 1 to 100.</para>
+        /// <para>You can also apply for a quota increase in Quota Center (quota name: Maximum number of instances supported for command execution).</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp185dy2o3o6n****</para>
@@ -141,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The launcher for script execution. The value cannot exceed 1 KB in length.</para>
+        /// <para>The bootstrap program for script execution. The value cannot exceed 1 KB in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</para>
@@ -151,9 +140,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Launcher { get; set; }
 
         /// <summary>
-        /// <para>The OSS delivery configuration for command output.</para>
+        /// <para>The OSS delivery configuration for command execution output.</para>
         /// <list type="bullet">
-        /// <item><description>Format: oss\://${BucketName}/${Prefix}, where ${BucketName} is the name of the destination OSS bucket and ${Prefix} is the folder prefix for delivery.</description></item>
+        /// <item><description>Format: oss://${BucketName}/${Prefix}, where ${BucketName} is the name of the destination OSS bucket and ${Prefix} is the directory prefix for delivery.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,18 +161,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The key-value pairs of custom parameters to pass in when the custom parameter feature is enabled. You can specify up to 10 custom parameters.</para>
+        /// <para>The key-value pairs of custom parameters to pass in when the custom parameter feature is enabled. The number of custom parameters ranges from 0 to 10.</para>
         /// <list type="bullet">
-        /// <item><description><para>Each key in a Map collection cannot be an empty string, and can be up to 64 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>Each value in a Map collection can be an empty string.</para>
-        /// </description></item>
-        /// <item><description><para>The size of the command after Base64 encoding, including the custom parameters and the original command content, cannot exceed 18 KB.</para>
-        /// </description></item>
-        /// <item><description><para>The custom parameter names that are specified by Parameters must be included in the custom parameter names that you specified when you created the command. You can use empty strings to represent the custom parameters that are not specified.</para>
-        /// </description></item>
+        /// <item><description>Map keys cannot be empty strings and can be up to 64 characters in length.</description></item>
+        /// <item><description>Map values can be empty strings.</description></item>
+        /// <item><description>After Base64 encoding, the total length of the custom parameters and the original command content cannot exceed 18 KB.</description></item>
+        /// <item><description>The set of custom parameter names must be a subset of the parameter set defined when the command was created. For parameters that are not passed in, you can use empty strings as substitutes.</description></item>
         /// </list>
-        /// <para>If you want to disable the custom parameter feature, you can leave this parameter empty.</para>
+        /// <para>You can unset this parameter to disable custom parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI************&quot;}</para>
@@ -193,7 +178,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public Dictionary<string, object> Parameters { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -204,32 +189,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies how to run the command. Valid values:</para>
+        /// <para>The execution mode of the command. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Once: immediately runs the command.</para>
-        /// </description></item>
-        /// <item><description><para>Period: runs the command based on a schedule. If you set this parameter to <c>Period</c>, you must also configure the <c>Frequency</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para>NextRebootOnly: runs the command the next time the instance is started.</para>
-        /// </description></item>
-        /// <item><description><para>EveryReboot: The command is run every time the instances start.</para>
-        /// </description></item>
-        /// <item><description><para>DryRun: Specifies whether to perform only a dry run, without performing the actual request. The command does not take effect. The system checks the request, including the request parameters, instance execution environment, and Cloud Assistant Agent running status.</para>
-        /// </description></item>
+        /// <item><description>Once: immediately runs the command.</description></item>
+        /// <item><description>Period: runs the command on a schedule. If you set this parameter to <c>Period</c>, you must also specify the <c>Frequency</c> parameter.</description></item>
+        /// <item><description>NextRebootOnly: automatically runs the command the next time the instance starts.</description></item>
+        /// <item><description>EveryReboot: automatically runs the command every time the instance starts.</description></item>
+        /// <item><description>DryRun: performs a dry run of the request without actually running the command. The dry run checks request parameters, instance execution environment, and Cloud Assistant Agent status.</description></item>
         /// </list>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify <c>Frequency</c>, the default value is <c>Once</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If you specify the <c>Frequency</c> parameter, <c>Period</c> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</para>
-        /// </description></item>
+        /// <item><description>If you do not specify the <c>Frequency</c> parameter, the default value is <c>Once</c>.</description></item>
+        /// <item><description>If you specify the <c>Frequency</c> parameter, the command is run on a schedule regardless of whether you set this parameter. The value is treated as <c>Period</c>.</description></item>
         /// </list>
-        /// <para>Take note of the following items when you specify this property:</para>
+        /// <para>Usage notes:</para>
         /// <list type="bullet">
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> operation to stop the pending or scheduled executions of the command.</para>
-        /// </description></item>
-        /// <item><description><para>If you set this parameter to <c>Period</c> or <c>EveryReboot</c>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with <c>IncludeHistory</c> set to true to query the results of historical scheduled executions.</para>
-        /// </description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> to stop a pending or scheduled command.</description></item>
+        /// <item><description>If you set this parameter to <c>Period</c> or <c>EveryReboot</c>, you can call <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> and specify <c>IncludeHistory=true</c> to view the execution history of the scheduled command.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -240,11 +216,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RepeatMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which to assign the command executions. When you set this parameter, take note of the following items:</para>
+        /// <para>The ID of the resource group for the command execution. When you specify this parameter:</para>
         /// <list type="bullet">
-        /// <item><description><para>The instances specified by InstanceId.N must belong to the specified resource group.</para>
+        /// <item><description><para>The ECS instance specified by InstanceId must belong to this resource group if the instance is not in the default resource group.</para>
         /// </description></item>
-        /// <item><description><para>After the command is run, you can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with ResourceGroupId set to query the execution results in the specified resource group.</para>
+        /// <item><description><para>You can filter command execution results by specifying this parameter (by calling <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a>).</para>
         /// </description></item>
         /// </list>
         /// 
@@ -264,23 +240,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the instance. If you do not specify InstanceId.N, the command is run on the instances that have the specified tags.</para>
+        /// <para>The tags used to filter instances. You can run a command in batches on instances that have the same tag without specifying InstanceId.</para>
         /// </summary>
         [NameInMap("ResourceTag")]
         [Validation(Required=false)]
         public List<InvokeCommandRequestResourceTag> ResourceTag { get; set; }
         public class InvokeCommandRequestResourceTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the instance.</para>
-            /// <para>Take note of the following items:</para>
+            /// <para>The tag key used to filter instances.</para>
+            /// <para>Usage notes:</para>
             /// <list type="bullet">
-            /// <item><description><para>This parameter and InstanceId.N are mutually exclusive.</para>
+            /// <item><description><para>This parameter conflicts with the InstanceId parameter. You cannot specify both parameters at the same time.</para>
             /// </description></item>
-            /// <item><description><para>Valid values of N: 1 to 10. The tag key cannot be an empty string.</para>
+            /// <item><description><para>Valid values of N: 1 to 10. The tag key cannot be an empty string once specified.</para>
             /// </description></item>
-            /// <item><description><para>The number of instances that have the specified tags cannot exceed 100. If more than 100 instances have the specified tags, we recommend that you use batch tags such as batch: b1 to group the instances into batches of up to 100 instances.</para>
+            /// <item><description><para>The number of instances with the specified tag cannot exceed the limit of InstanceId.N. If the number of instances exceeds the limit, control the number of instances by adding batch tags, such as batch: b1.</para>
             /// </description></item>
-            /// <item><description><para>The tag key can be up to 64 characters in length and cannot contain http\:// or https\://. The tag key cannot start with acs: or aliyun.</para>
+            /// <item><description><para>The tag key can be up to 64 characters in length and cannot start with aliyun or acs:, or contain http:// or https://.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -292,15 +268,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the instance.</para>
-            /// <para>Take note of the following items:</para>
+            /// <para>The tag value used to filter instances.</para>
+            /// <para>Usage notes:</para>
             /// <list type="bullet">
-            /// <item><description><para>Valid values of N: 1 to 10.</para>
-            /// </description></item>
-            /// <item><description><para>The tag value can be an empty string.</para>
-            /// </description></item>
-            /// <item><description><para>The tag value can be up to 128 characters in length and cannot contain http\:// or https\://.</para>
-            /// </description></item>
+            /// <item><description>Valid values of N: 1 to 10.</description></item>
+            /// <item><description>The tag value can be an empty string.</description></item>
+            /// <item><description>The tag value can be up to 128 characters in length and cannot contain http:// or https://.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -313,16 +286,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The tags of the command.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<InvokeCommandRequestTag> Tag { get; set; }
         public class InvokeCommandRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the command execution. Valid values of N: 1 to 20. The tag key cannot be an empty string once specified.</para>
+            /// <para>If you use a single tag to filter resources, the number of resources with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the number of resources that are attached with all specified tags cannot exceed 1,000. If the number of resources exceeds 1,000, execute the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -332,7 +305,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the command task. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
+            /// <para>The tag value of the command execution. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
             /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -345,12 +318,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies how to stop the command task when a command execution is manually stopped or times out. Valid values:</para>
+        /// <para>The mode in which the task is stopped (manually stopped or interrupted due to timeout). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Process: stops the process of the command.</para>
-        /// </description></item>
-        /// <item><description><para>ProcessTree: stops the process tree of the command. In this case, the process of the command and all subprocesses of the process are stopped.</para>
-        /// </description></item>
+        /// <item><description>Process: stops the current script process.</description></item>
+        /// <item><description>ProcessTree: stops the current process tree (the script process and all child processes it created).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -362,7 +333,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is no longer used and does not take effect.</para>
+        /// <para>This parameter is deprecated and has no effect if specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -375,13 +346,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The timeout period for the command execution. Unit: seconds.</para>
         /// <list type="bullet">
-        /// <item><description><para>The timeout period cannot be less than 10 seconds.</para>
+        /// <item><description><para>The value must be at least 10 seconds.</para>
         /// </description></item>
-        /// <item><description><para>A timeout error occurs if the command cannot be run because the process slows down or because a specific module or Cloud Assistant Agent does not exist. When the specified timeout period ends, the command process is forcefully terminated.</para>
+        /// <item><description><para>If the command cannot be run due to process issues, missing modules, or missing Cloud Assistant Agent, a timeout occurs. When a timeout occurs, the command process is forcefully terminated.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, the timeout period that is specified when the command is created is used.</para>
+        /// <item><description><para>If you do not specify this parameter, the timeout period specified when the command was created is used.</para>
         /// </description></item>
-        /// <item><description><para>This timeout period is applicable only to this execution. The timeout period of the command is not modified.</para>
+        /// <item><description><para>This value applies only to the current command execution and does not change the timeout period of the command itself.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -393,14 +364,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The username to use to run the command on the ECS instances. The username cannot exceed 255 characters in length.</para>
+        /// <para>The username used to run the command on the ECS instance. The username can be up to 255 characters in length.</para>
         /// <list type="bullet">
-        /// <item><description><para>For Linux instances, the root username is used by default.</para>
-        /// </description></item>
-        /// <item><description><para>For Windows instances, the System username is used by default.</para>
-        /// </description></item>
+        /// <item><description>For Linux instances, the root user is used by default.</description></item>
+        /// <item><description>For Windows instances, the System user is used by default.</description></item>
         /// </list>
-        /// <para>You can also specify other usernames that already exist in the instances to run the command. For security purposes, we recommend that you run Cloud Assistant commands as a regular user. For more information, see <a href="https://help.aliyun.com/document_detail/203771.html">Run Cloud Assistant commands as a regular user</a>.</para>
+        /// <para>You can also specify another existing user on the instance to run the command. Running Cloud Assistant commands as a regular user is more secure. For more information, see <a href="https://help.aliyun.com/document_detail/203771.html">Configure a regular user to run Cloud Assistant commands</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -410,10 +379,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Username { get; set; }
 
         /// <summary>
-        /// <para>The name of the password to use to run the command on a Windows instance. The name cannot exceed 255 characters in length.</para>
-        /// <para>If you do not want to use the default System user to run the command on Windows instances, specify both WindowsPasswordName and <c>Username</c>. To mitigate the risk of password leaks, the password is stored in plaintext in CloudOps Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Manage encryption parameters</a> and <a href="https://help.aliyun.com/document_detail/203771.html">Run Cloud Assistant commands as a regular user</a>.</para>
+        /// <para>The name of the password for the user who executes the command on a Windows instance. The name can be up to 255 characters in length.</para>
+        /// <para>To execute a command as a non-default user (System) on a Windows instance, you must specify both <c>Username</c> and this parameter. To reduce the risk of password leaks, store the plaintext password in the parameter repository of operations management, and pass in only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encryption parameters</a> and <a href="https://help.aliyun.com/document_detail/203771.html">Configure a regular user to execute Cloud Assistant commands</a>.</para>
         /// <remarks>
-        /// <para>If you use the root username for Linux instances or the System username for Windows instances to run the command, you do not need to specify WindowsPasswordName.</para>
+        /// <para>This parameter is not required when you use the root user on a Linux instance or the System user on a Windows instance to execute the command.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -424,12 +393,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string WindowsPasswordName { get; set; }
 
         /// <summary>
-        /// <para>The execution path of the command on ECS instances. The value can be up to 200 characters in length.</para>
+        /// <para>The directory in which the command is run on the ECS instance. The value can be up to 200 characters in length.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify this parameter, the execution path specified when the command is created is used.</para>
-        /// </description></item>
-        /// <item><description><para>This execution path is applicable only to this task. The execution path of the command is not changed.</para>
-        /// </description></item>
+        /// <item><description>If you do not specify this parameter, the working directory specified when the command was created is used.</description></item>
+        /// <item><description>This value applies only to the current command execution and does not change the working directory of the command itself.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

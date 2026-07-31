@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoProvisioningGroupHistoryResponseBody : TeaModel {
-        /// <summary>
-        /// <para>An array of scheduled task history records.</para>
-        /// </summary>
         [NameInMap("AutoProvisioningGroupHistories")]
         [Validation(Required=false)]
         public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories AutoProvisioningGroupHistories { get; set; }
@@ -149,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of scheduled tasks.</para>
+        /// <para>The total number of scheduling tasks queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

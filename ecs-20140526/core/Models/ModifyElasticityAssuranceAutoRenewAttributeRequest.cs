@@ -14,9 +14,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyElasticityAssuranceAutoRenewAttributeRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class ModifyElasticityAssuranceAutoRenewAttributeRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The IDs of elasticity assurances.</para>
+            /// <para>The list of elasticity assurance service IDs to modify.</para>
             /// <remarks>
-            /// <para>You can renew up to 50 elasticity assurances at a time.</para>
+            /// <para>You can modify up to 50 elasticity assurance services at a time.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Id")]
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period for the elasticity assurance.</para>
+        /// <para>The auto-renewal period of the instance.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values when <c>PeriodUnit</c> is set to <c>Year</c>: 1, 3, and 5.</para>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values: 1, 3, and 5.</para>
         /// </description></item>
-        /// <item><description><para>Valid values when <c>PeriodUnit</c> is set to <c>Month</c>: 1.</para>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values: 1.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: 1.</para>
@@ -51,11 +51,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal duration. Valid values:</para>
+        /// <para>The unit of the renewal period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Month</para>
+        /// <item><description><para>Month: month</para>
         /// </description></item>
-        /// <item><description><para>Year</para>
+        /// <item><description><para>Year: year</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: Month.</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the elasticity assurance belongs. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the elasticity assurance service. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,13 +79,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal status of the elasticity assurance. Valid values:</para>
+        /// <para>The auto-renewal status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>AutoRenewal: Auto-renewal is enabled for the elasticity assurance.</para>
+        /// <item><description><para>AutoRenewal: Auto-renewal is enabled.</para>
         /// </description></item>
-        /// <item><description><para>Normal: Auto-renewal is disabled for the elasticity assurance.</para>
+        /// <item><description><para>Normal: Auto-renewal is disabled.</para>
         /// </description></item>
-        /// <item><description><para>NotRenewal: The elasticity assurance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the elasticity assurance expires. You can change the value of this parameter from NotRenewal to <c>Normal</c> for an elasticity assurance, and then manually renew the elasticity assurance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</para>
+        /// <item><description><para>NotRenewal: The instance will not be renewed. After this value is specified, the system no longer sends expiration reminders and sends only a non-renewal reminder three days before the expiration date. You can change the value for an elasticity assurance service from NotRenewal to Normal and then manually renew the service or enable auto-renewal.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AuthorizeSecurityGroupEgressRequest : TeaModel {
         /// <summary>
-        /// <para>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>A client token used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Deprecated. Use <c>Permissions.N.DestCidrIp</c> to specify the destination IPv4 Classless Inter-Domain Routing (CIDR) block.</para>
+        /// <para>Deprecated. Use <c>Permissions.N.DestCidrIp</c> to specify the destination IPv4 CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.0.0/8</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Deprecated. Use <c>Permissions.N.DestGroupOwnerAccount</c> to specify the Alibaba Cloud account that manages the destination security group.</para>
+        /// <para>Deprecated. Use <c>Permissions.N.DestGroupOwnerAccount</c> to specify the Alibaba Cloud account that owns the destination security group.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:Test@aliyun.com">Test@aliyun.com</a></para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Deprecated. Use <c>Permissions.N.DestGroupOwnerId</c> to specify the ID of the Alibaba Cloud account that manages the destination security group.</para>
+        /// <para>Deprecated. Use <c>Permissions.N.DestGroupOwnerId</c> to specify the ID of the Alibaba Cloud account that owns the destination security group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678910</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Deprecated. Use <c>Permissions.N.DestPrefixListId</c> to specify the source prefix list ID.</para>
+        /// <para>Deprecated. Use <c>Permissions.N.DestPrefixListId</c> to specify the destination prefix list ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-x1j1k5ykzqlixdcy****</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Deprecated. Use <c>Permissions.N.Ipv6DestCidrIp</c> to specify the destination IPv6 Classless Inter-Domain Routing (CIDR) block.</para>
+        /// <para>Deprecated. Use <c>Permissions.N.Ipv6DestCidrIp</c> to specify the destination IPv6 CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2001:db8:1233:1a00::***</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The destination IPv4 Classless Inter-Domain Routing (CIDR) block for which you want to configure access permission settings. Both CIDR format and IPv4 format address ranges are supported.</para>
+            /// <para>The destination IPv4 CIDR block for which you want to configure access permissions. CIDR format and IPv4 format IP address ranges are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.0.0/8</para>
@@ -185,9 +185,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DestCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the destination security group for which you want to set access permissions.</para>
+            /// <para>The ID of the destination security group for which you want to configure access permissions.</para>
             /// <list type="bullet">
-            /// <item><description><para>You must specify at least one of the following parameters: <c>DestGroupId</c>, <c>DestCidrIp</c>, <c>Ipv6DestCidrIp</c>, or <c>DestPrefixListId</c>.</para>
+            /// <item><description><para>Specify at least one of the following parameters: <c>DestGroupId</c>, <c>DestCidrIp</c>, <c>Ipv6DestCidrIp</c>, or <c>DestPrefixListId</c>.</para>
             /// </description></item>
             /// <item><description><para>If <c>DestGroupId</c> is specified but <c>DestCidrIp</c> is not, the <c>NicType</c> parameter can only be set to intranet.</para>
             /// </description></item>
@@ -203,9 +203,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DestGroupId { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account that manages the destination security group when you configure a cross-account security group rule settings. </para>
+            /// <para>The Alibaba Cloud account that owns the destination security group when you configure cross-account security group rules. </para>
             /// <list type="bullet">
-            /// <item><description>If neither <c>DestGroupOwnerAccount</c> nor <c>DestGroupOwnerId</c> is specified, the access permissions are configured for another security group within your account.</description></item>
+            /// <item><description>If neither <c>DestGroupOwnerAccount</c> nor <c>DestGroupOwnerId</c> parameter is specified, the rule is configured for access permissions to another security group within your account.</description></item>
             /// <item><description>If the <c>DestCidrIp</c> parameter is specified, the <c>DestGroupOwnerAccount</c> parameter is ignored.</description></item>
             /// </list>
             /// 
@@ -217,9 +217,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DestGroupOwnerAccount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that manages the destination security group when you configure a cross-account security group rule settings. </para>
+            /// <para>The ID of the Alibaba Cloud account that owns the destination security group when you configure cross-account security group rules. </para>
             /// <list type="bullet">
-            /// <item><description>If neither <c>DestGroupOwnerId</c> nor <c>DestGroupOwnerAccount</c> is specified, the access permissions are configured for another security group within your account.</description></item>
+            /// <item><description>If neither <c>DestGroupOwnerId</c> nor <c>DestGroupOwnerAccount</c> parameter is specified, the rule is configured for access permissions to another security group within your account.</description></item>
             /// <item><description>If the <c>DestCidrIp</c> parameter is specified, the <c>DestGroupOwnerId</c> parameter is ignored.</description></item>
             /// </list>
             /// 
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? DestGroupOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the destination prefix list for which you want to set access permissions. You can call <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> to query available prefix list IDs.</para>
+            /// <para>The ID of the destination prefix list for which you want to configure access permissions. You can call <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> to query available prefix list IDs.</para>
             /// <para>Notes:</para>
             /// <para>If you specify one of the <c>DestCidrIp</c>, <c>Ipv6DestCidrIp</c>, or <c>DestGroupId</c> parameters, this parameter is ignored.</para>
             /// <para>For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string IpProtocol { get; set; }
 
             /// <summary>
-            /// <para>The destination IPv6 Classless Inter-Domain Routing (CIDR) block for which you want to configure access permission settings. Both CIDR format and IPv6 format address ranges are supported.</para>
+            /// <para>The destination IPv6 CIDR block for which you want to configure access permissions. CIDR format and IPv6 format IP address ranges are supported.</para>
             /// <remarks>
             /// <para>This parameter is valid only for VPC-type ECS instances that support IPv6. This parameter and <c>DestCidrIp</c> cannot be specified at the same time.</para>
             /// </remarks>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Ipv6DestCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The source IPv6 CIDR block. Both CIDR format and IPv6 format address ranges are supported. </para>
+            /// <para>The source IPv6 CIDR block. CIDR blocks and IPv6 address ranges are supported. </para>
             /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// <remarks>
             /// <para>This parameter is valid only for VPC-type ECS instances that support IPv6. This parameter and <c>DestCidrIp</c> cannot be specified at the same time.</para>
@@ -303,12 +303,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Ipv6SourceCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The network interface controller (NIC) type settings for a classic network security group rule. Valid values: </para>
+            /// <para>The network interface controller (NIC) type of the security group rule for classic network type security groups. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description>internet: public network interface controller (NIC).</description></item>
-            /// <item><description>intranet: internal network interface controller (NIC).<list type="bullet">
-            /// <item><description>For VPC-type security group rules, you do not need to configure the network interface controller (NIC) type settings. The default value is intranet.</description></item>
-            /// <item><description>When you configure security groups to access each other, meaning only the DestGroupId parameter is specified, the value can only be intranet.</description></item>
+            /// <item><description>internet: public NIC.</description></item>
+            /// <item><description>intranet: internal network NIC.<list type="bullet">
+            /// <item><description>For VPC-type security group rules, the network interface controller (NIC) type does not need to be specified and the parameter can only be set to intranet.</description></item>
+            /// <item><description>When configuring mutual access between security groups (only the DestGroupId parameter is specified), the value can only be intranet.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -322,10 +322,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NicType { get; set; }
 
             /// <summary>
-            /// <para>The access permission settings. Valid values: </para>
+            /// <para>The access permission. Valid values: </para>
             /// <list type="bullet">
             /// <item><description>accept: Accepts access.</description></item>
-            /// <item><description>drop: Denies access and does not return a deny message. The request times out or a timeout error similar to a connection failure is returned.</description></item>
+            /// <item><description>drop: Denies access without returning a deny response. The request appears to timeout or the connection cannot be established.</description></item>
             /// </list>
             /// <para>Default value: accept.</para>
             /// 
@@ -337,9 +337,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The range of destination ports that correspond to the protocol for the security group. Valid values:</para>
+            /// <para>The range of destination ports that correspond to the protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP/UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</description></item>
+            /// <item><description>TCP/UDP: Valid values are 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</description></item>
             /// <item><description>ICMP: -1/-1.</description></item>
             /// <item><description>GRE: -1/-1.</description></item>
             /// <item><description>ALL: -1/-1.</description></item>
@@ -354,10 +354,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The port list ID.
-            /// You can invoke <c>DescribePortRangeLists</c> to query available port list IDs.</para>
+            /// You can call <c>DescribePortRangeLists</c> to query available port list IDs.</para>
             /// <list type="bullet">
-            /// <item><description>If you specify <c>Permissions.N.PortRange</c>, this parameter is ignored.</description></item>
-            /// <item><description>Port lists are not supported for classic network security group settings. For more information about security group and port list limits, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</description></item>
+            /// <item><description>If <c>Permissions.N.PortRange</c> is specified, this parameter is ignored.</description></item>
+            /// <item><description>Port lists are not supported for security groups with the classic network type. For more information about security group and port list limits, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -368,7 +368,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PortRangeListId { get; set; }
 
             /// <summary>
-            /// <para>The priority of the security group rule. A smaller value indicates a higher priority. Valid values: 1 to 100.</para>
+            /// <para>The priority of the security group rule. A smaller number indicates a higher priority. Valid values: 1 to 100.</para>
             /// <para>Default value: 1.</para>
             /// 
             /// <b>Example:</b>
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The source IPv4 CIDR block. Both CIDR format and IPv4 format address ranges are supported.</para>
+            /// <para>The source IPv4 CIDR block. CIDR blocks and IPv4 address ranges are supported.</para>
             /// <para>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</para>
             /// 
             /// <b>Example:</b>
@@ -390,9 +390,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SourceCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The range of source ports that correspond to the protocol for the security group. Valid values:</para>
+            /// <para>The range of source ports that correspond to the protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP/UDP: Valid values are 1 to 65535. Separate the start port and the end port with a forward slash (/). Example: 1/200.</description></item>
+            /// <item><description>TCP/UDP: Valid values are 1 to 65535. Separate the start port and end port with a forward slash (/). Example: 1/200.</description></item>
             /// <item><description>ICMP: -1/-1.</description></item>
             /// <item><description>GRE: -1/-1.</description></item>
             /// <item><description>ALL: -1/-1.</description></item>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Deprecated. Use <c>Permissions.N.Policy</c> to configure the access permission settings.</para>
+        /// <para>Deprecated. Use <c>Permissions.N.Policy</c> to configure the access permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>accept</para>

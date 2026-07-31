@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeregisterManagedInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the managed instances.</para>
+        /// <para>The information about the managed instance.</para>
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The number of times that Cloud Assistant tasks were executed on the managed instance.</para>
+            /// <para>The number of times that Cloud Assistant tasks were run on the managed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? InvocationCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the Cloud Assistant task was last executed.</para>
+            /// <para>The time when the last Cloud Assistant task was run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T09:00:40Z</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string LastInvokedTime { get; set; }
 
             /// <summary>
-            /// <para>The machine code of the managed instance.</para>
+            /// <para>The machine ID of the managed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e03231b37ab14e53b5795ad625fc****</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MachineId { get; set; }
 
             /// <summary>
-            /// <para>The operating system type of the managed instance.</para>
+            /// <para>The operating system of the managed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>linux</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The version information about the operating system.</para>
+            /// <para>The version of the operating system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Linux_#38~18.04.1-Ubuntu SMP Wed Jan 6 18:26:30 UTC 2021_x86_64</para>

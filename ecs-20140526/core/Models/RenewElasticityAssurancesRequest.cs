@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the elasticity assurance service.</para>
+        /// <para>The ID of the region in which the elasticity assurance service resides.</para>
         /// <para>You can call <a href="https://help.aliyun.com/document_detail/2680071.html">DescribeRegions</a> to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>

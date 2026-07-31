@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically renew the instance before it expires.</para>
+        /// <para>Specifies whether to enable auto-renewal before the instance expires.</para>
         /// <list type="bullet">
         /// <item><description>true: enables auto-renewal.</description></item>
         /// <item><description>false: disables auto-renewal.</description></item>
@@ -28,19 +28,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The auto-renewal duration of the instance.</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>When <c>PeriodUnit</c> is set to <c>Year</c>, the valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}</description></item>
-        /// <item><description>When <c>PeriodUnit</c> is set to <c>Month</c>, the valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}</description></item>
-        /// <item><description>When <c>PeriodUnit</c> is set to <c>Week</c>, the valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;}</description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}.</description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}.</description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Week</c>, valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;}.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>When <c>PeriodUnit</c> is set to <c>Year</c>, the valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}</description></item>
-        /// <item><description>When <c>PeriodUnit</c> is set to <c>Month</c>, the valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}</description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}.</description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;partner&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>When <c>PeriodUnit</c> is set to <c>Year</c>, the valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}</description></item>
-        /// <item><description>When <c>PeriodUnit</c> is set to <c>Month</c>, the valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}</description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;}.</description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values of <c>Duration</c> are: {&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;6&quot;, &quot;12&quot;, &quot;24&quot;, &quot;36&quot;, &quot;48&quot;, &quot;60&quot;}.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>Instance ID. You can specify up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).</para>
+        /// <para>The instance IDs. You can specify up to 100 subscription instance IDs at a time. Separate multiple instance IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal duration, that is, the unit of the <c>Duration</c> parameter. Valid values:</para>
+        /// <para>The unit of the renewal duration specified by the <c>Duration</c> parameter. Valid values:</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>Week</description></item>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,17 +107,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal status of the instance. Valid values:</para>
+        /// <para>The auto-renewal status of ECS instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>AutoRenewal: enables auto-renewal.</para>
         /// </description></item>
         /// <item><description><para>Normal: disables auto-renewal.</para>
         /// </description></item>
-        /// <item><description><para>NotRenewal: does not renew the instance. After this value is set, the system no longer sends expiration reminders and only sends a non-renewal reminder three days before the instance expires. ECS instances that are set to not renew can be changed to pending renewal (<c>Normal</c>), and then manually renewed or set to auto-renewal.</para>
+        /// <item><description><para>NotRenewal: does not renew ECS instance. After this value is specified, the system no longer sends expiration notifications. Only a non-renewal reminder is sent three days before ECS instance expires. You can change the value for an instance from NotRenewal to <c>Normal</c> and then manually renew ECS instance or configure auto-renewal.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>The <c>RenewalStatus</c> parameter takes precedence over the <c>AutoRenew</c> parameter. If the <c>RenewalStatus</c> parameter is not specified, the <c>AutoRenew</c> parameter takes effect by default.</para>
+        /// <para>The <c>RenewalStatus</c> parameter takes precedence over the <c>AutoRenew</c> parameter. If <c>RenewalStatus</c> is not specified, the <c>AutoRenew</c> parameter is used by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

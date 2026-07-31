@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateVscResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DD38F-12VBW2-**EKX</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Virtual Storage Channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsc-b*d31dq</para>
         /// </summary>

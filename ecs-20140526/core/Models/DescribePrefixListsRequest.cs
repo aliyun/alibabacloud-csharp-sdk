@@ -10,14 +10,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePrefixListsRequest : TeaModel {
         /// <summary>
-        /// <para>The IP address family. Valid values:</para>
+        /// <para>The address family of the prefix list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>IPv4</para>
-        /// </description></item>
-        /// <item><description><para>IPv6</para>
-        /// </description></item>
+        /// <item><description>IPv4</description></item>
+        /// <item><description>IPv6</description></item>
         /// </list>
-        /// <para>This parameter is empty by default, which indicates that all prefix lists are queried.</para>
+        /// <para>Default value: empty, which indicates that information about all prefix lists is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
@@ -27,8 +25,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AddressFamily { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
+        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the request to retrieve a new page of results. Set the value to the <c>NextToken</c> value returned in the last call to this operation. Leave this parameter empty the first time you call this operation.</para>
+        /// <para>The pagination token. Set this parameter to the value of <c>NextToken</c> returned in the previous call. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -57,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of prefix lists. Valid values of N: 0 to 100.</para>
+        /// <para>The prefix list ID. Valid values of N: 0 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-x1j1k5ykzqlixdcy****</para>
@@ -77,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PrefixListName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,14 +104,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the prefix list.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribePrefixListsRequestTag> Tag { get; set; }
         public class DescribePrefixListsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the prefix list. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <c>http:// or https://</c>.</para>
+            /// <para>The tag key of the prefix list. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -123,8 +121,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the prefix list. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http:// or https://</c>.</para>
+            /// <para>The tag value of the prefix list. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

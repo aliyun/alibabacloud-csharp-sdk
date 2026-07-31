@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request.</para>
         /// <list type="bullet">
-        /// <item><description>true: sends a check request without querying resource status. The check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DRYRUN.SUCCESS error code is returned.</description></item>
-        /// <item><description>false: sends a Normal request. After the check succeeds, a 2xx HTTP status code is returned and the resource status is queried directly.</description></item>
+        /// <item><description>true: sends a check request without querying resource status. The check items include whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required authorization, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the error code DRYRUN.SUCCESS is returned.</description></item>
+        /// <item><description>false: sends a Normal request. After the check passes, a 2xx HTTP status code is returned and the resource status is queried.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully release an instance that is in the <b>Running</b> (<c>Running</c>) state.</para>
+        /// <para>Specifies whether to forcefully release ECS instance that is in the <b>Running</b> state.</para>
         /// <list type="bullet">
-        /// <item><description>true: forcefully releases ECS instance that is in the <b>Running</b> (<c>Running</c>) state.</description></item>
-        /// <item><description>false: releases ECS instance only when it is in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
+        /// <item><description>true: forcefully releases ECS instance in the <b>Running</b> state.</description></item>
+        /// <item><description>false: releases ECS instance only when it is in the <b>Stopped</b> state.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>Warning: Forceful release is equivalent to powering off ECS instance. All in-memory data and temporary data in the storage are erased and cannot be recovered..</para>
+        /// <para>Warning: Forceful release is equivalent to powering off the instance. All in-memory data and temporary storage data of the instance is erased and cannot be recovered.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,13 +53,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully shut down the instance before release when the instance is in the <b>Running</b> (<c>Running</c>) state. This parameter takes effect only when <c>Force=true</c>. Valid values:</para>
+        /// <para>Specifies whether to forcefully stop an instance in the <b>Running</b> state before release. This parameter takes effect only when <c>Force=true</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: forcefully shuts down and releases the instance. This is equivalent to a power-off operation. The instance directly enters the resource release process.<remarks>
-        /// <para>Warning: Forceful release is equivalent to powering off the instance. All in-memory data and temporary data in the storage are erased and cannot be recovered.</para>
+        /// <item><description>true: forcefully stops and releases the instance. This is equivalent to a power-off operation. The instance directly enters the resource release process.<remarks>
+        /// <para>Warning: Forceful release is equivalent to powering off the instance. All in-memory data and temporary storage data of the instance is erased and cannot be recovered.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>false: performs a standard shutdown before releasing the instance. This mode causes the release process to take several minutes. You can configure service draining actions during the operating system shutdown to reduce noise in your business systems.</description></item>
+        /// <item><description>false: performs a graceful shutdown before releasing the instance. This mode causes the release operation to take several minutes. You can configure service draining actions during the operating system shutdown to reduce noise in your business systems.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 

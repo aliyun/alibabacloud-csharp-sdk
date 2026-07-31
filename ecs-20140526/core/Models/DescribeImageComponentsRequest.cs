@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Build</description></item>
-        /// <item><description>Test.</description></item>
+        /// <item><description>Test</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of NextToken returned by the previous call. You do not need to set this parameter for the first request.</para>
+        /// <para>The pagination token. Set this parameter to the value of <c>NextToken</c> returned in the previous call. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. If you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
+        /// <para>The resource group ID. If you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Linux</description></item>
-        /// <item><description>Windows.</description></item>
+        /// <item><description>Windows</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

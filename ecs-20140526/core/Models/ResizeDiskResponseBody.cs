@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ResizeDiskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The order ID.</para>
+        /// <remarks>
+        /// <para>An order ID is returned only when you expand a subscription disk.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>20413515388****</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F3CD6886-D8D0-4FEE-B93E-1B732396****</para>

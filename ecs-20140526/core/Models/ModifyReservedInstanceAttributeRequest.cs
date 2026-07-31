@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyReservedInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The description of the reserved instance. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ri-example</para>
@@ -28,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the reserved instance.</para>
+        /// <para>The region ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The ID of the reserved instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,8 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ReservedInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new description of the reserved instance. The description must be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// <para>This parameter is empty by default.</para>
+        /// <para>The name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), underscores (_), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testReservedInstanceName</para>

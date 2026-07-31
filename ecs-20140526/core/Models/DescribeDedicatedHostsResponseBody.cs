@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. An empty value indicates that no more results are available.</para>
+        /// <para>The paging token returned in this call. When you use MaxResults and NextToken for paging query, an empty value indicates that no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number of the dedicated host list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

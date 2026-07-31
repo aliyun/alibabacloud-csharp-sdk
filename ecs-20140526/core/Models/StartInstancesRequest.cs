@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The batch operation mode. Valid values:</para>
+        /// <para>The batch operation pattern. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>AllTogether: starts all ECS instances at the same time. If all ECS instances are started, a success message is returned. If an ECS instance fails to be started, all the specified instances fail to be started and an error message is returned.</para>
+        /// <item><description><para>AllTogether: In this pattern, if all instances are started, a success message is returned. If any instance fails validation, all instances fail to start and a failed message is returned.</para>
         /// </description></item>
-        /// <item><description><para>SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.</para>
+        /// <item><description><para>SuccessFirst: In this pattern, each instance is started separately. The response contains the operation result for each instance.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: AllTogether.</para>
@@ -27,15 +27,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string BatchOptimization { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, <c>DRYRUN.SUCCESS</c> is returned.</description></item>
-        /// </list>
+        /// <item><description><para>true: performs only a dry run. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding fault is returned. If the check succeeds, <c>DRYRUN.SUCCESS</c> is returned.</para>
         /// <remarks>
-        /// <para>If you set <c>BatchOptimization</c> to <c>SuccessFirst</c> and <c>DryRun</c> to true, only <c>DRYRUN.SUCCESS</c> is returned regardless of whether the request passes the dry run.</para>
+        /// <para>If the BatchOptimization parameter is set to <c>SuccessFirst</c>, the dry run with <c>DryRun=true</c> returns only <c>DRYRUN.SUCCESS</c>.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</description></item>
+        /// </description></item>
+        /// <item><description><para>false: sends a Normal request. After the check succeeds, the instances are started.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The IDs of ECS instances. Valid values of N: 1 to 100.</para>
+        /// <para>The list of instance IDs. Valid values of the array length: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ECS instance. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instances. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

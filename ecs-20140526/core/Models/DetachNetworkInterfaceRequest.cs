@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DetachNetworkInterfaceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the trunk ENI.</para>
-        /// <remarks>
-        /// <para>This parameter is unavailable for use.</para>
-        /// </remarks>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance</para>
+        /// <para>The network interface controller (NIC) ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENI.</para>
+        /// <para>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +59,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of the trunk ENI.</para>
+        /// <remarks>
+        /// <para>This parameter is not yet available.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>eni-f8zapqwj1v1j4ia3****</para>

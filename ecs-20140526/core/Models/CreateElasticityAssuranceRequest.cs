@@ -14,12 +14,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public CreateElasticityAssuranceRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class CreateElasticityAssuranceRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The type of the private pool with which you want to associate the elasticity assurance. Valid values:</para>
+            /// <para>The match mode of the elasticity assurance service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Open: open private pool. If you use the elasticity assurance to create ECS instances, the open private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the ECS instances.</para>
-            /// </description></item>
-            /// <item><description><para>Target: targeted private pool. If you use the elasticity assurance to create ECS instances, the specified private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the private pool, the ECS instances fail to be created.</para>
-            /// </description></item>
+            /// <item><description>Open: open mode. The system automatically matches the capacity of open private pools when instances are started. If no matching private pool capacity is available, public pool resources are used to start the instances.</description></item>
+            /// <item><description>Target: targeted mode. Instances are started by using the capacity of the specified private pool. If the specified private pool capacity is unavailable, the instances fail to start.</description></item>
             /// </list>
             /// <para>Default value: Open.</para>
             /// 
@@ -31,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MatchCriteria { get; set; }
 
             /// <summary>
-            /// <para>The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+            /// <para>The name of the elasticity assurance service. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>eapTestName</para>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of times that the elasticity assurance can be used. Set the value to Unlimited. This value specifies that the elasticity assurance can be used for an unlimited number of times within its validity period.</para>
+        /// <para>The total number of times that the elasticity assurance can be applied. Valid values: Unlimited. Currently, only the unlimited mode is supported within the service validity period.</para>
         /// <para>Default value: Unlimited.</para>
         /// 
         /// <b>Example:</b>
@@ -54,12 +52,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AssuranceTimes { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the elasticity assurance. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: Auto-renewal is enabled.</description></item>
+        /// <item><description>false: Auto-renewal is disabled.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -71,15 +67,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period. Unit: month. Valid values: 1, 2, 3, 6, 12, 24, and 36.</para>
+        /// <para>The auto-renewal period. Unit: months. Valid values: 1, 2, 3, 6, 12, 24, and 36.</para>
         /// <list type="bullet">
-        /// <item><description><para>Default value when <c>PeriodUnit</c> is set to Month: 1.</para>
+        /// <item><description><para>If <c>PeriodUnit=Month</c>, the default value is 1.</para>
         /// </description></item>
-        /// <item><description><para>Default value when <c>PeriodUnit</c> is set to Year: 12.</para>
+        /// <item><description><para>If <c>PeriodUnit=Year</c>, the default value is 12.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you set <c>AutoRenew</c> to <c>true</c>, you must specify this parameter.</para>
+        /// <para>This parameter is required when <c>AutoRenew</c> is set to <c>True</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -90,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? AutoRenewPeriod { get; set; }
 
         /// <summary>
-        /// <para>The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>token</c> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <c>ClientToken</c> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
@@ -100,8 +96,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the elasticity assurance. The description must be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// <para>This parameter is empty by default.</para>
+        /// <para>The description of the elasticity assurance service. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is description.</para>
@@ -111,10 +107,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances of an instance type for which you want to reserve capacity.</para>
+        /// <para>The total number of instances to be reserved for a single instance type.</para>
         /// <para>Valid values: 1 to 1000.</para>
         /// <remarks>
-        /// <para>You must specify this parameter.</para>
+        /// <para>Notice: This parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -126,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is no longer used.</para>
+        /// <para>This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -137,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InstanceCpuCoreCount { get; set; }
 
         /// <summary>
-        /// <para>The instance type. An elasticity assurance can be created to reserve the capacity of a single instance type.</para>
+        /// <para>The instance type. Currently, you can configure an elasticity assurance service for only one instance type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -156,16 +152,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the elasticity assurance. The unit of the validity period is determined by the value of <c>PeriodUnit</c>. Specifies whether to check the image used by the instance supports hot migration. Valid values:</para>
+        /// <para>The purchase duration. The unit of the duration is determined by the <c>PeriodUnit</c> parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>When the value of <c>PeriodUnit</c> is <c>Month</c>, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</para>
-        /// </description></item>
-        /// <item><description><para>When the value of <c>PeriodUnit</c> is <c>Year</c>, the valid values are 1, 2, 3, 4, and 5.</para>
-        /// </description></item>
-        /// <item><description><para>When the value of <c>PeriodUnit</c> is <c>Day</c>, the valid values are 1 to 365.</para>
-        /// </description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Month</c>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Year</c>: 1, 2, 3, 4, and 5.</description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Day</c>: 1 to 365.</description></item>
         /// </list>
-        /// <para>Default value: 1</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -175,15 +168,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the validity period of the elasticity assurance. Valid values:</para>
+        /// <para>The unit of the purchase duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Month</para>
-        /// </description></item>
-        /// <item><description><para>Year</para>
-        /// </description></item>
-        /// <item><description><para>Day</para>
-        /// <para>\<em>\</em></para>
-        /// <para><b>Note</b> If you set <c>PeriodUnit</c> to <c>Day</c>, you must specify RecurrenceRules to create a time-segmented elasticity assurance.</para>
+        /// <item><description>Month: month.</description></item>
+        /// <item><description>Year: year.</description></item>
+        /// <item><description>Day: day.<remarks>
+        /// <para>When <c>PeriodUnit</c> is set to <c>Day</c>, you must also specify RecurrenceRules to create a time-sharing elasticity assurance.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// <para>Default value: Year.</para>
@@ -196,17 +187,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The assurance schedules based on which the capacity reservation takes effect.</para>
-        /// <remarks>
-        /// <para>Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
-        /// </remarks>
+        /// <para>The recurrence rules for the time-sharing elasticity assurance.</para>
         /// </summary>
         [NameInMap("RecurrenceRules")]
         [Validation(Required=false)]
         public List<CreateElasticityAssuranceRequestRecurrenceRules> RecurrenceRules { get; set; }
         public class CreateElasticityAssuranceRequestRecurrenceRules : TeaModel {
             /// <summary>
-            /// <para>The end time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</para>
+            /// <para>The end time of the time-sharing assurance. The value must be on the hour.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -216,14 +204,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? EndHour { get; set; }
 
             /// <summary>
-            /// <para>The type of the assurance schedule. Valid values:</para>
+            /// <para>The type of the recurrence rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Daily</para>
-            /// </description></item>
-            /// <item><description><para>Weekly</para>
-            /// </description></item>
-            /// <item><description><para>Monthly</para>
-            /// </description></item>
+            /// <item><description>Daily: daily recurrence.</description></item>
+            /// <item><description>Weekly: weekly recurrence.</description></item>
+            /// <item><description>Monthly: monthly recurrence.</description></item>
             /// </list>
             /// <remarks>
             /// <para>You must specify both <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
@@ -237,14 +222,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string RecurrenceType { get; set; }
 
             /// <summary>
-            /// <para>The days of the week or month on which the capacity reservation takes effect or the interval, in number of days, at which the capacity reservation takes effect.</para>
+            /// <para>The value of the recurrence rule.</para>
             /// <list type="bullet">
-            /// <item><description><para>If you set <c>RecurrenceType</c> to <c>Daily</c>, you can specify only one value for this parameter. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</para>
-            /// </description></item>
-            /// <item><description><para>If you set <c>RecurrenceType</c> to <c>Weekly</c>, you can specify multiple values for this parameter. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <c>1,2</c>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</para>
-            /// </description></item>
-            /// <item><description><para>If you set <c>RecurrenceType</c> to <c>Monthly</c>, you can specify two values in the <c>A-B</c> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <c>1-5</c> indicates that the execution is repeated from the 1st to 5th of each month.</para>
-            /// </description></item>
+            /// <item><description>If <c>RecurrenceType</c> is set to <c>Daily</c>, you can specify only one value. Valid values: 1 to 31. The value specifies the interval in days between recurrences.</description></item>
+            /// <item><description>If <c>RecurrenceType</c> is set to <c>Weekly</c>, you can specify multiple values separated by commas (,). The values for Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <c>1,2</c> specifies Monday and Tuesday.</description></item>
+            /// <item><description>If <c>RecurrenceType</c> is set to <c>Monthly</c>, the format is <c>A-B</c>. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <c>1-5</c> specifies the 1st to 5th day of each month.</description></item>
             /// </list>
             /// <remarks>
             /// <para>You must specify both <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
@@ -258,9 +240,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string RecurrenceValue { get; set; }
 
             /// <summary>
-            /// <para>The start time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</para>
+            /// <para>The effective period start hour of the time-sharing assurance. The value must be on the hour.</para>
             /// <remarks>
-            /// <para>You must specify both <c>StartHour</c> and <c>EndHour</c>. EndHour must be at least four hours later than StartHour.</para>
+            /// <para>You must specify both <c>StartHour</c> and <c>EndHour</c>, and the difference between them must be at least 4 hours.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -273,7 +255,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the region in which to create the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the elasticity assurance service. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -284,7 +266,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which to assign the elasticity assurance.</para>
+        /// <para>The ID of the resource group to which the elasticity assurance service belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -302,7 +284,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The time when the elasticity assurance takes effect. The default value is the time when the CreateElasticityAssurance operation is called to create the elasticity assurance. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
+        /// <para>The effective period start time of the elasticity assurance service. By default, the service takes effect when the operation is invoked. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-10-30T06:32:00Z</para>
@@ -312,14 +294,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the elasticity assurance.</para>
+        /// <para>The tags of the elasticity assurance service.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateElasticityAssuranceRequestTag> Tag { get; set; }
         public class CreateElasticityAssuranceRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag key of the elasticity assurance service. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c> or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -329,7 +311,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the elasticity assurance service. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -341,7 +323,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the zone in which to create the elasticity assurance. An elasticity assurance can be used to reserve resources within a single zone.</para>
+        /// <para>The zone ID within the region of the elasticity assurance service. Currently, you can create an elasticity assurance service in only one zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

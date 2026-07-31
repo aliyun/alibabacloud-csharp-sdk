@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeActivationsResponseBodyActivationList> ActivationList { get; set; }
         public class DescribeActivationsResponseBodyActivationList : TeaModel {
             /// <summary>
-            /// <para>The ID of the activation code.</para>
+            /// <para>The activation code ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4ECEEE12-56F1-4FBC-9AB1-890F1234****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ActivationId { get; set; }
 
             /// <summary>
-            /// <para>The time when the activation code was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T06:00:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that were deregistered.</para>
+            /// <para>The number of deregistered instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string IpAddressRange { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that were registered.</para>
+            /// <para>The number of registered instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The tags of the activation code.</para>
+            /// <para>The tags of the managed instance activation code.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeActivationsResponseBodyActivationListTags> Tags { get; set; }
             public class DescribeActivationsResponseBodyActivationListTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the activation code.</para>
+                /// <para>The tag key of the managed instance activation code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>owner</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the activation code.</para>
+                /// <para>The tag value of the managed instance activation code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zhangsan</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token returned in this response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to remove formatting symbols from the returned text. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: removes formatting symbols.</description></item>
-        /// <item><description>false: does not remove formatting symbols.</description></item>
+        /// <item><description>true: Remove formatting symbols.</description></item>
+        /// <item><description>false: Do not remove formatting symbols.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

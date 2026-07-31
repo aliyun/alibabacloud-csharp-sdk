@@ -395,6 +395,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                                 [Validation(Required=false)]
                                 public string Ipv6Address { get; set; }
 
+                                [NameInMap("Primary")]
+                                [Validation(Required=false)]
+                                public bool? Primary { get; set; }
+
                             }
 
                         }
@@ -547,6 +551,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
+                [NameInMap("SecurityOptions")]
+                [Validation(Required=false)]
+                public DescribeInstancesResponseBodyInstancesInstanceSecurityOptions SecurityOptions { get; set; }
+                public class DescribeInstancesResponseBodyInstancesInstanceSecurityOptions : TeaModel {
+                    [NameInMap("EnableSecureBoot")]
+                    [Validation(Required=false)]
+                    public bool? EnableSecureBoot { get; set; }
+
+                }
+
                 [NameInMap("SerialNumber")]
                 [Validation(Required=false)]
                 public string SerialNumber { get; set; }
@@ -660,7 +674,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page as specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -681,9 +695,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The total number of queried instances.</para>
-        /// <remarks>
-        /// <para>When you use <c>MaxResults</c> and <c>NextToken</c> parameters for paging query, the returned <c>TotalCount</c> parameter value is meaningless.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

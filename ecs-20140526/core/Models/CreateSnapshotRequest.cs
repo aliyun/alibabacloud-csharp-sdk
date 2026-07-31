@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>Flash: local snapshot.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter will be deprecated. Standard snapshots of enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required. This applies to enterprise SSDs, ESSD AutoPL disks, ESSD Entry disks, and regional enterprise SSDs. Standard snapshots of standard SSDs are also active by default.</para>
+        /// <para>This parameter will be deprecated. Standard snapshots for ESSD disks have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the snapshot instant access feature. Valid values:</para>
+        /// <para>Specifies whether to enable the instant access feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables the feature. Only enterprise SSDs support this feature.</description></item>
-        /// <item><description>false: shutdown. A standard snapshot is created.</description></item>
+        /// <item><description>true: enables the feature. Only ESSD disks support this feature.</description></item>
+        /// <item><description>false: disables the feature. A standard snapshot is created.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. Standard snapshots of enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required. This applies to enterprise SSDs, ESSD AutoPL disks, ESSD Entry disks, and regional enterprise SSDs. Standard snapshots of standard SSDs are also active by default.</para>
+        /// <para>This parameter is deprecated. Standard snapshots for ESSD disks have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? InstantAccess { get; set; }
 
         /// <summary>
-        /// <para>Settings for the retention period of the snapshot instant access feature. After the retention period expires, the snapshot is subject to automatic release. This parameter takes effect only when <c>InstantAccess=true</c>. Unit: days. Valid values: 1 to 65535.</para>
-        /// <para>Default value: the same as the value of the <c>RetentionDays</c> parameter.</para>
+        /// <para>The retention period of the instant access feature. After the retention period expires, the snapshot is automatically released. This parameter takes effect only when <c>InstantAccess=true</c>. Unit: days. Valid values: 1 to 65535.</para>
+        /// <para>Default value: the value of the <c>RetentionDays</c> parameter.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. Standard snapshots of enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required. This applies to enterprise SSDs, ESSD AutoPL disks, ESSD Entry disks, and regional enterprise SSDs. Standard snapshots of standard SSDs are also active by default.</para>
+        /// <para>This parameter is deprecated. Standard snapshots for ESSD disks have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -117,8 +117,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Settings for the retention period of the snapshot. Unit: days. Valid values: 1 to 65536. The snapshot is subject to automatic release when the retention period expires.</para>
-        /// <para>Default value: null, which indicates that the snapshot is not subject to automatic release.</para>
+        /// <para>The retention period of the snapshot. Unit: days. Valid values: 1 to 65536. The snapshot is automatically released when the retention period expires.</para>
+        /// <para>Default value: null, which indicates that the snapshot is not automatically released.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain Unicode characters under the letter category (including letters in English and Chinese), ASCII digits (0-9), colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <remarks>
-        /// <para>The name cannot start with <c>auto</c> to avoid conflicts with the names of automatic snapshots.</para>
+        /// <para>The name cannot start with <c>auto</c> to avoid conflicts with automatic snapshot names.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

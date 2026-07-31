@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class InvokeCommandResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the command task.</para>
+        /// <para>The command execution ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-7d2a745b412b4601b2d47f6a768d****</para>

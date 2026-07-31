@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeCommandsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the command.</para>
+        /// <para>The command ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-hz01272yr52****</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// <para>The encoding format for the <c>CommandContent</c> and <c>Output</c> values in the response. Valid values:</para>
+        /// <para>The encoding mode of the CommandContent and Output fields in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PlainText: returns the raw script content and output.</para>
-        /// </description></item>
-        /// <item><description><para>Base64: returns the Base64-encoded script content and output.</para>
-        /// </description></item>
+        /// <item><description>PlainText: returns the original script content and output.</description></item>
+        /// <item><description>Base64: returns Base64-encoded script content and output.</description></item>
         /// </list>
         /// <para>Default value: Base64.</para>
         /// 
@@ -39,9 +37,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The description of the command.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you specify the <c>Provider</c> parameter to query public commands, fuzzy search is supported by default.</para>
+        /// <item><description><para>If the Provider parameter is specified parameter query public commands, fuzzy match is supported by default.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify the <c>Provider</c> parameter to query private commands, fuzzy search is supported. You can use an asterisk (\*) as a wildcard. For example, <c>test*</c> returns all commands whose descriptions start with <c>test</c>, <c>*test</c> returns all commands whose descriptions end with <c>test</c>, and <c>*test*</c> returns all commands whose descriptions contain <c>test</c>.</para>
+        /// <item><description><para>If the Provider parameter is not specified parameter query private commands, fuzzy match is supported. For example, enter <c>test*</c> to search for all commands whose descriptions start with <c>test</c>, enter <c>*test</c> to search for all commands whose descriptions end with <c>test</c>, or enter <c>*test*</c> to search for all commands whose descriptions contain <c>test</c>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -53,11 +51,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only the latest version of public commands. This parameter does not affect private commands.</para>
+        /// <para>Specifies whether to query only the latest version of public commands when the query results include public commands. This parameter does not affect the query of private commands.</para>
         /// <list type="bullet">
-        /// <item><description><para>true: returns only the latest version of public commands.</para>
+        /// <item><description><para>true: queries only the latest version of public commands.</para>
         /// </description></item>
-        /// <item><description><para>false: returns all versions of public commands.</para>
+        /// <item><description><para>false: queries all versions of public commands.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -70,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Latest { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page.</para>
+        /// <para>The maximum number of entries per page for paging queries.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -84,9 +82,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the command.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you specify the <c>Provider</c> parameter to query public commands, fuzzy search is supported by default.</para>
+        /// <item><description><para>If the Provider parameter is specified parameter query public commands, fuzzy match is supported by default.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify the <c>Provider</c> parameter to query private commands, fuzzy search is supported. You can use an asterisk (\*) as a wildcard. For example, <c>command*</c> returns all commands whose names start with <c>command</c>, <c>*command</c> returns all commands whose names end with <c>command</c>, and <c>*command*</c> returns all commands whose names contain <c>command</c>.</para>
+        /// <item><description><para>If the Provider parameter is not specified parameter query private commands, fuzzy match is supported. For example, enter <c>command*</c> to search for all commands whose names start with <c>command</c>, enter <c>*command</c> to search for all commands whose names end with <c>command</c>, or enter <c>*command*</c> to search for all commands whose names contain <c>command</c>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -98,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page of results. To retrieve the next page, set this parameter to the <c>NextToken</c> value from a previous call.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -117,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is being deprecated. We recommend using NextToken and MaxResults for pagination instead.</para>
+        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -129,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is being deprecated. We recommend using NextToken and MaxResults for pagination instead.</para>
+        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -140,18 +138,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The provider of the public command.</para>
+        /// <para>The provider of the public command. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you omit this parameter, the operation queries your private commands by default.</para>
-        /// </description></item>
-        /// <item><description><para>Set this parameter to <c>AlibabaCloud</c> to query all public commands from Alibaba Cloud.</para>
-        /// </description></item>
-        /// <item><description><para>If you set the value to a specific provider, the public commands from that provider are queried. For example:</para>
-        /// <list type="bullet">
-        /// <item><description><para>If you set <c>Provider</c> to <c>AlibabaCloud.ECS.GuestOS</c>, the public commands provided by AlibabaCloud.ECS.GuestOS are queried.</para>
-        /// </description></item>
-        /// <item><description><para>If you set <c>Provider</c> to <c>AlibabaCloud.ECS.GuestOSDiagnose</c>, the public commands provided by AlibabaCloud.ECS.GuestOSDiagnose are queried.</para>
-        /// </description></item>
+        /// <item><description>If you do not specify this parameter, all Cloud Assistant commands that you manually created are queried by default.</description></item>
+        /// <item><description>If you set this parameter to <c>AlibabaCloud</c>, all public commands provided by Alibaba Cloud are queried.</description></item>
+        /// <item><description>If you set this parameter to a specific public command provider, all public commands provided by the provider are queried. Examples:<list type="bullet">
+        /// <item><description>If you set Provider to <c>AlibabaCloud.ECS.GuestOS</c>, all public commands provided by <c>AlibabaCloud.ECS.GuestOS</c> are queried.</description></item>
+        /// <item><description>If you set Provider to <c>AlibabaCloud.ECS.GuestOSDiagnose</c>, all public commands provided by <c>AlibabaCloud.ECS.GuestOSDiagnose</c> are queried.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -164,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Provider { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. To view the latest list of regions, call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -193,16 +186,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags used to filter commands.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeCommandsRequestTag> Tag { get; set; }
         public class DescribeCommandsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. You can specify up to 20 tags. The tag key cannot be an empty string.</para>
-            /// <para>A query can return a maximum of 1,000 resources that match the specified tags. If more than 1,000 resources match, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query all matching resources.</para>
-            /// <para>The key can be up to 64 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all the specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -212,8 +205,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. You can specify up to 20 tags. The tag value can be an empty string.</para>
-            /// <para>The value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -225,14 +218,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The type of the command. Valid values:</para>
+        /// <para>The type of the command. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>RunBatScript: A Bat script for Windows instances.</para>
-        /// </description></item>
-        /// <item><description><para>RunPowerShellScript: A PowerShell script for Windows instances.</para>
-        /// </description></item>
-        /// <item><description><para>RunShellScript: A Shell script for Linux instances.</para>
-        /// </description></item>
+        /// <item><description>RunBatScript: Bat script that runs on Windows instances.</description></item>
+        /// <item><description>RunPowerShellScript: PowerShell script that runs on Windows instances.</description></item>
+        /// <item><description>RunShellScript: shell script that runs on Linux instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

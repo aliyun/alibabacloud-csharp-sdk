@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDeploymentSetsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the deployment sets. The value can be a JSON array that consists of up to 100 deployment set IDs. Sample format: <c>[&quot;ds-xxxxxxxxx&quot;, &quot;ds-yyyyyyyyy&quot;, … &quot;ds-zzzzzzzzz&quot;]</c>.</para>
+        /// <para>The IDs of deployment sets. The value can be a JSON array that consists of multiple deployment set IDs in the format of <c>[&quot;ds-xxxxxxxxx&quot;, &quot;ds-yyyyyyyyy&quot;, … &quot;ds-zzzzzzzzz&quot;]</c>. A maximum of 100 IDs are supported. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;ds-bp67acfmxazb4ph****&quot;, &quot;ds-bp67acfmxazb4pi****&quot;, … &quot;ds-bp67acfmxazb4pj****&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DeploymentSetIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the deployment set. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the deployment set. The name must be 2 to 128 characters in length and can contain characters that are categorized as letter in Unicode, including English letters, Chinese characters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDeploymentSetName</para>
@@ -74,8 +74,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Starts at 1.</para>
+        /// <para>The page number of the deployment set list.</para>
+        /// <para>Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the deployment set is located. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the deployment set. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -119,12 +119,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The deployment strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Availability: high availability strategy.</para>
-        /// </description></item>
-        /// <item><description><para>AvailabilityGroup: high availability group strategy.</para>
-        /// </description></item>
-        /// <item><description><para>LowLatency: low-latency strategy.</para>
-        /// </description></item>
+        /// <item><description>Availability: high availability.</description></item>
+        /// <item><description>AvailabilityGroup: high availability for deployment set groups.</description></item>
+        /// <item><description>LowLatency: low network latency.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,12 +134,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The deployment type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>host: Ensures that the instances in the deployment set are deployed on different hosts.</para>
-        /// </description></item>
-        /// <item><description><para>sw: Ensures that the instances in the deployment set are deployed on different switches.</para>
-        /// </description></item>
-        /// <item><description><para>rack: Ensures that the instances in the deployment set are deployed on different racks.</para>
-        /// </description></item>
+        /// <item><description>host: physical server</description></item>
+        /// <item><description>sw: vSwitch</description></item>
+        /// <item><description>rack: rack</description></item>
         /// </list>
         /// <para>Default value: host.</para>
         /// 

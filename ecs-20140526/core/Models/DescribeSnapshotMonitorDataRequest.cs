@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotMonitorDataRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the snapshot. Valid values:</para>
+        /// <para>The snapshot type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Standard: standard snapshot</para>
-        /// </description></item>
-        /// <item><description><para>Flash: local snapshot</para>
-        /// </description></item>
-        /// <item><description><para>Archive: archive snapshot</para>
-        /// </description></item>
+        /// <item><description>Standard: standard snapshot.</description></item>
+        /// <item><description>Flash: local snapshot.</description></item>
+        /// <item><description>Archive: archive snapshot.</description></item>
         /// </list>
         /// <para>Default value: Standard.</para>
         /// 
@@ -29,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</para>
+        /// <para>The end of the time range to query snapshot size change data. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is automatically rounded up to the next minute.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,14 +45,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The interval at which to query the monitoring data of snapshot sizes. Unit: seconds. Valid values:</para>
+        /// <para>The interval at which to query snapshot size change data. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>60</para>
-        /// </description></item>
-        /// <item><description><para>600</para>
-        /// </description></item>
-        /// <item><description><para>3600</para>
-        /// </description></item>
+        /// <item><description>60</description></item>
+        /// <item><description>600</description></item>
+        /// <item><description>3600</description></item>
         /// </list>
         /// <para>Default value: 60.</para>
         /// 
@@ -67,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</para>
+        /// <para>The beginning of the time range to query snapshot size change data. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is automatically rounded up to the next minute.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

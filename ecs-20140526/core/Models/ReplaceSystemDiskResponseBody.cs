@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ReplaceSystemDiskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the new system disk.</para>
+        /// <para>The disk ID of the new system disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-bp67acfmxazb4ph****</para>

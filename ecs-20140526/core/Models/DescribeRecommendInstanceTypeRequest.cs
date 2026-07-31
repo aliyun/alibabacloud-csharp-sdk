@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The billing method of the ECS instance. For details, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid: subscription.</description></item>
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// <item><description>PrePaid: subscription</description></item>
+        /// <item><description>PostPaid: pay-as-you-go</description></item>
         /// </list>
         /// <para>Default value: PostPaid.</para>
         /// 
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// <para>The specified instance type. For details, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</para>
+        /// <para>The specified instance type. For details, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>. You can also invoke the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</para>
         /// <remarks>
         /// <para>If you specify InstanceType, you cannot specify Cores or Memory.</para>
         /// </remarks>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Settings for the collection of alternative instance families from which alternative instance types are selected. You can specify up to 10 instance families.</para>
+        /// <para>The set of alternative instance families from which alternative instance types are selected. You can specify up to 10 instance families.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.hfg6</para>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether the instance is I/O optimized. If the instance type supports only non-I/O optimized instances, you cannot set the IoOptimized parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>optimized: I/O optimized.</description></item>
-        /// <item><description>none: non-I/O optimized.</description></item>
+        /// <item><description>optimized: I/O optimized</description></item>
+        /// <item><description>none: non-I/O optimized</description></item>
         /// </list>
-        /// <para>Default value: optimized.</para>
+        /// <para>Default value: optimized</para>
         /// <para>If you specify a retired instance type, the default value is none.</para>
         /// 
         /// <b>Example:</b>
@@ -92,9 +92,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string IoOptimized { get; set; }
 
         /// <summary>
-        /// <para>The maximum acceptable hourly price for pay-as-you-go or spot instances.</para>
+        /// <para>The maximum hourly price for pay-as-you-go or spot instances.</para>
         /// <remarks>
-        /// <para>To set the maximum hourly price for a spot instance, set SpotStrategy to SpotWithPriceLimit.</para>
+        /// <para>When you set the maximum price for a spot instance, SpotStrategy must be set to SpotWithPriceLimit.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The priority-based recommendation strategy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>InventoryFirst: inventory first.</description></item>
-        /// <item><description>PriceFirst: price first. Instance types are sorted by the hourly vCPU unit price in ascending order.</description></item>
+        /// <item><description>PriceFirst: price first. Instance types are sorted by the hourly price per vCPU in ascending order.</description></item>
         /// <item><description>NewProductFirst: newest product first.</description></item>
         /// </list>
         /// <para>Default value: InventoryFirst.</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>SpotAsPriceGo: a spot instance for which the system automatically bids at up to the pay-as-you-go price.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>When you use SpotStrategy, set InstanceChargerType to PostPaid.</para>
+        /// <para>When you use SpotStrategy, InstanceChargerType must be set to PostPaid.</para>
         /// </remarks>
         /// <para>Default value: NoSpot.</para>
         /// 
@@ -213,12 +213,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The category of the system disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud_efficiency: ultra disk.</description></item>
-        /// <item><description>cloud_ssd: standard SSD.</description></item>
-        /// <item><description>cloud_essd: enterprise SSD (ESSD).</description></item>
-        /// <item><description>cloud: basic disk.</description></item>
+        /// <item><description>cloud_efficiency: ultra disk</description></item>
+        /// <item><description>cloud_ssd: standard SSD</description></item>
+        /// <item><description>cloud_essd: enterprise SSD (ESSD)</description></item>
+        /// <item><description>cloud: basic disk</description></item>
         /// </list>
-        /// <para>Default value for non-I/O optimized instances: cloud.</para>
+        /// <para>Default value for non-I/O optimized instances: cloud</para>
         /// <para>Default value for I/O optimized instances: cloud_efficiency.</para>
         /// 
         /// <b>Example:</b>

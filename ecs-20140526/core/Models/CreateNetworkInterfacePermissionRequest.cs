@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNetworkInterfacePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud partner (certified ISV) account or individual user.</para>
+        /// <para>The ID of the Alibaba Cloud partner (certified ISV) account or individual user account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? AccountId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENI.</para>
+        /// <para>The ID of the network interface controller (NIC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ENI permission. Only InstanceAttach is currently supported.</para>
-        /// <para>InstanceAttach: allows the authorized user to attach your ENI to their ECS instance. The ECS instance must be in the same zone as the ENI.</para>
+        /// <para>The network interface controller (NIC) permission action. Only InstanceAttach is supported.</para>
+        /// <para>InstanceAttach: allows the authorized user to attach your NIC to their ECS instance. The ECS instance must be in the same zone as the NIC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Permission { get; set; }
 
         /// <summary>
-        /// <para>The region of the ENI permission. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list of Alibaba Cloud.</para>
+        /// <para>The region of the network interface controller (NIC) permission. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateElasticityAssuranceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the generated order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The elasticity assurance ID.</para>
+        /// <para>The ID of the elasticity assurance service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eap-bp67acfmxazb4****</para>

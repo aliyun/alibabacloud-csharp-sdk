@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeLockedSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the locked snapshots.</para>
+        /// <para>The collection of locked snapshot information.</para>
         /// </summary>
         [NameInMap("LockedSnapshotsInfo")]
         [Validation(Required=false)]
         public List<DescribeLockedSnapshotsResponseBodyLockedSnapshotsInfo> LockedSnapshotsInfo { get; set; }
         public class DescribeLockedSnapshotsResponseBodyLockedSnapshotsInfo : TeaModel {
             /// <summary>
-            /// <para>The cool-off period for compliance mode, in hours.</para>
+            /// <para>The cooling-off period for compliance mode. Unit: hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? CoolOffPeriod { get; set; }
 
             /// <summary>
-            /// <para>The time when the cool-off period ends. The time follows the <a href="https://help.aliyun.com/zh/ecs/developer-reference/iso-8601-time-format?spm=a2c4g.11186623.0.0.277c6c92kl7kXM">ISO 8601</a> standard and is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The time when the cooling-off period for compliance mode ends. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-15T13:00:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string CoolOffPeriodExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the snapshot was locked. The time follows the <a href="https://help.aliyun.com/zh/ecs/developer-reference/iso-8601-time-format?spm=a2c4g.11186623.0.0.277c6c92kl7kXM">ISO 8601</a> standard and is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The time when the snapshot was locked. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-15T10:00:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string LockCreationTime { get; set; }
 
             /// <summary>
-            /// <para>The lock duration in days. The lock automatically expires when this period ends.</para>
+            /// <para>The lock duration. The snapshot lock automatically expires after the lock duration ends. Unit: days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? LockDuration { get; set; }
 
             /// <summary>
-            /// <para>The time when the lock duration starts. The time follows the <a href="https://help.aliyun.com/zh/ecs/developer-reference/iso-8601-time-format?spm=a2c4g.11186623.0.0.277c6c92kl7kXM">ISO 8601</a> standard and is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format. If a snapshot in the progressing state is locked, its lock duration begins after it enters the accomplished state.</para>
+            /// <para>The start time of the lock duration. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. If a snapshot in the progressing state is locked, the lock duration starts only after the snapshot enters the accomplished state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-15T10:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string LockDurationStartTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the lock expires. The time follows the <a href="https://help.aliyun.com/zh/ecs/developer-reference/iso-8601-time-format?spm=a2c4g.11186623.0.0.277c6c92kl7kXM">ISO 8601</a> standard and is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The time when the lock expires. The time follows the <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/iso-8601-time-format">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-16T10:00:00Z</para>
@@ -77,9 +77,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string LockExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The lock mode. Valid value:</para>
+            /// <para>The lock mode. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description>compliance: The snapshot is locked in compliance mode. A snapshot locked in compliance mode cannot be unlocked and can only be deleted after its lock duration expires. You cannot shorten the lock duration, but users with the required RAM permissions can extend the lock duration at any time. When you lock a snapshot in compliance mode, you can optionally specify a cool-off period.</description></item>
+            /// <item><description>compliance: The snapshot is locked in compliance mode. A snapshot locked in compliance mode cannot be unlocked by any user and can be deleted only after the lock duration expires. Users cannot shorten the lock duration, but users with the required RAM permissions can extend the lock duration at any time. When locking a snapshot in compliance mode, you can optionally specify a cooling-off period.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -90,14 +90,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string LockMode { get; set; }
 
             /// <summary>
-            /// <para>The lock status. Valid values:</para>
+            /// <para>The lock status. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description><para>compliance-cooloff: The snapshot is locked in compliance mode and is in the cool-off period. The snapshot cannot be deleted. However, users with the required RAM permissions can unlock the snapshot and adjust the cool-off period or lock duration.</para>
-            /// </description></item>
-            /// <item><description><para>compliance: The snapshot is locked in compliance mode, and its cool-off period has ended. The snapshot cannot be unlocked or deleted. However, users with the required RAM permissions can extend the lock duration.</para>
-            /// </description></item>
-            /// <item><description><para>expired: The lock has expired, and the snapshot can be deleted.</para>
-            /// </description></item>
+            /// <item><description>compliance-cooloff: The snapshot is locked in compliance mode but is still within the cooling-off period. The snapshot cannot be deleted, but users with the required RAM permissions can unlock the snapshot, extend or shorten the cooling-off period, or extend or shorten the lock duration. </description></item>
+            /// <item><description>compliance: The snapshot is locked in compliance mode and the cooling-off period has ended. The snapshot cannot be unlocked or deleted, but users with the required RAM permissions can extend the lock duration. </description></item>
+            /// <item><description>expired: The snapshot was previously locked, but the lock duration has ended and the lock has expired. The snapshot is currently unlocked and can be deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>A token to retrieve the next page of results. If this parameter is empty, all results have been returned.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>

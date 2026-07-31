@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the auto provisioning group.</para>
+        /// <para>The ID of the region where the auto provisioning group resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,15 +48,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release instances in the auto provisioning group. Valid values:</para>
+        /// <para>Specifies whether to release the instances in the auto-provisioning group when the group is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: Releases the instances auto provisioning group.</description></item>
+        /// <item><description>false: The instances auto provisioning group continue to run.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>By default, this parameter inherits the value of <c>TerminateInstances</c> that you specified when you call the <c>CreateAutoProvisioningGroup</c> operation to create an auto provisioning group. You can also change the value of <c>TerminateInstances</c> when you call the DeleteAutoProvisioningGroup operation to delete the auto provisioning group.</para>
+        /// <para>The default value of this parameter is inherited from the TerminateInstances parameter that you specified when you called the CreateAutoProvisioningGroup operation to create the auto-provisioning group. You can also set the TerminateInstances parameter to a new value when you call this operation to delete the auto-provisioning group.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

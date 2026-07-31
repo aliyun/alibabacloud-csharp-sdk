@@ -10,25 +10,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAccountAttributesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of resource quota N. Valid values of N: 1 to 8. Valid values:</para>
+        /// <para>The type of resource quota to query in the specified region. Valid values of N: 1 to 8. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>instance-network-type: the available network types.</para>
+        /// <item><description><para>instance-network-type: available network types.</para>
         /// </description></item>
         /// <item><description><para>max-security-groups: the maximum number of security groups.</para>
         /// </description></item>
-        /// <item><description><para>max-elastic-network-interfaces: the maximum number of ENIs.</para>
+        /// <item><description><para>max-elastic-network-interfaces: the maximum number of Elastic Network Interfaces (ENIs).</para>
         /// </description></item>
         /// <item><description><para>max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances.</para>
         /// </description></item>
         /// <item><description><para>max-spot-instance-vcpu-count: the maximum number of vCPUs for spot instances.</para>
         /// </description></item>
-        /// <item><description><para>used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances.</para>
+        /// <item><description><para>used-postpaid-instance-vcpu-count: the number of vCPUs that have been used by pay-as-you-go instances.</para>
         /// </description></item>
-        /// <item><description><para>used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to spot instances.</para>
+        /// <item><description><para>used-spot-instance-vcpu-count: the number of vCPUs that have been used by spot instances.</para>
         /// </description></item>
-        /// <item><description><para>max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks. (The value is deprecated.)</para>
+        /// <item><description><para>max-postpaid-yundisk-capacity: the maximum total capacity of pay-as-you-go cloud disks used as data disks. (This parameter value is deprecated.)</para>
         /// </description></item>
-        /// <item><description><para>used-postpaid-yundisk-capacity: the capacity of pay-as-you-go data disks that have been created. (The value is deprecated.)</para>
+        /// <item><description><para>used-postpaid-yundisk-capacity: the capacity of pay-as-you-go cloud disks that have been used as data disks. (This parameter value is deprecated.)</para>
         /// </description></item>
         /// <item><description><para>max-dedicated-hosts: the maximum number of dedicated hosts.</para>
         /// </description></item>
@@ -36,16 +36,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description><para>max-axt-command-count: the maximum number of Cloud Assistant commands.</para>
         /// </description></item>
-        /// <item><description><para>max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day.</para>
+        /// <item><description><para>max-axt-invocation-daily: the maximum number of Cloud Assistant commands that can be executed per day.</para>
         /// </description></item>
-        /// <item><description><para>real-name-authentication: whether the account has completed the real-name verification.</para>
-        /// <para>\<em>\</em></para>
-        /// <para><b>Note</b> To create an ECS instance in a region in the Chinese mainland, you must complete the real-name verification.</para>
+        /// <item><description><para>real-name-authentication: whether the account has completed real-name registration.</para>
+        /// <remarks>
+        /// <para>You must complete real-name registration before you can create ECS instances in regions in the Chinese mainland.</para>
+        /// </remarks>
         /// </description></item>
-        /// <item><description><para>max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances.</para>
+        /// <item><description><para>max-cloud-assistant-activation-count: the maximum number of Cloud Assistant managed instance dynamic codes that can be created.</para>
         /// </description></item>
         /// </list>
-        /// <para>This parameter is empty by default.</para>
+        /// <para>Default value: null.</para>
         /// 
         /// <b>Example:</b>
         /// <para>max-security-groups</para>
@@ -59,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone in which the resource resides.</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-b</para>

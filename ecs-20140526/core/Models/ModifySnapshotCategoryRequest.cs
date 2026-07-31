@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The snapshot type.</para>
         /// <list type="bullet">
-        /// <item><description>Archive: archive snapshot.</description></item>
+        /// <item><description>Archive: archived snapshot</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which the snapshot is retained. The retention period starts from the snapshot creation time (CreationTime). A standard snapshot must have been retained for at least 14 days after creation before it can be archived.</para>
-        /// <para>Archive snapshots must be retained for at least 60 days. When the retention period of an archive snapshot is calculated, the retention period of the standard snapshot is deducted. If an archive snapshot is deleted before 60 days, you are charged for 60 days of archive storage. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</para>
+        /// <para>The number of days for which the snapshot is retained. The retention period starts from the snapshot creation time (CreationTime). A standard snapshot can be archived only after it has been retained for at least 14 days since its creation.</para>
+        /// <para>Archived snapshots must be retained for at least 60 days. When calculating the retention period of an archived snapshot, the time already retained as a standard snapshot is deducted. If an archived snapshot is deleted before 60 days, you are charged for 60 days of archive storage. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</para>
         /// <para>Valid values: [74, 65536].</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the snapshot is permanently retained.</para>

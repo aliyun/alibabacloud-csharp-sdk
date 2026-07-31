@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Conditions { get; set; }
 
         /// <summary>
-        /// <para>The number of vCPU kernels of the target instance type. For valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</para>
+        /// <para>The number of vCPU kernel of the target instance type. For valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</para>
         /// <para>This parameter takes effect only when DestinationResource is set to InstanceType.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Cores { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource to be changed. Valid values: </para>
+        /// <para>The type of resource that you want to change. Valid values: </para>
         /// <list type="bullet">
         /// <item><description><para>InstanceType: instance type.</para>
         /// </description></item>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationResource { get; set; }
 
         /// <summary>
-        /// <para>The target instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>. You can also call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</para>
+        /// <para>The target instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>. You can also invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</para>
         /// <para>If DestinationResource is set to SystemDisk, you must also specify the InstanceType parameter to indicate the disk type required by the target instance type.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public float? Memory { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether cross-cluster instance type changes are supported. Valid values: </para>
+        /// <para>Specifies whether cross-cluster upgrade or downgrade of instance types is supported. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>true: Supported.</description></item>
         /// <item><description>false: Not supported.</description></item>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Default value: false.</para>
         /// <para>If the MigrateAcrossZone parameter is set to true and you upgrade or downgrade the Elastic Compute Service instance based on the returned information, take note of the following items: </para>
         /// <list type="bullet">
-        /// <item><description>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the server are changed. For Linux instances, basic disks (cloud) are identified as xvda or xvdb. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb.</description></item>
+        /// <item><description>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the server are changed. For Linux instances, basic disks (cloud) are identified as xvda or xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>Upgrade: upgrades resources.</description></item>
         /// <item><description>Downgrade: downgrades resources.</description></item>
         /// <item><description>RenewDowngrade: downgrades resources upon renewal.</description></item>
-        /// <item><description>RenewModify: renewal with specification change for expired instances.</description></item>
+        /// <item><description>RenewModify: renewal with specification change for an expired instance.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Valid value for pay-as-you-go resources: Upgrade.</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance whose configuration you want to change. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the instance whose specification or system disk type you want to change. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID (InstanceId) of the instance whose instance type or system disk type you want to change.</para>
+        /// <para>The instance ID of the instance whose instance type or system disk type you want to change.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

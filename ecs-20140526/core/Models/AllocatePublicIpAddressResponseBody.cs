@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AllocatePublicIpAddressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The public IP address.</para>
+        /// <para>The public IP address of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>112.124.**.**</c></para>

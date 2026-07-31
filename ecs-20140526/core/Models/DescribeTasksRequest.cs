@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The time range refers to the period of time during which the task is created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end of the creation time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-23T15:16:00Z</para>
@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
+        /// <para>The page number of the results.</para>
+        /// <para>Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
+        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resources associated with the task. Valid values of N: 1 to 100.</para>
+        /// <para>The resource IDs. Valid values of N: 1 to 100.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The time range refers to the period of time during which the task is created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The beginning of the creation time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-23T15:10:00Z</para>
@@ -88,18 +88,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the operation that generates the task. Valid values:</para>
+        /// <para>The name of the API operation associated with the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ImportImage</para>
-        /// </description></item>
-        /// <item><description><para>ExportImage</para>
-        /// </description></item>
-        /// <item><description><para>RedeployInstance</para>
-        /// </description></item>
-        /// <item><description><para>ModifyDiskSpec</para>
-        /// </description></item>
-        /// <item><description><para>ArchiveSnapshot</para>
-        /// </description></item>
+        /// <item><description>ImportImage: import an image.</description></item>
+        /// <item><description>ExportImage: export an image.</description></item>
+        /// <item><description>RedeployInstance: redeploy an ECS instance.</description></item>
+        /// <item><description>ModifyDiskSpec: change the cloud disk type.</description></item>
+        /// <item><description>ArchiveSnapshot: archive a snapshot.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,9 +105,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TaskAction { get; set; }
 
         /// <summary>
-        /// <para>Task group ID.</para>
+        /// <para>The task group ID.</para>
         /// <remarks>
-        /// <para>This parameter is in invitational preview. When this parameter is used, other query conditions become invalid.</para>
+        /// <para>This parameter is in invitational preview. When this parameter is specified, other query conditions do not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -126,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TaskGroupId { get; set; }
 
         /// <summary>
-        /// <para>The task IDs. You can specify up to 100 task IDs at a time. Separate the task IDs with commas (,).</para>
+        /// <para>The task IDs. You can specify up to 100 task IDs at a time. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-bp1hvgwromzv32iq****,t-bp179lofu2pv768w****</para>
@@ -138,16 +133,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Finished</para>
-        /// </description></item>
-        /// <item><description><para>Processing</para>
-        /// </description></item>
-        /// <item><description><para>Failed</para>
-        /// </description></item>
+        /// <item><description>Finished: The task is complete.</description></item>
+        /// <item><description>Processing: The task is running.</description></item>
+        /// <item><description>Failed: The task has failed.</description></item>
         /// </list>
-        /// <para>This parameter is left empty by default.</para>
+        /// <para>Default value: null.</para>
         /// <remarks>
-        /// <para>The system only queries tasks in the Finished, Processing, and Failed states and ignores other values.</para>
+        /// <para>Only tasks in the Finished, Processing, or Failed state can be queried. Other values do not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

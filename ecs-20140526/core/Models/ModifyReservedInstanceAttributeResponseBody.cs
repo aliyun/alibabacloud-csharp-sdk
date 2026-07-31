@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyReservedInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Modifies the attributes of a reserved instance, such as its name and description.</para>
+        /// <para>The error code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message for this instance operation. The return value Success indicates that this operation is successful. For more information, see the &quot;Error codes&quot; section in this topic.</para>
+        /// <para>The error message returned for the instance operation. A return value of Success indicates success. For more information, see the error codes section.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>

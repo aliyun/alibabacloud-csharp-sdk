@@ -16,28 +16,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The capacity of the new system disk. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Basic disk: Max{20, Size of the image specified by ImageId} to 500.</para>
-            /// </description></item>
-            /// <item><description><para>Enterprise SSD (ESSD):</para>
-            /// <list type="bullet">
-            /// <item><description><para>PL0 ESSD: Max{1, Size of the image specified by ImageId} to 2048.</para>
-            /// </description></item>
-            /// <item><description><para>PL1 ESSD: Max{20, Size of the image specified by ImageId} to 2048.</para>
-            /// </description></item>
-            /// <item><description><para>PL2 ESSD: Max{461, Size of the image specified by ImageId} to 2048.</para>
-            /// </description></item>
-            /// <item><description><para>PL3 ESSD: Max{1261, Size of the image specified by ImageId} to 2048.</para>
-            /// </description></item>
+            /// <item><description>Basic disk: Max{20, size of the image specified by the parameter ImageId} to 500.</description></item>
+            /// <item><description>Enterprise SSD:<list type="bullet">
+            /// <item><description>PL0: Max{1, size of the image specified by the parameter ImageId} to 2048.</description></item>
+            /// <item><description>PL1: Max{20, size of the image specified by the parameter ImageId} to 2048.</description></item>
+            /// <item><description>PL2: Max{461, size of the image specified by the parameter ImageId} to 2048.</description></item>
+            /// <item><description>PL3: Max{1261, size of the image specified by the parameter ImageId} to 2048.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>ESSD AutoPL disk: Max{1, Size of the image specified by ImageId} to 2048.</para>
-            /// </description></item>
-            /// <item><description><para>Other disk categories: Max{20, Size of the image specified by ImageId} to 2048.</para>
-            /// </description></item>
+            /// <item><description>ESSD AutoPL disk: Max{1, size of the image specified by the parameter ImageId} to 2048.</description></item>
+            /// <item><description>Standard SSD: Max{20, size of the image specified by the parameter ImageId} to 2048.</description></item>
+            /// <item><description>Other disk types: Max{20, size of the image specified by the parameter ImageId} to 2048.</description></item>
             /// </list>
-            /// <para>Default value: Max{40, Size of the image specified by ImageId}.</para>
+            /// <para>Default value: Max{40, size of the image specified by the parameter ImageId}.</para>
             /// <remarks>
-            /// <para>If the capacity of the new system disk exceeds <c>Max{20, Capacity of the original system disk}</c>, you are charged for the excess capacity.</para>
+            /// <para>You are charged additional fees for the disk capacity that exceeds <c>Max{20, capacity of the original system disk}</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -62,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Architecture { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not available for public use.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </summary>
         [NameInMap("Arn")]
         [Validation(Required=false)]
@@ -70,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class ReplaceSystemDiskRequestArn : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is unavailable.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -82,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not available for public use.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -94,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not available for public use.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -107,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The <b>token</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -118,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is deprecated. To improve compatibility, we recommend that you use <c>ImageId</c>.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. To improve compatibility, use <c>ImageId</c> instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -130,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not available for public use.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -143,14 +136,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to encrypt the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: encrypts the disk.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: does not encrypt the disk.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>When you use a shared encrypted image to create the disk based on an encrypted snapshot, you must set Encrypted to true to ensure that the disk uses an encryption key of your own.</para>
+        /// <para>Notice: When you use a shared encrypted image to create a disk based on an encrypted snapshot, you must set the request parameter Encrypted to true to ensure that the disk uses the key of the image recipient.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -161,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image used to replace the system disk. This parameter is required.</para>
+        /// <para>The ID of the image to use to reset the system. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-bp67acfmxazb4ph****</para>
@@ -171,9 +164,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance whose operating system you want to replace.</para>
+        /// <para>The ID of target instance.</para>
         /// <remarks>
-        /// <para>Make sure that the instance is in the <c>Stopped</c> (<c>Stopped</c>) state.</para>
+        /// <para>Before you send the request, make sure that the instance status of the target instance is <c>Stopped</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -185,7 +178,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the KMS key to use for the system disk.</para>
+        /// <para>The KMS key ID of the system disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e522b26d-abf6-4e0d-b5da-04b7******3c</para>
@@ -195,9 +188,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string KMSKeyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the key pair.</para>
+        /// <para>The name of the key pair. </para>
         /// <remarks>
-        /// <para>This parameter is applicable only to Linux instances. You can bind an SSH key pair to the instance as a logon credential. After you bind the SSH key pair, the username and password logon method is disabled for the instance.</para>
+        /// <para>This parameter takes effect only for Linux instances. You can bind an SSH key pair to the ECS instance as a logon credential. After you bind an SSH key pair, the username and password logon method is disabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -216,13 +209,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to reset the password for the instance. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</para>
+        /// <para>Specifies whether to reset the username and password of the ECS instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</para>
         /// <pre><c>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
         /// </c></pre>
-        /// <para>The passwords of Windows instances cannot start with a forward slash (/).</para>
-        /// <para>This parameter is empty by default, which indicates that the current password remains unchanged.</para>
+        /// <para>For Windows instances, the password cannot start with a forward slash (/).</para>
+        /// <para>Default value: The password remains unchanged.</para>
         /// <remarks>
-        /// <para>If you specify <c>Password</c>, we recommend that you send requests over HTTPS to prevent password leaks.</para>
+        /// <para>If you specify the <c>Password</c> parameter, send the request over HTTPS to prevent password leaks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -234,9 +227,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>Specifies whether to use the preset password of the image.</para>
-        /// <para>Default value: false</para>
+        /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>If the PasswordInherit parameter is specified, you must leave the Password parameter empty. Before you use this parameter, make sure that a password is preset for the image.</para>
+        /// <para>When you use this parameter, the Password parameter must be empty. Make sure that the image you use has a preset password.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -267,11 +260,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use Security Center Basic after the system disk is replaced. Valid values:</para>
+        /// <para>Specifies whether to use the free Security Center service after the system disk is replaced. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>Active: uses Security Center Basic after the system disk is re-initialized. This value is applicable only to public images.</para>
+        /// <item><description><para>Active: Security Center is enabled. This value is applicable only to public images.</para>
         /// </description></item>
-        /// <item><description><para>Deactive: does not use Security Center Basic after the system disk is re-initialized. This value is applicable to all images.</para>
+        /// <item><description><para>Deactive: Security Center is not enabled. This value is applicable to all images.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: Deactive.</para>
@@ -284,9 +277,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityEnhancementStrategy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the system configurations for virtual machines provided by Alibaba Cloud. System configurations for Windows: NTP and KMS. System configurations for Linux: NTP and YUM.</para>
+        /// <para>Specifies whether to use the virtual machine system configuration provided by Alibaba Cloud (Windows: NTP and KMS. Linux: NTP and YUM).</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when you attach a system disk whose device name is /dev/xvda.</para>
+        /// <para>This parameter takes effect only when the system disk is attached (the device name is /dev/xvda).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

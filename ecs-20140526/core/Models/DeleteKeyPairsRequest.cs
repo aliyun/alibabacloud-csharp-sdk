@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteKeyPairsRequest : TeaModel {
         /// <summary>
-        /// <para>The names of SSH key pairs. The value can be a JSON array that consists of up to 100 SSH key pair names. Separate multiple names with commas (,).</para>
+        /// <para>The names of the SSH key pairs. The value is a JSON array of SSH key pair names. You can specify up to 100 SSH key pairs. Separate multiple names with commas (,).</para>
         /// <remarks>
         /// <para>Before you delete SSH key pairs, you can call <a href="https://help.aliyun.com/document_detail/51773.html">DescribeKeyPairs</a> to query existing key pairs.</para>
         /// </remarks>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the SSH key pairs reside. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the SSH key pairs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

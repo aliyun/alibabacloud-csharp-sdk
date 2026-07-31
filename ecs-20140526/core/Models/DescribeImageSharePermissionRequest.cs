@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned results.</para>
+        /// <para>The page number of the query results to return.</para>
         /// <para>Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in the returned results.</para>
+        /// <para>The number of entries per page in the query results.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 

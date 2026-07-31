@@ -36,33 +36,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The data disk configurations.</para>
+        /// <para>The information about data disk types.</para>
         /// </summary>
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
         public List<DescribeInstanceModificationPriceRequestDataDisk> DataDisk { get; set; }
         public class DescribeInstanceModificationPriceRequestDataDisk : TeaModel {
             /// <summary>
-            /// <para>The category of data disk N, where N is an integer from 1 to 16. Use this parameter to query the price of adding a new data disk to the instance. Valid values:\
-            /// \
-            /// \- <c>cloud_efficiency</c>: Ultra Disk\
-            /// \
-            /// \- <c>cloud_ssd</c>: Standard SSD\
-            /// \
-            /// \- <c>cloud_essd</c>: ESSD\
-            /// \
-            /// \- <c>cloud</c>: Basic Disk\
-            /// \
-            /// Default value: None.\
-            /// \
-            /// \
-            /// \
-            /// \
-            /// \
-            /// \
-            /// \
-            /// \
-            /// \</para>
+            /// <para>The category of the data disk. Specify this parameter when you want to query the price of new subscription data disks to be attached to the ECS instance. Valid values of N: 1 to 16. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>cloud_efficiency: ultra disk.</description></item>
+            /// <item><description>cloud_ssd: standard SSD.</description></item>
+            /// <item><description>cloud_essd: enterprise SSD.</description></item>
+            /// <item><description>cloud: basic disk.</description></item>
+            /// </list>
+            /// <para>Default value: null.</para>
+            /// <remarks>
+            /// <para>The instance type parameter (<c>InstanceType</c>) and data disk parameters (<c>DataDisk.N.*</c>) cannot both be empty. You must specify at least one.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_essd</para>
@@ -80,13 +71,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The performance level of the ESSD. This parameter is valid only when DataDisk.N.Category is set to cloud_essd. The value of N must match the N in DataDisk.N.Category. Valid values:
-            /// \- PL0: up to 10,000 random read/write IOPS per disk.
-            /// \- PL1: up to 50,000 random read/write IOPS per disk.
-            /// \- PL2: up to 100,000 random read/write IOPS per disk.
-            /// \- PL3: up to 1,000,000 random read/write IOPS per disk.
-            /// Default value: PL1.
-            /// For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
+            /// <para>The performance level of the data disk when the data disk is an enterprise SSD. The value of N must be the same as that in <c>DataDisk.N.Category=cloud_essd</c>. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PL0: a single disk can deliver up to 10,000 random read/write IOPS.</description></item>
+            /// <item><description>PL1: a single disk can deliver up to 50,000 random read/write IOPS.</description></item>
+            /// <item><description>PL2: a single disk can deliver up to 100,000 random read/write IOPS.</description></item>
+            /// <item><description>PL3: a single disk can deliver up to 1,000,000 random read/write IOPS.</description></item>
+            /// </list>
+            /// <para>Default value: PL1.</para>
+            /// <para>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL1</para>
@@ -96,16 +89,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The size of data disk N in GiB, where N is an integer from 1 to 16. The value range varies based on the disk category:
-            /// \- <c>cloud_efficiency</c> (Ultra Disk): 20 to 32768.
-            /// \- <c>cloud_ssd</c> (Standard SSD): 20 to 32768.
-            /// \- <c>cloud_essd</c>: The value range varies based on the value of <c>DataDisk.N.PerformanceLevel</c>.
-            /// \- PL0: 1 to 32768.
-            /// \- PL1: 20 to 32768.
-            /// \- PL2: 461 to 32768.
-            /// \- PL3: 1261 to 32768.
-            /// \- <c>cloud</c> (Basic Disk): 5 to 2000.
-            /// Default value: The minimum size supported by the specified data disk category.</para>
+            /// <para>The capacity of the data disk. Valid values of N: 1 to 16. Unit: GiB. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>cloud_efficiency: 20 to 32768.</description></item>
+            /// <item><description>cloud_ssd: 20 to 32768.</description></item>
+            /// <item><description>cloud_essd: The valid values depend on the value of <c>DataDisk.N.PerformanceLevel</c>.    <list type="bullet">
+            /// <item><description>PL0: 1 to 32768.</description></item>
+            /// <item><description>PL1: 20 to 32768.</description></item>
+            /// <item><description>PL2: 461 to 32768.</description></item>
+            /// <item><description>PL3: 1261 to 32768.</description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description>cloud: 5 to 2000.</description></item>
+            /// </list>
+            /// <para>Default value: the minimum capacity for the specified data disk category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -141,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which to query the modification price.</para>
+        /// <para>The instance ID of the instance for which you want to query the upgrade price.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -152,9 +149,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The target instance type for the instance upgrade. Call the <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> operation to query the instance types available for upgrade in the specified availability zone.</para>
+        /// <para>The target instance type for the upgrade. Call <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> to query the instance types available for upgrade in a specified zone.</para>
         /// <remarks>
-        /// <para>You must specify at least one of the <c>InstanceType</c> and <c>DataDisk.N.*</c> parameters.</para>
+        /// <para>The instance type parameter (<c>InstanceType</c>) and data disk parameters (<c>DataDisk.N.*</c>) cannot both be empty. You must specify at least one.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -189,7 +186,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to get the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

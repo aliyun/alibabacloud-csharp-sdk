@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of snapshot chains.</para>
         /// <remarks>
-        /// <para>When you use the <c>MaxResults</c> and <c>NextToken</c> parameters for a paged query, the returned <c>TotalCount</c> value is invalid. For paging, use <c>MaxResults</c> and <c>NextToken</c> instead.</para>
+        /// <para>When you use the <c>MaxResults</c> and <c>NextToken</c> parameters for a paged query, the returned <c>TotalCount</c> value is invalid. For paging, use <c>NextToken</c> and <c>MaxResults</c> instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

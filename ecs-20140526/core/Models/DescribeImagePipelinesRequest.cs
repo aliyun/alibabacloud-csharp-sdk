@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImagePipelinesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the image pipelines. You can specify up to 20 IDs.</para>
+        /// <para>The image template ID. Valid values of N: 1 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip-2ze5tsl5bp6nf2b3****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> ImagePipelineId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Valid values: 1 to 500.</para>
+        /// <para>The maximum number of entries per page for paging queries. Valid values: 1 to 500.</para>
         /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The name of the image pipeline.</para>
+        /// <para>The template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testImagePipeline</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. To retrieve the next page of results, set this parameter to the <c>NextToken</c> value from the previous response. Omit this parameter on your first request.</para>
+        /// <para>The pagination token. Set this parameter to the value of <c>NextToken</c> returned by the previous call. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. If you use this parameter for filtering, you can query a maximum of 1,000 resources.</para>
+        /// <para>The ID of the enterprise resource group. When you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>A list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeImagePipelinesRequestTag> Tag { get; set; }
         public class DescribeImagePipelinesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of a tag. Up to 20 tags are supported.</para>
+            /// <para>The tag key. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of a tag. Up to 20 tags are supported.</para>
+            /// <para>The tag value. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

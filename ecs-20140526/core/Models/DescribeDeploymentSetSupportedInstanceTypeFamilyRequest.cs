@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the deployment set. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The deployment strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Availability: high availability strategy</para>
+        /// <item><description><para>Availability: high availability strategy.</para>
         /// </description></item>
-        /// <item><description><para>AvailabilityGroup: high availability group strategy</para>
+        /// <item><description><para>AvailabilityGroup: high availability strategy for deployment set groups.</para>
         /// </description></item>
-        /// <item><description><para>LowLatency: low latency strategy</para>
+        /// <item><description><para>LowLatency: low network latency strategy.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: Availability.</para>

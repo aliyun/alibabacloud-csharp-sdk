@@ -10,13 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiagnosticMetricsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is left empty, the default value is 10.</para>
-        /// </description></item>
-        /// <item><description><para>If you set this parameter to a value that is greater than 100, the default value is 100.</para>
-        /// </description></item>
+        /// <item><description>If this parameter is not set, the default value is 10.</description></item>
+        /// <item><description>If the value is set to a number greater than 100, the default value is 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,14 +25,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of diagnostic metrics.</para>
+        /// <para>The list of diagnostic metrics.</para>
         /// </summary>
         [NameInMap("MetricIds")]
         [Validation(Required=false)]
         public List<string> MetricIds { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
+        /// <para>The pagination token. Set this parameter to the <c>NextToken</c> value returned in the previous call. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -44,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID pf the diagnostic metric. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource type supported by the diagnostic metric.</para>
+        /// <para>The supported resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance</para>

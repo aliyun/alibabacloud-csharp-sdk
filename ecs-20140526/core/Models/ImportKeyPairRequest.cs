@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ImportKeyPairRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the key pair. The name must be unique. The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It cannot start with http:// or https://. The name can contain characters that are categorized as letter in Unicode, including letters, Chinese characters, and digits. The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
+        /// <para>The name of the key pair. The name must be unique. The name must be 2 to 128 characters in length and must start with a letter, either uppercase or lowercase, or a Chinese character. It cannot start with http:// or https://. The name can contain characters that are classified as letters in Unicode, including letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<ImportKeyPairRequestTag> Tag { get; set; }
         public class ImportKeyPairRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
+            /// <para>The tag key of the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot contain http:// or https://.</para>
+            /// <para>The tag value of the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

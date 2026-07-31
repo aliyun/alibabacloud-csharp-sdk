@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeLaunchTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>An array of one or more launch template IDs.</para>
+        /// <para>The IDs of one or more launch templates.</para>
         /// <list type="bullet">
         /// <item><description><para>You can query up to 100 launch templates at a time.</para>
         /// </description></item>
-        /// <item><description><para>You must specify LaunchTemplateId or LaunchTemplateName to determine the templates.</para>
+        /// <item><description><para>You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// <para>An array of one or more launch template names.</para>
+        /// <para>The names of one or more launch templates.</para>
         /// <list type="bullet">
         /// <item><description><para>You can query up to 100 launch templates at a time.</para>
         /// </description></item>
-        /// <item><description><para>You must specify LaunchTemplateId or LaunchTemplateName to determine the templates.</para>
+        /// <item><description><para>You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paginated query.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the launch template belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1000.</para>
+        /// <para>The ID of the resource group to which the launch template belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
         /// <remarks>
         /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
@@ -104,9 +104,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TemplateResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of tag key-value pairs of the launch template.</para>
+        /// <para>The list of tag key-value pairs of the launch template itself.</para>
         /// <remarks>
-        /// <para>Currently, you can create and query launch template tags only by calling API operations. The console does not support creating or viewing launch template tags.</para>
+        /// <para>Currently, you can create and query tags of launch templates only by calling API operations. You cannot create or view tags in the console.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TemplateTag")]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeLaunchTemplatesRequestTemplateTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the launch template. Valid values of N: 1 to 20.</para>
-            /// <para>If you use a single tag to filter resources, the number of resources with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the number of resources that are bound with all the specified tags cannot exceed 1000. If the number of resources exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query them.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>

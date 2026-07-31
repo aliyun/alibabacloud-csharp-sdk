@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceChargeTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enables automatic payment. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.</para>
+        /// <item><description><para>true: Automatic payment is enabled. Make sure that your account balance is sufficient. If your account balance is insufficient, abnormal orders are generated, and you can only cancel the orders.</para>
         /// </description></item>
-        /// <item><description><para>false: disables automatic payment. An order is generated but no payment is made.</para>
+        /// <item><description><para>false: An order is generated but payment is not made.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// <remarks>
-        /// <para>If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</para>
+        /// <para>If your payment method has an insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ECS console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>token</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -40,11 +40,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
+        /// <item><description><para>false: performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -57,12 +57,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to change the billing method of all data disks on the instance from pay-as-you-go to subscription. Valid values:</para>
+        /// <para>Specifies whether to convert all pay-as-you-go data disks attached to the instance to subscription data disks.</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: Converts all pay-as-you-go data disks to subscription data disks.</description></item>
+        /// <item><description>false: Does not convert pay-as-you-go data disks to subscription data disks.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -74,11 +72,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? IncludeDataDisks { get; set; }
 
         /// <summary>
-        /// <para>The new billing method of the instance. Valid values:</para>
+        /// <para>The target billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PrePaid: subscription</para>
+        /// <item><description><para>PrePaid: transforms the billing method from pay-as-you-go to subscription.</para>
         /// </description></item>
-        /// <item><description><para>PostPaid: pay-as-you-go</para>
+        /// <item><description><para>PostPaid: transforms the billing method from subscription to pay-as-you-go.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: PrePaid.</para>
@@ -91,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs. The value can be a JSON array that consists of up to 20 instance IDs. Separate the instance IDs with commas (,).</para>
+        /// <para>The IDs of the instances. The value can be a JSON array that consists of up to 20 instance IDs. Separate the IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,12 +100,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return cost details of the order after the billing method is changed from subscription to pay-as-you-go. Valid values:</para>
+        /// <para>Specifies whether to return the fee details of the order when the billing method is transformed from subscription to pay-as-you-go. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: Returns the fee details.</description></item>
+        /// <item><description>false: Does not return the fee details.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -127,8 +123,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The renewal duration of the subscription instance. If the instance is hosted on a dedicated host, the renewal duration of the instance cannot exceed the subscription duration of the dedicated host. Valid values:</para>
-        /// <para>Valid values when <c>PeriodUnit</c> is set to Month: <c>1, 2, 3, 4, 5, 6, 7, 8, 9, and 12</c>.</para>
+        /// <para>The subscription renewal period. If the ECS instance is hosted on a dedicated host, the value cannot exceed the subscription period of the dedicated host. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>If PeriodUnit is set to Week, valid values of Period: 1, 2, 3, and 4.</description></item>
+        /// <item><description>If PeriodUnit is set to Month, valid values of Period: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;If PeriodUnit is set to Month, valid values of Period: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -138,8 +139,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal duration specified by <c>Period</c>. Valid values:</para>
-        /// <para>Month</para>
+        /// <para>The unit of the renewal period, which is the unit of the Period parameter. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>Week</description></item>
+        /// <item><description>Month</description></item>
+        /// <item><description>Year</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;Month</para>
         /// <para>Default value: Month.</para>
         /// 
         /// <b>Example:</b>
@@ -150,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

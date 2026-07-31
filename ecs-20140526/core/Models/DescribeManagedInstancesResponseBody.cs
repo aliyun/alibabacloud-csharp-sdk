@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeManagedInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried managed instances.</para>
+        /// <para>The list of managed instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeManagedInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeManagedInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The ID of the activation code.</para>
+            /// <para>The activation code ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3704F543-F768-43FA-9864-897F75B3****</para>
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string AgentVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the managed instance is connected. Valid values:</para>
+            /// <para>Indicates whether the managed instance is connected.</para>
             /// <list type="bullet">
-            /// <item><description><para>true: The managed instance is connected. You can manage the instance by using Cloud Assistant.</para>
+            /// <item><description><para>true: The managed instance is connected. You can manage the managed instance by using Cloud Assistant.</para>
             /// </description></item>
-            /// <item><description><para>false: The managed instance is not connected. The managed instance may be down or Cloud Assistant Agent may be incorrectly installed.</para>
+            /// <item><description><para>false: The managed instance is not connected. The server may be shut down or Cloud Assistant Agent may not be properly installed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Hostname { get; set; }
 
             /// <summary>
-            /// <para>The ID of the managed instance.</para>
+            /// <para>The managed instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mi-hz018jrc1o0****</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The number of times that Cloud Assistant tasks were executed on the managed instance.</para>
+            /// <para>The number of times that Cloud Assistant tasks were run on the managed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? InvocationCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the last Cloud Assistant task was executed.</para>
+            /// <para>The time when the last Cloud Assistant task was run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T09:00:40Z</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string LastInvokedTime { get; set; }
 
             /// <summary>
-            /// <para>The machine code of the managed instance.</para>
+            /// <para>The machine ID of the managed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e03231b37ab14e53b5795ad625fc****</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MachineId { get; set; }
 
             /// <summary>
-            /// <para>The operating system type of the managed instance.</para>
+            /// <para>The operating system of the managed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Linux</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The version information of the operating system.</para>
+            /// <para>The version of the operating system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Linux_#38~18.04.1-Ubuntu SMP Wed Jan 6 18:26:30 UTC 2021_x86_64</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string OsVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the managed instance was registered.</para>
+            /// <para>The registration time of the managed instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-20T08:57:56Z</para>
@@ -173,16 +173,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The tags of the managed instance.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeManagedInstancesResponseBodyInstancesTags> Tags { get; set; }
             public class DescribeManagedInstancesResponseBodyInstancesTags : TeaModel {
                 /// <summary>
-                /// <para>The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-                /// <para>If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned. To query more than 1,000 resources that have the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
-                /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+                /// <para>The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
+                /// <para>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+                /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestKey</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
+                /// <para>The tag value of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
                 /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the managed instance list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of queried managed instances.</para>
+        /// <para>The total number of managed instances queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

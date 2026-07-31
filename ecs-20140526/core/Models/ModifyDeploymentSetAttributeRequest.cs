@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDeploymentSetAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The affinity level of the deployment set. Instances in the deployment set are distributed based on this affinity level. Valid values: 1 to 10. Default value: 1.&gt;Notice:  The affinity setting is available only when the deployment strategy is set to high availability (<c>Strategy = Availability</c>).</para>
+        /// <para>The affinity level of the deployment set. Instances in the deployment set are distributed based on this affinity level. Valid values: 1 to 10. Default value: 1.</para>
+        /// <remarks>
+        /// <para>Notice: The affinity setting is available only when the deployment strategy is set to high availability (<c>Strategy = Availability</c>).</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DeploymentSetId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the deployment set. The name must be 2 to 128 characters long and can contain letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The new name of the deployment set. The name must be 2 to 128 characters in length and can contain characters that are categorized as letter in Unicode, including Chinese characters, English letters, and digits. The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DeploymentSetTestName</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DeploymentSetName { get; set; }
 
         /// <summary>
-        /// <para>The new description of the deployment set. It must be 2 to 256 characters long and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The new description of the deployment set. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestDescription</para>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to obtain the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the deployment set. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiskMonitorDataRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the disk to query.</para>
+        /// <para>The ID of the cloud disk that you want to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the data. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the end time is automatically set to the beginning of the next minute.</para>
+        /// <para>The end time of the data. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the end time is automatically rounded up to the next minute.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,10 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description></description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><ol start="600">
-        /// <item><description></description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>600. </description></item>
         /// <item><description><ol start="3600">
         /// <item><description></description></item>
         /// </ol>
@@ -76,9 +73,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the data. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the start time is automatically set to the beginning of the next minute.</para>
+        /// <para>The start time of the data. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the start time is automatically rounded up to the next minute.</para>
         /// <remarks>
-        /// <para>You can query the monitoring information of up to the last 30 days. The <c>StartTime</c> parameter cannot be more than 30 days earlier than the current time.</para>
+        /// <para>You can query monitoring information only for the last 30 days. The <c>StartTime</c> parameter cannot be more than 30 days earlier than the current time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

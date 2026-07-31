@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of regions.</para>
+        /// <para>The region ID of the resource. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource. For example, when ResourceType is set to instance, ResourceId can be interpreted as the InstanceId.</para>
+        /// <para>The ID of the resource. For example, when ResourceType is set to instance, ResourceId is the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp67acfmxazb4p****</para>
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>securitygroup: security group.</description></item>
         /// <item><description>ddh: dedicated host.</description></item>
         /// <item><description>ddhcluster: dedicated host cluster.</description></item>
-        /// <item><description>eni: elastic network interface.</description></item>
-        /// <item><description>keypair: SSH key pair.</description></item>
+        /// <item><description>eni: network interface controller (NIC).</description></item>
+        /// <item><description>keypair: key pair.</description></item>
         /// <item><description>launchtemplate: launch template.</description></item>
         /// <item><description>command: Cloud Assistant command.</description></item>
         /// <item><description>activation: Cloud Assistant managed instance activation code.</description></item>
         /// <item><description>managedinstance: Cloud Assistant managed instance.</description></item>
         /// </list>
-        /// <para>The preceding values are case-sensitive.</para>
+        /// <para>The preceding parameter values are case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>securitygroup</para>

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public AllocateDedicatedHostsRequestNetworkAttributes NetworkAttributes { get; set; }
         public class AllocateDedicatedHostsRequestNetworkAttributes : TeaModel {
             /// <summary>
-            /// <para>The timeout period for a UDP session between a Server Load Balancer (SLB) instance and the dedicated host. Unit: seconds. Valid values: 15 to 310.</para>
+            /// <para>The timeout period of a UDP session for load balancing connections to the dedicated host. Unit: seconds. Valid values: 15 to 310.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? SlbUdpTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for a UDP session between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid values: 15 to 310.</para>
+            /// <para>The timeout period of a UDP session between a user and a cloud service running on the dedicated host. Unit: seconds. Valid values: 15 to 310.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -36,13 +36,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The policy for migrating the instances deployed on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:</para>
+        /// <para>The policy used to migrate the instances deployed on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Migrate: The instances are migrated to another physical machine and then restarted.</para>
-        /// <para>If cloud disks are attached to the dedicated host, the default value is Migrate.</para>
+        /// <item><description><para>Migrate: The instances are migrated to another physical server and restarted.</para>
+        /// <para>Default value when cloud disks are attached to the dedicated host: Migrate.</para>
         /// </description></item>
-        /// <item><description><para>Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</para>
-        /// <para>If local disks are attached to the dedicated host, the default value is Stop.</para>
+        /// <item><description><para>Stop: The instances are stopped on the current dedicated host. After the dedicated host is confirmed to be irreparable, the instances are migrated to another physical server and restarted.</para>
+        /// <para>Default value when local disks are attached to the dedicated host: Stop.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -54,16 +54,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ActionOnMaintenance { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you create an ECS instance on a dedicated host without specifying the <b>DedicatedHostId</b> parameter, Alibaba Cloud selects a dedicated host from the resource pool to host the instance. For more information, see <a href="https://help.aliyun.com/document_detail/118938.html">Automatic deployment</a>. Valid values:</para>
+        /// <para>Specifies whether to add the dedicated host to the automatic deployment resource pool. If you create an instance on a dedicated host without specifying <b>DedicatedHostId</b>, Alibaba Cloud automatically selects a dedicated host from the resource pool to host the instance. For more information, see <a href="https://help.aliyun.com/document_detail/118938.html">Automatic deployment</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: adds the dedicated host to the resource pool for automatic deployment.</para>
+        /// <item><description><para>on: adds the dedicated host to the automatic deployment resource pool.</para>
         /// </description></item>
-        /// <item><description><para>off: does not add the dedicated host to the resource pool for automatic deployment.</para>
+        /// <item><description><para>off: does not add the dedicated host to the automatic deployment resource pool.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: on.</para>
         /// <remarks>
-        /// <para>If you do not want to add the dedicated host to the resource pool for automatic deployment, set this parameter to off.</para>
+        /// <para>If you do not want the dedicated host to be added to the automatic deployment resource pool, set this parameter to off.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,17 +74,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoPlacement { get; set; }
 
         /// <summary>
-        /// <para>The time when to automatically release the dedicated host. Specify the time in the <c>ISO 8601</c> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC+0.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>It must be at least half an hour later than the current time.</para>
-        /// </description></item>
-        /// <item><description><para>It must be at most three years later than the current time.</para>
-        /// </description></item>
-        /// <item><description><para>If the value of seconds (ss) is not 00, it is automatically set to 00.</para>
-        /// </description></item>
+        /// <item><description>The earliest release time must be at least half an hour from the current time.</description></item>
+        /// <item><description>The latest release time must be at most three years from the current time.</description></item>
+        /// <item><description>If the value of seconds (ss) is not 00, it is automatically set to 00.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2019-08-21T12:30:24Z</para>
@@ -94,11 +91,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoReleaseTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically renew the subscription dedicated host.</para>
+        /// <para>Specifies whether to enable auto-renewal for the subscription dedicated host.</para>
         /// <remarks>
-        /// <para>The <b>AutoRenew</b> parameter takes effect only when the <b>ChargeType</b> parameter is set to PrePaid.</para>
+        /// <para>The <b>AutoRenew</b> parameter takes effect only when <b>ChargeType</b> is set to PrePaid.</para>
         /// </remarks>
-        /// <para>Default value: false</para>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -108,8 +105,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal duration of the dedicated host. The <b>AutoRenewPeriod</b> parameter takes effect and is required only when the <b>AutoRenew</b> parameter is set to true. Valid values:</para>
-        /// <para>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, and 12.</para>
+        /// <para>The auto-renewal duration. The <b>AutoRenewPeriod</b> parameter takes effect and is required only when <b>AutoRenew</b> is set to true. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>If PeriodUnit is set to Week: 1, 2, and 3.</description></item>
+        /// <item><description>If PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;If PeriodUnit is set to Month: 1, 2, 3, 6, and 12.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,8 +122,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The billing method of the dedicated host. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><para>PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient account balance or credits. Otherwise, <c>InvalidPayMethod</c> is returned.</para>
+        /// <item><description><para>PrePaid: subscription. If you set this parameter to PrePaid, confirm that your payment method supports balance payment or credit payment. Otherwise, the <c>InvalidPayMethod</c> error is returned.</para>
+        /// </description></item>
+        /// <item><description><para>PostPaid: pay-as-you-go.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><para>PrePaid: subscription. If you set this parameter to PrePaid, confirm that your payment method supports credit payment. Otherwise, the <c>InvalidPayMethod</c> error is returned.</para>
         /// </description></item>
         /// <item><description><para>PostPaid: pay-as-you-go.</para>
         /// </description></item>
@@ -136,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>token</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -146,8 +156,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The CPU overcommit ratio. You can configure CPU overcommit ratios only for the following dedicated host types: g6s, c6s, and r6s. Valid values: 1 to 5.</para>
-        /// <para>The CPU overcommit ratio affects the number of available vCPUs on a dedicated host. You can use the following formula to calculate the number of available vCPUs on a dedicated host: Number of available vCPUs = Number of physical CPU cores × 2 × CPU overcommit ratio. For example, the number of physical CPU cores on each g6s dedicated host is 52. If you set the CPU overcommit ratio of a g6s dedicated host to 4, the number of available vCPUs on the dedicated host is 416. For scenarios that have minimal requirements on CPU stability or where CPU load is not heavy, such as development and test environments, you can increase the number of available vCPUs on a dedicated host by increasing the CPU overcommit ratio. This way, you can deploy more ECS instances of the same specifications on the dedicated host and reduce the unit deployment cost.</para>
+        /// <para>The CPU overcommit ratio. Only the custom instance types g6s, c6s, and r6s support the CPU overcommit ratio. Valid values: 1 to 5.</para>
+        /// <para>The CPU overcommit ratio affects the number of available vCPUs on a dedicated host. The number of available vCPUs on a dedicated host = Number of physical CPU cores × 2 × CPU overcommit ratio. For example, the number of physical CPU cores on each g6s host is 52. If you set the CPU overcommit ratio to 4, the total number of vCPUs on the dedicated host is 416. For scenarios that do not require strict CPU stability or have low CPU loads, such as development and testing environments, you can increase the CPU overcommit ratio to increase the number of available vCPUs and deploy more ECS instances of the same specifications, which reduces the unit deployment cost.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -157,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public float? CpuOverCommitRatio { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dedicated host cluster in which to create the dedicated host.</para>
+        /// <para>The ID of the dedicated host cluster to which the dedicated host belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dc-bp12wlf6am0vz9v2****</para>
@@ -167,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the dedicated host. The name must be 2 to 128 characters in length and can contain letters and digits. The name can contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the dedicated host. The name must be 2 to 128 characters in length and can contain Unicode characters under the Letter category, which includes characters from various scripts such as English, Chinese, and digits. The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>myDDH</para>
@@ -177,7 +187,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostName { get; set; }
 
         /// <summary>
-        /// <para>The dedicated host type. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent list of dedicated host types.</para>
+        /// <para>The type of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> to query the most recent list of dedicated host types.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -200,7 +210,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The minimum number of dedicated hosts to create. Valid values: 1 to 100.</para>
         /// <remarks>
-        /// <para>If the number of available dedicated hosts is less than the minimum number of dedicated hosts to create, the dedicated hosts fail to be created.</para>
+        /// <para>If the active stock of dedicated hosts is less than the minimum number, the dedicated host creation fails.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -219,12 +229,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the dedicated host. The <c>Period</c> parameter is required and takes effect only when the <c>ChargeType</c> parameter is set to <c>PrePaid</c>. Valid values:</para>
+        /// <para>The subscription duration of the dedicated host. The <c>Period</c> parameter takes effect and is required only when <c>ChargeType</c> is set to <c>PrePaid</c>. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.</para>
-        /// </description></item>
+        /// <item><description>If PeriodUnit is set to Week: 1, 2, 3, and 4.</description></item>
+        /// <item><description>If PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
+        /// <item><description>If PeriodUnit is set to Year: 1, 2, 3, 4, and 5.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>If PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
+        /// <item><description>If PeriodUnit is set to Year: 1, 2, 3, 4, and 5.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -235,12 +250,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration of the dedicated host. Valid values:</para>
+        /// <para>The unit of the subscription duration. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><para>Month</para>
-        /// </description></item>
-        /// <item><description><para>Year</para>
-        /// </description></item>
+        /// <item><description>Week</description></item>
+        /// <item><description>Month</description></item>
+        /// <item><description>Year</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>Month</description></item>
+        /// <item><description>Year</description></item>
         /// </list>
         /// <para>Default value: Month.</para>
         /// 
@@ -252,7 +272,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The number of dedicated hosts that you want to create. Valid values: 1 to 100.</para>
+        /// <para>The number of dedicated hosts to create. Valid values: 1 to 100.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -263,7 +283,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Quantity { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which to create the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the dedicated host. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -274,7 +294,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which to assign the dedicated host.</para>
+        /// <para>The ID of the resource group to which the dedicated host belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4ph***</para>
@@ -292,15 +312,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the dedicated host.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<AllocateDedicatedHostsRequestTag> Tag { get; set; }
         public class AllocateDedicatedHostsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the dedicated host. Valid values of N: 1 to 20.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with acs: or aliyun.</para>
+            /// <para>The tag key of the dedicated host. Valid values of N: 1 to 20.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Environment</para>
@@ -310,7 +330,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the dedicated host. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value of the dedicated host. Valid values of N: 1 to 20.</para>
             /// <para>The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -323,8 +343,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the zone in which to create the dedicated host.</para>
-        /// <para>This parameter is empty by default. If you do not specify a zone, the system selects a zone.</para>
+        /// <para>The zone ID of the dedicated host.</para>
+        /// <para>Default value: empty, which indicates that the system selects a zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-f</para>

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public Dictionary<string, string> AdditionalOptions { get; set; }
 
         /// <summary>
-        /// <para>The end time. This parameter applies only to diagnostic metrics that do not require running Cloud Assistant commands in the guest OS.</para>
+        /// <para>The end time. Takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be run in the guest OS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T14:00Z</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic metric set ID. If this parameter is omitted, the default diagnostic metric set for ECS instances, <c>dms-instancedefault</c>, is used.</para>
+        /// <para>The diagnostic metric set ID. If left empty, the default diagnostic metric set dms-instancedefault for ECS instances is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dms-uf6i0tv2refv8wz*****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MetricSetId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to get the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The start time. This parameter applies only to diagnostic metrics that do not require running Cloud Assistant commands in the guest OS.</para>
+        /// <para>The start time. Takes effect only for diagnostic metrics that do not require Cloud Assistant commands to be run in the guest OS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T12:00Z</para>

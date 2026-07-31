@@ -14,12 +14,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The ID of the private pool. Set the value to the ID of the elasticity assurance or capacity reservation that generates the private pool.</para>
+            /// <para>The private pool ID, which is the elasticity assurance ID or capacity reservation ID.</para>
             /// <list type="bullet">
-            /// <item><description><para>This parameter is required when <c>PrivatePoolOptions.MatchCriteria</c> is set to <c>Target</c>.</para>
-            /// </description></item>
-            /// <item><description><para>This parameter must be empty when <c>PrivatePoolOptions.MatchCriteria</c> is set to <c>Open</c> or <c>None</c>.</para>
-            /// </description></item>
+            /// <item><description>This parameter is required when PrivatePoolOptions.MatchCriteria is set to <c>Target</c>.</description></item>
+            /// <item><description>Leave this parameter empty when PrivatePoolOptions.MatchCriteria is set to <c>Open</c> or <c>None</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -30,14 +28,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The new type of private pool. Valid values:</para>
+            /// <para>The private pool matching mode of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Open: open private pool. The system matches the instance with an open private pool. If no matching open private pools exist, the system uses resources in the public pool to start the instance.</para>
-            /// </description></item>
-            /// <item><description><para>Target: specified private pool. The system uses the capacity in a specified private pool to start the instance. If the specified private pool is unavailable, the instance cannot be started. You must use <c>PrivatePoolOptions.Id</c> to specify the ID of a private pool.</para>
-            /// </description></item>
-            /// <item><description><para>None: no private pool. The capacity in private pools is not used to start the instance.</para>
-            /// </description></item>
+            /// <item><description>Open: open mode. The system automatically matches the instance with an open private pool. If no matching private pool capacity is available, public pool resources are used to launch the instance.</description></item>
+            /// <item><description>Target: targeted mode. The instance is launched by using the capacity of the specified private pool. If the specified private pool capacity is unavailable, the instance fails to be launched. If you set this parameter to Target, you must also specify the PrivatePoolOptions.Id parameter to specify the private pool ID.</description></item>
+            /// <item><description>None: none. The instance is launched normally without using a private pool.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -51,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the instance for which you want to modify the attributes of the private pool.</para>
+        /// <para>The instance ID of the instance for which you want to modify the private pool matching property.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the private pool. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the private pool. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
