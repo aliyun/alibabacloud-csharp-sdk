@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
 {
     public class GetOssStsTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The file type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SKILL</para>
         /// </summary>

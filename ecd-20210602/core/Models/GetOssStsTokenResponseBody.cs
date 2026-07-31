@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
 {
     public class GetOssStsTokenResponseBody : TeaModel {
         /// <summary>
+        /// <para>The AccessKey ID of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>STS.NZeNA1kdCm4QPuAJ9kN******</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
         public string AccessKeyId { get; set; }
 
         /// <summary>
+        /// <para>The STS temporary AccessKey secret.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9EStV7fgkSQsPuBi576EmNQXLxJGddL2EGyX********</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
         public string AccessKeySecret { get; set; }
 
         /// <summary>
+        /// <para>The logical OSS bucket name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prod-wy-*****</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
         [Validation(Required=false)]
         public string Bucket { get; set; }
 
+        /// <summary>
+        /// <para>The project storage path.</para>
+        /// </summary>
         [NameInMap("ObjectKeyPrefix")]
         [Validation(Required=false)]
         public string ObjectKeyPrefix { get; set; }
 
         /// <summary>
+        /// <para>The region to which the current OSS bucket belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss-cn-hangzhou</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
         public string OssRegion { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The Security Token Service (STS) token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CAISvAN1q6Ft5B2yfSjIr5n2Bez81ZRTgqOGZn6FkHBnXf9qgI6apjz2IH*******</para>
         /// </summary>

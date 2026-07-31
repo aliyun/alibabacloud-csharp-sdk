@@ -398,12 +398,12 @@ namespace AlibabaCloud.SDK.Ecd20210602
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 OSS STS 令牌</para>
+        /// <para>Retrieves a temporary OSS token for authentication.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取到的SecurityToken有效期为15分钟。</para>
+        /// <para>The obtained SecurityToken is valid for 15 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -445,12 +445,12 @@ namespace AlibabaCloud.SDK.Ecd20210602
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 OSS STS 令牌</para>
+        /// <para>Retrieves a temporary OSS token for authentication.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取到的SecurityToken有效期为15分钟。</para>
+        /// <para>The obtained SecurityToken is valid for 15 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -492,12 +492,12 @@ namespace AlibabaCloud.SDK.Ecd20210602
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 OSS STS 令牌</para>
+        /// <para>Retrieves a temporary OSS token for authentication.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取到的SecurityToken有效期为15分钟。</para>
+        /// <para>The obtained SecurityToken is valid for 15 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -515,12 +515,12 @@ namespace AlibabaCloud.SDK.Ecd20210602
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 OSS STS 令牌</para>
+        /// <para>Retrieves a temporary OSS token for authentication.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取到的SecurityToken有效期为15分钟。</para>
+        /// <para>The obtained SecurityToken is valid for 15 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1606,7 +1606,7 @@ namespace AlibabaCloud.SDK.Ecd20210602
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置租户技能启用状态</para>
+        /// <para>Sets the enabling status of skills at the tenant level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1656,7 +1656,7 @@ namespace AlibabaCloud.SDK.Ecd20210602
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置租户技能启用状态</para>
+        /// <para>Sets the enabling status of skills at the tenant level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1706,7 +1706,7 @@ namespace AlibabaCloud.SDK.Ecd20210602
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置租户技能启用状态</para>
+        /// <para>Sets the enabling status of skills at the tenant level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1724,7 +1724,7 @@ namespace AlibabaCloud.SDK.Ecd20210602
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置租户技能启用状态</para>
+        /// <para>Sets the enabling status of skills at the tenant level.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
             public string DefaultVersion { get; set; }
 
             /// <summary>
-            /// <para>The description of the skill.</para>
+            /// <para>The skill description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This skill is used for****</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
             }
 
             /// <summary>
-            /// <para>The slug identifier of the skill. This value is user-defined and unique within the tenant.</para>
+            /// <para>The skill slug identifier, which is user-defined and unique within the tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>find-skills****</para>
@@ -206,6 +206,20 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
             [NameInMap("SupplierType")]
             [Validation(Required=false)]
             public string SupplierType { get; set; }
+
+            [NameInMap("SupportAgentList")]
+            [Validation(Required=false)]
+            public List<ListSkillsResponseBodySkillsSupportAgentList> SupportAgentList { get; set; }
+            public class ListSkillsResponseBodySkillsSupportAgentList : TeaModel {
+                [NameInMap("TagId")]
+                [Validation(Required=false)]
+                public string TagId { get; set; }
+
+                [NameInMap("TagValue")]
+                [Validation(Required=false)]
+                public string TagValue { get; set; }
+
+            }
 
         }
 

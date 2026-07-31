@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
 {
     public class SetTenantSkillEnabledRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable the skill.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>The skill channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BUSINESS</para>
         /// </summary>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
         [Validation(Required=false)]
         public string SkillChannel { get; set; }
 
+        /// <summary>
+        /// <para>The list of skill IDs.</para>
+        /// </summary>
         [NameInMap("SkillIds")]
         [Validation(Required=false)]
         public List<string> SkillIds { get; set; }
