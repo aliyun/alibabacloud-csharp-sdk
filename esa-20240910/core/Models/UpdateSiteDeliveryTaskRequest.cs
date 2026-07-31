@@ -10,16 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateSiteDeliveryTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The real-time log type. Valid values:</para>
+        /// <para>The log type of real-time logs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>dcdn_log_access_l1</b> (default): access log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_er</b>: Edge Routine log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_waf</b>: WAF log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_ipa</b>: Layer 4 acceleration log.</para>
-        /// </description></item>
+        /// <item><description><b>dcdn_log_access_l1 (default)</b>: access logs.</description></item>
+        /// <item><description><b>dcdn_log_er</b>: Edge Routine logs.</description></item>
+        /// <item><description><b>dcdn_log_waf</b>: security protection logs.</description></item>
+        /// <item><description><b>dcdn_log_ipa</b>: Layer 4 acceleration logs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? DiscardRate { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of delivery fields.</para>
+        /// <para>The list of delivery fields to modify, separated by commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,12 +46,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string FieldName { get; set; }
 
+        /// <summary>
+        /// <para>The version of the filter rule.</para>
+        /// <remarks>
+        /// <para>Compatible with legacy filter rules. The default value is v1. Newly created rules use v2.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v2</para>
+        /// </summary>
         [NameInMap("FilterVer")]
         [Validation(Required=false)]
         public string FilterVer { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>

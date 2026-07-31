@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchDeleteKvResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of keys that failed to delete.</para>
+        /// <para>The list of keys that failed to be deleted.</para>
         /// </summary>
         [NameInMap("FailKeys")]
         [Validation(Required=false)]
         public List<string> FailKeys { get; set; }
 
         /// <summary>
-        /// <para>ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of keys that deleted successfully.</para>
+        /// <para>The list of keys that were successfully deleted.</para>
         /// </summary>
         [NameInMap("SuccessKeys")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchPutKvShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of key-value pairs to set. The total size cannot exceed 2 MB (2 × 1,000 × 1,000).</para>
+        /// <para>The list of key-value pairs to batch set. The total size cannot exceed 2 MB (2\*1000\*1000).</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("KvList")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string KvListShrink { get; set; }
 
         /// <summary>
-        /// <para>The name specified when you call <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</para>
+        /// <para>The name specified when you called <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

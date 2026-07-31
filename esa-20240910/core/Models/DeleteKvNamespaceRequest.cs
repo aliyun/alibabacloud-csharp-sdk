@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteKvNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>The name that you specified when you called <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</para>
+        /// <para>The name specified when calling <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

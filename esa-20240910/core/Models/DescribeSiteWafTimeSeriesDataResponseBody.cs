@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The query dimension.</para>
+            /// <para>The query dimensions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The metric name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Traffic</para>
+            /// <para>Requests</para>
             /// </summary>
             [NameInMap("FieldName")]
             [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The end time of the returned data.</para>
+        /// <para>The end of the time range for the returned data.</para>
         /// <para>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</para>
         /// 
         /// <b>Example:</b>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? SamplingRate { get; set; }
 
         /// <summary>
-        /// <para>The start time for the data query.</para>
+        /// <para>The beginning of the time range to query.</para>
         /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
         /// 
         /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The summarized query data.</para>
+        /// <para>The summarized data.</para>
         /// </summary>
         [NameInMap("SummarizedData")]
         [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The summarized metric name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Traffic</para>
+            /// <para>Requests</para>
             /// </summary>
             [NameInMap("FieldName")]
             [Validation(Required=false)]

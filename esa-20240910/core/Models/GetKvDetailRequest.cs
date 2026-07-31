@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetKvDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The key name for the query.</para>
+        /// <para>The name of the key to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
+        /// <para>The name specified when calling <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

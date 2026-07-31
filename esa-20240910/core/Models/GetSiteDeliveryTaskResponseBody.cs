@@ -10,16 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetSiteDeliveryTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The type of real-time log for Dynamic Route for CDN (DCDN). Valid values:</para>
+        /// <para>The real-time log type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>dcdn_log_access_l1</b> (default): access log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_er</b>: edge function log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_waf</b>: WAF log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_ipa</b>: layer 4 acceleration log.</para>
-        /// </description></item>
+        /// <item><description><b>dcdn_log_access_l1 (default)</b>: access log.</description></item>
+        /// <item><description><b>dcdn_log_er</b>: Edge Routine function log.</description></item>
+        /// <item><description><b>dcdn_log_waf</b>: security protection log.</description></item>
+        /// <item><description><b>dcdn_log_ipa</b>: Layer 4 acceleration log.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,10 +28,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The data center. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn</b>: Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>sg</b>: Global (excluding Chinese mainland). Note that the value for this region is &quot;sg&quot;.</para>
-        /// </description></item>
+        /// <item><description><b>cn</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>sg</b>: global (excluding the Chinese mainland).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,18 +42,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The delivery type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>sls</b>: Log Service.</para>
-        /// </description></item>
-        /// <item><description><para><b>http</b>: HTTP service.</para>
-        /// </description></item>
-        /// <item><description><para><b>aws3</b>: Amazon S3.</para>
-        /// </description></item>
-        /// <item><description><para><b>oss</b>: Object Storage Service.</para>
-        /// </description></item>
-        /// <item><description><para><b>kafka</b>: Kafka service.</para>
-        /// </description></item>
-        /// <item><description><para><b>aws3cmpt</b>: Amazon S3-compatible service.</para>
-        /// </description></item>
+        /// <item><description><b>sls</b>: Alibaba Cloud Simple Log Service.</description></item>
+        /// <item><description><b>http</b>: HTTP service.</description></item>
+        /// <item><description><b>aws3</b>: Amazon S3 service.</description></item>
+        /// <item><description><b>oss</b>: Alibaba Cloud Object Storage Service.</description></item>
+        /// <item><description><b>kafka</b>: Kafka service.</description></item>
+        /// <item><description><b>aws3cmpt</b>: Amazon S3-compatible service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +68,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? DiscardRate { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of log fields to deliver.</para>
+        /// <para>The list of delivery fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Client,UserAgent</para>
@@ -99,10 +87,39 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string FilterRules { get; set; }
 
+        /// <summary>
+        /// <para>The version of the filter rules.</para>
+        /// <remarks>
+        /// <para>For backward compatibility with legacy filter rules, the default value is v1. Newly created tasks use v2.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v2</para>
+        /// </summary>
         [NameInMap("FilterVer")]
         [Validation(Required=false)]
         public string FilterVer { get; set; }
 
+        /// <summary>
+        /// <para>The filter rules for the delivery task.</para>
+        /// <remarks>
+        /// <para>The new version of delivery filter rules.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///   &quot;where&quot;: {
+        ///     &quot;or&quot;: [
+        ///       {
+        ///         &quot;and&quot;: [
+        ///           { &quot;key&quot;: &quot;site&quot;, &quot;operator&quot;: &quot;eq&quot;, &quot;value&quot;: &quot;example.com&quot; },
+        ///           { &quot;key&quot;: &quot;status_code&quot;, &quot;operator&quot;: &quot;in&quot;, &quot;value&quot;: [&quot;200&quot;, &quot;304&quot;] }
+        ///         ]
+        ///       }
+        ///     ]
+        ///   }
+        /// }</para>
+        /// </summary>
         [NameInMap("RawRule")]
         [Validation(Required=false)]
         public string RawRule { get; set; }
@@ -148,11 +165,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteName { get; set; }
 
         /// <summary>
-        /// <para>The status of the task. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>online</b>: The task is delivering logs.</para>
+        /// <item><description><para><b>online</b>: pushing.</para>
         /// </description></item>
-        /// <item><description><para><b>offline</b>: The task is paused.</para>
+        /// <item><description><para><b>offline</b>: push paused.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetSiteDeliveryTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API to obtain the ID.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456***</para>

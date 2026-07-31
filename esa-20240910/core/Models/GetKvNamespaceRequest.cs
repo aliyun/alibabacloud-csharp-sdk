@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetKvNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the namespace. You specify this name when calling the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
+        /// <para>The name specified when calling <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

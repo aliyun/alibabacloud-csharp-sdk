@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the website log files.</para>
+        /// <para>The site log information.</para>
         /// </summary>
         [NameInMap("SiteLogDetails")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? LogCount { get; set; }
 
             /// <summary>
-            /// <para>The details of the website log files.</para>
+            /// <para>The site log package information.</para>
             /// </summary>
             [NameInMap("LogInfos")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the log file.</para>
+                /// <para>The log name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example.com_2022_11_07_000000_020000.gz.xxxxxx</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <summary>
                 /// <para>The log path.</para>
                 /// <remarks>
-                /// <para>Take note of the Expires field (expiration timestamp) in this parameter. If the log download URL expires, you must reobtain the URL.</para>
+                /// <para>Pay attention to the Expires field (expiration timestamp) in the LogPath response parameter. After the expiration time, the log download link becomes invalid and must be obtained again.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string LogPath { get; set; }
 
                 /// <summary>
-                /// <para>The size of the log file. Unit: bytes.</para>
+                /// <para>The log size, in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>438304768</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? LogSize { get; set; }
 
                 /// <summary>
-                /// <para>The create time.</para>
+                /// <para>The start time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-11-06T16:00:00Z</para>
@@ -99,14 +99,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>Pagination information.</para>
+            /// <para>The pagination information.</para>
             /// </summary>
             [NameInMap("PageInfos")]
             [Validation(Required=false)]
             public DescribeSiteLogsResponseBodySiteLogDetailsPageInfos PageInfos { get; set; }
             public class DescribeSiteLogsResponseBodySiteLogDetailsPageInfos : TeaModel {
                 /// <summary>
-                /// <para>The page number returned.</para>
+                /// <para>The page number of the returned data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The website ID.</para>
+            /// <para>The site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456***</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? SiteId { get; set; }
 
             /// <summary>
-            /// <para>The website name.</para>
+            /// <para>The site name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>

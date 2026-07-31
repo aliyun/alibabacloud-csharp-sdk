@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tasks.</para>
+        /// <para>The task list.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<DescribePreloadTasksResponseBodyTasks> Tasks { get; set; }
         public class DescribePreloadTasksResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The prefetched content.</para>
+            /// <para>The prefetch object.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://a.com/1.jpg?b=2">http://a.com/1.jpg?b=2</a></para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-28 14:28:57</para>
@@ -67,14 +67,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error message returned upon a prefetch task failure. Valid values:</para>
+            /// <para>The error description returned when the prefetch fails. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Internal Error</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Origin Timeout</b></para>
-            /// </description></item>
-            /// <item><description><para><b>Origin Return StatusCode 5XX</b></para>
-            /// </description></item>
+            /// <item><description><b>Internal Error</b>: An internal error occurred.</description></item>
+            /// <item><description><b>Origin Timeout</b>: The origin server response timed out.</description></item>
+            /// <item><description><b>Origin Return StatusCode 5XX</b>: The origin server returned a 5xx error code.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +82,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The progress of the task, in percentage.</para>
+            /// <para>The task completion progress percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100%</para>
@@ -95,14 +92,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Process { get; set; }
 
             /// <summary>
-            /// <para>The task status.</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Complete</b>: The task is complete.</para>
-            /// </description></item>
-            /// <item><description><para><b>Refreshing</b>: The task is in progress.</para>
-            /// </description></item>
-            /// <item><description><para><b>Failed</b>: The task failed.</para>
-            /// </description></item>
+            /// <item><description><b>Complete</b>: Complete.</description></item>
+            /// <item><description><b>Refreshing</b>: Prefetching.</description></item>
+            /// <item><description><b>Failed</b>: Prefetch failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the queried task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1597854579687428</para>
@@ -125,7 +119,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>83</para>

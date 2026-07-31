@@ -1,3 +1,8 @@
+2026-07-31 Version: 3.11.0
+- Support API DescribeUserResourcePackage.
+- Support API GetReleaseTime.
+
+
 2026-07-24 Version: 3.10.0
 - Support API CreateRoutineBuild.
 - Support API DescribeDDoSPrice.

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListKvsRequest : TeaModel {
         /// <summary>
-        /// <para>The name specified when you called <a href="https://help.aliyun.com/document_detail/2850317.html">CreatevNamespace</a>.</para>
+        /// <para>The name specified when calling <a href="https://help.aliyun.com/document_detail/2850317.html">CreatevNamespace</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default value: <b>50</b>. Maximum value: <b>100</b>.</para>
+        /// <para>The page size for the returned results. Default value: <b>50</b>. Maximum value: <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

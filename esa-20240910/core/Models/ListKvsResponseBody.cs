@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time when the key was last updated, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</para>
+            /// <para>The update time of the key in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-13T07:46:03Z</para>

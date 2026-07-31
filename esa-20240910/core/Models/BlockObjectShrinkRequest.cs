@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ContentShrink { get; set; }
 
         /// <summary>
-        /// <para>The effective period of the block, in seconds. This parameter is required when the type is set to block.</para>
+        /// <para>The effective period of the block, in seconds. Specify this parameter when the type is block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>864000</para>
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>block</b>: blocks the URLs.</description></item>
-        /// <item><description><b>unblock</b>: unblocks the URLs.</description></item>
+        /// <item><description><b>block</b>: blocks the URL.</description></item>
+        /// <item><description><b>unblock</b>: unblocks the URL.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeRatePlanInstanceStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can obtain the ID by calling the <a href="~~ListUserRatePlanInstances~~">ListUserRatePlanInstances</a> operation.</para>
+        /// <para>The instance ID. You can call the <a href="~~ListUserRatePlanInstances~~">ListUserRatePlanInstances</a> operation to obtain the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xcdn-91fknmb80f0g***</para>
@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The resource owner account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1700594193617909</para>
+        /// </summary>
         [NameInMap("ResourceOwner")]
         [Validation(Required=false)]
         public long? ResourceOwner { get; set; }

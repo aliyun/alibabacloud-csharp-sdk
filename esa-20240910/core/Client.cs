@@ -1287,7 +1287,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete key-value pairs in bulk from a specified namespace.</para>
+        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a specified list of key names.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1341,7 +1341,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete key-value pairs in bulk from a specified namespace.</para>
+        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a specified list of key names.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1395,7 +1395,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete key-value pairs in bulk from a specified namespace.</para>
+        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a specified list of key names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1413,7 +1413,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete key-value pairs in bulk from a specified namespace.</para>
+        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a specified list of key names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1431,18 +1431,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a specified list of key names. The maximum request body size is 100 MB.</para>
+        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a list of key names. The maximum request body size is 100 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <para>Notice: 
-        /// Prerequisites for non-SDK calls: (1) You must have an OSS bucket with read and write permissions. (2) You must be able to generate a pre-signed HTTPS GET URL by using the OSS SDK or API. (3) The uploaded JSON file must use the same format as the BatchDeleteKv request body..
-        /// This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchDeleteKvWithHighCapacityAdvance function.</para>
+        /// Prerequisites for non-SDK calls: (1) You must have an OSS bucket with read and write permissions. (2) You must be able to generate a pre-signed HTTPS GET URL by using the OSS SDK or API. (3) The uploaded JSON file format must be the same as the BatchDeleteKv request body.
+        /// This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation directly to reduce server processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchDeleteKvWithHighCapacityAdvance function.</para>
         /// </remarks>
         /// <pre><c>func TestBatchDeleteWithHighCapacity() error {
-        ///     // Initialize the configuration
+        ///     // Configuration initialization
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -1450,8 +1450,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}.
-        ///     // Construct the batch delete request for key-value pairs
+        ///     runtime := &amp;util.RuntimeOptions{}
+        ///     // Construct the batch delete key-value pair request
         ///     namespace := &quot;test_batch_put&quot;
         ///     rawReq := BatchDeleteKvRequest{
         ///         Namespace: &amp;namespace,
@@ -1463,8 +1463,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }.
-        ///     // If the payload is larger than 2 MB, call the high-capacity operation to delete the key-value pairs
+        ///     }
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to delete
         ///     reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -1474,7 +1474,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }.
+        /// }
         /// </c></pre>
         /// </description>
         /// 
@@ -1521,18 +1521,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a specified list of key names. The maximum request body size is 100 MB.</para>
+        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a list of key names. The maximum request body size is 100 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <para>Notice: 
-        /// Prerequisites for non-SDK calls: (1) You must have an OSS bucket with read and write permissions. (2) You must be able to generate a pre-signed HTTPS GET URL by using the OSS SDK or API. (3) The uploaded JSON file must use the same format as the BatchDeleteKv request body..
-        /// This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchDeleteKvWithHighCapacityAdvance function.</para>
+        /// Prerequisites for non-SDK calls: (1) You must have an OSS bucket with read and write permissions. (2) You must be able to generate a pre-signed HTTPS GET URL by using the OSS SDK or API. (3) The uploaded JSON file format must be the same as the BatchDeleteKv request body.
+        /// This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation directly to reduce server processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchDeleteKvWithHighCapacityAdvance function.</para>
         /// </remarks>
         /// <pre><c>func TestBatchDeleteWithHighCapacity() error {
-        ///     // Initialize the configuration
+        ///     // Configuration initialization
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -1540,8 +1540,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}.
-        ///     // Construct the batch delete request for key-value pairs
+        ///     runtime := &amp;util.RuntimeOptions{}
+        ///     // Construct the batch delete key-value pair request
         ///     namespace := &quot;test_batch_put&quot;
         ///     rawReq := BatchDeleteKvRequest{
         ///         Namespace: &amp;namespace,
@@ -1553,8 +1553,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }.
-        ///     // If the payload is larger than 2 MB, call the high-capacity operation to delete the key-value pairs
+        ///     }
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to delete
         ///     reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -1564,7 +1564,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }.
+        /// }
         /// </c></pre>
         /// </description>
         /// 
@@ -1611,18 +1611,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a specified list of key names. The maximum request body size is 100 MB.</para>
+        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a list of key names. The maximum request body size is 100 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <para>Notice: 
-        /// Prerequisites for non-SDK calls: (1) You must have an OSS bucket with read and write permissions. (2) You must be able to generate a pre-signed HTTPS GET URL by using the OSS SDK or API. (3) The uploaded JSON file must use the same format as the BatchDeleteKv request body..
-        /// This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchDeleteKvWithHighCapacityAdvance function.</para>
+        /// Prerequisites for non-SDK calls: (1) You must have an OSS bucket with read and write permissions. (2) You must be able to generate a pre-signed HTTPS GET URL by using the OSS SDK or API. (3) The uploaded JSON file format must be the same as the BatchDeleteKv request body.
+        /// This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation directly to reduce server processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchDeleteKvWithHighCapacityAdvance function.</para>
         /// </remarks>
         /// <pre><c>func TestBatchDeleteWithHighCapacity() error {
-        ///     // Initialize the configuration
+        ///     // Configuration initialization
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -1630,8 +1630,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}.
-        ///     // Construct the batch delete request for key-value pairs
+        ///     runtime := &amp;util.RuntimeOptions{}
+        ///     // Construct the batch delete key-value pair request
         ///     namespace := &quot;test_batch_put&quot;
         ///     rawReq := BatchDeleteKvRequest{
         ///         Namespace: &amp;namespace,
@@ -1643,8 +1643,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }.
-        ///     // If the payload is larger than 2 MB, call the high-capacity operation to delete the key-value pairs
+        ///     }
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to delete
         ///     reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -1654,7 +1654,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }.
+        /// }
         /// </c></pre>
         /// </description>
         /// 
@@ -1673,18 +1673,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a specified list of key names. The maximum request body size is 100 MB.</para>
+        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a list of key names. The maximum request body size is 100 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <para>Notice: 
-        /// Prerequisites for non-SDK calls: (1) You must have an OSS bucket with read and write permissions. (2) You must be able to generate a pre-signed HTTPS GET URL by using the OSS SDK or API. (3) The uploaded JSON file must use the same format as the BatchDeleteKv request body..
-        /// This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchDeleteKvWithHighCapacityAdvance function.</para>
+        /// Prerequisites for non-SDK calls: (1) You must have an OSS bucket with read and write permissions. (2) You must be able to generate a pre-signed HTTPS GET URL by using the OSS SDK or API. (3) The uploaded JSON file format must be the same as the BatchDeleteKv request body.
+        /// This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation directly to reduce server processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchDeleteKvWithHighCapacityAdvance function.</para>
         /// </remarks>
         /// <pre><c>func TestBatchDeleteWithHighCapacity() error {
-        ///     // Initialize the configuration
+        ///     // Configuration initialization
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -1692,8 +1692,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}.
-        ///     // Construct the batch delete request for key-value pairs
+        ///     runtime := &amp;util.RuntimeOptions{}
+        ///     // Construct the batch delete key-value pair request
         ///     namespace := &quot;test_batch_put&quot;
         ///     rawReq := BatchDeleteKvRequest{
         ///         Namespace: &amp;namespace,
@@ -1705,8 +1705,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }.
-        ///     // If the payload is larger than 2 MB, call the high-capacity operation to delete the key-value pairs
+        ///     }
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to delete
         ///     reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -1716,7 +1716,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }.
+        /// }
         /// </c></pre>
         /// </description>
         /// 
@@ -2103,7 +2103,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets multiple key-value pairs in a specified namespace.</para>
+        /// <para>Batch sets key-value pairs in a specified KV namespace based on a specified list of key names.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2157,7 +2157,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets multiple key-value pairs in a specified namespace.</para>
+        /// <para>Batch sets key-value pairs in a specified KV namespace based on a specified list of key names.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2211,7 +2211,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets multiple key-value pairs in a specified namespace.</para>
+        /// <para>Batch sets key-value pairs in a specified KV namespace based on a specified list of key names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2229,7 +2229,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets multiple key-value pairs in a specified namespace.</para>
+        /// <para>Batch sets key-value pairs in a specified KV namespace based on a specified list of key names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2252,9 +2252,9 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>, but allows larger request bodies. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchPutKvWithHighCapacityAdvance function.</para>
+        /// <para>This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>, but allows you to upload a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> operation directly to reduce server processing time. This operation must be called by using an SDK. Taking the Golang SDK as an example, call the BatchPutKvWithHighCapacityAdvance function.</para>
         /// <pre><c>func TestBatchPutKvWithHighCapacity() error {
-        ///     // Initialize the configuration
+        ///     // Configuration initialization
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -2262,8 +2262,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}.
-        ///     // Construct the key-value pairs for batch upload
+        ///     runtime := &amp;util.RuntimeOptions{}
+        ///     // Construct the key-value pairs request for batch upload
         ///     namespace := &quot;test_batch_put&quot;
         ///     numKv := 10000
         ///     kvList := make([]*BatchPutKvRequestKvList, numKv)
@@ -2279,12 +2279,12 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     rawReq := BatchPutKvRequest{
         ///         Namespace: &amp;namespace,
         ///         KvList:    kvList,
-        ///     }.
+        ///     }
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }.
-        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload it
+        ///     }
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload
         ///     reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -2294,7 +2294,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }.
+        /// }
         /// </c></pre>
         /// </description>
         /// 
@@ -2346,9 +2346,9 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>, but allows larger request bodies. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchPutKvWithHighCapacityAdvance function.</para>
+        /// <para>This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>, but allows you to upload a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> operation directly to reduce server processing time. This operation must be called by using an SDK. Taking the Golang SDK as an example, call the BatchPutKvWithHighCapacityAdvance function.</para>
         /// <pre><c>func TestBatchPutKvWithHighCapacity() error {
-        ///     // Initialize the configuration
+        ///     // Configuration initialization
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -2356,8 +2356,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}.
-        ///     // Construct the key-value pairs for batch upload
+        ///     runtime := &amp;util.RuntimeOptions{}
+        ///     // Construct the key-value pairs request for batch upload
         ///     namespace := &quot;test_batch_put&quot;
         ///     numKv := 10000
         ///     kvList := make([]*BatchPutKvRequestKvList, numKv)
@@ -2373,12 +2373,12 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     rawReq := BatchPutKvRequest{
         ///         Namespace: &amp;namespace,
         ///         KvList:    kvList,
-        ///     }.
+        ///     }
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }.
-        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload it
+        ///     }
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload
         ///     reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -2388,7 +2388,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }.
+        /// }
         /// </c></pre>
         /// </description>
         /// 
@@ -2440,9 +2440,9 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>, but allows larger request bodies. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchPutKvWithHighCapacityAdvance function.</para>
+        /// <para>This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>, but allows you to upload a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> operation directly to reduce server processing time. This operation must be called by using an SDK. Taking the Golang SDK as an example, call the BatchPutKvWithHighCapacityAdvance function.</para>
         /// <pre><c>func TestBatchPutKvWithHighCapacity() error {
-        ///     // Initialize the configuration
+        ///     // Configuration initialization
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -2450,8 +2450,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}.
-        ///     // Construct the key-value pairs for batch upload
+        ///     runtime := &amp;util.RuntimeOptions{}
+        ///     // Construct the key-value pairs request for batch upload
         ///     namespace := &quot;test_batch_put&quot;
         ///     numKv := 10000
         ///     kvList := make([]*BatchPutKvRequestKvList, numKv)
@@ -2467,12 +2467,12 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     rawReq := BatchPutKvRequest{
         ///         Namespace: &amp;namespace,
         ///         KvList:    kvList,
-        ///     }.
+        ///     }
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }.
-        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload it
+        ///     }
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload
         ///     reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -2482,7 +2482,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }.
+        /// }
         /// </c></pre>
         /// </description>
         /// 
@@ -2506,9 +2506,9 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>, but allows larger request bodies. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchPutKvWithHighCapacityAdvance function.</para>
+        /// <para>This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>, but allows you to upload a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> operation directly to reduce server processing time. This operation must be called by using an SDK. Taking the Golang SDK as an example, call the BatchPutKvWithHighCapacityAdvance function.</para>
         /// <pre><c>func TestBatchPutKvWithHighCapacity() error {
-        ///     // Initialize the configuration
+        ///     // Configuration initialization
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -2516,8 +2516,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}.
-        ///     // Construct the key-value pairs for batch upload
+        ///     runtime := &amp;util.RuntimeOptions{}
+        ///     // Construct the key-value pairs request for batch upload
         ///     namespace := &quot;test_batch_put&quot;
         ///     numKv := 10000
         ///     kvList := make([]*BatchPutKvRequestKvList, numKv)
@@ -2533,12 +2533,12 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     rawReq := BatchPutKvRequest{
         ///         Namespace: &amp;namespace,
         ///         KvList:    kvList,
-        ///     }.
+        ///     }
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }.
-        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload it
+        ///     }
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload
         ///     reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -2548,7 +2548,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }.
+        /// }
         /// </c></pre>
         /// </description>
         /// 
@@ -2943,7 +2943,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Blocks access to specified URLs.</para>
+        /// <para>Blocks access to a specified URL.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3003,7 +3003,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Blocks access to specified URLs.</para>
+        /// <para>Blocks access to a specified URL.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3063,7 +3063,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Blocks access to specified URLs.</para>
+        /// <para>Blocks access to a specified URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3081,7 +3081,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Blocks access to specified URLs.</para>
+        /// <para>Blocks access to a specified URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7407,7 +7407,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a KV namespace in the current account.</para>
+        /// <para>Creates a key-value (KV) namespace under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7453,7 +7453,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a KV namespace in the current account.</para>
+        /// <para>Creates a key-value (KV) namespace under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7499,7 +7499,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a KV namespace in the current account.</para>
+        /// <para>Creates a key-value (KV) namespace under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7517,7 +7517,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a KV namespace in the current account.</para>
+        /// <para>Creates a key-value (KV) namespace under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10931,7 +10931,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a scheduled prefetch task.</para>
+        /// <para>Adds a scheduled prefetch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10989,7 +10989,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a scheduled prefetch task.</para>
+        /// <para>Adds a scheduled prefetch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11047,7 +11047,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a scheduled prefetch task.</para>
+        /// <para>Adds a scheduled prefetch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11065,7 +11065,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a scheduled prefetch task.</para>
+        /// <para>Adds a scheduled prefetch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16927,7 +16927,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a specific key-value pair from a namespace.</para>
+        /// <para>Deletes a specific key-value pair from a KV namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16965,7 +16965,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a specific key-value pair from a namespace.</para>
+        /// <para>Deletes a specific key-value pair from a KV namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17003,7 +17003,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a specific key-value pair from a namespace.</para>
+        /// <para>Deletes a specific key-value pair from a KV namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17021,7 +17021,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a specific key-value pair from a namespace.</para>
+        /// <para>Deletes a specific key-value pair from a KV namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17039,7 +17039,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a namespace from your account.</para>
+        /// <para>Deletes a single KV namespace owned by the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17081,7 +17081,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a namespace from your account.</para>
+        /// <para>Deletes a single KV namespace owned by the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17123,7 +17123,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a namespace from your account.</para>
+        /// <para>Deletes a single KV namespace owned by the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17141,7 +17141,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a namespace from your account.</para>
+        /// <para>Deletes a single KV namespace owned by the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19303,7 +19303,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a single scheduled preload plan.</para>
+        /// <para>Deletes a single scheduled prefetch plan by prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19345,7 +19345,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a single scheduled preload plan.</para>
+        /// <para>Deletes a single scheduled prefetch plan by prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19387,7 +19387,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a single scheduled preload plan.</para>
+        /// <para>Deletes a single scheduled prefetch plan by prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19405,7 +19405,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a single scheduled preload plan.</para>
+        /// <para>Deletes a single scheduled prefetch plan by prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19423,7 +19423,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified scheduled preload job.</para>
+        /// <para>Deletes a specified scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19465,7 +19465,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified scheduled preload job.</para>
+        /// <para>Deletes a specified scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19507,7 +19507,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified scheduled preload job.</para>
+        /// <para>Deletes a specified scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19525,7 +19525,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified scheduled preload job.</para>
+        /// <para>Deletes a specified scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22319,7 +22319,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the peak bits per second (BPS) and packets per second (PPS) data of DDoS attacks at the network layer.</para>
+        /// <para>Queries the peak BPS and PPS data of DDoS network-layer attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22357,7 +22357,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the peak bits per second (BPS) and packets per second (PPS) data of DDoS attacks at the network layer.</para>
+        /// <para>Queries the peak BPS and PPS data of DDoS network-layer attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22395,7 +22395,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the peak bits per second (BPS) and packets per second (PPS) data of DDoS attacks at the network layer.</para>
+        /// <para>Queries the peak BPS and PPS data of DDoS network-layer attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22413,7 +22413,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the peak bits per second (BPS) and packets per second (PPS) data of DDoS attacks at the network layer.</para>
+        /// <para>Queries the peak BPS and PPS data of DDoS network-layer attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23855,7 +23855,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of an account in the KV service.</para>
+        /// <para>Queries the status information of an account in the KV service.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -23885,7 +23885,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of an account in the KV service.</para>
+        /// <para>Queries the status information of an account in the KV service.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -23915,7 +23915,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of an account in the KV service.</para>
+        /// <para>Queries the status information of an account in the KV service.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -23929,7 +23929,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of an account in the KV service.</para>
+        /// <para>Queries the status information of an account in the KV service.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -23943,7 +23943,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries prefetch tasks by time, task status, or prefetch URL.</para>
+        /// <para>Queries the details of prefetch tasks. Supports paged query by time, task status, and prefetch URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23981,7 +23981,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries prefetch tasks by time, task status, or prefetch URL.</para>
+        /// <para>Queries the details of prefetch tasks. Supports paged query by time, task status, and prefetch URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24019,7 +24019,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries prefetch tasks by time, task status, or prefetch URL.</para>
+        /// <para>Queries the details of prefetch tasks. Supports paged query by time, task status, and prefetch URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24037,7 +24037,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries prefetch tasks by time, task status, or prefetch URL.</para>
+        /// <para>Queries the details of prefetch tasks. Supports paged query by time, task status, and prefetch URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24167,12 +24167,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a plan instance.</para>
+        /// <para>Invokes DescribeRatePlanInstanceStatus to query the instance status of a plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the status of a plan instance only after you purchase and create the instance.</para>
+        /// <para>You can query the instance status of a plan only after you purchase and create the plan instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24218,12 +24218,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a plan instance.</para>
+        /// <para>Invokes DescribeRatePlanInstanceStatus to query the instance status of a plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the status of a plan instance only after you purchase and create the instance.</para>
+        /// <para>You can query the instance status of a plan only after you purchase and create the plan instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24269,12 +24269,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a plan instance.</para>
+        /// <para>Invokes DescribeRatePlanInstanceStatus to query the instance status of a plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the status of a plan instance only after you purchase and create the instance.</para>
+        /// <para>You can query the instance status of a plan only after you purchase and create the plan instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24292,12 +24292,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of a plan instance.</para>
+        /// <para>Invokes DescribeRatePlanInstanceStatus to query the instance status of a plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query the status of a plan instance only after you purchase and create the instance.</para>
+        /// <para>You can query the instance status of a plan only after you purchase and create the plan instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24747,15 +24747,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the URLs from which you can download the raw access logs of a website.</para>
+        /// <para>Queries the download URLs of raw access logs for a specified site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you do not specify StartTime and EndTime, log data from the last 24 hours is returned by default. If you specify StartTime and EndTime, log data for the specified time range is returned.</description></item>
-        /// <item><description>The time granularity for data queries is one hour.</description></item>
-        /// <item><description>The maximum number of calls per user: 50 calls per second.</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, log data from the past 24 hours is returned by default. If you specify StartTime and EndTime, logs are queried based on the specified time range.</description></item>
+        /// <item><description>The time granularity for querying data is one hour.</description></item>
+        /// <item><description>The maximum number of times that each user can call this operation per second: 50.</description></item>
         /// <item><description>Only log records from the last month can be queried (the time span between the start time and the current time cannot exceed 31 days).</description></item>
         /// </list>
         /// </description>
@@ -24815,15 +24815,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the URLs from which you can download the raw access logs of a website.</para>
+        /// <para>Queries the download URLs of raw access logs for a specified site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you do not specify StartTime and EndTime, log data from the last 24 hours is returned by default. If you specify StartTime and EndTime, log data for the specified time range is returned.</description></item>
-        /// <item><description>The time granularity for data queries is one hour.</description></item>
-        /// <item><description>The maximum number of calls per user: 50 calls per second.</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, log data from the past 24 hours is returned by default. If you specify StartTime and EndTime, logs are queried based on the specified time range.</description></item>
+        /// <item><description>The time granularity for querying data is one hour.</description></item>
+        /// <item><description>The maximum number of times that each user can call this operation per second: 50.</description></item>
         /// <item><description>Only log records from the last month can be queried (the time span between the start time and the current time cannot exceed 31 days).</description></item>
         /// </list>
         /// </description>
@@ -24883,15 +24883,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the URLs from which you can download the raw access logs of a website.</para>
+        /// <para>Queries the download URLs of raw access logs for a specified site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you do not specify StartTime and EndTime, log data from the last 24 hours is returned by default. If you specify StartTime and EndTime, log data for the specified time range is returned.</description></item>
-        /// <item><description>The time granularity for data queries is one hour.</description></item>
-        /// <item><description>The maximum number of calls per user: 50 calls per second.</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, log data from the past 24 hours is returned by default. If you specify StartTime and EndTime, logs are queried based on the specified time range.</description></item>
+        /// <item><description>The time granularity for querying data is one hour.</description></item>
+        /// <item><description>The maximum number of times that each user can call this operation per second: 50.</description></item>
         /// <item><description>Only log records from the last month can be queried (the time span between the start time and the current time cannot exceed 31 days).</description></item>
         /// </list>
         /// </description>
@@ -24911,15 +24911,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the URLs from which you can download the raw access logs of a website.</para>
+        /// <para>Queries the download URLs of raw access logs for a specified site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you do not specify StartTime and EndTime, log data from the last 24 hours is returned by default. If you specify StartTime and EndTime, log data for the specified time range is returned.</description></item>
-        /// <item><description>The time granularity for data queries is one hour.</description></item>
-        /// <item><description>The maximum number of calls per user: 50 calls per second.</description></item>
+        /// <item><description>If you do not specify StartTime and EndTime, log data from the past 24 hours is returned by default. If you specify StartTime and EndTime, logs are queried based on the specified time range.</description></item>
+        /// <item><description>The time granularity for querying data is one hour.</description></item>
+        /// <item><description>The maximum number of times that each user can call this operation per second: 50.</description></item>
         /// <item><description>Only log records from the last month can be queried (the time span between the start time and the current time cannot exceed 31 days).</description></item>
         /// </list>
         /// </description>
@@ -25371,22 +25371,22 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves time series data for WAF event analysis of a website.</para>
+        /// <para>Retrieves time series data for WAF event analysis of a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</description></item>
-        /// <item><description>The time granularity of the returned data varies based on the time span between StartTime and EndTime.<list type="bullet">
-        /// <item><description>Less than or equal to 3 hours: returns data at a 1-minute granularity.</description></item>
-        /// <item><description>Greater than 3 hours and less than or equal to 12 hours: returns data at a 5-minute granularity.</description></item>
-        /// <item><description>Greater than 12 hours and less than or equal to 1 day: returns data at a 15-minute granularity.</description></item>
-        /// <item><description>Greater than 1 day and less than or equal to 10 days: returns data at an hourly granularity.</description></item>
-        /// <item><description>Greater than 10 days and less than or equal to 31 days: returns data at a daily granularity.</description></item>
+        /// <item><description>The time granularity of returned data varies based on the time span between StartTime and EndTime.<list type="bullet">
+        /// <item><description>Less than or equal to 3 hours: returns data at 1-minute granularity.</description></item>
+        /// <item><description>Greater than 3 hours and less than or equal to 12 hours: returns data at 5-minute granularity.</description></item>
+        /// <item><description>Greater than 12 hours and less than or equal to 1 day: returns data at 15-minute granularity.</description></item>
+        /// <item><description>Greater than 1 day and less than or equal to 10 days: returns data at 1-hour granularity.</description></item>
+        /// <item><description>Greater than 10 days and less than or equal to 31 days: returns data at 1-day granularity.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Because the number of access requests during the query period may be large, the data analytics results may undergo sampling.</description></item>
+        /// <item><description>Because the number of access requests during the query period may be large, the data analytics results may be based on sampling.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25451,22 +25451,22 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves time series data for WAF event analysis of a website.</para>
+        /// <para>Retrieves time series data for WAF event analysis of a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</description></item>
-        /// <item><description>The time granularity of the returned data varies based on the time span between StartTime and EndTime.<list type="bullet">
-        /// <item><description>Less than or equal to 3 hours: returns data at a 1-minute granularity.</description></item>
-        /// <item><description>Greater than 3 hours and less than or equal to 12 hours: returns data at a 5-minute granularity.</description></item>
-        /// <item><description>Greater than 12 hours and less than or equal to 1 day: returns data at a 15-minute granularity.</description></item>
-        /// <item><description>Greater than 1 day and less than or equal to 10 days: returns data at an hourly granularity.</description></item>
-        /// <item><description>Greater than 10 days and less than or equal to 31 days: returns data at a daily granularity.</description></item>
+        /// <item><description>The time granularity of returned data varies based on the time span between StartTime and EndTime.<list type="bullet">
+        /// <item><description>Less than or equal to 3 hours: returns data at 1-minute granularity.</description></item>
+        /// <item><description>Greater than 3 hours and less than or equal to 12 hours: returns data at 5-minute granularity.</description></item>
+        /// <item><description>Greater than 12 hours and less than or equal to 1 day: returns data at 15-minute granularity.</description></item>
+        /// <item><description>Greater than 1 day and less than or equal to 10 days: returns data at 1-hour granularity.</description></item>
+        /// <item><description>Greater than 10 days and less than or equal to 31 days: returns data at 1-day granularity.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Because the number of access requests during the query period may be large, the data analytics results may undergo sampling.</description></item>
+        /// <item><description>Because the number of access requests during the query period may be large, the data analytics results may be based on sampling.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25531,22 +25531,22 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves time series data for WAF event analysis of a website.</para>
+        /// <para>Retrieves time series data for WAF event analysis of a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</description></item>
-        /// <item><description>The time granularity of the returned data varies based on the time span between StartTime and EndTime.<list type="bullet">
-        /// <item><description>Less than or equal to 3 hours: returns data at a 1-minute granularity.</description></item>
-        /// <item><description>Greater than 3 hours and less than or equal to 12 hours: returns data at a 5-minute granularity.</description></item>
-        /// <item><description>Greater than 12 hours and less than or equal to 1 day: returns data at a 15-minute granularity.</description></item>
-        /// <item><description>Greater than 1 day and less than or equal to 10 days: returns data at an hourly granularity.</description></item>
-        /// <item><description>Greater than 10 days and less than or equal to 31 days: returns data at a daily granularity.</description></item>
+        /// <item><description>The time granularity of returned data varies based on the time span between StartTime and EndTime.<list type="bullet">
+        /// <item><description>Less than or equal to 3 hours: returns data at 1-minute granularity.</description></item>
+        /// <item><description>Greater than 3 hours and less than or equal to 12 hours: returns data at 5-minute granularity.</description></item>
+        /// <item><description>Greater than 12 hours and less than or equal to 1 day: returns data at 15-minute granularity.</description></item>
+        /// <item><description>Greater than 1 day and less than or equal to 10 days: returns data at 1-hour granularity.</description></item>
+        /// <item><description>Greater than 10 days and less than or equal to 31 days: returns data at 1-day granularity.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Because the number of access requests during the query period may be large, the data analytics results may undergo sampling.</description></item>
+        /// <item><description>Because the number of access requests during the query period may be large, the data analytics results may be based on sampling.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25565,22 +25565,22 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves time series data for WAF event analysis of a website.</para>
+        /// <para>Retrieves time series data for WAF event analysis of a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</description></item>
-        /// <item><description>The time granularity of the returned data varies based on the time span between StartTime and EndTime.<list type="bullet">
-        /// <item><description>Less than or equal to 3 hours: returns data at a 1-minute granularity.</description></item>
-        /// <item><description>Greater than 3 hours and less than or equal to 12 hours: returns data at a 5-minute granularity.</description></item>
-        /// <item><description>Greater than 12 hours and less than or equal to 1 day: returns data at a 15-minute granularity.</description></item>
-        /// <item><description>Greater than 1 day and less than or equal to 10 days: returns data at an hourly granularity.</description></item>
-        /// <item><description>Greater than 10 days and less than or equal to 31 days: returns data at a daily granularity.</description></item>
+        /// <item><description>The time granularity of returned data varies based on the time span between StartTime and EndTime.<list type="bullet">
+        /// <item><description>Less than or equal to 3 hours: returns data at 1-minute granularity.</description></item>
+        /// <item><description>Greater than 3 hours and less than or equal to 12 hours: returns data at 5-minute granularity.</description></item>
+        /// <item><description>Greater than 12 hours and less than or equal to 1 day: returns data at 15-minute granularity.</description></item>
+        /// <item><description>Greater than 1 day and less than or equal to 10 days: returns data at 1-hour granularity.</description></item>
+        /// <item><description>Greater than 10 days and less than or equal to 31 days: returns data at 1-day granularity.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Because the number of access requests during the query period may be large, the data analytics results may undergo sampling.</description></item>
+        /// <item><description>Because the number of access requests during the query period may be large, the data analytics results may be based on sampling.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26135,6 +26135,174 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUrlObservationDataWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resource plan information of the current user by calling DescribeUserResourcePackage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserResourcePackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserResourcePackageResponse
+        /// </returns>
+        public DescribeUserResourcePackageResponse DescribeUserResourcePackageWithOptions(DescribeUserResourcePackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
+            {
+                query["SortField"] = request.SortField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortRule))
+            {
+                query["SortRule"] = request.SortRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserResourcePackage",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserResourcePackageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resource plan information of the current user by calling DescribeUserResourcePackage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserResourcePackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserResourcePackageResponse
+        /// </returns>
+        public async Task<DescribeUserResourcePackageResponse> DescribeUserResourcePackageWithOptionsAsync(DescribeUserResourcePackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
+            {
+                query["SortField"] = request.SortField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortRule))
+            {
+                query["SortRule"] = request.SortRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserResourcePackage",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserResourcePackageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resource plan information of the current user by calling DescribeUserResourcePackage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserResourcePackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserResourcePackageResponse
+        /// </returns>
+        public DescribeUserResourcePackageResponse DescribeUserResourcePackage(DescribeUserResourcePackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserResourcePackageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the resource plan information of the current user by calling DescribeUserResourcePackage.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserResourcePackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserResourcePackageResponse
+        /// </returns>
+        public async Task<DescribeUserResourcePackageResponse> DescribeUserResourcePackageAsync(DescribeUserResourcePackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserResourcePackageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32151,7 +32319,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the value and time to live (TTL) of a key.</para>
+        /// <para>Queries the value and TTL information of a key-value pair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32197,7 +32365,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the value and time to live (TTL) of a key.</para>
+        /// <para>Queries the value and TTL information of a key-value pair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32243,7 +32411,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the value and time to live (TTL) of a key.</para>
+        /// <para>Queries the value and TTL information of a key-value pair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32261,7 +32429,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the value and time to live (TTL) of a key.</para>
+        /// <para>Queries the value and TTL information of a key-value pair.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32279,7 +32447,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specific namespace.</para>
+        /// <para>Queries the information of a KV namespace under an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32317,7 +32485,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specific namespace.</para>
+        /// <para>Queries the information of a KV namespace under an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32355,7 +32523,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specific namespace.</para>
+        /// <para>Queries the information of a KV namespace under an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32373,7 +32541,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specific namespace.</para>
+        /// <para>Queries the information of a KV namespace under an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32643,7 +32811,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the root domain name of a website.</para>
+        /// <para>Retrieves the primary domain name based on the specified site name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32681,7 +32849,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the root domain name of a website.</para>
+        /// <para>Retrieves the primary domain name based on the specified site name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32719,7 +32887,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the root domain name of a website.</para>
+        /// <para>Retrieves the primary domain name based on the specified site name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32737,7 +32905,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the root domain name of a website.</para>
+        /// <para>Retrieves the primary domain name based on the specified site name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34611,6 +34779,126 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetRedirectRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduled automatic release time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetReleaseTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetReleaseTimeResponse
+        /// </returns>
+        public GetReleaseTimeResponse GetReleaseTimeWithOptions(GetReleaseTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetReleaseTime",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetReleaseTimeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduled automatic release time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetReleaseTimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetReleaseTimeResponse
+        /// </returns>
+        public async Task<GetReleaseTimeResponse> GetReleaseTimeWithOptionsAsync(GetReleaseTimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetReleaseTime",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetReleaseTimeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduled automatic release time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetReleaseTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetReleaseTimeResponse
+        /// </returns>
+        public GetReleaseTimeResponse GetReleaseTime(GetReleaseTimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetReleaseTimeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the scheduled automatic release time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetReleaseTimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetReleaseTimeResponse
+        /// </returns>
+        public async Task<GetReleaseTimeResponse> GetReleaseTimeAsync(GetReleaseTimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetReleaseTimeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -36547,7 +36835,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a real-time log delivery task.</para>
+        /// <para>Retrieves the configuration information of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36585,7 +36873,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a real-time log delivery task.</para>
+        /// <para>Retrieves the configuration information of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36623,7 +36911,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a real-time log delivery task.</para>
+        /// <para>Retrieves the configuration information of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36641,7 +36929,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a real-time log delivery task.</para>
+        /// <para>Retrieves the configuration information of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37759,14 +38047,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the delivery configuration and status of a task for a specific user.</para>
+        /// <para>Queries the delivery configuration and status information of a specified task for a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Function</b>: This operation retrieves detailed delivery information for a specific task of an Alibaba Cloud user, including the task name, discard rate, region, business type, status, delivery type, delivery configuration, and filter rules.</description></item>
-        /// <item><description><b>Use case</b>: Use this operation to review the log processing and delivery configuration for a specific task. This helps you analyze processing efficiency or troubleshoot issues.</description></item>
+        /// <item><description><b>Features</b>: This operation retrieves the detailed delivery information of a specified task under an Alibaba Cloud account, including the task name, discard rate, region, business type, status, delivery type and configuration, and filter rules.</description></item>
+        /// <item><description><b>Scenarios</b>: Use this operation when you need to understand or check the log processing and delivery configuration of a specific task for analyzing processing efficiency or troubleshooting issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37805,14 +38093,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the delivery configuration and status of a task for a specific user.</para>
+        /// <para>Queries the delivery configuration and status information of a specified task for a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Function</b>: This operation retrieves detailed delivery information for a specific task of an Alibaba Cloud user, including the task name, discard rate, region, business type, status, delivery type, delivery configuration, and filter rules.</description></item>
-        /// <item><description><b>Use case</b>: Use this operation to review the log processing and delivery configuration for a specific task. This helps you analyze processing efficiency or troubleshoot issues.</description></item>
+        /// <item><description><b>Features</b>: This operation retrieves the detailed delivery information of a specified task under an Alibaba Cloud account, including the task name, discard rate, region, business type, status, delivery type and configuration, and filter rules.</description></item>
+        /// <item><description><b>Scenarios</b>: Use this operation when you need to understand or check the log processing and delivery configuration of a specific task for analyzing processing efficiency or troubleshooting issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37851,14 +38139,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the delivery configuration and status of a task for a specific user.</para>
+        /// <para>Queries the delivery configuration and status information of a specified task for a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Function</b>: This operation retrieves detailed delivery information for a specific task of an Alibaba Cloud user, including the task name, discard rate, region, business type, status, delivery type, delivery configuration, and filter rules.</description></item>
-        /// <item><description><b>Use case</b>: Use this operation to review the log processing and delivery configuration for a specific task. This helps you analyze processing efficiency or troubleshoot issues.</description></item>
+        /// <item><description><b>Features</b>: This operation retrieves the detailed delivery information of a specified task under an Alibaba Cloud account, including the task name, discard rate, region, business type, status, delivery type and configuration, and filter rules.</description></item>
+        /// <item><description><b>Scenarios</b>: Use this operation when you need to understand or check the log processing and delivery configuration of a specific task for analyzing processing efficiency or troubleshooting issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37877,14 +38165,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the delivery configuration and status of a task for a specific user.</para>
+        /// <para>Queries the delivery configuration and status information of a specified task for a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Function</b>: This operation retrieves detailed delivery information for a specific task of an Alibaba Cloud user, including the task name, discard rate, region, business type, status, delivery type, delivery configuration, and filter rules.</description></item>
-        /// <item><description><b>Use case</b>: Use this operation to review the log processing and delivery configuration for a specific task. This helps you analyze processing efficiency or troubleshoot issues.</description></item>
+        /// <item><description><b>Features</b>: This operation retrieves the detailed delivery information of a specified task under an Alibaba Cloud account, including the task name, discard rate, region, business type, status, delivery type and configuration, and filter rules.</description></item>
+        /// <item><description><b>Scenarios</b>: Use this operation when you need to understand or check the log processing and delivery configuration of a specific task for analyzing processing efficiency or troubleshooting issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39295,7 +39583,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步任务列表</para>
+        /// <para>Queries the list of asynchronous tasks. You can use this operation to query the status of asynchronous tasks triggered by users, such as free certificate applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39333,7 +39621,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步任务列表</para>
+        /// <para>Queries the list of asynchronous tasks. You can use this operation to query the status of asynchronous tasks triggered by users, such as free certificate applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39371,7 +39659,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步任务列表</para>
+        /// <para>Queries the list of asynchronous tasks. You can use this operation to query the status of asynchronous tasks triggered by users, such as free certificate applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39389,7 +39677,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询异步任务列表</para>
+        /// <para>Queries the list of asynchronous tasks. You can use this operation to query the status of asynchronous tasks triggered by users, such as free certificate applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43547,7 +43835,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all key-value pairs in a specified KV storage namespace under your account.</para>
+        /// <para>Lists all key-value pairs in a specified KV namespace under the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43585,7 +43873,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all key-value pairs in a specified KV storage namespace under your account.</para>
+        /// <para>Lists all key-value pairs in a specified KV namespace under the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43623,7 +43911,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all key-value pairs in a specified KV storage namespace under your account.</para>
+        /// <para>Lists all key-value pairs in a specified KV namespace under the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43641,7 +43929,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all key-value pairs in a specified KV storage namespace under your account.</para>
+        /// <para>Lists all key-value pairs in a specified KV namespace under the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46715,7 +47003,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists scheduled prefetch tasks for a site.</para>
+        /// <para>Lists the scheduled prefetch tasks for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46753,7 +47041,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists scheduled prefetch tasks for a site.</para>
+        /// <para>Lists the scheduled prefetch tasks for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46791,7 +47079,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists scheduled prefetch tasks for a site.</para>
+        /// <para>Lists the scheduled prefetch tasks for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46809,7 +47097,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists scheduled prefetch tasks for a site.</para>
+        /// <para>Lists the scheduled prefetch tasks for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50935,7 +51223,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches resources.</para>
+        /// <para>Prefetches URLs to warm the cache.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50995,7 +51283,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches resources.</para>
+        /// <para>Prefetches URLs to warm the cache.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51055,7 +51343,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches resources.</para>
+        /// <para>Prefetches URLs to warm the cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51073,7 +51361,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches resources.</para>
+        /// <para>Prefetches URLs to warm the cache.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51735,7 +52023,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新购DDoS实例</para>
+        /// <para>Purchases a new Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51789,7 +52077,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新购DDoS实例</para>
+        /// <para>Purchases a new Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51843,7 +52131,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新购DDoS实例</para>
+        /// <para>Purchases a new Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51861,7 +52149,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新购DDoS实例</para>
+        /// <para>Purchases a new Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55831,8 +56119,8 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a single scheduled preload execution plan based on the preload plan ID.
-        /// Prerequisites: (1) This API only takes effect when the execution plan status is running. Execution plans in the waiting or failed status cannot be stopped. (2) Whether an execution plan can reach the running status depends on whether the site it belongs to has completed access verification (site Status=active).</para>
+        /// <para>Stops a single scheduled prefetch plan by prefetch plan ID.
+        /// Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the associated site has passed the access verification (site Status=active).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55874,8 +56162,8 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a single scheduled preload execution plan based on the preload plan ID.
-        /// Prerequisites: (1) This API only takes effect when the execution plan status is running. Execution plans in the waiting or failed status cannot be stopped. (2) Whether an execution plan can reach the running status depends on whether the site it belongs to has completed access verification (site Status=active).</para>
+        /// <para>Stops a single scheduled prefetch plan by prefetch plan ID.
+        /// Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the associated site has passed the access verification (site Status=active).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55917,8 +56205,8 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a single scheduled preload execution plan based on the preload plan ID.
-        /// Prerequisites: (1) This API only takes effect when the execution plan status is running. Execution plans in the waiting or failed status cannot be stopped. (2) Whether an execution plan can reach the running status depends on whether the site it belongs to has completed access verification (site Status=active).</para>
+        /// <para>Stops a single scheduled prefetch plan by prefetch plan ID.
+        /// Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the associated site has passed the access verification (site Status=active).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55936,8 +56224,8 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a single scheduled preload execution plan based on the preload plan ID.
-        /// Prerequisites: (1) This API only takes effect when the execution plan status is running. Execution plans in the waiting or failed status cannot be stopped. (2) Whether an execution plan can reach the running status depends on whether the site it belongs to has completed access verification (site Status=active).</para>
+        /// <para>Stops a single scheduled prefetch plan by prefetch plan ID.
+        /// Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the associated site has passed the access verification (site Status=active).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56075,7 +56363,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a purge or prefetch task after a file that contains resources to be purged or prefetched is uploaded.</para>
+        /// <para>Starts a cache purge or prefetch task after the file is uploaded successfully.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56113,7 +56401,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a purge or prefetch task after a file that contains resources to be purged or prefetched is uploaded.</para>
+        /// <para>Starts a cache purge or prefetch task after the file is uploaded successfully.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56151,7 +56439,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a purge or prefetch task after a file that contains resources to be purged or prefetched is uploaded.</para>
+        /// <para>Starts a cache purge or prefetch task after the file is uploaded successfully.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56169,7 +56457,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a purge or prefetch task after a file that contains resources to be purged or prefetched is uploaded.</para>
+        /// <para>Starts a cache purge or prefetch task after the file is uploaded successfully.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63863,7 +64151,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a scheduled prefetch plan by prefetch plan ID.</para>
+        /// <para>Updates a scheduled prefetch plan based on the prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63923,7 +64211,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a scheduled prefetch plan by prefetch plan ID.</para>
+        /// <para>Updates a scheduled prefetch plan based on the prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63983,7 +64271,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a scheduled prefetch plan by prefetch plan ID.</para>
+        /// <para>Updates a scheduled prefetch plan based on the prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64001,7 +64289,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a scheduled prefetch plan by prefetch plan ID.</para>
+        /// <para>Updates a scheduled prefetch plan based on the prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64611,7 +64899,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a site delivery task.</para>
+        /// <para>Modifies the delivery settings of a real-time log task for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64673,7 +64961,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a site delivery task.</para>
+        /// <para>Modifies the delivery settings of a real-time log task for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64735,7 +65023,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a site delivery task.</para>
+        /// <para>Modifies the delivery settings of a real-time log task for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64753,7 +65041,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a site delivery task.</para>
+        /// <para>Modifies the delivery settings of a real-time log task for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">

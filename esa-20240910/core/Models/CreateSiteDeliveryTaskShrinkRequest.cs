@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The business type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>dcdn_log_access_l1</b> (default): Access logs.</description></item>
-        /// <item><description><b>dcdn_log_er</b>: Edge Routine logs.</description></item>
-        /// <item><description><b>dcdn_log_waf</b>: Security protection logs.</description></item>
+        /// <item><description><b>dcdn_log_access_l1</b> (default): access logs.</description></item>
+        /// <item><description><b>dcdn_log_er</b>: Edge Routine function logs.</description></item>
+        /// <item><description><b>dcdn_log_waf</b>: security protection logs.</description></item>
         /// <item><description><b>dcdn_log_ipa</b>: Layer 4 acceleration logs.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The data center. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn</b>: The Chinese mainland.</description></item>
-        /// <item><description><b>oversea</b>: Outside the Chinese mainland.</description></item>
+        /// <item><description><b>cn</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>oversea</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The delivery type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sls</b>: Simple Log Service.</description></item>
+        /// <item><description><b>sls</b>: Alibaba Cloud Simple Log Service.</description></item>
         /// <item><description><b>http</b>: HTTP service.</description></item>
-        /// <item><description><b>aws3</b>: Amazon S3.</description></item>
-        /// <item><description><b>oss</b>: Object Storage Service (OSS).</description></item>
+        /// <item><description><b>aws3</b>: Amazon S3 service.</description></item>
+        /// <item><description><b>oss</b>: Alibaba Cloud Object Storage Service.</description></item>
         /// <item><description><b>kafka</b>: Kafka service.</description></item>
         /// <item><description><b>aws3cmpt</b>: Amazon S3-compatible service.</description></item>
         /// </list>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DeliveryType { get; set; }
 
         /// <summary>
-        /// <para>The discard rate. If you do not specify this parameter, the default value is 0.</para>
+        /// <para>The discard rate. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? DiscardRate { get; set; }
 
         /// <summary>
-        /// <para>The log fields to be delivered, separated by commas (,).</para>
+        /// <para>The selected log fields, separated by commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +80,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string FieldName { get; set; }
 
+        /// <summary>
+        /// <para>The filter rule version.</para>
+        /// <remarks>
+        /// <para>For backward compatibility with legacy filter rules, the default value is v1. New tasks use v2.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v2</para>
+        /// </summary>
         [NameInMap("FilterVer")]
         [Validation(Required=false)]
         public string FilterVer { get; set; }
@@ -106,14 +115,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OssDeliveryShrink { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters for S3 or S3-compatible delivery.</para>
+        /// <para>The S3/S3-compatible delivery configuration parameters.</para>
         /// </summary>
         [NameInMap("S3Delivery")]
         [Validation(Required=false)]
         public string S3DeliveryShrink { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the site ID.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,14 +133,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service delivery configuration.</para>
+        /// <para>The SLS delivery configuration.</para>
         /// </summary>
         [NameInMap("SlsDelivery")]
         [Validation(Required=false)]
         public string SlsDeliveryShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the task.</para>
+        /// <para>The task name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

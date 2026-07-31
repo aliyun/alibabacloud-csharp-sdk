@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class WafRuleMatch : TeaModel {
         /// <summary>
-        /// <para>值大小写不敏感。</para>
+        /// <para>Specifies whether the value is case-insensitive.</para>
         /// </summary>
         [NameInMap("ConvertToLower")]
         [Validation(Required=false)]
         public bool? ConvertToLower { get; set; }
 
         /// <summary>
-        /// <para>逻辑列表。</para>
+        /// <para>The logic list.</para>
         /// </summary>
         [NameInMap("Criteria")]
         [Validation(Required=false)]
         public List<WafRuleMatch> Criteria { get; set; }
 
         /// <summary>
-        /// <para>逻辑关系。</para>
+        /// <para>The logic relationship.</para>
         /// 
         /// <b>Example:</b>
         /// <para>and</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Logic { get; set; }
 
         /// <summary>
-        /// <para>匹配符。</para>
+        /// <para>The match operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eq</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string MatchOperator { get; set; }
 
         /// <summary>
-        /// <para>匹配域。</para>
+        /// <para>The match field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip.src</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string MatchType { get; set; }
 
         /// <summary>
-        /// <para>匹配值。</para>
+        /// <para>The match value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.1.1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public object MatchValue { get; set; }
 
         /// <summary>
-        /// <para>匹配结果取反。</para>
+        /// <para>Specifies whether to negate the match result.</para>
         /// </summary>
         [NameInMap("Negate")]
         [Validation(Required=false)]

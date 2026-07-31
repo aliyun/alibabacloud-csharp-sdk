@@ -12,14 +12,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The business type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>dcdn_log_access_l1</b> (default): access log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_er</b>: edge function log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_waf</b>: WAF log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_ipa</b>: Layer 4 acceleration log.</para>
-        /// </description></item>
+        /// <item><description><b>dcdn_log_access_l1</b> (default): access logs.</description></item>
+        /// <item><description><b>dcdn_log_er</b>: Edge Routine function logs.</description></item>
+        /// <item><description><b>dcdn_log_waf</b>: security protection logs.</description></item>
+        /// <item><description><b>dcdn_log_ipa</b>: Layer 4 acceleration logs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,10 +28,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The data center. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn</b>: Chinese mainland</para>
-        /// </description></item>
-        /// <item><description><para><b>sg</b>: Global (excluding the Chinese mainland)</para>
-        /// </description></item>
+        /// <item><description><b>cn</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>sg</b>: global (excluding the Chinese mainland).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,18 +42,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The delivery type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>sls</b>: Log Service</para>
-        /// </description></item>
-        /// <item><description><para><b>http</b>: HTTP service</para>
-        /// </description></item>
-        /// <item><description><para><b>aws3</b>: Amazon S3</para>
-        /// </description></item>
-        /// <item><description><para><b>oss</b>: OSS</para>
-        /// </description></item>
-        /// <item><description><para><b>kafka</b>: Kafka service</para>
-        /// </description></item>
-        /// <item><description><para><b>aws3cmpt</b>: Amazon S3-compatible service</para>
-        /// </description></item>
+        /// <item><description><b>sls</b>: Alibaba Cloud Simple Log Service.</description></item>
+        /// <item><description><b>http</b>: HTTP service.</description></item>
+        /// <item><description><b>aws3</b>: Amazon S3 service.</description></item>
+        /// <item><description><b>oss</b>: Alibaba Cloud Object Storage Service.</description></item>
+        /// <item><description><b>kafka</b>: Kafka service.</description></item>
+        /// <item><description><b>aws3cmpt</b>: Amazon S3-compatible service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,6 +57,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string DeliveryType { get; set; }
 
+        /// <summary>
+        /// <para>The list of Edge Routine PODs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx,xxx</para>
+        /// </summary>
         [NameInMap("Details")]
         [Validation(Required=false)]
         public string Details { get; set; }
@@ -84,7 +78,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? DiscardRate { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of fields.</para>
+        /// <para>The field array.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ClientRequestID,ClientRequestHost</para>
@@ -103,10 +97,39 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string FilterRules { get; set; }
 
+        /// <summary>
+        /// <para>The version of the filter rules.</para>
+        /// <remarks>
+        /// <para>For backward compatibility with legacy filter rules, the default value is v1. Newly created rules use v2.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v2</para>
+        /// </summary>
         [NameInMap("FilterVer")]
         [Validation(Required=false)]
         public string FilterVer { get; set; }
 
+        /// <summary>
+        /// <para>The filter rules for the delivery task.</para>
+        /// <remarks>
+        /// <para>New version of delivery filter rules.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///   &quot;where&quot;: {
+        ///     &quot;or&quot;: [
+        ///       {
+        ///         &quot;and&quot;: [
+        ///           { &quot;key&quot;: &quot;site&quot;, &quot;operator&quot;: &quot;eq&quot;, &quot;value&quot;: &quot;example.com&quot; },
+        ///           { &quot;key&quot;: &quot;status_code&quot;, &quot;operator&quot;: &quot;in&quot;, &quot;value&quot;: [&quot;200&quot;, &quot;304&quot;] }
+        ///         ]
+        ///       }
+        ///     ]
+        ///   }
+        /// }</para>
+        /// </summary>
         [NameInMap("RawRule")]
         [Validation(Required=false)]
         public string RawRule { get; set; }

@@ -52,13 +52,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The status of the KV namespace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>online</b>: The namespace is available.</para>
+        /// <item><description><para><b>online</b>: Normal.</para>
         /// </description></item>
-        /// <item><description><para><b>delete</b>: The namespace is pending deletion.</para>
+        /// <item><description><para><b>delete</b>: Pending deletion.</para>
         /// </description></item>
-        /// <item><description><para><b>deleting</b>: The namespace is being deleted.</para>
+        /// <item><description><para><b>deleting</b>: Being deleted.</para>
         /// </description></item>
-        /// <item><description><para><b>deleted</b>: The namespace is deleted.</para>
+        /// <item><description><para><b>deleted</b>: Deleted.</para>
         /// </description></item>
         /// </list>
         /// 

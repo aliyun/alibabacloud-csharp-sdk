@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Domains { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned if a fault occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>invalid domain:test.com</para>
@@ -80,7 +80,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The URL insertion method.</para>
+        /// <para>The URL insertion method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>oss: Import URLs in bulk from an OSS file.</description></item>
+        /// <item><description>testBox: Enter URLs one by one in a text box.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>oss</para>
@@ -130,7 +134,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TaskSubmitted { get; set; }
 
         /// <summary>
-        /// <para>The task type (refresh or prefetch).</para>
+        /// <para>The task type (refresh or prefetch). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>path: Directory refresh.</description></item>
+        /// <item><description>refresh: URL refresh.</description></item>
+        /// <item><description>preload: URL prefetch.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>preload</para>

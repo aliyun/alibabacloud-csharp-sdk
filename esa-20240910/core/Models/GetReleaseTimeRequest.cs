@@ -8,17 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class GetMainDomainNameRequest : TeaModel {
+    public class GetReleaseTimeRequest : TeaModel {
         /// <summary>
-        /// <para>The site name.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sub.example.com</para>
+        /// <para>esa-ddos-2sdj**3s</para>
         /// </summary>
-        [NameInMap("SiteName")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string SiteName { get; set; }
+        public string InstanceId { get; set; }
 
     }
 

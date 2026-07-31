@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PurchaseDDoSInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The billing method.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DDoSBillingMode { get; set; }
 
         /// <summary>
+        /// <para>The instance specifications for the Chinese mainland.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DDoSBurstableDomesticProtection { get; set; }
 
         /// <summary>
+        /// <para>The instance specifications for outside China.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DDoSBurstableOverseasProtection { get; set; }
 
         /// <summary>
+        /// <para>The site instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description>running: Running.</description></item>
         /// <item><description>renewing: Being renewed.</description></item>
         /// <item><description>upgrading: Being upgraded.</description></item>
-        /// <item><description>releasePrepaidService: Released due to prepaid expiration.</description></item>
+        /// <item><description>releasePrepaidService: Released due to subscription expiration.</description></item>
         /// <item><description>creating: Being created.</description></item>
         /// <item><description>downgrading: Being downgraded.</description></item>
-        /// <item><description>ceasePrepaidService: Suspended due to prepaid expiration.</description></item>
+        /// <item><description>ceasePrepaidService: Suspended due to subscription expiration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

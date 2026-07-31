@@ -78,9 +78,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The task execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Complete</b>: Completed.</description></item>
-        /// <item><description><b>Refreshing</b>: Refreshing.</description></item>
-        /// <item><description><b>Failed</b>: Refresh failed.</description></item>
+        /// <item><description><b>Complete</b>: completed.</description></item>
+        /// <item><description><b>Refreshing</b>: refreshing.</description></item>
+        /// <item><description><b>Failed</b>: refresh failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

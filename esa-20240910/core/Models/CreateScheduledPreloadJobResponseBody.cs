@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The list of prefetch domains.</para>
+        /// <para>The list of domain names for prefetch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testurl.com</para>
@@ -40,12 +40,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Domains { get; set; }
 
         /// <summary>
-        /// <para>The error information. Multiple errors are separated by commas:</para>
+        /// <para>The error message. Multiple faults are separated by commas. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>InvalidUrl</b>: The URL format is invalid.</description></item>
-        /// <item><description><b>InvalidDomain</b>: The domain ownership verification failed.</description></item>
-        /// <item><description><b>QuotaExcess</b>: The quota limit has been exceeded.</description></item>
-        /// <item><description><b>OtherErrors</b>: Other errors.</description></item>
+        /// <item><description><b>InvalidDomain</b>: The domain name ownership verification failed.</description></item>
+        /// <item><description><b>QuotaExcess</b>: The quota limit is exceeded.</description></item>
+        /// <item><description><b>OtherErrors</b>: Other faults.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FailedFileOss { get; set; }
 
         /// <summary>
-        /// <para>The URL list file ID, used for downloading.</para>
+        /// <para>The URL list file ID, which is used for download.</para>
         /// 
         /// <b>Example:</b>
         /// <para>665d3b48621bccf3fe29e1a7</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The number of URLs that have been submitted to the system for prefetch tasks.</para>
+        /// <para>The number of URLs that have been submitted to the system for prefetch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

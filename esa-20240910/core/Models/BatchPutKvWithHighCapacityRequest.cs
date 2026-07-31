@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchPutKvWithHighCapacityRequest : TeaModel {
         /// <summary>
-        /// <para>The namespace name specified when you called <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</para>
+        /// <para>The name specified when you called <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <list type="bullet">
         /// <item><description><para>If you use an SDK, the SDK automatically uploads the file and generates the URL.</para>
         /// </description></item>
-        /// <item><description><para>In non-SDK scenarios, upload the JSON payload to any publicly accessible HTTP service and specify the URL.</para>
+        /// <item><description><para>In non-SDK scenarios, upload the JSON payload to any publicly accessible HTTP service and provide the URL.</para>
         /// </description></item>
         /// </list>
-        /// <para>The file content pointed to by the URL must be in the following JSON format: {&quot;Namespace&quot;:&quot;<namespace name>&quot;,&quot;KvList&quot;:[{&quot;Key&quot;:&quot;<key>&quot;,&quot;Value&quot;:&quot;<value>&quot;},...]}.If the URL content does not match this format, the API silently returns an empty SuccessKeys array.</para>
+        /// <para>The file content pointed to by the URL must be in the following JSON format: {&quot;Namespace&quot;:&quot;<namespace_name>&quot;,&quot;KvList&quot;:[{&quot;Key&quot;:&quot;<key>&quot;,&quot;Value&quot;:&quot;<value>&quot;},...]}.If the URL content does not conform to this format, the API silently returns an empty SuccessKeys array.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

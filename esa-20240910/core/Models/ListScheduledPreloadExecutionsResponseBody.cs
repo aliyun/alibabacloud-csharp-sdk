@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The interval between each batch execution of the scheduled prefetch plan. Unit: seconds.</para>
+            /// <para>The interval between each batch execution of the scheduled prefetch plan, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>

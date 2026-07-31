@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetMainDomainNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The level of the domain name.</para>
+        /// <para>The level of the input domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? DomainLevel { get; set; }
 
         /// <summary>
-        /// <para>The root domain name.</para>
+        /// <para>The primary domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string MainDomainName { get; set; }
 
         /// <summary>
-        /// <para>The host record.</para>
+        /// <para>The host record information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sub</para>

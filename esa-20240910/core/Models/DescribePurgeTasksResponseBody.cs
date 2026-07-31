@@ -89,11 +89,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Complete</b>: Completed.</para>
+            /// <item><description><para><b>Complete</b>: completed.</para>
             /// </description></item>
-            /// <item><description><para><b>Refreshing</b>: Refreshing.</para>
+            /// <item><description><para><b>Refreshing</b>: refreshing.</para>
             /// </description></item>
-            /// <item><description><para><b>Failed</b>: Refresh failed.</para>
+            /// <item><description><para><b>Failed</b>: refresh failed.</para>
             /// </description></item>
             /// </list>
             /// 

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of keys that were written.</para>
+        /// <para>The list of keys that were written successfully.</para>
         /// </summary>
         [NameInMap("SuccessKeys")]
         [Validation(Required=false)]

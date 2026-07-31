@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateKvNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>An optional description for the KV namespace.</para>
+        /// <para>The description of the KV namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a test namespace.</para>

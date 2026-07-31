@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PostStart { get; set; }
 
             /// <summary>
-            /// <para>The command to execute before the container stops. Separate multiple commands with spaces. This command is executed before the service exits and is typically used for cleanup operations.</para>
+            /// <para>The command to execute before the container stops. Separate multiple commands with spaces. This command is executed before the service exits and is typically used for cleanup operations before exit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sh prestop.sh &quot;echo hello world&quot;</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>具体字段可参照k8s官方就绪探针的定义。</para>
+            /// <para>For specific fields, refer to the official Kubernetes readiness probe definition</para>
             /// </summary>
             [NameInMap("ProbeContent")]
             [Validation(Required=false)]
@@ -282,10 +282,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string HttpHeaders { get; set; }
 
                 /// <summary>
-                /// <para>The initial delay time for the container probe, in seconds. For example, 5 indicates that the initial delay is set to 5 seconds.</para>
+                /// <para>The initial delay time for the container probe. Unit: seconds. For example, 5 indicates that the initial delay time is set to 5 seconds.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1</para>
+                /// <para>5</para>
                 /// </summary>
                 [NameInMap("InitialDelaySeconds")]
                 [Validation(Required=false)]
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The interval between container health checks, in seconds. For example, 5 indicates that the health check interval is set to 5 seconds.</para>
+                /// <para>The interval for the container health check. Unit: seconds. For example, 5 indicates that the health check interval is set to 5 seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? SuccessThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The timeout period for the container health check, in seconds. For example, 5 indicates that the timeout is set to 5 seconds.</para>
+                /// <para>The timeout period for the container health check. Unit: seconds. For example, 5 indicates that the timeout period is set to 5 seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -357,8 +357,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The probe type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>exec</b>: Command-based.</description></item>
-            /// <item><description><b>tcpSocket</b>: TCP-based.</description></item>
-            /// <item><description><b>httpGet</b>: HTTP-based.</description></item>
+            /// <item><description><b>tcpSocket</b>: TCP detection-based.</description></item>
+            /// <item><description><b>httpGet</b>: HTTP access-based.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ProbeType { get; set; }
 
             /// <summary>
-            /// <para>The container specifications. Specifies the computing power specifications. Valid values: 1C2G, 2C4G, 2C8G, 4C8G, 4C16G, 8C16G, and 8C32G.</para>
+            /// <para>The container specifications. Specifies the computing specifications. Valid values: 1C2G, 2C4G, 2C8G, 4C8G, 4C16G, 8C16G, and 8C32G.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
