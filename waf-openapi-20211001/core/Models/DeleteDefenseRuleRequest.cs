@@ -10,15 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DeleteDefenseRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the protection rule. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>template</b> (default): a protection rule template.</para>
-        /// </description></item>
-        /// <item><description><para><b>resource</b>: a rule for a protected object.</para>
-        /// </description></item>
-        /// <item><description><para><b>global</b>: a global rule.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The type of the protection rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>template</para>
@@ -30,7 +22,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,9 +50,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The protected object of the rule that you want to delete.</para>
+        /// <para>The protection object associated with the rule to delete.</para>
         /// <remarks>
-        /// <para>This parameter is required only when you set <b>DefenseType</b> to <b>resource</b>.</para>
+        /// <para>This parameter is required only when <b>DefenseType</b> is set to <b>resource</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,7 +63,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Resource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -81,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the protection rules that you want to delete. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the protection rules to delete. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,9 +84,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection rule template that you want to delete.</para>
+        /// <para>The ID of the protection template to delete.</para>
         /// <remarks>
-        /// <para>This parameter is required only when you set <b>DefenseType</b> to <b>template</b>.</para>
+        /// <para>This parameter is required only when <b>DefenseType</b> is set to <b>template</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

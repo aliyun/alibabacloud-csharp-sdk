@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecExamplesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of API security examples.</para>
+        /// <para>The list of samples.</para>
         /// </summary>
         [NameInMap("Examples")]
         [Validation(Required=false)]
         public List<DescribeApisecExamplesResponseBodyExamples> Examples { get; set; }
         public class DescribeApisecExamplesResponseBodyExamples : TeaModel {
             /// <summary>
-            /// <para>The complete URL of the API request.</para>
+            /// <para>The full request path.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.test.com/api/v1/hello.php?token=TkJGQw">http://www.test.com/api/v1/hello.php?token=TkJGQw</a></para>
@@ -27,18 +27,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiUrl { get; set; }
 
             /// <summary>
-            /// <para>The proof-of-concept (PoC) request.</para>
+            /// <para>The verification request.</para>
             /// </summary>
             [NameInMap("PocPayload")]
             [Validation(Required=false)]
             public string PocPayload { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the API request. Valid values:</para>
+            /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>http</b>: HTTP</para>
+            /// <item><description><para><b>http</b>: HTTP protocol.</para>
             /// </description></item>
-            /// <item><description><para><b>https</b>: HTTPS</para>
+            /// <item><description><para><b>https</b>: HTTPS protocol.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -50,25 +50,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The content of the sample request. This is a string converted from a JSON object that consists of a series of parameters. The JSON object contains the following fields:</para>
+            /// <para>The sample request content, which is a character string converted from a JSON format constructed with a series of parameters. The following fields are included:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>method</b>: the request method.</para>
-            /// </description></item>
-            /// <item><description><para><b>host</b>: the requested domain name.</para>
-            /// </description></item>
-            /// <item><description><para><b>header</b>: the request header.</para>
-            /// </description></item>
-            /// <item><description><para><b>server_port</b>: the service port.</para>
-            /// </description></item>
-            /// <item><description><para><b>body</b>: the request body.</para>
-            /// </description></item>
-            /// <item><description><para><b>url</b>: the URI of the request.</para>
-            /// </description></item>
-            /// <item><description><para><b>server_protocol</b>: the server-side protocol.</para>
-            /// </description></item>
+            /// <item><description><b>method</b>: the request method.</description></item>
+            /// <item><description><b>host</b>: the request domain name.</description></item>
+            /// <item><description><b>header</b>: the request header.</description></item>
+            /// <item><description><b>server_port</b>: the service port.</description></item>
+            /// <item><description><b>body</b>: the request body content.</description></item>
+            /// <item><description><b>url</b>: the request path.</description></item>
+            /// <item><description><b>server_protocol</b>: the server protocol.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>If the <b>body</b> content exceeds 16 KB, only a portion of the content is returned.</para>
+            /// <para>If the <b>body</b> content exceeds 16 KB, only partial content is returned.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Request")]
@@ -76,14 +69,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Request { get; set; }
 
             /// <summary>
-            /// <para>The list of sensitive data in the request.</para>
+            /// <para>The list of request sensitive data.</para>
             /// </summary>
             [NameInMap("RequestSensitiveData")]
             [Validation(Required=false)]
             public List<DescribeApisecExamplesResponseBodyExamplesRequestSensitiveData> RequestSensitiveData { get; set; }
             public class DescribeApisecExamplesResponseBodyExamplesRequestSensitiveData : TeaModel {
                 /// <summary>
-                /// <para>The code that indicates the type of sensitive data in the request.</para>
+                /// <para>The sensitive information type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -102,17 +95,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The content of the sample response. This is a string converted from a JSON object that consists of a series of parameters. The JSON object contains the following fields:</para>
+            /// <para>The sample response content, which is a string converted from a JSON object constructed with a series of parameters. The following fields are included:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>status</b>: the status code.</para>
-            /// </description></item>
-            /// <item><description><para><b>header</b>: the response header.</para>
-            /// </description></item>
-            /// <item><description><para><b>body</b>: the response body.</para>
-            /// </description></item>
+            /// <item><description><b>status</b>: the status code.</description></item>
+            /// <item><description><b>header</b>: the response header.</description></item>
+            /// <item><description><b>body</b>: the response body content.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>If the <b>body</b> content exceeds 16 KB, only a portion of the content is returned.</para>
+            /// <para>If the <b>body</b> content exceeds 16 KB, only partial content is returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -131,14 +121,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Response { get; set; }
 
             /// <summary>
-            /// <para>The list of sensitive data in the response.</para>
+            /// <para>The list of response sensitive data.</para>
             /// </summary>
             [NameInMap("ResponseSensitiveData")]
             [Validation(Required=false)]
             public List<DescribeApisecExamplesResponseBodyExamplesResponseSensitiveData> ResponseSensitiveData { get; set; }
             public class DescribeApisecExamplesResponseBodyExamplesResponseSensitiveData : TeaModel {
                 /// <summary>
-                /// <para>The code that indicates the type of sensitive data in the response.</para>
+                /// <para>The sensitive information type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -159,7 +149,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. Valid values: 1 to 5. Default value: 5.</para>
+        /// <para>The number of entries per page in a paged query. Valid values: 1 to 5. Default value: 5. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -169,7 +159,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</para>
@@ -179,7 +169,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>
@@ -189,7 +179,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

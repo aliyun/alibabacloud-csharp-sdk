@@ -10,13 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyDomainShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The access mode of the WAF instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>share</b> (default): onboarding by using a CNAME record.</para>
-        /// </description></item>
-        /// <item><description><para><b>hybrid_cloud_cname</b>: onboarding by using a hybrid cloud CNAME record.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The access type of the WAF instance. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>share</para>
@@ -26,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccessType { get; set; }
 
         /// <summary>
-        /// <para>The domain name whose configurations you want to modify.</para>
+        /// <para>The domain name to operate on.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
@@ -36,7 +30,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The ID of the domain name.</para>
+        /// <para>The domain name ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></para>
@@ -47,9 +41,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
-        /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +51,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The listening settings.</para>
+        /// <para>The listening configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Listen")]
@@ -68,7 +59,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ListenShrink { get; set; }
 
         /// <summary>
-        /// <para>The forwarding settings.</para>
+        /// <para>The forwarding configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Redirect")]
@@ -77,12 +68,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The region where the WAF instance resides. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

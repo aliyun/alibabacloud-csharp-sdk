@@ -10,15 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the protection rule. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>template</b> (default): a protection rule template.</para>
-        /// </description></item>
-        /// <item><description><para><b>resource</b>: a rule for a protected object.</para>
-        /// </description></item>
-        /// <item><description><para><b>global</b>: a global rule.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The type of the protection rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>template</para>
@@ -28,9 +20,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -58,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The protected object to which the protection rule applies.</para>
+        /// <para>The protected object associated with the rule to query.</para>
         /// <remarks>
         /// <para>This parameter is required only when <b>DefenseType</b> is set to <b>resource</b>.</para>
         /// </remarks>
@@ -81,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection rule.</para>
+        /// <para>The ID of the protection rule to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +84,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection rule template.</para>
+        /// <para>The ID of the protection template to query.</para>
         /// <remarks>
         /// <para>This parameter is required only when <b>DefenseType</b> is set to <b>template</b>.</para>
         /// </remarks>

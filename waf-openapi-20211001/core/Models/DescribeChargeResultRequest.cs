@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeChargeResultRequest : TeaModel {
         /// <summary>
-        /// <para>The billing cycle for the WAF instance. Valid values:</para>
+        /// <para>The billing cycle for the calculation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Year</b>: yearly billing cycle.</para>
-        /// </description></item>
-        /// <item><description><para><b>Month</b>: monthly billing cycle.</para>
-        /// </description></item>
-        /// <item><description><para><b>Day</b>: daily billing cycle.</para>
-        /// </description></item>
+        /// <item><description><b>Year</b>: Calculates the billing result for one year.</description></item>
+        /// <item><description><b>Month</b>: Calculates the billing result for one month.</description></item>
+        /// <item><description><b>Day</b>: Calculates the billing result for one day.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ChargeCycle { get; set; }
 
         /// <summary>
-        /// <para>The billing modules to calculate.</para>
+        /// <para>The list of billing modules to calculate.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ChargeModules")]
@@ -36,7 +33,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeChargeResultRequestChargeModules> ChargeModules { get; set; }
         public class DescribeChargeResultRequestChargeModules : TeaModel {
             /// <summary>
-            /// <para>The ID of the billing module.</para>
+            /// <para>The pricing module identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>domainCount</para>
@@ -46,7 +43,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ModuleCode { get; set; }
 
             /// <summary>
-            /// <para>The usage amount of the billing module.</para>
+            /// <para>The usage of the pricing module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -58,9 +55,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The billing method of the WAF instance. Valid value:</para>
+        /// <para>The metering unit.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SeCU</para>
+        /// </summary>
+        [NameInMap("ChargeUnit")]
+        [Validation(Required=false)]
+        public string ChargeUnit { get; set; }
+
+        /// <summary>
+        /// <para>The billing type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>POSTPAY</b>: pay-as-you-go WAF instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -88,7 +95,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

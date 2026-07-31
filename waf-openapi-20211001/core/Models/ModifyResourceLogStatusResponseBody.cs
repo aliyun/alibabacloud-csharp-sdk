@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyResourceLogStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C55A3E5-638A-5D6E-9A2F-C3CE5A677EC5</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the log collection feature is enabled for the protected object. Valid values:</para>
+        /// <para>The log enabling status of the protected object. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The feature is enabled.</para>
+        /// <item><description><para><b>true</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: The feature is disabled.</para>
+        /// <item><description><para><b>false</b>: Not enabled.</para>
         /// </description></item>
         /// </list>
         /// 

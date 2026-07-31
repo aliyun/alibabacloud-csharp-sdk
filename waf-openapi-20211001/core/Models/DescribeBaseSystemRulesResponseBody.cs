@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeBaseSystemRulesResponseBodyRules> Rules { get; set; }
         public class DescribeBaseSystemRulesResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>The CVE ID of the vulnerability that is associated with the system protection rule.</para>
+            /// <para>The CVE ID of the vulnerability associated with the system rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVE-2021-34538</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CveId { get; set; }
 
             /// <summary>
-            /// <para>The description of the system protection rule.</para>
+            /// <para>The description of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule description</para>
@@ -47,54 +47,31 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The type of attack that the system protection rule detects. Valid values:</para>
+            /// <para>The detection module. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>sqli</b>: SQL injection.</para>
-            /// </description></item>
-            /// <item><description><para><b>xss</b>: cross-site scripting (XSS).</para>
-            /// </description></item>
-            /// <item><description><para><b>cmdi</b>: OS command injection.</para>
-            /// </description></item>
-            /// <item><description><para><b>expression_injection</b>: expression injection.</para>
-            /// </description></item>
-            /// <item><description><para><b>java_deserialization</b>: Java deserialization.</para>
-            /// </description></item>
-            /// <item><description><para><b>dot_net_deserialization</b>: .NET deserialization.</para>
-            /// </description></item>
-            /// <item><description><para><b>php_deserialization</b>: PHP deserialization.</para>
-            /// </description></item>
-            /// <item><description><para><b>code_exec</b>: code execution.</para>
-            /// </description></item>
-            /// <item><description><para><b>ssrf</b>: server-side request forgery (SSRF).</para>
-            /// </description></item>
-            /// <item><description><para><b>path_traversal</b>: path traversal.</para>
-            /// </description></item>
-            /// <item><description><para><b>arbitrary_file_uploading</b>: arbitrary file upload.</para>
-            /// </description></item>
-            /// <item><description><para><b>webshell</b>: webshell.</para>
-            /// </description></item>
-            /// <item><description><para><b>rfilei</b>: remote file inclusion (RFI).</para>
-            /// </description></item>
-            /// <item><description><para><b>lfilei</b>: local file inclusion (LFI).</para>
-            /// </description></item>
-            /// <item><description><para><b>protocol_violation</b>: protocol violation.</para>
-            /// </description></item>
-            /// <item><description><para><b>scanner_behavior</b>: scanner behavior.</para>
-            /// </description></item>
-            /// <item><description><para><b>logic_flaw</b>: logic flaw.</para>
-            /// </description></item>
-            /// <item><description><para><b>arbitrary_file_reading</b>: arbitrary file read.</para>
-            /// </description></item>
-            /// <item><description><para><b>arbitrary_file_download</b>: arbitrary file download.</para>
-            /// </description></item>
-            /// <item><description><para><b>xxe</b>: external entity injection.</para>
-            /// </description></item>
-            /// <item><description><para><b>csrf</b>: cross-site request forgery (CSRF).</para>
-            /// </description></item>
-            /// <item><description><para><b>crlf</b>: CRLF injection.</para>
-            /// </description></item>
-            /// <item><description><para><b>other</b>: other.</para>
-            /// </description></item>
+            /// <item><description><b>sqli</b>: SQL injection.</description></item>
+            /// <item><description><b>xss</b>: cross-site scripting (XSS).</description></item>
+            /// <item><description><b>cmdi</b>: OS command injection.</description></item>
+            /// <item><description><b>expression_injection</b>: expression injection.</description></item>
+            /// <item><description><b>java_deserialization</b>: Java deserialization.</description></item>
+            /// <item><description><b>dot_net_deserialization</b>: .NET deserialization.</description></item>
+            /// <item><description><b>php_deserialization</b>: PHP deserialization.</description></item>
+            /// <item><description><b>code_exec</b>: code execution.</description></item>
+            /// <item><description><b>ssrf</b>: server-side request forgery (SSRF).</description></item>
+            /// <item><description><b>path_traversal</b>: path traversal.</description></item>
+            /// <item><description><b>arbitrary_file_uploading</b>: arbitrary file upload.</description></item>
+            /// <item><description><b>webshell</b>: webshell.</description></item>
+            /// <item><description><b>rfilei</b>: remote file inclusion (RFI).</description></item>
+            /// <item><description><b>lfilei</b>: local file inclusion (LFI).</description></item>
+            /// <item><description><b>protocol_violation</b>: protocol violation.</description></item>
+            /// <item><description><b>scanner_behavior</b>: scanner behavior.</description></item>
+            /// <item><description><b>logic_flaw</b>: business logic bug.</description></item>
+            /// <item><description><b>arbitrary_file_reading</b>: arbitrary file reading.</description></item>
+            /// <item><description><b>arbitrary_file_download</b>: arbitrary file download.</description></item>
+            /// <item><description><b>xxe</b>: XML external entity injection.</description></item>
+            /// <item><description><b>csrf</b>: cross-site request forgery.</description></item>
+            /// <item><description><b>crlf</b>: CRLF.</description></item>
+            /// <item><description><b>other</b>: other.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,9 +82,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DetectType { get; set; }
 
             /// <summary>
-            /// <para>The risk level of the system protection rule. Valid values:</para>
+            /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>super_strict</b>: Very Strict.</para>
+            /// <item><description><para><b>super_strict</b>: Super strict.</para>
             /// </description></item>
             /// <item><description><para><b>strict</b>: Strict.</para>
             /// </description></item>
@@ -125,7 +102,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The action of the system protection rule. Valid values:</para>
+            /// <para>The rule action. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>block</b>: Block.</para>
             /// </description></item>
@@ -141,7 +118,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RuleAction { get; set; }
 
             /// <summary>
-            /// <para>The ID of the system protection rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>113089</para>
@@ -151,7 +128,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the system protection rule.</para>
+            /// <para>The name of the protection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>systemRuleTest</para>
@@ -161,12 +138,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The status of the system protection rule. Valid values:</para>
+            /// <para>The rule status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: disabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>0</b>: enabled.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: Disabled.</description></item>
+            /// <item><description><b>0</b>: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -177,7 +152,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? RuleStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the system protection rule was last updated. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the rule was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665460629000</para>

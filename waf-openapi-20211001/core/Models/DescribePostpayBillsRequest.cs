@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The pagination token for the next page. If a next page exists, this field has a return value.</para>
         /// <remarks>
-        /// <para>If this parameter has a return value, a next page exists. You can use the returned <b>NextToken</b> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</para>
+        /// <para>If this parameter has a return value, a next page exists. Use the returned <b>NextToken</b> as a request parameter to obtain the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,10 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The epoch type for billing information. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>hour</b>: Billing information is calculated on an hourly basis.</description></item>
-        /// </list>
+        /// <para>The statistical period type for billing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hour</para>

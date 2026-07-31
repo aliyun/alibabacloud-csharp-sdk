@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeRelatedDefenseRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page when using paging. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries per page in a paged query. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The pagination token (<b>Token</b>) for the next page. If a next page exists, this field has a return value.</para>
         /// <remarks>
-        /// <para>If this parameter has a return value, a next page exists. Use the returned <b>NextToken</b> as a request parameter to obtain the next page of data. Repeat this process until no value is returned, which indicates that all data has been retrieved.</para>
+        /// <para>If this parameter has a return value, a next page exists. Use the returned <b>NextToken</b> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeRelatedDefenseRulesResponseBodyRules> Rules { get; set; }
         public class DescribeRelatedDefenseRulesResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>The protection scenario of the protection rule. For more information, see the <b>DefenseScene</b> parameter in <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a>.</para>
+            /// <para>The protection scenario of the protection rule. For more information, refer to the <b>DefenseScene</b> parameter in <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom_acl</para>

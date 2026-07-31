@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateLogDeliveryConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the log delivery configuration.</para>
+        /// <para>The name of the forwarding delivery configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DeliveryName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>26E46541-7AAB-5565-801D-F14DBDC5****</para>

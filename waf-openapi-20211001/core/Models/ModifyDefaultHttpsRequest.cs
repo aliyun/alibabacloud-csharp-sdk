@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyDefaultHttpsRequest : TeaModel {
         /// <summary>
-        /// <para>The certificate ID.</para>
+        /// <para>The ID of the certificate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,15 +21,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string CertId { get; set; }
 
         /// <summary>
-        /// <para>The type of the cipher suite. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>1</b>: adds all cipher suites.</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: adds strong cipher suites.</para>
-        /// </description></item>
-        /// <item><description><para><b>99</b>: adds custom cipher suites.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The cipher suite type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -39,18 +31,23 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? CipherSuite { get; set; }
 
         /// <summary>
-        /// <para>The custom cipher suites that you want to add. This parameter is used only when <b>CipherSuite</b> is set to <b>99</b>.</para>
+        /// <para>The specific custom cipher suites to add. This parameter is used only when <b>CipherSuite</b> is set to <b>99</b>.</para>
         /// </summary>
         [NameInMap("CustomCiphers")]
         [Validation(Required=false)]
         public List<string> CustomCiphers { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to support TLS 1.3. Valid values:</para>
+        /// <para>Specifies whether TLS 1.3 is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: supports TLS 1.3.</para>
+        /// <item><description><para><b>true</b>: TLS 1.3 is supported.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: does not support TLS 1.3.</para>
+        /// <item><description><para><b>false</b>: TLS 1.3 is not supported.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. When TLSVersion is set to tlsv1.3, this value must be true.</description></item>
+        /// </list>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -64,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to view the ID of the current WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -76,11 +73,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: regions outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -92,7 +89,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -102,15 +99,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The version of the TLS protocol. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>tlsv1</b></para>
-        /// </description></item>
-        /// <item><description><para><b>tlsv1.1</b></para>
-        /// </description></item>
-        /// <item><description><para><b>tlsv1.2</b></para>
-        /// </description></item>
-        /// </list>
+        /// <para>The TLS version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

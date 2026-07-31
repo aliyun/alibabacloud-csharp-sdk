@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecEventDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of attacks in the security event.</para>
+        /// <para>The number of attacks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>345</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AttackCnt { get; set; }
 
         /// <summary>
-        /// <para>The list of attackers associated with the security event.</para>
+        /// <para>The attacker list.</para>
         /// </summary>
         [NameInMap("AttackerList")]
         [Validation(Required=false)]
         public List<string> AttackerList { get; set; }
 
         /// <summary>
-        /// <para>The details of the security event.</para>
+        /// <para>The detailed information about the security event. The value is a string converted from a JSON object constructed by a series of parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;location\&quot;:[\&quot;FR\&quot;,\&quot;CN\&quot;],\&quot;location_type\&quot;:\&quot;country\&quot;}</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DetailValue { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which the security event occurred. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683703260</para>
@@ -57,14 +57,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The severity level of the security event. Valid values:</para>
+        /// <para>The event level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>high</b>: high severity.</para>
-        /// </description></item>
-        /// <item><description><para><b>medium</b>: medium severity.</para>
-        /// </description></item>
-        /// <item><description><para><b>low</b>: low severity.</para>
-        /// </description></item>
+        /// <item><description><b>high</b>: high risk.</description></item>
+        /// <item><description><b>medium</b>: medium risk.</description></item>
+        /// <item><description><b>low</b>: low risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +88,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EventScope { get; set; }
 
         /// <summary>
-        /// <para>The type of the security event.</para>
+        /// <para>The event type.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported event types.</para>
         /// </remarks>
@@ -104,7 +101,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EventTag { get; set; }
 
         /// <summary>
-        /// <para>The remarks added to the security event.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>already confirmed.</para>
@@ -114,12 +111,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Note { get; set; }
 
         /// <summary>
-        /// <para>The source of the event type rule. Valid values:</para>
+        /// <para>The origin of the event type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>custom</b>: a user-defined rule.</para>
-        /// </description></item>
-        /// <item><description><para><b>default</b>: a built-in rule.</para>
-        /// </description></item>
+        /// <item><description><b>custom</b>: custom.</description></item>
+        /// <item><description><b>default</b>: built-in.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,7 +125,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>
@@ -140,7 +135,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range during which the security event occurred. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683648000</para>
@@ -152,14 +147,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The event status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>toBeConfirmed</b>: to be confirmed.</para>
-        /// </description></item>
-        /// <item><description><para><b>confirmed</b>: confirmed.</para>
-        /// </description></item>
-        /// <item><description><para><b>actioned</b>: handled.</para>
-        /// </description></item>
-        /// <item><description><para><b>ignored</b>: ignored.</para>
-        /// </description></item>
+        /// <item><description><b>toBeConfirmed</b>: to be confirmed.</description></item>
+        /// <item><description><b>confirmed</b>: confirmed.</description></item>
+        /// <item><description><b>actioned</b>: handled.</description></item>
+        /// <item><description><b>ignored</b>: ignored.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

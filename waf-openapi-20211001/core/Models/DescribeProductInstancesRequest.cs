@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeProductInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The Web Application Firewall (WAF) instance ID.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the current WAF instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the instance belongs.</para>
+        /// <para>The UID of the resource ownership user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1704********9107</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string OwnerUserId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page when paging. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -69,22 +69,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The domain name that is added to WAF.</para>
+        /// <remarks>
+        /// <para>This parameter is supported only when the cloud service type is ddos.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://www.c**sw.net">www.c**sw.net</a></para>
+        /// </summary>
         [NameInMap("ResourceDomain")]
         [Validation(Required=false)]
         public string ResourceDomain { get; set; }
 
         /// <summary>
-        /// <para>The protection status of WAF. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>all</b>: All protected.</para>
-        /// </description></item>
-        /// <item><description><para><b>any</b>: Protected.</para>
-        /// </description></item>
-        /// <item><description><para><b>part</b>: Partially protected.</para>
-        /// </description></item>
-        /// <item><description><para><b>non</b>: Not protected.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The WAF protection status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>
@@ -104,7 +103,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the instance added to WAF.</para>
+        /// <para>The IP address of the instance that is added to WAF.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.X.X.1</para>
@@ -114,7 +113,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceInstanceIp { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance added to WAF.</para>
+        /// <para>The name of the instance that is added to WAF.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demoInstanceName</para>
@@ -126,7 +125,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The public IP address of the instance.</para>
+        /// <para>The public IP address of the cloud service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.X.X.1</para>
@@ -137,7 +136,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekz6ql****5uzi</para>
@@ -149,7 +148,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name of the cloud service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleResourceName</para>
@@ -166,9 +165,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </description></item>
         /// <item><description><para><b>clb7</b>: Layer 7 CLB.</para>
         /// </description></item>
-        /// <item><description><para><b>ecs</b>: Elastic Compute Service (ECS).</para>
+        /// <item><description><para><b>ecs</b>: ECS.</para>
         /// </description></item>
-        /// <item><description><para><b>nlb</b>: Network Load Balancer (NLB).</para>
+        /// <item><description><para><b>nlb</b>: NLB.</para>
+        /// </description></item>
+        /// <item><description><para><b>ddos</b>: Anti-DDoS.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -180,23 +181,23 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceProduct { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. Valid values:</para>
+        /// <para>The region ID of the cloud service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-chengdu</b>: China (Chengdu).</para>
+        /// <item><description><para><b>cn-chengdu</b>: China Southwest 1 (Chengdu).</para>
         /// </description></item>
-        /// <item><description><para><b>cn-beijing</b>: China (Beijing).</para>
+        /// <item><description><para><b>cn-beijing</b>: China North 2 (Beijing).</para>
         /// </description></item>
-        /// <item><description><para><b>cn-zhangjiakou</b>: China (Zhangjiakou).</para>
+        /// <item><description><para><b>cn-zhangjiakou</b>: China North 3 (Zhangjiakou).</para>
         /// </description></item>
-        /// <item><description><para><b>cn-hangzhou</b>: China (Hangzhou).</para>
+        /// <item><description><para><b>cn-hangzhou</b>: China East 1 (Hangzhou).</para>
         /// </description></item>
-        /// <item><description><para><b>cn-shanghai</b>: China (Shanghai).</para>
+        /// <item><description><para><b>cn-shanghai</b>: China East 2 (Shanghai).</para>
         /// </description></item>
-        /// <item><description><para><b>cn-shenzhen</b>: China (Shenzhen).</para>
+        /// <item><description><para><b>cn-shenzhen</b>: China South 1 (Shenzhen).</para>
         /// </description></item>
-        /// <item><description><para><b>cn-qingdao</b>: China (Qingdao).</para>
+        /// <item><description><para><b>cn-qingdao</b>: China North 1 (Qingdao).</para>
         /// </description></item>
-        /// <item><description><para><b>cn-hongkong</b>: China (Hong Kong).</para>
+        /// <item><description><para><b>cn-hongkong</b>: Hong Kong (China).</para>
         /// </description></item>
         /// <item><description><para><b>ap-southeast-3</b>: Malaysia (Kuala Lumpur).</para>
         /// </description></item>

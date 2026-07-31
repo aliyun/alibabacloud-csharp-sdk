@@ -21,20 +21,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseScene { get; set; }
 
         /// <summary>
-        /// <para>The sub-scenario of the protection template. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>bot_custom_acl</b>: a protection template for advanced custom rules for Bot management.</description></item>
-        /// </list>
+        /// <para>The sub-scenario of the protection template. This parameter is supported only for advanced bot management scenarios.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>bot_custom_acl</para>
+        /// <para>web</para>
         /// </summary>
         [NameInMap("DefenseSubScene")]
         [Validation(Required=false)]
         public string DefenseSubScene { get; set; }
 
         /// <summary>
-        /// <para>The description of the protection template.</para>
+        /// <para>The description of the protection template to create.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -44,9 +41,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,9 +55,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
         /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
@@ -74,7 +71,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -84,7 +81,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the protection template. The name must be 1 to 255 characters in length and can contain letters, digits, underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the protection template to create. The name must be 1 to 255 characters in length and can contain Chinese characters, letters, digits, underscores (_), periods (.), or hyphens (-).</para>
         /// <remarks>
         /// <para>Template names must be unique within the same protection scenario (<b>DefenseScene</b>).</para>
         /// </remarks>
@@ -98,7 +95,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The origin of the protection template. The value must be <b>custom</b>, which indicates a user-defined template.</para>
+        /// <para>The source of the protection template to create. Set the value to <b>custom</b>, which indicates user-defined.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,12 +106,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string TemplateOrigin { get; set; }
 
         /// <summary>
-        /// <para>The status of the protection template. Valid values:</para>
+        /// <para>The status of the protection template to create. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: Disabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Enabled.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -126,12 +121,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? TemplateStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the protection template. Valid values:</para>
+        /// <para>The templatetype of the protection template to create. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>user_default</b>: a default template created by the user.</para>
-        /// </description></item>
-        /// <item><description><para><b>user_custom</b>: a custom template created by the user.</para>
-        /// </description></item>
+        /// <item><description><b>user_default</b>: default protection.</description></item>
+        /// <item><description><b>user_custom</b>: custom protection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -143,9 +136,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string TemplateType { get; set; }
 
         /// <summary>
-        /// <para>The protected object groups to unbind from the default protection template. Specify the value in the [<b>&quot;group1&quot;,&quot;group2&quot;,...</b>] format.</para>
+        /// <para>The protected object groups to unbind when creating a default protection template. Use the format [<b>&quot;group1&quot;,&quot;group2&quot;,……</b>].</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when you create a <b>default template</b> (<b>TemplateType</b> is set to <b>user_default</b>).</para>
+        /// <para>This parameter takes effect only when you create a <b>default template</b> (the value of <b>TemplateType</b> is <b>user_default</b>).</para>
         /// </remarks>
         /// </summary>
         [NameInMap("UnbindResourceGroups")]
@@ -153,9 +146,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<string> UnbindResourceGroups { get; set; }
 
         /// <summary>
-        /// <para>The protected objects to unbind from the default protection template. Specify the value in the [<b>&quot;XX1&quot;,&quot;XX2&quot;,...</b>] format.</para>
+        /// <para>The protected objects to unbind when creating a default protection template. Use the format [<b>&quot;XX1&quot;,&quot;XX2&quot;,……</b>].</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when you create a <b>default template</b> (<b>TemplateType</b> is set to <b>user_default</b>).</para>
+        /// <para>This parameter takes effect only when you create a <b>default template</b> (the value of <b>TemplateType</b> is <b>user_default</b>).</para>
         /// </remarks>
         /// </summary>
         [NameInMap("UnbindResources")]

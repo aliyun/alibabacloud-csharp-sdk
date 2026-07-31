@@ -23,11 +23,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The dimension of security events. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>ip</b> (default): IP security events.</description></item>
-        /// <item><description><b>account</b>: account security events.</description></item>
-        /// </list>
+        /// <para>The dimension of security events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip</para>

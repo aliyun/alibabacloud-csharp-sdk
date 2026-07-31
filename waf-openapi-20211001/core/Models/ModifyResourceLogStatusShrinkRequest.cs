@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyResourceLogStatusShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: The Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: Outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The protected object on which you want to manage the log collection feature.</para>
+        /// <para>The protected object to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,11 +61,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the log collection feature for the protected object. Valid values:</para>
+        /// <para>The log enabling status of the protected object. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enables the feature.</para>
+        /// <item><description><para><b>true</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Disables the feature.</para>
+        /// <item><description><para><b>false</b>: Not enabled.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -77,10 +77,31 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public bool? Status { get; set; }
 
+        /// <summary>
+        /// <para>The Tracing Analysis configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Workspace&quot;:&quot;cms-test&quot;,&quot;RatePerMille&quot;:90}</para>
+        /// </summary>
         [NameInMap("TraceConfig")]
         [Validation(Required=false)]
         public string TraceConfigShrink { get; set; }
 
+        /// <summary>
+        /// <para>The Tracing Analysis status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disabled.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>To enable Tracing Analysis, you must first enable the log status <b>Status</b> for the protected object.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("TraceStatus")]
         [Validation(Required=false)]
         public bool? TraceStatus { get; set; }

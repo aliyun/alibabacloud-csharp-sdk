@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeUserEventTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of security event types and their statistics.</para>
+        /// <para>The list of security event types and statistics.</para>
         /// </summary>
         [NameInMap("Event")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? EventCount { get; set; }
 
             /// <summary>
-            /// <para>The parent type of the event.</para>
+            /// <para>The parent event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EventType_Account</para>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventParentType { get; set; }
 
             /// <summary>
-            /// <para>The type of the event.</para>
+            /// <para>The event type.</para>
             /// <remarks>
-            /// <para>Call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported event types.</para>
+            /// <para>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported event types.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>177BA739-6512-5470-98C6-E***0BAA3D</para>

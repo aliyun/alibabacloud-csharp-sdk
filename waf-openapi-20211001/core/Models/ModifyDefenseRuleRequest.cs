@@ -20,15 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseScene { get; set; }
 
         /// <summary>
-        /// <para>The type of the protection rule. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>template</b> (default): a template protection rule.</para>
-        /// </description></item>
-        /// <item><description><para><b>resource</b>: a rule for a specific protected object.</para>
-        /// </description></item>
-        /// <item><description><para><b>global</b>: a global rule.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The type of the protection rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>template</para>
@@ -38,9 +30,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of your WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +44,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -68,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The protected object for which you want to modify the rule.</para>
+        /// <para>The protected object associated with the rule to modify.</para>
         /// <remarks>
         /// <para>This parameter is required only when <b>DefenseType</b> is set to <b>resource</b>.</para>
         /// </remarks>
@@ -81,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Resource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -91,11 +83,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The details of the protection rule, in a JSON string format. Specify the rule ID and the configuration of the protection rule to modify. The details include the following:</para>
+        /// <para>The details of the protection rule. The value is a string that is converted from a JSON object constructed by a series of parameters. When you configure this parameter, you must specify the rule ID and the protection rule configuration to modify. The following parameters are included:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>id</b>: The ID of the rule. This parameter is required. Data type: Long.</para>
+        /// <item><description><para><b>id</b>: Long | Required | The rule ID.</para>
         /// </description></item>
-        /// <item><description><para>Configuration of the protection rule: The parameters are the same as the <b>Rules</b> parameter of the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation. For more information, see the description of the protection rule parameters in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</para>
+        /// <item><description><para>Protection rule configuration: Same as the <b>Rules</b> parameter of the <b>CreateDefenseRule</b> operation. For more information, see the <b>protection rule parameter description</b> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -114,7 +106,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Rules { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection template.</para>
+        /// <para>The ID of the protection rule template.</para>
         /// <remarks>
         /// <para>This parameter is required only when <b>DefenseType</b> is set to <b>template</b>.</para>
         /// </remarks>

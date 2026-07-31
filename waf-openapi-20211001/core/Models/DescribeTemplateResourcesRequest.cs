@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeTemplateResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The API of the protected asset for the fuzzy query.</para>
+        /// <para>The API of the protected asset to fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc.com</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AssetApi { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paged query. Valid values: 1 to 500. Default value: 500.</para>
+        /// <para>The number of entries per page in a paged query. Valid values: 1 to 500. Default value: 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. This is the value of the <b>NextToken</b> parameter returned from the last API call. You do not need to specify this parameter for the first query.</para>
+        /// <para>The pagination token (Token) for the next page. Set this parameter to the value of <b>NextToken</b> returned in the previous API call. Leave this parameter empty for the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAJ7ob7*******MhJJ1ELRE=</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the protected object or protected object group for the fuzzy query.</para>
+        /// <para>The name of the protected object or protected object group to fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc.test.com-waf</para>
@@ -92,12 +92,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The type of the protected resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>single</b>: a protected object.</para>
-        /// </description></item>
-        /// <item><description><para><b>group</b>: a protected object group.</para>
-        /// </description></item>
-        /// <item><description><para><b>asset</b>: a protected asset.</para>
-        /// </description></item>
+        /// <item><description><b>single</b>: protected object.</description></item>
+        /// <item><description><b>asset</b>: protected asset.</description></item>
+        /// <item><description><b>group</b>: protected object group.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

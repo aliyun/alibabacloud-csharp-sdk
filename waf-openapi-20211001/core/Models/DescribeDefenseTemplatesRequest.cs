@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The protection scenario. For more information, see the description of the <b>DefenseScene</b> parameter in the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> topic.</para>
+        /// <para>The protection scenario. For more information, see the <b>DefenseScene</b> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>region_block</para>
@@ -22,14 +22,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The sub-scenario of the protection template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>web</b>: the web protection template for bot management.</para>
-        /// </description></item>
-        /// <item><description><para><b>app</b>: the app protection template for bot management.</para>
-        /// </description></item>
-        /// <item><description><para><b>basic</b>: the basic protection template for bot management.</para>
-        /// </description></item>
-        /// <item><description><para><b>bot_custom_acl</b>: the advanced custom protection rule template for bot management.</para>
-        /// </description></item>
+        /// <item><description><b>web</b>: BOT management web protection scenario template.</description></item>
+        /// <item><description><b>app</b>: BOT management app protection scenario template.</description></item>
+        /// <item><description><b>basic</b>: BOT management basic protection template.</description></item>
+        /// <item><description><b>bot_custom_acl</b>: BOT management advanced custom rule protection template.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +38,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number to return in a paging query request. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page in a paging query. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,7 +70,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -90,9 +86,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the protected object or protected object group, or the ID of the protected asset.</para>
+        /// <para>The name of the protected object, protection group, or the ID of the protected asset.</para>
         /// <remarks>
-        /// <para>You must specify the Resource and ResourceType parameters to filter query results.</para>
+        /// <para>This parameter is used together with the ResourceType parameter. Both parameters must have values for filtering to take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -103,7 +99,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Resource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmvyknl****fa</para>
@@ -113,17 +109,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the protected resource. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>single</b> (default): a protected object.</para>
-        /// </description></item>
-        /// <item><description><para><b>group</b>: a protected object group.</para>
-        /// </description></item>
-        /// <item><description><para><b>asset</b>: a protected asset.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The type of the protected resource.</para>
         /// <remarks>
-        /// <para>You must specify the Resource and ResourceType parameters to filter query results.</para>
+        /// <para>This parameter is used together with the Resource parameter. Both parameters must have values for filtering to take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -144,7 +132,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the protection templates that you want to query. You can specify this parameter to query the protected objects for which multiple protection templates take effect. Separate multiple template IDs with commas (,).</para>
+        /// <para>The IDs of the protection templates to query. You can specify this parameter to query the protected resources associated with multiple protection templates. Separate multiple template IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>189731,189539,189538,189531,189540,189542,189541</para>
@@ -164,12 +152,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The type of the protection template that you want to create. Valid values:</para>
+        /// <para>The templatetype of the protection template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>user_default</b>: default protection template.</para>
-        /// </description></item>
-        /// <item><description><para><b>user_custom</b>: custom protection template.</para>
-        /// </description></item>
+        /// <item><description><b>user_default</b>: user default protection.</description></item>
+        /// <item><description><b>user_custom</b>: user custom protection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The port of the cloud service that is added to WAF.</para>
+        /// <para>The port of the cloud service that is connected to WAF.</para>
         /// 
         /// <b>Example:</b>
         /// <para>443</para>
@@ -54,13 +54,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The protocol. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>http</b>: HTTP.</para>
-        /// </description></item>
-        /// <item><description><para><b>https</b>: HTTPS.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The protocol type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https</para>
@@ -86,7 +80,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource instance.</para>
+        /// <para>The instance ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +91,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -107,15 +101,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud service. Valid values:</para>
+        /// <para>The cloud service type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>clb4</b>: Layer 4 Classic Load Balancer (CLB).</para>
+        /// <item><description><para><b>clb4</b>: Layer 4 CLB.</para>
         /// </description></item>
         /// <item><description><para><b>clb7</b>: Layer 7 CLB.</para>
         /// </description></item>
-        /// <item><description><para><b>ecs</b>: Elastic Compute Service (ECS).</para>
+        /// <item><description><para><b>ecs</b>: ECS.</para>
         /// </description></item>
-        /// <item><description><para><b>nlb</b>: Network Load Balancer (NLB).</para>
+        /// <item><description><para><b>nlb</b>: NLB.</para>
         /// </description></item>
         /// </list>
         /// 

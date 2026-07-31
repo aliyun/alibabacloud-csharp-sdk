@@ -10,54 +10,31 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeBaseSystemRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of attack that the system protection rule detects. Valid values:</para>
+        /// <para>The detection module. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>sqli</b>: SQL injection.</para>
-        /// </description></item>
-        /// <item><description><para><b>xss</b>: cross-site scripting (XSS).</para>
-        /// </description></item>
-        /// <item><description><para><b>cmdi</b>: OS command injection.</para>
-        /// </description></item>
-        /// <item><description><para><b>expression_injection</b>: expression injection.</para>
-        /// </description></item>
-        /// <item><description><para><b>java_deserialization</b>: Java deserialization.</para>
-        /// </description></item>
-        /// <item><description><para><b>dot_net_deserialization</b>: .NET deserialization.</para>
-        /// </description></item>
-        /// <item><description><para><b>php_deserialization</b>: PHP deserialization.</para>
-        /// </description></item>
-        /// <item><description><para><b>code_exec</b>: code execution.</para>
-        /// </description></item>
-        /// <item><description><para><b>ssrf</b>: server-side request forgery (SSRF).</para>
-        /// </description></item>
-        /// <item><description><para><b>path_traversal</b>: path traversal.</para>
-        /// </description></item>
-        /// <item><description><para><b>arbitrary_file_uploading</b>: arbitrary file upload.</para>
-        /// </description></item>
-        /// <item><description><para><b>webshell</b>: webshell.</para>
-        /// </description></item>
-        /// <item><description><para><b>rfilei</b>: remote file inclusion (RFI).</para>
-        /// </description></item>
-        /// <item><description><para><b>lfilei</b>: local file inclusion (LFI).</para>
-        /// </description></item>
-        /// <item><description><para><b>protocol_violation</b>: protocol violation.</para>
-        /// </description></item>
-        /// <item><description><para><b>scanner_behavior</b>: scanner behavior.</para>
-        /// </description></item>
-        /// <item><description><para><b>logic_flaw</b>: logic flaw.</para>
-        /// </description></item>
-        /// <item><description><para><b>arbitrary_file_reading</b>: arbitrary file read.</para>
-        /// </description></item>
-        /// <item><description><para><b>arbitrary_file_download</b>: arbitrary file download.</para>
-        /// </description></item>
-        /// <item><description><para><b>xxe</b>: external entity injection.</para>
-        /// </description></item>
-        /// <item><description><para><b>csrf</b>: cross-site request forgery (CSRF).</para>
-        /// </description></item>
-        /// <item><description><para><b>crlf</b>: CRLF injection.</para>
-        /// </description></item>
-        /// <item><description><para><b>other</b>: other.</para>
-        /// </description></item>
+        /// <item><description><b>sqli</b>: SQL injection.</description></item>
+        /// <item><description><b>xss</b>: cross-site scripting (XSS).</description></item>
+        /// <item><description><b>cmdi</b>: OS command injection.</description></item>
+        /// <item><description><b>expression_injection</b>: expression injection.</description></item>
+        /// <item><description><b>java_deserialization</b>: Java deserialization.</description></item>
+        /// <item><description><b>dot_net_deserialization</b>: .NET deserialization.</description></item>
+        /// <item><description><b>php_deserialization</b>: PHP deserialization.</description></item>
+        /// <item><description><b>code_exec</b>: code execution.</description></item>
+        /// <item><description><b>ssrf</b>: server-side request forgery (SSRF).</description></item>
+        /// <item><description><b>path_traversal</b>: path traversal.</description></item>
+        /// <item><description><b>arbitrary_file_uploading</b>: arbitrary file upload.</description></item>
+        /// <item><description><b>webshell</b>: webshell.</description></item>
+        /// <item><description><b>rfilei</b>: remote file inclusion (RFI).</description></item>
+        /// <item><description><b>lfilei</b>: local file inclusion (LFI).</description></item>
+        /// <item><description><b>protocol_violation</b>: protocol violation.</description></item>
+        /// <item><description><b>scanner_behavior</b>: scanner behavior.</description></item>
+        /// <item><description><b>logic_flaw</b>: business logic bug.</description></item>
+        /// <item><description><b>arbitrary_file_reading</b>: arbitrary file reading.</description></item>
+        /// <item><description><b>arbitrary_file_download</b>: arbitrary file download.</description></item>
+        /// <item><description><b>xxe</b>: XML external entity injection.</description></item>
+        /// <item><description><b>csrf</b>: cross-site request forgery.</description></item>
+        /// <item><description><b>crlf</b>: CRLF.</description></item>
+        /// <item><description><b>other</b>: other.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -82,12 +59,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned rule content. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number to return in a paged query. Default value: <b>1</b>, which indicates the first page. For more information about paging, see the PageSize parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -108,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 100.</para>
+        /// <para>The number of entries per page in a paged query. Default value: 100, which indicates 100 entries per page. For more information about paging, see the PageNumber parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -118,7 +93,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -144,9 +119,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the system protection rule. Valid values:</para>
+        /// <para>The risk level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>super_strict</b>: Very Strict.</para>
+        /// <item><description><para><b>super_strict</b>: Super strict.</para>
         /// </description></item>
         /// <item><description><para><b>strict</b>: Strict.</para>
         /// </description></item>
@@ -164,7 +139,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The action of the system protection rule. Valid values:</para>
+        /// <para>The rule action. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>block</b>: Block.</para>
         /// </description></item>
@@ -189,6 +164,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public long? RuleId { get; set; }
 
+        /// <summary>
+        /// <para>The list of system protection rule IDs to query.</para>
+        /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]
         public List<long?> RuleIds { get; set; }
@@ -204,12 +182,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The status of the system protection rule. Valid values:</para>
+        /// <para>The rule status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: disabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>0</b>: enabled.</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: Disabled.</description></item>
+        /// <item><description><b>0</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -223,10 +199,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The ID of the protection template.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Specify this parameter to query the system protection rules in a specific WAF protection template.</para>
-        /// </description></item>
-        /// <item><description><para>If you leave this parameter empty, the default configurations of the system protection rules are queried.</para>
-        /// </description></item>
+        /// <item><description>You can specify this parameter to query the system protection rules in a specific Web core protection rule template.</description></item>
+        /// <item><description>If this parameter is left empty, the default settings of system protection rules are queried.</description></item>
         /// </list>
         /// </remarks>
         /// 

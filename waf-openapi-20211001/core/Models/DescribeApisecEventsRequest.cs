@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The account that you want to use to filter events.</para>
+        /// <para>The account information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1818743389962696</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Account { get; set; }
 
         /// <summary>
-        /// <para>The path of the API that is associated with the security event.</para>
+        /// <para>The API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/apisec/v1/***.php</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The business purpose of the API.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported business purposes.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported business purposes.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ApiTag { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the attacker that you want to use to filter events.</para>
+        /// <para>The attack IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42.224.<em>.</em></para>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AttackIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the hybrid cloud WAF cluster.</para>
+        /// <para>The hybrid cloud cluster ID.</para>
         /// <remarks>
-        /// <para>This parameter is required only in hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the IDs of hybrid cloud WAF clusters.</para>
+        /// <para>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683703260</para>
@@ -96,14 +96,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The severity level of the event. Valid values:</para>
+        /// <para>The event level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>high</b>: high severity.</para>
-        /// </description></item>
-        /// <item><description><para><b>medium</b>: medium severity.</para>
-        /// </description></item>
-        /// <item><description><para><b>low</b>: low severity.</para>
-        /// </description></item>
+        /// <item><description><b>high</b>: High-risk.</description></item>
+        /// <item><description><b>medium</b>: Medium-risk.</description></item>
+        /// <item><description><b>low</b>: Low-risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,13 +111,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EventLevel { get; set; }
 
         /// <summary>
-        /// <para>The dimension by which security events are categorized. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>ip</b>: IP security event. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>account</b>: account security event.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The dimension of the security event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip</para>
@@ -132,7 +123,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The event type.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported event types.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported event types.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -143,9 +134,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EventTag { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -157,7 +148,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The domain name or IP address that is protected by WAF.</para>
+        /// <para>The domain name or IP address to which the API operation belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a.***.com</para>
@@ -167,14 +158,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string MatchedHost { get; set; }
 
         /// <summary>
-        /// <para>The field that is used to sort the query results. Valid values:</para>
+        /// <para>The name of the field used for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>allCnt</b>: the number of attacks.</para>
-        /// </description></item>
-        /// <item><description><para><b>startTs</b>: the start time of the event.</para>
-        /// </description></item>
-        /// <item><description><para><b>endTs</b>: the end time of the event.</para>
-        /// </description></item>
+        /// <item><description><b>allCnt</b>: attack count.</description></item>
+        /// <item><description><b>startTs</b>: event start time.</description></item>
+        /// <item><description><b>endTs</b>: event end time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -185,12 +173,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string OrderKey { get; set; }
 
         /// <summary>
-        /// <para>The order in which the query results are sorted. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>desc</b>: descending order. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>asc</b>: ascending order.</para>
-        /// </description></item>
+        /// <item><description><b>desc</b>: Descending order (default).</description></item>
+        /// <item><description><b>asc</b>: Ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -203,10 +189,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The source of the event type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>custom</b>: a user-defined event type.</para>
-        /// </description></item>
-        /// <item><description><para><b>default</b>: a built-in event type.</para>
-        /// </description></item>
+        /// <item><description><b>custom</b>: Custom.</description></item>
+        /// <item><description><b>default</b>: Built-in.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -217,7 +201,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number to return in a paged query. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -227,7 +211,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>, which indicates 10 entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -237,7 +221,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -253,7 +237,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -263,7 +247,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683648000</para>
@@ -273,16 +257,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? StartTs { get; set; }
 
         /// <summary>
-        /// <para>The handling status of the event. Valid values:</para>
+        /// <para>The event status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>toBeConfirmed</b>: pending confirmation.</para>
-        /// </description></item>
-        /// <item><description><para><b>confirmed</b>: confirmed but not yet handled.</para>
-        /// </description></item>
-        /// <item><description><para><b>actioned</b>: handled.</para>
-        /// </description></item>
-        /// <item><description><para><b>ignored</b>: ignored.</para>
-        /// </description></item>
+        /// <item><description><b>toBeConfirmed</b>: To be confirmed.</description></item>
+        /// <item><description><b>confirmed</b>: Confirmed.</description></item>
+        /// <item><description><b>actioned</b>: Handled.</description></item>
+        /// <item><description><b>ignored</b>: Ignored.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

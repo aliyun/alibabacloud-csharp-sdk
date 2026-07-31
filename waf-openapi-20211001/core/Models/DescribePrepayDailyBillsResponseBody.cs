@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribePrepayDailyBillsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of WAF elastic billing records.</para>
+        /// <para>The list of WAF burstable billing records.</para>
         /// </summary>
         [NameInMap("Bills")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? ElasticQpsSetValue { get; set; }
 
             /// <summary>
-            /// <para>The end time of the billing period. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
+            /// <para>The end time of the billing record. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1687591200</para>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <para>The overuse status of the current period. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Normal.</description></item>
-            /// <item><description><b>1</b>: Overused.</description></item>
-            /// <item><description><b>2</b>: Sandboxed.</description></item>
+            /// <item><description><b>1</b>: overused.</description></item>
+            /// <item><description><b>2</b>: sandboxed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,10 +51,26 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public int? ExceedStatus { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the extension plug-in is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: The extension plug-in is enabled.</description></item>
+            /// <item><description><b>false</b>: The extension plug-in is not enabled.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("ExtensionPlugin")]
             [Validation(Required=false)]
             public bool? ExtensionPlugin { get; set; }
 
+            /// <summary>
+            /// <para>The number of requests processed by the plug-in.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("ExtensionPluginRequest")]
             [Validation(Required=false)]
             public long? ExtensionPluginRequest { get; set; }
@@ -70,7 +86,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? MaxQps { get; set; }
 
             /// <summary>
-            /// <para>The unit price for elastic billing. Unit: CNY for the China site and USD for the international site.</para>
+            /// <para>The unit price for burstable billing. Unit: CNY for the China site and USD for the international site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.25</para>
@@ -124,7 +140,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RiskTraffic { get; set; }
 
             /// <summary>
-            /// <para>The start time of the billing period. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
+            /// <para>The start time of the billing record. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1687822980</para>
@@ -144,7 +160,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Total { get; set; }
 
             /// <summary>
-            /// <para>The elastic billing type.</para>
+            /// <para>The burstable billing type.</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

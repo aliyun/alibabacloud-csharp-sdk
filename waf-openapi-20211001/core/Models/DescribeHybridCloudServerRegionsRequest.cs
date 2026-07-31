@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudServerRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region code. Use this parameter to filter results by a specific continent or area.&gt;Notice: This parameter is required when <c>RegionType</c> is set to <c>region</c>. Set the value to the code of the continent that you want to query.</para>
+        /// <para>The region code.&gt;Notice: This parameter is required when RegionType is set to region. Set this parameter to the code of the selected continent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>410</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionCode { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -50,15 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the region. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>operator</b>: queries carriers.</para>
-        /// </description></item>
-        /// <item><description><para><b>continents</b>: queries continents.</para>
-        /// </description></item>
-        /// <item><description><para><b>region</b>: queries cities.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The region type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

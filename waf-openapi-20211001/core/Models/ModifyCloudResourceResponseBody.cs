@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyCloudResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the connected resource.</para>
+        /// <para>The connected resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-xxx-80-clb7</para>

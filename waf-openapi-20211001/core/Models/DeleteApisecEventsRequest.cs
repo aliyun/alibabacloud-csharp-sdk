@@ -31,13 +31,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<string> EventIds { get; set; }
 
         /// <summary>
-        /// <para>The dimension of the security event. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>ip</b>: IP-dimension security events.</para>
-        /// </description></item>
-        /// <item><description><para><b>account</b>: account-dimension security events.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The dimension of the security event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip</para>
