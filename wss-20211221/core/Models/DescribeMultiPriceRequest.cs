@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class DescribeMultiPriceRequest : TeaModel {
         /// <summary>
-        /// <para>The order items.</para>
+        /// <para>The product information.</para>
         /// </summary>
         [NameInMap("OrderItems")]
         [Validation(Required=false)]
         public List<DescribeMultiPriceRequestOrderItems> OrderItems { get; set; }
         public class DescribeMultiPriceRequestOrderItems : TeaModel {
             /// <summary>
-            /// <para>The quantity to purchase.</para>
+            /// <para>The purchase quantity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public int? Amount { get; set; }
 
             /// <summary>
-            /// <para>A list of components.</para>
+            /// <para>The list of product modules.</para>
             /// </summary>
             [NameInMap("Components")]
             [Validation(Required=false)]
             public List<DescribeMultiPriceRequestOrderItemsComponents> Components { get; set; }
             public class DescribeMultiPriceRequestOrderItemsComponents : TeaModel {
                 /// <summary>
-                /// <para>The key of the component.</para>
+                /// <para>The key of the module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RegionId</para>
@@ -44,59 +44,38 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the component.</para>
-                /// <para>The following are the keys and their sample or enumerated values for a monthly duration package of the enterprise edition:</para>
+                /// <para>The value of the module.</para>
+                /// <para>The following example values and valid values are for the Enterprise Edition monthly duration package:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>RegionId</c>: cn-shanghai</para>
-                /// </description></item>
-                /// <item><description><para><c>InstanceType</c>: eds.enterprise_office.4c8g</para>
-                /// </description></item>
-                /// <item><description><para><c>DurationType</c> (in hours): [enum]</para>
-                /// <list type="bullet">
-                /// <item><description><para>120</para>
-                /// </description></item>
-                /// <item><description><para>250</para>
-                /// </description></item>
+                /// <item><description>RegionId: cn-shanghai</description></item>
+                /// <item><description>InstanceType: eds.enterprise_office.4c8g</description></item>
+                /// <item><description>DurationType (hours): Valid values: <list type="bullet">
+                /// <item><description>120</description></item>
+                /// <item><description>250</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para><c>OsType</c>: [enum]</para>
-                /// <list type="bullet">
-                /// <item><description><para>Windows</para>
-                /// </description></item>
-                /// <item><description><para>Linux</para>
-                /// </description></item>
+                /// <item><description>OsType: Valid values: <list type="bullet">
+                /// <item><description>Windows</description></item>
+                /// <item><description>Linux</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para><c>RootDiskSize</c> (in GiB): 80</para>
-                /// </description></item>
-                /// <item><description><para><c>RootDiskCategory</c>: [enum]</para>
-                /// <list type="bullet">
-                /// <item><description><para><c>cloud_efficiency</c> (Ultra Cloud Disk)</para>
-                /// </description></item>
-                /// <item><description><para><c>cloud_auto</c> (AutoPL Cloud Disk)</para>
-                /// </description></item>
-                /// <item><description><para><c>cloud_essd</c> (Enhanced SSD (ESSD), available only for specific instance types)</para>
-                /// </description></item>
+                /// <item><description>RootDiskSize (GiB): 80</description></item>
+                /// <item><description>RootDiskCategory: Valid values: <list type="bullet">
+                /// <item><description>cloud_efficiency: ultra cloud disk</description></item>
+                /// <item><description>cloud_auto: ESSD AutoPL cloud disk</description></item>
+                /// <item><description>cloud_essd: enhanced standard SSD. Only specific instance types support this value.</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para><c>RootPerformanceLevel</c>: [enum]</para>
-                /// <list type="bullet">
-                /// <item><description><para>PL0</para>
-                /// </description></item>
-                /// <item><description><para>PL1</para>
-                /// </description></item>
-                /// <item><description><para>PL2</para>
-                /// </description></item>
-                /// <item><description><para>PL3</para>
-                /// </description></item>
+                /// <item><description>RootPerformanceLevel: Valid values: <list type="bullet">
+                /// <item><description>PL0</description></item>
+                /// <item><description>PL1</description></item>
+                /// <item><description>PL2</description></item>
+                /// <item><description>PL3</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para><c>DataDiskSize</c> (in GiB): Same as <c>RootDiskSize</c>.</para>
-                /// </description></item>
-                /// <item><description><para><c>DataDiskCategory</c>: Same as <c>RootDiskCategory</c>.</para>
-                /// </description></item>
-                /// <item><description><para><c>DataPerformanceLevel</c>: Same as <c>RootPerformanceLevel</c>.</para>
-                /// </description></item>
+                /// <item><description>DataDiskSize (GiB): same as RootDiskSize</description></item>
+                /// <item><description>DataDiskCategory: same as RootDiskCategory</description></item>
+                /// <item><description>DataPerformanceLevel: same as RootPerformanceLevel</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -113,18 +92,18 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string Data { get; set; }
 
             /// <summary>
-            /// <para>A list of instance IDs.</para>
+            /// <para>The list of instance IDs.</para>
             /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
             public List<string> InstanceIds { get; set; }
 
             /// <summary>
-            /// <para>The subscription period. Valid values:</para>
+            /// <para>The subscription duration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>If <c>PeriodUnit</c> is <c>Year</c>, the valid values are 1, 2, and 3.</para>
+            /// <item><description><para>If PeriodUnit is set to Year: 1, 2, or 3.</para>
             /// </description></item>
-            /// <item><description><para>If <c>PeriodUnit</c> is <c>Month</c>, the valid values are 1, 2, 3, and 6.</para>
+            /// <item><description><para>If PeriodUnit is set to Month: 1, 2, 3, or 6.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -136,7 +115,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public int? Period { get; set; }
 
             /// <summary>
-            /// <para>The unit of the subscription period.</para>
+            /// <para>The unit of the subscription duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Year</para>
@@ -156,7 +135,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string PromotionId { get; set; }
 
             /// <summary>
-            /// <para>A list of resource IDs.</para>
+            /// <para>The list of resource IDs.</para>
             /// </summary>
             [NameInMap("ResourceIds")]
             [Validation(Required=false)]
@@ -165,7 +144,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             /// <summary>
             /// <para>The resource type.</para>
             /// <remarks>
-            /// <para>The value is case-sensitive.</para>
+            /// <para>This parameter is case-sensitive. Make sure that the spelling is correct.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -192,7 +171,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The package code. This parameter is not required for non-package types.</para>
+        /// <para>The package code. You do not need to specify this parameter for non-package types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pacakge</para>
@@ -202,7 +181,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string PackageCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who owns the resource in the reseller model. This parameter is not required in non-reseller mode.</para>
+        /// <para>The user ID for resource ownership in the reseller pattern. You do not need to specify this parameter in the non-reseller pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>182864463481****</para>

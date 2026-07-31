@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class DescribeMultiPriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed price information.</para>
+        /// <para>The price details.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public DescribeMultiPriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribeMultiPriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// <para>The currency.</para>
+                /// <para>The currency unit.</para>
                 /// <para>China site: CNY.</para>
                 /// <para>International site: USD.</para>
                 /// 
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// <para>A list of price details.</para>
+                /// <para>The price details.</para>
                 /// </summary>
                 [NameInMap("PriceDetails")]
                 [Validation(Required=false)]
                 public List<DescribeMultiPriceResponseBodyPriceInfoPricePriceDetails> PriceDetails { get; set; }
                 public class DescribeMultiPriceResponseBodyPriceInfoPricePriceDetails : TeaModel {
                     /// <summary>
-                    /// <para>A list of pricing module details.</para>
+                    /// <para>The pricing module details.</para>
                     /// </summary>
                     [NameInMap("ModuleDetails")]
                     [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                         /// <para>The module name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>企业办公型-8C32G</para>
+                        /// <para>Enterprise Office - 8C32G</para>
                         /// </summary>
                         [NameInMap("ModuleName")]
                         [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                         public float? SavingPlanDiscountPrice { get; set; }
 
                         /// <summary>
-                        /// <para>The trade price, which is the original price minus the discount amount.</para>
+                        /// <para>The actual payment price. The value is the original price minus the discount amount.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>292.2</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     }
 
                     /// <summary>
-                    /// <para>The sort order.</para>
+                    /// <para>The sort property.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     public int? OrderItem { get; set; }
 
                     /// <summary>
-                    /// <para>A breakdown of the price.</para>
+                    /// <para>The price details.</para>
                     /// </summary>
                     [NameInMap("PriceDetail")]
                     [Validation(Required=false)]
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                         public float? SavingPlanRecommendPrice { get; set; }
 
                         /// <summary>
-                        /// <para>The trade price, which is the original price minus the discount amount.</para>
+                        /// <para>The actual payment price. The value is the original price minus the discount amount.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>80.00</para>
@@ -201,14 +201,18 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 }
 
                 /// <summary>
-                /// <para>A list of promotions.</para>
+                /// <para>The promotion information.</para>
                 /// </summary>
                 [NameInMap("Promotions")]
                 [Validation(Required=false)]
                 public List<DescribeMultiPriceResponseBodyPriceInfoPricePromotions> Promotions { get; set; }
                 public class DescribeMultiPriceResponseBodyPriceInfoPricePromotions : TeaModel {
+                    [NameInMap("ActivityId")]
+                    [Validation(Required=false)]
+                    public string ActivityId { get; set; }
+
                     /// <summary>
-                    /// <para>The option code.</para>
+                    /// <para>The description of the promotion rule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>new</para>
@@ -218,17 +222,17 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     public string OptionCode { get; set; }
 
                     /// <summary>
-                    /// <para>The promotion description.</para>
+                    /// <para>The description of the promotion.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>促销</para>
+                    /// <para>Promotion</para>
                     /// </summary>
                     [NameInMap("PromotionDesc")]
                     [Validation(Required=false)]
                     public string PromotionDesc { get; set; }
 
                     /// <summary>
-                    /// <para>The promotion ID.</para>
+                    /// <para>The ID of the promotion.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>youhuiquan_promotion_option_id_for_blank</para>
@@ -238,10 +242,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     public string PromotionId { get; set; }
 
                     /// <summary>
-                    /// <para>The promotion name.</para>
+                    /// <para>The name of the promotion.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>优惠活动名称</para>
+                    /// <para>Promotion name</para>
                     /// </summary>
                     [NameInMap("PromotionName")]
                     [Validation(Required=false)]
@@ -260,14 +264,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 }
 
                 /// <summary>
-                /// <para>A map of instance IDs to their corresponding refund amounts.</para>
+                /// <para>The unsubscription instance and pricing details.</para>
                 /// </summary>
                 [NameInMap("RefundInstanceIdPriceMap")]
                 [Validation(Required=false)]
                 public Dictionary<string, float?> RefundInstanceIdPriceMap { get; set; }
 
                 /// <summary>
-                /// <para>The refund amount.</para>
+                /// <para>The unsubscription price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60.00</para>
@@ -277,7 +281,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public float? RefundPrice { get; set; }
 
                 /// <summary>
-                /// <para>The trade price, which is the original price minus the discount amount.</para>
+                /// <para>The actual payment price. The value is the original price minus the discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>82.6</para>
@@ -289,14 +293,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             }
 
             /// <summary>
-            /// <para>A list of promotion rules.</para>
+            /// <para>The promotion rule information.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<DescribeMultiPriceResponseBodyPriceInfoRules> Rules { get; set; }
             public class DescribeMultiPriceResponseBodyPriceInfoRules : TeaModel {
                 /// <summary>
-                /// <para>The promotion rule description.</para>
+                /// <para>The description of the promotion rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>accounts_suspect_users</para>
@@ -306,7 +310,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The promotion rule ID.</para>
+                /// <para>The ID of the promotion rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hrzdvc</para>
