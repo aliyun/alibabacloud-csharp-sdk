@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether private network access for Kibana is created. Valid values:</para>
+        /// <para>Indicates whether private network access for Kibana is created.</para>
         /// <list type="bullet">
         /// <item><description>true: Succeeded.</description></item>
         /// <item><description>false: Failed.</description></item>

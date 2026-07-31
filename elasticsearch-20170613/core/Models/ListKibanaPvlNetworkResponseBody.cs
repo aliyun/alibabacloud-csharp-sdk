@@ -59,10 +59,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The endpoint status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disconnected: disconnected.</para>
-            /// </description></item>
-            /// <item><description><para>Connected: connected.</para>
-            /// </description></item>
+            /// <item><description>Disconnected: disconnected</description></item>
+            /// <item><description>Connected: connected</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,6 +69,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [NameInMap("endpointStatus")]
             [Validation(Required=false)]
             public string EndpointStatus { get; set; }
+
+            [NameInMap("managedSecurityGroup")]
+            [Validation(Required=false)]
+            public bool? ManagedSecurityGroup { get; set; }
 
             /// <summary>
             /// <para>The Kibana private network connection ID.</para>

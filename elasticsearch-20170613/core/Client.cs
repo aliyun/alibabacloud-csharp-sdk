@@ -7387,8 +7387,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</description></item>
-        /// <item><description>The Kibana specification must be greater than 1 vCPU and 2 GB of memory.</description></item>
+        /// <item><description>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</description></item>
+        /// <item><description>The Kibana specifications must be greater than 1 vCPU and 2 GB of memory.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -7417,6 +7417,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointName))
             {
                 body["endpointName"] = request.EndpointName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedSecurityGroup))
+            {
+                body["managedSecurityGroup"] = request.ManagedSecurityGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroups))
             {
@@ -7459,8 +7463,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</description></item>
-        /// <item><description>The Kibana specification must be greater than 1 vCPU and 2 GB of memory.</description></item>
+        /// <item><description>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</description></item>
+        /// <item><description>The Kibana specifications must be greater than 1 vCPU and 2 GB of memory.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -7489,6 +7493,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointName))
             {
                 body["endpointName"] = request.EndpointName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedSecurityGroup))
+            {
+                body["managedSecurityGroup"] = request.ManagedSecurityGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroups))
             {
@@ -7531,8 +7539,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</description></item>
-        /// <item><description>The Kibana specification must be greater than 1 vCPU and 2 GB of memory.</description></item>
+        /// <item><description>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</description></item>
+        /// <item><description>The Kibana specifications must be greater than 1 vCPU and 2 GB of memory.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -7558,8 +7566,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</description></item>
-        /// <item><description>The Kibana specification must be greater than 1 vCPU and 2 GB of memory.</description></item>
+        /// <item><description>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</description></item>
+        /// <item><description>The Kibana specifications must be greater than 1 vCPU and 2 GB of memory.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -14269,7 +14277,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Elasticsearch instances.</para>
+        /// <para>Retrieves a list of Elasticsearch instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14359,7 +14367,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Elasticsearch instances.</para>
+        /// <para>Retrieves a list of Elasticsearch instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14449,7 +14457,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Elasticsearch instances.</para>
+        /// <para>Retrieves a list of Elasticsearch instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14468,7 +14476,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Elasticsearch instances.</para>
+        /// <para>Retrieves a list of Elasticsearch instances.</para>
         /// </summary>
         /// 
         /// <param name="request">

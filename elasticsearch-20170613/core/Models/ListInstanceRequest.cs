@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance name. Fuzzy match is supported. For example, if you search for <b>abc</b>, instances named <b>abc</b>, <b>abcde</b>, <b>xyabc</b>, and <b>xabcy</b> may be returned.</para>
+        /// <para>The instance name. Fuzzy match is supported. For example, if you search for <b>abc</b>, all instances whose names contain <b>abc</b> may be returned, such as <b>abc</b>, <b>abcde</b>, <b>xyabc</b>, and <b>xabcy</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyunes_test1</para>
@@ -30,15 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EsVersion { get; set; }
 
         /// <summary>
-        /// <para>The instance edition. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>x-pack: Commercial Edition</para>
-        /// </description></item>
-        /// <item><description><para>advanced/IS: Advanced Edition</para>
-        /// </description></item>
-        /// <item><description><para>community: Basic Edition</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The edition of the instance. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>advanced</para>
@@ -58,8 +50,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the instance list.
-        /// Minimum value: <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number of the instance list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,12 +61,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>postpaid: pay-as-you-go</para>
-        /// </description></item>
-        /// <item><description><para>prepaid: subscription</para>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>postpaid</para>
@@ -95,7 +80,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging queries. Maximum value: <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Settings the number of entries per page for paging. Maximum value: <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -19,9 +19,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string EndpointName { get; set; }
 
+        [NameInMap("managedSecurityGroup")]
+        [Validation(Required=false)]
+        public bool? ManagedSecurityGroup { get; set; }
+
         /// <summary>
         /// <para>The security groups.</para>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("securityGroups")]
         [Validation(Required=false)]
