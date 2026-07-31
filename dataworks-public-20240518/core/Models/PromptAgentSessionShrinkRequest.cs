@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class PromptAgentSessionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID passed in by the caller. The value is returned as-is in the response.</para>
+        /// <para>The ID passed by the requester. The value is returned as-is.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1021418411</para>

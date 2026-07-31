@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The list of sub-Agents that can be called by this Agent.</para>
+        /// <para>The list of child Agents that can be called by this Agent.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -19,13 +19,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// </summary>
         [NameInMap("CallableAgents")]
         [Validation(Required=false)]
-        public List<string> CallableAgents { get; set; }
+        public List<CreateAgentRequestCallableAgents> CallableAgents { get; set; }
+        public class CreateAgentRequestCallableAgents : TeaModel {
+            /// <summary>
+            /// <para>The Agent name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>agent-1</para>
+            /// </summary>
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The description of the Agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>数据分析助手</para>
+        /// <para>Data analytics assistant</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -35,14 +47,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The display name of the Agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>我的助手</para>
+        /// <para>MyAssistant.</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Extended metadata (key-value pairs).</para>
+        /// <para>The extended metadata (key-value pairs).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -64,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public Dictionary<string, object> Model { get; set; }
 
         /// <summary>
-        /// <para>The name of the Agent. It must be unique under the current account.</para>
+        /// <para>The Agent name, which must be unique within the current account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,13 +96,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// </summary>
         [NameInMap("Skills")]
         [Validation(Required=false)]
-        public List<string> Skills { get; set; }
+        public List<CreateAgentRequestSkills> Skills { get; set; }
+        public class CreateAgentRequestSkills : TeaModel {
+            /// <summary>
+            /// <para>The skill name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>skill-1</para>
+            /// </summary>
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The system prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>你是一个数据分析助手。</para>
+        /// <para>You are a data analytics assistant.</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]
@@ -106,7 +130,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// </summary>
         [NameInMap("Tools")]
         [Validation(Required=false)]
-        public List<string> Tools { get; set; }
+        public List<CreateAgentRequestTools> Tools { get; set; }
+        public class CreateAgentRequestTools : TeaModel {
+            /// <summary>
+            /// <para>The McpServer name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>server-1</para>
+            /// </summary>
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The visibility level.<br>
@@ -122,21 +158,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope. The corresponding field is selected based on Visibility.</para>
+        /// <para>The visibility scope. The corresponding field is determined by the Visibility parameter.</para>
         /// </summary>
         [NameInMap("VisibilityScope")]
         [Validation(Required=false)]
         public CreateAgentRequestVisibilityScope VisibilityScope { get; set; }
         public class CreateAgentRequestVisibilityScope : TeaModel {
             /// <summary>
-            /// <para>The list of visible project IDs. Takes effect when Visibility is <c>PROJECT</c>.</para>
+            /// <para>The list of project IDs that have visibility. This parameter takes effect when Visibility is set to <c>PROJECT</c>.</para>
             /// </summary>
             [NameInMap("ProjectIds")]
             [Validation(Required=false)]
             public List<string> ProjectIds { get; set; }
 
             /// <summary>
-            /// <para>The list of visible user IDs. Takes effect when Visibility is <c>USER</c>.</para>
+            /// <para>The list of user IDs that have visibility. This parameter takes effect when Visibility is set to <c>USER</c>.</para>
             /// </summary>
             [NameInMap("UserIds")]
             [Validation(Required=false)]

@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public List<long?> Ids { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to rerun instances with the latest configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("UseLatestConfig")]
         [Validation(Required=false)]
         public bool? UseLatestConfig { get; set; }

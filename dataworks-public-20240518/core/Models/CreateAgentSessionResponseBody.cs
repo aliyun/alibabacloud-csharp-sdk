@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateAgentSessionResponseBodyJsonRpcResponse JsonRpcResponse { get; set; }
         public class CreateAgentSessionResponseBodyJsonRpcResponse : TeaModel {
             /// <summary>
-            /// <para>The request ID provided by the client. This ID is returned in the response without modification.</para>
+            /// <para>The request ID passed by the caller. The value is returned as-is.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The JSON-RPC version. The value is fixed at <c>2.0</c>.</para>
+            /// <para>The JSON-RPC version. Fixed value: 2.0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Jsonrpc { get; set; }
 
             /// <summary>
-            /// <para>The business data. This field is <c>null</c> if an error occurs.</para>
+            /// <para>The business data. The value is null if an error occurs.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>8A9D5E6C-5817-5837-9715-6E3967EC6123</para>

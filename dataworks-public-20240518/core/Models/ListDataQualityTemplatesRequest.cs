@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The directory path to which the data quality template belongs.</para>
+        /// <para>The catalog path to which the data quality template belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/timeliness/ods_layer</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy match for the template rule name.</para>
+        /// <para>The template rule name for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>table_rows</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Default value: 10.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number of the results. Default value: 1.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

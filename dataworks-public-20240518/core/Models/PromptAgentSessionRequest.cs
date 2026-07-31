@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class PromptAgentSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID passed in by the caller. The value is returned as-is in the response.</para>
+        /// <para>The ID passed by the requester. The value is returned as-is.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1021418411</para>
@@ -37,14 +37,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public PromptAgentSessionRequestParams Params { get; set; }
         public class PromptAgentSessionRequestParams : TeaModel {
             /// <summary>
-            /// <para>The extended metadata.</para>
+            /// <para>The extended meta information.</para>
+            /// <remarks>
+            /// <para>Notice: If the Agent bound to the specified session is named dataworks_ai_assistant_agent (AI Assistant Service), provide the instance ID of the AI Assistant Service in the Context.agent.instanceId field of the extended meta information.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("Meta")]
             [Validation(Required=false)]
             public PromptAgentSessionRequestParamsMeta Meta { get; set; }
             public class PromptAgentSessionRequestParamsMeta : TeaModel {
                 /// <summary>
-                /// <para>A Map-type value. In custom agent scenarios, you can use this parameter to replace placeholder parameters.</para>
+                /// <para>A Map type. In custom Agent scenarios, some placeholder parameters can be replaced through this value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -59,31 +62,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The array of user message content blocks. For more information, see https\://agentclientprotocol.com/protocol/content</para>
+            /// <para>The array of user message content blocks. For more information, visit: <a href="https://agentclientprotocol.com/protocol/content">https://agentclientprotocol.com/protocol/content</a>.</para>
             /// </summary>
             [NameInMap("Prompt")]
             [Validation(Required=false)]
             public List<PromptAgentSessionRequestParamsPrompt> Prompt { get; set; }
             public class PromptAgentSessionRequestParamsPrompt : TeaModel {
                 /// <summary>
-                /// <para>The description of the file.</para>
+                /// <para>The file description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Sales_Order_Details.csv</para>
+                /// <para>Effective when Type=resource_link. Example: SalesOrderDetails.csv.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The prompt metadata extended by DataWorks.</para>
+                /// <para>The DataWorks extended prompt meta information.</para>
                 /// </summary>
                 [NameInMap("Meta")]
                 [Validation(Required=false)]
                 public PromptAgentSessionRequestParamsPromptMeta Meta { get; set; }
                 public class PromptAgentSessionRequestParamsPromptMeta : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to hide the prompt from the user. For example, if a user asks &quot;Sales amount in the last 7 days&quot; in a chat dialog, the calling system may use RAG to retrieve relevant business domain knowledge and append it to the agent context before calling the API. If you do not want to display this supplemental information to the user, set this parameter to true.</para>
+                    /// <para>Specifies whether to hide this prompt from the user. For example, in a chat dialog box, the user asks a question such as &quot;Sales amount in the last 7 days&quot;. Before calling the OpenAPI, the calling system retrieves some business domain knowledge through RAG that needs to be added to the Agent context but should not be displayed to the user. In this case, set this value to true.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true or false</para>
@@ -98,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The MIME type of the file.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>text/csv‌</para>
+                /// <para>Effective when Type=resource_link. Example: text/csv.</para>
                 /// </summary>
                 [NameInMap("MimeType")]
                 [Validation(Required=false)]
@@ -108,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxx.csv</para>
+                /// <para>Effective when Type=resource_link. Example: xxx.csv.</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The size of the file. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1231231</para>
+                /// <para>Effective when Type=resource_link. Example: 1231231</para>
                 /// </summary>
                 [NameInMap("Size")]
                 [Validation(Required=false)]
@@ -128,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para><b>The text content.</b></para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Sales in the last 7 days</para>
+                /// <para>Effective when Type=text. Example: Sales amount in the last 7 days.</para>
                 /// </summary>
                 [NameInMap("Text")]
                 [Validation(Required=false)]
@@ -138,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The title of the file.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Sales_Order_Details.csv</para>
+                /// <para>Effective when Type=resource_link. Example: SalesOrderDetails.csv.</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -148,7 +151,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para><b>The content block type.</b></para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>text</para>
+                /// <para>Currently supported: text, resource_link.</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
@@ -158,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The URI of the file.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>oss://${bucket}/${ossKey}</para>
+                /// <para>Effective when Type=resource_link. Example: oss://${bucket}/${ossKey}</para>
                 /// </summary>
                 [NameInMap("Uri")]
                 [Validation(Required=false)]
@@ -167,7 +170,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The ID of the target session. If the session does not exist, an SSE error frame is returned.</para>
+            /// <para>The target session ID. If the session does not exist, an SSE error frame is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sess_0f12abc34</para>

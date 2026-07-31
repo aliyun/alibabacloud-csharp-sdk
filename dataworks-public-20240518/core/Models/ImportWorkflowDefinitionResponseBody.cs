@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the asynchronous task fails.</para>
+            /// <para>The error message when the asynchronous task fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>target folder already exists: XXXX</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The content that the asynchronous task is expected to return.</para>
             /// <remarks>
-            /// <para>This field currently contains the ID of the workflow created by the asynchronous task.</para>
+            /// <para>This field currently stores the ID of the workflow created in the asynchronous task.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Create: creates a resource. </description></item>
-            /// <item><description>Cancel: cancels a creation job.</description></item>
+            /// <item><description>Cancel: cancels a creation task.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

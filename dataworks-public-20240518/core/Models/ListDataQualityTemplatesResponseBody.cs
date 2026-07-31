@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Paged query results of data quality rule templates.</para>
+        /// <para>The paging query result of data quality rule templates.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The creator of the data quality rule template.</para>
+                /// <para>The user who created the data quality rule template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7892346529452</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The time when the data quality rule template was updated.</para>
+                /// <para>The time when the data quality rule template was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1729816478147</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The last updater of the data quality rule template.</para>
+                /// <para>The user who last updated the data quality rule template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>205250754596036836</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>Specific configurations of the data quality rule template. For more information, see <a href="~2963394~">Data quality Spec configuration description</a>.</para>
+                /// <para>The specific configuration of the data quality rule template. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of pages.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The API request ID, which is generated as a UUID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc14115***159376359</para>

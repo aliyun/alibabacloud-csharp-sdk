@@ -2380,18 +2380,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Agent</para>
+        /// <para>Creates an Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Agent Name</b>: Must be unique under the current account.</description></item>
-        /// <item><description><b>Model Configuration</b>: An optional parameter used to specify the model used by the Agent and its related settings.</description></item>
-        /// <item><description><b>Visibility Level</b>: Defines who can access the Agent. Supports visibility within the account, to specified projects, or to specific users.</description></item>
-        /// <item><description><b>Visibility Scope</b>: When <c>PROJECT</c> or <c>USER</c> is selected as the visibility level, the specific project ID or user ID list must be further specified.</description></item>
-        /// <item><description><b>Other Parameters</b>: Items such as display name and description are optional and can be filled in based on actual needs.</description></item>
+        /// <item><description><b>Agent name</b>: Must be unique within the current account.</description></item>
+        /// <item><description><b>Model configuration</b>: An optional parameter that specifies the model used by the Agent and its related settings.</description></item>
+        /// <item><description><b>Visibility level</b>: Defines who can access the Agent. Supported levels include account-wide, project-specific, or user-specific visibility.</description></item>
+        /// <item><description><b>Visibility scope</b>: When you set the visibility level to <c>PROJECT</c> or <c>USER</c>, you must specify the list of project IDs or user IDs.</description></item>
+        /// <item><description><b>Other parameters</b>: Parameters such as display name and description are optional. Set them as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2500,18 +2500,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Agent</para>
+        /// <para>Creates an Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Agent Name</b>: Must be unique under the current account.</description></item>
-        /// <item><description><b>Model Configuration</b>: An optional parameter used to specify the model used by the Agent and its related settings.</description></item>
-        /// <item><description><b>Visibility Level</b>: Defines who can access the Agent. Supports visibility within the account, to specified projects, or to specific users.</description></item>
-        /// <item><description><b>Visibility Scope</b>: When <c>PROJECT</c> or <c>USER</c> is selected as the visibility level, the specific project ID or user ID list must be further specified.</description></item>
-        /// <item><description><b>Other Parameters</b>: Items such as display name and description are optional and can be filled in based on actual needs.</description></item>
+        /// <item><description><b>Agent name</b>: Must be unique within the current account.</description></item>
+        /// <item><description><b>Model configuration</b>: An optional parameter that specifies the model used by the Agent and its related settings.</description></item>
+        /// <item><description><b>Visibility level</b>: Defines who can access the Agent. Supported levels include account-wide, project-specific, or user-specific visibility.</description></item>
+        /// <item><description><b>Visibility scope</b>: When you set the visibility level to <c>PROJECT</c> or <c>USER</c>, you must specify the list of project IDs or user IDs.</description></item>
+        /// <item><description><b>Other parameters</b>: Parameters such as display name and description are optional. Set them as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2620,18 +2620,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Agent</para>
+        /// <para>Creates an Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Agent Name</b>: Must be unique under the current account.</description></item>
-        /// <item><description><b>Model Configuration</b>: An optional parameter used to specify the model used by the Agent and its related settings.</description></item>
-        /// <item><description><b>Visibility Level</b>: Defines who can access the Agent. Supports visibility within the account, to specified projects, or to specific users.</description></item>
-        /// <item><description><b>Visibility Scope</b>: When <c>PROJECT</c> or <c>USER</c> is selected as the visibility level, the specific project ID or user ID list must be further specified.</description></item>
-        /// <item><description><b>Other Parameters</b>: Items such as display name and description are optional and can be filled in based on actual needs.</description></item>
+        /// <item><description><b>Agent name</b>: Must be unique within the current account.</description></item>
+        /// <item><description><b>Model configuration</b>: An optional parameter that specifies the model used by the Agent and its related settings.</description></item>
+        /// <item><description><b>Visibility level</b>: Defines who can access the Agent. Supported levels include account-wide, project-specific, or user-specific visibility.</description></item>
+        /// <item><description><b>Visibility scope</b>: When you set the visibility level to <c>PROJECT</c> or <c>USER</c>, you must specify the list of project IDs or user IDs.</description></item>
+        /// <item><description><b>Other parameters</b>: Parameters such as display name and description are optional. Set them as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2650,18 +2650,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Agent</para>
+        /// <para>Creates an Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request Description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Agent Name</b>: Must be unique under the current account.</description></item>
-        /// <item><description><b>Model Configuration</b>: An optional parameter used to specify the model used by the Agent and its related settings.</description></item>
-        /// <item><description><b>Visibility Level</b>: Defines who can access the Agent. Supports visibility within the account, to specified projects, or to specific users.</description></item>
-        /// <item><description><b>Visibility Scope</b>: When <c>PROJECT</c> or <c>USER</c> is selected as the visibility level, the specific project ID or user ID list must be further specified.</description></item>
-        /// <item><description><b>Other Parameters</b>: Items such as display name and description are optional and can be filled in based on actual needs.</description></item>
+        /// <item><description><b>Agent name</b>: Must be unique within the current account.</description></item>
+        /// <item><description><b>Model configuration</b>: An optional parameter that specifies the model used by the Agent and its related settings.</description></item>
+        /// <item><description><b>Visibility level</b>: Defines who can access the Agent. Supported levels include account-wide, project-specific, or user-specific visibility.</description></item>
+        /// <item><description><b>Visibility scope</b>: When you set the visibility level to <c>PROJECT</c> or <c>USER</c>, you must specify the list of project IDs or user IDs.</description></item>
+        /// <item><description><b>Other parameters</b>: Parameters such as display name and description are optional. Set them as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2680,17 +2680,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new agent session and returns a session ID.</para>
+        /// <para>Creates a new agent session and returns the session ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a new agent session.</description></item>
-        /// <item><description>You must specify the agent name to bind to the session using the <c>_meta.agent.agentName</c> parameter.</description></item>
-        /// <item><description>You can specify a session source identifier in the <c>_meta.config.sessionSource</c> parameter. This allows you to search for sessions by source later.</description></item>
-        /// <item><description>You can add session tags using the <c>_meta.config.sessionTags[].sessionTagCode</c> parameter.</description></item>
+        /// <item><description>This operation creates a new agent session.</description></item>
+        /// <item><description>Use <c>_meta.agent.agentName</c> to specify the bound agent name. This parameter is required.<list type="bullet">
+        /// <item><description>dataworks_data_agent: DataWorks built-in agent — Data Agent, which provides intelligent data development AI capabilities covering the entire workflow of data integration, development, O&amp;M, governance, and analytics.</description></item>
+        /// <item><description>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI, which uses natural language processing and intelligent analytics technologies to automate the entire analysis workflow from requirement parsing, data extraction, and automatic code generation to visualization report output through conversational interaction.</description></item>
+        /// <item><description>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service, which is a DataWorks enterprise-grade dedicated AI assistant built on open source frameworks such as OpenClaw and Hermes Agent.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Use <c>_meta.config.sessionSource</c> to pass through a session source identifier for subsequent retrieval by source.</description></item>
+        /// <item><description>Use <c>_meta.config.sessionTags[].sessionTagCode</c> to pass in session tags.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2747,17 +2752,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new agent session and returns a session ID.</para>
+        /// <para>Creates a new agent session and returns the session ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a new agent session.</description></item>
-        /// <item><description>You must specify the agent name to bind to the session using the <c>_meta.agent.agentName</c> parameter.</description></item>
-        /// <item><description>You can specify a session source identifier in the <c>_meta.config.sessionSource</c> parameter. This allows you to search for sessions by source later.</description></item>
-        /// <item><description>You can add session tags using the <c>_meta.config.sessionTags[].sessionTagCode</c> parameter.</description></item>
+        /// <item><description>This operation creates a new agent session.</description></item>
+        /// <item><description>Use <c>_meta.agent.agentName</c> to specify the bound agent name. This parameter is required.<list type="bullet">
+        /// <item><description>dataworks_data_agent: DataWorks built-in agent — Data Agent, which provides intelligent data development AI capabilities covering the entire workflow of data integration, development, O&amp;M, governance, and analytics.</description></item>
+        /// <item><description>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI, which uses natural language processing and intelligent analytics technologies to automate the entire analysis workflow from requirement parsing, data extraction, and automatic code generation to visualization report output through conversational interaction.</description></item>
+        /// <item><description>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service, which is a DataWorks enterprise-grade dedicated AI assistant built on open source frameworks such as OpenClaw and Hermes Agent.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Use <c>_meta.config.sessionSource</c> to pass through a session source identifier for subsequent retrieval by source.</description></item>
+        /// <item><description>Use <c>_meta.config.sessionTags[].sessionTagCode</c> to pass in session tags.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2814,17 +2824,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new agent session and returns a session ID.</para>
+        /// <para>Creates a new agent session and returns the session ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a new agent session.</description></item>
-        /// <item><description>You must specify the agent name to bind to the session using the <c>_meta.agent.agentName</c> parameter.</description></item>
-        /// <item><description>You can specify a session source identifier in the <c>_meta.config.sessionSource</c> parameter. This allows you to search for sessions by source later.</description></item>
-        /// <item><description>You can add session tags using the <c>_meta.config.sessionTags[].sessionTagCode</c> parameter.</description></item>
+        /// <item><description>This operation creates a new agent session.</description></item>
+        /// <item><description>Use <c>_meta.agent.agentName</c> to specify the bound agent name. This parameter is required.<list type="bullet">
+        /// <item><description>dataworks_data_agent: DataWorks built-in agent — Data Agent, which provides intelligent data development AI capabilities covering the entire workflow of data integration, development, O&amp;M, governance, and analytics.</description></item>
+        /// <item><description>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI, which uses natural language processing and intelligent analytics technologies to automate the entire analysis workflow from requirement parsing, data extraction, and automatic code generation to visualization report output through conversational interaction.</description></item>
+        /// <item><description>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service, which is a DataWorks enterprise-grade dedicated AI assistant built on open source frameworks such as OpenClaw and Hermes Agent.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Use <c>_meta.config.sessionSource</c> to pass through a session source identifier for subsequent retrieval by source.</description></item>
+        /// <item><description>Use <c>_meta.config.sessionTags[].sessionTagCode</c> to pass in session tags.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2843,17 +2858,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new agent session and returns a session ID.</para>
+        /// <para>Creates a new agent session and returns the session ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a new agent session.</description></item>
-        /// <item><description>You must specify the agent name to bind to the session using the <c>_meta.agent.agentName</c> parameter.</description></item>
-        /// <item><description>You can specify a session source identifier in the <c>_meta.config.sessionSource</c> parameter. This allows you to search for sessions by source later.</description></item>
-        /// <item><description>You can add session tags using the <c>_meta.config.sessionTags[].sessionTagCode</c> parameter.</description></item>
+        /// <item><description>This operation creates a new agent session.</description></item>
+        /// <item><description>Use <c>_meta.agent.agentName</c> to specify the bound agent name. This parameter is required.<list type="bullet">
+        /// <item><description>dataworks_data_agent: DataWorks built-in agent — Data Agent, which provides intelligent data development AI capabilities covering the entire workflow of data integration, development, O&amp;M, governance, and analytics.</description></item>
+        /// <item><description>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI, which uses natural language processing and intelligent analytics technologies to automate the entire analysis workflow from requirement parsing, data extraction, and automatic code generation to visualization report output through conversational interaction.</description></item>
+        /// <item><description>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service, which is a DataWorks enterprise-grade dedicated AI assistant built on open source frameworks such as OpenClaw and Hermes Agent.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Use <c>_meta.config.sessionSource</c> to pass through a session source identifier for subsequent retrieval by source.</description></item>
+        /// <item><description>Use <c>_meta.config.sessionTags[].sessionTagCode</c> to pass in session tags.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6864,7 +6884,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file in DataStudio. You cannot call this operation to create Data Integration nodes.</para>
+        /// <para>Creates a file in DataStudio. This operation does not support creating Data Integration nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6965,6 +6985,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 body["InputParameters"] = request.InputParameters;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputList))
+            {
+                body["OutputList"] = request.OutputList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputParameters))
             {
                 body["OutputParameters"] = request.OutputParameters;
@@ -7038,7 +7062,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file in DataStudio. You cannot call this operation to create Data Integration nodes.</para>
+        /// <para>Creates a file in DataStudio. This operation does not support creating Data Integration nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7139,6 +7163,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 body["InputParameters"] = request.InputParameters;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputList))
+            {
+                body["OutputList"] = request.OutputList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputParameters))
             {
                 body["OutputParameters"] = request.OutputParameters;
@@ -7212,7 +7240,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file in DataStudio. You cannot call this operation to create Data Integration nodes.</para>
+        /// <para>Creates a file in DataStudio. This operation does not support creating Data Integration nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7230,7 +7258,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file in DataStudio. You cannot call this operation to create Data Integration nodes.</para>
+        /// <para>Creates a file in DataStudio. This operation does not support creating Data Integration nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11416,16 +11444,224 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Skill</para>
+        /// <para>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the file upload first. After creation, call RunSemanticJob with the returned Name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Creates a semantic task definition.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateSemanticJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSemanticJobResponse
+        /// </returns>
+        public CreateSemanticJobResponse CreateSemanticJobWithOptions(CreateSemanticJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSemanticJobShrinkRequest request = new CreateSemanticJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReferenceFileIds))
+            {
+                request.ReferenceFileIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReferenceFileIds, "ReferenceFileIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReferenceFileUris))
+            {
+                request.ReferenceFileUrisShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReferenceFileUris, "ReferenceFileUris", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Source))
+            {
+                request.SourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Source, "Source", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceFileIdsShrink))
+            {
+                body["ReferenceFileIds"] = request.ReferenceFileIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceFileUrisShrink))
+            {
+                body["ReferenceFileUris"] = request.ReferenceFileUrisShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceShrink))
+            {
+                body["Source"] = request.SourceShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSemanticJob",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSemanticJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the file upload first. After creation, call RunSemanticJob with the returned Name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a semantic task definition.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateSemanticJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSemanticJobResponse
+        /// </returns>
+        public async Task<CreateSemanticJobResponse> CreateSemanticJobWithOptionsAsync(CreateSemanticJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSemanticJobShrinkRequest request = new CreateSemanticJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReferenceFileIds))
+            {
+                request.ReferenceFileIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReferenceFileIds, "ReferenceFileIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReferenceFileUris))
+            {
+                request.ReferenceFileUrisShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReferenceFileUris, "ReferenceFileUris", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Source))
+            {
+                request.SourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Source, "Source", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceFileIdsShrink))
+            {
+                body["ReferenceFileIds"] = request.ReferenceFileIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceFileUrisShrink))
+            {
+                body["ReferenceFileUris"] = request.ReferenceFileUrisShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceShrink))
+            {
+                body["Source"] = request.SourceShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSemanticJob",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSemanticJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the file upload first. After creation, call RunSemanticJob with the returned Name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a semantic task definition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSemanticJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSemanticJobResponse
+        /// </returns>
+        public CreateSemanticJobResponse CreateSemanticJob(CreateSemanticJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSemanticJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves a reusable semantic task definition. If you use a single-file source, apply for and complete the file upload first. After creation, call RunSemanticJob with the returned Name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a semantic task definition.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSemanticJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSemanticJobResponse
+        /// </returns>
+        public async Task<CreateSemanticJobResponse> CreateSemanticJobAsync(CreateSemanticJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSemanticJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new Skill in DataWorks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>SkillMdOverride</c> 与 <c>BundleUrl</c> 参数二选一，必须提供其中之一。</description></item>
-        /// <item><description><c>Visibility</c> 可设置为 <c>TENANT</c>、<c>PROJECT</c> 或 <c>USER</c>，分别表示账号内可见、指定项目可见或指定用户可见。</description></item>
-        /// <item><description>当 <c>Visibility</c> 设置为 <c>PROJECT</c> 时，需要通过 <c>VisibilityScope.ProjectIds</c> 指定可见的项目 ID 列表；当设置为 <c>USER</c> 时，则需通过 <c>VisibilityScope.UserIds</c> 指定可见的用户 ID 列表。</description></item>
+        /// <item><description>You must provide either SkillMdOverride or BundleUrl. One of the two parameters is required.</description></item>
+        /// <item><description>Visibility can be set to <c>TENANT</c>, <c>PROJECT</c>, or <c>USER</c>, which indicate visibility within the account, visibility to specified projects, or visibility to specified users, respectively.</description></item>
+        /// <item><description>When Visibility is set to <c>PROJECT</c>, specify the list of visible project IDs by using VisibilityScope.ProjectIds. When Visibility is set to <c>USER</c>, specify the list of visible user IDs by using VisibilityScope.UserIds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11506,16 +11742,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Skill</para>
+        /// <para>Creates a new Skill in DataWorks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>SkillMdOverride</c> 与 <c>BundleUrl</c> 参数二选一，必须提供其中之一。</description></item>
-        /// <item><description><c>Visibility</c> 可设置为 <c>TENANT</c>、<c>PROJECT</c> 或 <c>USER</c>，分别表示账号内可见、指定项目可见或指定用户可见。</description></item>
-        /// <item><description>当 <c>Visibility</c> 设置为 <c>PROJECT</c> 时，需要通过 <c>VisibilityScope.ProjectIds</c> 指定可见的项目 ID 列表；当设置为 <c>USER</c> 时，则需通过 <c>VisibilityScope.UserIds</c> 指定可见的用户 ID 列表。</description></item>
+        /// <item><description>You must provide either SkillMdOverride or BundleUrl. One of the two parameters is required.</description></item>
+        /// <item><description>Visibility can be set to <c>TENANT</c>, <c>PROJECT</c>, or <c>USER</c>, which indicate visibility within the account, visibility to specified projects, or visibility to specified users, respectively.</description></item>
+        /// <item><description>When Visibility is set to <c>PROJECT</c>, specify the list of visible project IDs by using VisibilityScope.ProjectIds. When Visibility is set to <c>USER</c>, specify the list of visible user IDs by using VisibilityScope.UserIds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11596,16 +11832,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Skill</para>
+        /// <para>Creates a new Skill in DataWorks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>SkillMdOverride</c> 与 <c>BundleUrl</c> 参数二选一，必须提供其中之一。</description></item>
-        /// <item><description><c>Visibility</c> 可设置为 <c>TENANT</c>、<c>PROJECT</c> 或 <c>USER</c>，分别表示账号内可见、指定项目可见或指定用户可见。</description></item>
-        /// <item><description>当 <c>Visibility</c> 设置为 <c>PROJECT</c> 时，需要通过 <c>VisibilityScope.ProjectIds</c> 指定可见的项目 ID 列表；当设置为 <c>USER</c> 时，则需通过 <c>VisibilityScope.UserIds</c> 指定可见的用户 ID 列表。</description></item>
+        /// <item><description>You must provide either SkillMdOverride or BundleUrl. One of the two parameters is required.</description></item>
+        /// <item><description>Visibility can be set to <c>TENANT</c>, <c>PROJECT</c>, or <c>USER</c>, which indicate visibility within the account, visibility to specified projects, or visibility to specified users, respectively.</description></item>
+        /// <item><description>When Visibility is set to <c>PROJECT</c>, specify the list of visible project IDs by using VisibilityScope.ProjectIds. When Visibility is set to <c>USER</c>, specify the list of visible user IDs by using VisibilityScope.UserIds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11624,16 +11860,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Skill</para>
+        /// <para>Creates a new Skill in DataWorks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>SkillMdOverride</c> 与 <c>BundleUrl</c> 参数二选一，必须提供其中之一。</description></item>
-        /// <item><description><c>Visibility</c> 可设置为 <c>TENANT</c>、<c>PROJECT</c> 或 <c>USER</c>，分别表示账号内可见、指定项目可见或指定用户可见。</description></item>
-        /// <item><description>当 <c>Visibility</c> 设置为 <c>PROJECT</c> 时，需要通过 <c>VisibilityScope.ProjectIds</c> 指定可见的项目 ID 列表；当设置为 <c>USER</c> 时，则需通过 <c>VisibilityScope.UserIds</c> 指定可见的用户 ID 列表。</description></item>
+        /// <item><description>You must provide either SkillMdOverride or BundleUrl. One of the two parameters is required.</description></item>
+        /// <item><description>Visibility can be set to <c>TENANT</c>, <c>PROJECT</c>, or <c>USER</c>, which indicate visibility within the account, visibility to specified projects, or visibility to specified users, respectively.</description></item>
+        /// <item><description>When Visibility is set to <c>PROJECT</c>, specify the list of visible project IDs by using VisibilityScope.ProjectIds. When Visibility is set to <c>USER</c>, specify the list of visible user IDs by using VisibilityScope.UserIds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12292,13 +12528,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Agent</para>
+        /// <para>Deletes an Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于从 DataWorks 中删除指定名称的 Agent。调用此接口时，必须提供要删除的 Agent 的名称。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation deletes an Agent with the specified name from DataWorks. When calling this operation, you must provide the name of the Agent to delete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12340,13 +12576,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Agent</para>
+        /// <para>Deletes an Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于从 DataWorks 中删除指定名称的 Agent。调用此接口时，必须提供要删除的 Agent 的名称。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation deletes an Agent with the specified name from DataWorks. When calling this operation, you must provide the name of the Agent to delete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12388,13 +12624,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Agent</para>
+        /// <para>Deletes an Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于从 DataWorks 中删除指定名称的 Agent。调用此接口时，必须提供要删除的 Agent 的名称。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation deletes an Agent with the specified name from DataWorks. When calling this operation, you must provide the name of the Agent to delete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12412,13 +12648,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Agent</para>
+        /// <para>Deletes an Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于从 DataWorks 中删除指定名称的 Agent。调用此接口时，必须提供要删除的 Agent 的名称。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation deletes an Agent with the specified name from DataWorks. When calling this operation, you must provide the name of the Agent to delete.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16076,12 +16312,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义实体定义</para>
+        /// <para>Deletes a metadata entity definition, including custom entity types and extension table types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>需要购买 DataWorks 专业版及以上版本才能使用。</para>
+        /// <para>DataWorks Professional Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16127,12 +16363,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义实体定义</para>
+        /// <para>Deletes a metadata entity definition, including custom entity types and extension table types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>需要购买 DataWorks 专业版及以上版本才能使用。</para>
+        /// <para>DataWorks Professional Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16178,12 +16414,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义实体定义</para>
+        /// <para>Deletes a metadata entity definition, including custom entity types and extension table types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>需要购买 DataWorks 专业版及以上版本才能使用。</para>
+        /// <para>DataWorks Professional Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16201,12 +16437,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义实体定义</para>
+        /// <para>Deletes a metadata entity definition, including custom entity types and extension table types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>需要购买 DataWorks 专业版及以上版本才能使用。</para>
+        /// <para>DataWorks Professional Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17856,6 +18092,146 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a task definition by the Name of a created task. If the task is running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for deleting a semantic task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSemanticJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSemanticJobResponse
+        /// </returns>
+        public DeleteSemanticJobResponse DeleteSemanticJobWithOptions(DeleteSemanticJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSemanticJob",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSemanticJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a task definition by the Name of a created task. If the task is running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for deleting a semantic task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSemanticJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSemanticJobResponse
+        /// </returns>
+        public async Task<DeleteSemanticJobResponse> DeleteSemanticJobWithOptionsAsync(DeleteSemanticJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSemanticJob",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSemanticJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a task definition by the Name of a created task. If the task is running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for deleting a semantic task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSemanticJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSemanticJobResponse
+        /// </returns>
+        public DeleteSemanticJobResponse DeleteSemanticJob(DeleteSemanticJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSemanticJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a task definition by the Name of a created task. If the task is running, call KillSemanticJob with the ExecutorJobId of that run and confirm the stop before deletion.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for deleting a semantic task.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSemanticJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSemanticJobResponse
+        /// </returns>
+        public async Task<DeleteSemanticJobResponse> DeleteSemanticJobAsync(DeleteSemanticJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSemanticJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Delete Skill</para>
         /// </summary>
         /// 
@@ -19328,6 +19704,154 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DissociateProjectFromResourceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Returns the download URL of artifacts by node name and an optional run ID after execution completes. If JobRunId is not specified, the result of the latest run of the node is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for retrieving the download URL of semantic task results.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadSemanticResultsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadSemanticResultsResponse
+        /// </returns>
+        public DownloadSemanticResultsResponse DownloadSemanticResultsWithOptions(DownloadSemanticResultsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobRunId))
+            {
+                body["JobRunId"] = request.JobRunId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadSemanticResults",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadSemanticResultsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Returns the download URL of artifacts by node name and an optional run ID after execution completes. If JobRunId is not specified, the result of the latest run of the node is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for retrieving the download URL of semantic task results.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadSemanticResultsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadSemanticResultsResponse
+        /// </returns>
+        public async Task<DownloadSemanticResultsResponse> DownloadSemanticResultsWithOptionsAsync(DownloadSemanticResultsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobRunId))
+            {
+                body["JobRunId"] = request.JobRunId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadSemanticResults",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadSemanticResultsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Returns the download URL of artifacts by node name and an optional run ID after execution completes. If JobRunId is not specified, the result of the latest run of the node is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for retrieving the download URL of semantic task results.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadSemanticResultsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadSemanticResultsResponse
+        /// </returns>
+        public DownloadSemanticResultsResponse DownloadSemanticResults(DownloadSemanticResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DownloadSemanticResultsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Returns the download URL of artifacts by node name and an optional run ID after execution completes. If JobRunId is not specified, the result of the latest run of the node is returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for retrieving the download URL of semantic task results.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadSemanticResultsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadSemanticResultsResponse
+        /// </returns>
+        public async Task<DownloadSemanticResultsResponse> DownloadSemanticResultsAsync(DownloadSemanticResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DownloadSemanticResultsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -28192,6 +28716,302 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the executor status and runtime configuration by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for querying semantic job run details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSemanticJobDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSemanticJobDetailResponse
+        /// </returns>
+        public GetSemanticJobDetailResponse GetSemanticJobDetailWithOptions(GetSemanticJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutorJobId))
+            {
+                query["ExecutorJobId"] = request.ExecutorJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSemanticJobDetail",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSemanticJobDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the executor status and runtime configuration by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for querying semantic job run details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSemanticJobDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSemanticJobDetailResponse
+        /// </returns>
+        public async Task<GetSemanticJobDetailResponse> GetSemanticJobDetailWithOptionsAsync(GetSemanticJobDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutorJobId))
+            {
+                query["ExecutorJobId"] = request.ExecutorJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSemanticJobDetail",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSemanticJobDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the executor status and runtime configuration by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for querying semantic job run details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSemanticJobDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSemanticJobDetailResponse
+        /// </returns>
+        public GetSemanticJobDetailResponse GetSemanticJobDetail(GetSemanticJobDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSemanticJobDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the executor status and runtime configuration by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for querying semantic job run details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSemanticJobDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSemanticJobDetailResponse
+        /// </returns>
+        public async Task<GetSemanticJobDetailResponse> GetSemanticJobDetailAsync(GetSemanticJobDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSemanticJobDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries execution logs by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. The current POP contract exposes only the task and workspace identifiers and returns default log segments.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for querying semantic job run logs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSemanticJobLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSemanticJobLogResponse
+        /// </returns>
+        public GetSemanticJobLogResponse GetSemanticJobLogWithOptions(GetSemanticJobLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutorJobId))
+            {
+                query["ExecutorJobId"] = request.ExecutorJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSemanticJobLog",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSemanticJobLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries execution logs by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. The current POP contract exposes only the task and workspace identifiers and returns default log segments.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for querying semantic job run logs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSemanticJobLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSemanticJobLogResponse
+        /// </returns>
+        public async Task<GetSemanticJobLogResponse> GetSemanticJobLogWithOptionsAsync(GetSemanticJobLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutorJobId))
+            {
+                query["ExecutorJobId"] = request.ExecutorJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSemanticJobLog",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSemanticJobLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries execution logs by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. The current POP contract exposes only the task and workspace identifiers and returns default log segments.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for querying semantic job run logs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSemanticJobLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSemanticJobLogResponse
+        /// </returns>
+        public GetSemanticJobLogResponse GetSemanticJobLog(GetSemanticJobLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSemanticJobLogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries execution logs by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. The current POP contract exposes only the task and workspace identifiers and returns default log segments.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for querying semantic job run logs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSemanticJobLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSemanticJobLogResponse
+        /// </returns>
+        public async Task<GetSemanticJobLogResponse> GetSemanticJobLogAsync(GetSemanticJobLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSemanticJobLogWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of a specified Skill by name, including the body of the SKILL.md file and the bundle\&quot;s download link.</para>
         /// </summary>
         /// 
@@ -29780,7 +30600,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a workflow node defined by FlowSpec and its child nodes into DataStudio.</para>
+        /// <para>Imports a workflow node defined by FlowSpec and its internal child nodes into DataStudio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29789,8 +30609,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored.</description></item>
-        /// <item><description>This is an asynchronous operation. The response returns an asynchronous task object. Call GetJobStatus to query the execution status of the task.</description></item>
+        /// <item><description>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows after the first one are ignored.</description></item>
+        /// <item><description>This is an asynchronous operation. Calling this operation returns an asynchronous task object. To query the execution status of the task, call GetJobStatus.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29841,7 +30661,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a workflow node defined by FlowSpec and its child nodes into DataStudio.</para>
+        /// <para>Imports a workflow node defined by FlowSpec and its internal child nodes into DataStudio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29850,8 +30670,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored.</description></item>
-        /// <item><description>This is an asynchronous operation. The response returns an asynchronous task object. Call GetJobStatus to query the execution status of the task.</description></item>
+        /// <item><description>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows after the first one are ignored.</description></item>
+        /// <item><description>This is an asynchronous operation. Calling this operation returns an asynchronous task object. To query the execution status of the task, call GetJobStatus.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29902,7 +30722,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a workflow node defined by FlowSpec and its child nodes into DataStudio.</para>
+        /// <para>Imports a workflow node defined by FlowSpec and its internal child nodes into DataStudio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29911,8 +30731,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored.</description></item>
-        /// <item><description>This is an asynchronous operation. The response returns an asynchronous task object. Call GetJobStatus to query the execution status of the task.</description></item>
+        /// <item><description>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows after the first one are ignored.</description></item>
+        /// <item><description>This is an asynchronous operation. Calling this operation returns an asynchronous task object. To query the execution status of the task, call GetJobStatus.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29931,7 +30751,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a workflow node defined by FlowSpec and its child nodes into DataStudio.</para>
+        /// <para>Imports a workflow node defined by FlowSpec and its internal child nodes into DataStudio.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29940,8 +30760,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows except the first one are ignored.</description></item>
-        /// <item><description>This is an asynchronous operation. The response returns an asynchronous task object. Call GetJobStatus to query the execution status of the task.</description></item>
+        /// <item><description>This operation does not support importing multiple workflows. If more than one workflow is defined in the FlowSpec, all workflows after the first one are ignored.</description></item>
+        /// <item><description>This is an asynchronous operation. Calling this operation returns an asynchronous task object. To query the execution status of the task, call GetJobStatus.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -29956,6 +30776,162 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ImportWorkflowDefinitionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call only indicates that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for stopping a semantic job run.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// KillSemanticJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// KillSemanticJobResponse
+        /// </returns>
+        public KillSemanticJobResponse KillSemanticJobWithOptions(KillSemanticJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutorJobId))
+            {
+                body["ExecutorJobId"] = request.ExecutorJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryTimes))
+            {
+                body["RetryTimes"] = request.RetryTimes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "KillSemanticJob",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<KillSemanticJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call only indicates that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for stopping a semantic job run.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// KillSemanticJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// KillSemanticJobResponse
+        /// </returns>
+        public async Task<KillSemanticJobResponse> KillSemanticJobWithOptionsAsync(KillSemanticJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutorJobId))
+            {
+                body["ExecutorJobId"] = request.ExecutorJobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryTimes))
+            {
+                body["RetryTimes"] = request.RetryTimes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "KillSemanticJob",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<KillSemanticJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call only indicates that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for stopping a semantic job run.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// KillSemanticJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// KillSemanticJobResponse
+        /// </returns>
+        public KillSemanticJobResponse KillSemanticJob(KillSemanticJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return KillSemanticJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a specified run by using the ExecutorJobId returned by RunSemanticJob or ListSemanticJobRuns. A successful call only indicates that the stop request has been accepted. Query the final status by calling GetSemanticJobDetail.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Operation description for stopping a semantic job run.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// KillSemanticJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// KillSemanticJobResponse
+        /// </returns>
+        public async Task<KillSemanticJobResponse> KillSemanticJobAsync(KillSemanticJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await KillSemanticJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -34460,12 +35436,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data quality rule templates in a project.</para>
+        /// <para>Queries the list of data quality rule templates in a specified project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34523,12 +35499,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data quality rule templates in a project.</para>
+        /// <para>Queries the list of data quality rule templates in a specified project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34586,12 +35562,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data quality rule templates in a project.</para>
+        /// <para>Queries the list of data quality rule templates in a specified project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34609,12 +35585,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data quality rule templates in a project.</para>
+        /// <para>Queries the list of data quality rule templates in a specified project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42452,6 +43428,310 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the run records of a created node by its Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for getting details, logs, or stopping the run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the run records of a semantic job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSemanticJobRunsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSemanticJobRunsResponse
+        /// </returns>
+        public ListSemanticJobRunsResponse ListSemanticJobRunsWithOptions(ListSemanticJobRunsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSemanticJobRuns",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSemanticJobRunsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the run records of a created node by its Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for getting details, logs, or stopping the run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the run records of a semantic job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSemanticJobRunsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSemanticJobRunsResponse
+        /// </returns>
+        public async Task<ListSemanticJobRunsResponse> ListSemanticJobRunsWithOptionsAsync(ListSemanticJobRunsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                body["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSemanticJobRuns",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSemanticJobRunsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the run records of a created node by its Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for getting details, logs, or stopping the run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the run records of a semantic job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSemanticJobRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSemanticJobRunsResponse
+        /// </returns>
+        public ListSemanticJobRunsResponse ListSemanticJobRuns(ListSemanticJobRunsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSemanticJobRunsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the run records of a created node by its Name with paging. The JobRunId in each record is active for retrieving the results of a specific run, and the ExecutorJobId is active for getting details, logs, or stopping the run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the run records of a semantic job.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSemanticJobRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSemanticJobRunsResponse
+        /// </returns>
+        public async Task<ListSemanticJobRunsResponse> ListSemanticJobRunsAsync(ListSemanticJobRunsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSemanticJobRunsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries semantics node definitions of the current tenant by paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of semantic task definitions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSemanticJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSemanticJobsResponse
+        /// </returns>
+        public ListSemanticJobsResponse ListSemanticJobsWithOptions(ListSemanticJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSemanticJobs",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSemanticJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries semantics node definitions of the current tenant by paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of semantic task definitions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSemanticJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSemanticJobsResponse
+        /// </returns>
+        public async Task<ListSemanticJobsResponse> ListSemanticJobsWithOptionsAsync(ListSemanticJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSemanticJobs",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSemanticJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries semantics node definitions of the current tenant by paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of semantic task definitions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSemanticJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSemanticJobsResponse
+        /// </returns>
+        public ListSemanticJobsResponse ListSemanticJobs(ListSemanticJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSemanticJobsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries semantics node definitions of the current tenant by paging. The Name, ProjectId, and Source fields in the list items can be used for running/deleting nodes, querying run details, and verifying input scope, respectively.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of semantic task definitions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSemanticJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSemanticJobsResponse
+        /// </returns>
+        public async Task<ListSemanticJobsResponse> ListSemanticJobsAsync(ListSemanticJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSemanticJobsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Lists the Skills in your account.</para>
         /// </summary>
         /// 
@@ -45372,21 +46652,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a prompt to an existing session and streams the agent response.</para>
+        /// <para>Sends a user prompt to an existing session and returns the Agent response in streaming mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API sends a user prompt to a specified session ID and streams the agent\&quot;s response over SSE (Server-Sent Events).</description></item>
-        /// <item><description>The response may include message chunks, thought process, and tool calling status updates.</description></item>
-        /// <item><description>If the specified session does not exist, the API returns a 400 error in an SSE error frame.</description></item>
-        /// <item><description>The <c>stopReason</c> field indicates why the agent ended the turn.</description></item>
-        /// <item><description>You can use multiple types of content blocks in the prompt, such as text and OSS file download links.</description></item>
-        /// <item><description>You can provide additional metadata in the <c>Meta</c> parameter to pass more context to the server.</description></item>
-        /// <item><description>The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com</description></item>
-        /// <item><description>\<em>\<em>Review the billing methods and pricing for Data Agent before you use this API\</em>\</em>: https\://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing</description></item>
+        /// <item><description>This API sends a user prompt to a specified session ID and accepts the Agent response in SSE (Server-Sent Events) streaming mode.</description></item>
+        /// <item><description>The response may include message fragments, thinking procedures, tool calling status updates, and other information.</description></item>
+        /// <item><description>If the specified session does not exist, a 400 fault is returned through an SSE error frame.</description></item>
+        /// <item><description>The <c>stopReason</c> field indicates why the Agent stopped the current conversation turn.</description></item>
+        /// <item><description>Multiple types of content blocks are supported as prompt input, such as text and OSS file download links.</description></item>
+        /// <item><description>You can optionally provide additional meta information <c>Meta</c> to pass more context to the server.</description></item>
+        /// <item><description>The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a></description></item>
+        /// <item><description><b>Before invoking this API, make sure you fully understand the billing methods and pricing of the Data Agent product</b>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -45443,21 +46723,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a prompt to an existing session and streams the agent response.</para>
+        /// <para>Sends a user prompt to an existing session and returns the Agent response in streaming mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API sends a user prompt to a specified session ID and streams the agent\&quot;s response over SSE (Server-Sent Events).</description></item>
-        /// <item><description>The response may include message chunks, thought process, and tool calling status updates.</description></item>
-        /// <item><description>If the specified session does not exist, the API returns a 400 error in an SSE error frame.</description></item>
-        /// <item><description>The <c>stopReason</c> field indicates why the agent ended the turn.</description></item>
-        /// <item><description>You can use multiple types of content blocks in the prompt, such as text and OSS file download links.</description></item>
-        /// <item><description>You can provide additional metadata in the <c>Meta</c> parameter to pass more context to the server.</description></item>
-        /// <item><description>The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com</description></item>
-        /// <item><description>\<em>\<em>Review the billing methods and pricing for Data Agent before you use this API\</em>\</em>: https\://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing</description></item>
+        /// <item><description>This API sends a user prompt to a specified session ID and accepts the Agent response in SSE (Server-Sent Events) streaming mode.</description></item>
+        /// <item><description>The response may include message fragments, thinking procedures, tool calling status updates, and other information.</description></item>
+        /// <item><description>If the specified session does not exist, a 400 fault is returned through an SSE error frame.</description></item>
+        /// <item><description>The <c>stopReason</c> field indicates why the Agent stopped the current conversation turn.</description></item>
+        /// <item><description>Multiple types of content blocks are supported as prompt input, such as text and OSS file download links.</description></item>
+        /// <item><description>You can optionally provide additional meta information <c>Meta</c> to pass more context to the server.</description></item>
+        /// <item><description>The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a></description></item>
+        /// <item><description><b>Before invoking this API, make sure you fully understand the billing methods and pricing of the Data Agent product</b>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -45514,21 +46794,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a prompt to an existing session and streams the agent response.</para>
+        /// <para>Sends a user prompt to an existing session and returns the Agent response in streaming mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API sends a user prompt to a specified session ID and streams the agent\&quot;s response over SSE (Server-Sent Events).</description></item>
-        /// <item><description>The response may include message chunks, thought process, and tool calling status updates.</description></item>
-        /// <item><description>If the specified session does not exist, the API returns a 400 error in an SSE error frame.</description></item>
-        /// <item><description>The <c>stopReason</c> field indicates why the agent ended the turn.</description></item>
-        /// <item><description>You can use multiple types of content blocks in the prompt, such as text and OSS file download links.</description></item>
-        /// <item><description>You can provide additional metadata in the <c>Meta</c> parameter to pass more context to the server.</description></item>
-        /// <item><description>The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com</description></item>
-        /// <item><description>\<em>\<em>Review the billing methods and pricing for Data Agent before you use this API\</em>\</em>: https\://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing</description></item>
+        /// <item><description>This API sends a user prompt to a specified session ID and accepts the Agent response in SSE (Server-Sent Events) streaming mode.</description></item>
+        /// <item><description>The response may include message fragments, thinking procedures, tool calling status updates, and other information.</description></item>
+        /// <item><description>If the specified session does not exist, a 400 fault is returned through an SSE error frame.</description></item>
+        /// <item><description>The <c>stopReason</c> field indicates why the Agent stopped the current conversation turn.</description></item>
+        /// <item><description>Multiple types of content blocks are supported as prompt input, such as text and OSS file download links.</description></item>
+        /// <item><description>You can optionally provide additional meta information <c>Meta</c> to pass more context to the server.</description></item>
+        /// <item><description>The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a></description></item>
+        /// <item><description><b>Before invoking this API, make sure you fully understand the billing methods and pricing of the Data Agent product</b>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -45547,21 +46827,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a prompt to an existing session and streams the agent response.</para>
+        /// <para>Sends a user prompt to an existing session and returns the Agent response in streaming mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API sends a user prompt to a specified session ID and streams the agent\&quot;s response over SSE (Server-Sent Events).</description></item>
-        /// <item><description>The response may include message chunks, thought process, and tool calling status updates.</description></item>
-        /// <item><description>If the specified session does not exist, the API returns a 400 error in an SSE error frame.</description></item>
-        /// <item><description>The <c>stopReason</c> field indicates why the agent ended the turn.</description></item>
-        /// <item><description>You can use multiple types of content blocks in the prompt, such as text and OSS file download links.</description></item>
-        /// <item><description>You can provide additional metadata in the <c>Meta</c> parameter to pass more context to the server.</description></item>
-        /// <item><description>The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com</description></item>
-        /// <item><description>\<em>\<em>Review the billing methods and pricing for Data Agent before you use this API\</em>\</em>: https\://help.aliyun.com/zh/dataworks/dataworks-data-agent-agent-billing</description></item>
+        /// <item><description>This API sends a user prompt to a specified session ID and accepts the Agent response in SSE (Server-Sent Events) streaming mode.</description></item>
+        /// <item><description>The response may include message fragments, thinking procedures, tool calling status updates, and other information.</description></item>
+        /// <item><description>If the specified session does not exist, a 400 fault is returned through an SSE error frame.</description></item>
+        /// <item><description>The <c>stopReason</c> field indicates why the Agent stopped the current conversation turn.</description></item>
+        /// <item><description>Multiple types of content blocks are supported as prompt input, such as text and OSS file download links.</description></item>
+        /// <item><description>You can optionally provide additional meta information <c>Meta</c> to pass more context to the server.</description></item>
+        /// <item><description>The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a></description></item>
+        /// <item><description><b>Before invoking this API, make sure you fully understand the billing methods and pricing of the Data Agent product</b>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -47316,6 +48596,146 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RollbackParameterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a semantic job for execution by its Name and returns the run identifier and executor identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">billing method and pricing</a> of model calls used by semantic building.</em>*</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RunSemanticJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSemanticJobResponse
+        /// </returns>
+        public RunSemanticJobResponse RunSemanticJobWithOptions(RunSemanticJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunSemanticJob",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunSemanticJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a semantic job for execution by its Name and returns the run identifier and executor identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">billing method and pricing</a> of model calls used by semantic building.</em>*</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RunSemanticJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSemanticJobResponse
+        /// </returns>
+        public async Task<RunSemanticJobResponse> RunSemanticJobWithOptionsAsync(RunSemanticJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunSemanticJob",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunSemanticJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a semantic job for execution by its Name and returns the run identifier and executor identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">billing method and pricing</a> of model calls used by semantic building.</em>*</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RunSemanticJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSemanticJobResponse
+        /// </returns>
+        public RunSemanticJobResponse RunSemanticJob(RunSemanticJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunSemanticJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a semantic job for execution by its Name and returns the run identifier and executor identifier. A successful call indicates that the job has been submitted, not that the semantic model results have been generated.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">billing method and pricing</a> of model calls used by semantic building.</em>*</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RunSemanticJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunSemanticJobResponse
+        /// </returns>
+        public async Task<RunSemanticJobResponse> RunSemanticJobAsync(RunSemanticJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunSemanticJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -56244,6 +57664,226 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Updates a specified Skill and generates a new version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to update an existing Skill and create a new version based on the current highest version or a specified version. Fields not provided in the request retain their original values. You can update the Skill content by providing either <c>SkillMdOverride</c> or <c>BundleUrl</c>. You can also set additional information such as the visibility scope.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateSkillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillResponse
+        /// </returns>
+        public UpdateSkillResponse UpdateSkillWithOptions(UpdateSkillRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSkillShrinkRequest request = new UpdateSkillShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Extra))
+            {
+                request.ExtraShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Extra, "Extra", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VisibilityScope))
+            {
+                request.VisibilityScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibilityScope, "VisibilityScope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BundleUrl))
+            {
+                body["BundleUrl"] = request.BundleUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedVersion))
+            {
+                body["ExpectedVersion"] = request.ExpectedVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraShrink))
+            {
+                body["Extra"] = request.ExtraShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillMdOverride))
+            {
+                body["SkillMdOverride"] = request.SkillMdOverride;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionNote))
+            {
+                body["VersionNote"] = request.VersionNote;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilityScopeShrink))
+            {
+                body["VisibilityScope"] = request.VisibilityScopeShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSkill",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a specified Skill and generates a new version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to update an existing Skill and create a new version based on the current highest version or a specified version. Fields not provided in the request retain their original values. You can update the Skill content by providing either <c>SkillMdOverride</c> or <c>BundleUrl</c>. You can also set additional information such as the visibility scope.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateSkillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillResponse
+        /// </returns>
+        public async Task<UpdateSkillResponse> UpdateSkillWithOptionsAsync(UpdateSkillRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSkillShrinkRequest request = new UpdateSkillShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Extra))
+            {
+                request.ExtraShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Extra, "Extra", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VisibilityScope))
+            {
+                request.VisibilityScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibilityScope, "VisibilityScope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BundleUrl))
+            {
+                body["BundleUrl"] = request.BundleUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedVersion))
+            {
+                body["ExpectedVersion"] = request.ExpectedVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtraShrink))
+            {
+                body["Extra"] = request.ExtraShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillMdOverride))
+            {
+                body["SkillMdOverride"] = request.SkillMdOverride;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionNote))
+            {
+                body["VersionNote"] = request.VersionNote;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilityScopeShrink))
+            {
+                body["VisibilityScope"] = request.VisibilityScopeShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSkill",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a specified Skill and generates a new version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to update an existing Skill and create a new version based on the current highest version or a specified version. Fields not provided in the request retain their original values. You can update the Skill content by providing either <c>SkillMdOverride</c> or <c>BundleUrl</c>. You can also set additional information such as the visibility scope.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillResponse
+        /// </returns>
+        public UpdateSkillResponse UpdateSkill(UpdateSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateSkillWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a specified Skill and generates a new version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to update an existing Skill and create a new version based on the current highest version or a specified version. Fields not provided in the request retain their original values. You can update the Skill content by providing either <c>SkillMdOverride</c> or <c>BundleUrl</c>. You can also set additional information such as the visibility scope.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillResponse
+        /// </returns>
+        public async Task<UpdateSkillResponse> UpdateSkillAsync(UpdateSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateSkillWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates the business metadata for a data table in the data map. You can update only the table\&quot;s Readme and custom attributes.</para>
         /// </summary>
         /// 
@@ -57564,6 +59204,162 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateWorkflowDefinitionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, and then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Requests an upload URL for semantic job attachments.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UploadSemanticFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadSemanticFileResponse
+        /// </returns>
+        public UploadSemanticFileResponse UploadSemanticFileWithOptions(UploadSemanticFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                body["ContentType"] = request.ContentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeBytes))
+            {
+                body["SizeBytes"] = request.SizeBytes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadSemanticFile",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadSemanticFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, and then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Requests an upload URL for semantic job attachments.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UploadSemanticFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadSemanticFileResponse
+        /// </returns>
+        public async Task<UploadSemanticFileResponse> UploadSemanticFileWithOptionsAsync(UploadSemanticFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                body["ContentType"] = request.ContentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SizeBytes))
+            {
+                body["SizeBytes"] = request.SizeBytes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadSemanticFile",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadSemanticFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, and then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Requests an upload URL for semantic job attachments.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UploadSemanticFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadSemanticFileResponse
+        /// </returns>
+        public UploadSemanticFileResponse UploadSemanticFile(UploadSemanticFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UploadSemanticFileWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Requests a temporary OSS PUT upload URL. Complete the PUT upload before the URL expires, and then pass the returned FileId to the ReferenceFileIds parameter of CreateSemanticJob.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Requests an upload URL for semantic job attachments.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UploadSemanticFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadSemanticFileResponse
+        /// </returns>
+        public async Task<UploadSemanticFileResponse> UploadSemanticFileAsync(UploadSemanticFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UploadSemanticFileWithOptionsAsync(request, runtime);
         }
 
     }

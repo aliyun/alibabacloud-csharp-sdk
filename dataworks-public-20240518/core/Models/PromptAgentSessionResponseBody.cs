@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class PromptAgentSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error information returned in the SSE frame. The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com/protocol/prompt-turn</para>
+        /// <para>The SSE frame error message. The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;code&quot;: 400, &quot;errorCode&quot;: &quot;0x50000000001&quot;, &quot;message&quot;: &quot;not exist session&quot;, &quot;data&quot;: null}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public object Error { get; set; }
 
         /// <summary>
-        /// <para>The ID passed in by the caller. The value is returned as-is in the response.</para>
+        /// <para>The ID passed by the requester. The value is returned as-is.</para>
         /// 
         /// <b>Example:</b>
         /// <para>631478864897630XXXX</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Jsonrpc { get; set; }
 
         /// <summary>
-        /// <para>The SSE method. The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com/protocol/prompt-turn</para>
+        /// <para>The SSE method. The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>session/update</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Method { get; set; }
 
         /// <summary>
-        /// <para>The SSE params. The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com/protocol/prompt-turn</para>
+        /// <para>The SSE params. The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;sessionId&quot;:&quot;af4f5ef8-e8f5-481c-ad1f-94886c6c0aed&quot;,&quot;update&quot;:{&quot;sessionUpdate&quot;:&quot;agent_message_chunk&quot;,&quot;content&quot;:{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;hello world&quot;}}}</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The SSE frame result set. The response content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, see https\://agentclientprotocol.com/protocol/prompt-turn</para>
+        /// <para>The SSE frame result set. The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com/protocol/prompt-turn">https://agentclientprotocol.com/protocol/prompt-turn</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;stopReason&quot;:&quot;end_turn&quot;}</para>
