@@ -6644,6 +6644,124 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of a cloud native artifact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeArtifactRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeArtifactResponse
+        /// </returns>
+        public DescribeArtifactResponse DescribeArtifactWithOptions(string ClusterId, string ArtifactName, DescribeArtifactRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeArtifact",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/artifacts/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ArtifactName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeArtifactResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a cloud native artifact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeArtifactRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeArtifactResponse
+        /// </returns>
+        public async Task<DescribeArtifactResponse> DescribeArtifactWithOptionsAsync(string ClusterId, string ArtifactName, DescribeArtifactRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeArtifact",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/artifacts/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ArtifactName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeArtifactResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a cloud native artifact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeArtifactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeArtifactResponse
+        /// </returns>
+        public DescribeArtifactResponse DescribeArtifact(string ClusterId, string ArtifactName, DescribeArtifactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeArtifactWithOptions(ClusterId, ArtifactName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a cloud native artifact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeArtifactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeArtifactResponse
+        /// </returns>
+        public async Task<DescribeArtifactResponse> DescribeArtifactAsync(string ClusterId, string ArtifactName, DescribeArtifactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeArtifactWithOptionsAsync(ClusterId, ArtifactName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries details about the configurations of a stress testing task.</para>
         /// </summary>
         /// 
@@ -6892,7 +7010,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a private gateway.</para>
+        /// <para>Queries the details of a dedicated gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6932,7 +7050,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a private gateway.</para>
+        /// <para>Queries the details of a dedicated gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6972,7 +7090,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a private gateway.</para>
+        /// <para>Queries the details of a dedicated gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6991,7 +7109,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a private gateway.</para>
+        /// <para>Queries the details of a dedicated gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
