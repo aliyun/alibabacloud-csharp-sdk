@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class ModelRouterQueryApiKeyResponseBody : TeaModel {
+    public class ModelRouterQueryModelGroupResponseBody : TeaModel {
         /// <summary>
         /// <para>The data object.</para>
         /// 
@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public ApiKeyDecryptedDTO Data { get; set; }
+        public ModelGroupDTO Data { get; set; }
 
         /// <summary>
         /// <para>The fault message code.</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

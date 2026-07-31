@@ -8,19 +8,48 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class ModelRouterQueryApiKeyResponseBody : TeaModel {
+    public class ModelRouterQueryModelGroupsByApiKeyResponseBody : TeaModel {
         /// <summary>
         /// <para>The data object.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>[]</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public ApiKeyDecryptedDTO Data { get; set; }
+        public ModelRouterQueryModelGroupsByApiKeyResponseBodyData Data { get; set; }
+        public class ModelRouterQueryModelGroupsByApiKeyResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The ID of the department to which the key belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1001</para>
+            /// </summary>
+            [NameInMap("clientId")]
+            [Validation(Required=false)]
+            public long? ClientId { get; set; }
+
+            /// <summary>
+            /// <para>The list of bound model groups.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[]</para>
+            /// </summary>
+            [NameInMap("groups")]
+            [Validation(Required=false)]
+            public List<ModelGroupDTO> Groups { get; set; }
+
+            /// <summary>
+            /// <para>The list of individually authorized model IDs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[200]</para>
+            /// </summary>
+            [NameInMap("standaloneModelList")]
+            [Validation(Required=false)]
+            public List<long?> StandaloneModelList { get; set; }
+
+        }
 
         /// <summary>
-        /// <para>The fault message code.</para>
+        /// <para>The error message code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -60,7 +89,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -8,19 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class ModelRouterQueryApiKeyResponseBody : TeaModel {
+    public class ModelRouterDeleteModelGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data object.</para>
+        /// <para>The response struct.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public ApiKeyDecryptedDTO Data { get; set; }
+        public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The fault message code.</para>
+        /// <para>The fault error message encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
+        /// <para>0A5E9849-A2F0-551D-A7D8-1A8118557BAB</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
