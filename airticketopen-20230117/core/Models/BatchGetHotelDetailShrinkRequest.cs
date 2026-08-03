@@ -1,0 +1,50 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
+{
+    public class BatchGetHotelDetailShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
+        [NameInMap("AccountNo")]
+        [Validation(Required=false)]
+        public long? AccountNo { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>en</para>
+        /// </summary>
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;H001&quot;,&quot;H002&quot;]</para>
+        /// </summary>
+        [NameInMap("StandardHotelIds")]
+        [Validation(Required=false)]
+        public string StandardHotelIdsShrink { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>TraceId</para>
+        /// </summary>
+        [NameInMap("TracerId")]
+        [Validation(Required=false)]
+        public string TracerId { get; set; }
+
+    }
+
+}
