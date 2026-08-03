@@ -77,6 +77,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                [NameInMap("DeviceFeaturesSelected")]
+                [Validation(Required=false)]
+                public string DeviceFeaturesSelected { get; set; }
+
+                [NameInMap("DownDelayTime")]
+                [Validation(Required=false)]
+                public int? DownDelayTime { get; set; }
+
                 [NameInMap("EnabledTime")]
                 [Validation(Required=false)]
                 public string EnabledTime { get; set; }

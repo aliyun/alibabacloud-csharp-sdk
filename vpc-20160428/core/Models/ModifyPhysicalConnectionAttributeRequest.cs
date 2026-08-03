@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,21 +38,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>物理专线的描述信息</para>
+        /// <para>Description of the Express Connect circuit</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DownDelayTime")]
+        [Validation(Required=false)]
+        public int? DownDelayTime { get; set; }
+
         /// <summary>
-        /// <para>The carrier that provides the access to the physical line. Valid values:</para>
+        /// <para>The carrier that provides the access to the physical connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CT</b>: China Telecom.</description></item>
-        /// <item><description><b>CU</b>: China Unicom.</description></item>
-        /// <item><description><b>CM</b>: China Mobile.</description></item>
-        /// <item><description><b>CO</b>: other carriers in the Chinese mainland.</description></item>
-        /// <item><description><b>Equinix</b>: Equinix.</description></item>
-        /// <item><description><b>Other</b>: other carriers outside the Chinese mainland.</description></item>
+        /// <item><description><b>CT</b>: China Telecom</description></item>
+        /// <item><description><b>CU</b>: China Unicom</description></item>
+        /// <item><description><b>CM</b>: China Mobile</description></item>
+        /// <item><description><b>CO</b>: Other carriers in the Chinese mainland</description></item>
+        /// <item><description><b>Equinix</b>: Equinix</description></item>
+        /// <item><description><b>Other</b>: Other carriers outside the Chinese mainland</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>物理专线的名称</para>
+        /// <para>Name of the Express Connect circuit</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -85,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The geographical location of the on-premises data center.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>浙江省杭州市XX区XX街道XX号</para>
+        /// <para>No. XX, XX Road, XX District, Hangzhou City, Zhejiang Province</para>
         /// </summary>
         [NameInMap("PeerLocation")]
         [Validation(Required=false)]
@@ -106,15 +110,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The port type of the Express Connect circuit access point. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>100Base-T</b>: 100M Ethernet port.</description></item>
-        /// <item><description><b>1000Base-T (default)</b>: 1 GE port.</description></item>
+        /// <item><description><b>1000Base-T (default)</b>: 1 GE electrical port.</description></item>
         /// <item><description><b>1000Base-LX</b>: GE single-mode optical port (10 km).</description></item>
-        /// <item><description><b>10GBase-T</b>: 10 GE port.</description></item>
+        /// <item><description><b>10GBase-T</b>: 10 GE electrical port.</description></item>
         /// <item><description><b>10GBase-LR</b>: 10 GE single-mode optical port (10 km).</description></item>
         /// <item><description><b>40GBase-LR</b>: 40 GE single-mode optical port.</description></item>
         /// <item><description><b>100GBase-LR</b>: 100 GE single-mode optical port.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>40GBase-LR and 100GBase-LR are subject to the availability of backend ports. Contact your account manager for more information.</para>
+        /// <para>To create 40GBase-LR or 100GBase-LR ports, check the actual port availability on the backend. Contact your account manager for details.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

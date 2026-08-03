@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
                 {"eu-west-1", "vpc.eu-west-1.aliyuncs.com"},
                 {"eu-central-1", "vpc.eu-central-1.aliyuncs.com"},
                 {"cn-zhongwei", "vpc.cn-zhongwei.aliyuncs.com"},
-                {"cn-zhengzhou-jva", "vpc.cn-zhengzhou-jva.aliyuncs.com"},
                 {"cn-zhangjiakou", "vpc.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu-gic-1", "vpc.cn-wulanchabu-gic-1.aliyuncs.com"},
                 {"cn-wulanchabu", "vpc.cn-wulanchabu.aliyuncs.com"},
                 {"cn-wuhan-lr", "vpc.cn-wuhan-lr.aliyuncs.com"},
                 {"cn-shenzhen", "vpc.cn-shenzhen.aliyuncs.com"},
@@ -12086,7 +12086,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node continues in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
+        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
         /// <list type="bullet">
         /// <item><description>If the flow log is in the <b>Activating</b> state, the flow log is being created.</description></item>
         /// <item><description>If the flow log is in the <b>Active</b> state, the flow log is created and activated.</description></item>
@@ -12205,7 +12205,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node continues in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
+        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
         /// <list type="bullet">
         /// <item><description>If the flow log is in the <b>Activating</b> state, the flow log is being created.</description></item>
         /// <item><description>If the flow log is in the <b>Active</b> state, the flow log is created and activated.</description></item>
@@ -12324,7 +12324,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node continues in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
+        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
         /// <list type="bullet">
         /// <item><description>If the flow log is in the <b>Activating</b> state, the flow log is being created.</description></item>
         /// <item><description>If the flow log is in the <b>Active</b> state, the flow log is created and activated.</description></item>
@@ -12351,7 +12351,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node continues in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
+        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
         /// <list type="bullet">
         /// <item><description>If the flow log is in the <b>Activating</b> state, the flow log is being created.</description></item>
         /// <item><description>If the flow log is in the <b>Active</b> state, the flow log is created and activated.</description></item>
@@ -13477,12 +13477,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates Express Connect circuits in zone redundancy mode to ensure service stability through multi-line access to Alibaba Cloud and to avoid service disruption caused by single-line failures through multi-line disaster recovery.</para>
+        /// <para>Creates Express Connect circuits in zone redundancy mode to ensure service stability through multi-line access to Alibaba Cloud and to prevent service disruptions caused by single-line failures through multi-line disaster recovery.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you purchase ports, you can select one of the following combination types to provide disaster recovery capabilities for your business or workloads.</para>
+        /// <para>When you purchase ports, you can select one of the following three combination types to provide disaster recovery capabilities for your business or workloads.</para>
         /// <list type="bullet">
         /// <item><description>Maximum disaster recovery: You apply for resources in two access points and establish four independent Express Connect circuit connections. The SLA availability for maximum disaster recovery is no less than 99.99%.</description></item>
         /// <item><description>Enhanced disaster recovery: You apply for resources in two access points and establish two independent Express Connect circuit connections. The SLA availability for enhanced disaster recovery is no less than 99.95%.</description></item>
@@ -13585,12 +13585,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates Express Connect circuits in zone redundancy mode to ensure service stability through multi-line access to Alibaba Cloud and to avoid service disruption caused by single-line failures through multi-line disaster recovery.</para>
+        /// <para>Creates Express Connect circuits in zone redundancy mode to ensure service stability through multi-line access to Alibaba Cloud and to prevent service disruptions caused by single-line failures through multi-line disaster recovery.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you purchase ports, you can select one of the following combination types to provide disaster recovery capabilities for your business or workloads.</para>
+        /// <para>When you purchase ports, you can select one of the following three combination types to provide disaster recovery capabilities for your business or workloads.</para>
         /// <list type="bullet">
         /// <item><description>Maximum disaster recovery: You apply for resources in two access points and establish four independent Express Connect circuit connections. The SLA availability for maximum disaster recovery is no less than 99.99%.</description></item>
         /// <item><description>Enhanced disaster recovery: You apply for resources in two access points and establish two independent Express Connect circuit connections. The SLA availability for enhanced disaster recovery is no less than 99.95%.</description></item>
@@ -13693,12 +13693,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates Express Connect circuits in zone redundancy mode to ensure service stability through multi-line access to Alibaba Cloud and to avoid service disruption caused by single-line failures through multi-line disaster recovery.</para>
+        /// <para>Creates Express Connect circuits in zone redundancy mode to ensure service stability through multi-line access to Alibaba Cloud and to prevent service disruptions caused by single-line failures through multi-line disaster recovery.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you purchase ports, you can select one of the following combination types to provide disaster recovery capabilities for your business or workloads.</para>
+        /// <para>When you purchase ports, you can select one of the following three combination types to provide disaster recovery capabilities for your business or workloads.</para>
         /// <list type="bullet">
         /// <item><description>Maximum disaster recovery: You apply for resources in two access points and establish four independent Express Connect circuit connections. The SLA availability for maximum disaster recovery is no less than 99.99%.</description></item>
         /// <item><description>Enhanced disaster recovery: You apply for resources in two access points and establish two independent Express Connect circuit connections. The SLA availability for enhanced disaster recovery is no less than 99.95%.</description></item>
@@ -13721,12 +13721,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates Express Connect circuits in zone redundancy mode to ensure service stability through multi-line access to Alibaba Cloud and to avoid service disruption caused by single-line failures through multi-line disaster recovery.</para>
+        /// <para>Creates Express Connect circuits in zone redundancy mode to ensure service stability through multi-line access to Alibaba Cloud and to prevent service disruptions caused by single-line failures through multi-line disaster recovery.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you purchase ports, you can select one of the following combination types to provide disaster recovery capabilities for your business or workloads.</para>
+        /// <para>When you purchase ports, you can select one of the following three combination types to provide disaster recovery capabilities for your business or workloads.</para>
         /// <list type="bullet">
         /// <item><description>Maximum disaster recovery: You apply for resources in two access points and establish four independent Express Connect circuit connections. The SLA availability for maximum disaster recovery is no less than 99.99%.</description></item>
         /// <item><description>Enhanced disaster recovery: You apply for resources in two access points and establish two independent Express Connect circuit connections. The SLA availability for enhanced disaster recovery is no less than 99.95%.</description></item>
@@ -31513,12 +31513,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect circuit connection.</para>
+        /// <para>Deletes an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete only Express Connect circuit connections that are in the <b>Allocated</b>, <b>Confirmed</b>, <b>Rejected</b>, <b>Canceled</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.</para>
+        /// <para>You can delete only Express Connect circuits that are in the <b>Allocated</b>, <b>Confirmed</b>, <b>Rejected</b>, <b>Canceled</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31584,12 +31584,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect circuit connection.</para>
+        /// <para>Deletes an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete only Express Connect circuit connections that are in the <b>Allocated</b>, <b>Confirmed</b>, <b>Rejected</b>, <b>Canceled</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.</para>
+        /// <para>You can delete only Express Connect circuits that are in the <b>Allocated</b>, <b>Confirmed</b>, <b>Rejected</b>, <b>Canceled</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31655,12 +31655,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect circuit connection.</para>
+        /// <para>Deletes an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete only Express Connect circuit connections that are in the <b>Allocated</b>, <b>Confirmed</b>, <b>Rejected</b>, <b>Canceled</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.</para>
+        /// <para>You can delete only Express Connect circuits that are in the <b>Allocated</b>, <b>Confirmed</b>, <b>Rejected</b>, <b>Canceled</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31678,12 +31678,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Express Connect circuit connection.</para>
+        /// <para>Deletes an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete only Express Connect circuit connections that are in the <b>Allocated</b>, <b>Confirmed</b>, <b>Rejected</b>, <b>Canceled</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.</para>
+        /// <para>You can delete only Express Connect circuits that are in the <b>Allocated</b>, <b>Confirmed</b>, <b>Rejected</b>, <b>Canceled</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41165,7 +41165,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries flow logs by calling the DescribeFlowLogs operation.</para>
+        /// <para>Queries flow logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41279,7 +41279,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries flow logs by calling the DescribeFlowLogs operation.</para>
+        /// <para>Queries flow logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41393,7 +41393,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries flow logs by calling the DescribeFlowLogs operation.</para>
+        /// <para>Queries flow logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41411,7 +41411,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries flow logs by calling the DescribeFlowLogs operation.</para>
+        /// <para>Queries flow logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45526,7 +45526,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For supported filter options, see the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
+        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the filter options supported by the system, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45617,7 +45617,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For supported filter options, see the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
+        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the filter options supported by the system, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45708,7 +45708,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For supported filter options, see the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
+        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the filter options supported by the system, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45731,7 +45731,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For supported filter options, see the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
+        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the filter options supported by the system, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -66451,7 +66451,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyFlowLogAttribute</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the flow log has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<list type="bullet">
+        /// <item><description><b>ModifyFlowLogAttribute</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the flow log has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<list type="bullet">
         /// <item><description>If the flow log is in the <b>Modifying</b> state, the flow log is being modified.</description></item>
         /// <item><description>If the flow log is in the <b>Active</b> or <b>Inactive</b> state, the flow log has been modified.</description></item>
         /// </list>
@@ -66545,7 +66545,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyFlowLogAttribute</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the flow log has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<list type="bullet">
+        /// <item><description><b>ModifyFlowLogAttribute</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the flow log has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<list type="bullet">
         /// <item><description>If the flow log is in the <b>Modifying</b> state, the flow log is being modified.</description></item>
         /// <item><description>If the flow log is in the <b>Active</b> or <b>Inactive</b> state, the flow log has been modified.</description></item>
         /// </list>
@@ -66639,7 +66639,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyFlowLogAttribute</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the flow log has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<list type="bullet">
+        /// <item><description><b>ModifyFlowLogAttribute</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the flow log has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<list type="bullet">
         /// <item><description>If the flow log is in the <b>Modifying</b> state, the flow log is being modified.</description></item>
         /// <item><description>If the flow log is in the <b>Active</b> or <b>Inactive</b> state, the flow log has been modified.</description></item>
         /// </list>
@@ -66669,7 +66669,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>ModifyFlowLogAttribute</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the flow log has not been modified yet. The modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<list type="bullet">
+        /// <item><description><b>ModifyFlowLogAttribute</b> is an asynchronous operation. After you send a request, the system returns a request ID. However, the flow log has not been modified yet because the modification task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/87923.html">DescribeFlowLogs</a> to query the modification status of the flow log:<list type="bullet">
         /// <item><description>If the flow log is in the <b>Modifying</b> state, the flow log is being modified.</description></item>
         /// <item><description>If the flow log is in the <b>Active</b> or <b>Inactive</b> state, the flow log has been modified.</description></item>
         /// </list>
@@ -70701,12 +70701,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an Express Connect circuit.</para>
+        /// <para>Modifies the configuration of an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items: </para>
+        /// <para>When you call this operation, note the following items: </para>
         /// <list type="bullet">
         /// <item><description>You can modify the specifications and redundant circuit ID only for Express Connect circuits in the <b>Initial</b>, <b>Enabled</b>, or <b>Rejected</b> state.  </description></item>
         /// <item><description>You cannot modify Express Connect circuits in the <b>Canceled</b>, <b>Allocating</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.  </description></item>
@@ -70743,6 +70743,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownDelayTime))
+            {
+                query["DownDelayTime"] = request.DownDelayTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineOperator))
             {
@@ -70813,12 +70817,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an Express Connect circuit.</para>
+        /// <para>Modifies the configuration of an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items: </para>
+        /// <para>When you call this operation, note the following items: </para>
         /// <list type="bullet">
         /// <item><description>You can modify the specifications and redundant circuit ID only for Express Connect circuits in the <b>Initial</b>, <b>Enabled</b>, or <b>Rejected</b> state.  </description></item>
         /// <item><description>You cannot modify Express Connect circuits in the <b>Canceled</b>, <b>Allocating</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.  </description></item>
@@ -70855,6 +70859,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownDelayTime))
+            {
+                query["DownDelayTime"] = request.DownDelayTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LineOperator))
             {
@@ -70925,12 +70933,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an Express Connect circuit.</para>
+        /// <para>Modifies the configuration of an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items: </para>
+        /// <para>When you call this operation, note the following items: </para>
         /// <list type="bullet">
         /// <item><description>You can modify the specifications and redundant circuit ID only for Express Connect circuits in the <b>Initial</b>, <b>Enabled</b>, or <b>Rejected</b> state.  </description></item>
         /// <item><description>You cannot modify Express Connect circuits in the <b>Canceled</b>, <b>Allocating</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.  </description></item>
@@ -70953,12 +70961,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an Express Connect circuit.</para>
+        /// <para>Modifies the configuration of an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items: </para>
+        /// <para>When you call this operation, note the following items: </para>
         /// <list type="bullet">
         /// <item><description>You can modify the specifications and redundant circuit ID only for Express Connect circuits in the <b>Initial</b>, <b>Enabled</b>, or <b>Rejected</b> state.  </description></item>
         /// <item><description>You cannot modify Express Connect circuits in the <b>Canceled</b>, <b>Allocating</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.  </description></item>

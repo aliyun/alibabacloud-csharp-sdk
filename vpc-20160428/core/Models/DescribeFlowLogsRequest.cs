@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging queries. Maximum value: <b>50</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page in paging query. Maximum value: <b>50</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the flow log.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -150,11 +150,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the flow log. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Active</b>: The flow log is active.</para>
+        /// <item><description><para><b>Active</b>: the flow log is active.</para>
         /// </description></item>
-        /// <item><description><para><b>Activating</b>: The flow log is being created.</para>
+        /// <item><description><para><b>Activating</b>: the flow log is being created.</para>
         /// </description></item>
-        /// <item><description><para><b>Inactive</b>: The flow log is inactive.</para>
+        /// <item><description><para><b>Inactive</b>: the flow log is inactive.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class DescribeFlowLogsRequestTags : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// <item><description><para><b>Allow</b>: traffic allowed by access control.</para>
         /// </description></item>
-        /// <item><description><para><b>Drop</b>: traffic denied by access control.</para>
+        /// <item><description><para><b>Drop</b>: traffic deny by access control.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TrafficType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC for which you want to query flow logs.</para>
+        /// <para>The ID of the VPC whose flow logs you want to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1nwd16gvo1wgs****</para>

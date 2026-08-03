@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string FlowLogName { get; set; }
 
         /// <summary>
-        /// <para>The IP address version of the traffic captured by the flow log.</para>
+        /// <para>The IP version of the traffic captured by the flow log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>

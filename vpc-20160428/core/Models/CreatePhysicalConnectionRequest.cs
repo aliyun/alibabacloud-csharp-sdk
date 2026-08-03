@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of device advanced capabilities.</para>
+        /// <para>The list of advanced device capabilities.</para>
         /// </summary>
         [NameInMap("DeviceAdvancedCapacity")]
         [Validation(Required=false)]
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The geographical location of the on-premises data center.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>XX街道</para>
+        /// <para>XX Street</para>
         /// </summary>
         [NameInMap("PeerLocation")]
         [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>40GBase-LR and 100GBase-LR are created based on the actual port availability. Contact your account manager for details.</para>
+        /// <para>40GBase-LR and 100GBase-LR are subject to the availability of backend ports. Contact your account manager for more information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PortType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the redundant Express Connect circuit. The redundant circuit must be in the <b>Allocated</b>, <b>Confirmed</b>, or <b>Enabled</b> state.</para>
+        /// <para>The instance ID of the redundant Express Connect circuit. The circuit must be in the <b>Allocated</b>, <b>Confirmed</b>, or <b>Enabled</b> state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-119mfjzm****</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class CreatePhysicalConnectionRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
