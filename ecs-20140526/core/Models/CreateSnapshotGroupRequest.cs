@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>This parameter cannot be specified together with <c>ExcludeDiskId.N</c>.</description></item>
-        /// <item><description>If you specify <c>InstanceId</c>, this parameter can only be set to disks attached to the specified instance, and cross-instance disk IDs are not supported.</description></item>
+        /// <item><description>If you specify <c>InstanceId</c>, this parameter can only be set to disks attached to the specified instance and no longer supports specifying disk IDs across multiple instances.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("DiskId")]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. Standard snapshots of enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required.</para>
+        /// <para><b>[Deprecated]</b> Standard snapshots of enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required. You do not need to set this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,11 +84,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? InstantAccess { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which the snapshot instant access feature is active. Unit: days. Valid values: 1 to 65535.</para>
-        /// <para>This parameter takes effect only when <c>InstantAccess=true</c>. The snapshot instant access feature is automatically shutdown when the specified duration expires.</para>
-        /// <para>Default value: null, which indicates that the instant access feature is active until the snapshot is released.</para>
+        /// <para>Settings the number of days for which the snapshot instant access feature is active. Unit: days. Valid values: 1 to 65535.</para>
+        /// <para>This parameter takes effect only when <c>InstantAccess=true</c>. The snapshot instant access feature is automatically disabled when the specified duration expires.</para>
+        /// <para>Default value: null, which indicates that the duration is the same as the snapshot release period.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. Standard snapshots of enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required.</para>
+        /// <para><b>[Deprecated]</b> Standard snapshots of enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required. You do not need to set this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

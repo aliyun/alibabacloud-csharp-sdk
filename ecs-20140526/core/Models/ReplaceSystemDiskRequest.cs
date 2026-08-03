@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>Notice: When you use a shared encrypted image to create a disk based on an encrypted snapshot, you must set the request parameter Encrypted to true to ensure that the disk uses the key of the image recipient.</para>
+        /// <para>Notice: When you use a shared encrypted image to create a disk from an encrypted snapshot, you must set the request parameter Encrypted to true to ensure that the created disk uses the key of the image recipient.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -262,9 +262,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to use the free Security Center service after the system disk is replaced. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>Active: Security Center is enabled. This value is applicable only to public images.</para>
+        /// <item><description><para>Active: Security Center is enabled. This value is valid only for public images.</para>
         /// </description></item>
-        /// <item><description><para>Deactive: Security Center is not enabled. This value is applicable to all images.</para>
+        /// <item><description><para>Deactive: Security Center is not enabled. This value is valid for all images.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: Deactive.</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to use the virtual machine system configuration provided by Alibaba Cloud (Windows: NTP and KMS. Linux: NTP and YUM).</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when the system disk is attached (the device name is /dev/xvda).</para>
+        /// <para>This parameter takes effect only when a system disk is attached (the device name is /dev/xvda).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

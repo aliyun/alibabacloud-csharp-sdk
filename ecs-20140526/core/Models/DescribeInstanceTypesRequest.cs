@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CpuArchitecture { get; set; }
 
         /// <summary>
-        /// <para>The CPU architectures to query. Array length: 1 to 2.</para>
+        /// <para>The specified CPU architectures to query. Array length: 1 to 2.</para>
         /// </summary>
         [NameInMap("CpuArchitectures")]
         [Validation(Required=false)]
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string GPUSpec { get; set; }
 
         /// <summary>
-        /// <para>The GPU types to query. Array length: 1 to 10.</para>
+        /// <para>The specified GPU types to query. Array length: 1 to 10.</para>
         /// </summary>
         [NameInMap("GpuSpecs")]
         [Validation(Required=false)]
         public List<string> GpuSpecs { get; set; }
 
         /// <summary>
-        /// <para>The instance type categories to query. Array length: 1 to 10.</para>
+        /// <para>The specified instance type categories to query. Array length: 1 to 10.</para>
         /// </summary>
         [NameInMap("InstanceCategories")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceFamilyLevel { get; set; }
 
         /// <summary>
-        /// <para>The instance families to query. Array length: 1 to 10.</para>
+        /// <para>The specified instance families to query. Array length: 1 to 10.</para>
         /// </summary>
         [NameInMap("InstanceTypeFamilies")]
         [Validation(Required=false)]
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>The local disk types to query. Array length: 1 to 2.</para>
+        /// <para>The specified local disk types. Array length: 1 to 2.</para>
         /// </summary>
         [NameInMap("LocalStorageCategories")]
         [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LocalStorageCategory { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for paging query. Maximum value: 1600.</para>
+        /// <para>The maximum number of entries per page for a paged query. Maximum value: 1600. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinimumDiskQuantity { get; set; }
 
         /// <summary>
-        /// <para>The expected minimum number of IPv6 addresses per Elastic Network Interface (ENI) network interface controller (NIC) when querying instance types.</para>
+        /// <para>The expected minimum number of IPv6 addresses per Elastic Network Interface (ENI) when querying instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinimumEniIpv6AddressQuantity { get; set; }
 
         /// <summary>
-        /// <para>The expected minimum number of IPv4 addresses per Elastic Network Interface (ENI) network interface controller (NIC) when querying instance types.</para>
+        /// <para>The expected minimum number of IPv4 addresses per Elastic Network Interface (ENI) when querying instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinimumEniPrivateIpAddressQuantity { get; set; }
 
         /// <summary>
-        /// <para>The expected minimum number of Elastic Network Interfaces (ENIs) that can be attached per network interface controller (NIC) when querying instance types.</para>
+        /// <para>The expected minimum number of Elastic Network Interfaces (ENIs) that can be attached when querying instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinimumEniQuantity { get; set; }
 
         /// <summary>
-        /// <para>The expected minimum number of Elastic RDMA Interfaces (ERIs) per network interface controller (NIC) when querying instance types.</para>
+        /// <para>The expected minimum number of Elastic RDMA Interfaces (ERIs) when querying instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinimumGPUAmount { get; set; }
 
         /// <summary>
-        /// <para>The expected minimum initial vCPU CPU credits for burstable instances t5 and t6 when querying instance types.</para>
+        /// <para>The expected minimum initial vCPU credits for burstable instances t5 and t6 when querying instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -385,7 +385,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinimumQueuePairNumber { get; set; }
 
         /// <summary>
-        /// <para>The expected minimum number of default queues for secondary Elastic Network Interfaces (ENIs) per network interface controller (NIC) when querying instance types.</para>
+        /// <para>The expected minimum number of default queues for the secondary Elastic Network Interface (ENI) when querying instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -436,7 +436,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PhysicalProcessorModel { get; set; }
 
         /// <summary>
-        /// <para>The processor models to query. Array length: 1 to 10.</para>
+        /// <para>The specified processor models to query. Array length: 1 to 10.</para>
         /// </summary>
         [NameInMap("PhysicalProcessorModels")]
         [Validation(Required=false)]

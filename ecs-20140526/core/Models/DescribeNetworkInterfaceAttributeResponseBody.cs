@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration ConnectionTrackingConfiguration { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyConnectionTrackingConfiguration : TeaModel {
             /// <summary>
-            /// <para>The timeout period for a TCP connection in the TIME_WAIT or CLOSED state. Unit: seconds. Valid values: an integer from 3 to 15.</para>
+            /// <para>The timeout period for TCP connections in the TIME_WAIT or CLOSED state. Unit: seconds. Valid values: an integer from 3 to 15.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpClosedAndTimeWaitTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for an established TCP connection. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</para>
+            /// <para>The timeout period for established TCP connections. Unit: seconds. Valid values: [30, 60, 80, 100, 200, 300, 500, 700, 910].</para>
             /// 
             /// <b>Example:</b>
             /// <para>910</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? TcpEstablishedTimeout { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for a UDP flow. Unit: seconds. Valid values: [10, 20, 30, 60, 80, 100].</para>
+            /// <para>The timeout period for UDP flows. Unit: seconds. Valid values: [10, 20, 30, 60, 80, 100].</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -228,6 +228,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork EnhancedNetwork { get; set; }
         public class DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork : TeaModel {
+            [NameInMap("EnableExpress")]
+            [Validation(Required=false)]
+            public bool? EnableExpress { get; set; }
+
             /// <summary>
             /// <remarks>
             /// <para>This parameter is not yet available for use.</para>
@@ -380,7 +384,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? QueueNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of queues supported by the RDMA ENI.</para>
+            /// <para>The number of queues supported by the RDMA network interface.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -563,7 +567,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
+        /// <para>The ID of the resource group to which the instance belongs. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>

@@ -7049,7 +7049,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a custom image from one region to another region. You can use copied images to deploy ECS instances across regions or replicate ECS instances across regions.</para>
+        /// <para>Copies a custom image from one region to another. You can use this operation to deploy ECS instances across regions or replicate ECS instances across regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7059,10 +7059,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The custom image must be in the <b>Available</b> (<c>Available</c>) state.  </description></item>
-        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another account, you can copy it only within the same region. </description></item>
+        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another user, you can copy it only within the same region. </description></item>
         /// <item><description>During the image copy process, you cannot directly delete (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>) the image being copied. However, you can cancel the copy task (<a href="https://help.aliyun.com/document_detail/25539.html">CancelCopyImage</a>) to delete the image being copied.  </description></item>
-        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Additional tasks are queued and run in sequence after any of the running tasks is complete.</description></item>
-        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not specify <c>ResourceGroupId</c>, the copied image belongs to the default resource group.</description></item>
+        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Additional tasks are queued and run in sequence after any of the preceding tasks are completed.</description></item>
+        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not set the <c>ResourceGroupId</c> parameter, the copied image belongs to the default resource group.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7165,7 +7165,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a custom image from one region to another region. You can use copied images to deploy ECS instances across regions or replicate ECS instances across regions.</para>
+        /// <para>Copies a custom image from one region to another. You can use this operation to deploy ECS instances across regions or replicate ECS instances across regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7175,10 +7175,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The custom image must be in the <b>Available</b> (<c>Available</c>) state.  </description></item>
-        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another account, you can copy it only within the same region. </description></item>
+        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another user, you can copy it only within the same region. </description></item>
         /// <item><description>During the image copy process, you cannot directly delete (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>) the image being copied. However, you can cancel the copy task (<a href="https://help.aliyun.com/document_detail/25539.html">CancelCopyImage</a>) to delete the image being copied.  </description></item>
-        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Additional tasks are queued and run in sequence after any of the running tasks is complete.</description></item>
-        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not specify <c>ResourceGroupId</c>, the copied image belongs to the default resource group.</description></item>
+        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Additional tasks are queued and run in sequence after any of the preceding tasks are completed.</description></item>
+        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not set the <c>ResourceGroupId</c> parameter, the copied image belongs to the default resource group.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7281,7 +7281,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a custom image from one region to another region. You can use copied images to deploy ECS instances across regions or replicate ECS instances across regions.</para>
+        /// <para>Copies a custom image from one region to another. You can use this operation to deploy ECS instances across regions or replicate ECS instances across regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7291,10 +7291,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The custom image must be in the <b>Available</b> (<c>Available</c>) state.  </description></item>
-        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another account, you can copy it only within the same region. </description></item>
+        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another user, you can copy it only within the same region. </description></item>
         /// <item><description>During the image copy process, you cannot directly delete (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>) the image being copied. However, you can cancel the copy task (<a href="https://help.aliyun.com/document_detail/25539.html">CancelCopyImage</a>) to delete the image being copied.  </description></item>
-        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Additional tasks are queued and run in sequence after any of the running tasks is complete.</description></item>
-        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not specify <c>ResourceGroupId</c>, the copied image belongs to the default resource group.</description></item>
+        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Additional tasks are queued and run in sequence after any of the preceding tasks are completed.</description></item>
+        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not set the <c>ResourceGroupId</c> parameter, the copied image belongs to the default resource group.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7313,7 +7313,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a custom image from one region to another region. You can use copied images to deploy ECS instances across regions or replicate ECS instances across regions.</para>
+        /// <para>Copies a custom image from one region to another. You can use this operation to deploy ECS instances across regions or replicate ECS instances across regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7323,10 +7323,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The custom image must be in the <b>Available</b> (<c>Available</c>) state.  </description></item>
-        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another account, you can copy it only within the same region. </description></item>
+        /// <item><description>If the image is a custom image under your account, you can copy it across regions. If the image is shared with you by another user, you can copy it only within the same region. </description></item>
         /// <item><description>During the image copy process, you cannot directly delete (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>) the image being copied. However, you can cancel the copy task (<a href="https://help.aliyun.com/document_detail/25539.html">CancelCopyImage</a>) to delete the image being copied.  </description></item>
-        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Additional tasks are queued and run in sequence after any of the running tasks is complete.</description></item>
-        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not specify <c>ResourceGroupId</c>, the copied image belongs to the default resource group.</description></item>
+        /// <item><description>A maximum of five image copy tasks can run concurrently in the same region. Additional tasks are queued and run in sequence after any of the preceding tasks are completed.</description></item>
+        /// <item><description>You can use the <c>ResourceGroupId</c> parameter to specify the resource group to which the copied image belongs. If you do not set the <c>ResourceGroupId</c> parameter, the copied image belongs to the default resource group.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10119,7 +10119,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Enterprise SSD support for NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Enterprise SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
         /// <item><description>When you create a disk, the following default settings apply:<list type="bullet">
         /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can invoke <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and invoke <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify them.</description></item>
         /// </list>
@@ -10276,7 +10276,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Enterprise SSD support for NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Enterprise SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
         /// <item><description>When you create a disk, the following default settings apply:<list type="bullet">
         /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can invoke <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and invoke <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify them.</description></item>
         /// </list>
@@ -10433,7 +10433,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Enterprise SSD support for NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Enterprise SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
         /// <item><description>When you create a disk, the following default settings apply:<list type="bullet">
         /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can invoke <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and invoke <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify them.</description></item>
         /// </list>
@@ -10462,7 +10462,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Enterprise SSD support for NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its limits before you use it. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Enterprise SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
         /// <item><description>When you create a disk, the following default settings apply:<list type="bullet">
         /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can invoke <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings and invoke <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify them.</description></item>
         /// </list>
@@ -12499,10 +12499,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is no longer maintained. Use the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation instead.</para>
+        /// <para>This operation is no longer maintained. We recommend that you use the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation.</para>
         /// </remarks>
         /// <h3>Before you begin.</h3>
-        /// <h3>Before you begin.</h3>
+        /// <h3>Precautions.</h3>
         /// <h3>Recommendations.</h3>
         /// </description>
         /// 
@@ -12791,10 +12791,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is no longer maintained. Use the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation instead.</para>
+        /// <para>This operation is no longer maintained. We recommend that you use the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation.</para>
         /// </remarks>
         /// <h3>Before you begin.</h3>
-        /// <h3>Before you begin.</h3>
+        /// <h3>Precautions.</h3>
         /// <h3>Recommendations.</h3>
         /// </description>
         /// 
@@ -13083,10 +13083,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is no longer maintained. Use the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation instead.</para>
+        /// <para>This operation is no longer maintained. We recommend that you use the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation.</para>
         /// </remarks>
         /// <h3>Before you begin.</h3>
-        /// <h3>Before you begin.</h3>
+        /// <h3>Precautions.</h3>
         /// <h3>Recommendations.</h3>
         /// </description>
         /// 
@@ -13111,10 +13111,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation is no longer maintained. Use the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation instead.</para>
+        /// <para>This operation is no longer maintained. We recommend that you use the <a href="https://help.aliyun.com/document_detail/2679677.html">RunInstances</a> operation.</para>
         /// </remarks>
         /// <h3>Before you begin.</h3>
-        /// <h3>Before you begin.</h3>
+        /// <h3>Precautions.</h3>
         /// <h3>Recommendations.</h3>
         /// </description>
         /// 
@@ -14730,7 +14730,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Take note of the following items when you call this operation:</para>
         /// <h3>Request example.</h3>
         /// </description>
         /// 
@@ -14922,7 +14922,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Take note of the following items when you call this operation:</para>
         /// <h3>Request example.</h3>
         /// </description>
         /// 
@@ -15114,7 +15114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Take note of the following items when you call this operation:</para>
         /// <h3>Request example.</h3>
         /// </description>
         /// 
@@ -15138,7 +15138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Take note of the following items when you call this operation:</para>
         /// <h3>Request example.</h3>
         /// </description>
         /// 
@@ -17574,30 +17574,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. The parameters are described as follows:</para>
+        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. Metric description is as follows:</para>
         /// <list type="bullet">
-        /// <item><description>If you used local snapshots before December 14, 2020, you can use the <c>Category</c> parameter as normal.</description></item>
-        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly available by default. This applies to both manual snapshots and automatic snapshots. The three instant access-related parameters <c>InstantAccess</c>, <c>InstantAccessRetentionDays</c>, and <c>DisableInstantAccess</c> in API operations no longer take effect. The <c>DescribeSnapshots</c> and <c>DescribeSnapshotGroups</c> API operations have a new response parameter named Available that describes whether the snapshot is available.
+        /// <item><description>If you used local snapshots before December 14, 2020, you can use the <c>Category</c> parameter as Normal.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly active by default, and both manual snapshots and automatic snapshots are supported. The three snapshot instant access-related parameters <c>InstantAccess</c>, <c>InstantAccessRetentionDays</c>, and <c>DisableInstantAccess</c> in API operations no longer take effect. The <c>DescribeSnapshots</c> and <c>DescribeSnapshotGroups</c> API operations will include a new response parameter named Available to describe the active status of snapshots.
         /// Before you begin:</description></item>
         /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate snapshots</a>.</description></item>
         /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. Note the following items for different states:<list type="bullet">
         /// <item><description>If the disk is in the <b>In Use</b> state, the instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// <item><description>If the disk is in the <b>Unattached</b> state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
-        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. Snapshot-consistent groups ensure write order consistency and crash consistency for data across multiple disks in a business system. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
+        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. Snapshot-consistent groups ensure the write order consistency of data across multiple disks in a business system and guarantee crash consistency. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
         /// When you create a snapshot, take note of the following items:</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Avoid peak business hours when you create a snapshot. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and brief latency spikes may occur for read and write performance.</description></item>
-        /// <item><description>If a snapshot has not been created, the snapshot cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
+        /// <item><description>Avoid creating snapshots during peak business hours. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and brief read and write performance latency may occur.</description></item>
+        /// <item><description>If the snapshot has not been created, it cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
         /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup to the snapshot.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will fail.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
         /// <item><description>A disk for which a snapshot is being created does not support scale-out. Wait until the snapshot is created before you execute the scale-out operation.</description></item>
         /// <item><description>You can create snapshots for disks in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its scheduled release time during snapshot creation, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is also deleted.</description></item>
-        /// <item><description>After a snapshot is created, you are charged based on the snapshot size. Fees are calculated separately for each region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
+        /// <item><description>After a snapshot is created, the system calculates fees based on the snapshot size in each region separately. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
         /// <item><description>In the following scenarios, you cannot create a snapshot for the specified disk:<list type="bullet">
         /// <item><description>The number of manual snapshots retained for the disk has reached the upper limit. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>Concurrent snapshot creation has limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>When you query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>Snapshot creation has concurrency limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
+        /// <item><description>When you query ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -17703,30 +17703,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. The parameters are described as follows:</para>
+        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. Metric description is as follows:</para>
         /// <list type="bullet">
-        /// <item><description>If you used local snapshots before December 14, 2020, you can use the <c>Category</c> parameter as normal.</description></item>
-        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly available by default. This applies to both manual snapshots and automatic snapshots. The three instant access-related parameters <c>InstantAccess</c>, <c>InstantAccessRetentionDays</c>, and <c>DisableInstantAccess</c> in API operations no longer take effect. The <c>DescribeSnapshots</c> and <c>DescribeSnapshotGroups</c> API operations have a new response parameter named Available that describes whether the snapshot is available.
+        /// <item><description>If you used local snapshots before December 14, 2020, you can use the <c>Category</c> parameter as Normal.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly active by default, and both manual snapshots and automatic snapshots are supported. The three snapshot instant access-related parameters <c>InstantAccess</c>, <c>InstantAccessRetentionDays</c>, and <c>DisableInstantAccess</c> in API operations no longer take effect. The <c>DescribeSnapshots</c> and <c>DescribeSnapshotGroups</c> API operations will include a new response parameter named Available to describe the active status of snapshots.
         /// Before you begin:</description></item>
         /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate snapshots</a>.</description></item>
         /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. Note the following items for different states:<list type="bullet">
         /// <item><description>If the disk is in the <b>In Use</b> state, the instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// <item><description>If the disk is in the <b>Unattached</b> state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
-        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. Snapshot-consistent groups ensure write order consistency and crash consistency for data across multiple disks in a business system. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
+        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. Snapshot-consistent groups ensure the write order consistency of data across multiple disks in a business system and guarantee crash consistency. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
         /// When you create a snapshot, take note of the following items:</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Avoid peak business hours when you create a snapshot. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and brief latency spikes may occur for read and write performance.</description></item>
-        /// <item><description>If a snapshot has not been created, the snapshot cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
+        /// <item><description>Avoid creating snapshots during peak business hours. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and brief read and write performance latency may occur.</description></item>
+        /// <item><description>If the snapshot has not been created, it cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
         /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup to the snapshot.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will fail.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
         /// <item><description>A disk for which a snapshot is being created does not support scale-out. Wait until the snapshot is created before you execute the scale-out operation.</description></item>
         /// <item><description>You can create snapshots for disks in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its scheduled release time during snapshot creation, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is also deleted.</description></item>
-        /// <item><description>After a snapshot is created, you are charged based on the snapshot size. Fees are calculated separately for each region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
+        /// <item><description>After a snapshot is created, the system calculates fees based on the snapshot size in each region separately. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
         /// <item><description>In the following scenarios, you cannot create a snapshot for the specified disk:<list type="bullet">
         /// <item><description>The number of manual snapshots retained for the disk has reached the upper limit. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>Concurrent snapshot creation has limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>When you query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>Snapshot creation has concurrency limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
+        /// <item><description>When you query ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -17832,30 +17832,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. The parameters are described as follows:</para>
+        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. Metric description is as follows:</para>
         /// <list type="bullet">
-        /// <item><description>If you used local snapshots before December 14, 2020, you can use the <c>Category</c> parameter as normal.</description></item>
-        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly available by default. This applies to both manual snapshots and automatic snapshots. The three instant access-related parameters <c>InstantAccess</c>, <c>InstantAccessRetentionDays</c>, and <c>DisableInstantAccess</c> in API operations no longer take effect. The <c>DescribeSnapshots</c> and <c>DescribeSnapshotGroups</c> API operations have a new response parameter named Available that describes whether the snapshot is available.
+        /// <item><description>If you used local snapshots before December 14, 2020, you can use the <c>Category</c> parameter as Normal.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly active by default, and both manual snapshots and automatic snapshots are supported. The three snapshot instant access-related parameters <c>InstantAccess</c>, <c>InstantAccessRetentionDays</c>, and <c>DisableInstantAccess</c> in API operations no longer take effect. The <c>DescribeSnapshots</c> and <c>DescribeSnapshotGroups</c> API operations will include a new response parameter named Available to describe the active status of snapshots.
         /// Before you begin:</description></item>
         /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate snapshots</a>.</description></item>
         /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. Note the following items for different states:<list type="bullet">
         /// <item><description>If the disk is in the <b>In Use</b> state, the instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// <item><description>If the disk is in the <b>Unattached</b> state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
-        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. Snapshot-consistent groups ensure write order consistency and crash consistency for data across multiple disks in a business system. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
+        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. Snapshot-consistent groups ensure the write order consistency of data across multiple disks in a business system and guarantee crash consistency. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
         /// When you create a snapshot, take note of the following items:</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Avoid peak business hours when you create a snapshot. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and brief latency spikes may occur for read and write performance.</description></item>
-        /// <item><description>If a snapshot has not been created, the snapshot cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
+        /// <item><description>Avoid creating snapshots during peak business hours. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and brief read and write performance latency may occur.</description></item>
+        /// <item><description>If the snapshot has not been created, it cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
         /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup to the snapshot.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will fail.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
         /// <item><description>A disk for which a snapshot is being created does not support scale-out. Wait until the snapshot is created before you execute the scale-out operation.</description></item>
         /// <item><description>You can create snapshots for disks in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its scheduled release time during snapshot creation, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is also deleted.</description></item>
-        /// <item><description>After a snapshot is created, you are charged based on the snapshot size. Fees are calculated separately for each region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
+        /// <item><description>After a snapshot is created, the system calculates fees based on the snapshot size in each region separately. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
         /// <item><description>In the following scenarios, you cannot create a snapshot for the specified disk:<list type="bullet">
         /// <item><description>The number of manual snapshots retained for the disk has reached the upper limit. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>Concurrent snapshot creation has limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>When you query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>Snapshot creation has concurrency limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
+        /// <item><description>When you query ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -17881,30 +17881,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. The parameters are described as follows:</para>
+        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. Metric description is as follows:</para>
         /// <list type="bullet">
-        /// <item><description>If you used local snapshots before December 14, 2020, you can use the <c>Category</c> parameter as normal.</description></item>
-        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly available by default. This applies to both manual snapshots and automatic snapshots. The three instant access-related parameters <c>InstantAccess</c>, <c>InstantAccessRetentionDays</c>, and <c>DisableInstantAccess</c> in API operations no longer take effect. The <c>DescribeSnapshots</c> and <c>DescribeSnapshotGroups</c> API operations have a new response parameter named Available that describes whether the snapshot is available.
+        /// <item><description>If you used local snapshots before December 14, 2020, you can use the <c>Category</c> parameter as Normal.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly active by default, and both manual snapshots and automatic snapshots are supported. The three snapshot instant access-related parameters <c>InstantAccess</c>, <c>InstantAccessRetentionDays</c>, and <c>DisableInstantAccess</c> in API operations no longer take effect. The <c>DescribeSnapshots</c> and <c>DescribeSnapshotGroups</c> API operations will include a new response parameter named Available to describe the active status of snapshots.
         /// Before you begin:</description></item>
         /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate snapshots</a>.</description></item>
         /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. Note the following items for different states:<list type="bullet">
         /// <item><description>If the disk is in the <b>In Use</b> state, the instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// <item><description>If the disk is in the <b>Unattached</b> state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
-        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. Snapshot-consistent groups ensure write order consistency and crash consistency for data across multiple disks in a business system. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
+        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. Snapshot-consistent groups ensure the write order consistency of data across multiple disks in a business system and guarantee crash consistency. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
         /// When you create a snapshot, take note of the following items:</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Avoid peak business hours when you create a snapshot. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and brief latency spikes may occur for read and write performance.</description></item>
-        /// <item><description>If a snapshot has not been created, the snapshot cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
+        /// <item><description>Avoid creating snapshots during peak business hours. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and brief read and write performance latency may occur.</description></item>
+        /// <item><description>If the snapshot has not been created, it cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
         /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup to the snapshot.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will fail.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
         /// <item><description>A disk for which a snapshot is being created does not support scale-out. Wait until the snapshot is created before you execute the scale-out operation.</description></item>
         /// <item><description>You can create snapshots for disks in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its scheduled release time during snapshot creation, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is also deleted.</description></item>
-        /// <item><description>After a snapshot is created, you are charged based on the snapshot size. Fees are calculated separately for each region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
+        /// <item><description>After a snapshot is created, the system calculates fees based on the snapshot size in each region separately. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
         /// <item><description>In the following scenarios, you cannot create a snapshot for the specified disk:<list type="bullet">
         /// <item><description>The number of manual snapshots retained for the disk has reached the upper limit. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>Concurrent snapshot creation has limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>When you query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>Snapshot creation has concurrency limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
+        /// <item><description>When you query ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -17932,7 +17932,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <para>You can set <c>InstanceId</c> to create a snapshot-consistent group for specified disks in an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot-consistent group for multiple disks attached to multiple ECS instances in the same zone.</para>
         /// <remarks>
-        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks attached to the specified instance, and cross-instance disk IDs are not supported.
+        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks attached to the specified instance and no longer supports specifying disk IDs across multiple instances.
         /// When you create a snapshot-consistent group, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
@@ -17942,8 +17942,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </list>
         /// </description></item>
         /// <item><description>Snapshot-consistent groups support only ESSD series disks (ESSD, ESSD AutoPL, and ESSD Entry).</description></item>
-        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks), with a total capacity of no more than 256 TiB.</description></item>
-        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot size fees.</description></item>
+        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks) with a total snapshot size of no more than 256 TiB.</description></item>
+        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
         /// <item><description>Disks with the multi-attach attribute enabled do not support snapshot-consistent groups. If an instance has a disk with the multi-attach attribute enabled, set the <c>ExcludeDiskId.N</c> parameter to exclude the disk.
         /// For more information about the features and billing of snapshot-consistent groups, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot-consistent groups</a>.</description></item>
         /// </list>
@@ -18055,7 +18055,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <para>You can set <c>InstanceId</c> to create a snapshot-consistent group for specified disks in an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot-consistent group for multiple disks attached to multiple ECS instances in the same zone.</para>
         /// <remarks>
-        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks attached to the specified instance, and cross-instance disk IDs are not supported.
+        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks attached to the specified instance and no longer supports specifying disk IDs across multiple instances.
         /// When you create a snapshot-consistent group, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
@@ -18065,8 +18065,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </list>
         /// </description></item>
         /// <item><description>Snapshot-consistent groups support only ESSD series disks (ESSD, ESSD AutoPL, and ESSD Entry).</description></item>
-        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks), with a total capacity of no more than 256 TiB.</description></item>
-        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot size fees.</description></item>
+        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks) with a total snapshot size of no more than 256 TiB.</description></item>
+        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
         /// <item><description>Disks with the multi-attach attribute enabled do not support snapshot-consistent groups. If an instance has a disk with the multi-attach attribute enabled, set the <c>ExcludeDiskId.N</c> parameter to exclude the disk.
         /// For more information about the features and billing of snapshot-consistent groups, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot-consistent groups</a>.</description></item>
         /// </list>
@@ -18178,7 +18178,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <para>You can set <c>InstanceId</c> to create a snapshot-consistent group for specified disks in an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot-consistent group for multiple disks attached to multiple ECS instances in the same zone.</para>
         /// <remarks>
-        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks attached to the specified instance, and cross-instance disk IDs are not supported.
+        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks attached to the specified instance and no longer supports specifying disk IDs across multiple instances.
         /// When you create a snapshot-consistent group, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
@@ -18188,8 +18188,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </list>
         /// </description></item>
         /// <item><description>Snapshot-consistent groups support only ESSD series disks (ESSD, ESSD AutoPL, and ESSD Entry).</description></item>
-        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks), with a total capacity of no more than 256 TiB.</description></item>
-        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot size fees.</description></item>
+        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks) with a total snapshot size of no more than 256 TiB.</description></item>
+        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
         /// <item><description>Disks with the multi-attach attribute enabled do not support snapshot-consistent groups. If an instance has a disk with the multi-attach attribute enabled, set the <c>ExcludeDiskId.N</c> parameter to exclude the disk.
         /// For more information about the features and billing of snapshot-consistent groups, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot-consistent groups</a>.</description></item>
         /// </list>
@@ -18217,7 +18217,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <para>You can set <c>InstanceId</c> to create a snapshot-consistent group for specified disks in an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot-consistent group for multiple disks attached to multiple ECS instances in the same zone.</para>
         /// <remarks>
-        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks attached to the specified instance, and cross-instance disk IDs are not supported.
+        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks attached to the specified instance and no longer supports specifying disk IDs across multiple instances.
         /// When you create a snapshot-consistent group, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
@@ -18227,8 +18227,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// </list>
         /// </description></item>
         /// <item><description>Snapshot-consistent groups support only ESSD series disks (ESSD, ESSD AutoPL, and ESSD Entry).</description></item>
-        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks), with a total capacity of no more than 256 TiB.</description></item>
-        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot size fees.</description></item>
+        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks) with a total snapshot size of no more than 256 TiB.</description></item>
+        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
         /// <item><description>Disks with the multi-attach attribute enabled do not support snapshot-consistent groups. If an instance has a disk with the multi-attach attribute enabled, set the <c>ExcludeDiskId.N</c> parameter to exclude the disk.
         /// For more information about the features and billing of snapshot-consistent groups, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot-consistent groups</a>.</description></item>
         /// </list>
@@ -40064,8 +40064,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <list type="bullet">
         /// <item><description><b>Paged query</b>: You can set the MaxResults parameter to limit the number of instance type entries returned. If only some of the queried instance type entries are returned, the NextToken parameter value is also returned. Invoke this operation again with the NextToken parameter value returned from the previous invocation and the MaxResults parameter to implement paging for instance type information.</description></item>
-        /// <item><description>If you call this API operation without specifying the NextToken parameter for paginated retrieval, only the first page (up to 100 entries) of data is returned by default. To retrieve more data, specify the NextToken parameter for paginated retrieval or specify filter conditions to limit the scope of returned data.<remarks>
-        /// <para> The maximum number of entries (MaxResults parameter) is 100. For users who invoked this API operation in 2022, the maximum number of entries of the MaxResults parameter remains 1600. On and after November 15, 2023, the maximum number of entries of the MaxResults parameter is reduced to 100 for all users, and 1600 is no longer supported.</para>
+        /// <item><description>If you call this operation without specifying the NextToken parameter for paginated retrieval, only the first page (up to 100 entries) of data is returned by default. To retrieve more data, specify the NextToken parameter for paginated retrieval or specify filter conditions to limit the scope of returned data.<remarks>
+        /// <para> The maximum number of entries (MaxResults parameter) is 100. For users who invoked this operation before 2022, the maximum value of MaxResults remains 1600. On and after November 15, 2023, the maximum value of MaxResults is reduced to 100 for all users and 1600 is no longer supported.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>DescribeInstanceTypes only queries the configuration and performance information of instance types. To query instance types available for purchase in a specific region, use <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a>.
@@ -40308,8 +40308,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <list type="bullet">
         /// <item><description><b>Paged query</b>: You can set the MaxResults parameter to limit the number of instance type entries returned. If only some of the queried instance type entries are returned, the NextToken parameter value is also returned. Invoke this operation again with the NextToken parameter value returned from the previous invocation and the MaxResults parameter to implement paging for instance type information.</description></item>
-        /// <item><description>If you call this API operation without specifying the NextToken parameter for paginated retrieval, only the first page (up to 100 entries) of data is returned by default. To retrieve more data, specify the NextToken parameter for paginated retrieval or specify filter conditions to limit the scope of returned data.<remarks>
-        /// <para> The maximum number of entries (MaxResults parameter) is 100. For users who invoked this API operation in 2022, the maximum number of entries of the MaxResults parameter remains 1600. On and after November 15, 2023, the maximum number of entries of the MaxResults parameter is reduced to 100 for all users, and 1600 is no longer supported.</para>
+        /// <item><description>If you call this operation without specifying the NextToken parameter for paginated retrieval, only the first page (up to 100 entries) of data is returned by default. To retrieve more data, specify the NextToken parameter for paginated retrieval or specify filter conditions to limit the scope of returned data.<remarks>
+        /// <para> The maximum number of entries (MaxResults parameter) is 100. For users who invoked this operation before 2022, the maximum value of MaxResults remains 1600. On and after November 15, 2023, the maximum value of MaxResults is reduced to 100 for all users and 1600 is no longer supported.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>DescribeInstanceTypes only queries the configuration and performance information of instance types. To query instance types available for purchase in a specific region, use <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a>.
@@ -40552,8 +40552,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <list type="bullet">
         /// <item><description><b>Paged query</b>: You can set the MaxResults parameter to limit the number of instance type entries returned. If only some of the queried instance type entries are returned, the NextToken parameter value is also returned. Invoke this operation again with the NextToken parameter value returned from the previous invocation and the MaxResults parameter to implement paging for instance type information.</description></item>
-        /// <item><description>If you call this API operation without specifying the NextToken parameter for paginated retrieval, only the first page (up to 100 entries) of data is returned by default. To retrieve more data, specify the NextToken parameter for paginated retrieval or specify filter conditions to limit the scope of returned data.<remarks>
-        /// <para> The maximum number of entries (MaxResults parameter) is 100. For users who invoked this API operation in 2022, the maximum number of entries of the MaxResults parameter remains 1600. On and after November 15, 2023, the maximum number of entries of the MaxResults parameter is reduced to 100 for all users, and 1600 is no longer supported.</para>
+        /// <item><description>If you call this operation without specifying the NextToken parameter for paginated retrieval, only the first page (up to 100 entries) of data is returned by default. To retrieve more data, specify the NextToken parameter for paginated retrieval or specify filter conditions to limit the scope of returned data.<remarks>
+        /// <para> The maximum number of entries (MaxResults parameter) is 100. For users who invoked this operation before 2022, the maximum value of MaxResults remains 1600. On and after November 15, 2023, the maximum value of MaxResults is reduced to 100 for all users and 1600 is no longer supported.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>DescribeInstanceTypes only queries the configuration and performance information of instance types. To query instance types available for purchase in a specific region, use <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a>.
@@ -40584,8 +40584,8 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <list type="bullet">
         /// <item><description><b>Paged query</b>: You can set the MaxResults parameter to limit the number of instance type entries returned. If only some of the queried instance type entries are returned, the NextToken parameter value is also returned. Invoke this operation again with the NextToken parameter value returned from the previous invocation and the MaxResults parameter to implement paging for instance type information.</description></item>
-        /// <item><description>If you call this API operation without specifying the NextToken parameter for paginated retrieval, only the first page (up to 100 entries) of data is returned by default. To retrieve more data, specify the NextToken parameter for paginated retrieval or specify filter conditions to limit the scope of returned data.<remarks>
-        /// <para> The maximum number of entries (MaxResults parameter) is 100. For users who invoked this API operation in 2022, the maximum number of entries of the MaxResults parameter remains 1600. On and after November 15, 2023, the maximum number of entries of the MaxResults parameter is reduced to 100 for all users, and 1600 is no longer supported.</para>
+        /// <item><description>If you call this operation without specifying the NextToken parameter for paginated retrieval, only the first page (up to 100 entries) of data is returned by default. To retrieve more data, specify the NextToken parameter for paginated retrieval or specify filter conditions to limit the scope of returned data.<remarks>
+        /// <para> The maximum number of entries (MaxResults parameter) is 100. For users who invoked this operation before 2022, the maximum value of MaxResults remains 1600. On and after November 15, 2023, the maximum value of MaxResults is reduced to 100 for all users and 1600 is no longer supported.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>DescribeInstanceTypes only queries the configuration and performance information of instance types. To query instance types available for purchase in a specific region, use <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a>.
@@ -67770,19 +67770,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
+        /// <para>Before you invoke this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
         /// When you call this operation, take note of the following sharing rules:</para>
         /// <list type="bullet">
         /// <item><description><b>Sharing limits</b>: You can share only custom images that you created under your account. Each image can be shared with up to 50 Alibaba Cloud accounts, and up to 10 Alibaba Cloud accounts at a time.</description></item>
-        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image by calling <a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>, if the image owner revokes the image sharing relationship or deletes the custom image by calling <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>, the instance cannot reinitialize its system disk by calling <a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>.<remarks>
-        /// <para>Notice: Elastic Compute Service (ECS) encrypted image sharing rule change: Only images encrypted with a customer master key (CMK) can be shared. Sharing images encrypted with a service key is no longer supported and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use image copy (CopyImage) to change the image key to a CMK.
-        /// To publish or delist a community image, take note of the following items:</para>
+        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), if the image owner cancels the image sharing relationship or deletes the custom image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>), the instance cannot perform initialization of its system disk (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>).<remarks>
+        /// <para>Notice: Rule change for sharing encrypted images in Elastic Compute Service (ECS): Only images encrypted with a customer master key (CMK) can be shared. Images encrypted with a service key can no longer be shared and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use CopyImage to copy the image and change the encryption key to a CMK. The server will reject sharing requests for service key-encrypted images.
+        /// To publish or delist a community image, take note of the following:</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><b>Responsibilities and agreements</b>: Community images are maintained by their owners, who are responsible for quality and updates. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, you cannot publish the image. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
+        /// <item><description><b>Responsibilities and agreements</b>: The owner of a community image is responsible for its quality and iterative updates. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, publishing is not allowed. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
         /// <item><description><b>Encryption limits</b>: Encrypted images cannot be published as community images.</description></item>
         /// <item><description><b>Visibility</b>: Community images are fully public. All Alibaba Cloud accounts in the region where the image resides can use the image.</description></item>
-        /// <item><description><b>Feature limits</b>: Community images cannot be shared, exported, or copied.</description></item>
+        /// <item><description><b>Feature limits</b>: Community images do not support sharing, export, or copying.</description></item>
         /// <item><description><b>Impact of delisting</b>: After a community image is delisted, it is no longer publicly available to other Alibaba Cloud accounts. However, existing sharing relationships are retained.</description></item>
         /// </list>
         /// </description>
@@ -67871,19 +67871,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
+        /// <para>Before you invoke this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
         /// When you call this operation, take note of the following sharing rules:</para>
         /// <list type="bullet">
         /// <item><description><b>Sharing limits</b>: You can share only custom images that you created under your account. Each image can be shared with up to 50 Alibaba Cloud accounts, and up to 10 Alibaba Cloud accounts at a time.</description></item>
-        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image by calling <a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>, if the image owner revokes the image sharing relationship or deletes the custom image by calling <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>, the instance cannot reinitialize its system disk by calling <a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>.<remarks>
-        /// <para>Notice: Elastic Compute Service (ECS) encrypted image sharing rule change: Only images encrypted with a customer master key (CMK) can be shared. Sharing images encrypted with a service key is no longer supported and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use image copy (CopyImage) to change the image key to a CMK.
-        /// To publish or delist a community image, take note of the following items:</para>
+        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), if the image owner cancels the image sharing relationship or deletes the custom image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>), the instance cannot perform initialization of its system disk (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>).<remarks>
+        /// <para>Notice: Rule change for sharing encrypted images in Elastic Compute Service (ECS): Only images encrypted with a customer master key (CMK) can be shared. Images encrypted with a service key can no longer be shared and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use CopyImage to copy the image and change the encryption key to a CMK. The server will reject sharing requests for service key-encrypted images.
+        /// To publish or delist a community image, take note of the following:</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><b>Responsibilities and agreements</b>: Community images are maintained by their owners, who are responsible for quality and updates. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, you cannot publish the image. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
+        /// <item><description><b>Responsibilities and agreements</b>: The owner of a community image is responsible for its quality and iterative updates. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, publishing is not allowed. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
         /// <item><description><b>Encryption limits</b>: Encrypted images cannot be published as community images.</description></item>
         /// <item><description><b>Visibility</b>: Community images are fully public. All Alibaba Cloud accounts in the region where the image resides can use the image.</description></item>
-        /// <item><description><b>Feature limits</b>: Community images cannot be shared, exported, or copied.</description></item>
+        /// <item><description><b>Feature limits</b>: Community images do not support sharing, export, or copying.</description></item>
         /// <item><description><b>Impact of delisting</b>: After a community image is delisted, it is no longer publicly available to other Alibaba Cloud accounts. However, existing sharing relationships are retained.</description></item>
         /// </list>
         /// </description>
@@ -67972,19 +67972,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
+        /// <para>Before you invoke this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
         /// When you call this operation, take note of the following sharing rules:</para>
         /// <list type="bullet">
         /// <item><description><b>Sharing limits</b>: You can share only custom images that you created under your account. Each image can be shared with up to 50 Alibaba Cloud accounts, and up to 10 Alibaba Cloud accounts at a time.</description></item>
-        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image by calling <a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>, if the image owner revokes the image sharing relationship or deletes the custom image by calling <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>, the instance cannot reinitialize its system disk by calling <a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>.<remarks>
-        /// <para>Notice: Elastic Compute Service (ECS) encrypted image sharing rule change: Only images encrypted with a customer master key (CMK) can be shared. Sharing images encrypted with a service key is no longer supported and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use image copy (CopyImage) to change the image key to a CMK.
-        /// To publish or delist a community image, take note of the following items:</para>
+        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), if the image owner cancels the image sharing relationship or deletes the custom image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>), the instance cannot perform initialization of its system disk (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>).<remarks>
+        /// <para>Notice: Rule change for sharing encrypted images in Elastic Compute Service (ECS): Only images encrypted with a customer master key (CMK) can be shared. Images encrypted with a service key can no longer be shared and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use CopyImage to copy the image and change the encryption key to a CMK. The server will reject sharing requests for service key-encrypted images.
+        /// To publish or delist a community image, take note of the following:</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><b>Responsibilities and agreements</b>: Community images are maintained by their owners, who are responsible for quality and updates. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, you cannot publish the image. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
+        /// <item><description><b>Responsibilities and agreements</b>: The owner of a community image is responsible for its quality and iterative updates. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, publishing is not allowed. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
         /// <item><description><b>Encryption limits</b>: Encrypted images cannot be published as community images.</description></item>
         /// <item><description><b>Visibility</b>: Community images are fully public. All Alibaba Cloud accounts in the region where the image resides can use the image.</description></item>
-        /// <item><description><b>Feature limits</b>: Community images cannot be shared, exported, or copied.</description></item>
+        /// <item><description><b>Feature limits</b>: Community images do not support sharing, export, or copying.</description></item>
         /// <item><description><b>Impact of delisting</b>: After a community image is delisted, it is no longer publicly available to other Alibaba Cloud accounts. However, existing sharing relationships are retained.</description></item>
         /// </list>
         /// </description>
@@ -68009,19 +68009,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
+        /// <para>Before you invoke this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
         /// When you call this operation, take note of the following sharing rules:</para>
         /// <list type="bullet">
         /// <item><description><b>Sharing limits</b>: You can share only custom images that you created under your account. Each image can be shared with up to 50 Alibaba Cloud accounts, and up to 10 Alibaba Cloud accounts at a time.</description></item>
-        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image by calling <a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>, if the image owner revokes the image sharing relationship or deletes the custom image by calling <a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>, the instance cannot reinitialize its system disk by calling <a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>.<remarks>
-        /// <para>Notice: Elastic Compute Service (ECS) encrypted image sharing rule change: Only images encrypted with a customer master key (CMK) can be shared. Sharing images encrypted with a service key is no longer supported and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use image copy (CopyImage) to change the image key to a CMK.
-        /// To publish or delist a community image, take note of the following items:</para>
+        /// <item><description><b>Impact on instances</b>: After an ECS instance is created from a shared image (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>), if the image owner cancels the image sharing relationship or deletes the custom image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>), the instance cannot perform initialization of its system disk (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>).<remarks>
+        /// <para>Notice: Rule change for sharing encrypted images in Elastic Compute Service (ECS): Only images encrypted with a customer master key (CMK) can be shared. Images encrypted with a service key can no longer be shared and will return an error during sharing. If you have images encrypted with a service key and plan to share them, use CopyImage to copy the image and change the encryption key to a CMK. The server will reject sharing requests for service key-encrypted images.
+        /// To publish or delist a community image, take note of the following:</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><b>Responsibilities and agreements</b>: Community images are maintained by their owners, who are responsible for quality and updates. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, you cannot publish the image. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
+        /// <item><description><b>Responsibilities and agreements</b>: The owner of a community image is responsible for its quality and iterative updates. Alibaba Cloud provides only platform support. Before publishing, make sure that you have read and signed the community image agreement. Otherwise, publishing is not allowed. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</description></item>
         /// <item><description><b>Encryption limits</b>: Encrypted images cannot be published as community images.</description></item>
         /// <item><description><b>Visibility</b>: Community images are fully public. All Alibaba Cloud accounts in the region where the image resides can use the image.</description></item>
-        /// <item><description><b>Feature limits</b>: Community images cannot be shared, exported, or copied.</description></item>
+        /// <item><description><b>Feature limits</b>: Community images do not support sharing, export, or copying.</description></item>
         /// <item><description><b>Impact of delisting</b>: After a community image is delisted, it is no longer publicly available to other Alibaba Cloud accounts. However, existing sharing relationships are retained.</description></item>
         /// </list>
         /// </description>
@@ -79813,7 +79813,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>This is an asynchronous operation. After the instance is restarted, it enters the Starting state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is restarted.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>You cannot restart an instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API operations</a>.</description></item>
+        /// <item><description>You cannot restart an instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of security lock on API operations</a>.</description></item>
         /// <item><description>You can restart only ECS instances that are in the <b>Running</b> (<c>Running</c>) state.</description></item>
         /// </list>
         /// </description>
@@ -79889,7 +79889,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>This is an asynchronous operation. After the instance is restarted, it enters the Starting state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is restarted.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>You cannot restart an instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API operations</a>.</description></item>
+        /// <item><description>You cannot restart an instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of security lock on API operations</a>.</description></item>
         /// <item><description>You can restart only ECS instances that are in the <b>Running</b> (<c>Running</c>) state.</description></item>
         /// </list>
         /// </description>
@@ -79965,7 +79965,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>This is an asynchronous operation. After the instance is restarted, it enters the Starting state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is restarted.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>You cannot restart an instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API operations</a>.</description></item>
+        /// <item><description>You cannot restart an instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of security lock on API operations</a>.</description></item>
         /// <item><description>You can restart only ECS instances that are in the <b>Running</b> (<c>Running</c>) state.</description></item>
         /// </list>
         /// </description>
@@ -79993,7 +79993,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>This is an asynchronous operation. After the instance is restarted, it enters the Starting state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is restarted.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>You cannot restart an instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API operations</a>.</description></item>
+        /// <item><description>You cannot restart an instance that is locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of security lock on API operations</a>.</description></item>
         /// <item><description>You can restart only ECS instances that are in the <b>Running</b> (<c>Running</c>) state.</description></item>
         /// </list>
         /// </description>
@@ -83030,24 +83030,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/50134.html">Replace the system disk (replace the operating system)</a>.
+        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/50134.html">Replace a system disk (change the operating system)</a>.
         /// When you replace the system disk, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description><para>You cannot change the billing method of the system disk.</para>
         /// </description></item>
         /// <item><description><para>You cannot change the disk type of the system disk.</para>
         /// </description></item>
-        /// <item><description><para>The ECS instance to which the system disk is attached cannot have unpaid orders. </para>
+        /// <item><description><para>The ECS instance to which the system disk is attached must not have unpaid orders. </para>
         /// </description></item>
         /// <item><description><para>The instance must be in the Stopped state.</para>
         /// <remarks>
-        /// <para>This applies only to instances in virtual private clouds (VPCs). If the ECS instance uses the pay-as-you-go billing method and has the economical mode enabled by default, to prevent the instance from failing to restart after the system disk is replaced due to insufficient instance inventory in the region, stop the instance in standard stop mode. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
+        /// <para>This applies only to instances in virtual private clouds (VPCs). If the ECS instance uses the pay-as-you-go billing method and the economical mode is enabled by default, to prevent the instance from failing to restart after the system disk is replaced due to insufficient instance inventory in the region, stop the instance in standard stop mode. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new capacity for the system disk. The new capacity cannot be less than the original capacity.</para>
+        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new capacity for the system disk. The new capacity cannot be smaller than the original capacity.</para>
         /// </description></item>
         /// <item><description><para>If the ECS instance is locked for security purposes, which means the <c>OperationLocks</c> parameter of the instance contains <c>&quot;LockReason&quot;: &quot;security&quot;</c>, the system disk cannot be replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.
-        /// After the system disk is replaced, you can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to check the status of the instance to verify whether the replacement is successful. If the <c>OperationLocks</c> response parameter is empty, the system disk replacement is complete.</para>
+        /// After the system disk is replaced, you can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to check the status of the instance and verify whether the replacement is successful. If the <c>OperationLocks</c> response parameter is empty, the system disk replacement is complete.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -83172,24 +83172,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/50134.html">Replace the system disk (replace the operating system)</a>.
+        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/50134.html">Replace a system disk (change the operating system)</a>.
         /// When you replace the system disk, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description><para>You cannot change the billing method of the system disk.</para>
         /// </description></item>
         /// <item><description><para>You cannot change the disk type of the system disk.</para>
         /// </description></item>
-        /// <item><description><para>The ECS instance to which the system disk is attached cannot have unpaid orders. </para>
+        /// <item><description><para>The ECS instance to which the system disk is attached must not have unpaid orders. </para>
         /// </description></item>
         /// <item><description><para>The instance must be in the Stopped state.</para>
         /// <remarks>
-        /// <para>This applies only to instances in virtual private clouds (VPCs). If the ECS instance uses the pay-as-you-go billing method and has the economical mode enabled by default, to prevent the instance from failing to restart after the system disk is replaced due to insufficient instance inventory in the region, stop the instance in standard stop mode. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
+        /// <para>This applies only to instances in virtual private clouds (VPCs). If the ECS instance uses the pay-as-you-go billing method and the economical mode is enabled by default, to prevent the instance from failing to restart after the system disk is replaced due to insufficient instance inventory in the region, stop the instance in standard stop mode. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new capacity for the system disk. The new capacity cannot be less than the original capacity.</para>
+        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new capacity for the system disk. The new capacity cannot be smaller than the original capacity.</para>
         /// </description></item>
         /// <item><description><para>If the ECS instance is locked for security purposes, which means the <c>OperationLocks</c> parameter of the instance contains <c>&quot;LockReason&quot;: &quot;security&quot;</c>, the system disk cannot be replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.
-        /// After the system disk is replaced, you can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to check the status of the instance to verify whether the replacement is successful. If the <c>OperationLocks</c> response parameter is empty, the system disk replacement is complete.</para>
+        /// After the system disk is replaced, you can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to check the status of the instance and verify whether the replacement is successful. If the <c>OperationLocks</c> response parameter is empty, the system disk replacement is complete.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -83314,24 +83314,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/50134.html">Replace the system disk (replace the operating system)</a>.
+        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/50134.html">Replace a system disk (change the operating system)</a>.
         /// When you replace the system disk, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description><para>You cannot change the billing method of the system disk.</para>
         /// </description></item>
         /// <item><description><para>You cannot change the disk type of the system disk.</para>
         /// </description></item>
-        /// <item><description><para>The ECS instance to which the system disk is attached cannot have unpaid orders. </para>
+        /// <item><description><para>The ECS instance to which the system disk is attached must not have unpaid orders. </para>
         /// </description></item>
         /// <item><description><para>The instance must be in the Stopped state.</para>
         /// <remarks>
-        /// <para>This applies only to instances in virtual private clouds (VPCs). If the ECS instance uses the pay-as-you-go billing method and has the economical mode enabled by default, to prevent the instance from failing to restart after the system disk is replaced due to insufficient instance inventory in the region, stop the instance in standard stop mode. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
+        /// <para>This applies only to instances in virtual private clouds (VPCs). If the ECS instance uses the pay-as-you-go billing method and the economical mode is enabled by default, to prevent the instance from failing to restart after the system disk is replaced due to insufficient instance inventory in the region, stop the instance in standard stop mode. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new capacity for the system disk. The new capacity cannot be less than the original capacity.</para>
+        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new capacity for the system disk. The new capacity cannot be smaller than the original capacity.</para>
         /// </description></item>
         /// <item><description><para>If the ECS instance is locked for security purposes, which means the <c>OperationLocks</c> parameter of the instance contains <c>&quot;LockReason&quot;: &quot;security&quot;</c>, the system disk cannot be replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.
-        /// After the system disk is replaced, you can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to check the status of the instance to verify whether the replacement is successful. If the <c>OperationLocks</c> response parameter is empty, the system disk replacement is complete.</para>
+        /// After the system disk is replaced, you can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to check the status of the instance and verify whether the replacement is successful. If the <c>OperationLocks</c> response parameter is empty, the system disk replacement is complete.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -83356,24 +83356,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/50134.html">Replace the system disk (replace the operating system)</a>.
+        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/50134.html">Replace a system disk (change the operating system)</a>.
         /// When you replace the system disk, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description><para>You cannot change the billing method of the system disk.</para>
         /// </description></item>
         /// <item><description><para>You cannot change the disk type of the system disk.</para>
         /// </description></item>
-        /// <item><description><para>The ECS instance to which the system disk is attached cannot have unpaid orders. </para>
+        /// <item><description><para>The ECS instance to which the system disk is attached must not have unpaid orders. </para>
         /// </description></item>
         /// <item><description><para>The instance must be in the Stopped state.</para>
         /// <remarks>
-        /// <para>This applies only to instances in virtual private clouds (VPCs). If the ECS instance uses the pay-as-you-go billing method and has the economical mode enabled by default, to prevent the instance from failing to restart after the system disk is replaced due to insufficient instance inventory in the region, stop the instance in standard stop mode. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
+        /// <para>This applies only to instances in virtual private clouds (VPCs). If the ECS instance uses the pay-as-you-go billing method and the economical mode is enabled by default, to prevent the instance from failing to restart after the system disk is replaced due to insufficient instance inventory in the region, stop the instance in standard stop mode. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new capacity for the system disk. The new capacity cannot be less than the original capacity.</para>
+        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new capacity for the system disk. The new capacity cannot be smaller than the original capacity.</para>
         /// </description></item>
         /// <item><description><para>If the ECS instance is locked for security purposes, which means the <c>OperationLocks</c> parameter of the instance contains <c>&quot;LockReason&quot;: &quot;security&quot;</c>, the system disk cannot be replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.
-        /// After the system disk is replaced, you can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to check the status of the instance to verify whether the replacement is successful. If the <c>OperationLocks</c> response parameter is empty, the system disk replacement is complete.</para>
+        /// After the system disk is replaced, you can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to check the status of the instance and verify whether the replacement is successful. If the <c>OperationLocks</c> response parameter is empty, the system disk replacement is complete.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -87562,7 +87562,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. The instance is not started immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
+        /// <para>This is an asynchronous operation. The instance does not start immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
         /// <item><description>Instances that are locked for security reasons cannot be started by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
@@ -87639,7 +87639,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. The instance is not started immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
+        /// <para>This is an asynchronous operation. The instance does not start immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
         /// <item><description>Instances that are locked for security reasons cannot be started by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
@@ -87716,7 +87716,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. The instance is not started immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
+        /// <para>This is an asynchronous operation. The instance does not start immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
         /// <item><description>Instances that are locked for security reasons cannot be started by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
@@ -87745,7 +87745,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. The instance is not started immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
+        /// <para>This is an asynchronous operation. The instance does not start immediately after a successful call. The instance first enters the Starting state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Running</c>, the instance is started.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
         /// <item><description>Instances that are locked for security reasons cannot be started by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
@@ -88562,11 +88562,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After the call succeeds, the instance enters the Stopping state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
+        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After a successful call, the instance enters the Stopping state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
         /// <item><description>After an instance is stopped, it becomes unavailable. Make sure that stopping the instance does not affect your business. Call <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> to start the instance.</description></item>
-        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API calls</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -88650,11 +88650,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After the call succeeds, the instance enters the Stopping state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
+        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After a successful call, the instance enters the Stopping state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
         /// <item><description>After an instance is stopped, it becomes unavailable. Make sure that stopping the instance does not affect your business. Call <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> to start the instance.</description></item>
-        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API calls</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -88738,11 +88738,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After the call succeeds, the instance enters the Stopping state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
+        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After a successful call, the instance enters the Stopping state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
         /// <item><description>After an instance is stopped, it becomes unavailable. Make sure that stopping the instance does not affect your business. Call <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> to start the instance.</description></item>
-        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API calls</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -88766,11 +88766,11 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After the call succeeds, the instance enters the Stopping state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
+        /// <para>This is an asynchronous operation. Instances are not stopped immediately after a successful call. After a successful call, the instance enters the Stopping state. Call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
         /// <item><description>After an instance is stopped, it becomes unavailable. Make sure that stopping the instance does not affect your business. Call <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> to start the instance.</description></item>
-        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impacts of resource security locks on API calls</a>.</description></item>
         /// </list>
         /// </description>
         /// 

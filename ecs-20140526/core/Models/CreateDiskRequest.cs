@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the disk. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The disk description. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The name of the disk. The name must be 2 to 128 characters in length and can contain characters that are categorized as letter in Unicode, including Chinese and English characters, and ASCII digits (0-9). The name can contain colons (:), underscores (_), periods (.), or hyphens (-). The name must start with a character that is categorized as letter in Unicode.</para>
+        /// <para>The disk name. The name must be 2 to 128 characters in length and can contain characters that are classified as letter in Unicode (including English and Chinese characters) and ASCII digits (0-9). The name can contain colons (:), underscores (_), periods (.), or hyphens (-). The name must start with a character that is classified as letter in Unicode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDiskName</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>The ID of the subscription instance to which the subscription disk is automatically attached after the disk is created.</para>
+        /// <para>Creates a subscription disk and automatically attaches it to the specified subscription instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp18pnlg1ds9rky4****</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The performance level of the enterprise SSD (ESSD) to create. Valid values:</para>
+        /// <para>The performance level of the enterprise SSD (ESSD) disk. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot to use to create the disk. Snapshots created on or before July 15, 2013 cannot be used to create disks.</para>
+        /// <para>The snapshot ID that is used to create the disk. Snapshots created on or before July 15, 2013 cannot be used to create disks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-bp67acfmxazb4p****</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StorageClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the storage set.</para>
+        /// <para>The storage set ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ss-bp67acfmxazb4p****</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? StorageSetPartitionNumber { get; set; }
 
         /// <summary>
-        /// <para>The list of tags for the disk.</para>
+        /// <para>The tags of the disk.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
