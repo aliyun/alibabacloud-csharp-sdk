@@ -53,6 +53,39 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
                 {"cn-zhengzhou-nebula-1", "actiontrail.aliyuncs.com"},
                 {"eu-west-1-oxs", "actiontrail.ap-northeast-1.aliyuncs.com"},
                 {"rus-west-1-pop", "actiontrail.ap-northeast-1.aliyuncs.com"},
+                {"us-west-1", "actiontrail.us-west-1.aliyuncs.com"},
+                {"us-southeast-1", "actiontrail.us-southeast-1.aliyuncs.com"},
+                {"us-east-1", "actiontrail.us-east-1.aliyuncs.com"},
+                {"na-south-1", "actiontrail.na-south-1.aliyuncs.com"},
+                {"me-east-1", "actiontrail.me-east-1.aliyuncs.com"},
+                {"me-central-1", "actiontrail.me-central-1.aliyuncs.com"},
+                {"eu-west-2", "actiontrail.eu-west-2.aliyuncs.com"},
+                {"eu-west-1", "actiontrail.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "actiontrail.eu-central-1.aliyuncs.com"},
+                {"cn-zhongwei", "actiontrail.cn-zhongwei.aliyuncs.com"},
+                {"cn-zhangjiakou", "actiontrail.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "actiontrail.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "actiontrail.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "actiontrail.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "actiontrail.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "actiontrail.cn-qingdao.aliyuncs.com"},
+                {"cn-north-2-gov-1", "actiontrail.cn-north-2-gov-1.aliyuncs.com"},
+                {"cn-nanjing", "actiontrail.cn-nanjing.aliyuncs.com"},
+                {"cn-huhehaote", "actiontrail.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "actiontrail.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "actiontrail.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou", "actiontrail.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "actiontrail.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "actiontrail.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "actiontrail.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-8", "actiontrail.ap-southeast-8.aliyuncs.com"},
+                {"ap-southeast-7", "actiontrail.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "actiontrail.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "actiontrail.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "actiontrail.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-1", "actiontrail.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "actiontrail.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "actiontrail.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("actiontrail", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -74,8 +107,13 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高级查询历史记录</para>
+        /// <para>Creates an advanced event query history record that saves a custom query conditional statement for reuse and management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides a demo of how to save a conditional statement as an advanced event query history record. The conditional statement is used to query all <c>AccessKey</c> access management events in logs.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAdvancedQueryHistoryRequest
@@ -91,6 +129,10 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuerySql))
             {
                 query["QuerySql"] = request.QuerySql;
@@ -120,8 +162,13 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高级查询历史记录</para>
+        /// <para>Creates an advanced event query history record that saves a custom query conditional statement for reuse and management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides a demo of how to save a conditional statement as an advanced event query history record. The conditional statement is used to query all <c>AccessKey</c> access management events in logs.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAdvancedQueryHistoryRequest
@@ -137,6 +184,10 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuerySql))
             {
                 query["QuerySql"] = request.QuerySql;
@@ -166,8 +217,13 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高级查询历史记录</para>
+        /// <para>Creates an advanced event query history record that saves a custom query conditional statement for reuse and management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides a demo of how to save a conditional statement as an advanced event query history record. The conditional statement is used to query all <c>AccessKey</c> access management events in logs.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAdvancedQueryHistoryRequest
@@ -184,8 +240,13 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高级查询历史记录</para>
+        /// <para>Creates an advanced event query history record that saves a custom query conditional statement for reuse and management.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides a demo of how to save a conditional statement as an advanced event query history record. The conditional statement is used to query all <c>AccessKey</c> access management events in logs.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAdvancedQueryHistoryRequest
@@ -202,7 +263,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高级查询模板</para>
+        /// <para>Creates an advanced query template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -252,7 +313,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高级查询模板</para>
+        /// <para>Creates an advanced query template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -302,7 +363,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高级查询模板</para>
+        /// <para>Creates an advanced query template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -320,7 +381,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建高级查询模板</para>
+        /// <para>Creates an advanced query template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -343,11 +404,11 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Limits</para>
+        /// <para>Limitations</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that you have created a single-account trail to deliver events to Simple Log Service by calling the <a href="https://help.aliyun.com/document_detail/212313.html">CreateTrail</a> operation.</description></item>
-        /// <item><description>Only one data backfill task can run at a time within an Alibaba Cloud account.
-        /// This topic provides an example on how to create a data backfill task for a trail named <c>trail-name</c>.</description></item>
+        /// <item><description>You must first call the <a href="https://help.aliyun.com/document_detail/212313.html">CreateTrail</a> operation to create a single-account trail that delivers events to Simple Log Service (SLS).</description></item>
+        /// <item><description>An Alibaba Cloud account can have only one data backfill task running at a time.
+        /// This topic provides an example of how to create data backfill task for the trail <c>trail-name</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -399,11 +460,11 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Limits</para>
+        /// <para>Limitations</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that you have created a single-account trail to deliver events to Simple Log Service by calling the <a href="https://help.aliyun.com/document_detail/212313.html">CreateTrail</a> operation.</description></item>
-        /// <item><description>Only one data backfill task can run at a time within an Alibaba Cloud account.
-        /// This topic provides an example on how to create a data backfill task for a trail named <c>trail-name</c>.</description></item>
+        /// <item><description>You must first call the <a href="https://help.aliyun.com/document_detail/212313.html">CreateTrail</a> operation to create a single-account trail that delivers events to Simple Log Service (SLS).</description></item>
+        /// <item><description>An Alibaba Cloud account can have only one data backfill task running at a time.
+        /// This topic provides an example of how to create data backfill task for the trail <c>trail-name</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -455,11 +516,11 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Limits</para>
+        /// <para>Limitations</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that you have created a single-account trail to deliver events to Simple Log Service by calling the <a href="https://help.aliyun.com/document_detail/212313.html">CreateTrail</a> operation.</description></item>
-        /// <item><description>Only one data backfill task can run at a time within an Alibaba Cloud account.
-        /// This topic provides an example on how to create a data backfill task for a trail named <c>trail-name</c>.</description></item>
+        /// <item><description>You must first call the <a href="https://help.aliyun.com/document_detail/212313.html">CreateTrail</a> operation to create a single-account trail that delivers events to Simple Log Service (SLS).</description></item>
+        /// <item><description>An Alibaba Cloud account can have only one data backfill task running at a time.
+        /// This topic provides an example of how to create data backfill task for the trail <c>trail-name</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -483,11 +544,11 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Limits</para>
+        /// <para>Limitations</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that you have created a single-account trail to deliver events to Simple Log Service by calling the <a href="https://help.aliyun.com/document_detail/212313.html">CreateTrail</a> operation.</description></item>
-        /// <item><description>Only one data backfill task can run at a time within an Alibaba Cloud account.
-        /// This topic provides an example on how to create a data backfill task for a trail named <c>trail-name</c>.</description></item>
+        /// <item><description>You must first call the <a href="https://help.aliyun.com/document_detail/212313.html">CreateTrail</a> operation to create a single-account trail that delivers events to Simple Log Service (SLS).</description></item>
+        /// <item><description>An Alibaba Cloud account can have only one data backfill task running at a time.
+        /// This topic provides an example of how to create data backfill task for the trail <c>trail-name</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -506,42 +567,32 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a trail. By default, ActionTrail allows you to query events generated within your Alibaba Cloud account in the last 90 days. To query and analyze events generated more than 90 days ago, create a trail to deliver events to Object Storage Service (OSS), Simple Log Service, or MaxCompute.</para>
+        /// <para>Creates a trail to deliver events to a destination for long-term storage and analysis, such as an Object Storage Service (OSS) bucket, a Simple Log Service (SLS) Logstore, or a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Operation description</em>*</para>
         /// <remarks>
-        /// <para>By default, a trail that is created by calling an operation is in the Disabled state. You must call the StartLogging operation to enable the trail. This way, ActionTrail can deliver events to the destination cloud service.
-        /// <b>Prerequisites</b>
-        /// Before you create a trail, make sure that at least one of the following storage configurations is complete:</para>
+        /// <para>By default, a trail that you create by using this API is in a <b>disabled</b> state. You must call the <a href="https://help.aliyun.com/document_detail/432246.html">StartLogging</a> operation operation to enable the trail. After a trail is enabled, ActionTrail begins delivering events to your specified destination.</para>
         /// </remarks>
+        /// <h3>Prerequisites</h3>
+        /// <para>Before you create a trail, you must have at least one of the following resources configured as a destination:</para>
         /// <list type="bullet">
-        /// <item><description><para>Deliver events to OSS</para>
-        /// <list type="bullet">
-        /// <item><description>OSS is activated and a bucket is created.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Deliver events to Simple Log Service</para>
-        /// <list type="bullet">
-        /// <item><description>Simple Log Service is activated and a project is created.<remarks>
-        /// <para>When a trail is created, ActionTrail automatically creates a Logstore named <c>actiontrail_&lt;Trail name&gt;</c> in the project. You cannot write data other than the audit data to the Logstore. This ensures the accuracy of the audit data.</para>
+        /// <item><description>OSS
+        /// You must activate OSS and create a bucket.</description></item>
+        /// <item><description>SLS
+        /// You must activate SLS and create a Logstore.<remarks>
+        /// <para>When you create a trail with an SLS destination, ActionTrail automatically creates a Logstore named <c>actiontrail_&lt;trail_name&gt;</c> in your specified project. To ensure the integrity of your audit data, this Logstore only accepts events delivered by ActionTrail.</para>
         /// </remarks>
         /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Deliver events to MaxCompute</para>
-        /// <list type="bullet">
-        /// <item><description>MaxCompute is activated.<remarks>
-        /// <para>When a trail is created, ActionTrail automatically creates a project named <c>actiontrail_&lt;Account ID&gt;</c> on the Projects page. You cannot write data other than the audit data to the project. This ensures the accuracy of the audit data.
-        /// <b>Usage Notes</b>
-        /// This topic provides an example on how to create a single-account trail named <c>trail-test</c> to deliver events to an OSS bucket named <c>audit-log</c>.</para>
+        /// <item><description>MaxCompute
+        /// You must activate MaxCompute.<remarks>
+        /// <para>When you create a trail with a MaxCompute destination, ActionTrail automatically creates a project named <c>actiontrail_&lt;account_ID&gt;</c>. To ensure the integrity of your audit data, this project only accepts events delivered by ActionTrail.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// </description></item>
-        /// </list>
+        /// <h3>Usage notes</h3>
+        /// <para>This example shows how to create a single-account trail named <c>trail-test</c> that delivers events to an OSS bucket named <c>audit-log</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -623,42 +674,32 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a trail. By default, ActionTrail allows you to query events generated within your Alibaba Cloud account in the last 90 days. To query and analyze events generated more than 90 days ago, create a trail to deliver events to Object Storage Service (OSS), Simple Log Service, or MaxCompute.</para>
+        /// <para>Creates a trail to deliver events to a destination for long-term storage and analysis, such as an Object Storage Service (OSS) bucket, a Simple Log Service (SLS) Logstore, or a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Operation description</em>*</para>
         /// <remarks>
-        /// <para>By default, a trail that is created by calling an operation is in the Disabled state. You must call the StartLogging operation to enable the trail. This way, ActionTrail can deliver events to the destination cloud service.
-        /// <b>Prerequisites</b>
-        /// Before you create a trail, make sure that at least one of the following storage configurations is complete:</para>
+        /// <para>By default, a trail that you create by using this API is in a <b>disabled</b> state. You must call the <a href="https://help.aliyun.com/document_detail/432246.html">StartLogging</a> operation operation to enable the trail. After a trail is enabled, ActionTrail begins delivering events to your specified destination.</para>
         /// </remarks>
+        /// <h3>Prerequisites</h3>
+        /// <para>Before you create a trail, you must have at least one of the following resources configured as a destination:</para>
         /// <list type="bullet">
-        /// <item><description><para>Deliver events to OSS</para>
-        /// <list type="bullet">
-        /// <item><description>OSS is activated and a bucket is created.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Deliver events to Simple Log Service</para>
-        /// <list type="bullet">
-        /// <item><description>Simple Log Service is activated and a project is created.<remarks>
-        /// <para>When a trail is created, ActionTrail automatically creates a Logstore named <c>actiontrail_&lt;Trail name&gt;</c> in the project. You cannot write data other than the audit data to the Logstore. This ensures the accuracy of the audit data.</para>
+        /// <item><description>OSS
+        /// You must activate OSS and create a bucket.</description></item>
+        /// <item><description>SLS
+        /// You must activate SLS and create a Logstore.<remarks>
+        /// <para>When you create a trail with an SLS destination, ActionTrail automatically creates a Logstore named <c>actiontrail_&lt;trail_name&gt;</c> in your specified project. To ensure the integrity of your audit data, this Logstore only accepts events delivered by ActionTrail.</para>
         /// </remarks>
         /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Deliver events to MaxCompute</para>
-        /// <list type="bullet">
-        /// <item><description>MaxCompute is activated.<remarks>
-        /// <para>When a trail is created, ActionTrail automatically creates a project named <c>actiontrail_&lt;Account ID&gt;</c> on the Projects page. You cannot write data other than the audit data to the project. This ensures the accuracy of the audit data.
-        /// <b>Usage Notes</b>
-        /// This topic provides an example on how to create a single-account trail named <c>trail-test</c> to deliver events to an OSS bucket named <c>audit-log</c>.</para>
+        /// <item><description>MaxCompute
+        /// You must activate MaxCompute.<remarks>
+        /// <para>When you create a trail with a MaxCompute destination, ActionTrail automatically creates a project named <c>actiontrail_&lt;account_ID&gt;</c>. To ensure the integrity of your audit data, this project only accepts events delivered by ActionTrail.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// </description></item>
-        /// </list>
+        /// <h3>Usage notes</h3>
+        /// <para>This example shows how to create a single-account trail named <c>trail-test</c> that delivers events to an OSS bucket named <c>audit-log</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -740,42 +781,32 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a trail. By default, ActionTrail allows you to query events generated within your Alibaba Cloud account in the last 90 days. To query and analyze events generated more than 90 days ago, create a trail to deliver events to Object Storage Service (OSS), Simple Log Service, or MaxCompute.</para>
+        /// <para>Creates a trail to deliver events to a destination for long-term storage and analysis, such as an Object Storage Service (OSS) bucket, a Simple Log Service (SLS) Logstore, or a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Operation description</em>*</para>
         /// <remarks>
-        /// <para>By default, a trail that is created by calling an operation is in the Disabled state. You must call the StartLogging operation to enable the trail. This way, ActionTrail can deliver events to the destination cloud service.
-        /// <b>Prerequisites</b>
-        /// Before you create a trail, make sure that at least one of the following storage configurations is complete:</para>
+        /// <para>By default, a trail that you create by using this API is in a <b>disabled</b> state. You must call the <a href="https://help.aliyun.com/document_detail/432246.html">StartLogging</a> operation operation to enable the trail. After a trail is enabled, ActionTrail begins delivering events to your specified destination.</para>
         /// </remarks>
+        /// <h3>Prerequisites</h3>
+        /// <para>Before you create a trail, you must have at least one of the following resources configured as a destination:</para>
         /// <list type="bullet">
-        /// <item><description><para>Deliver events to OSS</para>
-        /// <list type="bullet">
-        /// <item><description>OSS is activated and a bucket is created.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Deliver events to Simple Log Service</para>
-        /// <list type="bullet">
-        /// <item><description>Simple Log Service is activated and a project is created.<remarks>
-        /// <para>When a trail is created, ActionTrail automatically creates a Logstore named <c>actiontrail_&lt;Trail name&gt;</c> in the project. You cannot write data other than the audit data to the Logstore. This ensures the accuracy of the audit data.</para>
+        /// <item><description>OSS
+        /// You must activate OSS and create a bucket.</description></item>
+        /// <item><description>SLS
+        /// You must activate SLS and create a Logstore.<remarks>
+        /// <para>When you create a trail with an SLS destination, ActionTrail automatically creates a Logstore named <c>actiontrail_&lt;trail_name&gt;</c> in your specified project. To ensure the integrity of your audit data, this Logstore only accepts events delivered by ActionTrail.</para>
         /// </remarks>
         /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Deliver events to MaxCompute</para>
-        /// <list type="bullet">
-        /// <item><description>MaxCompute is activated.<remarks>
-        /// <para>When a trail is created, ActionTrail automatically creates a project named <c>actiontrail_&lt;Account ID&gt;</c> on the Projects page. You cannot write data other than the audit data to the project. This ensures the accuracy of the audit data.
-        /// <b>Usage Notes</b>
-        /// This topic provides an example on how to create a single-account trail named <c>trail-test</c> to deliver events to an OSS bucket named <c>audit-log</c>.</para>
+        /// <item><description>MaxCompute
+        /// You must activate MaxCompute.<remarks>
+        /// <para>When you create a trail with a MaxCompute destination, ActionTrail automatically creates a project named <c>actiontrail_&lt;account_ID&gt;</c>. To ensure the integrity of your audit data, this project only accepts events delivered by ActionTrail.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// </description></item>
-        /// </list>
+        /// <h3>Usage notes</h3>
+        /// <para>This example shows how to create a single-account trail named <c>trail-test</c> that delivers events to an OSS bucket named <c>audit-log</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -793,42 +824,32 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a trail. By default, ActionTrail allows you to query events generated within your Alibaba Cloud account in the last 90 days. To query and analyze events generated more than 90 days ago, create a trail to deliver events to Object Storage Service (OSS), Simple Log Service, or MaxCompute.</para>
+        /// <para>Creates a trail to deliver events to a destination for long-term storage and analysis, such as an Object Storage Service (OSS) bucket, a Simple Log Service (SLS) Logstore, or a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Operation description</em>*</para>
         /// <remarks>
-        /// <para>By default, a trail that is created by calling an operation is in the Disabled state. You must call the StartLogging operation to enable the trail. This way, ActionTrail can deliver events to the destination cloud service.
-        /// <b>Prerequisites</b>
-        /// Before you create a trail, make sure that at least one of the following storage configurations is complete:</para>
+        /// <para>By default, a trail that you create by using this API is in a <b>disabled</b> state. You must call the <a href="https://help.aliyun.com/document_detail/432246.html">StartLogging</a> operation operation to enable the trail. After a trail is enabled, ActionTrail begins delivering events to your specified destination.</para>
         /// </remarks>
+        /// <h3>Prerequisites</h3>
+        /// <para>Before you create a trail, you must have at least one of the following resources configured as a destination:</para>
         /// <list type="bullet">
-        /// <item><description><para>Deliver events to OSS</para>
-        /// <list type="bullet">
-        /// <item><description>OSS is activated and a bucket is created.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Deliver events to Simple Log Service</para>
-        /// <list type="bullet">
-        /// <item><description>Simple Log Service is activated and a project is created.<remarks>
-        /// <para>When a trail is created, ActionTrail automatically creates a Logstore named <c>actiontrail_&lt;Trail name&gt;</c> in the project. You cannot write data other than the audit data to the Logstore. This ensures the accuracy of the audit data.</para>
+        /// <item><description>OSS
+        /// You must activate OSS and create a bucket.</description></item>
+        /// <item><description>SLS
+        /// You must activate SLS and create a Logstore.<remarks>
+        /// <para>When you create a trail with an SLS destination, ActionTrail automatically creates a Logstore named <c>actiontrail_&lt;trail_name&gt;</c> in your specified project. To ensure the integrity of your audit data, this Logstore only accepts events delivered by ActionTrail.</para>
         /// </remarks>
         /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Deliver events to MaxCompute</para>
-        /// <list type="bullet">
-        /// <item><description>MaxCompute is activated.<remarks>
-        /// <para>When a trail is created, ActionTrail automatically creates a project named <c>actiontrail_&lt;Account ID&gt;</c> on the Projects page. You cannot write data other than the audit data to the project. This ensures the accuracy of the audit data.
-        /// <b>Usage Notes</b>
-        /// This topic provides an example on how to create a single-account trail named <c>trail-test</c> to deliver events to an OSS bucket named <c>audit-log</c>.</para>
+        /// <item><description>MaxCompute
+        /// You must activate MaxCompute.<remarks>
+        /// <para>When you create a trail with a MaxCompute destination, ActionTrail automatically creates a project named <c>actiontrail_&lt;account_ID&gt;</c>. To ensure the integrity of your audit data, this project only accepts events delivered by ActionTrail.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// </description></item>
-        /// </list>
+        /// <h3>Usage notes</h3>
+        /// <para>This example shows how to create a single-account trail named <c>trail-test</c> that delivers events to an OSS bucket named <c>audit-log</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -846,7 +867,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高级查询历史记录</para>
+        /// <para>Deletes an advanced query record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -888,7 +909,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高级查询历史记录</para>
+        /// <para>Deletes an advanced query record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -930,7 +951,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高级查询历史记录</para>
+        /// <para>Deletes an advanced query record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -948,7 +969,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高级查询历史记录</para>
+        /// <para>Deletes an advanced query record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -966,7 +987,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高级查询模板</para>
+        /// <para>Deletes an advanced query template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1008,7 +1029,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高级查询模板</para>
+        /// <para>Deletes an advanced query template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1050,7 +1071,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高级查询模板</para>
+        /// <para>Deletes an advanced query template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1068,7 +1089,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除高级查询模板</para>
+        /// <para>Deletes an advanced query template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1086,7 +1107,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据事件选择器</para>
+        /// <para>Deletes the data event selector for a specified trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1128,7 +1149,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据事件选择器</para>
+        /// <para>Deletes the data event selector for a specified trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1170,7 +1191,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据事件选择器</para>
+        /// <para>Deletes the data event selector for a specified trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1188,7 +1209,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据事件选择器</para>
+        /// <para>Deletes the data event selector for a specified trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1486,7 +1507,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高级查询历史记录</para>
+        /// <para>Queries all advanced query records.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -1516,7 +1537,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高级查询历史记录</para>
+        /// <para>Queries all advanced query records.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -1546,7 +1567,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高级查询历史记录</para>
+        /// <para>Queries all advanced query records.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1560,7 +1581,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高级查询历史记录</para>
+        /// <para>Queries all advanced query records.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1574,7 +1595,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高级查询模板</para>
+        /// <para>Queries advanced query templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1624,7 +1645,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高级查询模板</para>
+        /// <para>Queries advanced query templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1674,7 +1695,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高级查询模板</para>
+        /// <para>Queries advanced query templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1692,7 +1713,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询高级查询模板</para>
+        /// <para>Queries advanced query templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1850,7 +1871,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举资源生命周期事件</para>
+        /// <para>Queries the lifecycle events of a specified resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1896,7 +1917,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举资源生命周期事件</para>
+        /// <para>Queries the lifecycle events of a specified resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1942,7 +1963,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举资源生命周期事件</para>
+        /// <para>Queries the lifecycle events of a specified resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1960,7 +1981,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举资源生命周期事件</para>
+        /// <para>Queries the lifecycle events of a specified resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1978,7 +1999,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有场景</para>
+        /// <para>Queries all advanced query scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2020,7 +2041,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有场景</para>
+        /// <para>Queries all advanced query scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2062,7 +2083,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有场景</para>
+        /// <para>Queries all advanced query scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2080,7 +2101,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有场景</para>
+        /// <para>Queries all advanced query scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2098,7 +2119,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举所有模版</para>
+        /// <para>Queries advanced query templates for a specified scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2148,7 +2169,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举所有模版</para>
+        /// <para>Queries advanced query templates for a specified scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2198,7 +2219,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举所有模版</para>
+        /// <para>Queries advanced query templates for a specified scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2216,7 +2237,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举所有模版</para>
+        /// <para>Queries advanced query templates for a specified scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2234,7 +2255,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取投递监控指标</para>
+        /// <para>Retrieves data for delivery monitoring metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2272,7 +2293,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取投递监控指标</para>
+        /// <para>Retrieves data for delivery monitoring metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2310,7 +2331,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取投递监控指标</para>
+        /// <para>Retrieves data for delivery monitoring metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2328,7 +2349,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取投递监控指标</para>
+        /// <para>Retrieves data for delivery monitoring metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2502,7 +2523,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户告警量</para>
+        /// <para>Queries the number of daily alerts within a specific time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2548,7 +2569,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户告警量</para>
+        /// <para>Queries the number of daily alerts within a specific time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2594,7 +2615,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户告警量</para>
+        /// <para>Queries the number of daily alerts within a specific time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2612,7 +2633,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户告警量</para>
+        /// <para>Queries the number of daily alerts within a specific time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2630,7 +2651,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户日志量</para>
+        /// <para>Queries the number of daily logs within a specific time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2676,7 +2697,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户日志量</para>
+        /// <para>Queries the number of daily logs within a specific time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2722,7 +2743,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户日志量</para>
+        /// <para>Queries the number of daily logs within a specific time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2740,7 +2761,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户日志量</para>
+        /// <para>Queries the number of daily logs within a specific time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2758,7 +2779,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户跟踪量</para>
+        /// <para>Queries the number of enabled trails, including organization trails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2792,7 +2813,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户跟踪量</para>
+        /// <para>Queries the number of enabled trails, including organization trails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2826,7 +2847,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户跟踪量</para>
+        /// <para>Queries the number of enabled trails, including organization trails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2844,7 +2865,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户跟踪量</para>
+        /// <para>Queries the number of enabled trails, including organization trails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2862,7 +2883,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭insight</para>
+        /// <para>Disables a specific type of Insights event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2904,7 +2925,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭insight</para>
+        /// <para>Disables a specific type of Insights event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2946,7 +2967,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭insight</para>
+        /// <para>Disables a specific type of Insights event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2964,7 +2985,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭insight</para>
+        /// <para>Disables a specific type of Insights event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2982,7 +3003,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Insights feature</para>
+        /// <para>Enables the Insights feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3024,7 +3045,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Insights feature</para>
+        /// <para>Enables the Insights feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3066,7 +3087,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Insights feature</para>
+        /// <para>Enables the Insights feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3084,7 +3105,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Insights feature</para>
+        /// <para>Enables the Insights feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3102,7 +3123,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the most recent events that are generated when a specified AccessKey pair is called to access Alibaba Cloud services.</para>
+        /// <para>Queries the most recent events associated with a specified AccessKey pair, including the event name, source, timestamp, and details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3161,7 +3182,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the most recent events that are generated when a specified AccessKey pair is called to access Alibaba Cloud services.</para>
+        /// <para>Queries the most recent events associated with a specified AccessKey pair, including the event name, source, timestamp, and details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3220,7 +3241,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the most recent events that are generated when a specified AccessKey pair is called to access Alibaba Cloud services.</para>
+        /// <para>Queries the most recent events associated with a specified AccessKey pair, including the event name, source, timestamp, and details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3243,7 +3264,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the most recent events that are generated when a specified AccessKey pair is called to access Alibaba Cloud services.</para>
+        /// <para>Queries the most recent events associated with a specified AccessKey pair, including the event name, source, timestamp, and details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3266,7 +3287,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the most recent call of a specified AccessKey pair.</para>
+        /// <para>Queries the most recent usage record of a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3313,7 +3334,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the most recent call of a specified AccessKey pair.</para>
+        /// <para>Queries the most recent usage record of a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3360,7 +3381,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the most recent call of a specified AccessKey pair.</para>
+        /// <para>Queries the most recent usage record of a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3383,7 +3404,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the most recent call of a specified AccessKey pair.</para>
+        /// <para>Queries the most recent usage record of a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3406,7 +3427,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the IP addresses that are most recently used when an AccessKey pair is called to access Alibaba Cloud services.</para>
+        /// <para>Queries the IP addresses most recently used by a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3465,7 +3486,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the IP addresses that are most recently used when an AccessKey pair is called to access Alibaba Cloud services.</para>
+        /// <para>Queries the IP addresses most recently used by a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3524,7 +3545,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the IP addresses that are most recently used when an AccessKey pair is called to access Alibaba Cloud services.</para>
+        /// <para>Queries the IP addresses most recently used by a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3547,7 +3568,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the IP addresses that are most recently used when an AccessKey pair is called to access Alibaba Cloud services.</para>
+        /// <para>Queries the IP addresses most recently used by a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3570,7 +3591,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the Alibaba Cloud services that are most recently accessed by using a specified AccessKey pair.</para>
+        /// <para>Queries the Alibaba Cloud services most recently accessed by a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3617,7 +3638,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the Alibaba Cloud services that are most recently accessed by using a specified AccessKey pair.</para>
+        /// <para>Queries the Alibaba Cloud services most recently accessed by a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3664,7 +3685,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the Alibaba Cloud services that are most recently accessed by using a specified AccessKey pair.</para>
+        /// <para>Queries the Alibaba Cloud services most recently accessed by a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3687,7 +3708,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the Alibaba Cloud services that are most recently accessed by using a specified AccessKey pair.</para>
+        /// <para>Queries the Alibaba Cloud services most recently accessed by a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3710,7 +3731,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the resources that are most recently accessed by using a specified AccessKey pair.</para>
+        /// <para>Queries the resources most recently used by a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3769,7 +3790,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the resources that are most recently accessed by using a specified AccessKey pair.</para>
+        /// <para>Queries the resources most recently used by a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3828,7 +3849,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the resources that are most recently accessed by using a specified AccessKey pair.</para>
+        /// <para>Queries the resources most recently used by a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3851,7 +3872,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the resources that are most recently accessed by using a specified AccessKey pair.</para>
+        /// <para>Queries the resources most recently used by a specified AccessKey pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3874,7 +3895,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个高级查询模板</para>
+        /// <para>Retrieves information about a single advanced template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3916,7 +3937,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个高级查询模板</para>
+        /// <para>Retrieves information about a single advanced template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3958,7 +3979,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个高级查询模板</para>
+        /// <para>Retrieves information about a single advanced template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3976,7 +3997,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个高级查询模板</para>
+        /// <para>Retrieves information about a single advanced template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3994,7 +4015,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件选择器</para>
+        /// <para>Queries the details about the data event selector for a specified trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4036,7 +4057,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件选择器</para>
+        /// <para>Queries the details about the data event selector for a specified trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4078,7 +4099,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件选择器</para>
+        /// <para>Queries the details about the data event selector for a specified trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4096,7 +4117,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件选择器</para>
+        /// <para>Queries the details about the data event selector for a specified trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4366,7 +4387,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>操作审计成熟度查询接口</para>
+        /// <para>Queries the governance metrics of ActionTrail.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -4396,7 +4417,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>操作审计成熟度查询接口</para>
+        /// <para>Queries the governance metrics of ActionTrail.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -4426,7 +4447,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>操作审计成熟度查询接口</para>
+        /// <para>Queries the governance metrics of ActionTrail.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4440,7 +4461,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>操作审计成熟度查询接口</para>
+        /// <para>Queries the governance metrics of ActionTrail.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4454,7 +4475,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取跟踪insights配置</para>
+        /// <para>Queries the Insights event types to deliver for a trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4496,7 +4517,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取跟踪insights配置</para>
+        /// <para>Queries the Insights event types to deliver for a trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4538,7 +4559,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取跟踪insights配置</para>
+        /// <para>Queries the Insights event types to deliver for a trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4556,7 +4577,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取跟踪insights配置</para>
+        /// <para>Queries the Insights event types to deliver for a trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4574,7 +4595,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取查询账号开启insight的类型</para>
+        /// <para>Queries all enabled types of Insights events.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -4604,7 +4625,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取查询账号开启insight的类型</para>
+        /// <para>Queries all enabled types of Insights events.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -4634,7 +4655,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取查询账号开启insight的类型</para>
+        /// <para>Queries all enabled types of Insights events.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4648,7 +4669,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取查询账号开启insight的类型</para>
+        /// <para>Queries all enabled types of Insights events.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4662,7 +4683,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到当前账号的insights事件数量</para>
+        /// <para>Queries the number of Insights events for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4712,7 +4733,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到当前账号的insights事件数量</para>
+        /// <para>Queries the number of Insights events for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4762,7 +4783,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到当前账号的insights事件数量</para>
+        /// <para>Queries the number of Insights events for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4780,7 +4801,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>得到当前账号的insights事件数量</para>
+        /// <para>Queries the number of Insights events for the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4946,7 +4967,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询事件选择器</para>
+        /// <para>Queries all data event selectors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4992,7 +5013,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询事件选择器</para>
+        /// <para>Queries all data event selectors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5038,7 +5059,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询事件选择器</para>
+        /// <para>Queries all data event selectors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5056,7 +5077,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询事件选择器</para>
+        /// <para>Queries all data event selectors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5074,7 +5095,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据事件支持的服务与事件名称</para>
+        /// <para>Queries the services that support data events and the names of these events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5120,7 +5141,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据事件支持的服务与事件名称</para>
+        /// <para>Queries the services that support data events and the names of these events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5166,7 +5187,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据事件支持的服务与事件名称</para>
+        /// <para>Queries the services that support data events and the names of these events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5184,7 +5205,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据事件支持的服务与事件名称</para>
+        /// <para>Queries the services that support data events and the names of these events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5207,7 +5228,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query a list of data backfill tasks. The returned result shows that a data backfill task with the ID <c>16602</c> is used to deliver historical events for a trail named <c>trail-name</c> to Simple Log Service.</para>
+        /// <para>This topic provides an example of how to query a list of data backfill tasks. The response shows a task with the ID <c>16602</c> that delivers historical events from the trail <c>trail-name</c> to Simple Log Service (SLS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5258,7 +5279,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query a list of data backfill tasks. The returned result shows that a data backfill task with the ID <c>16602</c> is used to deliver historical events for a trail named <c>trail-name</c> to Simple Log Service.</para>
+        /// <para>This topic provides an example of how to query a list of data backfill tasks. The response shows a task with the ID <c>16602</c> that delivers historical events from the trail <c>trail-name</c> to Simple Log Service (SLS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5309,7 +5330,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query a list of data backfill tasks. The returned result shows that a data backfill task with the ID <c>16602</c> is used to deliver historical events for a trail named <c>trail-name</c> to Simple Log Service.</para>
+        /// <para>This topic provides an example of how to query a list of data backfill tasks. The response shows a task with the ID <c>16602</c> that delivers historical events from the trail <c>trail-name</c> to Simple Log Service (SLS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5332,7 +5353,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query a list of data backfill tasks. The returned result shows that a data backfill task with the ID <c>16602</c> is used to deliver historical events for a trail named <c>trail-name</c> to Simple Log Service.</para>
+        /// <para>This topic provides an example of how to query a list of data backfill tasks. The response shows a task with the ID <c>16602</c> that delivers historical events from the trail <c>trail-name</c> to Simple Log Service (SLS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5350,14 +5371,13 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries event details.</para>
+        /// <para>Queries detailed historical events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to query event details, you can query the event details at most twice per second.</para>
         /// <remarks>
-        /// <para>Do not frequently call this operation. You can create a trail to deliver events to Log Service. Then, you can query event details in near real time by using the real-time log consumption feature of Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/28810.html">Create a single-account trail</a>, <a href="https://help.aliyun.com/document_detail/160661.html">Create a multi-account trail</a>, and <a href="https://help.aliyun.com/document_detail/28997.html">Overview</a>.</para>
+        /// <para>Do not call this operation frequently. To query events in near-real time, you can create a trail to deliver events to Simple Log Service (SLS) and use its real-time consumption feature. For more information, see <a href="https://help.aliyun.com/document_detail/28810.html">Create a single-account trail</a>, <a href="https://help.aliyun.com/document_detail/160661.html">Create a multi-account trail</a>, and <a href="https://help.aliyun.com/document_detail/28997.html">Real-time consumption</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5420,14 +5440,13 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries event details.</para>
+        /// <para>Queries detailed historical events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to query event details, you can query the event details at most twice per second.</para>
         /// <remarks>
-        /// <para>Do not frequently call this operation. You can create a trail to deliver events to Log Service. Then, you can query event details in near real time by using the real-time log consumption feature of Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/28810.html">Create a single-account trail</a>, <a href="https://help.aliyun.com/document_detail/160661.html">Create a multi-account trail</a>, and <a href="https://help.aliyun.com/document_detail/28997.html">Overview</a>.</para>
+        /// <para>Do not call this operation frequently. To query events in near-real time, you can create a trail to deliver events to Simple Log Service (SLS) and use its real-time consumption feature. For more information, see <a href="https://help.aliyun.com/document_detail/28810.html">Create a single-account trail</a>, <a href="https://help.aliyun.com/document_detail/160661.html">Create a multi-account trail</a>, and <a href="https://help.aliyun.com/document_detail/28997.html">Real-time consumption</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5490,14 +5509,13 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries event details.</para>
+        /// <para>Queries detailed historical events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to query event details, you can query the event details at most twice per second.</para>
         /// <remarks>
-        /// <para>Do not frequently call this operation. You can create a trail to deliver events to Log Service. Then, you can query event details in near real time by using the real-time log consumption feature of Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/28810.html">Create a single-account trail</a>, <a href="https://help.aliyun.com/document_detail/160661.html">Create a multi-account trail</a>, and <a href="https://help.aliyun.com/document_detail/28997.html">Overview</a>.</para>
+        /// <para>Do not call this operation frequently. To query events in near-real time, you can create a trail to deliver events to Simple Log Service (SLS) and use its real-time consumption feature. For more information, see <a href="https://help.aliyun.com/document_detail/28810.html">Create a single-account trail</a>, <a href="https://help.aliyun.com/document_detail/160661.html">Create a multi-account trail</a>, and <a href="https://help.aliyun.com/document_detail/28997.html">Real-time consumption</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5516,14 +5534,13 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries event details.</para>
+        /// <para>Queries detailed historical events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to query event details, you can query the event details at most twice per second.</para>
         /// <remarks>
-        /// <para>Do not frequently call this operation. You can create a trail to deliver events to Log Service. Then, you can query event details in near real time by using the real-time log consumption feature of Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/28810.html">Create a single-account trail</a>, <a href="https://help.aliyun.com/document_detail/160661.html">Create a multi-account trail</a>, and <a href="https://help.aliyun.com/document_detail/28997.html">Overview</a>.</para>
+        /// <para>Do not call this operation frequently. To query events in near-real time, you can create a trail to deliver events to Simple Log Service (SLS) and use its real-time consumption feature. For more information, see <a href="https://help.aliyun.com/document_detail/28810.html">Create a single-account trail</a>, <a href="https://help.aliyun.com/document_detail/160661.html">Create a multi-account trail</a>, and <a href="https://help.aliyun.com/document_detail/28997.html">Real-time consumption</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5542,7 +5559,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Insight事件</para>
+        /// <para>Queries Insights events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5600,7 +5617,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Insight事件</para>
+        /// <para>Queries Insights events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5658,7 +5675,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Insight事件</para>
+        /// <para>Queries Insights events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5676,7 +5693,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Insight事件</para>
+        /// <para>Queries Insights events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5694,7 +5711,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建事件选择器</para>
+        /// <para>Creates or configures a data event selector. A trail must exist before you create a data event selector. If a trail does not exist, you can call the CreateTrail operation to create one.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5748,7 +5765,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建事件选择器</para>
+        /// <para>Creates or configures a data event selector. A trail must exist before you create a data event selector. If a trail does not exist, you can call the CreateTrail operation to create one.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5802,7 +5819,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建事件选择器</para>
+        /// <para>Creates or configures a data event selector. A trail must exist before you create a data event selector. If a trail does not exist, you can call the CreateTrail operation to create one.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5820,7 +5837,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建事件选择器</para>
+        /// <para>Creates or configures a data event selector. A trail must exist before you create a data event selector. If a trail does not exist, you can call the CreateTrail operation to create one.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5838,7 +5855,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改跟踪insights功能</para>
+        /// <para>Specifies the types of Insights events to deliver for a trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5884,7 +5901,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改跟踪insights功能</para>
+        /// <para>Specifies the types of Insights events to deliver for a trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5930,7 +5947,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改跟踪insights功能</para>
+        /// <para>Specifies the types of Insights events to deliver for a trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5948,7 +5965,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改跟踪insights功能</para>
+        /// <para>Specifies the types of Insights events to deliver for a trail.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5966,12 +5983,12 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a trail to deliver events to an Object Storage Service (OSS) bucket or a Simple Log Service Logstore.</para>
+        /// <para>Enables a trail to start delivering ActionTrail events to Object Storage Service (OSS), Simple Log Service (SLS), or MaxCompute.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to enable logging for a sample trail named <c>trail-test</c>.</para>
+        /// <para>This topic provides an example on how to enable a trail named <c>trail-test</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6013,12 +6030,12 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a trail to deliver events to an Object Storage Service (OSS) bucket or a Simple Log Service Logstore.</para>
+        /// <para>Enables a trail to start delivering ActionTrail events to Object Storage Service (OSS), Simple Log Service (SLS), or MaxCompute.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to enable logging for a sample trail named <c>trail-test</c>.</para>
+        /// <para>This topic provides an example on how to enable a trail named <c>trail-test</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6060,12 +6077,12 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a trail to deliver events to an Object Storage Service (OSS) bucket or a Simple Log Service Logstore.</para>
+        /// <para>Enables a trail to start delivering ActionTrail events to Object Storage Service (OSS), Simple Log Service (SLS), or MaxCompute.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to enable logging for a sample trail named <c>trail-test</c>.</para>
+        /// <para>This topic provides an example on how to enable a trail named <c>trail-test</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6083,12 +6100,12 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a trail to deliver events to an Object Storage Service (OSS) bucket or a Simple Log Service Logstore.</para>
+        /// <para>Enables a trail to start delivering ActionTrail events to Object Storage Service (OSS), Simple Log Service (SLS), or MaxCompute.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to enable logging for a sample trail named <c>trail-test</c>.</para>
+        /// <para>This topic provides an example on how to enable a trail named <c>trail-test</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6106,12 +6123,12 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a trail to stop the delivery of events to an Object Storage Service (OSS) bucket or a  Simple Log Service Logstore.</para>
+        /// <para>Disables a trail to stop delivering ActionTrail events to Object Storage Service (OSS), Simple Log Service (SLS), or MaxCompute.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to disable logging for a sample trail named <c>trail-test</c>.</para>
+        /// <para>This topic provides an example on how to disable a trail named <c>trail-test</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6149,12 +6166,12 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a trail to stop the delivery of events to an Object Storage Service (OSS) bucket or a  Simple Log Service Logstore.</para>
+        /// <para>Disables a trail to stop delivering ActionTrail events to Object Storage Service (OSS), Simple Log Service (SLS), or MaxCompute.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to disable logging for a sample trail named <c>trail-test</c>.</para>
+        /// <para>This topic provides an example on how to disable a trail named <c>trail-test</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6192,12 +6209,12 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a trail to stop the delivery of events to an Object Storage Service (OSS) bucket or a  Simple Log Service Logstore.</para>
+        /// <para>Disables a trail to stop delivering ActionTrail events to Object Storage Service (OSS), Simple Log Service (SLS), or MaxCompute.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to disable logging for a sample trail named <c>trail-test</c>.</para>
+        /// <para>This topic provides an example on how to disable a trail named <c>trail-test</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6215,12 +6232,12 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a trail to stop the delivery of events to an Object Storage Service (OSS) bucket or a  Simple Log Service Logstore.</para>
+        /// <para>Disables a trail to stop delivering ActionTrail events to Object Storage Service (OSS), Simple Log Service (SLS), or MaxCompute.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to disable logging for a sample trail named <c>trail-test</c>.</para>
+        /// <para>This topic provides an example on how to disable a trail named <c>trail-test</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6238,7 +6255,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新高级查询模板</para>
+        /// <para>Updates an advanced query template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6292,7 +6309,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新高级查询模板</para>
+        /// <para>Updates an advanced query template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6346,7 +6363,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新高级查询模板</para>
+        /// <para>Updates an advanced query template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6364,7 +6381,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新高级查询模板</para>
+        /// <para>Updates an advanced query template.</para>
         /// </summary>
         /// 
         /// <param name="request">

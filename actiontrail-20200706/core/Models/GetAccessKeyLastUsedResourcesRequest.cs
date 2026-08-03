@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LTAI****************</para>
+        /// <para>LTAI4Fz1ykT4qxgNMvN6****</para>
         /// </summary>
         [NameInMap("AccessKey")]
         [Validation(Required=false)]
@@ -36,8 +36,10 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// <summary>
         /// <para>The number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 0 to 100.</description></item>
-        /// <item><description>Default value: 20.</description></item>
+        /// <item><description><para>Valid values: 0 to 100.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 20.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

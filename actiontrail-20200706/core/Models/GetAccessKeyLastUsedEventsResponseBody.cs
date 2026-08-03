@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public List<GetAccessKeyLastUsedEventsResponseBodyEvents> Events { get; set; }
         public class GetAccessKeyLastUsedEventsResponseBodyEvents : TeaModel {
             /// <summary>
-            /// <para>An array that consists of the details about the event.</para>
+            /// <para>The event details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>The name of the event.</para>
+            /// <para>The event name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DescribeInstances</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The event source.</para>
+            /// <para>The source of the last usage record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ManagementEvent</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the event was generated.</para>
+            /// <para>The timestamp when the event was generated. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1657247532000</para>
@@ -79,7 +79,9 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query.</para>
+        /// <para>The token that is used to retrieve the next page of results. If the value of this parameter is not empty, the next page exists. You must set the value to the NextToken value returned from the last call.</para>
+        /// <para>colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</para>
+        /// <para>eyJhY2NvdW50IjoiMTQyNDM3OTU4NjM4NzE2MSIsImV2ZW50SWQiOiI3MkJDRTExRi02OTU3LTQ0NUItQjY0MC1CNEUyMkM4NUEwQzgiLCJsb2dJZCI6IjgyLTE0MjQzNzk1ODYzODcxNjEiLCJ0aW1lIjoxNjAyMzExNTQwMD\<em>\</em>\<em>\</em></para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJhY2NvdW50IjoiMTQyNDM3OTU4NjM4NzE2MSIsImV2ZW50SWQiOiI3MkJDRTExRi02OTU3LTQ0NUItQjY0MC1CNEUyMkM4NUEwQzgiLCJsb2dJZCI6IjgyLTE0MjQzNzk1ODYzODcxNjEiLCJ0aW1lIjoxNjAyMzExNTQwMD****</para>
@@ -89,7 +91,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

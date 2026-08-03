@@ -52,10 +52,14 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: The task is initializing.</description></item>
-        /// <item><description>1: The task is delivering historical events.</description></item>
-        /// <item><description>2: The task is complete.</description></item>
-        /// <item><description>3: The task fails.</description></item>
+        /// <item><description><para>0: The task is initializing.</para>
+        /// </description></item>
+        /// <item><description><para>1: The task is delivering historical events.</para>
+        /// </description></item>
+        /// <item><description><para>2: The task is complete.</para>
+        /// </description></item>
+        /// <item><description><para>3: The task fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,10 +109,14 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             /// <summary>
             /// <para>The task status in each region. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The task is initializing.</description></item>
-            /// <item><description>1: The task is delivering historical events.</description></item>
-            /// <item><description>2: The task is complete.</description></item>
-            /// <item><description>3: The task fails.</description></item>
+            /// <item><description><para>0: The task is initializing.</para>
+            /// </description></item>
+            /// <item><description><para>1: The task is delivering historical events.</para>
+            /// </description></item>
+            /// <item><description><para>2: The task is complete.</para>
+            /// </description></item>
+            /// <item><description><para>3: The task fails.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

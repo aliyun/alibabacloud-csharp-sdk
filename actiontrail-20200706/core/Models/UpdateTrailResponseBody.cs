@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// <para>The ARN of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::***:role/aliyunserviceroleforactiontrail</para>
+        /// <para>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</para>
         /// </summary>
         [NameInMap("OssWriteRoleArn")]
         [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// <para>The ARN of the RAM role that is assumed by ActionTrail is to deliver events to the Log Service project.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::***:role/aliyunserviceroleforactiontrail</para>
+        /// <para>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</para>
         /// </summary>
         [NameInMap("SlsWriteRoleArn")]
         [Validation(Required=false)]

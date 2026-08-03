@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class GetDataEventSelectorRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the trail.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

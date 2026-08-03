@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class DeleteAdvancedQueryTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>utpl-QNL3dpYkQcyjZxrIQCciqQ</para>
         /// </summary>

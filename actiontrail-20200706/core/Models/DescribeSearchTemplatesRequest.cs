@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class DescribeSearchTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries to return. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The scenario ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

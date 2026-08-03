@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class DeleteAdvancedQueryHistoryRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the advanced query record.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

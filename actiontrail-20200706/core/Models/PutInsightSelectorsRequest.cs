@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class PutInsightSelectorsRequest : TeaModel {
         /// <summary>
+        /// <para>The types of Insights events that the trail should deliver.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;insightType&quot;:&quot;AkInsight&quot;},{&quot;insightType&quot;:&quot;IpInsight&quot;}]</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string InsightSelectors { get; set; }
 
         /// <summary>
+        /// <para>The name of the trail.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

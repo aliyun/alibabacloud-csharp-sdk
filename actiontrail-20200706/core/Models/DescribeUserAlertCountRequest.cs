@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class DescribeUserAlertCountRequest : TeaModel {
         /// <summary>
+        /// <para>The end time. Format: yyyy-MM-dd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-06-10</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>The start time. Format: yyyy-MM-dd.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-05-12</para>
         /// </summary>

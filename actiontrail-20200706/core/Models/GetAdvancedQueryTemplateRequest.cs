@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class GetAdvancedQueryTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>utpl-N9fpjnFBSWauSXhVNP3erw</para>
+        /// <para>utpl-N9fpjnFBSWauSXhVNP****</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

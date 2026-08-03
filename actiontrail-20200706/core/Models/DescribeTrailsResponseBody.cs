@@ -39,9 +39,12 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             /// <summary>
             /// <para>The read/write type of the events that are delivered. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Write: write events. This is the default value.</description></item>
-            /// <item><description>Read: read events.</description></item>
-            /// <item><description>All: read and write events.</description></item>
+            /// <item><description><para>Write: write events. This is the default value.</para>
+            /// </description></item>
+            /// <item><description><para>Read: read events.</para>
+            /// </description></item>
+            /// <item><description><para>All: read and write events.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,8 +67,10 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             /// <summary>
             /// <para>Indicates whether the trail is a multi-account trail. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>false (default)</description></item>
-            /// <item><description>true</description></item>
+            /// <item><description><para>false (default)</para>
+            /// </description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,7 +113,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             /// <summary>
             /// <para>The ID of the resource directory.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the trail is a multi-account trail.</para>
+            /// <para>This parameter is returned only when the trail is a multi-account trail.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -152,7 +157,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>acs:ram::***:role/aliyunserviceroleforactiontrail</para>
+            /// <para>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</para>
             /// </summary>
             [NameInMap("OssWriteRoleArn")]
             [Validation(Required=false)]
@@ -201,9 +206,12 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             /// <summary>
             /// <para>The status of the trail. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Disable: disabled.</description></item>
-            /// <item><description>Enable: enabled.</description></item>
-            /// <item><description>Fresh: The trail is created but is not enabled.</description></item>
+            /// <item><description><para>Disable: disabled.</para>
+            /// </description></item>
+            /// <item><description><para>Enable: enabled.</para>
+            /// </description></item>
+            /// <item><description><para>Fresh: The trail is created but is not enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

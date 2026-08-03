@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0474CD9D-DF37-55D4-8383-D978CFBE13A4</para>
+        /// <para>0474CD9D-DF37-55D4-8383-D265CFBE13A5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>ap-southeast-1</para>
         /// </summary>
         [NameInMap("StorageRegion")]
         [Validation(Required=false)]

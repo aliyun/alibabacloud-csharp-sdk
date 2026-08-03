@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the region names. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US (default): English</description></item>
+        /// <item><description><para>zh-CN: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en-US (default): English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

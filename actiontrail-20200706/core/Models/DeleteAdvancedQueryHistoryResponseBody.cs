@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class DeleteAdvancedQueryHistoryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>04857D99-8B0C-53EB-85F1-E64198E7****</para>
         /// </summary>

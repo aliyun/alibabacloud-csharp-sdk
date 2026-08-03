@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACA7C814-12BC-4D81-A0D2-72071C9D6D2C</para>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class GetGovernanceMetricsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The response parameters.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetGovernanceMetricsResponseBodyData Data { get; set; }
         public class GetGovernanceMetricsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>195622768501****</para>
             /// </summary>
@@ -21,11 +26,17 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
+            /// <summary>
+            /// <para>A collection of governance items that contain multiple compliance assessment dimensions.</para>
+            /// </summary>
             [NameInMap("GovernanceMetrics")]
             [Validation(Required=false)]
             public List<GetGovernanceMetricsResponseBodyDataGovernanceMetrics> GovernanceMetrics { get; set; }
             public class GetGovernanceMetricsResponseBodyDataGovernanceMetrics : TeaModel {
                 /// <summary>
+                /// <para>The details of the resource.</para>
+                /// <para>This parameter contains the detailed configurations of all compliant resources for the governance item. This parameter is returned only if a resource instance exists.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{
                 ///     &quot;trailName&quot;: &quot;trail-test&quot;,
@@ -45,6 +56,8 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
                 public string ColumnsSchema { get; set; }
 
                 /// <summary>
+                /// <para>The governance item. This indicates a specific category of compliance check.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>actiontrail_storage_audit_log</para>
                 /// </summary>
@@ -53,6 +66,9 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
                 public string GovernanceItem { get; set; }
 
                 /// <summary>
+                /// <para>The compliance score for the governance item.</para>
+                /// <para>Valid values: 0 to 100.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -65,6 +81,8 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>145318BE-DEE1-4C57-AA7C-5BE7D34A****</para>
         /// </summary>

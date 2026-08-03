@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class DescribeResourceLifeCycleEventsRequest : TeaModel {
         /// <summary>
+        /// <para>The resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ACS::ECS::Instance</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The name of the Alibaba Cloud service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
         /// </summary>

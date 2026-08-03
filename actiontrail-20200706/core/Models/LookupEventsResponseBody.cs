@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class LookupEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The end of the time range when event details were queried.</para>
+        /// <para>The end of the time range of the retrieved events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-07-22T14:00:00Z</para>
@@ -20,17 +20,16 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The returned event details.</para>
-        /// <para>For more information about the fields in an event log, see <a href="https://help.aliyun.com/document_detail/28819.html">ActionTrail event log reference</a>.</para>
+        /// <para>The list of retrieved events.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Events { get; set; }
 
         /// <summary>
-        /// <para>The token used to return the next page of query results.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// <remarks>
-        /// <para>This parameter is not returned if no more results are to be returned.</para>
+        /// <para>If NextToken is empty, no next page exists.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,17 +40,17 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FD79665A-CE8B-49D4-82E6-5EE2E0E791DD</para>
+        /// <para>FD79665A-CE8B-49D4-82E6-5EE2E0E7****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range when event details were queried.</para>
+        /// <para>The start of the time range of the retrieved events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-07-15T14:00:00Z</para>

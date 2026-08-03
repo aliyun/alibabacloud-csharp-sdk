@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             /// <para>The Chinese name of the Alibaba Cloud service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Elastic Compute Service (ECS)</para>
+            /// <para>云服务器ECS</para>
             /// </summary>
             [NameInMap("ServiceNameCn")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             public string ServiceNameEn { get; set; }
 
             /// <summary>
-            /// <para>The event source.</para>
+            /// <para>The source of the last usage record.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>Internal</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             /// <para>:</para>
             /// <!-- -->
             /// 
-            /// <para>other events</para>
+            /// <para>Other event</para>
             /// <!-- -->
             /// </description></item>
             /// <item><description><para>ManagementEvent</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             /// <para>:</para>
             /// <!-- -->
             /// 
-            /// <para>management events</para>
+            /// <para>Management event</para>
             /// <!-- -->
             /// </description></item>
             /// <item><description><para>DataEvent</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             /// <para>:</para>
             /// <!-- -->
             /// 
-            /// <para>data events</para>
+            /// <para>Data event</para>
             /// <!-- --></description></item>
             /// </list>
             /// 
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Unit: millisecond.</para>
+            /// <para>The timestamp when the Alibaba Cloud service was used. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1657247532000</para>

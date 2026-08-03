@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class LookupEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The order in which details of events are to be retrieved. Valid values:</para>
+        /// <para>The order in which events are retrieved. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>FORWARD: ascending order.</description></item>
-        /// <item><description>BACKWARD: descending order. This is the default value.</description></item>
+        /// <item><description><para>FORWARD: Chronological order.</para>
+        /// </description></item>
+        /// <item><description><para>BACKWARD (default): Reverse chronological order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,10 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The default time is the current time. Specify the time in the ISO 8601 standard in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>You must specify both <c>StartTime</c> and <c>EndTime</c>, or leave both unspecified. If you leave them unspecified, the default value of <c>EndTime</c> is the current time.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2020-10-15T11:00:00Z</para>
@@ -34,27 +39,17 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Query conditions.</para>
+        /// <para>The filter conditions.</para>
+        /// <remarks>
+        /// <para>You can specify one or two filter conditions at a time. For more information, see <a href="https://help.aliyun.com/document_detail/2920829.html">Limitations</a>.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("LookupAttribute")]
         [Validation(Required=false)]
         public List<LookupEventsRequestLookupAttribute> LookupAttribute { get; set; }
         public class LookupEventsRequestLookupAttribute : TeaModel {
             /// <summary>
-            /// <para>The key of the query condition. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ServiceName: the name of a specific Alibaba Cloud service.</description></item>
-            /// <item><description>EventName: the name of a specific event.</description></item>
-            /// <item><description>User: the name of the RAM user who calls a specific operation.</description></item>
-            /// <item><description>EventId: the ID of a specific event.</description></item>
-            /// <item><description>ResourceType: the type of resources.</description></item>
-            /// <item><description>ResourceName: the name of a specific resource.</description></item>
-            /// <item><description>EventRW: the read/write type of events.</description></item>
-            /// <item><description>EventAccessKeyId: the AccessKey ID used in events.</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para>You can use only one query condition for each query.</para>
-            /// </remarks>
+            /// <para>The attribute key. For information about valid values, see <a href="https://help.aliyun.com/document_detail/2920829.html">How do I configure the LookupAttribute parameter when calling LookupInsightEvents?</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>ServiceName</para>
@@ -64,17 +59,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the query condition. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>When the LookupAttribute.N.Key parameter is set to ServiceName, you can set this parameter to a value such as <c>Ecs</c>.</description></item>
-            /// <item><description>When the LookupAttribute.N.Key parameter is set to EventName, you can set this parameter to a value such as <c>ConsoleSignin</c>.</description></item>
-            /// <item><description>When the LookupAttribute.N.Key parameter is set to User, you can set this parameter to a value such as <c>Alice</c>.</description></item>
-            /// <item><description>When the LookupAttribute.N.Key parameter is set to EventId, you can set this parameter to a value such as <c>B702AFA3-FD4B-40E3-88E4-C0752FAA****</c>.</description></item>
-            /// <item><description>When the LookupAttribute.N.Key parameter is set to ResourceType, you can set this parameter to a value such as <c>ACS::ECS::Instance</c>.</description></item>
-            /// <item><description>When the LookupAttribute.N.Key parameter is set to ResourceName, you can set this parameter to a value such as <c>i-bp14664y88udkt45****</c>.</description></item>
-            /// <item><description>When the LookupAttribute.N.Key parameter is set to EventRW, you can set this parameter to <c>Read</c> or <c>Write</c>.</description></item>
-            /// <item><description>When the LookupAttribute.N.Key parameter is set to EventAccessKeyId, you can set this parameter to a value such as <c>LTAI****************</c>.</description></item>
-            /// </list>
+            /// <para>The attribute value. For information about valid values, see <a href="https://help.aliyun.com/document_detail/2920829.html">How do I configure the LookupAttribute parameter when calling LookupInsightEvents?</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>Ecs</para>
@@ -86,8 +71,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to be returned.</para>
-        /// <para>Valid values: 0 to 50.</para>
+        /// <para>The maximum number of results to return.<br>Valid values: 1 to 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -97,9 +81,9 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to request the next page of query results.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
         /// <remarks>
-        /// <para>The request parameters must be the same as those of the last request.</para>
+        /// <para>You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -110,7 +94,10 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The default time is seven days prior to the current time. Specify the time in the ISO 8601 standard in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>You must specify both <c>StartTime</c> and <c>EndTime</c>, or leave both unspecified. If you leave them unspecified, the default value of <c>StartTime</c> is 7 days before the current time.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2020-10-08T11:00:00Z</para>

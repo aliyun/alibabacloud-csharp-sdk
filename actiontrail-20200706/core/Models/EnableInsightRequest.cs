@@ -12,9 +12,20 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// <summary>
         /// <para>The type of the Insights event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IpInsight: Insights event on IP address</description></item>
-        /// <item><description>ApiCallRateInsight: Insights event on API call rate</description></item>
-        /// <item><description>ApiErrorRateInsight: Insights event on API error rate</description></item>
+        /// <item><description><para>IpInsight: IP address request events.</para>
+        /// </description></item>
+        /// <item><description><para>ApiCallRateInsight: Unusual API call events.</para>
+        /// </description></item>
+        /// <item><description><para>ApiErrorRateInsight: API error events.</para>
+        /// </description></item>
+        /// <item><description><para>AkInsight: Unusual AccessKey pair call events.</para>
+        /// </description></item>
+        /// <item><description><para>PolicyChangeInsight: Permission change events.</para>
+        /// </description></item>
+        /// <item><description><para>PasswordChangeInsight: Password change events.</para>
+        /// </description></item>
+        /// <item><description><para>TrailConcealmentInsight: Trail concealment events.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

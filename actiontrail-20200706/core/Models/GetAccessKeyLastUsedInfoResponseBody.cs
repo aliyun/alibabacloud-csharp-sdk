@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string AccessKeyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>104758519118****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string AccountType { get; set; }
 
         /// <summary>
-        /// <para>The details about the event.</para>
+        /// <para>The event details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// <para>The Chinese name of the Alibaba Cloud service that was last accessed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Elastic Compute Service (ECS)</para>
+        /// <para>云服务器ECS</para>
         /// </summary>
         [NameInMap("ServiceNameCn")]
         [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string ServiceNameEn { get; set; }
 
         /// <summary>
-        /// <para>The event source.</para>
+        /// <para>The source of the last usage record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ManagementEvent</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the AccessKey pair was last called.</para>
+        /// <para>The timestamp when the AccessKey pair was last used. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

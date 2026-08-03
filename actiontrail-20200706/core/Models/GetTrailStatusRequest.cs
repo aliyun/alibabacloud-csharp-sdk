@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// <summary>
         /// <para>Specifies whether to query the status of a multi-account trail. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Query the status of a multi-account trail.</description></item>
-        /// <item><description>false: Query the status of a single-account trail. It is the default value.</description></item>
+        /// <item><description><para>true: Query the status of a multi-account trail.</para>
+        /// </description></item>
+        /// <item><description><para>false: Query the status of a single-account trail. It is the default value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

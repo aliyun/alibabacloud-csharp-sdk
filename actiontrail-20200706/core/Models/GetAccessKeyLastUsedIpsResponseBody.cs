@@ -57,12 +57,15 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The event source.</para>
+            /// <para>The source of the last usage record.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Internal: other events.</description></item>
-            /// <item><description>ManagementEvent: management events.</description></item>
-            /// <item><description>DataEvent: data events.</description></item>
+            /// <item><description><para>Internal: Other event</para>
+            /// </description></item>
+            /// <item><description><para>ManagementEvent: Management event</para>
+            /// </description></item>
+            /// <item><description><para>DataEvent: Data event</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

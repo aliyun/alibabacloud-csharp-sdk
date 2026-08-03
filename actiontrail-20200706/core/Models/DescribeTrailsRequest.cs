@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// <summary>
         /// <para>Specifies whether to query the information about multi-account trails. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +28,10 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// <summary>
         /// <para>Specifies whether to return the information about shadow trails. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Do not return the information about shadow trails. It is the default value.</description></item>
-        /// <item><description>true: Return the information about shadow trails.</description></item>
+        /// <item><description><para>false: Do not return the information about shadow trails. It is the default value.</para>
+        /// </description></item>
+        /// <item><description><para>true: Return the information about shadow trails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

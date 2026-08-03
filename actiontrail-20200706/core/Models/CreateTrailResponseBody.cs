@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class CreateTrailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The read/write type of the events to be delivered.</para>
+        /// <para>The read/write type of events that the trail delivers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Write</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string HomeRegion { get; set; }
 
         /// <summary>
-        /// <para>ARN of the Big Data Compute Service project for tracking delivery.</para>
+        /// <para>The ARN of the MaxCompute project to which the trail delivers events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:odps:cn-hangzhou:151266687691****:project/actiontrail_****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string MaxComputeProjectArn { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the role that Operation Audit assumes when delivering operation events to the Big Data Compute Service project.</para>
+        /// <para>The ARN of the RAM role that ActionTrail assumes to deliver events to the MaxCompute project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the OSS bucket to which events are to be delivered.</para>
+        /// <para>The name of the destination OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>audit-log</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the log files to be stored in the destination OSS bucket.</para>
+        /// <para>The prefix for the names of log files in the OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>at-product-account-audit-B</para>
@@ -80,17 +80,17 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string OssKeyPrefix { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the service-linked role that is assumed by ActionTrail to deliver events to the destination OSS bucket.</para>
+        /// <para>The ARN of the RAM role that ActionTrail assumes to deliver events to the OSS bucket.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::***:role/aliyunserviceroleforactiontrail</para>
+        /// <para>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</para>
         /// </summary>
         [NameInMap("OssWriteRoleArn")]
         [Validation(Required=false)]
         public string OssWriteRoleArn { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>442DDADF-DA58-4029-8E8B-82C73E9A7A70</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the Log Service project to which events are to be delivered.</para>
+        /// <para>The ARN of the SLS project to which the trail delivers events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:log:cn-hangzhou:151266687691****:project/test-project</para>
@@ -110,17 +110,17 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string SlsProjectArn { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the service-linked role that is assumed by ActionTrail to deliver events to the destination Log Service project.</para>
+        /// <para>The ARN of the RAM role that ActionTrail assumes to deliver events to the SLS project.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::***:role/aliyunserviceroleforactiontrail</para>
+        /// <para>acs:ram::151266687691****:role/aliyunserviceroleforactiontrail</para>
         /// </summary>
         [NameInMap("SlsWriteRoleArn")]
         [Validation(Required=false)]
         public string SlsWriteRoleArn { get; set; }
 
         /// <summary>
-        /// <para>The one or more regions from which the trail delivers events.</para>
+        /// <para>The region in which the trail is created. A value of <c>All</c> indicates that the trail processes events from all regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>All</para>

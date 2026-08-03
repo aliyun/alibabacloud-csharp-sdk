@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         /// <summary>
         /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
         /// <remarks>
-        /// <para> You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>You must specify the token that is obtained from the previous query as the value of NextToken.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

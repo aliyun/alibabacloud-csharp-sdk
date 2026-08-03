@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class ListDeliveryHistoryJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of historical event delivery tasks.</para>
+        /// <para>The list of data backfill tasks.</para>
         /// </summary>
         [NameInMap("DeliveryHistoryJobs")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The home region of the trail.</para>
+            /// <para>The home region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -57,12 +57,16 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             public long? JobId { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
+            /// <para>The status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The task is initializing.</description></item>
-            /// <item><description>1: The task is delivering historical events.</description></item>
-            /// <item><description>2: The task is complete.</description></item>
-            /// <item><description>3: The task fails.</description></item>
+            /// <item><description><para>0: The task is being initialized.</para>
+            /// </description></item>
+            /// <item><description><para>1: The task is delivering events.</para>
+            /// </description></item>
+            /// <item><description><para>2: The task is complete.</para>
+            /// </description></item>
+            /// <item><description><para>3: The task failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +97,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
             public string TrailName { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was updated.</para>
+            /// <para>The time when the task was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-04-26T03:20:08Z</para>
@@ -115,7 +119,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -125,7 +129,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B190816C-6DCA-4DC5-9B8E-EE0367B57CFF</para>
@@ -135,7 +139,7 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of historical event delivery tasks returned.</para>
+        /// <para>The total number of tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

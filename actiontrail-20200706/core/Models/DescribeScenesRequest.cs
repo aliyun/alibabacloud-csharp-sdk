@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Actiontrail20200706.Models
 {
     public class DescribeScenesRequest : TeaModel {
         /// <summary>
+        /// <para>The search keyword. This operation performs a case-insensitive, fuzzy match.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ak</para>
         /// </summary>
