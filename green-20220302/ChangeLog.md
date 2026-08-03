@@ -1,3 +1,6 @@
+2026-08-03 Version: 3.5.3
+- Generated csharp 2022-03-02 for Green.
+
 2026-08-03 Version: 3.5.2
 - Update API VideoModerationResult: add response parameters Body.Data.FrameResult.Frames.$.Results.$.AigcData.
 

@@ -3905,12 +3905,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the task result of an enhanced video content moderation node.</para>
+        /// <para>Retrieves the task result of a video moderation node from the enhanced video moderation service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After that, results are automatically deleted.</para>
+        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3956,12 +3956,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the task result of an enhanced video content moderation node.</para>
+        /// <para>Retrieves the task result of a video moderation node from the enhanced video moderation service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After that, results are automatically deleted.</para>
+        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4007,12 +4007,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the task result of an enhanced video content moderation node.</para>
+        /// <para>Retrieves the task result of a video moderation node from the enhanced video moderation service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After that, results are automatically deleted.</para>
+        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4030,12 +4030,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the task result of an enhanced video content moderation node.</para>
+        /// <para>Retrieves the task result of a video moderation node from the enhanced video moderation service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After that, results are automatically deleted.</para>
+        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">

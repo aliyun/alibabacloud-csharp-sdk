@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class VideoModerationResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code. A value of 200 indicates success.</para>
+        /// <para>The response code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public VideoModerationResultResponseBodyData Data { get; set; }
         public class VideoModerationResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The segmented results of video audio moderation.</para>
+            /// <para>The segmented moderation results for video audio.</para>
             /// </summary>
             [NameInMap("AudioResult")]
             [Validation(Required=false)]
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public List<VideoModerationResultResponseBodyDataAudioResultAudioSummarys> AudioSummarys { get; set; }
                 public class VideoModerationResultResponseBodyDataAudioResultAudioSummarys : TeaModel {
                     /// <summary>
-                    /// <para>The label descriptions.</para>
+                    /// <para>The label description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>疑似违禁内容</para>
+                    /// <para>Suspected prohibited content</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// <para>The number of times the label was detected.</para>
+                    /// <para>The number of times the label appears.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
@@ -74,16 +74,6 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                 /// <summary>
                 /// <para>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>high: High risk.</para>
-                /// </description></item>
-                /// <item><description><para>medium: Medium risk.</para>
-                /// </description></item>
-                /// <item><description><para>low: Low risk.</para>
-                /// </description></item>
-                /// <item><description><para>none: No risk detected.</para>
-                /// </description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>high</para>
@@ -100,10 +90,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public List<VideoModerationResultResponseBodyDataAudioResultSliceDetails> SliceDetails { get; set; }
                 public class VideoModerationResultResponseBodyDataAudioResultSliceDetails : TeaModel {
                     /// <summary>
-                    /// <para>The label descriptions.</para>
+                    /// <para>The label description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>疑似违禁内容</para>
+                    /// <para>Suspected prohibited content</para>
                     /// </summary>
                     [NameInMap("Descriptions")]
                     [Validation(Required=false)]
@@ -187,7 +177,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             /// <para>The name of the custom library.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>备用词库02</para>
+                            /// <para>Backup_Lexicon_02</para>
                             /// </summary>
                             [NameInMap("LibName")]
                             [Validation(Required=false)]
@@ -199,7 +189,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         /// <para>The description.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>疑似违禁内容</para>
+                        /// <para>Suspected prohibited content</para>
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
@@ -278,16 +268,6 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                     /// <summary>
                     /// <para>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><para>high: High risk.</para>
-                    /// </description></item>
-                    /// <item><description><para>medium: Medium risk.</para>
-                    /// </description></item>
-                    /// <item><description><para>low: Low risk.</para>
-                    /// </description></item>
-                    /// <item><description><para>none: No risk detected.</para>
-                    /// </description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>high</para>
@@ -317,7 +297,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string RiskWords { get; set; }
 
                     /// <summary>
-                    /// <para>The risk score. Default range: 0 to 99.</para>
+                    /// <para>The risk score. The default range is 0 to 99.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -337,7 +317,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public long? StartTime { get; set; }
 
                     /// <summary>
-                    /// <para>The start timestamp, in milliseconds.</para>
+                    /// <para>The start timestamp, accurate to milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1659935002123</para>
@@ -350,14 +330,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <para>The transcribed text of the audio segment.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>今天天气真不错</para>
+                    /// <para>The weather is really nice today</para>
                     /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
                     public string Text { get; set; }
 
                     /// <summary>
-                    /// <para>The temporary URL of the audio segment file.</para>
+                    /// <para>The temporary URL of the segmented audio file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://xxxx.abc.img">http://xxxx.abc.img</a></para>
@@ -412,7 +392,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string ContentProducer { get; set; }
 
                         /// <summary>
-                        /// <para>The name, code, or identifier of the propagation platform. For services that provide artificial intelligence-generated content, this value can be the same as ContentProducer.</para>
+                        /// <para>The name, ID, or code of the propagation platform. For services that provide artificial intelligence generated or synthesized content, this value can be the same as ContentProducer.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>001191******M000100Y43</para>
@@ -422,15 +402,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string ContentPropagator { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the content is generated by artificial intelligence (AI). Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description><para>1: The content is AI-generated content (AIGC).</para>
-                        /// </description></item>
-                        /// <item><description><para>2: (Propagation platforms only) The content may be AI-generated content generation.</para>
-                        /// </description></item>
-                        /// <item><description><para>3: (Propagation platforms only) The content is suspected to be AI-generated content generation.</para>
-                        /// </description></item>
-                        /// </list>
+                        /// <para>Indicates whether the content is generated by AI. Valid values:</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -440,7 +412,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string Label { get; set; }
 
                         /// <summary>
-                        /// <para>The content production ID, a unique identifier used by the production platform to trace synthesized content.</para>
+                        /// <para>The content production ID, which is the unique identifier used by the production platform to trace synthesized content.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>123******456</para>
@@ -450,7 +422,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string ProduceID { get; set; }
 
                         /// <summary>
-                        /// <para>The content propagation ID, a unique identifier assigned by the propagation platform to the distributed AI-generated content.</para>
+                        /// <para>The content propagation ID, which is the unique identifier assigned by the propagation platform to the distributed generated or synthesized content.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>123******456</para>
@@ -460,8 +432,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string PropagateID { get; set; }
 
                         /// <summary>
-                        /// <para>A reserved field.</para>
-                        /// <para>This field can store information used by the content generation service provider for self-initiated security protection and content/identifier integrity assurance. A hashing mechanism based on ContentProducer and ProduceID can be used to securely store and verify critical information.</para>
+                        /// <para>The reserved field.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>d41d**********427e</para>
@@ -471,8 +442,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string ReservedCode1 { get; set; }
 
                         /// <summary>
-                        /// <para>A reserved field.</para>
-                        /// <para>This field can be used by the content propagation service provider for self-initiated security protection and content/identifier integrity assurance. A hashing mechanism based on ContentProducer and ProduceID can be used to securely store and verify critical information.</para>
+                        /// <para>The reserved field.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>d41d**********427e</para>
@@ -515,7 +485,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public int? FrameNum { get; set; }
 
                 /// <summary>
-                /// <para>The video frame label summary.</para>
+                /// <para>The summary of video frame capture labels.</para>
                 /// </summary>
                 [NameInMap("FrameSummarys")]
                 [Validation(Required=false)]
@@ -525,14 +495,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <para>The description of the Label field.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>未检测出风险</para>
+                    /// <para>No risk detected</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The video frame label.</para>
+                    /// <para>The video frame capture label.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>violent_armedForces</para>
@@ -542,7 +512,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// <para>The number of times the label was detected.</para>
+                    /// <para>The number of times the label appears.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
@@ -561,7 +531,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public List<VideoModerationResultResponseBodyDataFrameResultFrames> Frames { get; set; }
                 public class VideoModerationResultResponseBodyDataFrameResultFrames : TeaModel {
                     /// <summary>
-                    /// <para>The offset of the captured frame.</para>
+                    /// <para>The offset value of the captured frame.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>338</para>
@@ -588,14 +558,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         }
 
                         /// <summary>
-                        /// <para>The custom image library information returned when a custom image library is hit.</para>
+                        /// <para>The custom image library information returned when a custom image library is matched.</para>
                         /// </summary>
                         [NameInMap("CustomImage")]
                         [Validation(Required=false)]
                         public List<VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage> CustomImage { get; set; }
                         public class VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage : TeaModel {
                             /// <summary>
-                            /// <para>The ID of the hit custom image.</para>
+                            /// <para>The ID of the matched custom image.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>1234</para>
@@ -605,7 +575,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public string ImageId { get; set; }
 
                             /// <summary>
-                            /// <para>The ID of the hit custom image library.</para>
+                            /// <para>The ID of the matched custom image library.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>12345678</para>
@@ -617,7 +587,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         }
 
                         /// <summary>
-                        /// <para>The logo information returned when a logo is detected in the video.</para>
+                        /// <para>The logo information returned when the video contains logos.</para>
                         /// </summary>
                         [NameInMap("LogoData")]
                         [Validation(Required=false)]
@@ -673,7 +643,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             }
 
                             /// <summary>
-                            /// <para>The logo information.</para>
+                            /// <para>The logo identification information.</para>
                             /// </summary>
                             [NameInMap("Logo")]
                             [Validation(Required=false)]
@@ -690,7 +660,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                                 public long? Confidence { get; set; }
 
                                 /// <summary>
-                                /// <para>The hit label.</para>
+                                /// <para>The matched label.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>pt_logotoSocialNetwork</para>
@@ -703,7 +673,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                                 /// <para>The logo name.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>**卫视</para>
+                                /// <para>**TV</para>
                                 /// </summary>
                                 [NameInMap("name")]
                                 [Validation(Required=false)]
@@ -734,7 +704,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             /// <para>The name of the identified public figure.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>张三</para>
+                            /// <para>John Smith</para>
                             /// </summary>
                             [NameInMap("FigureName")]
                             [Validation(Required=false)]
@@ -812,7 +782,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             /// <para>The description of the Label field.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>未检测出风险</para>
+                            /// <para>No risk detected</para>
                             /// </summary>
                             [NameInMap("Description")]
                             [Validation(Required=false)]
@@ -841,7 +811,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string Service { get; set; }
 
                         /// <summary>
-                        /// <para>The text information detected in the hit image.</para>
+                        /// <para>The text information in the image that was hit.</para>
                         /// </summary>
                         [NameInMap("TextInImage")]
                         [Validation(Required=false)]
@@ -855,7 +825,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent VlContent { get; set; }
                         public class VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent : TeaModel {
                             /// <summary>
-                            /// <para>The output text from the large model.</para>
+                            /// <para>The output text generated by the large model.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>in the picture XXX</para>
@@ -870,16 +840,6 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                     /// <summary>
                     /// <para>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><para>high: High risk.</para>
-                    /// </description></item>
-                    /// <item><description><para>medium: Medium risk.</para>
-                    /// </description></item>
-                    /// <item><description><para>low: Low risk.</para>
-                    /// </description></item>
-                    /// <item><description><para>none: No risk detected.</para>
-                    /// </description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>high</para>
@@ -912,16 +872,6 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                 /// <summary>
                 /// <para>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>high: High risk.</para>
-                /// </description></item>
-                /// <item><description><para>medium: Medium risk.</para>
-                /// </description></item>
-                /// <item><description><para>low: Low risk.</para>
-                /// </description></item>
-                /// <item><description><para>none: No risk detected.</para>
-                /// </description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>high</para>
@@ -954,16 +904,6 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             /// <summary>
             /// <para>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>high: High risk.</para>
-            /// </description></item>
-            /// <item><description><para>medium: Medium risk.</para>
-            /// </description></item>
-            /// <item><description><para>low: Low risk.</para>
-            /// </description></item>
-            /// <item><description><para>none: No risk detected.</para>
-            /// </description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>high</para>
@@ -985,7 +925,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success finished</para>
