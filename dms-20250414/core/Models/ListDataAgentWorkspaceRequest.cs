@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token information.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no use</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The name of the field by which to sort.</para>
+        /// <para>The field name used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number to start from.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

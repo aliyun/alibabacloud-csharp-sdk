@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public List<ListDataAgentWorkspaceResponseBodyDataContent> Content { get; set; }
             public class ListDataAgentWorkspaceResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The creation time of the workspace. This value is a UNIX timestamp in seconds.</para>
+                /// <para>The creation time of the workspace, in UNIX timestamp format (milliseconds).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1765960516</para>
+                /// <para>1765960516000</para>
                 /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
@@ -53,15 +53,21 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether session sharing is enabled for the workspace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("IsSessionShareEnabled")]
                 [Validation(Required=false)]
                 public bool? IsSessionShareEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The most recent modification time of the workspace. This value is a UNIX timestamp in seconds.</para>
+                /// <para>The most recent modification time of the workspace, in UNIX timestamp format (milliseconds).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1765961516</para>
+                /// <para>1765961516000</para>
                 /// </summary>
                 [NameInMap("ModifyTime")]
                 [Validation(Required=false)]
@@ -87,6 +93,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public long? TotalMember { get; set; }
 
+                /// <summary>
+                /// <para>The workspace type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>personal</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -196,7 +208,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token information.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no use</para>

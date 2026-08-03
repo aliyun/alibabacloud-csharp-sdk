@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CustomAgentId { get; set; }
 
         /// <summary>
-        /// <para>The data source. We recommend that you configure this in the custom agent.</para>
+        /// <para>Deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Dataset { get; set; }
 
         /// <summary>
+        /// <para>The data source. We recommend that you configure this in the custom agent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;isInternal&quot;:&quot;N&quot;,&quot;TableIds&quot;:[&quot;51<em><b>70&quot;,&quot;51</b></em>71&quot;],&quot;DataSourceType&quot;:&quot;database&quot;,&quot;Database&quot;:&quot;internal_data_employees&quot;,&quot;DmsInstanceId&quot;:&quot;27<em><b>5&quot;,&quot;DmsDatabaseId&quot;:&quot;71</b></em>04&quot;,&quot;Tables&quot;:[&quot;employees&quot;,&quot;salaries&quot;],&quot;FileId&quot;:&quot;rm-
         /// ***&quot;,&quot;DbName&quot;:&quot;internal_data_employees&quot;,&quot;CatalogName&quot;:&quot;def&quot;,&quot;RegionId&quot;:&quot;cn-hangzhou&quot;,&quot;Engine&quot;:&quot;mysql&quot;}]</para>

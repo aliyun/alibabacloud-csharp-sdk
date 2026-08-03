@@ -730,6 +730,126 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>CheckDataAgentMemoryConfig - Queries the memory generation and usage configuration of a DataAgent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckDataAgentMemoryConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckDataAgentMemoryConfigResponse
+        /// </returns>
+        public CheckDataAgentMemoryConfigResponse CheckDataAgentMemoryConfigWithOptions(CheckDataAgentMemoryConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckDataAgentMemoryConfig",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckDataAgentMemoryConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CheckDataAgentMemoryConfig - Queries the memory generation and usage configuration of a DataAgent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckDataAgentMemoryConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckDataAgentMemoryConfigResponse
+        /// </returns>
+        public async Task<CheckDataAgentMemoryConfigResponse> CheckDataAgentMemoryConfigWithOptionsAsync(CheckDataAgentMemoryConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckDataAgentMemoryConfig",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckDataAgentMemoryConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CheckDataAgentMemoryConfig - Queries the memory generation and usage configuration of a DataAgent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckDataAgentMemoryConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckDataAgentMemoryConfigResponse
+        /// </returns>
+        public CheckDataAgentMemoryConfigResponse CheckDataAgentMemoryConfig(CheckDataAgentMemoryConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckDataAgentMemoryConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CheckDataAgentMemoryConfig - Queries the memory generation and usage configuration of a DataAgent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckDataAgentMemoryConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckDataAgentMemoryConfigResponse
+        /// </returns>
+        public async Task<CheckDataAgentMemoryConfigResponse> CheckDataAgentMemoryConfigAsync(CheckDataAgentMemoryConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckDataAgentMemoryConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Update an Airflow instance\&quot;s custom configuration</para>
         /// </summary>
         /// 
@@ -894,6 +1014,142 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigAirflowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ConfigDataAgentMemory</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConfigDataAgentMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigDataAgentMemoryResponse
+        /// </returns>
+        public ConfigDataAgentMemoryResponse ConfigDataAgentMemoryWithOptions(ConfigDataAgentMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallEnabled))
+            {
+                query["RecallEnabled"] = request.RecallEnabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfigDataAgentMemory",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfigDataAgentMemoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ConfigDataAgentMemory</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConfigDataAgentMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigDataAgentMemoryResponse
+        /// </returns>
+        public async Task<ConfigDataAgentMemoryResponse> ConfigDataAgentMemoryWithOptionsAsync(ConfigDataAgentMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallEnabled))
+            {
+                query["RecallEnabled"] = request.RecallEnabled;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfigDataAgentMemory",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfigDataAgentMemoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ConfigDataAgentMemory</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConfigDataAgentMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigDataAgentMemoryResponse
+        /// </returns>
+        public ConfigDataAgentMemoryResponse ConfigDataAgentMemory(ConfigDataAgentMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ConfigDataAgentMemoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ConfigDataAgentMemory</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ConfigDataAgentMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfigDataAgentMemoryResponse
+        /// </returns>
+        public async Task<ConfigDataAgentMemoryResponse> ConfigDataAgentMemoryAsync(ConfigDataAgentMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ConfigDataAgentMemoryWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3662,6 +3918,134 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDataAgentKnowledgeBaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the memory of a DataAgent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentMemoryResponse
+        /// </returns>
+        public DeleteDataAgentMemoryResponse DeleteDataAgentMemoryWithOptions(DeleteDataAgentMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataAgentMemory",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataAgentMemoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the memory of a DataAgent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentMemoryResponse
+        /// </returns>
+        public async Task<DeleteDataAgentMemoryResponse> DeleteDataAgentMemoryWithOptionsAsync(DeleteDataAgentMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataAgentMemory",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataAgentMemoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the memory of a DataAgent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentMemoryResponse
+        /// </returns>
+        public DeleteDataAgentMemoryResponse DeleteDataAgentMemory(DeleteDataAgentMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDataAgentMemoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the memory of a DataAgent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentMemoryResponse
+        /// </returns>
+        public async Task<DeleteDataAgentMemoryResponse> DeleteDataAgentMemoryAsync(DeleteDataAgentMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDataAgentMemoryWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9454,6 +9838,190 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the DataAgent memory list (up to 50 memories per RAM user).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentMemoryResponse
+        /// </returns>
+        public ListDataAgentMemoryResponse ListDataAgentMemoryWithOptions(ListDataAgentMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentPattern))
+            {
+                query["ContentPattern"] = request.ContentPattern;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromId))
+            {
+                query["FromId"] = request.FromId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemFrom))
+            {
+                query["MemFrom"] = request.MemFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryAll))
+            {
+                query["QueryAll"] = request.QueryAll;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAgentMemory",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAgentMemoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the DataAgent memory list (up to 50 memories per RAM user).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentMemoryResponse
+        /// </returns>
+        public async Task<ListDataAgentMemoryResponse> ListDataAgentMemoryWithOptionsAsync(ListDataAgentMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentPattern))
+            {
+                query["ContentPattern"] = request.ContentPattern;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromId))
+            {
+                query["FromId"] = request.FromId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemFrom))
+            {
+                query["MemFrom"] = request.MemFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryAll))
+            {
+                query["QueryAll"] = request.QueryAll;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAgentMemory",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAgentMemoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the DataAgent memory list (up to 50 memories per RAM user).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentMemoryResponse
+        /// </returns>
+        public ListDataAgentMemoryResponse ListDataAgentMemory(ListDataAgentMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataAgentMemoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the DataAgent memory list (up to 50 memories per RAM user).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentMemoryResponse
+        /// </returns>
+        public async Task<ListDataAgentMemoryResponse> ListDataAgentMemoryAsync(ListDataAgentMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataAgentMemoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the list of historical session descriptions for a Data Agent.</para>
         /// </summary>
         /// 
@@ -9654,7 +10222,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the collaborative workspaces under the primary account with pagination.</para>
+        /// <para>Retrieves the workspaces under the primary account with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9728,7 +10296,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the collaborative workspaces under the primary account with pagination.</para>
+        /// <para>Retrieves the workspaces under the primary account with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9802,7 +10370,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the collaborative workspaces under the primary account with pagination.</para>
+        /// <para>Retrieves the workspaces under the primary account with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9820,7 +10388,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the collaborative workspaces under the primary account with pagination.</para>
+        /// <para>Retrieves the workspaces under the primary account with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15422,6 +15990,158 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDataAgentAccuracyTestWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the memory of a DataAgent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataAgentMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataAgentMemoryResponse
+        /// </returns>
+        public UpdateDataAgentMemoryResponse UpdateDataAgentMemoryWithOptions(UpdateDataAgentMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromId))
+            {
+                query["FromId"] = request.FromId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemFrom))
+            {
+                query["MemFrom"] = request.MemFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataAgentMemory",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataAgentMemoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the memory of a DataAgent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataAgentMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataAgentMemoryResponse
+        /// </returns>
+        public async Task<UpdateDataAgentMemoryResponse> UpdateDataAgentMemoryWithOptionsAsync(UpdateDataAgentMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromId))
+            {
+                query["FromId"] = request.FromId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemFrom))
+            {
+                query["MemFrom"] = request.MemFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["Uuid"] = request.Uuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDataAgentMemory",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDataAgentMemoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the memory of a DataAgent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataAgentMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataAgentMemoryResponse
+        /// </returns>
+        public UpdateDataAgentMemoryResponse UpdateDataAgentMemory(UpdateDataAgentMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDataAgentMemoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the memory of a DataAgent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDataAgentMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDataAgentMemoryResponse
+        /// </returns>
+        public async Task<UpdateDataAgentMemoryResponse> UpdateDataAgentMemoryAsync(UpdateDataAgentMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDataAgentMemoryWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
