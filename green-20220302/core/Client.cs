@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the document content moderation result.</para>
+        /// <para>The document moderation result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the document content moderation result.</para>
+        /// <para>The document moderation result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the document content moderation result.</para>
+        /// <para>The document moderation result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the document content moderation result.</para>
+        /// <para>The document moderation result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1897,7 +1897,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the manual review result.</para>
+        /// <para>Retrieves the manual review result for content moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1939,7 +1939,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the manual review result.</para>
+        /// <para>Retrieves the manual review result for content moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1981,7 +1981,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the manual review result.</para>
+        /// <para>Retrieves the manual review result for content moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1999,7 +1999,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the manual review result.</para>
+        /// <para>Retrieves the manual review result for content moderation.</para>
         /// </summary>
         /// 
         /// <param name="request">

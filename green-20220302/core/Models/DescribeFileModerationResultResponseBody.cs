@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public DescribeFileModerationResultResponseBodyData Data { get; set; }
         public class DescribeFileModerationResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AccountId passed in by the customer.</para>
+            /// <para>The AccountId specified in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>accountIdtest123</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string DataId { get; set; }
 
             /// <summary>
-            /// <para>Optional. The document type.</para>
+            /// <para>The document type. This parameter is optional.</para>
             /// 
             /// <b>Example:</b>
             /// <para>doc</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string DocType { get; set; }
 
             /// <summary>
-            /// <para>The list of moderation results.</para>
+            /// <para>The list of detection results.</para>
             /// </summary>
             [NameInMap("PageResult")]
             [Validation(Required=false)]
             public List<DescribeFileModerationResultResponseBodyDataPageResult> PageResult { get; set; }
             public class DescribeFileModerationResultResponseBodyDataPageResult : TeaModel {
                 /// <summary>
-                /// <para>The image moderation result.</para>
+                /// <para>The image detection results.</para>
                 /// </summary>
                 [NameInMap("ImageResult")]
                 [Validation(Required=false)]
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public int? PageNum { get; set; }
 
                 /// <summary>
-                /// <para>The text moderation result.</para>
+                /// <para>The text moderation results.</para>
                 /// </summary>
                 [NameInMap("TextResult")]
                 [Validation(Required=false)]
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string RiskLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The details of the hit risks.</para>
+                    /// <para>The details of the hit risk.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string Text { get; set; }
 
                     /// <summary>
-                    /// <para>The text segment information.</para>
+                    /// <para>The text segmentation information.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[0,999]</para>
@@ -396,52 +396,112 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public int? PageSum { get; set; }
 
+                /// <summary>
+                /// <para>The document authenticity verification risk summary.</para>
+                /// </summary>
                 [NameInMap("RiskSummary")]
                 [Validation(Required=false)]
                 public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummary RiskSummary { get; set; }
                 public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummary : TeaModel {
+                    /// <summary>
+                    /// <para>The extended information.</para>
+                    /// </summary>
                     [NameInMap("Ext")]
                     [Validation(Required=false)]
                     public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExt Ext { get; set; }
                     public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExt : TeaModel {
+                        /// <summary>
+                        /// <para>The detection details of AI-generated content.</para>
+                        /// </summary>
                         [NameInMap("AigcData")]
                         [Validation(Required=false)]
                         public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcData AigcData { get; set; }
                         public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcData : TeaModel {
+                            /// <summary>
+                            /// <para>The implicit identifier information of AI-generated content.</para>
+                            /// </summary>
                             [NameInMap("AIGC")]
                             [Validation(Required=false)]
                             public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcDataAIGC AIGC { get; set; }
                             public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcDataAIGC : TeaModel {
+                                /// <summary>
+                                /// <para>The content producer code.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>00119144030008867405X210001</para>
+                                /// </summary>
                                 [NameInMap("ContentProducer")]
                                 [Validation(Required=false)]
                                 public string ContentProducer { get; set; }
 
+                                /// <summary>
+                                /// <para>The content propagator code.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>00119144030008867405X220001</para>
+                                /// </summary>
                                 [NameInMap("ContentPropagator")]
                                 [Validation(Required=false)]
                                 public string ContentPropagator { get; set; }
 
+                                /// <summary>
+                                /// <para>The content attribute declared by the implicit identifier.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>Belongs to AI-generated synthetic content.</para>
+                                /// </summary>
                                 [NameInMap("Label")]
                                 [Validation(Required=false)]
                                 public string Label { get; set; }
 
+                                /// <summary>
+                                /// <para>The content production ID.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>tos-cn-i-tb4s082cfz/ad88d9b125694f57b2c72235e5c42af1</para>
+                                /// </summary>
                                 [NameInMap("ProduceID")]
                                 [Validation(Required=false)]
                                 public string ProduceID { get; set; }
 
+                                /// <summary>
+                                /// <para>The content propagation ID.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>tos-cn-i-tb4s082cfz/ad88d9b125694f57b2c72235e5c42af1</para>
+                                /// </summary>
                                 [NameInMap("PropagateID")]
                                 [Validation(Required=false)]
                                 public string PropagateID { get; set; }
 
+                                /// <summary>
+                                /// <para>Reserved field 1.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>None.</para>
+                                /// </summary>
                                 [NameInMap("ReservedCode1")]
                                 [Validation(Required=false)]
                                 public string ReservedCode1 { get; set; }
 
+                                /// <summary>
+                                /// <para>Reserved field 2.</para>
+                                /// 
+                                /// <b>Example:</b>
+                                /// <para>None.</para>
+                                /// </summary>
                                 [NameInMap("ReservedCode2")]
                                 [Validation(Required=false)]
                                 public string ReservedCode2 { get; set; }
 
                             }
 
+                            /// <summary>
+                            /// <para>The comprehensive analysis report of large model authenticity verification.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <h3>Comprehensive report for users.</h3>
+                            /// </summary>
                             [NameInMap("Explain")]
                             [Validation(Required=false)]
                             public string Explain { get; set; }
@@ -450,24 +510,51 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>The list of hit authenticity verification risk labels.</para>
+                    /// </summary>
                     [NameInMap("RiskLabels")]
                     [Validation(Required=false)]
                     public List<DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryRiskLabels> RiskLabels { get; set; }
                     public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryRiskLabels : TeaModel {
+                        /// <summary>
+                        /// <para>The label confidence score.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>95.96</para>
+                        /// </summary>
                         [NameInMap("Confidence")]
                         [Validation(Required=false)]
                         public float? Confidence { get; set; }
 
+                        /// <summary>
+                        /// <para>The Chinese description of the risk label.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Suspected AI-generated synthetic content.</para>
+                        /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
                         public string Description { get; set; }
 
+                        /// <summary>
+                        /// <para>The risk label.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>tamper_aigc</para>
+                        /// </summary>
                         [NameInMap("Label")]
                         [Validation(Required=false)]
                         public string Label { get; set; }
 
                     }
 
+                    /// <summary>
+                    /// <para>The overall risk level of the document, which is the highest level among all hit labels.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>high</para>
+                    /// </summary>
                     [NameInMap("RiskLevel")]
                     [Validation(Required=false)]
                     public string RiskLevel { get; set; }

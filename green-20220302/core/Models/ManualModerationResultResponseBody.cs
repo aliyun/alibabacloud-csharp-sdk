@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 /// <para>The label description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>未检测出风险</para>
+                /// <para>No risk detected.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string ReviewCount { get; set; }
 
             /// <summary>
-            /// <para>The risk level, returned based on the configured high and low risk scores. Valid values:</para>
+            /// <para>The risk level, returned based on the configured high and low risk thresholds. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>high: High risk.</para>
             /// </description></item>

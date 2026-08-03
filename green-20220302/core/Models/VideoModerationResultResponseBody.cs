@@ -577,6 +577,16 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     [Validation(Required=false)]
                     public List<VideoModerationResultResponseBodyDataFrameResultFramesResults> Results { get; set; }
                     public class VideoModerationResultResponseBodyDataFrameResultFramesResults : TeaModel {
+                        [NameInMap("AigcData")]
+                        [Validation(Required=false)]
+                        public VideoModerationResultResponseBodyDataFrameResultFramesResultsAigcData AigcData { get; set; }
+                        public class VideoModerationResultResponseBodyDataFrameResultFramesResultsAigcData : TeaModel {
+                            [NameInMap("Explain")]
+                            [Validation(Required=false)]
+                            public string Explain { get; set; }
+
+                        }
+
                         /// <summary>
                         /// <para>The custom image library information returned when a custom image library is hit.</para>
                         /// </summary>
