@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class QueryJobsWithResultRequest : TeaModel {
         /// <summary>
-        /// <para>Filters for calls that ended on or before the specified time. Specify the time as a UNIX timestamp in milliseconds.</para>
+        /// <para>The filter condition for the call end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1579055783000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? EndActualTimeFilter { get; set; }
 
         /// <summary>
-        /// <para>Filters jobs by whether the call was answered.</para>
+        /// <para>Specifies whether the call was answered.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? HasAnsweredFilter { get; set; }
 
         /// <summary>
-        /// <para>Filters jobs by whether the call was disconnected due to a rejection.</para>
+        /// <para>Specifies whether the call was hung up due to rejection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? HasHangUpByRejectionFilter { get; set; }
 
         /// <summary>
-        /// <para>Filters jobs by whether the call flow was completed.</para>
+        /// <para>Specifies whether the call reached the end of the flow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The job failure reasons to filter by.</para>
+        /// <para>The list of job failure reasons.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;NoAnswer&quot;]</para>
@@ -82,20 +82,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobGroupId { get; set; }
 
         /// <summary>
-        /// <para>The job status to filter by. Valid values:</para>
+        /// <para>The job status filter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Scheduling</c>: The job is scheduled and awaiting execution.</para>
-        /// </description></item>
-        /// <item><description><para><c>Executing</c>: The job is in progress.</para>
-        /// </description></item>
-        /// <item><description><para><c>Succeeded</c>: The job is completed and the contact was reached.</para>
-        /// </description></item>
-        /// <item><description><para><c>Paused</c>: The job is paused.</para>
-        /// </description></item>
-        /// <item><description><para><c>Failed</c>: The job completed but failed to reach the contact.</para>
-        /// </description></item>
-        /// <item><description><para><c>Cancelled</c>: The job was canceled by a user.</para>
-        /// </description></item>
+        /// <item><description>Scheduling: scheduling.</description></item>
+        /// <item><description>Executing: executing.</description></item>
+        /// <item><description>Succeeded: ended - reached.</description></item>
+        /// <item><description>Paused: paused.</description></item>
+        /// <item><description>Failed: ended - not reached.</description></item>
+        /// <item><description>Cancelled: cancelled - manual intervention.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,9 +100,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobStatusFilter { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions for calls, based on their labels.</para>
+        /// <para>The filter condition for labels associated with calls.</para>
         /// <remarks>
-        /// <para>This filter applies only to labels that are configured with a predefined set of values (enumerated values). These labels are typically used in large model scenarios.</para>
+        /// <para>This condition only supports filtering by labels that have specific enumerated label values configured, that is, labels with specific label values configured in large language model scenarios.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("LabelsJson")]
@@ -118,9 +112,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         /// <summary>
         /// <para>The page number.</para>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: This parameter is required.</notice></para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -130,9 +123,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The page size.</para>
         /// <remarks>
-        /// <para>Notice: This parameter is required.</para>
+        /// <para>Notice: This parameter is required.</notice></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -143,7 +136,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The search query for a specific job, such as the contact\&quot;s phone number.</para>
+        /// <para>The search content. You can search by phone number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1882020****</para>
@@ -153,7 +146,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string QueryText { get; set; }
 
         /// <summary>
-        /// <para>Filters for calls that started on or after the specified time. Specify the time as a UNIX timestamp in milliseconds.</para>
+        /// <para>The filter condition for the call start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1579055782000</para>
@@ -163,76 +156,43 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? StartActualTimeFilter { get; set; }
 
         /// <summary>
-        /// <para>The call statuses to filter by. You can specify multiple statuses as a JSON array of strings, such as <c>[&quot;Executing&quot;, &quot;Succeeded&quot;]</c>.
-        /// Valid values:
-        /// (Note: The <b>Succeeded</b> status is subdivided into more specific reasons. The general <b>Succeeded</b> (1: Connected) status is no longer returned. Instead, one of the more specific sub-statuses is returned.)</para>
+        /// <para>The call status, such as [&quot;Executing&quot;,&quot;Succeeded&quot;]. Separate multiple values with commas (,).</para>
+        /// <para>Valid values:</para>
+        /// <para>(Note: The <b>Succeeded</b> status has been subdivided into specific reasons. The <b>Succeeded</b>: 1 (answered) status is no longer returned. Instead, specific sub-reason types are returned.)</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Executing</b> (0): The call is being placed.</para>
-        /// </description></item>
-        /// <item><description><para><b>Succeeded</b> (1): The call was connected.</para>
-        /// </description></item>
-        /// <item><description><para><b>NoAnswer</b> (2): Not connected - No answer.</para>
-        /// </description></item>
-        /// <item><description><para><b>NotExist</b> (3): Not connected - The dialed number does not exist.</para>
-        /// </description></item>
-        /// <item><description><para><b>Busy</b> (4): Not connected - The line was busy.</para>
-        /// </description></item>
-        /// <item><description><para><b>Cancelled</b> (5): Not placed - The job was stopped before the call could be dialed.</para>
-        /// </description></item>
-        /// <item><description><para><b>Failed</b> (6): The call failed.</para>
-        /// </description></item>
-        /// <item><description><para><b>NotConnected</b> (7): Not connected - The call could not be connected.</para>
-        /// </description></item>
-        /// <item><description><para><b>PoweredOff</b> (8): Not connected - The recipient\&quot;s phone was powered off.</para>
-        /// </description></item>
-        /// <item><description><para><b>OutOfService</b> (9): Not connected - The recipient\&quot;s number is out of service.</para>
-        /// </description></item>
-        /// <item><description><para><b>InArrears</b> (10): Not connected - The recipient\&quot;s account is in arrears.</para>
-        /// </description></item>
-        /// <item><description><para><b>EmptyNumber</b> (11): Not placed - The number was identified as an empty number and was not dialed.</para>
-        /// </description></item>
-        /// <item><description><para><b>PerDayCallCountLimit</b> (12): Not placed - The daily call limit was reached.</para>
-        /// </description></item>
-        /// <item><description><para><b>ContactBlockList</b> (13): Not placed - The number is on a blocklist.</para>
-        /// </description></item>
-        /// <item><description><para><b>CallerNotRegistered</b> (14): Not placed - The calling number is not registered.</para>
-        /// </description></item>
-        /// <item><description><para><b>Terminated</b> (15): Not placed - The call was terminated.</para>
-        /// </description></item>
-        /// <item><description><para><b>VerificationCancelled</b> (16): Not placed - Canceled after failing a pre-call verification.</para>
-        /// </description></item>
-        /// <item><description><para><b>OutOfServiceNoCall</b> (17): Not placed - The number is out of service and was not dialed.</para>
-        /// </description></item>
-        /// <item><description><para><b>InArrearsNoCall</b> (18): Not placed - The recipient is in arrears and was not dialed.</para>
-        /// </description></item>
-        /// <item><description><para><b>CallingNumberNotExist</b> (19): Not placed - The calling number does not exist.</para>
-        /// </description></item>
-        /// <item><description><para><b>SucceededFinish</b> (20): Connected - The call completed normally.</para>
-        /// </description></item>
-        /// <item><description><para><b>SucceededChatbotHangUpAfterNoAnswer</b> (21): Connected - The chatbot hung up after a rejection.</para>
-        /// </description></item>
-        /// <item><description><para><b>SucceededChatbotHangUpAfterSilence</b> (22): Connected - The chatbot hung up due to a silence timeout.</para>
-        /// </description></item>
-        /// <item><description><para><b>SucceededClientHangUpAfterNoAnswer</b> (23): Connected - The user hung up after a rejection.</para>
-        /// </description></item>
-        /// <item><description><para><b>SucceededClientHangUp</b> (24): Connected - The user hung up for no specific reason.</para>
-        /// </description></item>
-        /// <item><description><para><b>SucceededTransferByIntent</b> (25): Connected - The call was transferred to an agent based on user intent.</para>
-        /// </description></item>
-        /// <item><description><para><b>SucceededTransferAfterNoAnswer</b> (26): Connected - The call was transferred to an agent after a rejection.</para>
-        /// </description></item>
-        /// <item><description><para><b>SucceededInoInterAction</b> (27): Connected - No interaction from the user.</para>
-        /// </description></item>
-        /// <item><description><para><b>SucceededError</b> (28): Connected - The call was interrupted by a system error.</para>
-        /// </description></item>
-        /// <item><description><para><b>SucceededSpecialInterceptVoiceAssistant</b> (29): Connected - Intercepted by a voice assistant.</para>
-        /// </description></item>
-        /// <item><description><para><b>SucceededSpecialInterceptExtensionNumberTransfer</b> (30): Connected - Intercepted for an extension number transfer.</para>
-        /// </description></item>
-        /// <item><description><para><b>SucceededSpecialInterceptCustomSpecialIntercept</b> (31): Connected - Intercepted by a custom rule.</para>
-        /// </description></item>
-        /// <item><description><para><b>HighRiskSipCode</b> (32): Not placed - High-risk SIP code.</para>
-        /// </description></item>
+        /// <item><description><b>Executing</b>: 0 (dialing).</description></item>
+        /// <item><description><b>Succeeded</b>: 1 (answered).</description></item>
+        /// <item><description><b>NoAnswer</b>: 2 (not answered - no one picked up).</description></item>
+        /// <item><description><b>NotExist</b>: 3 (not answered - nonexistent number).</description></item>
+        /// <item><description><b>Busy</b>: 4 (not answered - busy).</description></item>
+        /// <item><description><b>Cancelled</b>: 5 (not dialed - task stopped).</description></item>
+        /// <item><description><b>Failed</b>: 6 (failed).</description></item>
+        /// <item><description><b>NotConnected</b>: 7 (not answered - unreachable).</description></item>
+        /// <item><description><b>PoweredOff</b>: 8 (not answered - powered off).</description></item>
+        /// <item><description><b>OutOfService</b>: 9 (not answered - callee out of service).</description></item>
+        /// <item><description><b>InArrears</b>: 10 (not answered - callee has overdue payment).</description></item>
+        /// <item><description><b>EmptyNumber</b>: 11 (not dialed - nonexistent number, no outbound call).</description></item>
+        /// <item><description><b>PerDayCallCountLimit</b>: 12 (not dialed - daily limit exceeded).</description></item>
+        /// <item><description><b>ContactBlockList</b>: 13 (not dialed - blacklisted).</description></item>
+        /// <item><description><b>CallerNotRegistered</b>: 14 (not dialed - caller number not registered).</description></item>
+        /// <item><description><b>Terminated</b>: 15 (not dialed - terminated).</description></item>
+        /// <item><description><b>VerificationCancelled</b>: 16 (not dialed - cancelled due to pre-call verification failure).</description></item>
+        /// <item><description><b>OutOfServiceNoCall</b>: 17 (not dialed - callee out of service, no outbound call).</description></item>
+        /// <item><description><b>InArrearsNoCall</b>: 18 (not dialed - callee has overdue payment, no outbound call).</description></item>
+        /// <item><description><b>CallingNumberNotExist</b>: 19 (not dialed - caller number does not exist).</description></item>
+        /// <item><description><b>SucceededFinish</b>: 20 (answered - completed normally).</description></item>
+        /// <item><description><b>SucceededChatbotHangUpAfterNoAnswer</b>: 21 (answered - robot hung up after rejection).</description></item>
+        /// <item><description><b>SucceededChatbotHangUpAfterSilence</b>: 22 (answered - hung up due to silence timeout).</description></item>
+        /// <item><description><b>SucceededClientHangUpAfterNoAnswer</b>: 23 (answered - user hung up after rejection).</description></item>
+        /// <item><description><b>SucceededClientHangUp</b>: 24 (answered - user hung up without reason).</description></item>
+        /// <item><description><b>SucceededTransferByIntent</b>: 25 (answered - transferred to agent by intent).</description></item>
+        /// <item><description><b>SucceededTransferAfterNoAnswer</b>: 26 (answered - transferred to agent after rejection).</description></item>
+        /// <item><description><b>SucceededInoInterAction</b>: 27 (answered - no interaction from user side).</description></item>
+        /// <item><description><b>SucceededError</b>: 28 (answered - interrupted by system error).</description></item>
+        /// <item><description><b>SucceededSpecialInterceptVoiceAssistant</b>: 29 (answered - special interception - voice assistant).</description></item>
+        /// <item><description><b>SucceededSpecialInterceptExtensionNumberTransfer</b>: 30 (answered - special interception - extension number transfer).</description></item>
+        /// <item><description><b>SucceededSpecialInterceptCustomSpecialIntercept</b>: 31 (answered - special interception - custom interception).</description></item>
+        /// <item><description><b>HighRiskSipCode</b>: 32 (not dialed - high risk, no outbound call).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

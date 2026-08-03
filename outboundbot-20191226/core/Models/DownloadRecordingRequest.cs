@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retrieve voice slice recordings.</para>
+        /// <para>Specifies whether to query segmented recordings.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? NeedVoiceSliceRecording { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to swap the left and right audio channels. The default value is <c>false</c>.</para>
+        /// <para>Specifies whether to swap left and right audio channels. Default value: false (not swapped).</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

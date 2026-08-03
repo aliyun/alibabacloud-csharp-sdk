@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SaveAfterAnswerDelayPlaybackRequest : TeaModel {
         /// <summary>
-        /// <para>Delay before playback starts, in seconds. Default is 0 if not specified.</para>
+        /// <para>The playback time for delayed playback. If this parameter is not specified, the default value 0 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? AfterAnswerDelayPlayback { get; set; }
 
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string EntryId { get; set; }
 
         /// <summary>
-        /// <para>Policy level (required)</para>
+        /// <para>The policy level (required). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>2: Instance</description></item>
+        /// <item><description>2: instance</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

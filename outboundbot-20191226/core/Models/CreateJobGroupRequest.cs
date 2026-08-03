@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateJobGroupRequest : TeaModel {
         /// <summary>
-        /// <para>List of caller numbers. If not specified, all numbers attached to the instance are selected by default.</para>
+        /// <para>The list of calling numbers. If not specified, all numbers bound to the instance are selected by default.</para>
         /// </summary>
         [NameInMap("CallingNumber")]
         [Validation(Required=false)]
         public List<string> CallingNumber { get; set; }
 
         /// <summary>
-        /// <para>Configuration parameters for flash SMS push, in JSON format, containing third-party flash SMS configuration information.  </para>
+        /// <para>The configuration parameters for flash SMS in JSON format, including third-party flash SMS configuration information.  </para>
         /// <list type="bullet">
-        /// <item><description>templateId: Flash SMS Template ID.  </description></item>
-        /// <item><description>configId: Flash SMS configuration ID.  </description></item>
-        /// <item><description>templateContent: Flash SMS Content.</description></item>
+        /// <item><description>templateId: the flash SMS template ID.  </description></item>
+        /// <item><description>configId: the flash SMS configuration ID.</description></item>
+        /// <item><description>templateContent: the flash SMS content.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Obtain the value of templateContent from the partner providing the flash SMS capability.</para>
+        /// <para>Obtain the value of templateContent from the corresponding flash SMS capability provider.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string FlashSmsExtras { get; set; }
 
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Task description.</para>
+        /// <para>The task description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>任务描述</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobGroupDescription { get; set; }
 
         /// <summary>
-        /// <para>Task name.</para>
+        /// <para>The task name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,11 +67,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobGroupName { get; set; }
 
         /// <summary>
-        /// <para>Concurrent guarantee value.  </para>
+        /// <para>The guaranteed concurrency value.  </para>
         /// <list type="bullet">
-        /// <item><description>When a job starts, it is guaranteed a minimum of N concurrent executions.  </description></item>
-        /// <item><description>The sum of concurrent guarantee values for jobs with the same priority must not exceed the instance concurrency limit.  </description></item>
-        /// <item><description>If the concurrent guarantee value is configured as 0, the system intelligently assigns idle concurrency resources.</description></item>
+        /// <item><description>When the task starts, a minimum of N concurrent calls are guaranteed.</description></item>
+        /// <item><description>The sum of guaranteed concurrency values for tasks with the same priority cannot exceed the instance concurrency.  </description></item>
+        /// <item><description>If the guaranteed concurrency value is set to 0, the system intelligently allocates idle concurrency.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? MinConcurrency { get; set; }
 
         /// <summary>
-        /// <para>Job group priority. Valid values:</para>
+        /// <para>The job group priority. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Urgent</b>: Urgent job.</description></item>
-        /// <item><description><b>Daily</b>: Daily job.</description></item>
+        /// <item><description><b>Urgent</b>: urgent task.</description></item>
+        /// <item><description><b>Daily</b>: daily task.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,18 +96,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>List of caller numbers for redial.</para>
+        /// <para>The list of redial calling numbers.</para>
         /// </summary>
         [NameInMap("RecallCallingNumber")]
         [Validation(Required=false)]
         public List<string> RecallCallingNumber { get; set; }
 
         /// <summary>
-        /// <para>Redial policy in JSON format. The default value of parameters in the JSON is false.</para>
+        /// <para>The redial strategy in JSON format. Parameter values default to false.</para>
         /// <list type="bullet">
-        /// <item><description><b>emptyNumberIgnore</b>: Do not make outbound calls to nonexistent numbers.</description></item>
-        /// <item><description><b>inArrearsIgnore</b>: Do not make outbound calls for overdue payments.</description></item>
-        /// <item><description><b>outOfServiceIgnore</b>: Do not make outbound calls to out-of-service numbers.</description></item>
+        /// <item><description><b>emptyNumberIgnore</b>: does not call nonexistent numbers.</description></item>
+        /// <item><description><b>inArrearsIgnore</b>: does not call numbers with overdue payments.</description></item>
+        /// <item><description><b>outOfServiceIgnore</b>: does not call numbers that are out of service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RecallStrategyJson { get; set; }
 
         /// <summary>
-        /// <para>Optimal ringing duration. Default value is 25.</para>
+        /// <para>The optimal ringing duration. Default value: 25.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? RingingDuration { get; set; }
 
         /// <summary>
-        /// <para>Deprecated</para>
+        /// <para>Deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b9ff4e88-65f9-4eb3-987c-11ba51f3f24d</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScenarioId { get; set; }
 
         /// <summary>
-        /// <para>Scenario ID.</para>
+        /// <para>The scenario ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b9ff4e88-65f9-4eb3-987c-11ba51f3f24d</para>
@@ -148,24 +148,24 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>Job execution policy.  </para>
+        /// <para>The task execution strategy.  </para>
         /// <list type="bullet">
-        /// <item><description>repeatBy: Recurrence type. Options are Once (no recurrence), Week (weekly recurrence), and Month (monthly recurrence).  </description></item>
-        /// <item><description>startTime: Policy start time for time-based execution.  </description></item>
-        /// <item><description>endTime: Policy end time for time-based execution.  <remarks>
-        /// <para>Execution modes are as follows:  </para>
+        /// <item><description>repeatBy: the repeat type. Valid values: Once (no repeat), Week (repeat weekly), and Month (repeat monthly).  </description></item>
+        /// <item><description>startTime: the strategy start time for time-based execution.</description></item>
+        /// <item><description>endTime: the strategy end time for time-based execution.  <remarks>
+        /// <para>The execution mode is determined as follows:</para>
         /// <list type="bullet">
-        /// <item><description>If no start or end time is specified, the job executes immediately.  </description></item>
-        /// <item><description>If start and end times are provided, the job executes based on the schedule, and a recurrence type (repeatBy) must be selected.</description></item>
+        /// <item><description>If no strategy start time or end time is specified, the task is executed immediately.</description></item>
+        /// <item><description>If a strategy time is specified, the task is executed based on the schedule. You must also specify the repeat type repeatBy.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
-        /// <item><description>workingTime: Allowed outbound calling time segment.  </description></item>
-        /// <item><description>maxAttemptsPerDay: Maximum number of call attempts per day for numbers under this job.  </description></item>
-        /// <item><description>minAttemptInterval: Minimum time interval between retry calls for a number, in minutes.  </description></item>
-        /// <item><description>routingStrategy: Number routing strategy. Options are None (not specified), LocalFirst (local city numbers prioritized), and LocalProvinceFirst (local province numbers prioritized).  </description></item>
-        /// <item><description>repeatDays: Execution dates corresponding to the recurrence type. If repeatBy is Week, 0 represents Sunday and 1–6 represent Monday through Saturday. If repeatBy is Month, values 1–31 represent the 1st through the 31st day of the month; months without the specified date skip execution (for example, if the 30th is selected, February skips execution).  </description></item>
-        /// <item><description>repeatable: Whether loop task is enabled, true/false.</description></item>
+        /// <item><description>workingTime: the time window during which outbound calls can be made.</description></item>
+        /// <item><description>maxAttemptsPerDay: the maximum number of call attempts per day for each number in the task.</description></item>
+        /// <item><description>minAttemptInterval: the retry interval for a number, in minutes.</description></item>
+        /// <item><description>routingStrategy: the number strategy. Valid values: None (not specified), LocalFirst (local city numbers preferred), and LocalProvinceFirst (local province numbers preferred).</description></item>
+        /// <item><description>repeatDays: the execution days corresponding to the repeat type. If RepeatBy is set to Week, 0 indicates Sunday and 1-6 indicate Monday through Saturday. If RepeatBy is set to Month, 1-31 indicate the 1st through 31st day. The task is not executed in months that do not have the specified day. For example, if the 30th is selected, the task is not executed in February.</description></item>
+        /// <item><description>repeatable: specifies whether to enable cyclic tasks. Valid values: true and false.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

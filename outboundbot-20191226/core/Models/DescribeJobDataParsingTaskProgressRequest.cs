@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DescribeJobDataParsingTaskProgressRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>ID of the job data parsing task.</para>
+        /// <para>The job data analytics node ID.</para>
         /// <remarks>
-        /// <para>Get this value from the CreateJobDataParsingTask operation.</para>
+        /// <para>This parameter value is obtained from the CreateJobDataParsingTask operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

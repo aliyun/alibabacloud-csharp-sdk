@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DescribeScriptVoiceConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the script.</para>
+        /// <para>The scene ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the script voice configuration.</para>
+        /// <para>The scene voice configuration ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

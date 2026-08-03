@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Industry { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the debug version is a draft.</para>
+            /// <para>Indicates whether the debug version is in draft state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? IsDebugDrafted { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application version is a draft.</para>
+            /// <para>Indicates whether the application version is in draft state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public bool? IsDrafted { get; set; }
 
             /// <summary>
-            /// <para>The scenario.</para>
+            /// <para>The scene.</para>
             /// 
             /// <b>Example:</b>
             /// <para>电销</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the script was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1578881227000</para>

@@ -2167,7 +2167,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a URL for a Download Hub task.</para>
+        /// <para>Creates a URL for a download center task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2205,7 +2205,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a URL for a Download Hub task.</para>
+        /// <para>Creates a URL for a download center task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2243,7 +2243,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a URL for a Download Hub task.</para>
+        /// <para>Creates a URL for a download center task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2261,7 +2261,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a URL for a Download Hub task.</para>
+        /// <para>Creates a URL for a download center task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3015,7 +3015,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a job group.</para>
+        /// <para>Creates a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3105,7 +3105,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a job group.</para>
+        /// <para>Creates a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3195,7 +3195,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a job group.</para>
+        /// <para>Creates a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3213,7 +3213,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a job group.</para>
+        /// <para>Creates a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3955,7 +3955,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an asynchronous task to export outbound call history.</para>
+        /// <para>Creates an asynchronous task to export outbound call history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3993,7 +3993,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an asynchronous task to export outbound call history.</para>
+        /// <para>Creates an asynchronous task to export outbound call history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4031,7 +4031,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an asynchronous task to export outbound call history.</para>
+        /// <para>Creates an asynchronous task to export outbound call history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4049,7 +4049,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an asynchronous task to export outbound call history.</para>
+        /// <para>Creates an asynchronous task to export outbound call history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5751,7 +5751,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an outbound call number. This API is deprecated.</para>
+        /// <para>Deletes an outbound call number. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5797,7 +5797,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an outbound call number. This API is deprecated.</para>
+        /// <para>Deletes an outbound call number. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5843,7 +5843,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an outbound call number. This API is deprecated.</para>
+        /// <para>Deletes an outbound call number. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5861,7 +5861,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an outbound call number. This API is deprecated.</para>
+        /// <para>Deletes an outbound call number. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6007,7 +6007,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes uploaded recordings for a small-model scenario.</para>
+        /// <para>Deletes uploaded recordings in a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6057,7 +6057,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes uploaded recordings for a small-model scenario.</para>
+        /// <para>Deletes uploaded recordings in a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6107,7 +6107,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes uploaded recordings for a small-model scenario.</para>
+        /// <para>Deletes uploaded recordings in a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6125,7 +6125,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes uploaded recordings for a small-model scenario.</para>
+        /// <para>Deletes uploaded recordings in a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6571,7 +6571,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes DS reports.</para>
+        /// <para>Queries the tag statistics of hits for a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6617,7 +6617,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes DS reports.</para>
+        /// <para>Queries the tag statistics of hits for a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6663,7 +6663,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes DS reports.</para>
+        /// <para>Queries the tag statistics of hits for a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6681,7 +6681,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes DS reports.</para>
+        /// <para>Queries the tag statistics of hits for a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6983,7 +6983,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Outbound Calling instance.</para>
+        /// <para>Queries the information of an outbound robot business instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7025,7 +7025,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Outbound Calling instance.</para>
+        /// <para>Queries the information of an outbound robot business instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7067,7 +7067,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Outbound Calling instance.</para>
+        /// <para>Queries the information of an outbound robot business instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7085,7 +7085,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Outbound Calling instance.</para>
+        /// <para>Queries the information of an outbound robot business instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7375,7 +7375,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the conversation data for a specific job.</para>
+        /// <para>Returns the conversation data of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7425,7 +7425,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the conversation data for a specific job.</para>
+        /// <para>Returns the conversation data of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7475,7 +7475,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the conversation data for a specific job.</para>
+        /// <para>Returns the conversation data of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7493,7 +7493,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the conversation data for a specific job.</para>
+        /// <para>Returns the conversation data of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7511,7 +7511,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the parsing progress of an uploaded job file.</para>
+        /// <para>Retrieves the parsing progress of an uploaded job file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7557,7 +7557,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the parsing progress of an uploaded job file.</para>
+        /// <para>Retrieves the parsing progress of an uploaded job file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7603,7 +7603,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the parsing progress of an uploaded job file.</para>
+        /// <para>Retrieves the parsing progress of an uploaded job file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7621,7 +7621,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the parsing progress of an uploaded job file.</para>
+        /// <para>Retrieves the parsing progress of an uploaded job file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8031,7 +8031,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the voice configuration of a script created in the legacy canvas.</para>
+        /// <para>Returns a scene voice configuration in the legacy canvas scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8081,7 +8081,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the voice configuration of a script created in the legacy canvas.</para>
+        /// <para>Returns a scene voice configuration in the legacy canvas scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8131,7 +8131,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the voice configuration of a script created in the legacy canvas.</para>
+        /// <para>Returns a scene voice configuration in the legacy canvas scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8149,7 +8149,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the voice configuration of a script created in the legacy canvas.</para>
+        /// <para>Returns a scene voice configuration in the legacy canvas scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8647,7 +8647,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the instances to which a phone number is bound in a tenant.</para>
+        /// <para>Queries the list of number binding instances under a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8689,7 +8689,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the instances to which a phone number is bound in a tenant.</para>
+        /// <para>Queries the list of number binding instances under a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8731,7 +8731,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the instances to which a phone number is bound in a tenant.</para>
+        /// <para>Queries the list of number binding instances under a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8749,7 +8749,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the instances to which a phone number is bound in a tenant.</para>
+        /// <para>Queries the list of number binding instances under a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9247,7 +9247,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Duplicates an existing script. This operation applies only to the legacy canvas.</para>
+        /// <para>Copies a new script from an existing script (for the legacy canvas only).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9297,7 +9297,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Duplicates an existing script. This operation applies only to the legacy canvas.</para>
+        /// <para>Copies a new script from an existing script (for the legacy canvas only).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9347,7 +9347,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Duplicates an existing script. This operation applies only to the legacy canvas.</para>
+        /// <para>Copies a new script from an existing script (for the legacy canvas only).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9365,7 +9365,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Duplicates an existing script. This operation applies only to the legacy canvas.</para>
+        /// <para>Copies a new script from an existing script (for the legacy canvas only).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14931,7 +14931,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of outbound call tasks asynchronously. Call this operation to retrieve the results of a <c>ListJobGroup</c> call that included the <c>Async</c> parameter.</para>
+        /// <para>Asynchronously retrieves the list of outbound call task groups. When the Async parameter is specified in the ListJobGroup operation, use this operation to retrieve the results of the asynchronous ListJobGroup call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14969,7 +14969,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of outbound call tasks asynchronously. Call this operation to retrieve the results of a <c>ListJobGroup</c> call that included the <c>Async</c> parameter.</para>
+        /// <para>Asynchronously retrieves the list of outbound call task groups. When the Async parameter is specified in the ListJobGroup operation, use this operation to retrieve the results of the asynchronous ListJobGroup call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15007,7 +15007,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of outbound call tasks asynchronously. Call this operation to retrieve the results of a <c>ListJobGroup</c> call that included the <c>Async</c> parameter.</para>
+        /// <para>Asynchronously retrieves the list of outbound call task groups. When the Async parameter is specified in the ListJobGroup operation, use this operation to retrieve the results of the asynchronous ListJobGroup call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15025,7 +15025,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of outbound call tasks asynchronously. Call this operation to retrieve the results of a <c>ListJobGroup</c> call that included the <c>Async</c> parameter.</para>
+        /// <para>Asynchronously retrieves the list of outbound call task groups. When the Async parameter is specified in the ListJobGroup operation, use this operation to retrieve the results of the asynchronous ListJobGroup call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15043,7 +15043,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query multiple jobs.</para>
+        /// <para>Queries multiple jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15089,7 +15089,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query multiple jobs.</para>
+        /// <para>Queries multiple jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15135,7 +15135,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query multiple jobs.</para>
+        /// <para>Queries multiple jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15153,7 +15153,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query multiple jobs.</para>
+        /// <para>Queries multiple jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18695,7 +18695,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an outbound call number. This API is deprecated.</para>
+        /// <para>Modifies an outbound call number. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18753,7 +18753,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an outbound call number. This API is deprecated.</para>
+        /// <para>Modifies an outbound call number. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18811,7 +18811,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an outbound call number. This API is deprecated.</para>
+        /// <para>Modifies an outbound call number. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18829,7 +18829,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an outbound call number. This API is deprecated.</para>
+        /// <para>Modifies an outbound call number. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19907,7 +19907,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can query the list of jobs.</para>
+        /// <para>Queries a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19985,7 +19985,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can query the list of jobs.</para>
+        /// <para>Queries a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20063,7 +20063,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can query the list of jobs.</para>
+        /// <para>Queries a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20081,7 +20081,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can query the list of jobs.</para>
+        /// <para>Queries a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20099,7 +20099,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find tasks by result.</para>
+        /// <para>Queries tasks based on task results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20193,7 +20193,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find tasks by result.</para>
+        /// <para>Queries tasks based on task results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20287,7 +20287,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find tasks by result.</para>
+        /// <para>Queries tasks based on task results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20305,7 +20305,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find tasks by result.</para>
+        /// <para>Queries tasks based on task results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21075,7 +21075,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the delay before playback starts after the call is answered.</para>
+        /// <para>Saves the delayed playback time after a call is answered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21125,7 +21125,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the delay before playback starts after the call is answered.</para>
+        /// <para>Saves the delayed playback time after a call is answered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21175,7 +21175,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the delay before playback starts after the call is answered.</para>
+        /// <para>Saves the delayed playback time after a call is answered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21193,7 +21193,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the delay before playback starts after the call is answered.</para>
+        /// <para>Saves the delayed playback time after a call is answered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22499,7 +22499,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a draft job group. This operation is deprecated.</para>
+        /// <para>Submits a job group in draft status for execution. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22545,7 +22545,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a draft job group. This operation is deprecated.</para>
+        /// <para>Submits a job group in draft status for execution. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22591,7 +22591,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a draft job group. This operation is deprecated.</para>
+        /// <para>Submits a job group in draft status for execution. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22609,7 +22609,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a draft job group. This operation is deprecated.</para>
+        /// <para>Submits a job group in draft status for execution. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24079,12 +24079,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revoke script review.</para>
+        /// <para>Withdraws a script review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>**</para>
+        /// <hr>
         /// </description>
         /// 
         /// <param name="request">
@@ -24130,12 +24130,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revoke script review.</para>
+        /// <para>Withdraws a script review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>**</para>
+        /// <hr>
         /// </description>
         /// 
         /// <param name="request">
@@ -24181,12 +24181,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revoke script review.</para>
+        /// <para>Withdraws a script review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>**</para>
+        /// <hr>
         /// </description>
         /// 
         /// <param name="request">
@@ -24204,12 +24204,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revoke script review.</para>
+        /// <para>Withdraws a script review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>**</para>
+        /// <hr>
         /// </description>
         /// 
         /// <param name="request">

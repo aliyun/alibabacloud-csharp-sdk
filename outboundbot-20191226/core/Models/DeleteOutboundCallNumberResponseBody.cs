@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DeleteOutboundCallNumberResponseBody : TeaModel {
         /// <summary>
-        /// <para>API status code</para>
+        /// <para>The operation status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>API message</para>
+        /// <para>The operation message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -50,12 +50,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded:</para>
+        /// <para>Indicates whether the query was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: succeeded.</para>
-        /// </description></item>
-        /// <item><description><para>false: failed.</para>
-        /// </description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

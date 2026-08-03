@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateDownloadUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the download task.</para>
+        /// <para>The download task ID.</para>
         /// <remarks>
         /// <para>This parameter is obtained from the TaskId response parameter of the ListDownloadTasks operation.</para>
         /// </remarks>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string DownloadTaskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file.</para>
+        /// <para>The file ID.</para>
         /// <remarks>
         /// <para>This parameter is obtained from the FileId response parameter of the ListDownloadTasks operation.</para>
         /// </remarks>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DeleteScriptRecordingRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance to which the recording belongs.</para>
+        /// <para>The instance ID to which the recordings belong.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scenario to which the recording belongs.</para>
+        /// <para>The ID of the scenario to which the recordings belong.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>A list of recording IDs. If this parameter is empty, all recordings are selected by default.</para>
+        /// <para>The list of recording IDs. If this parameter is left empty, all recordings are selected by default.</para>
         /// <remarks>
-        /// <para>Obtain the recording IDs from the ListScriptRecording operation.</para>
+        /// <para>You can obtain recording IDs by calling the ListScriptRecording operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

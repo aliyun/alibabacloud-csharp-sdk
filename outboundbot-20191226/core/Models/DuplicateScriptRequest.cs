@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DuplicateScriptRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name for the new script.</para>
+        /// <para>The name of the new scenario.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source script.</para>
+        /// <para>The ID of the source scenario.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

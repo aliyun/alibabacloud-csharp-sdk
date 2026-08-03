@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateDownloadUrlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the operation.</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file.</para>
+        /// <para>The file URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.xxx.com/xxx">http://www.xxx.com/xxx</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the operation.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC08CC41-6870-5594-939A-F758F057898F</para>

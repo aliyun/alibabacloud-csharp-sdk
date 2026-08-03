@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class QueryJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,30 +30,30 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Job data.</para>
+        /// <para>The job data.</para>
         /// </summary>
         [NameInMap("Jobs")]
         [Validation(Required=false)]
         public QueryJobsResponseBodyJobs Jobs { get; set; }
         public class QueryJobsResponseBodyJobs : TeaModel {
             /// <summary>
-            /// <para>Job array.</para>
+            /// <para>The list of jobs.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<QueryJobsResponseBodyJobsList> List { get; set; }
             public class QueryJobsResponseBodyJobsList : TeaModel {
                 /// <summary>
-                /// <para>Caller number list.</para>
+                /// <para>The list of calling numbers.</para>
                 /// </summary>
                 [NameInMap("CallingNumbers")]
                 [Validation(Required=false)]
                 public List<string> CallingNumbers { get; set; }
 
                 /// <summary>
-                /// <para>Contact information. This parameter is deprecated.</para>
+                /// <para>The contact information. This parameter has been deprecated.</para>
                 /// <remarks>
-                /// <para>Use the DescribeJob operation instead.</para>
+                /// <para>You can retrieve this information by calling the DescribeJob operation.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("Contacts")]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public List<QueryJobsResponseBodyJobsListContacts> Contacts { get; set; }
                 public class QueryJobsResponseBodyJobsListContacts : TeaModel {
                     /// <summary>
-                    /// <para>Contact ID.</para>
+                    /// <para>The contact ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>db3db762-e421-44c9-9a01-cb423470757c</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string ContactId { get; set; }
 
                     /// <summary>
-                    /// <para>Contact name.</para>
+                    /// <para>The contact name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>张三</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string ContactName { get; set; }
 
                     /// <summary>
-                    /// <para>Honorific.</para>
+                    /// <para>The honorific title.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>张先生</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Honorific { get; set; }
 
                     /// <summary>
-                    /// <para>Job ID.</para>
+                    /// <para>The job ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>fce6c599-8ede-40e3-9f78-0928eda7b4e8</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string JobId { get; set; }
 
                     /// <summary>
-                    /// <para>Phone number.</para>
+                    /// <para>The phone number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>135****8888</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string PhoneNumber { get; set; }
 
                     /// <summary>
-                    /// <para>Associated business ID.</para>
+                    /// <para>The associated business ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2fa6bac3-06da-4315-82ab-72d6fd3a6f34</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string ReferenceId { get; set; }
 
                     /// <summary>
-                    /// <para>Role.</para>
+                    /// <para>The role.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -133,16 +133,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Role { get; set; }
 
                     /// <summary>
-                    /// <para>Status.</para>
+                    /// <para>The status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>Available</para>
-                    /// </description></item>
-                    /// <item><description><para>WrongNumber</para>
-                    /// </description></item>
-                    /// <item><description><para>DoesNotExist</para>
-                    /// </description></item>
-                    /// <item><description><para>Suspended</para>
-                    /// </description></item>
+                    /// <item><description>Available: Normal.</description></item>
+                    /// <item><description>WrongNumber: Wrong number.</description></item>
+                    /// <item><description>DoesNotExist: Nonexistent number.</description></item>
+                    /// <item><description>Suspended: Call suspended.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -155,9 +151,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>Business data. Shows tag collection status for Large Language Model (LLM) scenarios.</para>
+                /// <para>The business data. Displays tag collection results for large language model scenarios.</para>
                 /// <remarks>
-                /// <para>Keys TenantId and ServiceId are system parameters.</para>
+                /// <para>Keys equal to TenantId or ServiceId are system parameters.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("Extras")]
@@ -165,7 +161,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public List<QueryJobsResponseBodyJobsListExtras> Extras { get; set; }
                 public class QueryJobsResponseBodyJobsListExtras : TeaModel {
                     /// <summary>
-                    /// <para>Business data key.</para>
+                    /// <para>The business data key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>djrq</para>
@@ -175,7 +171,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>Business data value.</para>
+                    /// <para>The business data value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2019-08-21 09:49:59.0</para>
@@ -187,36 +183,22 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>Failure reason.</para>
+                /// <para>The failure reason. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Unknown</para>
-                /// </description></item>
-                /// <item><description><para>NoAnswer</para>
-                /// </description></item>
-                /// <item><description><para>InvalidStrategy</para>
-                /// </description></item>
-                /// <item><description><para>TimeUp</para>
-                /// </description></item>
-                /// <item><description><para>NoStrategy</para>
-                /// </description></item>
-                /// <item><description><para>CallFailed</para>
-                /// </description></item>
-                /// <item><description><para>PerDayCallCountLimit</para>
-                /// </description></item>
-                /// <item><description><para>ContactBlockList</para>
-                /// </description></item>
-                /// <item><description><para>EmptyNumber</para>
-                /// </description></item>
-                /// <item><description><para>JobPerDayCallCountLimit</para>
-                /// </description></item>
-                /// <item><description><para>VerificationCancelled</para>
-                /// </description></item>
-                /// <item><description><para>ContactSuspended</para>
-                /// </description></item>
-                /// <item><description><para>InArrears</para>
-                /// </description></item>
-                /// <item><description><para>OutOfService</para>
-                /// </description></item>
+                /// <item><description>Unknown: Unknown error.  </description></item>
+                /// <item><description>NoAnswer: No answer.</description></item>
+                /// <item><description>InvalidStrategy: Invalid strategy. The strategy configuration is incorrect.</description></item>
+                /// <item><description>TimeUp: Timeout detected during scheduling.</description></item>
+                /// <item><description>NoStrategy: The strategy is empty or not found.</description></item>
+                /// <item><description>CallFailed: Call failed.</description></item>
+                /// <item><description>PerDayCallCountLimit: Daily call count limit for the number reached.</description></item>
+                /// <item><description>ContactBlockList: The number is on the blocked list.</description></item>
+                /// <item><description>EmptyNumber: Nonexistent number. No further outbound calls.</description></item>
+                /// <item><description>JobPerDayCallCountLimit: Daily call count limit for the number reached.</description></item>
+                /// <item><description>VerificationCancelled: Pre-call verification failed. The call was cancelled.</description></item>
+                /// <item><description>ContactSuspended: Call suspended.</description></item>
+                /// <item><description>InArrears: Overdue payment.</description></item>
+                /// <item><description>OutOfService: Out of service.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -227,7 +209,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string FailureReason { get; set; }
 
                 /// <summary>
-                /// <para>Task ID.</para>
+                /// <para>The job group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fce6c599-8ede-40e3-9f78-0928eda7b4e8</para>
@@ -237,7 +219,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string JobGroupId { get; set; }
 
                 /// <summary>
-                /// <para>Job ID.</para>
+                /// <para>The job ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fce6c599-8ede-40e3-9f78-0928eda7b4e8</para>
@@ -247,7 +229,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string JobId { get; set; }
 
                 /// <summary>
-                /// <para>Priority.</para>
+                /// <para>The priority.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -257,7 +239,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>Associated business ID.</para>
+                /// <para>The associated business ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>d5971d98-7312-4f0e-a918-a17d67133e28</para>
@@ -267,7 +249,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string ReferenceId { get; set; }
 
                 /// <summary>
-                /// <para>Scenario ID. This parameter is deprecated.</para>
+                /// <para>The scenario ID. This is a legacy parameter and has been deprecated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ade80092-03d9-4f4d-ad4f-ab8a247d3150</para>
@@ -277,22 +259,15 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string ScenarioId { get; set; }
 
                 /// <summary>
-                /// <para>Job status.</para>
+                /// <para>The job status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Scheduling (0)</para>
-                /// </description></item>
-                /// <item><description><para>Executing (1)</para>
-                /// </description></item>
-                /// <item><description><para>Succeeded (2)</para>
-                /// </description></item>
-                /// <item><description><para>Paused (3)</para>
-                /// </description></item>
-                /// <item><description><para>Failed (4)</para>
-                /// </description></item>
-                /// <item><description><para>Cancelled (5)</para>
-                /// </description></item>
-                /// <item><description><para>Drafted (6)</para>
-                /// </description></item>
+                /// <item><description>Scheduling(0): Scheduling.</description></item>
+                /// <item><description>Executing(1): Executing.</description></item>
+                /// <item><description>Succeeded(2): Completed - Reached.</description></item>
+                /// <item><description>Paused(3): Paused.</description></item>
+                /// <item><description>Failed(4): Completed - Not reached.</description></item>
+                /// <item><description>Cancelled(5): Cancelled - Manual intervention.</description></item>
+                /// <item><description>Drafted(6): Draft.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -303,7 +278,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Strategy ID.</para>
+                /// <para>The strategy ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c8a2b7f2-ad1a-4865-b872-d0080d9802d9</para>
@@ -313,14 +288,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string StrategyId { get; set; }
 
                 /// <summary>
-                /// <para>Conversation summary. This field is deprecated.</para>
+                /// <para>The conversation summary. This is a legacy field and is no longer in use. Deprecated.</para>
                 /// </summary>
                 [NameInMap("Summary")]
                 [Validation(Required=false)]
                 public List<QueryJobsResponseBodyJobsListSummary> Summary { get; set; }
                 public class QueryJobsResponseBodyJobsListSummary : TeaModel {
                     /// <summary>
-                    /// <para>Category.</para>
+                    /// <para>The category.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{}</para>
@@ -330,7 +305,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Category { get; set; }
 
                     /// <summary>
-                    /// <para>Content.</para>
+                    /// <para>The content.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -340,7 +315,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Content { get; set; }
 
                     /// <summary>
-                    /// <para>Call record ID.</para>
+                    /// <para>The call record ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>098b9b09-9223-4a8b-a422-99726f0457f3</para>
@@ -350,7 +325,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string ConversationDetailId { get; set; }
 
                     /// <summary>
-                    /// <para>Task ID.</para>
+                    /// <para>The job group ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ba1ba502-d044-48c0-b710-0f1f840a7c53</para>
@@ -360,7 +335,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string GroupId { get; set; }
 
                     /// <summary>
-                    /// <para>Job ID.</para>
+                    /// <para>The job ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>b72425bd-7871-4050-838e-033d80d754b7</para>
@@ -370,7 +345,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string JobId { get; set; }
 
                     /// <summary>
-                    /// <para>Summary ID.</para>
+                    /// <para>The summary ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>dc67d544-df06-4625-ae48-13e3c9f72d8a</para>
@@ -380,7 +355,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string SummaryId { get; set; }
 
                     /// <summary>
-                    /// <para>Summary name.</para>
+                    /// <para>The summary name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>score</para>
@@ -390,7 +365,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string SummaryName { get; set; }
 
                     /// <summary>
-                    /// <para>Call ID.</para>
+                    /// <para>The call ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>9fdf7a81-6781-4ab8-92fb-1d4231ef365e</para>
@@ -402,14 +377,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>Tags hit in small model scenarios.</para>
+                /// <para>The tag hit information in small model scenarios.</para>
                 /// </summary>
                 [NameInMap("TagHits")]
                 [Validation(Required=false)]
                 public List<QueryJobsResponseBodyJobsListTagHits> TagHits { get; set; }
                 public class QueryJobsResponseBodyJobsListTagHits : TeaModel {
                     /// <summary>
-                    /// <para>Tag group name.</para>
+                    /// <para>The tag group name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>意向收集</para>
@@ -419,7 +394,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string TagGroup { get; set; }
 
                     /// <summary>
-                    /// <para>Tag name.</para>
+                    /// <para>The tag name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>有意向</para>
@@ -431,9 +406,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 }
 
                 /// <summary>
-                /// <para>Call list. This parameter is deprecated.</para>
+                /// <para>The call list. This parameter has been deprecated.</para>
                 /// <remarks>
-                /// <para>Use the searchTask operation instead.</para>
+                /// <para>You can retrieve this information by calling the searchTask operation.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("Tasks")]
@@ -441,7 +416,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public List<QueryJobsResponseBodyJobsListTasks> Tasks { get; set; }
                 public class QueryJobsResponseBodyJobsListTasks : TeaModel {
                     /// <summary>
-                    /// <para>Actual call time.</para>
+                    /// <para>The actual outbound call time.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1579068424883</para>
@@ -451,7 +426,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public long? ActualTime { get; set; }
 
                     /// <summary>
-                    /// <para>Summary. This field is deprecated.</para>
+                    /// <para>The summary. This is a legacy field and is no longer in use.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -461,7 +436,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Brief { get; set; }
 
                     /// <summary>
-                    /// <para>SIP call ID.</para>
+                    /// <para>SIP call ID。</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1528189846043</para>
@@ -471,7 +446,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string CallId { get; set; }
 
                     /// <summary>
-                    /// <para>Callee number.</para>
+                    /// <para>The called number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>135****8888</para>
@@ -481,7 +456,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string CalledNumber { get; set; }
 
                     /// <summary>
-                    /// <para>Caller number.</para>
+                    /// <para>The calling number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0571****3106</para>
@@ -491,7 +466,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string CallingNumber { get; set; }
 
                     /// <summary>
-                    /// <para>Chatbot ID.</para>
+                    /// <para>The chatbot ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1234</para>
@@ -501,14 +476,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string ChatbotId { get; set; }
 
                     /// <summary>
-                    /// <para>Contact information.</para>
+                    /// <para>The contact information.</para>
                     /// </summary>
                     [NameInMap("Contact")]
                     [Validation(Required=false)]
                     public QueryJobsResponseBodyJobsListTasksContact Contact { get; set; }
                     public class QueryJobsResponseBodyJobsListTasksContact : TeaModel {
                         /// <summary>
-                        /// <para>Contact ID.</para>
+                        /// <para>The contact ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>db3db762-e421-44c9-9a01-cb423470757c</para>
@@ -518,7 +493,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string ContactId { get; set; }
 
                         /// <summary>
-                        /// <para>Contact name.</para>
+                        /// <para>The contact name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>张三</para>
@@ -528,7 +503,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string ContactName { get; set; }
 
                         /// <summary>
-                        /// <para>Honorific.</para>
+                        /// <para>The honorific title.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>张先生</para>
@@ -538,7 +513,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string Honorific { get; set; }
 
                         /// <summary>
-                        /// <para>Job ID.</para>
+                        /// <para>The job ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>b72425bd-7871-4050-838e-033d80d754b7</para>
@@ -548,7 +523,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string JobId { get; set; }
 
                         /// <summary>
-                        /// <para>Contact phone number.</para>
+                        /// <para>The contact phone number.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>135****8888</para>
@@ -558,7 +533,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string PhoneNumber { get; set; }
 
                         /// <summary>
-                        /// <para>Business association ID.</para>
+                        /// <para>The associated business ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2fa6bac3-06da-4315-82ab-72d6fd3a6f34</para>
@@ -568,7 +543,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string ReferenceId { get; set; }
 
                         /// <summary>
-                        /// <para>Role.</para>
+                        /// <para>The role.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <list type="bullet">
@@ -580,7 +555,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                         public string Role { get; set; }
 
                         /// <summary>
-                        /// <para>Status.</para>
+                        /// <para>The status.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Available</para>
@@ -592,7 +567,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     }
 
                     /// <summary>
-                    /// <para>Call duration in seconds.</para>
+                    /// <para>The call duration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>120</para>
@@ -602,7 +577,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public int? Duration { get; set; }
 
                     /// <summary>
-                    /// <para>Job ID.</para>
+                    /// <para>The job ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>b72425bd-7871-4050-838e-033d80d754b7</para>
@@ -612,7 +587,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string JobId { get; set; }
 
                     /// <summary>
-                    /// <para>Scheduled call time.</para>
+                    /// <para>The planned outbound call time.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1579068424883</para>
@@ -622,7 +597,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public long? PlanedTime { get; set; }
 
                     /// <summary>
-                    /// <para>Scenario ID.</para>
+                    /// <para>The scenario ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ade80092-03d9-4f4d-ad4f-ab8a247d3150</para>
@@ -632,73 +607,73 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string ScenarioId { get; set; }
 
                     /// <summary>
-                    /// <para>The status of the task. Valid values are described below. Note that the Succeeded status is subdivided by reason. The generic Succeeded: 1 (Connected) status is no longer returned, and a specific success reason is provided instead.</para>
+                    /// <para>The task status. Note: The Succeeded status has been subdivided into specific reason types. The Succeeded:1 (Connected) status is no longer returned. Instead, the specific sub-reason type is returned. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>Executing: 0 (Calling).</para>
+                    /// <item><description><para>Executing: 0 (Dialing).</para>
                     /// </description></item>
                     /// <item><description><para>Succeeded: 1 (Connected).</para>
                     /// </description></item>
-                    /// <item><description><para>NoAnswer: 2 (Not connected – No answer).</para>
+                    /// <item><description><para>NoAnswer: 2 (Not connected - No answer).</para>
                     /// </description></item>
-                    /// <item><description><para>NotExist: 3 (Not connected – Nonexistent number).</para>
+                    /// <item><description><para>NotExist: 3 (Not connected - Nonexistent number).</para>
                     /// </description></item>
-                    /// <item><description><para>Busy: 4 (Not connected – Line busy).</para>
+                    /// <item><description><para>Busy: 4 (Not connected - Busy).</para>
                     /// </description></item>
-                    /// <item><description><para>Cancelled: 5 (Not dialed – Task stopped).</para>
+                    /// <item><description><para>Cancelled: 5 (Not dialed - Task stopped).</para>
                     /// </description></item>
                     /// <item><description><para>Failed: 6 (Failed).</para>
                     /// </description></item>
-                    /// <item><description><para>NotConnected: 7 (Not connected – Unreachable).</para>
+                    /// <item><description><para>NotConnected: 7 (Not connected - Unreachable).</para>
                     /// </description></item>
-                    /// <item><description><para>PoweredOff: 8 (Not connected – Powered off).</para>
+                    /// <item><description><para>PoweredOff: 8 (Not connected - Powered off).</para>
                     /// </description></item>
-                    /// <item><description><para>OutOfService: 9 (Not connected – Service suspended).</para>
+                    /// <item><description><para>OutOfService: 9 (Not connected - Called party out of service).</para>
                     /// </description></item>
-                    /// <item><description><para>InArrears: 10 (Not connected – Account has an overdue payment).</para>
+                    /// <item><description><para>InArrears: 10 (Not connected - Called party has overdue payment).</para>
                     /// </description></item>
-                    /// <item><description><para>EmptyNumber: 11 (Not dialed – Invalid number).</para>
+                    /// <item><description><para>EmptyNumber: 11 (Not dialed - Nonexistent number).</para>
                     /// </description></item>
-                    /// <item><description><para>PerDayCallCountLimit: 12 (Not dialed – Daily call limit exceeded).</para>
+                    /// <item><description><para>PerDayCallCountLimit: 12 (Not dialed - Daily limit exceeded).</para>
                     /// </description></item>
-                    /// <item><description><para>ContactBlockList: 13 (Not dialed – Number on blocklist).</para>
+                    /// <item><description><para>ContactBlockList: 13 (Not dialed - Blocked list).</para>
                     /// </description></item>
-                    /// <item><description><para>CallerNotRegistered: 14 (Not dialed – Caller ID not registered).</para>
+                    /// <item><description><para>CallerNotRegistered: 14 (Not dialed - Caller number not registered).</para>
                     /// </description></item>
-                    /// <item><description><para>Terminated: 15 (Not dialed – Terminated).</para>
+                    /// <item><description><para>Terminated: 15 (Not dialed - Terminated).</para>
                     /// </description></item>
-                    /// <item><description><para>VerificationCancelled: 16 (Not dialed – Canceled due to pre-call validation failure).</para>
+                    /// <item><description><para>VerificationCancelled: 16 (Not dialed - Pre-call verification failed).</para>
                     /// </description></item>
-                    /// <item><description><para>OutOfServiceNoCall: 17 (Not dialed – Service suspended).</para>
+                    /// <item><description><para>OutOfServiceNoCall: 17 (Not dialed - Called party out of service).</para>
                     /// </description></item>
-                    /// <item><description><para>InArrearsNoCall: 18 (Not dialed – Account has an overdue payment).</para>
+                    /// <item><description><para>InArrearsNoCall: 18 (Not dialed - Called party has overdue payment).</para>
                     /// </description></item>
-                    /// <item><description><para>CallingNumberNotExist: 19 (Not dialed – Caller ID does not exist).</para>
+                    /// <item><description><para>CallingNumberNotExist: 19 (Not dialed - Caller number does not exist).</para>
                     /// </description></item>
-                    /// <item><description><para>SucceededFinish: 20 (Connected – Completed normally).</para>
+                    /// <item><description><para>SucceededFinish: 20 (Connected - Completed normally).</para>
                     /// </description></item>
-                    /// <item><description><para>SucceededChatbotHangUpAfterNoAnswer: 21 (Connected – Bot hung up due to unrecognized input).</para>
+                    /// <item><description><para>SucceededChatbotHangUpAfterNoAnswer: 21 (Connected - Robot hung up after no recognition).</para>
                     /// </description></item>
-                    /// <item><description><para>SucceededChatbotHangUpAfterSilence: 22 (Connected – Bot hung up due to a silence timeout).</para>
+                    /// <item><description><para>SucceededChatbotHangUpAfterSilence: 22 (Connected - Silence timeout hang-up).</para>
                     /// </description></item>
-                    /// <item><description><para>SucceededClientHangUpAfterNoAnswer: 23 (Connected – User hung up due to unrecognized input).</para>
+                    /// <item><description><para>SucceededClientHangUpAfterNoAnswer: 23 (Connected - User hung up after no recognition).</para>
                     /// </description></item>
-                    /// <item><description><para>SucceededClientHangUp: 24 (Connected – User hung up).</para>
+                    /// <item><description><para>SucceededClientHangUp: 24 (Connected - User hung up without reason).</para>
                     /// </description></item>
-                    /// <item><description><para>SucceededTransferByIntent: 25 (Connected – Transferred to an agent based on an intent match).</para>
+                    /// <item><description><para>SucceededTransferByIntent: 25 (Connected - Transferred to agent by intent).</para>
                     /// </description></item>
-                    /// <item><description><para>SucceededTransferAfterNoAnswer: 26 (Connected – Transferred to an agent due to unrecognized input).</para>
+                    /// <item><description><para>SucceededTransferAfterNoAnswer: 26 (Connected - Transferred to agent after no recognition).</para>
                     /// </description></item>
-                    /// <item><description><para>SucceededInoInterAction: 27 (Connected – No user interaction).</para>
+                    /// <item><description><para>SucceededInoInterAction: 27 (Connected - No interaction from user side).</para>
                     /// </description></item>
-                    /// <item><description><para>SucceededError: 28 (Connected – Call interrupted by a system error).</para>
+                    /// <item><description><para>SucceededError: 28 (Connected - System exception interruption).</para>
                     /// </description></item>
-                    /// <item><description><para>SucceededSpecialInterceptVoiceAssistant: 29 (Connected – Intercepted by a voice assistant).</para>
+                    /// <item><description><para>SucceededSpecialInterceptVoiceAssistant: 29 (Connected - Special intercept - Voice assistant).</para>
                     /// </description></item>
-                    /// <item><description><para>SucceededSpecialInterceptExtensionNumberTransfer: 30 (Connected – Intercepted due to an extension transfer).</para>
+                    /// <item><description><para>SucceededSpecialInterceptExtensionNumberTransfer: 30 (Connected - Special intercept - Extension number transfer).</para>
                     /// </description></item>
-                    /// <item><description><para>SucceededSpecialInterceptCustomSpecialIntercept: 31 (Connected – Intercepted by a custom rule).</para>
+                    /// <item><description><para>SucceededSpecialInterceptCustomSpecialIntercept: 31 (Connected - Special intercept - Custom intercept).</para>
                     /// </description></item>
-                    /// <item><description><para>HighRiskSipCode: 32 (Not dialed – High-risk number).</para>
+                    /// <item><description><para>HighRiskSipCode: 32 (Not dialed - High risk).</para>
                     /// </description></item>
                     /// </list>
                     /// 
@@ -710,7 +685,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>Call ID.</para>
+                    /// <para>The call ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ff44709e-39a6-43ba-959b-20fcabe3e496</para>
@@ -724,7 +699,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>Page number.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -734,7 +709,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>Page size.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -744,7 +719,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of records.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -756,7 +731,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -766,7 +741,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -776,7 +751,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call succeeded.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

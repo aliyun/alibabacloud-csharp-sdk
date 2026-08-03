@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DescribeTenantBindNumberRequest : TeaModel {
         /// <summary>
-        /// <para>Phone number to query (required)</para>
+        /// <para>The bound number (required).</para>
         /// <remarks>
-        /// <para>Query the binding status of this number across all instances. Get the number from the response of ListAllTenantBindNumberBinding.</para>
+        /// <para>Queries the binding status of the specified number across all instances. Obtain the number from the response parameters of ListAllTenantBindNumberBinding.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

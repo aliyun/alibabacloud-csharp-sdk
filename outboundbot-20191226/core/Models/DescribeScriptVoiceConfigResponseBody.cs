@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the script voice configuration.</para>
+        /// <para>The scene voice configuration information.</para>
         /// </summary>
         [NameInMap("ScriptVoiceConfig")]
         [Validation(Required=false)]
         public DescribeScriptVoiceConfigResponseBodyScriptVoiceConfig ScriptVoiceConfig { get; set; }
         public class DescribeScriptVoiceConfigResponseBodyScriptVoiceConfig : TeaModel {
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>291cfc6a-8703-4bdd-a99d-9cba32d5288a</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             /// <para>The script content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>你的花呗欠款逾期了需要处理，你现在能处理一下吗？</para>
+            /// <para>Your Huabei payment is overdue and needs to be processed. Can you handle it now?</para>
             /// </summary>
             [NameInMap("ScriptContent")]
             [Validation(Required=false)]
             public string ScriptContent { get; set; }
 
             /// <summary>
-            /// <para>The ID of the script.</para>
+            /// <para>The scene ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>947e0875-b5d4-4b33-b18c-7b2cf85bcb4f</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ScriptId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the script voice configuration.</para>
+            /// <para>The scene voice configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2a07b634-e15d-445f-bbcb-fc4ea2df7b87</para>
@@ -97,17 +97,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ScriptVoiceConfigId { get; set; }
 
             /// <summary>
-            /// <para>The script waveform relation data. Returned only when <c>Type</c> is <c>WAVEFORM</c>.</para>
+            /// <para>The script recording data. This parameter has a value only when Type is set to WAVEFORM.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;ScriptContent&quot;:&quot;请问你是&quot;,&quot;ScriptWaveformId&quot;:&quot;07db2f0a-acb2-4e68-b9f4-66397414f50c&quot;},{&quot;ScriptContent&quot;:&quot;吗？&quot;,&quot;ScriptWaveformId&quot;:&quot;c2a69440-03e3-406e-b0a9-a9791fccb31b&quot;}]</para>
+            /// <para>[{&quot;ScriptContent&quot;:&quot;May I ask if you are&quot;,&quot;ScriptWaveformId&quot;:&quot;07db2f0a-acb2-4e68-b9f4-66397414f50c&quot;},{&quot;ScriptContent&quot;:&quot;?&quot;,&quot;ScriptWaveformId&quot;:&quot;c2a69440-03e3-406e-b0a9-a9791fccb31b&quot;}]</para>
             /// </summary>
             [NameInMap("ScriptWaveformRelation")]
             [Validation(Required=false)]
             public string ScriptWaveformRelation { get; set; }
 
             /// <summary>
-            /// <para>The source of the script.</para>
+            /// <para>The script source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DIALOGUE_FLOW</para>
@@ -117,12 +117,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The type of the voice configuration. Valid values:</para>
+            /// <para>The recording type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>WAVEFORM</c>: A recording.</para>
-            /// </description></item>
-            /// <item><description><para><c>TTS</c>: Text-to-speech.</para>
-            /// </description></item>
+            /// <item><description>WAVEFORM: recording.</description></item>
+            /// <item><description>TTS: text-to-speech.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of job groups.</para>
+        /// <para>The task list.</para>
         /// </summary>
         [NameInMap("JobGroups")]
         [Validation(Required=false)]
         public List<ListJobGroupsAsyncResponseBodyJobGroups> JobGroups { get; set; }
         public class ListJobGroupsAsyncResponseBodyJobGroups : TeaModel {
             /// <summary>
-            /// <para>The time when the job group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1640316786259</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public ListJobGroupsAsyncResponseBodyJobGroupsExportProgress ExportProgress { get; set; }
             public class ListJobGroupsAsyncResponseBodyJobGroupsExportProgress : TeaModel {
                 /// <summary>
-                /// <para>This parameter is deprecated. The download URL of the file.</para>
+                /// <para>The download URL. [Deprecated]</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.xxx.com/xxx">http://www.xxx.com/xxx</a></para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string FileHttpUrl { get; set; }
 
                 /// <summary>
-                /// <para>The progress of the export.</para>
+                /// <para>The progress.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Progress { get; set; }
 
                 /// <summary>
-                /// <para>The status of the export.</para>
+                /// <para>The status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PENDING</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>This parameter is deprecated. The ID of the task that is used to parse the job file.</para>
+            /// <para>The ID of the jobFile parsing task. [Deprecated]</para>
             /// 
             /// <b>Example:</b>
             /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string JobDataParsingTaskId { get; set; }
 
             /// <summary>
-            /// <para>The description of the job group.</para>
+            /// <para>The task description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string JobGroupDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the job group.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string JobGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the job group.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string JobGroupName { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of concurrent calls.</para>
+            /// <para>The minimum concurrency.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? MinConcurrency { get; set; }
 
             /// <summary>
-            /// <para>The time when the job group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The modification time, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1640316786259</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The progress of the job group.</para>
+            /// <para>The node statistics information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public ListJobGroupsAsyncResponseBodyJobGroupsProgress Progress { get; set; }
             public class ListJobGroupsAsyncResponseBodyJobGroupsProgress : TeaModel {
                 /// <summary>
-                /// <para>The number of canceled jobs.</para>
+                /// <para>The number of cancelled jobs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? CancelledNum { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated. The total duration of the execution.</para>
+                /// <para>The total execution duration so far. [Deprecated]</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? Duration { get; set; }
 
                 /// <summary>
-                /// <para>The number of jobs that are being executed.</para>
+                /// <para>The number of jobs being executed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? PausedNum { get; set; }
 
                 /// <summary>
-                /// <para>The number of jobs that are being scheduled.</para>
+                /// <para>The number of jobs being scheduled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? Scheduling { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated. The time when the job group started.</para>
+                /// <para>The start time. [Deprecated]</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1640316786259</para>
@@ -229,24 +229,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The execution state. Valid values:</para>
+                /// <para>The execution status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>Draft</c>: The job group is a draft.</para>
-                /// </description></item>
-                /// <item><description><para><c>Scheduling</c>: The job group is being scheduled.</para>
-                /// </description></item>
-                /// <item><description><para><c>Executing</c>: The job group is running.</para>
-                /// </description></item>
-                /// <item><description><para><c>Completed</c>: The job group is complete.</para>
-                /// </description></item>
-                /// <item><description><para><c>Paused</c>: The job group is paused.</para>
-                /// </description></item>
-                /// <item><description><para><c>Failed</c>: The job group has failed.</para>
-                /// </description></item>
-                /// <item><description><para><c>Cancelled</c>: The job group is canceled.</para>
-                /// </description></item>
-                /// <item><description><para><c>Initializing</c>: The job group is being initialized.</para>
-                /// </description></item>
+                /// <item><description>Draft: Draft.</description></item>
+                /// <item><description>Scheduling: Scheduling in progress.</description></item>
+                /// <item><description>Executing: Executing.</description></item>
+                /// <item><description>Completed: Completed.</description></item>
+                /// <item><description>Paused: Paused.</description></item>
+                /// <item><description>Failed: Failed.</description></item>
+                /// <item><description>Cancelled: Cancelled.</description></item>
+                /// <item><description>Initializing: Initializing.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -277,7 +269,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public int? TotalJobs { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated. The number of unanswered calls.</para>
+                /// <para>The number of unanswered jobs. [Deprecated]</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -289,7 +281,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
-            /// <para>The ID of the script.</para>
+            /// <para>The script ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
@@ -299,7 +291,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ScriptId { get; set; }
 
             /// <summary>
-            /// <para>The name of the script.</para>
+            /// <para>The script name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
@@ -309,7 +301,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ScriptName { get; set; }
 
             /// <summary>
-            /// <para>The version of the script.</para>
+            /// <para>The script version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -319,7 +311,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ScriptVersion { get; set; }
 
             /// <summary>
-            /// <para>The status of the job group.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Scheduling</para>
@@ -329,9 +321,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated. The scheduling policy.</para>
+            /// <para>The strategy. [Deprecated]</para>
             /// <remarks>
-            /// <para>To view the scheduling policy of a job group, call the <c>DescribeJobGroup</c> operation.</para>
+            /// <para>To view the task strategy information, call the DescribeJobGroup operation.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -342,7 +334,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public ListJobGroupsAsyncResponseBodyJobGroupsStrategy Strategy { get; set; }
             public class ListJobGroupsAsyncResponseBodyJobGroupsStrategy : TeaModel {
                 /// <summary>
-                /// <para>The end time of the scheduling policy.</para>
+                /// <para>The strategy end time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1640316786259</para>
@@ -352,7 +344,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the scheduling policy.</para>
+                /// <para>The strategy start time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1640316786259</para>
@@ -446,7 +438,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the asynchronous task is valid.</para>
+        /// <para>Indicates whether the result is valid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

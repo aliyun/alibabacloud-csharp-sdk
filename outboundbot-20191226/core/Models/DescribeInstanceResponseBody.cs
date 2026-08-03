@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the instance.</para>
+        /// <para>The business instance information.</para>
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public DescribeInstanceResponseBodyInstance Instance { get; set; }
         public class DescribeInstanceResponseBodyInstance : TeaModel {
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1578469042851</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the creator.</para>
+            /// <para>The creator ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>435986</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>The description of the instance.</para>
+            /// <para>The description of the business instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>这个是第一个实例</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string InstanceDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The business instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The name of the business instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>第一个实例</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent conversations for the instance.</para>
+            /// <para>The maximum concurrency of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? MaxConcurrentConversation { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance owner.</para>
+            /// <para>The name of the business instance owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string OwnerName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>

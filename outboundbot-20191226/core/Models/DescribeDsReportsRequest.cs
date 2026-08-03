@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DescribeDsReportsRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Task group ID</para>
+        /// <para>The job group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
