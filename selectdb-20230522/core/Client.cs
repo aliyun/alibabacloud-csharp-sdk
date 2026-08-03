@@ -609,6 +609,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             return await CheckCreateDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a specified IP address already exists in a network whitelist group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckIpExistsInSecurityIpListRequest
         /// </param>
@@ -642,6 +647,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             return TeaModel.ToObject<CheckIpExistsInSecurityIpListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a specified IP address already exists in a network whitelist group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckIpExistsInSecurityIpListRequest
         /// </param>
@@ -675,6 +685,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             return TeaModel.ToObject<CheckIpExistsInSecurityIpListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a specified IP address already exists in a network whitelist group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckIpExistsInSecurityIpListRequest
         /// </param>
@@ -688,6 +703,11 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             return CheckIpExistsInSecurityIpListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a specified IP address already exists in a network whitelist group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckIpExistsInSecurityIpListRequest
         /// </param>
@@ -1387,6 +1407,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             {
                 query["EngineVersion"] = request.EngineVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FEClassCode))
+            {
+                query["FEClassCode"] = request.FEClassCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FENodeCount))
+            {
+                query["FENodeCount"] = request.FENodeCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiZoneShrink))
             {
                 query["MultiZone"] = request.MultiZoneShrink;
@@ -1545,6 +1573,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
             {
                 query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FEClassCode))
+            {
+                query["FEClassCode"] = request.FEClassCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FENodeCount))
+            {
+                query["FENodeCount"] = request.FENodeCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiZoneShrink))
             {
@@ -3511,7 +3547,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified instance.</para>
+        /// <para>Queries the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3561,7 +3597,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified instance.</para>
+        /// <para>Queries the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3611,7 +3647,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified instance.</para>
+        /// <para>Queries the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3629,7 +3665,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a specified instance.</para>
+        /// <para>Queries the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4831,7 +4867,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取表结构</para>
+        /// <para>Retrieves the CREATE TABLE statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4885,7 +4921,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取表结构</para>
+        /// <para>Retrieves the CREATE TABLE statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4939,7 +4975,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取表结构</para>
+        /// <para>Retrieves the CREATE TABLE statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4957,7 +4993,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取表结构</para>
+        /// <para>Retrieves the CREATE TABLE statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5551,7 +5587,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the pricing information for creating a new cluster in a specified ApsaraDB for SelectDB instance.</para>
+        /// <para>Retrieves pricing information when creating a cluster under a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5589,7 +5625,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the pricing information for creating a new cluster in a specified ApsaraDB for SelectDB instance.</para>
+        /// <para>Retrieves pricing information when creating a cluster under a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5627,7 +5663,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the pricing information for creating a new cluster in a specified ApsaraDB for SelectDB instance.</para>
+        /// <para>Retrieves pricing information when creating a cluster under a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5645,7 +5681,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the pricing information for creating a new cluster in a specified ApsaraDB for SelectDB instance.</para>
+        /// <para>Retrieves pricing information when creating a cluster under a specified ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

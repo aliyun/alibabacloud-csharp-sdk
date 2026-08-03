@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? CacheSize { get; set; }
 
         /// <summary>
-        /// <para>The billing method.</para>
+        /// <para>The billing type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The elastic computing resources.</para>
+        /// <para>The elastic compute resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DbInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether this is an inquiry for changing the billing method of the cluster.</para>
+        /// <para>Specifies whether to query the price for converting the cluster billing type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? PreCacheSize { get; set; }
 
         /// <summary>
-        /// <para>The reserved computing resources.</para>
+        /// <para>The reserved compute resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -114,6 +114,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
+        /// <para>The coupon code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123412345</para>
         /// </summary>

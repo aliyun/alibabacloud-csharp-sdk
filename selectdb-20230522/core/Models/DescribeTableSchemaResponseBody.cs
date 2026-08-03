@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeTableSchemaResponseBody : TeaModel {
         /// <summary>
+        /// <para>The CREATE TABLE statement.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CREATE TABLE test_tb
         /// (
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string CreateStatement { get; set; }
 
         /// <summary>
+        /// <para>The database name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_db</para>
         /// </summary>
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string Database { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4773E4EC-025D-509F-AEA9-D53123FDFB0F</para>
         /// </summary>
@@ -42,6 +48,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The table name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_tb</para>
         /// </summary>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class CheckIpExistsInSecurityIpListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CheckIpExistsInSecurityIpListResponseBodyData Data { get; set; }
         public class CheckIpExistsInSecurityIpListResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the IP address exists.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4773E4EC-025D-509F-AEA9-D53123FDFB0F</para>
         /// </summary>
