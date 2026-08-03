@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string ProjectInfo { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>avatar-1</para>
-        /// </summary>
         [NameInMap("projectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
@@ -25,10 +21,6 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string Purpose { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ail003</para>
-        /// </summary>
         [NameInMap("sceneId")]
         [Validation(Required=false)]
         public string SceneId { get; set; }

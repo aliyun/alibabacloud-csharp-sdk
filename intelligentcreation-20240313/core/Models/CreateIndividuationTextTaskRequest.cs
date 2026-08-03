@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public List<List<string>> CrowdPack { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>840015278620459008</para>
-        /// </summary>
         [NameInMap("projectId")]
         [Validation(Required=false)]
         public string ProjectId { get; set; }

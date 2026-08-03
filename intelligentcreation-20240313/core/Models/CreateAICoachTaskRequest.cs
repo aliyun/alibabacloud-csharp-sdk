@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class CreateAICoachTaskRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>541E7123-2E8A-5BA2-AC38-665650C84129</para>
-        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

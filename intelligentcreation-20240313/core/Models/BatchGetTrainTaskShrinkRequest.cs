@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class BatchGetTrainTaskShrinkRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1524004782431111</para>
-        /// </summary>
         [NameInMap("aliyunMainId")]
         [Validation(Required=false)]
         public string AliyunMainId { get; set; }

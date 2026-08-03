@@ -17,18 +17,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>111</para>
-        /// </summary>
         [NameInMap("sessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1251317954812712</para>
-        /// </summary>
         [NameInMap("uid")]
         [Validation(Required=false)]
         public string Uid { get; set; }

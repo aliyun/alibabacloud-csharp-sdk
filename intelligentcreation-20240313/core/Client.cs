@@ -2557,6 +2557,184 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建文档生成剧本任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGenerateAICoachScriptTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGenerateAICoachScriptTaskResponse
+        /// </returns>
+        public CreateGenerateAICoachScriptTaskResponse CreateGenerateAICoachScriptTaskWithOptions(CreateGenerateAICoachScriptTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssessmentPoint))
+            {
+                body["assessmentPoint"] = request.AssessmentPoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueKey))
+            {
+                body["dialogueKey"] = request.DialogueKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueUrl))
+            {
+                body["dialogueUrl"] = request.DialogueUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocList))
+            {
+                body["docList"] = request.DocList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocUrlList))
+            {
+                body["docUrlList"] = request.DocUrlList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptName))
+            {
+                body["scriptName"] = request.ScriptName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGenerateAICoachScriptTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/scriptGenerateTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGenerateAICoachScriptTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建文档生成剧本任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGenerateAICoachScriptTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGenerateAICoachScriptTaskResponse
+        /// </returns>
+        public async Task<CreateGenerateAICoachScriptTaskResponse> CreateGenerateAICoachScriptTaskWithOptionsAsync(CreateGenerateAICoachScriptTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssessmentPoint))
+            {
+                body["assessmentPoint"] = request.AssessmentPoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueKey))
+            {
+                body["dialogueKey"] = request.DialogueKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueUrl))
+            {
+                body["dialogueUrl"] = request.DialogueUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocList))
+            {
+                body["docList"] = request.DocList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocUrlList))
+            {
+                body["docUrlList"] = request.DocUrlList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptName))
+            {
+                body["scriptName"] = request.ScriptName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGenerateAICoachScriptTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/scriptGenerateTask",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGenerateAICoachScriptTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建文档生成剧本任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGenerateAICoachScriptTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGenerateAICoachScriptTaskResponse
+        /// </returns>
+        public CreateGenerateAICoachScriptTaskResponse CreateGenerateAICoachScriptTask(CreateGenerateAICoachScriptTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGenerateAICoachScriptTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建文档生成剧本任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGenerateAICoachScriptTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGenerateAICoachScriptTaskResponse
+        /// </returns>
+        public async Task<CreateGenerateAICoachScriptTaskResponse> CreateGenerateAICoachScriptTaskAsync(CreateGenerateAICoachScriptTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGenerateAICoachScriptTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建配图生成任务</para>
         /// </summary>
         /// 
@@ -4877,6 +5055,176 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查看剧本调试详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAICoachDebugResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAICoachDebugResultResponse
+        /// </returns>
+        public GetAICoachDebugResultResponse GetAICoachDebugResultWithOptions(GetAICoachDebugResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataId))
+            {
+                query["dataId"] = request.DataId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                query["dataType"] = request.DataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptDebugId))
+            {
+                query["scriptDebugId"] = request.ScriptDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptRecordId))
+            {
+                query["scriptRecordId"] = request.ScriptRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptSnapshotId))
+            {
+                query["scriptSnapshotId"] = request.ScriptSnapshotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAICoachDebugResult",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/getDebugResult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAICoachDebugResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看剧本调试详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAICoachDebugResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAICoachDebugResultResponse
+        /// </returns>
+        public async Task<GetAICoachDebugResultResponse> GetAICoachDebugResultWithOptionsAsync(GetAICoachDebugResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataId))
+            {
+                query["dataId"] = request.DataId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                query["dataType"] = request.DataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptDebugId))
+            {
+                query["scriptDebugId"] = request.ScriptDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptRecordId))
+            {
+                query["scriptRecordId"] = request.ScriptRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptSnapshotId))
+            {
+                query["scriptSnapshotId"] = request.ScriptSnapshotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAICoachDebugResult",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/getDebugResult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAICoachDebugResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看剧本调试详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAICoachDebugResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAICoachDebugResultResponse
+        /// </returns>
+        public GetAICoachDebugResultResponse GetAICoachDebugResult(GetAICoachDebugResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAICoachDebugResultWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看剧本调试详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAICoachDebugResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAICoachDebugResultResponse
+        /// </returns>
+        public async Task<GetAICoachDebugResultResponse> GetAICoachDebugResultAsync(GetAICoachDebugResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAICoachDebugResultWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询剧本详情</para>
         /// </summary>
         /// 
@@ -5003,6 +5351,136 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetAICoachScriptWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询文档生成剧本任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAICoachScriptGenerateTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAICoachScriptGenerateTaskResponse
+        /// </returns>
+        public GetAICoachScriptGenerateTaskResponse GetAICoachScriptGenerateTaskWithOptions(GetAICoachScriptGenerateTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAICoachScriptGenerateTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/scriptGenerateTask",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAICoachScriptGenerateTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询文档生成剧本任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAICoachScriptGenerateTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAICoachScriptGenerateTaskResponse
+        /// </returns>
+        public async Task<GetAICoachScriptGenerateTaskResponse> GetAICoachScriptGenerateTaskWithOptionsAsync(GetAICoachScriptGenerateTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAICoachScriptGenerateTask",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/scriptGenerateTask",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAICoachScriptGenerateTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询文档生成剧本任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAICoachScriptGenerateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAICoachScriptGenerateTaskResponse
+        /// </returns>
+        public GetAICoachScriptGenerateTaskResponse GetAICoachScriptGenerateTask(GetAICoachScriptGenerateTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAICoachScriptGenerateTaskWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询文档生成剧本任务结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAICoachScriptGenerateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAICoachScriptGenerateTaskResponse
+        /// </returns>
+        public async Task<GetAICoachScriptGenerateTaskResponse> GetAICoachScriptGenerateTaskAsync(GetAICoachScriptGenerateTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAICoachScriptGenerateTaskWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6733,6 +7211,160 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListAICoachTaskPageWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据剧本对练任务查询会话历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAICoachTaskSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAICoachTaskSessionResponse
+        /// </returns>
+        public ListAICoachTaskSessionResponse ListAICoachTaskSessionWithOptions(ListAICoachTaskSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAICoachTaskSession",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/listTaskSession",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAICoachTaskSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据剧本对练任务查询会话历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAICoachTaskSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAICoachTaskSessionResponse
+        /// </returns>
+        public async Task<ListAICoachTaskSessionResponse> ListAICoachTaskSessionWithOptionsAsync(ListAICoachTaskSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAICoachTaskSession",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/listTaskSession",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAICoachTaskSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据剧本对练任务查询会话历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAICoachTaskSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAICoachTaskSessionResponse
+        /// </returns>
+        public ListAICoachTaskSessionResponse ListAICoachTaskSession(ListAICoachTaskSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAICoachTaskSessionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据剧本对练任务查询会话历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAICoachTaskSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAICoachTaskSessionResponse
+        /// </returns>
+        public async Task<ListAICoachTaskSessionResponse> ListAICoachTaskSessionAsync(ListAICoachTaskSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAICoachTaskSessionWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10439,6 +11071,176 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await StopProjectTaskWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交剧本考核点调试</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAICoachDebugRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAICoachDebugResponse
+        /// </returns>
+        public SubmitAICoachDebugResponse SubmitAICoachDebugWithOptions(SubmitAICoachDebugRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataId))
+            {
+                body["dataId"] = request.DataId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                body["dataType"] = request.DataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeductionRule))
+            {
+                body["deductionRule"] = request.DeductionRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueList))
+            {
+                body["dialogueList"] = request.DialogueList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expressiveness))
+            {
+                body["expressiveness"] = request.Expressiveness;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Point))
+            {
+                body["point"] = request.Point;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitAICoachDebug",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/saveDebug",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitAICoachDebugResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交剧本考核点调试</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAICoachDebugRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAICoachDebugResponse
+        /// </returns>
+        public async Task<SubmitAICoachDebugResponse> SubmitAICoachDebugWithOptionsAsync(SubmitAICoachDebugRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataId))
+            {
+                body["dataId"] = request.DataId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                body["dataType"] = request.DataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeductionRule))
+            {
+                body["deductionRule"] = request.DeductionRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueList))
+            {
+                body["dialogueList"] = request.DialogueList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expressiveness))
+            {
+                body["expressiveness"] = request.Expressiveness;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Point))
+            {
+                body["point"] = request.Point;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitAICoachDebug",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/saveDebug",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitAICoachDebugResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交剧本考核点调试</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAICoachDebugRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAICoachDebugResponse
+        /// </returns>
+        public SubmitAICoachDebugResponse SubmitAICoachDebug(SubmitAICoachDebugRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SubmitAICoachDebugWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交剧本考核点调试</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAICoachDebugRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAICoachDebugResponse
+        /// </returns>
+        public async Task<SubmitAICoachDebugResponse> SubmitAICoachDebugAsync(SubmitAICoachDebugRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SubmitAICoachDebugWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class GetAICoachAssessmentPointRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("pointId")]
         [Validation(Required=false)]
         public string PointId { get; set; }

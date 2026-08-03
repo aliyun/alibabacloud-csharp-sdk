@@ -42,8 +42,6 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>4D902811-B75C-5D1B-8882-D515F8E2F977</para>
         /// </summary>

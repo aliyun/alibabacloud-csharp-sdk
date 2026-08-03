@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class SubmitImageToVideoTaskRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para><a href="http://xxx/image.png">http://xxx/image.png</a></para>
-        /// </summary>
         [NameInMap("imageUrl")]
         [Validation(Required=false)]
         public string ImageUrl { get; set; }
