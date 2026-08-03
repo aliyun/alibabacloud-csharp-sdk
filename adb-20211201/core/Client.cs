@@ -12917,14 +12917,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query SQL audit logs for the cluster.</para>
+        /// <para>Queries the SQL Audit Log of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can query SQL audit logs only if SQL audit is enabled. Log data is retained for up to 30 days. If you disable and re-enable SQL audit, you can only query logs generated after it is re-enabled. SQL audit logs do not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
-        /// <item><description>For a list of endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</description></item>
+        /// <item><description>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only entries recorded after re-enabling are available. SQL Audit Log does not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
+        /// <item><description>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12953,6 +12953,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineType))
+            {
+                query["EngineType"] = request.EngineType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostAddress))
             {
@@ -13039,14 +13043,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query SQL audit logs for the cluster.</para>
+        /// <para>Queries the SQL Audit Log of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can query SQL audit logs only if SQL audit is enabled. Log data is retained for up to 30 days. If you disable and re-enable SQL audit, you can only query logs generated after it is re-enabled. SQL audit logs do not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
-        /// <item><description>For a list of endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</description></item>
+        /// <item><description>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only entries recorded after re-enabling are available. SQL Audit Log does not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
+        /// <item><description>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13075,6 +13079,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineType))
+            {
+                query["EngineType"] = request.EngineType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HostAddress))
             {
@@ -13161,14 +13169,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query SQL audit logs for the cluster.</para>
+        /// <para>Queries the SQL Audit Log of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can query SQL audit logs only if SQL audit is enabled. Log data is retained for up to 30 days. If you disable and re-enable SQL audit, you can only query logs generated after it is re-enabled. SQL audit logs do not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
-        /// <item><description>For a list of endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</description></item>
+        /// <item><description>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only entries recorded after re-enabling are available. SQL Audit Log does not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
+        /// <item><description>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13187,14 +13195,14 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query SQL audit logs for the cluster.</para>
+        /// <para>Queries the SQL Audit Log of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can query SQL audit logs only if SQL audit is enabled. Log data is retained for up to 30 days. If you disable and re-enable SQL audit, you can only query logs generated after it is re-enabled. SQL audit logs do not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
-        /// <item><description>For a list of endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</description></item>
+        /// <item><description>SQL Audit Log entries can be queried only when SQL audit is enabled, and only entries from the last 30 days are supported. If SQL audit is shutdown and then re-enabled, only entries recorded after re-enabling are available. SQL Audit Log does not record <b>INSERT INTO VALUES</b>, <b>REPLACE INTO VALUES</b>, or <b>UPSERT INTO VALUES</b> operations.</description></item>
+        /// <item><description>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</description></item>
         /// </list>
         /// </description>
         /// 
