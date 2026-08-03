@@ -8,9 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeTaskDetailRequest : TeaModel {
+    public class SwitchInstanceToTargetZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,15 +20,30 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <b>Example:</b>
+        /// <para>r-bp1zxszhcgatnx****-db-0</para>
+        /// </summary>
+        [NameInMap("NodeId")]
+        [Validation(Required=false)]
+        public string NodeId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ReliabilityPriority</para>
+        /// </summary>
+        [NameInMap("SwitchType")]
+        [Validation(Required=false)]
+        public string SwitchType { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>674546459</para>
+        /// <para>cn-hangzhou-j</para>
         /// </summary>
-        [NameInMap("TaskId")]
+        [NameInMap("TargetZoneId")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string TargetZoneId { get; set; }
 
     }
 

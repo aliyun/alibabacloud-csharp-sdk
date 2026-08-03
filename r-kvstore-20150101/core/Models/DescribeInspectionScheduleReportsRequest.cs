@@ -8,33 +8,40 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeBackupPolicyRequest : TeaModel {
+    public class DescribeInspectionScheduleReportsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>r-bp1zxszhcgatnx****</para>
+        /// <para>ta-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("PageNum")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
+        public long? PageNum { get; set; }
 
-        [NameInMap("OwnerId")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long? OwnerId { get; set; }
+        public long? PageSize { get; set; }
 
-        [NameInMap("ResourceOwnerAccount")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>scheduleId-202604141xxxx</para>
+        /// </summary>
+        [NameInMap("ScheduleId")]
         [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string ScheduleId { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]

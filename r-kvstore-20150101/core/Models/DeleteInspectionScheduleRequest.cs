@@ -8,33 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class DescribeBackupPolicyRequest : TeaModel {
+    public class DeleteInspectionScheduleRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>r-bp1zxszhcgatnx****</para>
+        /// <para>ta-bp1zxszhcgatnx****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("OwnerAccount")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>scheduleId-202604141xxxx</para>
+        /// </summary>
+        [NameInMap("ScheduleId")]
         [Validation(Required=false)]
-        public string OwnerAccount { get; set; }
-
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
-        [NameInMap("ResourceOwnerAccount")]
-        [Validation(Required=false)]
-        public string ResourceOwnerAccount { get; set; }
-
-        [NameInMap("ResourceOwnerId")]
-        [Validation(Required=false)]
-        public long? ResourceOwnerId { get; set; }
+        public string ScheduleId { get; set; }
 
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The bandwidth of the instance. Unit: MB/s.</para>
+        /// <para>The bandwidth limit of the instance. Unit: MB/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the instance, in MB.</para>
+        /// <para>The storage capacity of the instance. Unit: MB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16384</para>
@@ -32,10 +32,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PrePaid</b>: subscription</para>
-        /// </description></item>
-        /// <item><description><para><b>PostPaid</b>: pay-as-you-go</para>
-        /// </description></item>
+        /// <item><description><b>PrePaid</b>: subscription.</description></item>
+        /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the instance.</para>
+        /// <para>The detailed configuration of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;EvictionPolicy\&quot;:\&quot;volatile-lru\&quot;,\&quot;hash-max-ziplist-entries\&quot;:512,\&quot;zset-max-ziplist-entries\&quot;:128,\&quot;zset-max-ziplist-value\&quot;:64,\&quot;set-max-intset-entries\&quot;:512,\&quot;hash-max-ziplist-value\&quot;:64}</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The private connection endpoint of the instance.</para>
+        /// <para>The internal network endpoint of the Redis instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****.redis.rds.aliyuncs.com</para>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ConnectionDomain { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of connections.</para>
+        /// <para>The maximum number of connections supported by the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -76,7 +74,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? Connections { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the subscription instance. The time is displayed in UTC. Format: <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z.</para>
+        /// <para>The time when the subscription instance expires. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-01-18T16:00:00Z</para>
@@ -86,7 +84,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID, which is globally unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>
@@ -106,7 +104,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The state of the instance. For this operation, the returned value is always <c>Creating</c>.</para>
+        /// <para>The current status of the instance. The return value is fixed as Creating.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Creating</para>
@@ -118,10 +116,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>CLASSIC</b>: classic network</para>
-        /// </description></item>
-        /// <item><description><para><b>VPC</b>: VPC</para>
-        /// </description></item>
+        /// <item><description><b>CLASSIC</b>: classic network.</description></item>
+        /// <item><description><b>VPC</b>: VPC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,10 +130,8 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <summary>
         /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>STAND_ALONE</b>: standalone</para>
-        /// </description></item>
-        /// <item><description><para><b>MASTER_SLAVE</b>: primary-replica</para>
-        /// </description></item>
+        /// <item><description><b>STAND_ALONE</b>: single replica.</description></item>
+        /// <item><description><b>MASTER_SLAVE</b>: dual-replica.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -148,7 +142,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -159,7 +153,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The connection port of the instance.</para>
+        /// <para>The Redis service port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6379</para>
@@ -169,7 +163,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the instance.</para>
+        /// <para>The internal IP address of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.0.10</para>
@@ -179,7 +173,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string PrivateIpAddr { get; set; }
 
         /// <summary>
-        /// <para>The theoretical queries per second (QPS) of the instance.</para>
+        /// <para>The queries per second (QPS). This value is the theoretical maximum for the current instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>
@@ -189,7 +183,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public long? QPS { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hongkong</para>
@@ -199,7 +193,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5DEA3CC9-F81D-4387-8E97-CEA40F09****</para>
@@ -209,7 +203,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The username of the account. By default, the username is the same as the instance ID.</para>
+        /// <para>The account used to connect to the Redis instance. By default, an account named after the instance ID is included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1zxszhcgatnx****</para>
@@ -219,7 +213,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1e7clcw529l773d****</para>
@@ -239,7 +233,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone.</para>
+        /// <para>The zone ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-b</para>

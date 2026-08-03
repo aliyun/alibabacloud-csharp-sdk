@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class CreateTairSkvDdbTableRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster backup set ID. Some new cluster architectures support cluster backup set IDs. You can call <a href="https://www.alibabacloud.com/help/en/redis/developer-reference/api-r-kvstore-2015-01-01-describeclusterbackuplist-redis">DescribeClusterBackupList</a> to obtain the ID.</para>
+        /// <para>The cluster backup set ID. Some new cluster architectures support this parameter. You can call <a href="https://www.alibabacloud.com/help/en/redis/developer-reference/api-r-kvstore-2015-01-01-describeclusterbackuplist-redis">DescribeClusterBackupList</a> to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cb-hyxdof5x9kqb**</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and can contain up to 64 ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and cannot exceed 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz**</para>
@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        [NameInMap("RestoreTime")]
+        [Validation(Required=false)]
+        public string RestoreTime { get; set; }
+
         /// <summary>
         /// <para>The table schema configuration in JSON format.</para>
         /// 
@@ -82,7 +86,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>To create an instance from a backup set of an existing instance, specify the ID of the source instance in this parameter.</para>
+        /// <para>To create an instance from a backup set of an existing instance, specify the source instance ID in this parameter.</para>
         /// <remarks>
         /// <para>This parameter must be used together with BackupId.</para>
         /// </remarks>

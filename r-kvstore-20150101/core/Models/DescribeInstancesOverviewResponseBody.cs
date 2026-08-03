@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeInstancesOverviewResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried instances.</para>
+        /// <para>The list of instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeInstancesOverviewResponseBodyInstances> Instances { get; set; }
         public class DescribeInstancesOverviewResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The architecture of the instance. Valid values:</para>
+            /// <para>The architecture type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>cluster</b>: cluster architecture</description></item>
-            /// <item><description><b>standard</b>: standard architecture</description></item>
-            /// <item><description><b>rwsplit</b>: read/write splitting architecture</description></item>
+            /// <item><description><b>cluster</b>: Cluster Edition.</description></item>
+            /// <item><description><b>standard</b>: Standard Edition.</description></item>
+            /// <item><description><b>rwsplit</b>: read/write splitting edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,10 +42,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the instance. Valid values:</para>
+            /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PrePaid</b>: subscription</description></item>
-            /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+            /// <item><description><b>PrePaid</b>: subscription.</description></item>
+            /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The engine version of the instance. Valid values: <b>2.8</b>, <b>4.0</b>, <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</para>
+            /// <para>The Redis-compatible engine version of the instance. Valid values: <b>2.8</b>, <b>4.0</b>, <b>5.0</b>, <b>6.0</b>, and <b>7.0</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6.0</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the distributed instance.</para>
+            /// <para>The distributed instance ID.</para>
             /// <remarks>
             /// <para>This parameter is returned only when the instance is a child instance of a distributed instance.</para>
             /// </remarks>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string GlobalInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance type of the instance.</para>
+            /// <para>The instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redis.logic.sharding.2g.2db.0rodb.4proxy.default</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InstanceClass { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>r-bp1zxszhcgatnx****</para>
@@ -139,23 +139,23 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The state of the instance. Valid values:</para>
+            /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: The instance is normal.</description></item>
+            /// <item><description><b>Normal</b>: The instance is running.</description></item>
             /// <item><description><b>Creating</b>: The instance is being created.</description></item>
-            /// <item><description><b>Changing</b>: The configurations of the instance are being changed.</description></item>
+            /// <item><description><b>Changing</b>: The instance is being modified.</description></item>
             /// <item><description><b>Inactive</b>: The instance is disabled.</description></item>
-            /// <item><description><b>Flushing</b>: The instance is being released.</description></item>
+            /// <item><description><b>Flushing</b>: The instance is being purged.</description></item>
             /// <item><description><b>Released</b>: The instance is released.</description></item>
-            /// <item><description><b>Transforming</b>: The billing method of the instance is being changed.</description></item>
+            /// <item><description><b>Transforming</b>: The instance is being transformed.</description></item>
             /// <item><description><b>Unavailable</b>: The instance is unavailable.</description></item>
             /// <item><description><b>Error</b>: The instance failed to be created.</description></item>
             /// <item><description><b>Migrating</b>: The instance is being migrated.</description></item>
             /// <item><description><b>BackupRecovering</b>: The instance is being restored from a backup.</description></item>
-            /// <item><description><b>MinorVersionUpgrading</b>: The minor version of the instance is being updated.</description></item>
-            /// <item><description><b>NetworkModifying</b>: The network type of the instance is being changed.</description></item>
-            /// <item><description><b>SSLModifying</b>: The SSL certificate of the instance is being changed.</description></item>
-            /// <item><description><b>MajorVersionUpgrading</b>: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.</description></item>
+            /// <item><description><b>MinorVersionUpgrading</b>: A minor version upgrade is in progress.</description></item>
+            /// <item><description><b>NetworkModifying</b>: The network configuration is being modified.</description></item>
+            /// <item><description><b>SSLModifying</b>: The SSL configuration is being modified.</description></item>
+            /// <item><description><b>MajorVersionUpgrading</b>: A major engine version upgrade is in progress. The instance can be accessed normally.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,10 +166,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The edition of the instance. Valid values:</para>
+            /// <para>The instance type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Tair</b>: Tair (Enterprise Edition)</description></item>
-            /// <item><description><b>Redis</b>: Redis Open-Source Edition</description></item>
+            /// <item><description><b>Tair</b>: Tair (Enterprise Edition).</description></item>
+            /// <item><description><b>Redis</b>: Redis Community Edition.</description></item>
             /// <item><description><b>Memcache</b></description></item>
             /// </list>
             /// 
@@ -181,10 +181,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The network type of the instance. Valid values:</para>
+            /// <para>The network type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CLASSIC</b>: classic network</description></item>
-            /// <item><description><b>VPC</b>: VPC</description></item>
+            /// <item><description><b>CLASSIC</b>: classic network.</description></item>
+            /// <item><description><b>VPC</b>: virtual private cloud (VPC).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -194,10 +194,17 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             [Validation(Required=false)]
             public string NetworkType { get; set; }
 
+            [NameInMap("NodeType")]
+            [Validation(Required=false)]
+            public string NodeType { get; set; }
+
             /// <summary>
-            /// <para>The private IP address of the instance.</para>
+            /// <para>The private IP address of the instance in a VPC. The IP address may change. Use ConnectionDomain (internal endpoint) to connect to the instance.</para>
             /// <remarks>
-            /// <para>This parameter is not returned when the instance is deployed in the classic network.</para>
+            /// <list type="bullet">
+            /// <item><description>This parameter is not returned if the network type of the instance is classic network.</description></item>
+            /// <item><description>This parameter is not returned for cloud-native instances.</description></item>
+            /// </list>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -208,7 +215,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string PrivateIp { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -218,7 +225,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the instance belongs.</para>
+            /// <para>The resource group ID to which the instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmyiu4ekp****</para>
@@ -228,9 +235,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Instance\&quot;s secondary zone id.</para>
+            /// <para>The secondary zone ID.</para>
             /// <remarks>
-            /// <para>This parameter is only returned when the instance has a secondary zone ID.</para>
+            /// <para>This parameter is returned only when the instance has a secondary zone.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -241,7 +248,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string SecondaryZoneId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch to which the instance is connected.</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1e7clcw529l773d****</para>
@@ -251,7 +258,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC.</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1nme44gek34slfc****</para>
@@ -261,7 +268,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the instance.</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-b</para>
@@ -273,7 +280,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1E83311F-0EE4-4922-A3BF-730B312B****</para>

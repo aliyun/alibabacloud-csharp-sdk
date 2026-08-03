@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The instance name. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. The name cannot contain the following characters: @/:=&quot;&lt;&gt;{} and spaces.</para>
+        /// <para>The instance name. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. The name cannot contain the following characters: @ / : = &quot; &lt; &gt; { } or spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apitest</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         /// <para>The password of the instance. The password must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The password is 8 to 32 characters in length.</description></item>
-        /// <item><description>The password contains at least three of the following character types: uppercase letters, lowercase letters, special characters, and digits. Supported special characters are <c>!@#$%^&amp;*()_+-=</c>.</description></item>
+        /// <item><description>The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Supported special characters are <c>!@#$%^&amp;*()_+-=</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/61012.htm">DescribeRegions</a> to query available regions. Use this parameter to specify the region in which to create the instance.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> to query available regions. Use this parameter to specify the region in which to create the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-resourcegroupid1</para>

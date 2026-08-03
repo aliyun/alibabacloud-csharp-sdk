@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public List<DescribeParameterGroupsResponseBodyParameterGroups> ParameterGroups { get; set; }
         public class DescribeParameterGroupsResponseBodyParameterGroups : TeaModel {
             /// <summary>
-            /// <para>The service category. Valid values:</para>
+            /// <para>The product category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Redis Open-Source Edition</description></item>
-            /// <item><description><b>1</b>: Tair (Enterprise Edition)</description></item>
+            /// <item><description><b>0</b>: Redis Community Edition</description></item>
+            /// <item><description><b>1</b>: Tair (Enhanced Edition)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public long? Category { get; set; }
 
             /// <summary>
-            /// <para>The time when the parameter template was created.</para>
+            /// <para>The creation time of the parameter template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-18 16:32:45</para>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             /// <summary>
             /// <para>The engine type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>redis</b>: Redis Open-Source Edition or Tair (In-Memory)</description></item>
-            /// <item><description><b>tair_pena</b>: Tair (On NVM)</description></item>
-            /// <item><description><b>tair_pdb</b>: Tair (On Disk)</description></item>
+            /// <item><description><b>redis</b>: Redis Community Edition or Tair (Enhanced Edition) in-memory type.</description></item>
+            /// <item><description><b>tair_pena</b>: Tair (Enhanced Edition) persistent memory type.</description></item>
+            /// <item><description><b>tair_pdb</b>: Tair (Enhanced Edition) cloud disk type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The compatible engine version.</para>
+            /// <para>The engine-compatible version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the parameter template was last modified.</para>
+            /// <para>The most recent modification time of the parameter template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-18 16:32:45</para>

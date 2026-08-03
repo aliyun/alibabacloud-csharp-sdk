@@ -64,28 +64,32 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
                 {"na-south-1", "r-kvstore.na-south-1.aliyuncs.com"},
                 {"me-east-1", "r-kvstore.me-east-1.aliyuncs.com"},
                 {"me-central-1", "r-kvstore.me-central-1.aliyuncs.com"},
+                {"eu-west-2", "r-kvstore.eu-west-2.aliyuncs.com"},
                 {"eu-west-1", "r-kvstore.eu-west-1.aliyuncs.com"},
                 {"eu-central-1", "r-kvstore.eu-central-1.aliyuncs.com"},
+                {"cn-zhongwei", "r-kvstore.cn-zhongwei.aliyuncs.com"},
                 {"cn-zhengzhou-jva", "r-kvstore.cn-zhengzhou-jva.aliyuncs.com"},
                 {"cn-zhangjiakou", "r-kvstore.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu-gic-1", "r-kvstore.cn-wulanchabu-gic-1.aliyuncs.com"},
                 {"cn-wuhan-lr", "r-kvstore.cn-wuhan-lr.aliyuncs.com"},
                 {"cn-shenzhen-finance-1", "r-kvstore.cn-shenzhen-finance-1.aliyuncs.com"},
                 {"cn-shenzhen", "r-kvstore.cn-shenzhen.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "r-kvstore.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-north-2-gov-1", "r-kvstore.cn-north-2-gov-1.aliyuncs.com"},
                 {"cn-nanjing", "r-kvstore.cn-nanjing.aliyuncs.com"},
                 {"cn-huhehaote", "r-kvstore.cn-huhehaote.aliyuncs.com"},
                 {"cn-hongkong", "r-kvstore.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "r-kvstore.cn-heyuan-acdr-1.aliyuncs.com"},
                 {"cn-guangzhou", "r-kvstore.cn-guangzhou.aliyuncs.com"},
                 {"cn-fuzhou", "r-kvstore.cn-fuzhou.aliyuncs.com"},
                 {"cn-chengdu", "r-kvstore.cn-chengdu.aliyuncs.com"},
                 {"cn-beijing-finance-1", "r-kvstore.cn-beijing-finance-1.aliyuncs.com"},
+                {"ap-southeast-8", "r-kvstore.ap-southeast-8.aliyuncs.com"},
                 {"ap-southeast-7", "r-kvstore.ap-southeast-7.aliyuncs.com"},
                 {"ap-southeast-6", "r-kvstore.ap-southeast-6.aliyuncs.com"},
                 {"ap-southeast-5", "r-kvstore.ap-southeast-5.aliyuncs.com"},
                 {"ap-southeast-3", "r-kvstore.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-2", "r-kvstore.ap-southeast-2.aliyuncs.com"},
                 {"ap-southeast-1", "r-kvstore.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "r-kvstore.ap-south-1.aliyuncs.com"},
                 {"ap-northeast-2", "r-kvstore.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "r-kvstore.ap-northeast-1.aliyuncs.com"},
             };
@@ -961,6 +965,142 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CancelActiveOperationTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭巡检任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelInspectionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelInspectionTaskResponse
+        /// </returns>
+        public CancelInspectionTaskResponse CancelInspectionTaskWithOptions(CancelInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelInspectionTask",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelInspectionTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭巡检任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelInspectionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelInspectionTaskResponse
+        /// </returns>
+        public async Task<CancelInspectionTaskResponse> CancelInspectionTaskWithOptionsAsync(CancelInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelInspectionTask",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelInspectionTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭巡检任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelInspectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelInspectionTaskResponse
+        /// </returns>
+        public CancelInspectionTaskResponse CancelInspectionTask(CancelInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelInspectionTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭巡检任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelInspectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelInspectionTaskResponse
+        /// </returns>
+        public async Task<CancelInspectionTaskResponse> CancelInspectionTaskAsync(CancelInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelInspectionTaskWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2197,15 +2337,359 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a Redis (open-source) instance with a classic or cloud-native architecture, or a Tair memory-optimized instance with a classic architecture. To create a Tair instance with a cloud-native architecture, use the <c>CreateTairInstance</c> API.</para>
+        /// <para>创建定时巡检任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInspectionScheduleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInspectionScheduleResponse
+        /// </returns>
+        public CreateInspectionScheduleResponse CreateInspectionScheduleWithOptions(CreateInspectionScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
+            {
+                query["CronExpression"] = request.CronExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionItems))
+            {
+                query["InspectionItems"] = request.InspectionItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionWindow))
+            {
+                query["InspectionWindow"] = request.InspectionWindow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                query["ReportLanguage"] = request.ReportLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleName))
+            {
+                query["ScheduleName"] = request.ScheduleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                query["Timezone"] = request.Timezone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInspectionSchedule",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInspectionScheduleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建定时巡检任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInspectionScheduleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInspectionScheduleResponse
+        /// </returns>
+        public async Task<CreateInspectionScheduleResponse> CreateInspectionScheduleWithOptionsAsync(CreateInspectionScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
+            {
+                query["CronExpression"] = request.CronExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionItems))
+            {
+                query["InspectionItems"] = request.InspectionItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionWindow))
+            {
+                query["InspectionWindow"] = request.InspectionWindow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                query["ReportLanguage"] = request.ReportLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleName))
+            {
+                query["ScheduleName"] = request.ScheduleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                query["Timezone"] = request.Timezone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInspectionSchedule",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInspectionScheduleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建定时巡检任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInspectionScheduleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInspectionScheduleResponse
+        /// </returns>
+        public CreateInspectionScheduleResponse CreateInspectionSchedule(CreateInspectionScheduleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateInspectionScheduleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建定时巡检任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInspectionScheduleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInspectionScheduleResponse
+        /// </returns>
+        public async Task<CreateInspectionScheduleResponse> CreateInspectionScheduleAsync(CreateInspectionScheduleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateInspectionScheduleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动创建巡检任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInspectionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInspectionTaskResponse
+        /// </returns>
+        public CreateInspectionTaskResponse CreateInspectionTaskWithOptions(CreateInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionItems))
+            {
+                query["InspectionItems"] = request.InspectionItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                query["ReportLanguage"] = request.ReportLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInspectionTask",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInspectionTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动创建巡检任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInspectionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInspectionTaskResponse
+        /// </returns>
+        public async Task<CreateInspectionTaskResponse> CreateInspectionTaskWithOptionsAsync(CreateInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionItems))
+            {
+                query["InspectionItems"] = request.InspectionItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                query["ReportLanguage"] = request.ReportLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInspectionTask",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInspectionTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动创建巡检任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInspectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInspectionTaskResponse
+        /// </returns>
+        public CreateInspectionTaskResponse CreateInspectionTask(CreateInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateInspectionTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动创建巡检任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInspectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInspectionTaskResponse
+        /// </returns>
+        public async Task<CreateInspectionTaskResponse> CreateInspectionTaskAsync(CreateInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateInspectionTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Redis Community Edition classic instance, a Redis Community Edition cloud-native architecture instance, or a Tair memory-optimized classic instance. To create a cloud-native architecture Tair instance, call the CreateTairInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this API, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair.
-        /// This API is used to create a Redis Community Edition instance or a Tair Memory Type (Classic) instance. To create a Tair Cloud-native Edition instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> API.</para>
+        /// <para>Before you invoke this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair (Redis® OSS-Compatible).
+        /// This operation creates Redis Community Edition instances and Tair memory-optimized classic instances. To create a Tair cloud-native instance, invoke the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</para>
         /// <remarks>
-        /// <para>For instructions on how to perform this operation in the console and for guidance on instance selection, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</para>
+        /// <para>For the corresponding console operations and instance selection recommendations, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2448,15 +2932,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a Redis (open-source) instance with a classic or cloud-native architecture, or a Tair memory-optimized instance with a classic architecture. To create a Tair instance with a cloud-native architecture, use the <c>CreateTairInstance</c> API.</para>
+        /// <para>Creates a Redis Community Edition classic instance, a Redis Community Edition cloud-native architecture instance, or a Tair memory-optimized classic instance. To create a cloud-native architecture Tair instance, call the CreateTairInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this API, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair.
-        /// This API is used to create a Redis Community Edition instance or a Tair Memory Type (Classic) instance. To create a Tair Cloud-native Edition instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> API.</para>
+        /// <para>Before you invoke this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair (Redis® OSS-Compatible).
+        /// This operation creates Redis Community Edition instances and Tair memory-optimized classic instances. To create a Tair cloud-native instance, invoke the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</para>
         /// <remarks>
-        /// <para>For instructions on how to perform this operation in the console and for guidance on instance selection, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</para>
+        /// <para>For the corresponding console operations and instance selection recommendations, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2699,15 +3183,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a Redis (open-source) instance with a classic or cloud-native architecture, or a Tair memory-optimized instance with a classic architecture. To create a Tair instance with a cloud-native architecture, use the <c>CreateTairInstance</c> API.</para>
+        /// <para>Creates a Redis Community Edition classic instance, a Redis Community Edition cloud-native architecture instance, or a Tair memory-optimized classic instance. To create a cloud-native architecture Tair instance, call the CreateTairInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this API, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair.
-        /// This API is used to create a Redis Community Edition instance or a Tair Memory Type (Classic) instance. To create a Tair Cloud-native Edition instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> API.</para>
+        /// <para>Before you invoke this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair (Redis® OSS-Compatible).
+        /// This operation creates Redis Community Edition instances and Tair memory-optimized classic instances. To create a Tair cloud-native instance, invoke the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</para>
         /// <remarks>
-        /// <para>For instructions on how to perform this operation in the console and for guidance on instance selection, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</para>
+        /// <para>For the corresponding console operations and instance selection recommendations, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2726,15 +3210,15 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a Redis (open-source) instance with a classic or cloud-native architecture, or a Tair memory-optimized instance with a classic architecture. To create a Tair instance with a cloud-native architecture, use the <c>CreateTairInstance</c> API.</para>
+        /// <para>Creates a Redis Community Edition classic instance, a Redis Community Edition cloud-native architecture instance, or a Tair memory-optimized classic instance. To create a cloud-native architecture Tair instance, call the CreateTairInstance operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this API, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair.
-        /// This API is used to create a Redis Community Edition instance or a Tair Memory Type (Classic) instance. To create a Tair Cloud-native Edition instance, call the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> API.</para>
+        /// <para>Before you invoke this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of ApsaraDB for Tair (Redis® OSS-Compatible).
+        /// This operation creates Redis Community Edition instances and Tair memory-optimized classic instances. To create a Tair cloud-native instance, invoke the <a href="https://help.aliyun.com/document_detail/473770.html">CreateTairInstance</a> operation.</para>
         /// <remarks>
-        /// <para>For instructions on how to perform this operation in the console and for guidance on instance selection, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</para>
+        /// <para>For the corresponding console operations and instance selection recommendations, see <a href="https://help.aliyun.com/document_detail/26351.html">Create a Redis instance</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4616,7 +5100,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// <item><description>Before calling this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4665,6 +5149,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
+            {
+                query["RestoreTime"] = request.RestoreTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
             {
@@ -4718,7 +5206,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// <item><description>Before calling this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4767,6 +5255,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
+            {
+                query["RestoreTime"] = request.RestoreTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
             {
@@ -4820,7 +5312,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// <item><description>Before calling this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4846,7 +5338,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// <item><description>Before calling this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4865,14 +5357,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair Serverless KV workspace instance.</para>
+        /// <para>Activates a Tair Serverless KV workspace instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// <item><description>Before you call this operation, make sure that you understand the billing rules and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
         /// <item><description>To create a Tair Serverless KV table instance, call the <c>CreateTairSkvDdbTable</c> operation.</description></item>
         /// </list>
         /// </description>
@@ -4972,14 +5464,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair Serverless KV workspace instance.</para>
+        /// <para>Activates a Tair Serverless KV workspace instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// <item><description>Before you call this operation, make sure that you understand the billing rules and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
         /// <item><description>To create a Tair Serverless KV table instance, call the <c>CreateTairSkvDdbTable</c> operation.</description></item>
         /// </list>
         /// </description>
@@ -5079,14 +5571,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair Serverless KV workspace instance.</para>
+        /// <para>Activates a Tair Serverless KV workspace instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// <item><description>Before you call this operation, make sure that you understand the billing rules and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
         /// <item><description>To create a Tair Serverless KV table instance, call the <c>CreateTairSkvDdbTable</c> operation.</description></item>
         /// </list>
         /// </description>
@@ -5106,14 +5598,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Tair Serverless KV workspace instance.</para>
+        /// <para>Activates a Tair Serverless KV workspace instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
+        /// <item><description>Before you call this operation, make sure that you understand the billing rules and <a href="https://help.aliyun.com/document_detail/54532.htm">pricing</a> of ApsaraDB for Redis.</description></item>
         /// <item><description>To create a Tair Serverless KV table instance, call the <c>CreateTairSkvDdbTable</c> operation.</description></item>
         /// </list>
         /// </description>
@@ -5721,6 +6213,194 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteGlobalSecurityIPGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除定时巡检任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该API对应的控制台操作请参见<a href="https://help.aliyun.com/document_detail/43882.html">释放实例</a>。
+        /// 调用本接口时，实例必须满足以下条件：</para>
+        /// <list type="bullet">
+        /// <item><description>实例状态为运行中。</description></item>
+        /// <item><description>实例的付费方式为后付费（按量付费）。<remarks>
+        /// <para>预付费（包年包月）实例无法调用此接口主动删除，到期后将自动释放。 如需提前释放，请在控制台进行操作。</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInspectionScheduleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInspectionScheduleResponse
+        /// </returns>
+        public DeleteInspectionScheduleResponse DeleteInspectionScheduleWithOptions(DeleteInspectionScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
+            {
+                query["ScheduleId"] = request.ScheduleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInspectionSchedule",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInspectionScheduleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除定时巡检任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该API对应的控制台操作请参见<a href="https://help.aliyun.com/document_detail/43882.html">释放实例</a>。
+        /// 调用本接口时，实例必须满足以下条件：</para>
+        /// <list type="bullet">
+        /// <item><description>实例状态为运行中。</description></item>
+        /// <item><description>实例的付费方式为后付费（按量付费）。<remarks>
+        /// <para>预付费（包年包月）实例无法调用此接口主动删除，到期后将自动释放。 如需提前释放，请在控制台进行操作。</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInspectionScheduleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInspectionScheduleResponse
+        /// </returns>
+        public async Task<DeleteInspectionScheduleResponse> DeleteInspectionScheduleWithOptionsAsync(DeleteInspectionScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
+            {
+                query["ScheduleId"] = request.ScheduleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInspectionSchedule",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInspectionScheduleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除定时巡检任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该API对应的控制台操作请参见<a href="https://help.aliyun.com/document_detail/43882.html">释放实例</a>。
+        /// 调用本接口时，实例必须满足以下条件：</para>
+        /// <list type="bullet">
+        /// <item><description>实例状态为运行中。</description></item>
+        /// <item><description>实例的付费方式为后付费（按量付费）。<remarks>
+        /// <para>预付费（包年包月）实例无法调用此接口主动删除，到期后将自动释放。 如需提前释放，请在控制台进行操作。</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInspectionScheduleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInspectionScheduleResponse
+        /// </returns>
+        public DeleteInspectionScheduleResponse DeleteInspectionSchedule(DeleteInspectionScheduleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteInspectionScheduleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除定时巡检任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该API对应的控制台操作请参见<a href="https://help.aliyun.com/document_detail/43882.html">释放实例</a>。
+        /// 调用本接口时，实例必须满足以下条件：</para>
+        /// <list type="bullet">
+        /// <item><description>实例状态为运行中。</description></item>
+        /// <item><description>实例的付费方式为后付费（按量付费）。<remarks>
+        /// <para>预付费（包年包月）实例无法调用此接口主动删除，到期后将自动释放。 如需提前释放，请在控制台进行操作。</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteInspectionScheduleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInspectionScheduleResponse
+        /// </returns>
+        public async Task<DeleteInspectionScheduleResponse> DeleteInspectionScheduleAsync(DeleteInspectionScheduleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteInspectionScheduleWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7909,7 +8589,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup policy of a Tair (Redis OSS-compatible) instance, including the backup cycle and backup time.</para>
+        /// <para>Queries the backup policy of a Tair (Redis® OSS-Compatible) database instance, including the backup cycle and backup time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7971,7 +8651,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup policy of a Tair (Redis OSS-compatible) instance, including the backup cycle and backup time.</para>
+        /// <para>Queries the backup policy of a Tair (Redis® OSS-Compatible) database instance, including the backup cycle and backup time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8033,7 +8713,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup policy of a Tair (Redis OSS-compatible) instance, including the backup cycle and backup time.</para>
+        /// <para>Queries the backup policy of a Tair (Redis® OSS-Compatible) database instance, including the backup cycle and backup time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8051,7 +8731,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup policy of a Tair (Redis OSS-compatible) instance, including the backup cycle and backup time.</para>
+        /// <para>Queries the backup policy of a Tair (Redis® OSS-Compatible) database instance, including the backup cycle and backup time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12517,6 +13197,614 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查看定时调度历次巡检报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionScheduleReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionScheduleReportsResponse
+        /// </returns>
+        public DescribeInspectionScheduleReportsResponse DescribeInspectionScheduleReportsWithOptions(DescribeInspectionScheduleReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
+            {
+                query["ScheduleId"] = request.ScheduleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInspectionScheduleReports",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInspectionScheduleReportsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看定时调度历次巡检报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionScheduleReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionScheduleReportsResponse
+        /// </returns>
+        public async Task<DescribeInspectionScheduleReportsResponse> DescribeInspectionScheduleReportsWithOptionsAsync(DescribeInspectionScheduleReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
+            {
+                query["ScheduleId"] = request.ScheduleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInspectionScheduleReports",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInspectionScheduleReportsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看定时调度历次巡检报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionScheduleReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionScheduleReportsResponse
+        /// </returns>
+        public DescribeInspectionScheduleReportsResponse DescribeInspectionScheduleReports(DescribeInspectionScheduleReportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInspectionScheduleReportsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看定时调度历次巡检报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionScheduleReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionScheduleReportsResponse
+        /// </returns>
+        public async Task<DescribeInspectionScheduleReportsResponse> DescribeInspectionScheduleReportsAsync(DescribeInspectionScheduleReportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInspectionScheduleReportsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看定时巡检任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionSchedulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionSchedulesResponse
+        /// </returns>
+        public DescribeInspectionSchedulesResponse DescribeInspectionSchedulesWithOptions(DescribeInspectionSchedulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
+            {
+                query["ScheduleId"] = request.ScheduleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInspectionSchedules",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInspectionSchedulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看定时巡检任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionSchedulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionSchedulesResponse
+        /// </returns>
+        public async Task<DescribeInspectionSchedulesResponse> DescribeInspectionSchedulesWithOptionsAsync(DescribeInspectionSchedulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
+            {
+                query["ScheduleId"] = request.ScheduleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInspectionSchedules",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInspectionSchedulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看定时巡检任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionSchedulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionSchedulesResponse
+        /// </returns>
+        public DescribeInspectionSchedulesResponse DescribeInspectionSchedules(DescribeInspectionSchedulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInspectionSchedulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看定时巡检任务配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionSchedulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionSchedulesResponse
+        /// </returns>
+        public async Task<DescribeInspectionSchedulesResponse> DescribeInspectionSchedulesAsync(DescribeInspectionSchedulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInspectionSchedulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询某个巡检任务的报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionTaskReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionTaskReportResponse
+        /// </returns>
+        public DescribeInspectionTaskReportResponse DescribeInspectionTaskReportWithOptions(DescribeInspectionTaskReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionInsId))
+            {
+                query["InspectionInsId"] = request.InspectionInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInspectionTaskReport",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInspectionTaskReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询某个巡检任务的报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionTaskReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionTaskReportResponse
+        /// </returns>
+        public async Task<DescribeInspectionTaskReportResponse> DescribeInspectionTaskReportWithOptionsAsync(DescribeInspectionTaskReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionInsId))
+            {
+                query["InspectionInsId"] = request.InspectionInsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInspectionTaskReport",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInspectionTaskReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询某个巡检任务的报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionTaskReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionTaskReportResponse
+        /// </returns>
+        public DescribeInspectionTaskReportResponse DescribeInspectionTaskReport(DescribeInspectionTaskReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInspectionTaskReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询某个巡检任务的报告</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionTaskReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionTaskReportResponse
+        /// </returns>
+        public async Task<DescribeInspectionTaskReportResponse> DescribeInspectionTaskReportAsync(DescribeInspectionTaskReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInspectionTaskReportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询智能巡检任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionTasksResponse
+        /// </returns>
+        public DescribeInspectionTasksResponse DescribeInspectionTasksWithOptions(DescribeInspectionTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInspectionTasks",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInspectionTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询智能巡检任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionTasksResponse
+        /// </returns>
+        public async Task<DescribeInspectionTasksResponse> DescribeInspectionTasksWithOptionsAsync(DescribeInspectionTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInspectionTasks",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInspectionTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询智能巡检任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionTasksResponse
+        /// </returns>
+        public DescribeInspectionTasksResponse DescribeInspectionTasks(DescribeInspectionTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInspectionTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询智能巡检任务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInspectionTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInspectionTasksResponse
+        /// </returns>
+        public async Task<DescribeInspectionTasksResponse> DescribeInspectionTasksAsync(DescribeInspectionTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInspectionTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of a Tair (Redis-compatible) instance.</para>
         /// </summary>
         /// 
@@ -13021,12 +14309,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例的多 VIP 信息</para>
+        /// <para>Queries the load balancer (LB) information of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>关于多LB，详情参见</para>
+        /// <para>For more information about multiple LBs, see.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13084,12 +14372,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例的多 VIP 信息</para>
+        /// <para>Queries the load balancer (LB) information of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>关于多LB，详情参见</para>
+        /// <para>For more information about multiple LBs, see.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13147,12 +14435,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例的多 VIP 信息</para>
+        /// <para>Queries the load balancer (LB) information of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>关于多LB，详情参见</para>
+        /// <para>For more information about multiple LBs, see.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13170,12 +14458,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例的多 VIP 信息</para>
+        /// <para>Queries the load balancer (LB) information of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>关于多LB，详情参见</para>
+        /// <para>For more information about multiple LBs, see.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13925,14 +15213,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the overview information of one or more Tair (Redis OSS-compatible) instances.</para>
+        /// <para>Queries the overview information of one or more ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.</para>
+        /// <para>If you do not specify any request parameters, the overview information of all instances is returned.</para>
         /// <remarks>
-        /// <para>This operation returns non-paged results.</para>
+        /// <para>This operation does not support pagination for the returned results.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -13985,6 +15273,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
             {
                 query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                query["NodeType"] = request.NodeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -14055,14 +15347,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the overview information of one or more Tair (Redis OSS-compatible) instances.</para>
+        /// <para>Queries the overview information of one or more ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.</para>
+        /// <para>If you do not specify any request parameters, the overview information of all instances is returned.</para>
         /// <remarks>
-        /// <para>This operation returns non-paged results.</para>
+        /// <para>This operation does not support pagination for the returned results.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14115,6 +15407,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
             {
                 query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                query["NodeType"] = request.NodeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -14185,14 +15481,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the overview information of one or more Tair (Redis OSS-compatible) instances.</para>
+        /// <para>Queries the overview information of one or more ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.</para>
+        /// <para>If you do not specify any request parameters, the overview information of all instances is returned.</para>
         /// <remarks>
-        /// <para>This operation returns non-paged results.</para>
+        /// <para>This operation does not support pagination for the returned results.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -14211,14 +15507,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the overview information of one or more Tair (Redis OSS-compatible) instances.</para>
+        /// <para>Queries the overview information of one or more ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.</para>
+        /// <para>If you do not specify any request parameters, the overview information of all instances is returned.</para>
         /// <remarks>
-        /// <para>This operation returns non-paged results.</para>
+        /// <para>This operation does not support pagination for the returned results.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -15317,7 +16613,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of available parameter templates.</para>
+        /// <para>Queries the list of available parameter templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15337,6 +16633,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
             {
                 query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -15383,7 +16683,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of available parameter templates.</para>
+        /// <para>Queries the list of available parameter templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15403,6 +16703,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbType))
             {
                 query["DbType"] = request.DbType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -15449,7 +16753,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of available parameter templates.</para>
+        /// <para>Queries the list of available parameter templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15467,7 +16771,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of available parameter templates.</para>
+        /// <para>Queries the list of available parameter templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18905,7 +20209,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务详情</para>
+        /// <para>Queries the details of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18951,7 +20255,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务详情</para>
+        /// <para>Queries the details of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18997,7 +20301,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务详情</para>
+        /// <para>Queries the details of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19015,7 +20319,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务详情</para>
+        /// <para>Queries the details of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24289,6 +25593,198 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyGlobalSecurityIPGroupRelationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改定时巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInspectionScheduleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInspectionScheduleResponse
+        /// </returns>
+        public ModifyInspectionScheduleResponse ModifyInspectionScheduleWithOptions(ModifyInspectionScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
+            {
+                query["CronExpression"] = request.CronExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionItems))
+            {
+                query["InspectionItems"] = request.InspectionItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionWindow))
+            {
+                query["InspectionWindow"] = request.InspectionWindow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                query["ReportLanguage"] = request.ReportLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
+            {
+                query["ScheduleId"] = request.ScheduleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleName))
+            {
+                query["ScheduleName"] = request.ScheduleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                query["Timezone"] = request.Timezone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInspectionSchedule",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInspectionScheduleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改定时巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInspectionScheduleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInspectionScheduleResponse
+        /// </returns>
+        public async Task<ModifyInspectionScheduleResponse> ModifyInspectionScheduleWithOptionsAsync(ModifyInspectionScheduleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
+            {
+                query["CronExpression"] = request.CronExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                query["Enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionItems))
+            {
+                query["InspectionItems"] = request.InspectionItems;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InspectionWindow))
+            {
+                query["InspectionWindow"] = request.InspectionWindow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportLanguage))
+            {
+                query["ReportLanguage"] = request.ReportLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
+            {
+                query["ScheduleId"] = request.ScheduleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleName))
+            {
+                query["ScheduleName"] = request.ScheduleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                query["Timezone"] = request.Timezone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyInspectionSchedule",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyInspectionScheduleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改定时巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInspectionScheduleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInspectionScheduleResponse
+        /// </returns>
+        public ModifyInspectionScheduleResponse ModifyInspectionSchedule(ModifyInspectionScheduleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyInspectionScheduleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改定时巡检配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyInspectionScheduleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyInspectionScheduleResponse
+        /// </returns>
+        public async Task<ModifyInspectionScheduleResponse> ModifyInspectionScheduleAsync(ModifyInspectionScheduleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyInspectionScheduleWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -30833,6 +32329,142 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>手动重试巡检任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryInspectionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryInspectionTaskResponse
+        /// </returns>
+        public RetryInspectionTaskResponse RetryInspectionTaskWithOptions(RetryInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryInspectionTask",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryInspectionTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动重试巡检任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryInspectionTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryInspectionTaskResponse
+        /// </returns>
+        public async Task<RetryInspectionTaskResponse> RetryInspectionTaskWithOptionsAsync(RetryInspectionTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RetryInspectionTask",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RetryInspectionTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动重试巡检任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryInspectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryInspectionTaskResponse
+        /// </returns>
+        public RetryInspectionTaskResponse RetryInspectionTask(RetryInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RetryInspectionTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动重试巡检任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RetryInspectionTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RetryInspectionTaskResponse
+        /// </returns>
+        public async Task<RetryInspectionTaskResponse> RetryInspectionTaskAsync(RetryInspectionTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RetryInspectionTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>启动TairCustom的主机</para>
         /// </summary>
         /// 
@@ -31617,6 +33249,170 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SwitchInstanceProxyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例指定目标可用区切换</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口仅支持云原生架构实例</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchInstanceToTargetZoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchInstanceToTargetZoneResponse
+        /// </returns>
+        public SwitchInstanceToTargetZoneResponse SwitchInstanceToTargetZoneWithOptions(SwitchInstanceToTargetZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchType))
+            {
+                query["SwitchType"] = request.SwitchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetZoneId))
+            {
+                query["TargetZoneId"] = request.TargetZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SwitchInstanceToTargetZone",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SwitchInstanceToTargetZoneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例指定目标可用区切换</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口仅支持云原生架构实例</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchInstanceToTargetZoneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchInstanceToTargetZoneResponse
+        /// </returns>
+        public async Task<SwitchInstanceToTargetZoneResponse> SwitchInstanceToTargetZoneWithOptionsAsync(SwitchInstanceToTargetZoneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchType))
+            {
+                query["SwitchType"] = request.SwitchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetZoneId))
+            {
+                query["TargetZoneId"] = request.TargetZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SwitchInstanceToTargetZone",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SwitchInstanceToTargetZoneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例指定目标可用区切换</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口仅支持云原生架构实例</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchInstanceToTargetZoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchInstanceToTargetZoneResponse
+        /// </returns>
+        public SwitchInstanceToTargetZoneResponse SwitchInstanceToTargetZone(SwitchInstanceToTargetZoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SwitchInstanceToTargetZoneWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>实例指定目标可用区切换</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口仅支持云原生架构实例</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SwitchInstanceToTargetZoneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SwitchInstanceToTargetZoneResponse
+        /// </returns>
+        public async Task<SwitchInstanceToTargetZoneResponse> SwitchInstanceToTargetZoneAsync(SwitchInstanceToTargetZoneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SwitchInstanceToTargetZoneWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

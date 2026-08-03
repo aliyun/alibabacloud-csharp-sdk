@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
     public class DescribeBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The following parameters are no longer used. Ignore the parameters.</para>
+        /// <para>This parameter is deprecated. Ignore this parameter.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribeBackupPolicyResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribeBackupPolicyResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is no longer used. Ignore this parameter.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -102,8 +102,12 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         }
 
+        [NameInMap("BackupLogStartTime")]
+        [Validation(Required=false)]
+        public string BackupLogStartTime { get; set; }
+
         /// <summary>
-        /// <para>The retention period of the backup data. Unit: days.</para>
+        /// <para>The number of days for which backup data is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -113,10 +117,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the backup-as-a-service feature is enabled for the instance. Valid values:</para>
+        /// <para>Indicates whether the backup service is enabled for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The backup-as-a-service feature is enabled for the instance.</description></item>
-        /// <item><description><b>0</b>: The backup-as-a-service feature is disabled for the instance.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// <item><description><b>0</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,10 +131,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string DbsInstance { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether incremental data backup is enabled. Valid values:</para>
+        /// <para>Indicates whether incremental backup is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Incremental data backup is enabled.</description></item>
-        /// <item><description><b>0</b>: Incremental data backup is disabled.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// <item><description><b>0</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -160,7 +164,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The time range during which the backup was created. The time follows the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The backup time. The time is in the <i>HH:mm</i>Z-<i>HH:mm</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>05:00Z-06:00Z</para>
@@ -170,7 +174,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string PreferredBackupTime { get; set; }
 
         /// <summary>
-        /// <para>The next backup time. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The next backup time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-03-14T05:28Z</para>
@@ -180,7 +184,7 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
         public string PreferredNextBackupTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90B82DB7-FB28-4CC2-ADBF-1F8659F3****</para>
