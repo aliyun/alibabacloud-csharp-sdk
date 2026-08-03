@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeAutoSnapshotTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of automatic snapshot policies.</para>
-        /// <para>You can specify a maximum of 100 policy IDs. If you want to query the tasks of multiple automatic snapshot policies, you must separate the policy IDs with commas (,).</para>
+        /// <para>The IDs of the automatic snapshot policies.</para>
+        /// <para>You can specify up to 100 automatic snapshot policy IDs. To query tasks of multiple automatic snapshot policies, separate the policy IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-extreme-233e6****,sp-extreme-233e6****, sp-extreme-233e6****</para>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AutoSnapshotPolicyIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
-        /// <para>You can specify a maximum of 100 file system IDs. If you want to query the snapshots of multiple file systems, you must separate the file system IDs with commas (,).</para>
+        /// <para>The IDs of the file systems.</para>
+        /// <para>You can specify up to 100 file system IDs in a single request. To query snapshots of multiple file systems, separate the file system IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>extreme-233e6****,extreme -23vbp****,extreme -23vas****</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The type of the file system.</para>
-        /// <para>Valid value: extreme, which indicates Extreme NAS file systems.</para>
+        /// <para>Valid values: extreme (Extreme NAS file system)</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of snapshot tasks on each page.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the automatic snapshot task list.</para>
+        /// <para>Start value (default value): 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

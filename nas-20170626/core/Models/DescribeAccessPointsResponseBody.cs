@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string AccessPointName { get; set; }
 
             /// <summary>
-            /// <para>The time when the access point was created.</para>
+            /// <para>The time when the access point was created. Format: Unix/POSIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1709619668276167</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the access point.</para>
+            /// <para>The access point domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The time when the access point was last modified.</para>
+            /// <para>The time when the access point was last modified. Format: Unix/POSIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1709619668276167</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public DescribeAccessPointsResponseBodyAccessPointsPosixUser PosixUser { get; set; }
             public class DescribeAccessPointsResponseBodyAccessPointsPosixUser : TeaModel {
                 /// <summary>
-                /// <para>The POSIX group ID.</para>
+                /// <para>The POSIX user group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 public int? PosixGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The secondary group ID.</para>
+                /// <para>The secondary user group ID.</para>
                 /// </summary>
                 [NameInMap("PosixSecondaryGroupIds")]
                 [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string RootPath { get; set; }
 
             /// <summary>
-            /// <para>The root directory permissions.</para>
+            /// <para>The root directory permission.</para>
             /// </summary>
             [NameInMap("RootPathPermission")]
             [Validation(Required=false)]
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <item><description>Deleting: being deleted.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>You can mount a file system only when the status is Active.</para>
+            /// <para>You can mount the file system only when the status is Active.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

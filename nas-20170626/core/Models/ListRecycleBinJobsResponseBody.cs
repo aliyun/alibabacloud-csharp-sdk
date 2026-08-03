@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListRecycleBinJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the jobs of the recycle bin.</para>
+        /// <para>The collection of task information in the recycle bin.</para>
         /// </summary>
         [NameInMap("Jobs")]
         [Validation(Required=false)]
         public List<ListRecycleBinJobsResponseBodyJobs> Jobs { get; set; }
         public class ListRecycleBinJobsResponseBodyJobs : TeaModel {
             /// <summary>
-            /// <para>The time when the job was created.</para>
+            /// <para>The time when the task was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-30T10:08:08Z</para>
@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error code returned.</para>
-            /// <para>A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.</para>
+            /// <para>The error code.</para>
+            /// <para>This value is valid only when Status is Fail or PartialSuccess.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidFileId.NotFound</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
             /// <summary>
             /// <para>The error message.</para>
-            /// <para>A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.</para>
+            /// <para>This value is valid only when JobStatus is Fail or PartialSuccess.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The Target File or Directory does not exist.</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The ID of the file or directory in the job.</para>
+            /// <para>The FileId of the file or directory associated with the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04***08</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>The name of the file or directory that is associated with the job.</para>
+            /// <para>The name of the file or directory associated with the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test001</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The job ID.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8C****C54</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The progress of the job.</para>
+            /// <para>The execution progress of the task.</para>
             /// <para>Valid values: 1 to 100.</para>
             /// 
             /// <b>Example:</b>
@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// <para>The status of the job. Valid values:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Running: The job is running.</description></item>
-            /// <item><description>Defragmenting: The job is defragmenting data.</description></item>
-            /// <item><description>PartialSuccess: The job is partially completed.</description></item>
-            /// <item><description>Success: The job is completed.</description></item>
-            /// <item><description>Fail: The job failed.</description></item>
-            /// <item><description>Cancelled: The job is canceled.</description></item>
+            /// <item><description>Running: The task is running.</description></item>
+            /// <item><description>Defragmenting: Data is being defragmented.</description></item>
+            /// <item><description>PartialSuccess: The task partially succeeded.</description></item>
+            /// <item><description>Success: The task succeeded.</description></item>
+            /// <item><description>Fail: The task failed.</description></item>
+            /// <item><description>Cancelled: The task is canceled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,10 +108,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the job. Valid values:</para>
+            /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Restore: a file restoration job</description></item>
-            /// <item><description>Delete: a file deletion job</description></item>
+            /// <item><description>Restore: A file restoration task.</description></item>
+            /// <item><description>Delete: A file deletion task.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of jobs returned per page.</para>
+        /// <para>The number of tasks per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of jobs.</para>
+        /// <para>The total number of tasks in the recycle bin.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

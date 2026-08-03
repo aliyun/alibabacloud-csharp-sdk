@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Azone { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
-        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotency of the request. Generate a unique parameter value from your client to ensure that the value is unique across different requests.</para>
+        /// <para>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
         /// </remarks>
@@ -35,11 +35,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the AgenticSpace.</para>
+        /// <para>The description of the Agentic space.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The description must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The description must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
         /// <item><description>The description can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
         /// </list>
         /// 
@@ -51,11 +51,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run for this request. A dry run checks parameter validity and dependencies without actually modifying the instance or incurring fees.</para>
+        /// <para>Specifies whether to perform a dry run for this request. A dry run checks parameter validity and dependencies without actually modifying the instance or incurring charges.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: sends a dry run request without modifying the protocol service. The system checks whether required parameters are specified, whether the request format is valid, and whether business limit dependencies are met. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned.</description></item>
-        /// <item><description>false (default): sends a normal request. After the check is passed, the protocol service is directly modified.</description></item>
+        /// <item><description>true: Sends a dry run request without modifying the protocol service. The system checks required parameters, request format, and business limit dependencies. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</description></item>
+        /// <item><description>false (default): Sends a normal request. After the check passes, the protocol service is directly modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,9 +98,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The maximum number of files allowed by the quota. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Minimum value: 10000.</para>
+            /// <item><description><para>Minimum value: 10,000.</para>
             /// </description></item>
-            /// <item><description><para>Maximum value: 100000000.</para>
+            /// <item><description><para>Maximum value: 100,000,000.</para>
             /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
@@ -116,9 +116,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The total capacity limit of the quota. Unit: bytes.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Minimum value: 10737418240 (10 GiB).</description></item>
-            /// <item><description>Maximum value: 1099511627776000 (1024000 GiB).</description></item>
-            /// <item><description>Increment: 1073741824 (1 GiB).</description></item>
+            /// <item><description>Minimum value: 10,737,418,240 (10 GiB).</description></item>
+            /// <item><description>Maximum value: 1,099,511,627,776,000 (1,024,000 GiB).</description></item>
+            /// <item><description>Increment: 1,073,741,824 (1 GiB).</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

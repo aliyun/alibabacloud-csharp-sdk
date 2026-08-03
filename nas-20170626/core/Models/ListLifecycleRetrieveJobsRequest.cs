@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListLifecycleRetrieveJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>31a8e4****</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the list.</para>
+        /// <para>Start value (default value): 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of data retrieval tasks on each page.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The status of the data retrieval task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>active: The task is running.</description></item>
-        /// <item><description>canceled: The task is canceled.</description></item>
-        /// <item><description>completed: The task is completed.</description></item>
-        /// <item><description>failed: The task has failed.</description></item>
+        /// <item><description>active: running.</description></item>
+        /// <item><description>canceled: canceled.</description></item>
+        /// <item><description>completed: completed.</description></item>
+        /// <item><description>failed: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The storage class.</para>
+        /// <para>The storage class. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>InfrequentAccess: the Infrequent Access (IA) storage class.</description></item>
-        /// <item><description>Archive: the Archive storage class.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> If the StorageType parameter is not specified, data retrieval tasks of all types are returned.</para>
+        /// <item><description>InfrequentAccess: IA storage class.</description></item>
+        /// <item><description>Archive: Archive storage class.<remarks>
+        /// <para>If StorageType is not specified, data retrieval tasks of all storage classes are returned.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>InfrequentAccess</para>

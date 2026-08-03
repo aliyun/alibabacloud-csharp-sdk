@@ -28,10 +28,47 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The file data expiration and deletion rules. A maximum of one rule can be configured.</para>
+            /// </summary>
+            [NameInMap("DeleteRules")]
+            [Validation(Required=false)]
+            public List<DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules> DeleteRules { get; set; }
+            public class DescribeLifecyclePoliciesResponseBodyLifecyclePoliciesDeleteRules : TeaModel {
+                /// <summary>
+                /// <para>The attribute of the rule.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Atime: The access time of the file.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Atime</para>
+                /// </summary>
+                [NameInMap("Attribute")]
+                [Validation(Required=false)]
+                public string Attribute { get; set; }
+
+                /// <summary>
+                /// <para>The threshold of the rule.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>When Attribute is set to Atime, the value indicates the number of days since the file was last accessed. Valid values: 1 to 365.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
+                /// </summary>
+                [NameInMap("Threshold")]
+                [Validation(Required=false)]
+                public string Threshold { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The description of the policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>描述</para>
+            /// <para>Description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -58,7 +95,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string LifecyclePolicyId { get; set; }
 
             /// <summary>
-            /// <para>The lifecycle management policy name.</para>
+            /// <para>The name of the lifecycle management policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lifecyclepolicy_01</para>
@@ -81,10 +118,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The management rule associated with the lifecycle management policy.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DEFAULT_ATIME_14: files not accessed in the last 14 days</description></item>
-            /// <item><description>DEFAULT_ATIME_30: files not accessed in the last 30 days</description></item>
-            /// <item><description>DEFAULT_ATIME_60: files not accessed in the last 60 days</description></item>
-            /// <item><description>DEFAULT_ATIME_90: files not accessed in the last 90 days.</description></item>
+            /// <item><description>DEFAULT_ATIME_14: Files not accessed in the last 14 days.</description></item>
+            /// <item><description>DEFAULT_ATIME_30: Files not accessed in the last 30 days.</description></item>
+            /// <item><description>DEFAULT_ATIME_60: Files not accessed in the last 60 days.</description></item>
+            /// <item><description>DEFAULT_ATIME_90: Files not accessed in the last 90 days.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +149,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public List<string> Paths { get; set; }
 
             /// <summary>
-            /// <para>The data retrieval rules for files.</para>
+            /// <para>The file data retrieval rules.</para>
             /// </summary>
             [NameInMap("RetrieveRules")]
             [Validation(Required=false)]
@@ -141,7 +178,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             }
 
             /// <summary>
-            /// <para>The storage class type. Valid values:</para>
+            /// <para>The storage type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>InfrequentAccess: IA storage class.</description></item>
             /// <item><description>Archive: Archive storage class.</description></item>
@@ -155,7 +192,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The data transit rules for files.</para>
+            /// <para>The file data transit rules.</para>
             /// </summary>
             [NameInMap("TransitRules")]
             [Validation(Required=false)]

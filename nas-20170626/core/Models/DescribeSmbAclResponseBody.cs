@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeSmbAclResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the ACL feature.</para>
+        /// <para>The ACL information.</para>
         /// </summary>
         [NameInMap("Acl")]
         [Validation(Required=false)]
         public DescribeSmbAclResponseBodyAcl Acl { get; set; }
         public class DescribeSmbAclResponseBodyAcl : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the file system allows anonymous access. Valid values:</para>
+            /// <para>Indicates whether anonymous access is allowed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The file system allows anonymous access.</description></item>
-            /// <item><description>false: The file system does not allow anonymous access.</description></item>
+            /// <item><description><para>true: Anonymous access is allowed.</para>
+            /// </description></item>
+            /// <item><description><para>false: Anonymous access is not allowed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,10 +33,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public bool? EnableAnonymousAccess { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the ACL feature is enabled. Valid values:</para>
+            /// <para>Indicates whether the SMB AD ACL feature is enabled.</para>
             /// <list type="bullet">
-            /// <item><description>true: The ACL feature is enabled.</description></item>
-            /// <item><description>false: The ACL feature is disabled.</description></item>
+            /// <item><description><para>true: The SMB AD ACL feature is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false: The SMB AD ACL feature is not enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,10 +49,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether encryption in transit is enabled. Valid values:</para>
+            /// <para>Indicates whether encryption in transit is enabled.</para>
             /// <list type="bullet">
-            /// <item><description>true: Encryption in transit is enabled.</description></item>
-            /// <item><description>false: Encryption in transit is disabled.</description></item>
+            /// <item><description><para>true: Encryption in transit is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false: Encryption in transit is not enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,7 +65,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public bool? EncryptData { get; set; }
 
             /// <summary>
-            /// <para>The home directory of each user.</para>
+            /// <para>The home directory path for each user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/home</para>
@@ -69,10 +75,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string HomeDirPath { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the file system denies access from non-encrypted clients. Valid values:</para>
+            /// <para>Indicates whether unencrypted clients are rejected.</para>
             /// <list type="bullet">
-            /// <item><description>true: The file system denies access from non-encrypted clients.</description></item>
-            /// <item><description>false: The file system allows access from non-encrypted clients.</description></item>
+            /// <item><description><para>true: Unencrypted clients are rejected.</para>
+            /// </description></item>
+            /// <item><description><para>false: Unencrypted clients are not rejected.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,7 +91,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public bool? RejectUnencryptedAccess { get; set; }
 
             /// <summary>
-            /// <para>The ID of a super admin.</para>
+            /// <para>The ID of the superuser.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S-1-0-0</para>

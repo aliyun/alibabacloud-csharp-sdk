@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListRecentlyRecycledDirectoriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the directories that are recently deleted.</para>
+        /// <para>The information about directories on which delete operations were recently performed.</para>
         /// </summary>
         [NameInMap("Entries")]
         [Validation(Required=false)]
         public List<ListRecentlyRecycledDirectoriesResponseBodyEntries> Entries { get; set; }
         public class ListRecentlyRecycledDirectoriesResponseBodyEntries : TeaModel {
             /// <summary>
-            /// <para>The ID of the directory.</para>
+            /// <para>The directory ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04***08</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>The time when the directory was last deleted.</para>
+            /// <para>The most recent time when a delete operation was performed on the directory. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-30T10:08:08Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The absolute path to the directory.</para>
+            /// <para>The absolute path of the directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/a/b</para>
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>A pagination token.</para>
-        /// <para>If not all directories are returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</para>
+        /// <para>The pagination token for the next page.</para>
+        /// <para>If the query results are not completely returned, the NextToken parameter is returned with a value. You can specify the NextToken value in the next request to continue the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1256****25</para>

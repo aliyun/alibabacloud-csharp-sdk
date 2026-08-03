@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<ListRecycledDirectoriesAndFilesResponseBodyEntries> Entries { get; set; }
         public class ListRecycledDirectoriesAndFilesResponseBodyEntries : TeaModel {
             /// <summary>
-            /// <para>The time when the file or directory was last accessed.</para>
+            /// <para>The most recent access time. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-10-30T10:08:08Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ATime { get; set; }
 
             /// <summary>
-            /// <para>The time when the metadata was last modified.</para>
+            /// <para>The most recent metadata modification time. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-10-30T10:08:08Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the file or directory was deleted.</para>
+            /// <para>The time when the file or directory was deleted. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-30T10:08:08Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string DeleteTime { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the files or directories.</para>
+            /// <para>The FileId of the file or directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>04***08</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Inode { get; set; }
 
             /// <summary>
-            /// <para>The time when the file or directory was last modified.</para>
+            /// <para>The most recent modification time. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-10-30T10:08:08Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string MTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the file or directory before it was deleted.</para>
+            /// <para>The name of the file or directory before deletion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test001</para>
@@ -87,8 +87,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The size of the file. Unit: bytes.</para>
-            /// <para>The value 0 is returned for this parameter if Directory is returned for the Type parameter.</para>
+            /// <para>The file size. Unit: bytes.</para>
+            /// <para>If Type is set to Directory, the value 0 is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1073741824</para>
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The type of the returned object. Valid values:</para>
+            /// <para>The object type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>File</description></item>
-            /// <item><description>Directory</description></item>
+            /// <item><description>File: file</description></item>
+            /// <item><description>Directory: folder</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -114,11 +114,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>A pagination token.</para>
-        /// <para>If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</para>
+        /// <para>The pagination token for the next page.</para>
+        /// <para>If a single query does not return all files and directories, a non-empty NextToken is returned. You can specify the correct NextToken in subsequent queries to continue listing.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

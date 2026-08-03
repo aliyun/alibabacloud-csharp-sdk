@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>CPFS General-purpose: The ID must start with <c>cpfs-</c>, such as cpfs-099394bd928c\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>General-purpose CPFS: must start with <c>cpfs-</c>, such as cpfs-099394bd928c****.</para>
         /// </description></item>
-        /// <item><description><para>CPFS for AI Computing: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>CPFS for Lingjun: must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya****.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>A collection of filters.</para>
+        /// <para>The filter conditions.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -37,33 +37,21 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<DescribeDataFlowTasksRequestFilters> Filters { get; set; }
         public class DescribeDataFlowTasksRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The filter key.</para>
+            /// <para>The name of the filter key.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>DataFlowIds: Filters by data flow ID.</para>
-            /// </description></item>
-            /// <item><description><para>TaskIds: Filters by data flow task ID.</para>
-            /// </description></item>
-            /// <item><description><para>Originator: Filters by originator.</para>
-            /// </description></item>
-            /// <item><description><para>TaskActions: Filters by data flow task type.</para>
-            /// </description></item>
-            /// <item><description><para>DataTypes: Filters by data type.</para>
-            /// </description></item>
-            /// <item><description><para>Status: Filters by status.</para>
-            /// </description></item>
-            /// <item><description><para>CreateTimeBegin: Filters data flow tasks created after the specified time.</para>
-            /// </description></item>
-            /// <item><description><para>CreateTimeEnd: Filters data flow tasks created before the specified time.</para>
-            /// </description></item>
-            /// <item><description><para>StartTimeBegin: Filters data flow tasks that started after the specified time.</para>
-            /// </description></item>
-            /// <item><description><para>StartTimeEnd: Filters data flow tasks that started before the specified time.</para>
-            /// </description></item>
-            /// <item><description><para>EndTimeBegin: Filters data flow tasks that ended after the specified time.</para>
-            /// </description></item>
-            /// <item><description><para>EndTimeEnd: Filters data flow tasks that ended before the specified time.</para>
-            /// </description></item>
+            /// <item><description>DataFlowIds: filters by data flow ID.</description></item>
+            /// <item><description>TaskIds: filters by data flow task ID.</description></item>
+            /// <item><description>Originator: filters by the initiator of the data flow task.</description></item>
+            /// <item><description>TaskActions: filters by the type of the data flow task.</description></item>
+            /// <item><description>DataTypes: filters by the data type of the data flow task.</description></item>
+            /// <item><description>Status: filters by data flow status.</description></item>
+            /// <item><description>CreateTimeBegin: filters data flow tasks created after the specified time.</description></item>
+            /// <item><description>CreateTimeEnd: filters data flow tasks created before the specified time.</description></item>
+            /// <item><description>StartTimeBegin: filters data flow tasks started after the specified time.</description></item>
+            /// <item><description>StartTimeEnd: filters data flow tasks started before the specified time.</description></item>
+            /// <item><description>EndTimeBegin: filters data flow tasks ended after the specified time.</description></item>
+            /// <item><description>EndTimeEnd: filters data flow tasks ended before the specified time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,32 +62,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value. This parameter does not support wildcards.</para>
+            /// <para>The value of the filter key. Wildcards are not supported.</para>
             /// <list type="bullet">
-            /// <item><description><para>When <c>Key</c> is <c>DataFlowIds</c>, specify one or more data flow IDs. You can specify up to 10 data flow IDs, separated by commas. For example, <c>df-194433a5be31****</c> or <c>df-194433a512a2****,df-234533a5be31****</c>.</para>
-            /// </description></item>
-            /// <item><description><para>When <c>Key</c> is <c>TaskId</c>, specify one or more data flow task IDs. You can specify up to 10 data flow task IDs, separated by commas. For example, <c>task-38aa8e890f45****</c> or <c>task-38aa8e890f45****,task-29ae8e890f45****</c>.</para>
-            /// </description></item>
-            /// <item><description><para>When <c>Key</c> is <c>TaskActions</c>, specify the data flow task type. Valid values are <b>Import</b>, <b>Export</b>, <b>Evict</b>, <b>Inventory</b>, <b>StreamImport</b>, and <b>StreamExport</b>. You can specify multiple values. CPFS for AI Computing supports only Import, Export, StreamImport, and StreamExport. StreamImport and StreamExport are available only in CPFS for AI Computing 2.6.0 and later.</para>
-            /// </description></item>
-            /// <item><description><para>When <c>Key</c> is <c>DataTypes</c>, specify the data type of the data flow task. Valid values are MetaAndData, Metadata, and Data. You can specify multiple values.</para>
-            /// </description></item>
-            /// <item><description><para>When <c>Key</c> is <c>Originator</c>, specify the originator of the data flow task. Valid values are User and System.</para>
-            /// </description></item>
-            /// <item><description><para>When <c>Key</c> is <c>Status</c>, specify the status of the data flow task. Valid values are Pending, Executing, Failed, Completed, Canceling, and Canceled. You can specify multiple values.</para>
-            /// </description></item>
-            /// <item><description><para>When <c>Key</c> is <c>CreateTimeBegin</c>, specify the earliest creation time. Use the <c>yyyy-MM-ddTHH:mmZ</c> format.</para>
-            /// </description></item>
-            /// <item><description><para>When <c>Key</c> is <c>CreateTimeEnd</c>, specify the latest creation time. Use the <c>yyyy-MM-ddTHH:mmZ</c> format.</para>
-            /// </description></item>
-            /// <item><description><para>When <c>Key</c> is <c>StartTimeBegin</c>, specify the earliest start time. Use the <c>yyyy-MM-ddTHH:mmZ</c> format.</para>
-            /// </description></item>
-            /// <item><description><para>When <c>Key</c> is <c>StartTimeEnd</c>, specify the latest start time. Use the <c>yyyy-MM-ddTHH:mmZ</c> format.</para>
-            /// </description></item>
-            /// <item><description><para>When <c>Key</c> is <c>EndTimeBegin</c>, specify the earliest end time. Use the <c>yyyy-MM-ddTHH:mmZ</c> format.</para>
-            /// </description></item>
-            /// <item><description><para>When <c>Key</c> is <c>EndTimeEnd</c>, specify the latest end time. Use the <c>yyyy-MM-ddTHH:mmZ</c> format.</para>
-            /// </description></item>
+            /// <item><description>If Key is set to DataFlowIds, Value is set to a data flow ID or part of a data flow ID. You can specify one or more data flow IDs. A maximum of 10 data flow IDs can be specified. Example: <c>df-194433a5be31****</c> or <c>df-194433a512a2****,df-234533a5be31****</c>.</description></item>
+            /// <item><description>If Key is set to TaskId, Value is set to a data flow task ID or part of a data flow task ID. You can specify one or more data flow task IDs. A maximum of 10 data flow task IDs can be specified. Example: <c>task-38aa8e890f45****</c> or <c>task-38aa8e890f45****,task-29ae8e890f45****</c>.</description></item>
+            /// <item><description>If Key is set to TaskActions, Value is set to the type of the data flow task, including <b>Import</b>, <b>Export</b>, <b>Evict</b>, <b>Inventory</b>, <b>StreamImport</b>, and <b>StreamExport</b>. Combined queries are supported. CPFS for Lingjun supports only Import, Export, StreamImport, and StreamExport. StreamImport and StreamExport are supported only by CPFS for Lingjun 2.6.0 and later.</description></item>
+            /// <item><description>If Key is set to DataTypes, Value is set to the data type of the data flow task, including MetaAndData, Metadata, and Data. Combined queries are supported.</description></item>
+            /// <item><description>If Key is set to Originator, Value is set to the initiator of the data flow task, including User and System.</description></item>
+            /// <item><description>If Key is set to Status, Value is set to the status of the data flow task, including Pending, Executing, Failed, Completed, Canceling, and Canceled. Combined queries are supported.</description></item>
+            /// <item><description>If Key is set to CreateTimeBegin, Value is set to the earliest creation time of data flow tasks. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
+            /// <item><description>If Key is set to CreateTimeEnd, Value is set to the latest creation time of data flow tasks. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
+            /// <item><description>If Key is set to StartTimeBegin, Value is set to the earliest start time of data flow tasks. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
+            /// <item><description>If Key is set to StartTimeEnd, Value is set to the latest start time of data flow tasks. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
+            /// <item><description>If Key is set to EndTimeBegin, Value is set to the earliest end time of data flow tasks. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
+            /// <item><description>If Key is set to EndTimeEnd, Value is set to the latest end time of data flow tasks. Format: <c>yyyy-MM-ddThh:mmZ</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +88,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results to return per page.</para>
+        /// <para>The number of results for each query.</para>
         /// <para>Valid values: 10 to 100.</para>
         /// <para>Default value: 20.</para>
         /// 
@@ -124,7 +100,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page of results. If the response is truncated, use this token in your next request to retrieve the subsequent page.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, you can use NextToken to initiate a new request to retrieve the content after the truncation point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>
@@ -134,19 +110,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return report information.</para>
+        /// <para>Specifies whether to query report information.</para>
         /// <list type="bullet">
-        /// <item><description><para>True (default): Includes reports in the response.</para>
-        /// </description></item>
-        /// <item><description><para>False: Excludes reports from the response.</para>
-        /// </description></item>
+        /// <item><description>True (default): queries reports.</description></item>
+        /// <item><description>False: does not query reports.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Set this parameter to False to speed up the query.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter is supported only in CPFS for AI Computing.</para>
-        /// </description></item>
+        /// <item><description>Setting this parameter to False can speed up queries.</description></item>
+        /// <item><description>Only CPFS for Lingjun is supported.</description></item>
         /// </list>
         /// </remarks>
         /// 

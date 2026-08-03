@@ -54,19 +54,21 @@ namespace AlibabaCloud.SDK.NAS20170626
                 {"eu-west-1-oxs", "nas.aliyuncs.com"},
                 {"rus-west-1-pop", "nas.aliyuncs.com"},
                 {"us-west-1", "nas.us-west-1.aliyuncs.com"},
+                {"us-southeast-1", "nas.us-southeast-1.aliyuncs.com"},
                 {"us-east-1", "nas.us-east-1.aliyuncs.com"},
+                {"na-south-1", "nas.na-south-1.aliyuncs.com"},
                 {"me-east-1", "nas.me-east-1.aliyuncs.com"},
                 {"me-central-1", "nas.me-central-1.aliyuncs.com"},
+                {"eu-west-2", "nas.eu-west-2.aliyuncs.com"},
                 {"eu-west-1", "nas.eu-west-1.aliyuncs.com"},
                 {"eu-central-1", "nas.eu-central-1.aliyuncs.com"},
-                {"cn-zhengzhou-jva", "nas.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-zhongwei", "nas.cn-zhongwei.aliyuncs.com"},
                 {"cn-zhangjiakou", "nas.cn-zhangjiakou.aliyuncs.com"},
                 {"cn-wulanchabu", "nas.cn-wulanchabu.aliyuncs.com"},
                 {"cn-shenzhen-finance-1", "nas.cn-shenzhen-finance-1.aliyuncs.com"},
                 {"cn-shenzhen", "nas.cn-shenzhen.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "nas.cn-shanghai-finance-1.aliyuncs.com"},
                 {"cn-shanghai", "nas.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "nas.cn-qingdao.aliyuncs.com"},
                 {"cn-huhehaote", "nas.cn-huhehaote.aliyuncs.com"},
                 {"cn-hongkong", "nas.cn-hongkong.aliyuncs.com"},
                 {"cn-heyuan", "nas.cn-heyuan.aliyuncs.com"},
@@ -75,12 +77,12 @@ namespace AlibabaCloud.SDK.NAS20170626
                 {"cn-chengdu", "nas.cn-chengdu.aliyuncs.com"},
                 {"cn-beijing-finance-1", "nas.cn-beijing-finance-1.aliyuncs.com"},
                 {"cn-beijing", "nas.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-8", "nas.ap-southeast-8.aliyuncs.com"},
                 {"ap-southeast-7", "nas.ap-southeast-7.aliyuncs.com"},
                 {"ap-southeast-6", "nas.ap-southeast-6.aliyuncs.com"},
                 {"ap-southeast-5", "nas.ap-southeast-5.aliyuncs.com"},
                 {"ap-southeast-3", "nas.ap-southeast-3.aliyuncs.com"},
                 {"ap-southeast-1", "nas.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "nas.ap-south-1.aliyuncs.com"},
                 {"ap-northeast-2", "nas.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "nas.ap-northeast-1.aliyuncs.com"},
             };
@@ -297,12 +299,21 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
-        /// <item><description>You can apply only one automatic snapshot policy to each file system.</description></item>
-        /// <item><description>Each automatic snapshot policy can be applied to multiple file systems.</description></item>
-        /// <item><description>If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</description></item>
+        /// <item><description>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</description></item>
+        /// <item><description>Each file system can have only one automatic snapshot policy applied.</description></item>
+        /// <item><description>One automatic snapshot policy can be applied to multiple file systems.</description></item>
+        /// <item><description>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</description></item>
+        /// <item><description>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</description></item>
+        /// <item><description>Each file system can have only one automatic snapshot policy applied.</description></item>
+        /// <item><description>One automatic snapshot policy can be applied to multiple file systems.</description></item>
+        /// <item><description>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -354,12 +365,21 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
-        /// <item><description>You can apply only one automatic snapshot policy to each file system.</description></item>
-        /// <item><description>Each automatic snapshot policy can be applied to multiple file systems.</description></item>
-        /// <item><description>If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</description></item>
+        /// <item><description>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</description></item>
+        /// <item><description>Each file system can have only one automatic snapshot policy applied.</description></item>
+        /// <item><description>One automatic snapshot policy can be applied to multiple file systems.</description></item>
+        /// <item><description>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</description></item>
+        /// <item><description>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</description></item>
+        /// <item><description>Each file system can have only one automatic snapshot policy applied.</description></item>
+        /// <item><description>One automatic snapshot policy can be applied to multiple file systems.</description></item>
+        /// <item><description>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -411,12 +431,21 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
-        /// <item><description>You can apply only one automatic snapshot policy to each file system.</description></item>
-        /// <item><description>Each automatic snapshot policy can be applied to multiple file systems.</description></item>
-        /// <item><description>If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</description></item>
+        /// <item><description>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</description></item>
+        /// <item><description>Each file system can have only one automatic snapshot policy applied.</description></item>
+        /// <item><description>One automatic snapshot policy can be applied to multiple file systems.</description></item>
+        /// <item><description>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</description></item>
+        /// <item><description>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</description></item>
+        /// <item><description>Each file system can have only one automatic snapshot policy applied.</description></item>
+        /// <item><description>One automatic snapshot policy can be applied to multiple file systems.</description></item>
+        /// <item><description>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -440,12 +469,21 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
-        /// <item><description>You can apply only one automatic snapshot policy to each file system.</description></item>
-        /// <item><description>Each automatic snapshot policy can be applied to multiple file systems.</description></item>
-        /// <item><description>If an automatic snapshot policy is applied to a file system, you can call the ApplyAutoSnapshotPolicy operation to change the automatic snapshot policy.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</description></item>
+        /// <item><description>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</description></item>
+        /// <item><description>Each file system can have only one automatic snapshot policy applied.</description></item>
+        /// <item><description>One automatic snapshot policy can be applied to multiple file systems.</description></item>
+        /// <item><description>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems (StorageType=advance) support this feature.</description></item>
+        /// <item><description>Before creating an Extreme NAS file system, complete the AliyunNASManageENIRole authorization in the console.</description></item>
+        /// <item><description>Each file system can have only one automatic snapshot policy applied.</description></item>
+        /// <item><description>One automatic snapshot policy can be applied to multiple file systems.</description></item>
+        /// <item><description>If the target file system already has an automatic snapshot policy applied, calling the ApplyAutoSnapshotPolicy operation replaces the current automatic snapshot policy of the file system.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -877,15 +915,15 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS supports this feature.
-        /// .
-        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS supports this feature.
-        /// .</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -933,15 +971,15 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS supports this feature.
-        /// .
-        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS supports this feature.
-        /// .</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -989,15 +1027,15 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS supports this feature.
-        /// .
-        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS supports this feature.
-        /// .</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1021,15 +1059,15 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS supports this feature.
-        /// .
-        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS supports this feature.
-        /// .</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>Before you begin: An automatic snapshot policy has been applied to the target Extreme NAS file system by calling <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-applyautosnapshotpolicy">ApplyAutoSnapshotPolicy</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1240,15 +1278,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a data streaming task.</para>
+        /// <para>Cancels a data flow streaming task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持在 CREATED和RUNNING状态下取消数据流动流式任务。</description></item>
-        /// <item><description>数据流动流式任务是异步执行的，您可通过DescribeDataFlowSubTasks查询流式任务执行状态。</description></item>
+        /// <item><description>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, the DataFlowTask is in the Executing state, and the DataFlowSubTask is in the CREATED or RUNNING state.</description></item>
+        /// <item><description>You can cancel a data flow streaming subtask only when it is in the CREATED or RUNNING state.</description></item>
+        /// <item><description>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of a streaming task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1311,15 +1350,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a data streaming task.</para>
+        /// <para>Cancels a data flow streaming task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持在 CREATED和RUNNING状态下取消数据流动流式任务。</description></item>
-        /// <item><description>数据流动流式任务是异步执行的，您可通过DescribeDataFlowSubTasks查询流式任务执行状态。</description></item>
+        /// <item><description>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, the DataFlowTask is in the Executing state, and the DataFlowSubTask is in the CREATED or RUNNING state.</description></item>
+        /// <item><description>You can cancel a data flow streaming subtask only when it is in the CREATED or RUNNING state.</description></item>
+        /// <item><description>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of a streaming task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1382,15 +1422,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a data streaming task.</para>
+        /// <para>Cancels a data flow streaming task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持在 CREATED和RUNNING状态下取消数据流动流式任务。</description></item>
-        /// <item><description>数据流动流式任务是异步执行的，您可通过DescribeDataFlowSubTasks查询流式任务执行状态。</description></item>
+        /// <item><description>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, the DataFlowTask is in the Executing state, and the DataFlowSubTask is in the CREATED or RUNNING state.</description></item>
+        /// <item><description>You can cancel a data flow streaming subtask only when it is in the CREATED or RUNNING state.</description></item>
+        /// <item><description>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of a streaming task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1409,15 +1450,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a data streaming task.</para>
+        /// <para>Cancels a data flow streaming task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持在 CREATED和RUNNING状态下取消数据流动流式任务。</description></item>
-        /// <item><description>数据流动流式任务是异步执行的，您可通过DescribeDataFlowSubTasks查询流式任务执行状态。</description></item>
+        /// <item><description>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, the DataFlowTask is in the Executing state, and the DataFlowSubTask is in the CREATED or RUNNING state.</description></item>
+        /// <item><description>You can cancel a data flow streaming subtask only when it is in the CREATED or RUNNING state.</description></item>
+        /// <item><description>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of a streaming task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1436,16 +1478,17 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a batch or streaming data flow task that is in the Pending or Executing state.</para>
+        /// <para>Cancels a data flow batch task or streaming task that is in the Pending or Executing state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Data flow tasks are supported only by CPFS 2.2.0 or later and CPFS for AI Computing 2.4.0 or later. The file system details page in the console displays the version information.</description></item>
-        /// <item><description>A data flow task can be canceled only if it is in the <c>Pending or Executing</c> state.</description></item>
-        /// <item><description>Canceling a data flow task typically takes 5 to 10 minutes. Call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status.</description></item>
-        /// <item><description>You cannot cancel a streaming task if it has running streaming subtasks. Otherwise, the system returns an InvalidStatus.ResourceMismatch error.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flow tasks. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Before you begin: A CPFS file system is created, the mount target is in the Active state, a fileset is created, and the data flow is in the Running state.</description></item>
+        /// <item><description>Only data flow tasks in the <c>Pending</c> state can be canceled.</description></item>
+        /// <item><description>Canceling a data flow task typically takes 5 to 10 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status.</description></item>
+        /// <item><description>If a streaming task contains running streaming subtasks, the streaming task cannot be canceled. Otherwise, the InvalidStatus.ResourceMismatch error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1504,16 +1547,17 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a batch or streaming data flow task that is in the Pending or Executing state.</para>
+        /// <para>Cancels a data flow batch task or streaming task that is in the Pending or Executing state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Data flow tasks are supported only by CPFS 2.2.0 or later and CPFS for AI Computing 2.4.0 or later. The file system details page in the console displays the version information.</description></item>
-        /// <item><description>A data flow task can be canceled only if it is in the <c>Pending or Executing</c> state.</description></item>
-        /// <item><description>Canceling a data flow task typically takes 5 to 10 minutes. Call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status.</description></item>
-        /// <item><description>You cannot cancel a streaming task if it has running streaming subtasks. Otherwise, the system returns an InvalidStatus.ResourceMismatch error.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flow tasks. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Before you begin: A CPFS file system is created, the mount target is in the Active state, a fileset is created, and the data flow is in the Running state.</description></item>
+        /// <item><description>Only data flow tasks in the <c>Pending</c> state can be canceled.</description></item>
+        /// <item><description>Canceling a data flow task typically takes 5 to 10 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status.</description></item>
+        /// <item><description>If a streaming task contains running streaming subtasks, the streaming task cannot be canceled. Otherwise, the InvalidStatus.ResourceMismatch error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1572,16 +1616,17 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a batch or streaming data flow task that is in the Pending or Executing state.</para>
+        /// <para>Cancels a data flow batch task or streaming task that is in the Pending or Executing state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Data flow tasks are supported only by CPFS 2.2.0 or later and CPFS for AI Computing 2.4.0 or later. The file system details page in the console displays the version information.</description></item>
-        /// <item><description>A data flow task can be canceled only if it is in the <c>Pending or Executing</c> state.</description></item>
-        /// <item><description>Canceling a data flow task typically takes 5 to 10 minutes. Call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status.</description></item>
-        /// <item><description>You cannot cancel a streaming task if it has running streaming subtasks. Otherwise, the system returns an InvalidStatus.ResourceMismatch error.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flow tasks. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Before you begin: A CPFS file system is created, the mount target is in the Active state, a fileset is created, and the data flow is in the Running state.</description></item>
+        /// <item><description>Only data flow tasks in the <c>Pending</c> state can be canceled.</description></item>
+        /// <item><description>Canceling a data flow task typically takes 5 to 10 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status.</description></item>
+        /// <item><description>If a streaming task contains running streaming subtasks, the streaming task cannot be canceled. Otherwise, the InvalidStatus.ResourceMismatch error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1600,16 +1645,17 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a batch or streaming data flow task that is in the Pending or Executing state.</para>
+        /// <para>Cancels a data flow batch task or streaming task that is in the Pending or Executing state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Data flow tasks are supported only by CPFS 2.2.0 or later and CPFS for AI Computing 2.4.0 or later. The file system details page in the console displays the version information.</description></item>
-        /// <item><description>A data flow task can be canceled only if it is in the <c>Pending or Executing</c> state.</description></item>
-        /// <item><description>Canceling a data flow task typically takes 5 to 10 minutes. Call the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation to query the task execution status.</description></item>
-        /// <item><description>You cannot cancel a streaming task if it has running streaming subtasks. Otherwise, the system returns an InvalidStatus.ResourceMismatch error.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flow tasks. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Before you begin: A CPFS file system is created, the mount target is in the Active state, a fileset is created, and the data flow is in the Running state.</description></item>
+        /// <item><description>Only data flow tasks in the <c>Pending</c> state can be canceled.</description></item>
+        /// <item><description>Canceling a data flow task typically takes 5 to 10 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status.</description></item>
+        /// <item><description>If a streaming task contains running streaming subtasks, the streaming task cannot be canceled. Otherwise, the InvalidStatus.ResourceMismatch error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3668,17 +3714,17 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// </thead>
         /// <tbody><tr>
         /// <td><b>CPFS General-purpose</b></td>
-        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em></td>
-        /// <td>2.2.0 and later</td>
+        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487****</td>
+        /// <td>2.2.0 or later</td>
         /// </tr>
         /// <tr>
         /// <td><b>CPFS for Lingjun</b></td>
-        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em></td>
-        /// <td>2.4.0 and later</td>
+        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015****</td>
+        /// <td>2.4.0 or later</td>
         /// </tr>
         /// </tbody></table>
         /// <remarks>
-        /// <para>CPFS General-purpose and CPFS for Lingjun share the same set of API operations, but differ in parameter values and feature support. Refer to the corresponding section based on the product type you use.</para>
+        /// <para>CPFS General-purpose and CPFS for Lingjun share the same set of APIs but differ in parameter values and feature support. Refer to the corresponding section based on your product type.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>Basic operations<list type="bullet">
@@ -3697,8 +3743,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// </list>
         /// </description></item>
         /// <item><description>Data flow specifications<list type="bullet">
-        /// <item><description>The data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth refers to the maximum transfer bandwidth that the data flow can achieve during data import or export.</description></item>
-        /// <item><description>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage General-purpose mount target. Make sure that sufficient vSwitch IP resources are available.</description></item>
+        /// <item><description>Data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth refers to the maximum transfer bandwidth that the data flow can achieve during data import or export.</description></item>
+        /// <item><description>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage General-purpose mount target. Ensure that sufficient vSwitch IP resources are available.</description></item>
         /// <item><description>Inventory check: When DryRun is set to true, you can verify whether the resources required to create a data flow of the specified specification are available.</description></item>
         /// </list>
         /// </description></item>
@@ -3714,10 +3760,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <item><description>Auto-refresh<list type="bullet">
         /// <item><description>After auto-refresh (AutoRefresh) is configured, when data in the source storage changes, the changed metadata is automatically synchronized to the Cloud Parallel File Storage General-purpose file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data flow task to load data.</description></item>
         /// <item><description>Auto-refresh relies on EventBridge to collect object modification events from the source OSS storage. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
-        /// <item><description>The scope of automatic synchronization is a prefix, specified by the RefreshPath parameter. A maximum of 5 auto-refresh folders can be configured for a data flow.</description></item>
-        /// <item><description>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which Cloud Parallel File Storage General-purpose checks whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an automatic synchronization task is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage General-purpose data flow, automatic synchronization tasks accumulate, metadata updates are delayed, and the data flow status changes to <c>Misconfigured</c>. You can resolve this issue by upgrading the data flow specification or reducing the OSS modification frequency.</description></item>
-        /// <item><description>When automatic synchronization is configured for a prefix in a Cloud Parallel File Storage General-purpose data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage General-purpose data flow.<remarks>
-        /// <para>The event bus and event rules created by Cloud Parallel File Storage General-purpose in EventBridge have the description <c>Create for cpfs auto refresh</c>. Do not modify or delete the event bus or event rules. Otherwise, auto-refresh does not work properly. The data flow status changes to Normal only when auto-refresh is working properly.</para>
+        /// <item><description>The scope of auto-refresh is a prefix, specified by the RefreshPath parameter. A maximum of 5 auto-refresh directories can be configured for a data flow.</description></item>
+        /// <item><description>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which Cloud Parallel File Storage General-purpose checks whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an auto-refresh task is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage General-purpose data flow, auto-refresh tasks accumulate, metadata updates are delayed, and the data flow status becomes <c>Misconfigured</c>. You can resolve this issue by upgrading the data flow specification or reducing the OSS modification frequency.</description></item>
+        /// <item><description>When auto-refresh is configured for a prefix in the Cloud Parallel File Storage General-purpose data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage General-purpose data flow.<remarks>
+        /// <para>The event bus and event rules created by Cloud Parallel File Storage General-purpose in EventBridge have the description <c>Create for cpfs auto refresh</c>. Do not modify or delete the event bus or event rules. Otherwise, auto-refresh does not work properly.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -3725,9 +3771,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <item><description>Source storage<list type="bullet">
         /// <item><description>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
         /// <item><description>Cloud Parallel File Storage General-purpose data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, confirm that the encryption in transit settings of the OSS bucket support encrypted access.</description></item>
-        /// <item><description>If data flows of multiple Cloud Parallel File Storage General-purpose file systems, or multiple data flows of the same Cloud Parallel File Storage General-purpose file system, use the same OSS bucket as the source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage General-purpose file systems export data to the same source. This procedure is required to avoid conflicts during the process.</description></item>
+        /// <item><description>If multiple Cloud Parallel File Storage General-purpose data flows or multiple data flows of the same Cloud Parallel File Storage General-purpose file system use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage General-purpose file systems export data to the same source.</description></item>
         /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the Cloud Parallel File Storage General-purpose file system.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage General-purpose data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the Cloud Parallel File Storage General-purpose data flow cannot access the data in the bucket.</para>
+        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage General-purpose data flow can access the data in the bucket. Do not delete or modify this tag during the use of the data flow. Otherwise, the Cloud Parallel File Storage General-purpose data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -3738,33 +3784,33 @@ namespace AlibabaCloud.SDK.NAS20170626
         ///    This section applies to CPFS for Lingjun file systems whose IDs start with <c>bmcpfs-</c>.<list type="bullet">
         /// <item><description>Source storage<list type="bullet">
         /// <item><description>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
-        /// <item><description>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, make sure that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
-        /// <item><description>If data flows of multiple CPFS for Lingjun file systems, or multiple data flows of the same CPFS for Lingjun file system, use the same OSS bucket as the source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
+        /// <item><description>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, ensure that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
+        /// <item><description>If multiple CPFS for Lingjun data flows or multiple data flows of the same CPFS for Lingjun file system use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
         /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the CPFS for Lingjun file system.</description></item>
-        /// <item><description>CPFS for Lingjun 2.6.0 and later support creating data flows with cross-account OSS.</description></item>
+        /// <item><description>CPFS for Lingjun 2.6.0 or later supports creating data flows with cross-account OSS.</description></item>
         /// <item><description>The account ID parameter is required only when you use cross-account OSS.</description></item>
-        /// <item><description>When you use cross-account OSS, authorize the account first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
+        /// <item><description>When you use cross-account OSS, authorize the accounts first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<remarks>
+        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag during the use of the data flow. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow restrictions on file systems.<list type="bullet">
-        /// <item><description>In the file system path associated with a data flow, you cannot rename a non-empty directory. Otherwise, a Permission Denied or directory not empty error is returned.</description></item>
-        /// <item><description>Use special characters in directory and file names with caution. The following characters are supported: uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
+        /// <item><description>Data flow restrictions on the file system.<list type="bullet">
+        /// <item><description>In the file system path associated with the data flow, you cannot rename non-empty directories. Otherwise, a Permission Denied or directory not empty error is returned.</description></item>
+        /// <item><description>Use special characters in directory and file names with caution. Supported characters include uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
         /// <item><description>Excessively long paths are not supported. The maximum path length supported by data flows is 1023 characters.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Data flow import restrictions.<list type="bullet">
-        /// <item><description>After symlink files are imported to CPFS for Lingjun, they are converted to regular files that contain data, and the symlink information is lost.</description></item>
+        /// <item><description>After Symlink files are imported to CPFS for Lingjun, they are converted to regular files that contain data, and the Symlink information is lost.</description></item>
         /// <item><description>If the OSS bucket has multiple versions, only the latest version is copied.</description></item>
         /// <item><description>File names or subdirectory names longer than 255 bytes are not supported.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Data flow export restrictions<list type="bullet">
-        /// <item><description>After symlink files are synchronized to OSS, the files pointed to by the symlinks are not synchronized. Instead, the symlinks become regular empty objects with no data.</description></item>
-        /// <item><description>Hardlink files are synchronized to OSS as regular files only.</description></item>
-        /// <item><description>Socket, Device, and Pipe files become regular empty objects with no data when exported to an OSS bucket.</description></item>
+        /// <item><description>After Symlink files are synchronized to OSS, the files pointed to by the Symlink are not synchronized. Instead, the Symlink becomes a regular empty object with no data.</description></item>
+        /// <item><description>Hardlink files are synchronized to OSS as regular files.</description></item>
+        /// <item><description>Socket, Device, and Pipe files exported to the OSS bucket become regular empty objects with no data.</description></item>
         /// <item><description>Directory paths longer than 1023 characters are not supported.</description></item>
         /// </list>
         /// </description></item>
@@ -3876,17 +3922,17 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// </thead>
         /// <tbody><tr>
         /// <td><b>CPFS General-purpose</b></td>
-        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em></td>
-        /// <td>2.2.0 and later</td>
+        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487****</td>
+        /// <td>2.2.0 or later</td>
         /// </tr>
         /// <tr>
         /// <td><b>CPFS for Lingjun</b></td>
-        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em></td>
-        /// <td>2.4.0 and later</td>
+        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015****</td>
+        /// <td>2.4.0 or later</td>
         /// </tr>
         /// </tbody></table>
         /// <remarks>
-        /// <para>CPFS General-purpose and CPFS for Lingjun share the same set of API operations, but differ in parameter values and feature support. Refer to the corresponding section based on the product type you use.</para>
+        /// <para>CPFS General-purpose and CPFS for Lingjun share the same set of APIs but differ in parameter values and feature support. Refer to the corresponding section based on your product type.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>Basic operations<list type="bullet">
@@ -3905,8 +3951,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// </list>
         /// </description></item>
         /// <item><description>Data flow specifications<list type="bullet">
-        /// <item><description>The data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth refers to the maximum transfer bandwidth that the data flow can achieve during data import or export.</description></item>
-        /// <item><description>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage General-purpose mount target. Make sure that sufficient vSwitch IP resources are available.</description></item>
+        /// <item><description>Data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth refers to the maximum transfer bandwidth that the data flow can achieve during data import or export.</description></item>
+        /// <item><description>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage General-purpose mount target. Ensure that sufficient vSwitch IP resources are available.</description></item>
         /// <item><description>Inventory check: When DryRun is set to true, you can verify whether the resources required to create a data flow of the specified specification are available.</description></item>
         /// </list>
         /// </description></item>
@@ -3922,10 +3968,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <item><description>Auto-refresh<list type="bullet">
         /// <item><description>After auto-refresh (AutoRefresh) is configured, when data in the source storage changes, the changed metadata is automatically synchronized to the Cloud Parallel File Storage General-purpose file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data flow task to load data.</description></item>
         /// <item><description>Auto-refresh relies on EventBridge to collect object modification events from the source OSS storage. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
-        /// <item><description>The scope of automatic synchronization is a prefix, specified by the RefreshPath parameter. A maximum of 5 auto-refresh folders can be configured for a data flow.</description></item>
-        /// <item><description>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which Cloud Parallel File Storage General-purpose checks whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an automatic synchronization task is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage General-purpose data flow, automatic synchronization tasks accumulate, metadata updates are delayed, and the data flow status changes to <c>Misconfigured</c>. You can resolve this issue by upgrading the data flow specification or reducing the OSS modification frequency.</description></item>
-        /// <item><description>When automatic synchronization is configured for a prefix in a Cloud Parallel File Storage General-purpose data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage General-purpose data flow.<remarks>
-        /// <para>The event bus and event rules created by Cloud Parallel File Storage General-purpose in EventBridge have the description <c>Create for cpfs auto refresh</c>. Do not modify or delete the event bus or event rules. Otherwise, auto-refresh does not work properly. The data flow status changes to Normal only when auto-refresh is working properly.</para>
+        /// <item><description>The scope of auto-refresh is a prefix, specified by the RefreshPath parameter. A maximum of 5 auto-refresh directories can be configured for a data flow.</description></item>
+        /// <item><description>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which Cloud Parallel File Storage General-purpose checks whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an auto-refresh task is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage General-purpose data flow, auto-refresh tasks accumulate, metadata updates are delayed, and the data flow status becomes <c>Misconfigured</c>. You can resolve this issue by upgrading the data flow specification or reducing the OSS modification frequency.</description></item>
+        /// <item><description>When auto-refresh is configured for a prefix in the Cloud Parallel File Storage General-purpose data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage General-purpose data flow.<remarks>
+        /// <para>The event bus and event rules created by Cloud Parallel File Storage General-purpose in EventBridge have the description <c>Create for cpfs auto refresh</c>. Do not modify or delete the event bus or event rules. Otherwise, auto-refresh does not work properly.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -3933,9 +3979,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <item><description>Source storage<list type="bullet">
         /// <item><description>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
         /// <item><description>Cloud Parallel File Storage General-purpose data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, confirm that the encryption in transit settings of the OSS bucket support encrypted access.</description></item>
-        /// <item><description>If data flows of multiple Cloud Parallel File Storage General-purpose file systems, or multiple data flows of the same Cloud Parallel File Storage General-purpose file system, use the same OSS bucket as the source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage General-purpose file systems export data to the same source. This procedure is required to avoid conflicts during the process.</description></item>
+        /// <item><description>If multiple Cloud Parallel File Storage General-purpose data flows or multiple data flows of the same Cloud Parallel File Storage General-purpose file system use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage General-purpose file systems export data to the same source.</description></item>
         /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the Cloud Parallel File Storage General-purpose file system.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage General-purpose data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the Cloud Parallel File Storage General-purpose data flow cannot access the data in the bucket.</para>
+        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage General-purpose data flow can access the data in the bucket. Do not delete or modify this tag during the use of the data flow. Otherwise, the Cloud Parallel File Storage General-purpose data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -3946,33 +3992,33 @@ namespace AlibabaCloud.SDK.NAS20170626
         ///    This section applies to CPFS for Lingjun file systems whose IDs start with <c>bmcpfs-</c>.<list type="bullet">
         /// <item><description>Source storage<list type="bullet">
         /// <item><description>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
-        /// <item><description>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, make sure that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
-        /// <item><description>If data flows of multiple CPFS for Lingjun file systems, or multiple data flows of the same CPFS for Lingjun file system, use the same OSS bucket as the source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
+        /// <item><description>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, ensure that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
+        /// <item><description>If multiple CPFS for Lingjun data flows or multiple data flows of the same CPFS for Lingjun file system use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
         /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the CPFS for Lingjun file system.</description></item>
-        /// <item><description>CPFS for Lingjun 2.6.0 and later support creating data flows with cross-account OSS.</description></item>
+        /// <item><description>CPFS for Lingjun 2.6.0 or later supports creating data flows with cross-account OSS.</description></item>
         /// <item><description>The account ID parameter is required only when you use cross-account OSS.</description></item>
-        /// <item><description>When you use cross-account OSS, authorize the account first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
+        /// <item><description>When you use cross-account OSS, authorize the accounts first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<remarks>
+        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag during the use of the data flow. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow restrictions on file systems.<list type="bullet">
-        /// <item><description>In the file system path associated with a data flow, you cannot rename a non-empty directory. Otherwise, a Permission Denied or directory not empty error is returned.</description></item>
-        /// <item><description>Use special characters in directory and file names with caution. The following characters are supported: uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
+        /// <item><description>Data flow restrictions on the file system.<list type="bullet">
+        /// <item><description>In the file system path associated with the data flow, you cannot rename non-empty directories. Otherwise, a Permission Denied or directory not empty error is returned.</description></item>
+        /// <item><description>Use special characters in directory and file names with caution. Supported characters include uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
         /// <item><description>Excessively long paths are not supported. The maximum path length supported by data flows is 1023 characters.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Data flow import restrictions.<list type="bullet">
-        /// <item><description>After symlink files are imported to CPFS for Lingjun, they are converted to regular files that contain data, and the symlink information is lost.</description></item>
+        /// <item><description>After Symlink files are imported to CPFS for Lingjun, they are converted to regular files that contain data, and the Symlink information is lost.</description></item>
         /// <item><description>If the OSS bucket has multiple versions, only the latest version is copied.</description></item>
         /// <item><description>File names or subdirectory names longer than 255 bytes are not supported.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Data flow export restrictions<list type="bullet">
-        /// <item><description>After symlink files are synchronized to OSS, the files pointed to by the symlinks are not synchronized. Instead, the symlinks become regular empty objects with no data.</description></item>
-        /// <item><description>Hardlink files are synchronized to OSS as regular files only.</description></item>
-        /// <item><description>Socket, Device, and Pipe files become regular empty objects with no data when exported to an OSS bucket.</description></item>
+        /// <item><description>After Symlink files are synchronized to OSS, the files pointed to by the Symlink are not synchronized. Instead, the Symlink becomes a regular empty object with no data.</description></item>
+        /// <item><description>Hardlink files are synchronized to OSS as regular files.</description></item>
+        /// <item><description>Socket, Device, and Pipe files exported to the OSS bucket become regular empty objects with no data.</description></item>
         /// <item><description>Directory paths longer than 1023 characters are not supported.</description></item>
         /// </list>
         /// </description></item>
@@ -4084,17 +4130,17 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// </thead>
         /// <tbody><tr>
         /// <td><b>CPFS General-purpose</b></td>
-        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em></td>
-        /// <td>2.2.0 and later</td>
+        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487****</td>
+        /// <td>2.2.0 or later</td>
         /// </tr>
         /// <tr>
         /// <td><b>CPFS for Lingjun</b></td>
-        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em></td>
-        /// <td>2.4.0 and later</td>
+        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015****</td>
+        /// <td>2.4.0 or later</td>
         /// </tr>
         /// </tbody></table>
         /// <remarks>
-        /// <para>CPFS General-purpose and CPFS for Lingjun share the same set of API operations, but differ in parameter values and feature support. Refer to the corresponding section based on the product type you use.</para>
+        /// <para>CPFS General-purpose and CPFS for Lingjun share the same set of APIs but differ in parameter values and feature support. Refer to the corresponding section based on your product type.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>Basic operations<list type="bullet">
@@ -4113,8 +4159,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// </list>
         /// </description></item>
         /// <item><description>Data flow specifications<list type="bullet">
-        /// <item><description>The data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth refers to the maximum transfer bandwidth that the data flow can achieve during data import or export.</description></item>
-        /// <item><description>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage General-purpose mount target. Make sure that sufficient vSwitch IP resources are available.</description></item>
+        /// <item><description>Data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth refers to the maximum transfer bandwidth that the data flow can achieve during data import or export.</description></item>
+        /// <item><description>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage General-purpose mount target. Ensure that sufficient vSwitch IP resources are available.</description></item>
         /// <item><description>Inventory check: When DryRun is set to true, you can verify whether the resources required to create a data flow of the specified specification are available.</description></item>
         /// </list>
         /// </description></item>
@@ -4130,10 +4176,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <item><description>Auto-refresh<list type="bullet">
         /// <item><description>After auto-refresh (AutoRefresh) is configured, when data in the source storage changes, the changed metadata is automatically synchronized to the Cloud Parallel File Storage General-purpose file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data flow task to load data.</description></item>
         /// <item><description>Auto-refresh relies on EventBridge to collect object modification events from the source OSS storage. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
-        /// <item><description>The scope of automatic synchronization is a prefix, specified by the RefreshPath parameter. A maximum of 5 auto-refresh folders can be configured for a data flow.</description></item>
-        /// <item><description>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which Cloud Parallel File Storage General-purpose checks whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an automatic synchronization task is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage General-purpose data flow, automatic synchronization tasks accumulate, metadata updates are delayed, and the data flow status changes to <c>Misconfigured</c>. You can resolve this issue by upgrading the data flow specification or reducing the OSS modification frequency.</description></item>
-        /// <item><description>When automatic synchronization is configured for a prefix in a Cloud Parallel File Storage General-purpose data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage General-purpose data flow.<remarks>
-        /// <para>The event bus and event rules created by Cloud Parallel File Storage General-purpose in EventBridge have the description <c>Create for cpfs auto refresh</c>. Do not modify or delete the event bus or event rules. Otherwise, auto-refresh does not work properly. The data flow status changes to Normal only when auto-refresh is working properly.</para>
+        /// <item><description>The scope of auto-refresh is a prefix, specified by the RefreshPath parameter. A maximum of 5 auto-refresh directories can be configured for a data flow.</description></item>
+        /// <item><description>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which Cloud Parallel File Storage General-purpose checks whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an auto-refresh task is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage General-purpose data flow, auto-refresh tasks accumulate, metadata updates are delayed, and the data flow status becomes <c>Misconfigured</c>. You can resolve this issue by upgrading the data flow specification or reducing the OSS modification frequency.</description></item>
+        /// <item><description>When auto-refresh is configured for a prefix in the Cloud Parallel File Storage General-purpose data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage General-purpose data flow.<remarks>
+        /// <para>The event bus and event rules created by Cloud Parallel File Storage General-purpose in EventBridge have the description <c>Create for cpfs auto refresh</c>. Do not modify or delete the event bus or event rules. Otherwise, auto-refresh does not work properly.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -4141,9 +4187,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <item><description>Source storage<list type="bullet">
         /// <item><description>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
         /// <item><description>Cloud Parallel File Storage General-purpose data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, confirm that the encryption in transit settings of the OSS bucket support encrypted access.</description></item>
-        /// <item><description>If data flows of multiple Cloud Parallel File Storage General-purpose file systems, or multiple data flows of the same Cloud Parallel File Storage General-purpose file system, use the same OSS bucket as the source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage General-purpose file systems export data to the same source. This procedure is required to avoid conflicts during the process.</description></item>
+        /// <item><description>If multiple Cloud Parallel File Storage General-purpose data flows or multiple data flows of the same Cloud Parallel File Storage General-purpose file system use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage General-purpose file systems export data to the same source.</description></item>
         /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the Cloud Parallel File Storage General-purpose file system.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage General-purpose data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the Cloud Parallel File Storage General-purpose data flow cannot access the data in the bucket.</para>
+        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage General-purpose data flow can access the data in the bucket. Do not delete or modify this tag during the use of the data flow. Otherwise, the Cloud Parallel File Storage General-purpose data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -4154,33 +4200,33 @@ namespace AlibabaCloud.SDK.NAS20170626
         ///    This section applies to CPFS for Lingjun file systems whose IDs start with <c>bmcpfs-</c>.<list type="bullet">
         /// <item><description>Source storage<list type="bullet">
         /// <item><description>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
-        /// <item><description>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, make sure that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
-        /// <item><description>If data flows of multiple CPFS for Lingjun file systems, or multiple data flows of the same CPFS for Lingjun file system, use the same OSS bucket as the source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
+        /// <item><description>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, ensure that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
+        /// <item><description>If multiple CPFS for Lingjun data flows or multiple data flows of the same CPFS for Lingjun file system use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
         /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the CPFS for Lingjun file system.</description></item>
-        /// <item><description>CPFS for Lingjun 2.6.0 and later support creating data flows with cross-account OSS.</description></item>
+        /// <item><description>CPFS for Lingjun 2.6.0 or later supports creating data flows with cross-account OSS.</description></item>
         /// <item><description>The account ID parameter is required only when you use cross-account OSS.</description></item>
-        /// <item><description>When you use cross-account OSS, authorize the account first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
+        /// <item><description>When you use cross-account OSS, authorize the accounts first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<remarks>
+        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag during the use of the data flow. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow restrictions on file systems.<list type="bullet">
-        /// <item><description>In the file system path associated with a data flow, you cannot rename a non-empty directory. Otherwise, a Permission Denied or directory not empty error is returned.</description></item>
-        /// <item><description>Use special characters in directory and file names with caution. The following characters are supported: uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
+        /// <item><description>Data flow restrictions on the file system.<list type="bullet">
+        /// <item><description>In the file system path associated with the data flow, you cannot rename non-empty directories. Otherwise, a Permission Denied or directory not empty error is returned.</description></item>
+        /// <item><description>Use special characters in directory and file names with caution. Supported characters include uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
         /// <item><description>Excessively long paths are not supported. The maximum path length supported by data flows is 1023 characters.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Data flow import restrictions.<list type="bullet">
-        /// <item><description>After symlink files are imported to CPFS for Lingjun, they are converted to regular files that contain data, and the symlink information is lost.</description></item>
+        /// <item><description>After Symlink files are imported to CPFS for Lingjun, they are converted to regular files that contain data, and the Symlink information is lost.</description></item>
         /// <item><description>If the OSS bucket has multiple versions, only the latest version is copied.</description></item>
         /// <item><description>File names or subdirectory names longer than 255 bytes are not supported.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Data flow export restrictions<list type="bullet">
-        /// <item><description>After symlink files are synchronized to OSS, the files pointed to by the symlinks are not synchronized. Instead, the symlinks become regular empty objects with no data.</description></item>
-        /// <item><description>Hardlink files are synchronized to OSS as regular files only.</description></item>
-        /// <item><description>Socket, Device, and Pipe files become regular empty objects with no data when exported to an OSS bucket.</description></item>
+        /// <item><description>After Symlink files are synchronized to OSS, the files pointed to by the Symlink are not synchronized. Instead, the Symlink becomes a regular empty object with no data.</description></item>
+        /// <item><description>Hardlink files are synchronized to OSS as regular files.</description></item>
+        /// <item><description>Socket, Device, and Pipe files exported to the OSS bucket become regular empty objects with no data.</description></item>
         /// <item><description>Directory paths longer than 1023 characters are not supported.</description></item>
         /// </list>
         /// </description></item>
@@ -4220,17 +4266,17 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// </thead>
         /// <tbody><tr>
         /// <td><b>CPFS General-purpose</b></td>
-        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em></td>
-        /// <td>2.2.0 and later</td>
+        /// <td>Starts with <c>cpfs-</c>, such as cpfs-125487****</td>
+        /// <td>2.2.0 or later</td>
         /// </tr>
         /// <tr>
         /// <td><b>CPFS for Lingjun</b></td>
-        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em></td>
-        /// <td>2.4.0 and later</td>
+        /// <td>Starts with <c>bmcpfs-</c>, such as bmcpfs-0015****</td>
+        /// <td>2.4.0 or later</td>
         /// </tr>
         /// </tbody></table>
         /// <remarks>
-        /// <para>CPFS General-purpose and CPFS for Lingjun share the same set of API operations, but differ in parameter values and feature support. Refer to the corresponding section based on the product type you use.</para>
+        /// <para>CPFS General-purpose and CPFS for Lingjun share the same set of APIs but differ in parameter values and feature support. Refer to the corresponding section based on your product type.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description>Basic operations<list type="bullet">
@@ -4249,8 +4295,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// </list>
         /// </description></item>
         /// <item><description>Data flow specifications<list type="bullet">
-        /// <item><description>The data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth refers to the maximum transfer bandwidth that the data flow can achieve during data import or export.</description></item>
-        /// <item><description>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage General-purpose mount target. Make sure that sufficient vSwitch IP resources are available.</description></item>
+        /// <item><description>Data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1200 MB/s, and 1500 MB/s. The data flow bandwidth refers to the maximum transfer bandwidth that the data flow can achieve during data import or export.</description></item>
+        /// <item><description>Creating a data flow consumes one vSwitch IP address used by the Cloud Parallel File Storage General-purpose mount target. Ensure that sufficient vSwitch IP resources are available.</description></item>
         /// <item><description>Inventory check: When DryRun is set to true, you can verify whether the resources required to create a data flow of the specified specification are available.</description></item>
         /// </list>
         /// </description></item>
@@ -4266,10 +4312,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <item><description>Auto-refresh<list type="bullet">
         /// <item><description>After auto-refresh (AutoRefresh) is configured, when data in the source storage changes, the changed metadata is automatically synchronized to the Cloud Parallel File Storage General-purpose file system. The changed data is loaded on demand when a user accesses the file, or loaded by starting a data flow task to load data.</description></item>
         /// <item><description>Auto-refresh relies on EventBridge to collect object modification events from the source OSS storage. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.</description></item>
-        /// <item><description>The scope of automatic synchronization is a prefix, specified by the RefreshPath parameter. A maximum of 5 auto-refresh folders can be configured for a data flow.</description></item>
-        /// <item><description>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which Cloud Parallel File Storage General-purpose checks whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an automatic synchronization task is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage General-purpose data flow, automatic synchronization tasks accumulate, metadata updates are delayed, and the data flow status changes to <c>Misconfigured</c>. You can resolve this issue by upgrading the data flow specification or reducing the OSS modification frequency.</description></item>
-        /// <item><description>When automatic synchronization is configured for a prefix in a Cloud Parallel File Storage General-purpose data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage General-purpose data flow.<remarks>
-        /// <para>The event bus and event rules created by Cloud Parallel File Storage General-purpose in EventBridge have the description <c>Create for cpfs auto refresh</c>. Do not modify or delete the event bus or event rules. Otherwise, auto-refresh does not work properly. The data flow status changes to Normal only when auto-refresh is working properly.</para>
+        /// <item><description>The scope of auto-refresh is a prefix, specified by the RefreshPath parameter. A maximum of 5 auto-refresh directories can be configured for a data flow.</description></item>
+        /// <item><description>The auto-refresh interval (AutoRefreshInterval) specifies the interval at which Cloud Parallel File Storage General-purpose checks whether data updates exist in the specified prefix of the source OSS bucket. If data updates exist, an auto-refresh task is started. When the frequency of object modification events in the source OSS exceeds the processing capacity of the Cloud Parallel File Storage General-purpose data flow, auto-refresh tasks accumulate, metadata updates are delayed, and the data flow status becomes <c>Misconfigured</c>. You can resolve this issue by upgrading the data flow specification or reducing the OSS modification frequency.</description></item>
+        /// <item><description>When auto-refresh is configured for a prefix in the Cloud Parallel File Storage General-purpose data flow, an event bus is created on the user side, and an event rule is created for the prefix of the source OSS bucket. When an object modification occurs in the prefix of the source OSS bucket, an OSS event is generated in EventBridge and processed by the Cloud Parallel File Storage General-purpose data flow.<remarks>
+        /// <para>The event bus and event rules created by Cloud Parallel File Storage General-purpose in EventBridge have the description <c>Create for cpfs auto refresh</c>. Do not modify or delete the event bus or event rules. Otherwise, auto-refresh does not work properly.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -4277,9 +4323,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <item><description>Source storage<list type="bullet">
         /// <item><description>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
         /// <item><description>Cloud Parallel File Storage General-purpose data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, confirm that the encryption in transit settings of the OSS bucket support encrypted access.</description></item>
-        /// <item><description>If data flows of multiple Cloud Parallel File Storage General-purpose file systems, or multiple data flows of the same Cloud Parallel File Storage General-purpose file system, use the same OSS bucket as the source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage General-purpose file systems export data to the same source. This procedure is required to avoid conflicts during the process.</description></item>
+        /// <item><description>If multiple Cloud Parallel File Storage General-purpose data flows or multiple data flows of the same Cloud Parallel File Storage General-purpose file system use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple Cloud Parallel File Storage General-purpose file systems export data to the same source.</description></item>
         /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the Cloud Parallel File Storage General-purpose file system.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage General-purpose data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the Cloud Parallel File Storage General-purpose data flow cannot access the data in the bucket.</para>
+        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the Cloud Parallel File Storage General-purpose data flow can access the data in the bucket. Do not delete or modify this tag during the use of the data flow. Otherwise, the Cloud Parallel File Storage General-purpose data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -4290,33 +4336,33 @@ namespace AlibabaCloud.SDK.NAS20170626
         ///    This section applies to CPFS for Lingjun file systems whose IDs start with <c>bmcpfs-</c>.<list type="bullet">
         /// <item><description>Source storage<list type="bullet">
         /// <item><description>Only OSS is supported as source storage. The source storage (SourceStorage) of a data flow must be an OSS bucket.</description></item>
-        /// <item><description>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, make sure that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
-        /// <item><description>If data flows of multiple CPFS for Lingjun file systems, or multiple data flows of the same CPFS for Lingjun file system, use the same OSS bucket as the source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
+        /// <item><description>CPFS for Lingjun data flows support both encrypted and non-encrypted access to OSS. When you select encrypted (SSL) access to OSS, ensure that the encryption in transit of the OSS bucket supports encrypted access.</description></item>
+        /// <item><description>If multiple CPFS for Lingjun data flows or multiple data flows of the same CPFS for Lingjun file system use the same OSS bucket as source storage, enable versioning for the OSS bucket to prevent data conflicts when multiple CPFS for Lingjun file systems export data to the same source.</description></item>
         /// <item><description>Cross-region OSS data flows are not supported. The OSS bucket must be in the same region as the CPFS for Lingjun file system.</description></item>
-        /// <item><description>CPFS for Lingjun 2.6.0 and later support creating data flows with cross-account OSS.</description></item>
+        /// <item><description>CPFS for Lingjun 2.6.0 or later supports creating data flows with cross-account OSS.</description></item>
         /// <item><description>The account ID parameter is required only when you use cross-account OSS.</description></item>
-        /// <item><description>When you use cross-account OSS, authorize the account first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<remarks>
-        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag while the data flow is in use. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
+        /// <item><description>When you use cross-account OSS, authorize the accounts first. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account data flow authorization</a>.<remarks>
+        /// <para>Before creating a data flow, set a tag (key: cpfs-dataflow, value: true) on the source OSS bucket so that the CPFS for Lingjun data flow can access the data in the bucket. Do not delete or modify this tag during the use of the data flow. Otherwise, the CPFS for Lingjun data flow cannot access the data in the bucket.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Data flow restrictions on file systems.<list type="bullet">
-        /// <item><description>In the file system path associated with a data flow, you cannot rename a non-empty directory. Otherwise, a Permission Denied or directory not empty error is returned.</description></item>
-        /// <item><description>Use special characters in directory and file names with caution. The following characters are supported: uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
+        /// <item><description>Data flow restrictions on the file system.<list type="bullet">
+        /// <item><description>In the file system path associated with the data flow, you cannot rename non-empty directories. Otherwise, a Permission Denied or directory not empty error is returned.</description></item>
+        /// <item><description>Use special characters in directory and file names with caution. Supported characters include uppercase and lowercase letters, digits, exclamation marks (!), hyphens (-), underscores (_), periods (.), asterisks (*), and parentheses (()).</description></item>
         /// <item><description>Excessively long paths are not supported. The maximum path length supported by data flows is 1023 characters.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Data flow import restrictions.<list type="bullet">
-        /// <item><description>After symlink files are imported to CPFS for Lingjun, they are converted to regular files that contain data, and the symlink information is lost.</description></item>
+        /// <item><description>After Symlink files are imported to CPFS for Lingjun, they are converted to regular files that contain data, and the Symlink information is lost.</description></item>
         /// <item><description>If the OSS bucket has multiple versions, only the latest version is copied.</description></item>
         /// <item><description>File names or subdirectory names longer than 255 bytes are not supported.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Data flow export restrictions<list type="bullet">
-        /// <item><description>After symlink files are synchronized to OSS, the files pointed to by the symlinks are not synchronized. Instead, the symlinks become regular empty objects with no data.</description></item>
-        /// <item><description>Hardlink files are synchronized to OSS as regular files only.</description></item>
-        /// <item><description>Socket, Device, and Pipe files become regular empty objects with no data when exported to an OSS bucket.</description></item>
+        /// <item><description>After Symlink files are synchronized to OSS, the files pointed to by the Symlink are not synchronized. Instead, the Symlink becomes a regular empty object with no data.</description></item>
+        /// <item><description>Hardlink files are synchronized to OSS as regular files.</description></item>
+        /// <item><description>Socket, Device, and Pipe files exported to the OSS bucket become regular empty objects with no data.</description></item>
         /// <item><description>Directory paths longer than 1023 characters are not supported.</description></item>
         /// </list>
         /// </description></item>
@@ -4340,16 +4386,17 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data streaming subtask.</para>
+        /// <para>Creates a subtask for a data flow streaming task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持状态为Executing（执行中）的数据流动流式任务创建子任务。</description></item>
-        /// <item><description>数据流动流式任务是异步执行的，您可通过DescribeDataFlowSubTasks查询流式任务执行状态。</description></item>
-        /// <item><description>当数据流动任务类型为流式任务时，运行中状态仅代表可以创建流式导入任务或流式导出任务（并不代表导入或导出任务运行中）。</description></item>
+        /// <item><description>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, and the DataFlowTask is in the Executing state.</description></item>
+        /// <item><description>You can create subtasks only for data flow streaming tasks in the Executing state.</description></item>
+        /// <item><description>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of streaming tasks.</description></item>
+        /// <item><description>When the data flow task type is a streaming task, the Running state only indicates that you can create streaming import tasks or streaming export tasks. It does not indicate that the import or export tasks are running.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4420,16 +4467,17 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data streaming subtask.</para>
+        /// <para>Creates a subtask for a data flow streaming task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持状态为Executing（执行中）的数据流动流式任务创建子任务。</description></item>
-        /// <item><description>数据流动流式任务是异步执行的，您可通过DescribeDataFlowSubTasks查询流式任务执行状态。</description></item>
-        /// <item><description>当数据流动任务类型为流式任务时，运行中状态仅代表可以创建流式导入任务或流式导出任务（并不代表导入或导出任务运行中）。</description></item>
+        /// <item><description>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, and the DataFlowTask is in the Executing state.</description></item>
+        /// <item><description>You can create subtasks only for data flow streaming tasks in the Executing state.</description></item>
+        /// <item><description>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of streaming tasks.</description></item>
+        /// <item><description>When the data flow task type is a streaming task, the Running state only indicates that you can create streaming import tasks or streaming export tasks. It does not indicate that the import or export tasks are running.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4500,16 +4548,17 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data streaming subtask.</para>
+        /// <para>Creates a subtask for a data flow streaming task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持状态为Executing（执行中）的数据流动流式任务创建子任务。</description></item>
-        /// <item><description>数据流动流式任务是异步执行的，您可通过DescribeDataFlowSubTasks查询流式任务执行状态。</description></item>
-        /// <item><description>当数据流动任务类型为流式任务时，运行中状态仅代表可以创建流式导入任务或流式导出任务（并不代表导入或导出任务运行中）。</description></item>
+        /// <item><description>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, and the DataFlowTask is in the Executing state.</description></item>
+        /// <item><description>You can create subtasks only for data flow streaming tasks in the Executing state.</description></item>
+        /// <item><description>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of streaming tasks.</description></item>
+        /// <item><description>When the data flow task type is a streaming task, the Running state only indicates that you can create streaming import tasks or streaming export tasks. It does not indicate that the import or export tasks are running.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4528,16 +4577,17 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data streaming subtask.</para>
+        /// <para>Creates a subtask for a data flow streaming task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持状态为Executing（执行中）的数据流动流式任务创建子任务。</description></item>
-        /// <item><description>数据流动流式任务是异步执行的，您可通过DescribeDataFlowSubTasks查询流式任务执行状态。</description></item>
-        /// <item><description>当数据流动任务类型为流式任务时，运行中状态仅代表可以创建流式导入任务或流式导出任务（并不代表导入或导出任务运行中）。</description></item>
+        /// <item><description>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Prerequisites: A CPFS for Lingjun file system is created, the DataFlow is in the Running state, and the DataFlowTask is in the Executing state.</description></item>
+        /// <item><description>You can create subtasks only for data flow streaming tasks in the Executing state.</description></item>
+        /// <item><description>Data flow streaming tasks are executed asynchronously. You can call DescribeDataFlowSubTasks to query the execution status of streaming tasks.</description></item>
+        /// <item><description>When the data flow task type is a streaming task, the Running state only indicates that you can create streaming import tasks or streaming export tasks. It does not indicate that the import or export tasks are running.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4556,26 +4606,26 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a data flow task.</para>
+        /// <para>Creates a data flow task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>CPFS usage notes<list type="bullet">
-        /// <item><description>Data flow is supported only on CPFS 2.2.0 and later. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks execute asynchronously. You can query the task status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation. Task duration depends on the amount of data. For large datasets, split the workload into multiple tasks.</description></item>
-        /// <item><description>You can create data flow tasks only on a data flow that is in the Running state.</description></item>
-        /// <item><description>Manually running a data flow task pauses the corresponding automatic data update task.</description></item>
-        /// <item><description>When you create an export task, ensure that the absolute path of each file to be exported from CPFS does not exceed 1,023 characters.</description></item>
+        /// <item><description>Usage notes for CPFS<list type="bullet">
+        /// <item><description>Only CPFS 2.2.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
+        /// <item><description>When you manually execute a data flow task, the automatic data update task of the data flow is interrupted and waits.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS does not exceed 1,023 characters.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>CPFS AI-Computing Edition usage notes<list type="bullet">
-        /// <item><description>Data flow is supported only on CPFS AI-Computing Edition 2.4.0 and later. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks execute asynchronously. You can query the task status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation. Task duration depends on the amount of data. For large datasets, split the workload into multiple tasks.</description></item>
-        /// <item><description>You can create data flow tasks only on a data flow that is in the Running state.</description></item>
-        /// <item><description>When you create an export task, ensure that the absolute path of each file to be exported from CPFS AI-Computing Edition does not exceed 1,023 characters.</description></item>
-        /// <item><description>CPFS AI-Computing Edition supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
+        /// <item><description>Usage notes for CPFS for Lingjun<list type="bullet">
+        /// <item><description>Only CPFS for Lingjun 2.4.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS for Lingjun does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS for Lingjun supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task type overview</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4672,26 +4722,26 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a data flow task.</para>
+        /// <para>Creates a data flow task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>CPFS usage notes<list type="bullet">
-        /// <item><description>Data flow is supported only on CPFS 2.2.0 and later. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks execute asynchronously. You can query the task status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation. Task duration depends on the amount of data. For large datasets, split the workload into multiple tasks.</description></item>
-        /// <item><description>You can create data flow tasks only on a data flow that is in the Running state.</description></item>
-        /// <item><description>Manually running a data flow task pauses the corresponding automatic data update task.</description></item>
-        /// <item><description>When you create an export task, ensure that the absolute path of each file to be exported from CPFS does not exceed 1,023 characters.</description></item>
+        /// <item><description>Usage notes for CPFS<list type="bullet">
+        /// <item><description>Only CPFS 2.2.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
+        /// <item><description>When you manually execute a data flow task, the automatic data update task of the data flow is interrupted and waits.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS does not exceed 1,023 characters.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>CPFS AI-Computing Edition usage notes<list type="bullet">
-        /// <item><description>Data flow is supported only on CPFS AI-Computing Edition 2.4.0 and later. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks execute asynchronously. You can query the task status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation. Task duration depends on the amount of data. For large datasets, split the workload into multiple tasks.</description></item>
-        /// <item><description>You can create data flow tasks only on a data flow that is in the Running state.</description></item>
-        /// <item><description>When you create an export task, ensure that the absolute path of each file to be exported from CPFS AI-Computing Edition does not exceed 1,023 characters.</description></item>
-        /// <item><description>CPFS AI-Computing Edition supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
+        /// <item><description>Usage notes for CPFS for Lingjun<list type="bullet">
+        /// <item><description>Only CPFS for Lingjun 2.4.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS for Lingjun does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS for Lingjun supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task type overview</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4788,26 +4838,26 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a data flow task.</para>
+        /// <para>Creates a data flow task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>CPFS usage notes<list type="bullet">
-        /// <item><description>Data flow is supported only on CPFS 2.2.0 and later. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks execute asynchronously. You can query the task status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation. Task duration depends on the amount of data. For large datasets, split the workload into multiple tasks.</description></item>
-        /// <item><description>You can create data flow tasks only on a data flow that is in the Running state.</description></item>
-        /// <item><description>Manually running a data flow task pauses the corresponding automatic data update task.</description></item>
-        /// <item><description>When you create an export task, ensure that the absolute path of each file to be exported from CPFS does not exceed 1,023 characters.</description></item>
+        /// <item><description>Usage notes for CPFS<list type="bullet">
+        /// <item><description>Only CPFS 2.2.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
+        /// <item><description>When you manually execute a data flow task, the automatic data update task of the data flow is interrupted and waits.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS does not exceed 1,023 characters.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>CPFS AI-Computing Edition usage notes<list type="bullet">
-        /// <item><description>Data flow is supported only on CPFS AI-Computing Edition 2.4.0 and later. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks execute asynchronously. You can query the task status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation. Task duration depends on the amount of data. For large datasets, split the workload into multiple tasks.</description></item>
-        /// <item><description>You can create data flow tasks only on a data flow that is in the Running state.</description></item>
-        /// <item><description>When you create an export task, ensure that the absolute path of each file to be exported from CPFS AI-Computing Edition does not exceed 1,023 characters.</description></item>
-        /// <item><description>CPFS AI-Computing Edition supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
+        /// <item><description>Usage notes for CPFS for Lingjun<list type="bullet">
+        /// <item><description>Only CPFS for Lingjun 2.4.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS for Lingjun does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS for Lingjun supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task type overview</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -4828,26 +4878,26 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a data flow task.</para>
+        /// <para>Creates a data flow task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>CPFS usage notes<list type="bullet">
-        /// <item><description>Data flow is supported only on CPFS 2.2.0 and later. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks execute asynchronously. You can query the task status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation. Task duration depends on the amount of data. For large datasets, split the workload into multiple tasks.</description></item>
-        /// <item><description>You can create data flow tasks only on a data flow that is in the Running state.</description></item>
-        /// <item><description>Manually running a data flow task pauses the corresponding automatic data update task.</description></item>
-        /// <item><description>When you create an export task, ensure that the absolute path of each file to be exported from CPFS does not exceed 1,023 characters.</description></item>
+        /// <item><description>Usage notes for CPFS<list type="bullet">
+        /// <item><description>Only CPFS 2.2.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
+        /// <item><description>When you manually execute a data flow task, the automatic data update task of the data flow is interrupted and waits.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS does not exceed 1,023 characters.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>CPFS AI-Computing Edition usage notes<list type="bullet">
-        /// <item><description>Data flow is supported only on CPFS AI-Computing Edition 2.4.0 and later. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>Data flow tasks execute asynchronously. You can query the task status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation. Task duration depends on the amount of data. For large datasets, split the workload into multiple tasks.</description></item>
-        /// <item><description>You can create data flow tasks only on a data flow that is in the Running state.</description></item>
-        /// <item><description>When you create an export task, ensure that the absolute path of each file to be exported from CPFS AI-Computing Edition does not exceed 1,023 characters.</description></item>
-        /// <item><description>CPFS AI-Computing Edition supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</description></item>
+        /// <item><description>Usage notes for CPFS for Lingjun<list type="bullet">
+        /// <item><description>Only CPFS for Lingjun 2.4.0 and later support data flow. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>Data flow tasks are executed asynchronously. You can call <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> to query the task execution status. The time required for a task depends on the amount of data to be imported or exported. If a large amount of data is involved, split the data into multiple tasks.</description></item>
+        /// <item><description>You can create a data flow task only on a data flow in the Running state.</description></item>
+        /// <item><description>When you create an export task, make sure that the total length of the absolute path of the file to be exported from CPFS for Lingjun does not exceed 1,023 characters.</description></item>
+        /// <item><description>CPFS for Lingjun supports two task types: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task type overview</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -5238,9 +5288,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you use this operation, make sure that you understand the billing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</description></item>
-        /// <item><description>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
-        /// <item><description>When you call this operation, the system automatically creates the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</description></item>
+        /// <item><description>Make sure that you understand the billing methods and pricing of File Storage NAS before you invoke this operation. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</description></item>
+        /// <item><description>You must complete real-name verification before you can create a file system instance. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
+        /// <item><description>When you invoke this operation, the service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5365,9 +5415,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you use this operation, make sure that you understand the billing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</description></item>
-        /// <item><description>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
-        /// <item><description>When you call this operation, the system automatically creates the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</description></item>
+        /// <item><description>Make sure that you understand the billing methods and pricing of File Storage NAS before you invoke this operation. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</description></item>
+        /// <item><description>You must complete real-name verification before you can create a file system instance. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
+        /// <item><description>When you invoke this operation, the service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5492,9 +5542,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you use this operation, make sure that you understand the billing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</description></item>
-        /// <item><description>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
-        /// <item><description>When you call this operation, the system automatically creates the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</description></item>
+        /// <item><description>Make sure that you understand the billing methods and pricing of File Storage NAS before you invoke this operation. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</description></item>
+        /// <item><description>You must complete real-name verification before you can create a file system instance. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
+        /// <item><description>When you invoke this operation, the service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5519,9 +5569,9 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you use this operation, make sure that you understand the billing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</description></item>
-        /// <item><description>To create a file system instance, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
-        /// <item><description>When you call this operation, the system automatically creates the service-linked role required for the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked role for NAS</a>.</description></item>
+        /// <item><description>Make sure that you understand the billing methods and pricing of File Storage NAS before you invoke this operation. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.aliyun.com/price/product?#/nas/detail">Pricing</a>.</description></item>
+        /// <item><description>You must complete real-name verification before you can create a file system instance. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name verification</a>.</description></item>
+        /// <item><description>When you invoke this operation, the service-linked role required for the operation is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5995,8 +6045,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only General-purpose NAS file systems and CPFS for Lingjun support creating lifecycle management policies.</description></item>
-        /// <item><description>Each CPFS for Lingjun file system supports a maximum of 10 Auto-type and 100 OnDemand-type lifecycle management policies.</description></item>
-        /// <item><description>A maximum of 20 lifecycle management policies can be created for General-purpose NAS in each region.</description></item>
+        /// <item><description>Each CPFS for Lingjun file system supports up to 10 Auto-type and 100 OnDemand-type lifecycle management policies.</description></item>
+        /// <item><description>Up to 20 lifecycle management policies can be created for General-purpose NAS in each region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6014,6 +6064,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteRules))
+            {
+                query["DeleteRules"] = request.DeleteRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -6082,8 +6136,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only General-purpose NAS file systems and CPFS for Lingjun support creating lifecycle management policies.</description></item>
-        /// <item><description>Each CPFS for Lingjun file system supports a maximum of 10 Auto-type and 100 OnDemand-type lifecycle management policies.</description></item>
-        /// <item><description>A maximum of 20 lifecycle management policies can be created for General-purpose NAS in each region.</description></item>
+        /// <item><description>Each CPFS for Lingjun file system supports up to 10 Auto-type and 100 OnDemand-type lifecycle management policies.</description></item>
+        /// <item><description>Up to 20 lifecycle management policies can be created for General-purpose NAS in each region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6101,6 +6155,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteRules))
+            {
+                query["DeleteRules"] = request.DeleteRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -6169,8 +6227,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only General-purpose NAS file systems and CPFS for Lingjun support creating lifecycle management policies.</description></item>
-        /// <item><description>Each CPFS for Lingjun file system supports a maximum of 10 Auto-type and 100 OnDemand-type lifecycle management policies.</description></item>
-        /// <item><description>A maximum of 20 lifecycle management policies can be created for General-purpose NAS in each region.</description></item>
+        /// <item><description>Each CPFS for Lingjun file system supports up to 10 Auto-type and 100 OnDemand-type lifecycle management policies.</description></item>
+        /// <item><description>Up to 20 lifecycle management policies can be created for General-purpose NAS in each region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6196,8 +6254,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only General-purpose NAS file systems and CPFS for Lingjun support creating lifecycle management policies.</description></item>
-        /// <item><description>Each CPFS for Lingjun file system supports a maximum of 10 Auto-type and 100 OnDemand-type lifecycle management policies.</description></item>
-        /// <item><description>A maximum of 20 lifecycle management policies can be created for General-purpose NAS in each region.</description></item>
+        /// <item><description>Each CPFS for Lingjun file system supports up to 10 Auto-type and 100 OnDemand-type lifecycle management policies.</description></item>
+        /// <item><description>Up to 20 lifecycle management policies can be created for General-purpose NAS in each region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9103,8 +9161,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</description></item>
-        /// <item><description>If deletion protection is enabled, disable it before you delete the fileset.</description></item>
-        /// <item><description>All filesets on the target file system must be in the CREATED desired state before you can perform the deletion.</description></item>
+        /// <item><description>If deletion protection is enabled, you must disable deletion protection before you can delete the fileset.</description></item>
+        /// <item><description>All filesets on the target file system must be in the CREATED desired state before you can perform the delete operation.</description></item>
         /// <item><description>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
@@ -9167,8 +9225,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</description></item>
-        /// <item><description>If deletion protection is enabled, disable it before you delete the fileset.</description></item>
-        /// <item><description>All filesets on the target file system must be in the CREATED desired state before you can perform the deletion.</description></item>
+        /// <item><description>If deletion protection is enabled, you must disable deletion protection before you can delete the fileset.</description></item>
+        /// <item><description>All filesets on the target file system must be in the CREATED desired state before you can perform the delete operation.</description></item>
         /// <item><description>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
@@ -9231,8 +9289,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</description></item>
-        /// <item><description>If deletion protection is enabled, disable it before you delete the fileset.</description></item>
-        /// <item><description>All filesets on the target file system must be in the CREATED desired state before you can perform the deletion.</description></item>
+        /// <item><description>If deletion protection is enabled, you must disable deletion protection before you can delete the fileset.</description></item>
+        /// <item><description>All filesets on the target file system must be in the CREATED desired state before you can perform the delete operation.</description></item>
         /// <item><description>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
@@ -9259,8 +9317,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support fileset deletion. After a fileset is deleted, all data in the directory is permanently deleted and cannot be recovered. Proceed with caution.</description></item>
-        /// <item><description>If deletion protection is enabled, disable it before you delete the fileset.</description></item>
-        /// <item><description>All filesets on the target file system must be in the CREATED desired state before you can perform the deletion.</description></item>
+        /// <item><description>If deletion protection is enabled, you must disable deletion protection before you can delete the fileset.</description></item>
+        /// <item><description>All filesets on the target file system must be in the CREATED desired state before you can perform the delete operation.</description></item>
         /// <item><description>Deleting a CPFS general-purpose fileset immediately releases disk space. Deleting a CPFS for Lingjun fileset gradually releases disk space. Deleted data cannot be recovered. Proceed with caution.</description></item>
         /// </list>
         /// </description>
@@ -10233,14 +10291,13 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
-        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
-        /// .</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10288,14 +10345,13 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
-        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
-        /// .</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10343,14 +10399,13 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
-        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
-        /// .</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10374,14 +10429,13 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
-        /// &lt;props=&quot;intl&quot;&gt;.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
         /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
-        /// <item><description>Only Advanced Extreme NAS file systems support this feature.
-        /// .</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10557,7 +10611,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
+        /// <para>Only General-purpose NAS file systems that use the NFS protocol support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10608,7 +10662,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
+        /// <para>Only General-purpose NAS file systems that use the NFS protocol support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10659,7 +10713,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
+        /// <para>Only General-purpose NAS file systems that use the NFS protocol support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10682,7 +10736,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS NFS file systems support this feature.</para>
+        /// <para>Only General-purpose NAS file systems that use the NFS protocol support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10896,7 +10950,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about rules in a permission group.</para>
+        /// <para>Queries the description of a permission rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10954,7 +11008,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about rules in a permission group.</para>
+        /// <para>Queries the description of a permission rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11012,7 +11066,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about rules in a permission group.</para>
+        /// <para>Queries the description of a permission rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11030,7 +11084,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about rules in a permission group.</para>
+        /// <para>Queries the description of a permission rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11048,12 +11102,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an Agentic space.</para>
+        /// <para>Queries Agentic spaces.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applies to agentic-type file systems.</para>
+        /// <para>Applicable to agentic-type file systems.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11107,12 +11161,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an Agentic space.</para>
+        /// <para>Queries Agentic spaces.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applies to agentic-type file systems.</para>
+        /// <para>Applicable to agentic-type file systems.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11166,12 +11220,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an Agentic space.</para>
+        /// <para>Queries Agentic spaces.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applies to agentic-type file systems.</para>
+        /// <para>Applicable to agentic-type file systems.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11189,12 +11243,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an Agentic space.</para>
+        /// <para>Queries Agentic spaces.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applies to agentic-type file systems.</para>
+        /// <para>Applicable to agentic-type file systems.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11212,14 +11266,18 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries automatic snapshot policies.</para>
+        /// <para>Queries the automatic snapshot policies that have been created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> protocol is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> protocol is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11274,14 +11332,18 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries automatic snapshot policies.</para>
+        /// <para>Queries the automatic snapshot policies that have been created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> protocol is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> protocol is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11336,14 +11398,18 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries automatic snapshot policies.</para>
+        /// <para>Queries the automatic snapshot policies that have been created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> protocol is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> protocol is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11362,14 +11428,18 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries automatic snapshot policies.</para>
+        /// <para>Queries the automatic snapshot policies that have been created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> protocol is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> protocol is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11388,14 +11458,18 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries automatic snapshot tasks.</para>
+        /// <para>Queries the list of automatic snapshot tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11454,14 +11528,18 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries automatic snapshot tasks.</para>
+        /// <para>Queries the list of automatic snapshot tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11520,14 +11598,18 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries automatic snapshot tasks.</para>
+        /// <para>Queries the list of automatic snapshot tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11546,14 +11628,18 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries automatic snapshot tasks.</para>
+        /// <para>Queries the list of automatic snapshot tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support the snapshot feature.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS supports this feature.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12096,12 +12182,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data flow subtasks in batches.</para>
+        /// <para>Queries data flow batch subtasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</para>
+        /// <para>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12155,12 +12241,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data flow subtasks in batches.</para>
+        /// <para>Queries data flow batch subtasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</para>
+        /// <para>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12214,12 +12300,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data flow subtasks in batches.</para>
+        /// <para>Queries data flow batch subtasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</para>
+        /// <para>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12237,12 +12323,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data flow subtasks in batches.</para>
+        /// <para>Queries data flow batch subtasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅CPFS智算版2.6.0 及以上版本支持。您可以在控制台文件系统详情页面查看版本信息。</para>
+        /// <para>Only CPFS for Lingjun 2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12260,12 +12346,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves data flow task details.</para>
+        /// <para>Queries the details of data flow tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Querying data flow tasks is supported only on CPFS 2.2.0 or later and CPFS AI Computing Edition 2.4.0 or later. You can find the version information on the file system details page in the console.</para>
+        /// <para>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support querying data flow tasks. You can view the version information on the file system details page in the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12323,12 +12409,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves data flow task details.</para>
+        /// <para>Queries the details of data flow tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Querying data flow tasks is supported only on CPFS 2.2.0 or later and CPFS AI Computing Edition 2.4.0 or later. You can find the version information on the file system details page in the console.</para>
+        /// <para>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support querying data flow tasks. You can view the version information on the file system details page in the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12386,12 +12472,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves data flow task details.</para>
+        /// <para>Queries the details of data flow tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Querying data flow tasks is supported only on CPFS 2.2.0 or later and CPFS AI Computing Edition 2.4.0 or later. You can find the version information on the file system details page in the console.</para>
+        /// <para>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support querying data flow tasks. You can view the version information on the file system details page in the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12409,12 +12495,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves data flow task details.</para>
+        /// <para>Queries the details of data flow tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Querying data flow tasks is supported only on CPFS 2.2.0 or later and CPFS AI Computing Edition 2.4.0 or later. You can find the version information on the file system details page in the console.</para>
+        /// <para>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support querying data flow tasks. You can view the version information on the file system details page in the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12432,15 +12518,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dataflows of a CPFS file system.</para>
+        /// <para>Queries data flow information of a CPFS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS 2.2.0及以上版本、CPFS智算版2.4.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>筛选键（Filters）中，FsetIds、DataFlowlds、SourceStorage、ThroughputList、Status需要做全字匹配，FileSystemPath、Description、SourceStoragePath支持模糊匹配。</description></item>
-        /// <item><description>支持组合查询。</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>For filter keys (Filters), FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
+        /// <item><description>Combined queries are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12495,15 +12581,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dataflows of a CPFS file system.</para>
+        /// <para>Queries data flow information of a CPFS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS 2.2.0及以上版本、CPFS智算版2.4.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>筛选键（Filters）中，FsetIds、DataFlowlds、SourceStorage、ThroughputList、Status需要做全字匹配，FileSystemPath、Description、SourceStoragePath支持模糊匹配。</description></item>
-        /// <item><description>支持组合查询。</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>For filter keys (Filters), FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
+        /// <item><description>Combined queries are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12558,15 +12644,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dataflows of a CPFS file system.</para>
+        /// <para>Queries data flow information of a CPFS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS 2.2.0及以上版本、CPFS智算版2.4.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>筛选键（Filters）中，FsetIds、DataFlowlds、SourceStorage、ThroughputList、Status需要做全字匹配，FileSystemPath、Description、SourceStoragePath支持模糊匹配。</description></item>
-        /// <item><description>支持组合查询。</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>For filter keys (Filters), FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
+        /// <item><description>Combined queries are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12585,15 +12671,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dataflows of a CPFS file system.</para>
+        /// <para>Queries data flow information of a CPFS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS 2.2.0及以上版本、CPFS智算版2.4.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>筛选键（Filters）中，FsetIds、DataFlowlds、SourceStorage、ThroughputList、Status需要做全字匹配，FileSystemPath、Description、SourceStoragePath支持模糊匹配。</description></item>
-        /// <item><description>支持组合查询。</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>For filter keys (Filters), FsetIds, DataFlowIds, SourceStorage, ThroughputList, and Status require exact match. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</description></item>
+        /// <item><description>Combined queries are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13111,8 +13197,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>In the filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</description></item>
-        /// <item><description>Combination queries are supported.</description></item>
+        /// <item><description>For filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</description></item>
+        /// <item><description>Combined queries are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13182,8 +13268,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>In the filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</description></item>
-        /// <item><description>Combination queries are supported.</description></item>
+        /// <item><description>For filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</description></item>
+        /// <item><description>Combined queries are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13253,8 +13339,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>In the filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</description></item>
-        /// <item><description>Combination queries are supported.</description></item>
+        /// <item><description>For filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</description></item>
+        /// <item><description>Combined queries are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13280,8 +13366,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <description>
         /// <list type="bullet">
         /// <item><description>Only CPFS 2.2.0 and later and CPFS for Lingjun 2.7.0 and later support filesets. You can view the version information on the file system details page in the console.</description></item>
-        /// <item><description>In the filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</description></item>
-        /// <item><description>Combination queries are supported.</description></item>
+        /// <item><description>For filter keys (Filters), FsetIds requires an exact match, while FileSystemPath and Description support fuzzy match.</description></item>
+        /// <item><description>Combined queries are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13648,7 +13734,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of lifecycle management policies.</para>
+        /// <para>Retrieves the list of lifecycle management policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13691,7 +13777,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of lifecycle management policies.</para>
+        /// <para>Retrieves the list of lifecycle management policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13734,7 +13820,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of lifecycle management policies.</para>
+        /// <para>Retrieves the list of lifecycle management policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13757,7 +13843,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of lifecycle management policies.</para>
+        /// <para>Retrieves the list of lifecycle management policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -13780,12 +13866,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution logs of a lifecycle policy, returning up to 1,000 entries from the last 90 days. This feature is only available for CPFS AI Computing Edition.</para>
+        /// <para>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the execution logs of a lifecycle policy. You can query up to 1,000 log entries from the last 90 days. Only CPFS (AI Computing Edition) supports this operation.</para>
+        /// <para>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13839,12 +13925,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution logs of a lifecycle policy, returning up to 1,000 entries from the last 90 days. This feature is only available for CPFS AI Computing Edition.</para>
+        /// <para>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the execution logs of a lifecycle policy. You can query up to 1,000 log entries from the last 90 days. Only CPFS (AI Computing Edition) supports this operation.</para>
+        /// <para>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13898,12 +13984,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution logs of a lifecycle policy, returning up to 1,000 entries from the last 90 days. This feature is only available for CPFS AI Computing Edition.</para>
+        /// <para>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the execution logs of a lifecycle policy. You can query up to 1,000 log entries from the last 90 days. Only CPFS (AI Computing Edition) supports this operation.</para>
+        /// <para>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13921,12 +14007,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution logs of a lifecycle policy, returning up to 1,000 entries from the last 90 days. This feature is only available for CPFS AI Computing Edition.</para>
+        /// <para>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the execution logs of a lifecycle policy. You can query up to 1,000 log entries from the last 90 days. Only CPFS (AI Computing Edition) supports this operation.</para>
+        /// <para>Queries the execution logs of a lifecycle policy. You can query logs from the last 90 days or up to 1000 log entries. Only CPFS for Lingjun is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15076,8 +15162,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Queries the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you begin: Before calling this API, ensure that the KMS service is activated in the target region. You can activate it by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. This restriction also applies to unencrypted file systems with EncryptType=0.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSmbAclRequest
@@ -15118,8 +15211,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Queries the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you begin: Before calling this API, ensure that the KMS service is activated in the target region. You can activate it by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. This restriction also applies to unencrypted file systems with EncryptType=0.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSmbAclRequest
@@ -15160,8 +15260,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Queries the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you begin: Before calling this API, ensure that the KMS service is activated in the target region. You can activate it by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. This restriction also applies to unencrypted file systems with EncryptType=0.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSmbAclRequest
@@ -15178,8 +15285,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Queries the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you begin: Before calling this API, ensure that the KMS service is activated in the target region. You can activate it by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. This restriction also applies to unencrypted file systems with EncryptType=0.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSmbAclRequest
@@ -16148,8 +16262,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Disables the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you begin: Before calling this API, ensure that the Key Management Service (KMS) is activated in the target region. You can activate KMS by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. The file system protocol type must be SMB. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to verify the file system protocol type.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableSmbAclRequest
@@ -16190,8 +16311,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Disables the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you begin: Before calling this API, ensure that the Key Management Service (KMS) is activated in the target region. You can activate KMS by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. The file system protocol type must be SMB. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to verify the file system protocol type.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableSmbAclRequest
@@ -16232,8 +16360,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Disables the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you begin: Before calling this API, ensure that the Key Management Service (KMS) is activated in the target region. You can activate KMS by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. The file system protocol type must be SMB. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to verify the file system protocol type.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableSmbAclRequest
@@ -16250,8 +16385,15 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Disables the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you begin: Before calling this API, ensure that the Key Management Service (KMS) is activated in the target region. You can activate KMS by calling the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or through the console. The file system protocol type must be SMB. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to verify the file system protocol type.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableSmbAclRequest
@@ -16556,8 +16698,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Enables the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>By connecting the mount target of an SMB file system to an AD domain, you can implement user identity authentication management and file-level access permissions control in the AD domain. Before you mount and use an SMB file system as an AD domain user, you must register the service for the SMB file system in the AD domain, generate a Keytab file, and upload it to the File Storage NAS console to enable the SMB ACL feature. <a href="https://help.aliyun.com/document_detail/154930.html">Generate a Keytab file</a>.</description></item>
+        /// <item><description>Before you begin: Before invoking this API, confirm that Key Management Service (KMS) is activated in the target area. You can invoke the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or activate it in the console.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableSmbAclRequest
@@ -16606,8 +16756,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Enables the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>By connecting the mount target of an SMB file system to an AD domain, you can implement user identity authentication management and file-level access permissions control in the AD domain. Before you mount and use an SMB file system as an AD domain user, you must register the service for the SMB file system in the AD domain, generate a Keytab file, and upload it to the File Storage NAS console to enable the SMB ACL feature. <a href="https://help.aliyun.com/document_detail/154930.html">Generate a Keytab file</a>.</description></item>
+        /// <item><description>Before you begin: Before invoking this API, confirm that Key Management Service (KMS) is activated in the target area. You can invoke the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or activate it in the console.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableSmbAclRequest
@@ -16656,8 +16814,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Enables the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>By connecting the mount target of an SMB file system to an AD domain, you can implement user identity authentication management and file-level access permissions control in the AD domain. Before you mount and use an SMB file system as an AD domain user, you must register the service for the SMB file system in the AD domain, generate a Keytab file, and upload it to the File Storage NAS console to enable the SMB ACL feature. <a href="https://help.aliyun.com/document_detail/154930.html">Generate a Keytab file</a>.</description></item>
+        /// <item><description>Before you begin: Before invoking this API, confirm that Key Management Service (KMS) is activated in the target area. You can invoke the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or activate it in the console.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableSmbAclRequest
@@ -16674,8 +16840,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the access control list (ACL) feature for a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Enables the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>By connecting the mount target of an SMB file system to an AD domain, you can implement user identity authentication management and file-level access permissions control in the AD domain. Before you mount and use an SMB file system as an AD domain user, you must register the service for the SMB file system in the AD domain, generate a Keytab file, and upload it to the File Storage NAS console to enable the SMB ACL feature. <a href="https://help.aliyun.com/document_detail/154930.html">Generate a Keytab file</a>.</description></item>
+        /// <item><description>Before you begin: Before invoking this API, confirm that Key Management Service (KMS) is activated in the target area. You can invoke the <a href="https://www.alibabacloud.com/help/en/kms/key-management-service/developer-reference/api-kms-2016-01-20-openkmsservice">Kms.OpenKmsService</a> API or activate it in the console.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableSmbAclRequest
@@ -17428,12 +17602,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询接入点信息</para>
+        /// <para>Queries access point information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型 NAS NFS 协议文件系统支持。</para>
+        /// <para>Only General-purpose NAS NFS file systems are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17487,12 +17661,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询接入点信息</para>
+        /// <para>Queries access point information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型 NAS NFS 协议文件系统支持。</para>
+        /// <para>Only General-purpose NAS NFS file systems are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17546,12 +17720,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询接入点信息</para>
+        /// <para>Queries access point information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型 NAS NFS 协议文件系统支持。</para>
+        /// <para>Only General-purpose NAS NFS file systems are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17569,12 +17743,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询接入点信息</para>
+        /// <para>Queries access point information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型 NAS NFS 协议文件系统支持。</para>
+        /// <para>Only General-purpose NAS NFS file systems are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17592,12 +17766,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Infrequent Access files and the subdirectories that contain them from a specified directory on a General-purpose NAS file system.</para>
+        /// <para>Retrieves the list of IA storage class files and subdirectories that contain IA storage class files under a specified directory in a General-purpose NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only general-purpose NAS file systems support this feature.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17659,12 +17833,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Infrequent Access files and the subdirectories that contain them from a specified directory on a General-purpose NAS file system.</para>
+        /// <para>Retrieves the list of IA storage class files and subdirectories that contain IA storage class files under a specified directory in a General-purpose NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only general-purpose NAS file systems support this feature.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17726,12 +17900,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Infrequent Access files and the subdirectories that contain them from a specified directory on a General-purpose NAS file system.</para>
+        /// <para>Retrieves the list of IA storage class files and subdirectories that contain IA storage class files under a specified directory in a General-purpose NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only general-purpose NAS file systems support this feature.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17749,12 +17923,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Infrequent Access files and the subdirectories that contain them from a specified directory on a General-purpose NAS file system.</para>
+        /// <para>Retrieves the list of IA storage class files and subdirectories that contain IA storage class files under a specified directory in a General-purpose NAS file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only general-purpose NAS file systems support this feature.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17772,12 +17946,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data retrieval tasks.</para>
+        /// <para>Retrieves the list of created data retrieval tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17835,12 +18009,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data retrieval tasks.</para>
+        /// <para>Retrieves the list of created data retrieval tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17898,12 +18072,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data retrieval tasks.</para>
+        /// <para>Retrieves the list of created data retrieval tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17921,12 +18095,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data retrieval tasks.</para>
+        /// <para>Retrieves the list of created data retrieval tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17944,12 +18118,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the directories that are recently deleted.</para>
+        /// <para>Queries directories on which delete operations were recently performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17987,12 +18161,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the directories that are recently deleted.</para>
+        /// <para>Queries directories on which delete operations were recently performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18030,12 +18204,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the directories that are recently deleted.</para>
+        /// <para>Queries directories on which delete operations were recently performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18053,12 +18227,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the directories that are recently deleted.</para>
+        /// <para>Queries directories on which delete operations were recently performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18076,14 +18250,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the jobs of the recycle bin.</para>
+        /// <para>Queries information about one or more tasks in the recycle bin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only General-purpose NAS file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can query a maximum of 50 jobs that are recently executed.</description></item>
+        /// <item><description>Only General-purpose NAS file systems support this feature.</description></item>
+        /// <item><description>You can query up to 50 most recently executed tasks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18122,14 +18296,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the jobs of the recycle bin.</para>
+        /// <para>Queries information about one or more tasks in the recycle bin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only General-purpose NAS file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can query a maximum of 50 jobs that are recently executed.</description></item>
+        /// <item><description>Only General-purpose NAS file systems support this feature.</description></item>
+        /// <item><description>You can query up to 50 most recently executed tasks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18168,14 +18342,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the jobs of the recycle bin.</para>
+        /// <para>Queries information about one or more tasks in the recycle bin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only General-purpose NAS file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can query a maximum of 50 jobs that are recently executed.</description></item>
+        /// <item><description>Only General-purpose NAS file systems support this feature.</description></item>
+        /// <item><description>You can query up to 50 most recently executed tasks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18194,14 +18368,14 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the jobs of the recycle bin.</para>
+        /// <para>Queries information about one or more tasks in the recycle bin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only General-purpose NAS file systems support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can query a maximum of 50 jobs that are recently executed.</description></item>
+        /// <item><description>Only General-purpose NAS file systems support this feature.</description></item>
+        /// <item><description>You can query up to 50 most recently executed tasks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18225,7 +18399,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18268,7 +18442,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18311,7 +18485,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18334,7 +18508,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose NAS file systems support this operation.</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18501,7 +18675,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）不支持修改。</para>
+        /// <para>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18556,7 +18730,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）不支持修改。</para>
+        /// <para>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18611,7 +18785,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）不支持修改。</para>
+        /// <para>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18634,7 +18808,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）不支持修改。</para>
+        /// <para>The default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18824,12 +18998,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a rule in a permission group.</para>
+        /// <para>Modifies a permission rule in a permission group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）中的规则不支持修改。</para>
+        /// <para>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18899,12 +19073,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a rule in a permission group.</para>
+        /// <para>Modifies a permission rule in a permission group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）中的规则不支持修改。</para>
+        /// <para>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18974,12 +19148,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a rule in a permission group.</para>
+        /// <para>Modifies a permission rule in a permission group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）中的规则不支持修改。</para>
+        /// <para>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18997,12 +19171,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a rule in a permission group.</para>
+        /// <para>Modifies a permission rule in a permission group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>默认权限组（DEFAULT_VPC_GROUP_NAME）中的规则不支持修改。</para>
+        /// <para>Rules in the default permission group (DEFAULT_VPC_GROUP_NAME) cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19546,17 +19720,16 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows.</description></item>
-        /// <item><description>You can modify the properties of a data flow only when the data flow is in the <c>Running (Normal)</c> state.</description></item>
-        /// <item><description>Modifying a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data flow modification.</description></item>
-        /// <item><description>CPFS data flow specifications:<list type="bullet">
-        /// <item><description>Data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow bandwidth refers to the maximum transmission bandwidth that can be achieved when the data flow imports or exports data.</description></item>
-        /// <item><description>Inventory check: When DryRun is set to true, you can verify whether the resources required to modify the data flow with the specified specifications are sufficient.</description></item>
+        /// <item><description>CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data streams.</description></item>
+        /// <item><description>Only data streams in the <c>Running (Normal)</c> state can have their properties modified.</description></item>
+        /// <item><description>Modifying a data stream typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data stream modification.</description></item>
+        /// <item><description>CPFS data stream specifications:<list type="bullet">
+        /// <item><description>Data stream bandwidth (Throughput) supports three specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data stream bandwidth refers to the maximum transmission bandwidth that can be achieved when the data stream imports or exports data.</description></item>
+        /// <item><description>Inventory query: When you set DryRun to true, you can verify whether the resources required to modify the data stream with the specified specifications are sufficient.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>CPFS billing
-        /// Modifying the data flow bandwidth (Throughput) involves data flow bandwidth billing. Familiarize yourself with the billable methods of CPFS in advance. For more details, see <a href="https://help.aliyun.com/document_detail/111858.html">CPFS billing</a>.
-        /// Settings for the data stream property can affect billing.</description></item>
+        /// Modifying the data stream bandwidth (Throughput) involves data stream bandwidth billing. Familiarize yourself with the billable methods of CPFS in advance. For more details, see <a href="https://help.aliyun.com/document_detail/111858.html">CPFS billing</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19625,17 +19798,16 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows.</description></item>
-        /// <item><description>You can modify the properties of a data flow only when the data flow is in the <c>Running (Normal)</c> state.</description></item>
-        /// <item><description>Modifying a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data flow modification.</description></item>
-        /// <item><description>CPFS data flow specifications:<list type="bullet">
-        /// <item><description>Data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow bandwidth refers to the maximum transmission bandwidth that can be achieved when the data flow imports or exports data.</description></item>
-        /// <item><description>Inventory check: When DryRun is set to true, you can verify whether the resources required to modify the data flow with the specified specifications are sufficient.</description></item>
+        /// <item><description>CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data streams.</description></item>
+        /// <item><description>Only data streams in the <c>Running (Normal)</c> state can have their properties modified.</description></item>
+        /// <item><description>Modifying a data stream typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data stream modification.</description></item>
+        /// <item><description>CPFS data stream specifications:<list type="bullet">
+        /// <item><description>Data stream bandwidth (Throughput) supports three specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data stream bandwidth refers to the maximum transmission bandwidth that can be achieved when the data stream imports or exports data.</description></item>
+        /// <item><description>Inventory query: When you set DryRun to true, you can verify whether the resources required to modify the data stream with the specified specifications are sufficient.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>CPFS billing
-        /// Modifying the data flow bandwidth (Throughput) involves data flow bandwidth billing. Familiarize yourself with the billable methods of CPFS in advance. For more details, see <a href="https://help.aliyun.com/document_detail/111858.html">CPFS billing</a>.
-        /// Settings for the data stream property can affect billing.</description></item>
+        /// Modifying the data stream bandwidth (Throughput) involves data stream bandwidth billing. Familiarize yourself with the billable methods of CPFS in advance. For more details, see <a href="https://help.aliyun.com/document_detail/111858.html">CPFS billing</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19704,17 +19876,16 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows.</description></item>
-        /// <item><description>You can modify the properties of a data flow only when the data flow is in the <c>Running (Normal)</c> state.</description></item>
-        /// <item><description>Modifying a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data flow modification.</description></item>
-        /// <item><description>CPFS data flow specifications:<list type="bullet">
-        /// <item><description>Data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow bandwidth refers to the maximum transmission bandwidth that can be achieved when the data flow imports or exports data.</description></item>
-        /// <item><description>Inventory check: When DryRun is set to true, you can verify whether the resources required to modify the data flow with the specified specifications are sufficient.</description></item>
+        /// <item><description>CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data streams.</description></item>
+        /// <item><description>Only data streams in the <c>Running (Normal)</c> state can have their properties modified.</description></item>
+        /// <item><description>Modifying a data stream typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data stream modification.</description></item>
+        /// <item><description>CPFS data stream specifications:<list type="bullet">
+        /// <item><description>Data stream bandwidth (Throughput) supports three specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data stream bandwidth refers to the maximum transmission bandwidth that can be achieved when the data stream imports or exports data.</description></item>
+        /// <item><description>Inventory query: When you set DryRun to true, you can verify whether the resources required to modify the data stream with the specified specifications are sufficient.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>CPFS billing
-        /// Modifying the data flow bandwidth (Throughput) involves data flow bandwidth billing. Familiarize yourself with the billable methods of CPFS in advance. For more details, see <a href="https://help.aliyun.com/document_detail/111858.html">CPFS billing</a>.
-        /// Settings for the data stream property can affect billing.</description></item>
+        /// Modifying the data stream bandwidth (Throughput) involves data stream bandwidth billing. Familiarize yourself with the billable methods of CPFS in advance. For more details, see <a href="https://help.aliyun.com/document_detail/111858.html">CPFS billing</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19739,17 +19910,16 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data flows.</description></item>
-        /// <item><description>You can modify the properties of a data flow only when the data flow is in the <c>Running (Normal)</c> state.</description></item>
-        /// <item><description>Modifying a data flow typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data flow modification.</description></item>
-        /// <item><description>CPFS data flow specifications:<list type="bullet">
-        /// <item><description>Data flow bandwidth (Throughput) supports three specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow bandwidth refers to the maximum transmission bandwidth that can be achieved when the data flow imports or exports data.</description></item>
-        /// <item><description>Inventory check: When DryRun is set to true, you can verify whether the resources required to modify the data flow with the specified specifications are sufficient.</description></item>
+        /// <item><description>CPFS 2.2.0 and later and CPFS for Lingjun 2.4.0 and later support data streams.</description></item>
+        /// <item><description>Only data streams in the <c>Running (Normal)</c> state can have their properties modified.</description></item>
+        /// <item><description>Modifying a data stream typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the data stream modification.</description></item>
+        /// <item><description>CPFS data stream specifications:<list type="bullet">
+        /// <item><description>Data stream bandwidth (Throughput) supports three specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data stream bandwidth refers to the maximum transmission bandwidth that can be achieved when the data stream imports or exports data.</description></item>
+        /// <item><description>Inventory query: When you set DryRun to true, you can verify whether the resources required to modify the data stream with the specified specifications are sufficient.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>CPFS billing
-        /// Modifying the data flow bandwidth (Throughput) involves data flow bandwidth billing. Familiarize yourself with the billable methods of CPFS in advance. For more details, see <a href="https://help.aliyun.com/document_detail/111858.html">CPFS billing</a>.
-        /// Settings for the data stream property can affect billing.</description></item>
+        /// Modifying the data stream bandwidth (Throughput) involves data stream bandwidth billing. Familiarize yourself with the billable methods of CPFS in advance. For more details, see <a href="https://help.aliyun.com/document_detail/111858.html">CPFS billing</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19768,16 +19938,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an AutoRefresh configuration of a dataflow.</para>
+        /// <para>Modifies the automatic update configuration of a dataflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>该接口仅适用于CPFS文件系统。</description></item>
-        /// <item><description>仅CPFS 2.2.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持修改<c>Running（正常</c>）、<c>Stopped（停止）</c>状态数据流动的自动更新配置。</description></item>
-        /// <item><description>修改自动更新配置一般耗时2～5分钟，您可以通过<a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a>查询修改自动更新任务的状态。</description></item>
+        /// <item><description>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can modify the automatic update configuration only for dataflows in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>Modifying the automatic update configuration typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the automatic update task modification.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19840,16 +20010,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an AutoRefresh configuration of a dataflow.</para>
+        /// <para>Modifies the automatic update configuration of a dataflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>该接口仅适用于CPFS文件系统。</description></item>
-        /// <item><description>仅CPFS 2.2.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持修改<c>Running（正常</c>）、<c>Stopped（停止）</c>状态数据流动的自动更新配置。</description></item>
-        /// <item><description>修改自动更新配置一般耗时2～5分钟，您可以通过<a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a>查询修改自动更新任务的状态。</description></item>
+        /// <item><description>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can modify the automatic update configuration only for dataflows in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>Modifying the automatic update configuration typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the automatic update task modification.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19912,16 +20082,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an AutoRefresh configuration of a dataflow.</para>
+        /// <para>Modifies the automatic update configuration of a dataflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>该接口仅适用于CPFS文件系统。</description></item>
-        /// <item><description>仅CPFS 2.2.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持修改<c>Running（正常</c>）、<c>Stopped（停止）</c>状态数据流动的自动更新配置。</description></item>
-        /// <item><description>修改自动更新配置一般耗时2～5分钟，您可以通过<a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a>查询修改自动更新任务的状态。</description></item>
+        /// <item><description>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can modify the automatic update configuration only for dataflows in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>Modifying the automatic update configuration typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the automatic update task modification.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19940,16 +20110,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an AutoRefresh configuration of a dataflow.</para>
+        /// <para>Modifies the automatic update configuration of a dataflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>该接口仅适用于CPFS文件系统。</description></item>
-        /// <item><description>仅CPFS 2.2.0及以上版本支持数据流动。您可以在控制台文件系统详情页面查看版本信息。</description></item>
-        /// <item><description>仅支持修改<c>Running（正常</c>）、<c>Stopped（停止）</c>状态数据流动的自动更新配置。</description></item>
-        /// <item><description>修改自动更新配置一般耗时2～5分钟，您可以通过<a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a>查询修改自动更新任务的状态。</description></item>
+        /// <item><description>This operation applies only to Cloud Parallel File Storage (CPFS) file systems.</description></item>
+        /// <item><description>Only CPFS 2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</description></item>
+        /// <item><description>You can modify the automatic update configuration only for dataflows in the <c>Running</c> or <c>Stopped</c> state.</description></item>
+        /// <item><description>Modifying the automatic update configuration typically takes 2 to 5 minutes. You can call <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> to query the status of the automatic update task modification.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20484,12 +20654,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a lifecycle policy.</para>
+        /// <para>Modifies a lifecycle management policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS文件系统支持该功能。</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20551,12 +20721,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a lifecycle policy.</para>
+        /// <para>Modifies a lifecycle management policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS文件系统支持该功能。</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20618,12 +20788,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a lifecycle policy.</para>
+        /// <para>Modifies a lifecycle management policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS文件系统支持该功能。</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20641,12 +20811,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a lifecycle policy.</para>
+        /// <para>Modifies a lifecycle management policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅通用型NAS文件系统支持该功能。</para>
+        /// <para>Only General-purpose NAS file systems support this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20664,12 +20834,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties of a mount target.</para>
+        /// <para>Modifies mount target information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation applies only to mount targets on General-purpose NAS and Extreme NAS file systems.</para>
+        /// <para>Only mount target information of General-purpose NAS or Extreme NAS file systems can be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20731,12 +20901,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties of a mount target.</para>
+        /// <para>Modifies mount target information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation applies only to mount targets on General-purpose NAS and Extreme NAS file systems.</para>
+        /// <para>Only mount target information of General-purpose NAS or Extreme NAS file systems can be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20798,12 +20968,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties of a mount target.</para>
+        /// <para>Modifies mount target information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation applies only to mount targets on General-purpose NAS and Extreme NAS file systems.</para>
+        /// <para>Only mount target information of General-purpose NAS or Extreme NAS file systems can be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20821,12 +20991,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the properties of a mount target.</para>
+        /// <para>Modifies mount target information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation applies only to mount targets on General-purpose NAS and Extreme NAS file systems.</para>
+        /// <para>Only mount target information of General-purpose NAS or Extreme NAS file systems can be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21196,8 +21366,13 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Updates the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Make sure that Key Management Service (KMS) is activated in the target region before you call this operation. Call sequence: Activate KMS → Call EnableSmbAcl to initialize → Call ModifySmbAcl.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySmbAclRequest
@@ -21266,8 +21441,13 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Updates the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Make sure that Key Management Service (KMS) is activated in the target region before you call this operation. Call sequence: Activate KMS → Call EnableSmbAcl to initialize → Call ModifySmbAcl.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySmbAclRequest
@@ -21336,8 +21516,13 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Updates the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Make sure that Key Management Service (KMS) is activated in the target region before you call this operation. Call sequence: Activate KMS → Call EnableSmbAcl to initialize → Call ModifySmbAcl.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySmbAclRequest
@@ -21354,8 +21539,13 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about the access control list (ACL) feature of a Server Message Block (SMB) file system that resides in an Active Directory (AD) domain.</para>
+        /// <para>Updates the SMB AD ACL feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you begin: Make sure that Key Management Service (KMS) is activated in the target region before you call this operation. Call sequence: Activate KMS → Call EnableSmbAcl to initialize → Call ModifySmbAcl.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySmbAclRequest
@@ -21648,16 +21838,36 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a file system to a snapshot of the file system.</para>
+        /// <para>Rolls back a file system to the state of a specified historical snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
-        /// <item><description>The file system must be in the Running state.</description></item>
-        /// <item><description>To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>The file system must be in the Normal state.</description></item>
+        /// <item><description>The specified SnapshotId parameter must be a historical snapshot created from the same file system specified by FileSystemId.</description></item>
+        /// <item><description>Dependency chain:</description></item>
+        /// <item><description>(1) Grant the AliyunNASManageENIRole permission in the Resource Access Management (RAM) console.</description></item>
+        /// <item><description>(2) Call CreateFileSystem (FileSystemType=extreme, StorageType=advance).</description></item>
+        /// <item><description>(3) Call DescribeFileSystems and poll until Status=Running.</description></item>
+        /// <item><description>(4) Call CreateSnapshot (FileSystemId=ID from the previous step).</description></item>
+        /// <item><description>(5) Call DescribeSnapshots and poll until Status=available.</description></item>
+        /// <item><description>(6) Call ResetFileSystem (FileSystemId, SnapshotId).
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>The file system must be in the Normal state.</description></item>
+        /// <item><description>The specified SnapshotId parameter must be a historical snapshot created from the same file system specified by FileSystemId.</description></item>
+        /// <item><description>Dependency chain:</description></item>
+        /// <item><description>(1) Grant the AliyunNASManageENIRole permission in the Resource Access Management (RAM) console.</description></item>
+        /// <item><description>(2) Call CreateFileSystem (FileSystemType=extreme, StorageType=advance).</description></item>
+        /// <item><description>(3) Call DescribeFileSystems and poll until Status=Running.</description></item>
+        /// <item><description>(4) Call CreateSnapshot (FileSystemId=ID from the previous step).</description></item>
+        /// <item><description>(5) Call DescribeSnapshots and poll until Status=available.</description></item>
+        /// <item><description>(6) Call ResetFileSystem (FileSystemId, SnapshotId).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21704,16 +21914,36 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a file system to a snapshot of the file system.</para>
+        /// <para>Rolls back a file system to the state of a specified historical snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
-        /// <item><description>The file system must be in the Running state.</description></item>
-        /// <item><description>To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>The file system must be in the Normal state.</description></item>
+        /// <item><description>The specified SnapshotId parameter must be a historical snapshot created from the same file system specified by FileSystemId.</description></item>
+        /// <item><description>Dependency chain:</description></item>
+        /// <item><description>(1) Grant the AliyunNASManageENIRole permission in the Resource Access Management (RAM) console.</description></item>
+        /// <item><description>(2) Call CreateFileSystem (FileSystemType=extreme, StorageType=advance).</description></item>
+        /// <item><description>(3) Call DescribeFileSystems and poll until Status=Running.</description></item>
+        /// <item><description>(4) Call CreateSnapshot (FileSystemId=ID from the previous step).</description></item>
+        /// <item><description>(5) Call DescribeSnapshots and poll until Status=available.</description></item>
+        /// <item><description>(6) Call ResetFileSystem (FileSystemId, SnapshotId).
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>The file system must be in the Normal state.</description></item>
+        /// <item><description>The specified SnapshotId parameter must be a historical snapshot created from the same file system specified by FileSystemId.</description></item>
+        /// <item><description>Dependency chain:</description></item>
+        /// <item><description>(1) Grant the AliyunNASManageENIRole permission in the Resource Access Management (RAM) console.</description></item>
+        /// <item><description>(2) Call CreateFileSystem (FileSystemType=extreme, StorageType=advance).</description></item>
+        /// <item><description>(3) Call DescribeFileSystems and poll until Status=Running.</description></item>
+        /// <item><description>(4) Call CreateSnapshot (FileSystemId=ID from the previous step).</description></item>
+        /// <item><description>(5) Call DescribeSnapshots and poll until Status=available.</description></item>
+        /// <item><description>(6) Call ResetFileSystem (FileSystemId, SnapshotId).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21760,16 +21990,36 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a file system to a snapshot of the file system.</para>
+        /// <para>Rolls back a file system to the state of a specified historical snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
-        /// <item><description>The file system must be in the Running state.</description></item>
-        /// <item><description>To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>The file system must be in the Normal state.</description></item>
+        /// <item><description>The specified SnapshotId parameter must be a historical snapshot created from the same file system specified by FileSystemId.</description></item>
+        /// <item><description>Dependency chain:</description></item>
+        /// <item><description>(1) Grant the AliyunNASManageENIRole permission in the Resource Access Management (RAM) console.</description></item>
+        /// <item><description>(2) Call CreateFileSystem (FileSystemType=extreme, StorageType=advance).</description></item>
+        /// <item><description>(3) Call DescribeFileSystems and poll until Status=Running.</description></item>
+        /// <item><description>(4) Call CreateSnapshot (FileSystemId=ID from the previous step).</description></item>
+        /// <item><description>(5) Call DescribeSnapshots and poll until Status=available.</description></item>
+        /// <item><description>(6) Call ResetFileSystem (FileSystemId, SnapshotId).
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>The file system must be in the Normal state.</description></item>
+        /// <item><description>The specified SnapshotId parameter must be a historical snapshot created from the same file system specified by FileSystemId.</description></item>
+        /// <item><description>Dependency chain:</description></item>
+        /// <item><description>(1) Grant the AliyunNASManageENIRole permission in the Resource Access Management (RAM) console.</description></item>
+        /// <item><description>(2) Call CreateFileSystem (FileSystemType=extreme, StorageType=advance).</description></item>
+        /// <item><description>(3) Call DescribeFileSystems and poll until Status=Running.</description></item>
+        /// <item><description>(4) Call CreateSnapshot (FileSystemId=ID from the previous step).</description></item>
+        /// <item><description>(5) Call DescribeSnapshots and poll until Status=available.</description></item>
+        /// <item><description>(6) Call ResetFileSystem (FileSystemId, SnapshotId).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21788,16 +22038,36 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a file system to a snapshot of the file system.</para>
+        /// <para>Rolls back a file system to the state of a specified historical snapshot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Only advanced Extreme NAS file systems support this feature.</description></item>
-        /// <item><description>The file system must be in the Running state.</description></item>
-        /// <item><description>To roll back a file system to a snapshot, you must specify the ID of the snapshot that is created from the file system.</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201803061139_99860.html?spm=a2c4g.11186623.0.0.5c895ff2YPLrwe">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>The file system must be in the Normal state.</description></item>
+        /// <item><description>The specified SnapshotId parameter must be a historical snapshot created from the same file system specified by FileSystemId.</description></item>
+        /// <item><description>Dependency chain:</description></item>
+        /// <item><description>(1) Grant the AliyunNASManageENIRole permission in the Resource Access Management (RAM) console.</description></item>
+        /// <item><description>(2) Call CreateFileSystem (FileSystemType=extreme, StorageType=advance).</description></item>
+        /// <item><description>(3) Call DescribeFileSystems and poll until Status=Running.</description></item>
+        /// <item><description>(4) Call CreateSnapshot (FileSystemId=ID from the previous step).</description></item>
+        /// <item><description>(5) Call DescribeSnapshots and poll until Status=available.</description></item>
+        /// <item><description>(6) Call ResetFileSystem (FileSystemId, SnapshotId).
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>This feature is in free public preview. During the public preview, the <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service-Level Agreement (SLA)</a> is not guaranteed.</description></item>
+        /// <item><description>Only Advanced Extreme NAS file systems support this feature.</description></item>
+        /// <item><description>The file system must be in the Normal state.</description></item>
+        /// <item><description>The specified SnapshotId parameter must be a historical snapshot created from the same file system specified by FileSystemId.</description></item>
+        /// <item><description>Dependency chain:</description></item>
+        /// <item><description>(1) Grant the AliyunNASManageENIRole permission in the Resource Access Management (RAM) console.</description></item>
+        /// <item><description>(2) Call CreateFileSystem (FileSystemType=extreme, StorageType=advance).</description></item>
+        /// <item><description>(3) Call DescribeFileSystems and poll until Status=Running.</description></item>
+        /// <item><description>(4) Call CreateSnapshot (FileSystemId=ID from the previous step).</description></item>
+        /// <item><description>(5) Call DescribeSnapshots and poll until Status=available.</description></item>
+        /// <item><description>(6) Call ResetFileSystem (FileSystemId, SnapshotId).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21961,7 +22231,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applies to agentic-type file systems.</para>
+        /// <para>Applies to agentic file systems.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22028,7 +22298,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applies to agentic-type file systems.</para>
+        /// <para>Applies to agentic file systems.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22095,7 +22365,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applies to agentic-type file systems.</para>
+        /// <para>Applies to agentic file systems.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22118,7 +22388,7 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Applies to agentic-type file systems.</para>
+        /// <para>Applies to agentic file systems.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22136,12 +22406,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a directory quota for a file system.</para>
+        /// <para>Sets a directory quota for a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose File Storage NAS (NAS) file systems support the directory quota feature.</para>
+        /// <para>Only General-purpose NAS file systems support the directory quota feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22207,12 +22477,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a directory quota for a file system.</para>
+        /// <para>Sets a directory quota for a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose File Storage NAS (NAS) file systems support the directory quota feature.</para>
+        /// <para>Only General-purpose NAS file systems support the directory quota feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22278,12 +22548,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a directory quota for a file system.</para>
+        /// <para>Sets a directory quota for a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose File Storage NAS (NAS) file systems support the directory quota feature.</para>
+        /// <para>Only General-purpose NAS file systems support the directory quota feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22301,12 +22571,12 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a directory quota for a file system.</para>
+        /// <para>Sets a directory quota for a file system.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only General-purpose File Storage NAS (NAS) file systems support the directory quota feature.</para>
+        /// <para>Only General-purpose NAS file systems support the directory quota feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22324,18 +22594,18 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the quota for a fileset.</para>
+        /// <para>Sets a quota for a fileset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版2.7.0及以上版本支持为文件集设置配额。</description></item>
-        /// <item><description>Fileset容量配额，最小起步10 GiB，扩容单位为1 GiB。</description></item>
-        /// <item><description>Fileset最多支持100亿个文件或目录，最小起步10000，扩容单位为1。</description></item>
-        /// <item><description>修改目录配额时，设置的配额容量或文件数必须高于已使用容量或文件数。</description></item>
-        /// <item><description>容量限制和文件数限制至少填写其中一项。</description></item>
-        /// <item><description>配额的统计有15分钟的延迟，当前的实际使用量15分钟之后才会生效。</description></item>
+        /// <item><description>Only CPFS for Lingjun 2.7.0 and later support setting quotas for filesets.</description></item>
+        /// <item><description>The minimum fileset capacity quota is 10 GiB, and the capacity is scaled in increments of 1 GiB.</description></item>
+        /// <item><description>A fileset supports up to 10 billion files or directories. The minimum value is 10,000, and the value is scaled in increments of 1.</description></item>
+        /// <item><description>When you modify a directory quota, the quota capacity or file count must be greater than the used capacity or file count.</description></item>
+        /// <item><description>You must specify at least one of the capacity limit and file count limit.</description></item>
+        /// <item><description>Quota statistics have a 15-minute delay. The current actual usage takes effect after 15 minutes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22398,18 +22668,18 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the quota for a fileset.</para>
+        /// <para>Sets a quota for a fileset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版2.7.0及以上版本支持为文件集设置配额。</description></item>
-        /// <item><description>Fileset容量配额，最小起步10 GiB，扩容单位为1 GiB。</description></item>
-        /// <item><description>Fileset最多支持100亿个文件或目录，最小起步10000，扩容单位为1。</description></item>
-        /// <item><description>修改目录配额时，设置的配额容量或文件数必须高于已使用容量或文件数。</description></item>
-        /// <item><description>容量限制和文件数限制至少填写其中一项。</description></item>
-        /// <item><description>配额的统计有15分钟的延迟，当前的实际使用量15分钟之后才会生效。</description></item>
+        /// <item><description>Only CPFS for Lingjun 2.7.0 and later support setting quotas for filesets.</description></item>
+        /// <item><description>The minimum fileset capacity quota is 10 GiB, and the capacity is scaled in increments of 1 GiB.</description></item>
+        /// <item><description>A fileset supports up to 10 billion files or directories. The minimum value is 10,000, and the value is scaled in increments of 1.</description></item>
+        /// <item><description>When you modify a directory quota, the quota capacity or file count must be greater than the used capacity or file count.</description></item>
+        /// <item><description>You must specify at least one of the capacity limit and file count limit.</description></item>
+        /// <item><description>Quota statistics have a 15-minute delay. The current actual usage takes effect after 15 minutes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22472,18 +22742,18 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the quota for a fileset.</para>
+        /// <para>Sets a quota for a fileset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版2.7.0及以上版本支持为文件集设置配额。</description></item>
-        /// <item><description>Fileset容量配额，最小起步10 GiB，扩容单位为1 GiB。</description></item>
-        /// <item><description>Fileset最多支持100亿个文件或目录，最小起步10000，扩容单位为1。</description></item>
-        /// <item><description>修改目录配额时，设置的配额容量或文件数必须高于已使用容量或文件数。</description></item>
-        /// <item><description>容量限制和文件数限制至少填写其中一项。</description></item>
-        /// <item><description>配额的统计有15分钟的延迟，当前的实际使用量15分钟之后才会生效。</description></item>
+        /// <item><description>Only CPFS for Lingjun 2.7.0 and later support setting quotas for filesets.</description></item>
+        /// <item><description>The minimum fileset capacity quota is 10 GiB, and the capacity is scaled in increments of 1 GiB.</description></item>
+        /// <item><description>A fileset supports up to 10 billion files or directories. The minimum value is 10,000, and the value is scaled in increments of 1.</description></item>
+        /// <item><description>When you modify a directory quota, the quota capacity or file count must be greater than the used capacity or file count.</description></item>
+        /// <item><description>You must specify at least one of the capacity limit and file count limit.</description></item>
+        /// <item><description>Quota statistics have a 15-minute delay. The current actual usage takes effect after 15 minutes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22502,18 +22772,18 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the quota for a fileset.</para>
+        /// <para>Sets a quota for a fileset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>仅CPFS智算版2.7.0及以上版本支持为文件集设置配额。</description></item>
-        /// <item><description>Fileset容量配额，最小起步10 GiB，扩容单位为1 GiB。</description></item>
-        /// <item><description>Fileset最多支持100亿个文件或目录，最小起步10000，扩容单位为1。</description></item>
-        /// <item><description>修改目录配额时，设置的配额容量或文件数必须高于已使用容量或文件数。</description></item>
-        /// <item><description>容量限制和文件数限制至少填写其中一项。</description></item>
-        /// <item><description>配额的统计有15分钟的延迟，当前的实际使用量15分钟之后才会生效。</description></item>
+        /// <item><description>Only CPFS for Lingjun 2.7.0 and later support setting quotas for filesets.</description></item>
+        /// <item><description>The minimum fileset capacity quota is 10 GiB, and the capacity is scaled in increments of 1 GiB.</description></item>
+        /// <item><description>A fileset supports up to 10 billion files or directories. The minimum value is 10,000, and the value is scaled in increments of 1.</description></item>
+        /// <item><description>When you modify a directory quota, the quota capacity or file count must be greater than the used capacity or file count.</description></item>
+        /// <item><description>You must specify at least one of the capacity limit and file count limit.</description></item>
+        /// <item><description>Quota statistics have a 15-minute delay. The current actual usage takes effect after 15 minutes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23065,7 +23335,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation applies only when the LifecyclePolicyType parameter of a lifecycle management policy for a CPFS file system is set to OnDemand.</para>
+        /// <para>Stops the execution of a lifecycle policy.
+        /// This operation is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23116,7 +23387,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation applies only when the LifecyclePolicyType parameter of a lifecycle management policy for a CPFS file system is set to OnDemand.</para>
+        /// <para>Stops the execution of a lifecycle policy.
+        /// This operation is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23167,7 +23439,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation applies only when the LifecyclePolicyType parameter of a lifecycle management policy for a CPFS file system is set to OnDemand.</para>
+        /// <para>Stops the execution of a lifecycle policy.
+        /// This operation is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23190,7 +23463,8 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation applies only when the LifecyclePolicyType parameter of a lifecycle management policy for a CPFS file system is set to OnDemand.</para>
+        /// <para>Stops the execution of a lifecycle policy.
+        /// This operation is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23488,7 +23762,8 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the rules of a lifecycle policy. This operation is supported only for CPFS for AI file systems. The <c>UpdateLifecyclePolicy</c> operation overwrites the entire policy. Omitting an optional parameter deletes its corresponding configuration. To add a rule to an existing policy, call the <c>DescribeLifecyclePolicies</c> operation to retrieve the current policy, append the new rule, and then call <c>UpdateLifecyclePolicy</c> with the updated configuration.</para>
+        /// <para>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported.
+        /// UpdateLifecyclePolicy uses overwrite semantics. If an optional parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configurations, append the new lifecycle rule configurations, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23505,6 +23780,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteRules))
+            {
+                query["DeleteRules"] = request.DeleteRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -23554,7 +23833,8 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the rules of a lifecycle policy. This operation is supported only for CPFS for AI file systems. The <c>UpdateLifecyclePolicy</c> operation overwrites the entire policy. Omitting an optional parameter deletes its corresponding configuration. To add a rule to an existing policy, call the <c>DescribeLifecyclePolicies</c> operation to retrieve the current policy, append the new rule, and then call <c>UpdateLifecyclePolicy</c> with the updated configuration.</para>
+        /// <para>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported.
+        /// UpdateLifecyclePolicy uses overwrite semantics. If an optional parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configurations, append the new lifecycle rule configurations, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23571,6 +23851,10 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteRules))
+            {
+                query["DeleteRules"] = request.DeleteRules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -23620,7 +23904,8 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the rules of a lifecycle policy. This operation is supported only for CPFS for AI file systems. The <c>UpdateLifecyclePolicy</c> operation overwrites the entire policy. Omitting an optional parameter deletes its corresponding configuration. To add a rule to an existing policy, call the <c>DescribeLifecyclePolicies</c> operation to retrieve the current policy, append the new rule, and then call <c>UpdateLifecyclePolicy</c> with the updated configuration.</para>
+        /// <para>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported.
+        /// UpdateLifecyclePolicy uses overwrite semantics. If an optional parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configurations, append the new lifecycle rule configurations, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23638,7 +23923,8 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the rules of a lifecycle policy. This operation is supported only for CPFS for AI file systems. The <c>UpdateLifecyclePolicy</c> operation overwrites the entire policy. Omitting an optional parameter deletes its corresponding configuration. To add a rule to an existing policy, call the <c>DescribeLifecyclePolicies</c> operation to retrieve the current policy, append the new rule, and then call <c>UpdateLifecyclePolicy</c> with the updated configuration.</para>
+        /// <para>Updates the rules of a lifecycle management policy. Only CPFS for Lingjun is supported.
+        /// UpdateLifecyclePolicy uses overwrite semantics. If an optional parameter is left empty, the corresponding field is deleted. To append lifecycle rules, first call the DescribeLifecyclePolicies operation to obtain the current lifecycle rule configurations, append the new lifecycle rule configurations, and then call the UpdateLifecyclePolicy operation to update the lifecycle rule configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">

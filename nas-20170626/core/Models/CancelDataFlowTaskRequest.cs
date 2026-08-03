@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CancelDataFlowTaskRequest : TeaModel {
         /// <summary>
-        /// <para>A client-generated token that you can use to ensure the idempotence of the request. The token must be unique across different requests.</para>
-        /// <para>The <c>ClientToken</c> value must be an ASCII string of 64 characters or less. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
+        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the request ID as the <c>ClientToken</c>. The request ID is unique for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,14 +35,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string DataFlowId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run for the request.</para>
-        /// <para>A dry run checks for parameter validity and resource availability without actually canceling the task or incurring charges.</para>
+        /// <para>Specifies whether to perform a dry run for this request.</para>
+        /// <para>A dry run checks parameter validity and resource availability without actually creating an instance or incurring fees.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Performs a dry run. The system checks the request for potential issues, including missing parameters, invalid formats, and service limits. If the check fails, the system returns an error message; otherwise, it returns a success code.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c> (default): Sends a normal request. After the request passes the check, the task is canceled.</para>
-        /// </description></item>
+        /// <item><description>true: sends a dry run request without creating an instance. The check items include required parameters, request format, service limits, and NAS resource availability. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but FileSystemId is empty.</description></item>
+        /// <item><description>false (default): sends a normal request. After the check passes, the instance is directly created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,9 +53,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>For a general-purpose CPFS instance, the ID must start with <c>cpfs-</c>, for example, <c>cpfs-125487****</c>.</para>
+        /// <item><description><para>General-purpose CPFS: must start with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
-        /// <item><description><para>For a CPFS for AI Computing instance, the ID must start with <c>bmcpfs-</c>, for example, <c>bmcpfs-0015****</c>.</para>
+        /// <item><description><para>CPFS for Lingjun: must start with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

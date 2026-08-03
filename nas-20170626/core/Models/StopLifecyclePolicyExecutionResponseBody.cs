@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class StopLifecyclePolicyExecutionResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
-        /// <para>A request ID is returned regardless of whether the call succeeds.</para>
+        /// <para>A request ID is returned regardless of whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>98696EF0-1607-4E9D-B01D-F20930B6****</para>
@@ -21,13 +21,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded.</para>
+        /// <para>The request status.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

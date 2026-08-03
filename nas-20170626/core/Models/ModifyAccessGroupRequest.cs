@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyAccessGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the permission group.</para>
+        /// <para>The permission group name.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 3 to 64 characters in length.</description></item>
-        /// <item><description>The name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description>The name must start with a letter and can contain letters, digits, underscores (_), or hyphens (-).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,12 +26,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessGroupName { get; set; }
 
         /// <summary>
-        /// <para>The description of the permission group.</para>
+        /// <para>The permission group description.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>By default, the description of the permission group is the same as the name of the permission group. The description must be 2 to 128 characters in length.</description></item>
+        /// <item><description>By default, the description is the same as the permission group name. The description must be 2 to 128 characters in length.</description></item>
         /// <item><description>The description must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The description can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
+        /// <item><description>The description can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,11 +42,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The type of the file system.</para>
+        /// <para>The file system type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard (default): General-purpose NAS file system</description></item>
-        /// <item><description>extreme: Extreme NAS file system</description></item>
+        /// <item><description>standard (default): General-purpose NAS</description></item>
+        /// <item><description>extreme: Extreme NAS</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

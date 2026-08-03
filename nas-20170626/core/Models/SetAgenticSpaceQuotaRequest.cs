@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <list type="bullet">
         /// <item><description>Minimum value: 10,737,418,240 (10 GiB).</description></item>
         /// <item><description>Maximum value: 1,099,511,627,776,000 (1,024,000 GiB).</description></item>
-        /// <item><description>Step: 1,073,741,824 (1 GiB).</description></item>
+        /// <item><description>Increment: 1,073,741,824 (1 GiB).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,15 +10,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyFileSystemShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the file system.</para>
+        /// <para>The file system description.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description><para>The description must be 2 to 128 characters.</para>
-        /// </description></item>
-        /// <item><description><para>It must start with an uppercase or lowercase letter or a Chinese character, and cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// </description></item>
-        /// <item><description><para>It can contain digits, colons (:), underscores (_), and hyphens (-).</para>
-        /// </description></item>
+        /// <item><description>The description must be 2 to 128 characters in length.</description></item>
+        /// <item><description>The description must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description can contain digits, colons (:), underscores (_), or hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,13 +26,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>General-purpose NAS: For example, <c>31a8e4****</c>.</para>
+        /// <item><description><para>General-purpose NAS: <c>31a8e4****</c>.</para>
         /// </description></item>
-        /// <item><description><para>Extreme NAS: The ID must start with <c>extreme-</c>. For example, <c>extreme-0015****</c>.</para>
+        /// <item><description><para>Extreme NAS: must start with <c>extreme-</c>, for example, <c>extreme-0015****</c>.</para>
         /// </description></item>
-        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>. For example, <c>cpfs-125487****</c>.</para>
+        /// <item><description><para>CPFS: must start with <c>cpfs-</c>, for example, <c>cpfs-125487****</c>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -48,7 +45,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>Additional options for the file system.</para>
+        /// <para>The options.</para>
         /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateDataFlowSubTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the data streaming task.</para>
+        /// <para>The data flow streaming task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>subTaskId-370kyfmyknxcyzw****</para>

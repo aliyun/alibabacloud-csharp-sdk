@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>If the returned results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pUJaUwAAAABhdGUyNTk1MQ==</para>

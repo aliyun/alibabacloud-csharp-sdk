@@ -37,7 +37,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Azone { get; set; }
 
             /// <summary>
-            /// <para>The time when the AgenticSpace was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The time when the AgenticSpace was created.
+            /// The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-10T10:08:08Z</para>
@@ -57,7 +58,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The number of files used.</para>
+            /// <para>The file count usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -77,7 +78,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The absolute path of the file.</para>
+            /// <para>The absolute file path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/test/</para>
@@ -115,7 +116,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <list type="bullet">
                 /// <item><description>Minimum value: 10,737,418,240 (10 GiB).</description></item>
                 /// <item><description>Maximum value: 1,099,511,627,776,000 (1024000 GiB).</description></item>
-                /// <item><description>Step: 1,073,741,824 (1 GiB).</description></item>
+                /// <item><description>Increment: 1,073,741,824 (1 GiB).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -151,7 +152,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the AgenticSpace was last updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The time when the AgenticSpace was last updated.
+            /// The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-10T10:08:08Z</para>

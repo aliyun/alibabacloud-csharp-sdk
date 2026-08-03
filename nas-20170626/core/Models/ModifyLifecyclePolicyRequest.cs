@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyLifecyclePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the lifecycle policy.</para>
-        /// <para>The name must be 3 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The Policy Name of the lifecycle management policy.</para>
+        /// <para>The name must be 3 to 64 characters in length, must start with an uppercase letter or lowercase letter, and can contain letters, digits, underscores (_), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>lifecyclepolicy_01</para>
@@ -42,18 +42,18 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyName { get; set; }
 
         /// <summary>
-        /// <para>The management rule that is associated with the lifecycle policy.</para>
+        /// <para>The management rule associated with the lifecycle management policy.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEFAULT_ATIME_14: Files not accessed for 14 days.</description></item>
-        /// <item><description>DEFAULT_ATIME_30: Files not accessed for 30 days.</description></item>
-        /// <item><description>DEFAULT_ATIME_60: Files not accessed for 60 days.</description></item>
-        /// <item><description>DEFAULT_ATIME_90: Files not accessed for 90 days.</description></item>
-        /// <item><description>DEFAULT_ATIME_180: Files not accessed for 180 days. DEFAULT_ATIME_180 is supported only when the StorageType parameter is set to Archive.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> If an IA policy has already been set for the directory, any subsequent archival policy must have a longer duration than the IA policy.</para>
+        /// <item><description>DEFAULT_ATIME_14: files that have not been accessed for 14 days.</description></item>
+        /// <item><description>DEFAULT_ATIME_30: files that have not been accessed for 30 days.</description></item>
+        /// <item><description>DEFAULT_ATIME_60: files that have not been accessed for 60 days.</description></item>
+        /// <item><description>DEFAULT_ATIME_90: files that have not been accessed for 90 days.</description></item>
+        /// <item><description>DEFAULT_ATIME_180: files that have not been accessed for 180 days. DEFAULT_ATIME_180 is supported only when StorageType is set to Archive.<remarks>
+        /// <para>If an IA storage class policy has already been configured for the directory, the time period specified for the archive policy must be longer than that of the IA storage class policy.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>DEFAULT_ATIME_14</para>
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecycleRuleName { get; set; }
 
         /// <summary>
-        /// <para>The absolute path of a directory with which the lifecycle policy is associated.</para>
-        /// <para>The path must start with a forward slash (/) and must be a path that exists in the mount target.</para>
+        /// <para>The absolute path of a single directory configured in the lifecycle management policy.</para>
+        /// <para>The path must start with a forward slash (/) and must be an existing path in the mount target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/pathway/to/folder</para>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The storage class.</para>
+        /// <para>The storage type.</para>
         /// <list type="bullet">
-        /// <item><description>InfrequentAccess: the Infrequent Access (IA) storage class.</description></item>
-        /// <item><description>Archive: the Archive storage class.</description></item>
+        /// <item><description>InfrequentAccess: IA storage class.</description></item>
+        /// <item><description>Archive: Archive storage class.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The type of the file system.</para>
-        /// <para>Valid value: extreme, which indicates Extreme File Storage NAS (NAS) file systems.</para>
+        /// <para>The file system type.</para>
+        /// <para>Valid value: extreme (Extreme NAS file system).</para>
         /// 
         /// <b>Example:</b>
         /// <para>extreme</para>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemType { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the automatic snapshot policy list.</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of automatic snapshot policies on each page.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 

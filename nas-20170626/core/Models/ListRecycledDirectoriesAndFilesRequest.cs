@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListRecycledDirectoriesAndFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the directory that you want to query.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2412173.html">ListRecentlyRecycledDirectories </a>operation to query the file ID.</para>
+        /// <para>The FileId of the directory to query.</para>
+        /// <para>If the recycle bin is empty, you can call this operation with FileId=2 (root directory inode) to verify the reachability of the operation or query the recycle bin content under the root directory. You can obtain other valid FileId values by calling the <a href="https://help.aliyun.com/document_detail/2412173.html">ListRecentlyRecycledDirectories</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The number of files or directories to return for each query.</para>
+        /// <para>The number of files or directories returned per query.</para>
         /// <para>Valid values: 10 to 1000.</para>
         /// <para>Default value: 100.</para>
         /// 
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</para>
-        /// <para>If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</para>
+        /// <para>The pagination token for the next page. You do not need to specify this parameter for the first query.</para>
+        /// <para>If a single query does not return all files and directories, a non-empty NextToken is returned. You can specify the correct NextToken in subsequent queries to continue listing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1256****25</para>

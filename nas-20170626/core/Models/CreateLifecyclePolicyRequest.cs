@@ -10,7 +10,44 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateLifecyclePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the lifecycle policy.</para>
+        /// <para>The file data expiration and deletion rules. You can configure up to one rule.</para>
+        /// </summary>
+        [NameInMap("DeleteRules")]
+        [Validation(Required=false)]
+        public List<CreateLifecyclePolicyRequestDeleteRules> DeleteRules { get; set; }
+        public class CreateLifecyclePolicyRequestDeleteRules : TeaModel {
+            /// <summary>
+            /// <para>The rule attribute.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Atime: the access time of the file.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Atime</para>
+            /// </summary>
+            [NameInMap("Attribute")]
+            [Validation(Required=false)]
+            public string Attribute { get; set; }
+
+            /// <summary>
+            /// <para>The rule threshold.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>When Attribute is set to Atime, this parameter specifies the number of days that the file has not been accessed. Valid values: 1 to 365.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("Threshold")]
+            [Validation(Required=false)]
+            public string Threshold { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The lifecycle policy description.</para>
         /// <para>Format:
         /// The description must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</para>
         /// <remarks>
@@ -18,7 +55,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>描述</para>
+        /// <para>Description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -36,7 +73,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The Policy Name of the lifecycle management policy. The name must be 3 to 64 characters in length, start with an uppercase letter or lowercase letter, and can contain letters, digits, underscores (_), or hyphens (-).</para>
+        /// <para>The lifecycle management policy name. The name must be 3 to 64 characters in length, start with an uppercase letter or lowercase letter, and can contain letters, digits, underscores (_), or hyphens (-).</para>
         /// <remarks>
         /// <para>This parameter is required for General-purpose NAS but not required for CPFS for Lingjun.</para>
         /// </remarks>
@@ -116,7 +153,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<string> Paths { get; set; }
 
         /// <summary>
-        /// <para>The file data retrieval rules. A maximum of one rule can be configured.</para>
+        /// <para>The file data retrieval rules. You can configure up to one rule.</para>
         /// <remarks>
         /// <para>Only CPFS for Lingjun file systems are supported.</para>
         /// </remarks>
@@ -161,7 +198,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The storage type.</para>
+        /// <para>The storage tiering type.</para>
         /// <list type="bullet">
         /// <item><description>InfrequentAccess: IA storage class.</description></item>
         /// <item><description>Archive: Archive storage.</description></item>
@@ -179,9 +216,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The file data transit rules. A maximum of one rule can be configured.</para>
+        /// <para>The file data transit rules. You can configure up to one rule.</para>
         /// <remarks>
-        /// <para>Supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</para>
+        /// <para>This parameter is supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TransitRules")]
@@ -206,7 +243,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The rule threshold.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>When Attribute is set to Atime, the value indicates the number of days since the file was last accessed. Valid values: 0 to 365.</description></item>
+            /// <item><description>When Attribute is set to Atime, this parameter specifies the number of days that the file has not been accessed. Valid values: 0 to 365.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

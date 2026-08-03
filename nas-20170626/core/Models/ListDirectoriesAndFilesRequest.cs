@@ -10,17 +10,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListDirectoriesAndFilesRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to list only directories.</para>
+        /// <para>Specifies whether to query only directories.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>false</c> (default): Lists both directories and files.</para>
-        /// </description></item>
-        /// <item><description><para><c>true</c>: Lists only directories.</para>
+        /// <item><description>false (default): No. Both directories and files can be queried.</description></item>
+        /// <item><description>true: Yes. Only directories are queried.<remarks>
+        /// <para>When StorageType is set to All, DirectoryOnly must be set to true and cannot be set to false.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>If you set <c>StorageType</c> to <c>All</c>, you must set <c>DirectoryOnly</c> to <c>true</c>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +28,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? DirectoryOnly { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,9 +39,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of directories or files to return per page.</para>
-        /// <para>Value range: 10–128</para>
-        /// <para>Default value: 100</para>
+        /// <para>The number of directories or files included in each query result.</para>
+        /// <para>Valid values: 10 to 128.</para>
+        /// <para>Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A continuation token used to retrieve the next page of results when the response is truncated.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation position.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>
@@ -63,8 +61,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The absolute path of the directory.</para>
-        /// <para>The path must start with a forward slash (/) and exist on the mount target.</para>
+        /// <para>The absolute path of the specified directory.</para>
+        /// <para>The path must start with a forward slash (/) and must be an existing path in the mount target.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,18 +73,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The storage type.</para>
+        /// <para>The storage class type.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>InfrequentAccess</c>: infrequent access.</para>
-        /// </description></item>
-        /// <item><description><para><c>Archive</c>: archive storage.</para>
-        /// </description></item>
-        /// <item><description><para><c>All</c>: all storage types.</para>
+        /// <item><description>InfrequentAccess: IA storage class.</description></item>
+        /// <item><description>Archive: Archive storage class.</description></item>
+        /// <item><description>All: queries data of all storage classes.<remarks>
+        /// <para>When StorageType is set to All, you must set DirectoryOnly to true.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>If you set <c>StorageType</c> to <c>All</c>, you must set <c>DirectoryOnly</c> to <c>true</c>.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

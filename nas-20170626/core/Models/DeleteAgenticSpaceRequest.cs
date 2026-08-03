@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>Specifies whether to perform a dry run for this request.</para>
-        /// <para>A dry run checks parameter validity and resource availability without actually creating or deleting instances, and incurs no fees.</para>
+        /// <para>A dry run checks parameter validity and resource availability without actually creating or deleting the instance, and no fees are incurred.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Sends a dry run request without deleting the instance. The check items include required parameters, request format, service limits, and NAS resource availability. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but FileSystemId is empty.</description></item>
-        /// <item><description>false (default): Sends a normal request and deletes the instance after the check is passed.</description></item>
+        /// <item><description>true: Sends a dry run request without deleting the instance. The check items include whether required parameters are specified, the request format, business limits, and NAS resource availability. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but FileSystemId is empty.</description></item>
+        /// <item><description>false (default): Sends a normal request. After the check passes, the instance is directly deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

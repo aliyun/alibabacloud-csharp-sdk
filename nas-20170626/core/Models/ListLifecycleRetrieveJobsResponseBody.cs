@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListLifecycleRetrieveJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the data retrieval tasks.</para>
+        /// <para>The collection of data retrieval task information.</para>
         /// </summary>
         [NameInMap("LifecycleRetrieveJobs")]
         [Validation(Required=false)]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public class ListLifecycleRetrieveJobsResponseBodyLifecycleRetrieveJobs : TeaModel {
             /// <summary>
             /// <para>The time when the task was created.</para>
-            /// <para>The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
+            /// <para>The time follows the ISO 8601 standard in the format of <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-30T10:08:08Z</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of files that are read in the data retrieval task.</para>
+            /// <para>The total number of files read by the data retrieval task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? DiscoveredFileCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the file system.</para>
+            /// <para>The file system ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>31a8e4****</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data retrieval task.</para>
+            /// <para>The data retrieval task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lrj-nfstest-ia-160****853-hshvw</para>
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The execution path of the data retrieval task.</para>
+            /// <para>The execution paths of the data retrieval task.</para>
             /// </summary>
             [NameInMap("Paths")]
             [Validation(Required=false)]
             public List<string> Paths { get; set; }
 
             /// <summary>
-            /// <para>The total number of files that are retrieved.</para>
+            /// <para>The number of files successfully retrieved by the data retrieval task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The status of the data retrieval task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>active: The task is running.</description></item>
-            /// <item><description>canceled: The task is canceled.</description></item>
-            /// <item><description>completed: The task is completed.</description></item>
-            /// <item><description>failed: The task has failed.</description></item>
+            /// <item><description>active: running.</description></item>
+            /// <item><description>canceled: canceled.</description></item>
+            /// <item><description>completed: completed.</description></item>
+            /// <item><description>failed: failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,10 +91,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The storage class.</para>
+            /// <para>The storage class. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>InfrequentAccess: the IA storage class.</description></item>
-            /// <item><description>Archive: the Archive storage class.</description></item>
+            /// <item><description>InfrequentAccess: IA storage class.</description></item>
+            /// <item><description>Archive: Archive storage class.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,8 +105,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was updated.</para>
-            /// <para>The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
+            /// <para>The time when the task was last updated.</para>
+            /// <para>The time follows the ISO 8601 standard in the format of <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-30T11:08:08Z</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of data retrieval tasks on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BC7C825C-5F65-4B56-BEF6-98C56C7C****</para>

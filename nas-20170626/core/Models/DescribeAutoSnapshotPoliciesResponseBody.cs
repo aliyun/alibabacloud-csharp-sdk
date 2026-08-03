@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the automatic snapshot policy list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

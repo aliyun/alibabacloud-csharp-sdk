@@ -10,10 +10,48 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class UpdateLifecyclePolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The file data expiration and deletion rules.</para>
+        /// </summary>
+        [NameInMap("DeleteRules")]
+        [Validation(Required=false)]
+        public List<UpdateLifecyclePolicyRequestDeleteRules> DeleteRules { get; set; }
+        public class UpdateLifecyclePolicyRequestDeleteRules : TeaModel {
+            /// <summary>
+            /// <para>The attribute of the rule.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Atime: the access time of the file.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Atime</para>
+            /// </summary>
+            [NameInMap("Attribute")]
+            [Validation(Required=false)]
+            public string Attribute { get; set; }
+
+            /// <summary>
+            /// <para>The threshold of the rule.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>If Attribute is set to Atime, the value specifies the number of days since the file was last accessed. Valid values: 1 to 365.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
+            [NameInMap("Threshold")]
+            [Validation(Required=false)]
+            public string Threshold { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The description of the lifecycle policy.</para>
-        /// <para>The description must be 3 to 64 characters long and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>Format:
+        /// The description must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</para>
         /// <remarks>
-        /// <para>This parameter is supported only for CPFS for AI file systems.</para>
+        /// <para>Only CPFS for Lingjun is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +62,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID. The ID starts with bmcpfs-, such as bmcpfs-290w65p03ok64ya****.</para>
+        /// <remarks>
+        /// <para>This parameter is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +78,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The ID of the lifecycle policy.</para>
         /// <remarks>
-        /// <para>This parameter is required for CPFS for AI file systems.</para>
+        /// <para>This parameter is required for CPFS for Lingjun file systems.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,16 +90,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The absolute paths of the directories to which the lifecycle policy applies.</para>
+        /// <para>The absolute paths of the directories associated with the lifecycle management policy.</para>
         /// </summary>
         [NameInMap("Paths")]
         [Validation(Required=false)]
         public List<string> Paths { get; set; }
 
         /// <summary>
-        /// <para>The retrieval rule for files. You can specify only one retrieval rule.</para>
+        /// <para>The file data retrieval rules. You can configure up to one rule.</para>
         /// <remarks>
-        /// <para>This parameter is supported only for CPFS for AI file systems.</para>
+        /// <para>Only CPFS for Lingjun file systems are supported.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RetrieveRules")]
@@ -66,9 +107,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<UpdateLifecyclePolicyRequestRetrieveRules> RetrieveRules { get; set; }
         public class UpdateLifecyclePolicyRequestRetrieveRules : TeaModel {
             /// <summary>
-            /// <para>The rule attribute. Valid value:</para>
+            /// <para>The attribute of the rule.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>RetrieveType</c>: The retrieval method.</description></item>
+            /// <item><description>RetrieveType: the retrieval method.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,14 +121,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Attribute { get; set; }
 
             /// <summary>
-            /// <para>The retrieval method. Valid values:</para>
+            /// <para>The threshold of the rule.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>If <c>Attribute</c> is set to <c>RetrieveType</c>:</para>
-            /// <list type="bullet">
-            /// <item><description><para><c>AfterVisit</c>: Retrieves data on a best-effort basis after a file is accessed. This value is valid only when <c>LifecyclePolicyType</c> is <c>Auto</c>.</para>
-            /// </description></item>
-            /// <item><description><para><c>All</c>: Retrieves all data. This value is valid only when <c>LifecyclePolicyType</c> is <c>OnDemand</c>.</para>
-            /// </description></item>
+            /// <item><description>RetrieveType<list type="bullet">
+            /// <item><description>AfterVisit: supported when LifecyclePolicyType is set to Auto. Indicates best-effort recall on visit.</description></item>
+            /// <item><description>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieval of all data.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -101,12 +141,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The storage tier.</para>
+        /// <para>The tiered storage type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>InfrequentAccess</c>: The Infrequent Access storage tier. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><c>Archive</c>: The Archive storage tier.</para>
-        /// </description></item>
+        /// <item><description>InfrequentAccess: IA storage class. This is the default value.</description></item>
+        /// <item><description>Archive: Archive storage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,9 +156,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The transition rule for files. You can specify only one transition rule.</para>
+        /// <para>The file data transit rules. You can configure up to one rule.</para>
         /// <remarks>
-        /// <para>This parameter is supported only for CPFS for AI file systems when <c>LifecyclePolicyType</c> is set to <c>Auto</c>.</para>
+        /// <para>This parameter is supported only when LifecyclePolicyType is set to Auto for a CPFS for Lingjun file system.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TransitRules")]
@@ -127,10 +166,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<UpdateLifecyclePolicyRequestTransitRules> TransitRules { get; set; }
         public class UpdateLifecyclePolicyRequestTransitRules : TeaModel {
             /// <summary>
-            /// <para>The rule attribute.</para>
-            /// <para>Valid value:</para>
+            /// <para>The attribute of the rule.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>Atime</c>: The last access time of a file.</description></item>
+            /// <item><description>Atime: the access time of the file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,10 +180,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Attribute { get; set; }
 
             /// <summary>
-            /// <para>The rule threshold.</para>
-            /// <para>Valid value:</para>
+            /// <para>The threshold of the rule.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If <c>Attribute</c> is set to <c>Atime</c>, this parameter specifies the number of days since a file was last accessed. The value must be between 1 and 365.</description></item>
+            /// <item><description>If Attribute is set to Atime, the value specifies the number of days since the file was last accessed. Valid values: 1 to 365.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

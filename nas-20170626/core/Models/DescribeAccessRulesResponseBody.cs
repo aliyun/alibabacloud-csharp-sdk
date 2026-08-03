@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the file system list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of permission rules on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of rules.</para>
+        /// <para>The total number of permission rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

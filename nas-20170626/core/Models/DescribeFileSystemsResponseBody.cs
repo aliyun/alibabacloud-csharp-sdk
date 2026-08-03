@@ -187,6 +187,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                     [Validation(Required=false)]
                     public bool? EnableABE { get; set; }
 
+                    [NameInMap("EnableDataInsight")]
+                    [Validation(Required=false)]
+                    public bool? EnableDataInsight { get; set; }
+
                     [NameInMap("EnableOplock")]
                     [Validation(Required=false)]
                     public bool? EnableOplock { get; set; }
@@ -342,7 +346,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of file systems on each page.</para>
+        /// <para>The number of file systems per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

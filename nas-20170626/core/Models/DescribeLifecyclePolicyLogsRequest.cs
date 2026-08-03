@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The lifecycle policy ID.</para>
+        /// <para>The ID of the lifecycle policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Starts from 1. Default: 1.</para>
+        /// <para>The page number of the list.</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of log entries to return on each page.</para>
-        /// <para>Value range: 1–100. Default: 10.</para>
+        /// <para>The number of log entries per page.</para>
+        /// <para>Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

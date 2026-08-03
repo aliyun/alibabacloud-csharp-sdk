@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeDataFlowsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of CPFS for Lingjun file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description><para>CPFS: must start with <c>cpfs-</c>, such as cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// </description></item>
+        /// <item><description><para>CPFS for Lingjun: must start with <c>bmcpfs-</c>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The filter that is used to query dataflows.</para>
+        /// <para>The filter keys for querying data flows.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -35,15 +37,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<DescribeDataFlowsRequestFilters> Filters { get; set; }
         public class DescribeDataFlowsRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The filter name. Valid value:</para>
+            /// <para>The name of the filter key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DataFlowIds: filters dataflow tasks by dataflow ID.</description></item>
-            /// <item><description>FsetIds: filters dataflows by fileset ID.</description></item>
-            /// <item><description>FileSystemPath: filters dataflows based on the path of a fileset in a CPFS file system.</description></item>
-            /// <item><description>SourceStorage: filters dataflows based on the access path of the source storage.</description></item>
-            /// <item><description>ThroughputList: filters dataflows based on dataflow throughput.</description></item>
-            /// <item><description>Description: filters dataflows based on the fileset description.</description></item>
-            /// <item><description>Status: filters dataflows based on dataflow status.</description></item>
+            /// <item><description>DataFlowIds: filters by data flow ID.</description></item>
+            /// <item><description>FsetIds: filters by Fileset ID.</description></item>
+            /// <item><description>FileSystemPath: filters by the path of the Fileset in the CPFS file system.</description></item>
+            /// <item><description>SourceStorage: filters by the access path of the source storage.</description></item>
+            /// <item><description>ThroughputList: filters by the transmission bandwidth of the data flow.</description></item>
+            /// <item><description>Description: filters by the description of the Fileset.</description></item>
+            /// <item><description>Status: filters by data flow status.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,16 +56,24 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the filter. This parameter does not support wildcards.</para>
+            /// <para>The value of the filter key. Wildcards are not supported for this parameter.</para>
             /// <list type="bullet">
-            /// <item><description>If Key is set to DataFlowIds, set Value to a dataflow ID or a part of the dataflow ID. You can specify a dataflow ID or a group of dataflow IDs. You can specify a maximum of 10 dataflow IDs. Example: <c>df-194433a5be31****</c> or <c>df-194433a512a2****,df-234533a5be31****</c>.</description></item>
-            /// <item><description>If Key is set to FsetIds, set Value to a fileset ID or a part of the fileset ID. You can specify a fileset ID or a group of fileset IDs. You can specify a maximum of 10 fileset IDs. For example, <c>fset-1902718ea0ae****</c> or <c>fset-235718ea0ae****,fset-5122718ea0ae****</c>.</description></item>
-            /// <item><description>If Key is set to FileSystemPath, set Value to the path or a part of the path of a fileset in a CPFS file system. The value of the parameter must be 1 to 1,024 characters in length.</description></item>
-            /// <item><description>If Key is set to SourceStorage, set Value to the access path or a part of the access path of the source storage. The path can be up to 1,024 characters in length.</description></item>
-            /// <item><description>If Key is set to ThroughputList, set Value to the dataflow throughput. Combined query is supported.</description></item>
-            /// <item><description>If Key is set to Description, set Value to a dataflow description or a part of the dataflow description.</description></item>
-            /// <item><description>If Key is set to Status, set Value to the dataflow status.</description></item>
-            /// <item><description>If Key is set to SourceStoragePath, set Value to the access path or a part of the access path of the source storage. The path can be up to 1,024 characters in length.</description></item>
+            /// <item><description><para>If Key is set to DataFlowIds, Value is set to a data flow ID or part of a data flow ID. You can specify one or more data flow IDs. A maximum of 10 data flow IDs can be specified. Example: <c>df-194433a5be31****</c> or <c>df-194433a512a2****,df-234533a5be31****</c>.</para>
+            /// </description></item>
+            /// <item><description><para>If Key is set to FsetIds, Value is set to a Fileset ID or part of a Fileset ID. You can specify one or more Fileset IDs. A maximum of 10 Fileset IDs can be specified. Example: <c>fset-1902718ea0ae****</c> or <c>fset-235718ea0ae****,fset-5122718ea0ae****</c>.</para>
+            /// </description></item>
+            /// <item><description><para>If Key is set to FileSystemPath, Value is set to a path or part of a path in the CPFS file system. The value must be 1 to 1024 characters in length.</para>
+            /// </description></item>
+            /// <item><description><para>If Key is set to SourceStorage, Value is set to the access path of the source storage. The maximum length is 1024 characters.</para>
+            /// </description></item>
+            /// <item><description><para>If Key is set to ThroughputList, Value is set to the transmission bandwidth of the data flow. Combined queries are supported.</para>
+            /// </description></item>
+            /// <item><description><para>If Key is set to Description, Value is set to the description or part of the description of the data flow.</para>
+            /// </description></item>
+            /// <item><description><para>If Key is set to Status, Value is set to the data flow status.</para>
+            /// </description></item>
+            /// <item><description><para>If Key is set to SourceStoragePath, Value is set to the access path of the source storage or part of the access path. The maximum length is 1024 characters.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,7 +97,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to obtain content starting from the truncation point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>

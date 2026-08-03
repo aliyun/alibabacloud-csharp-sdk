@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The permission group name.</para>
         /// <para>This parameter is required if the file system is a General-purpose NAS file system.</para>
-        /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (the default VPC permission group).</para>
+        /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DEFAULT_VPC_GROUP_NAME</para>

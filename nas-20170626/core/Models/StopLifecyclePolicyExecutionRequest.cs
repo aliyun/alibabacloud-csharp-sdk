@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class StopLifecyclePolicyExecutionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID. The ID starts with bmcpfs-, such as bmcpfs-290w65p03ok64ya****.</para>
+        /// <remarks>
+        /// <para>This operation is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

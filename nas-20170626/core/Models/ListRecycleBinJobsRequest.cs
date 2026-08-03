@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListRecycleBinJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rb-15<b><b>ed-r-1625</b></b>2441</para>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the current page in a paged query.</para>
+        /// <para>Start value (default value): 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -54,15 +54,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The job status. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Running: The job is running.</description></item>
-        /// <item><description>Defragmenting: The job is defragmenting data.</description></item>
-        /// <item><description>PartialSuccess: The job is partially completed.</description></item>
-        /// <item><description>Success: The job is completed.</description></item>
-        /// <item><description>Fail: The job failed.</description></item>
-        /// <item><description>Cancelled: The job is canceled.</description></item>
-        /// <item><description>all (default)</description></item>
+        /// <item><description>Running: The task is running.</description></item>
+        /// <item><description>Defragmenting: Data is being defragmented.</description></item>
+        /// <item><description>PartialSuccess: The task partially succeeded.</description></item>
+        /// <item><description>Success: The task succeeded.</description></item>
+        /// <item><description>Fail: The task failed.</description></item>
+        /// <item><description>Cancelled: The task is canceled.</description></item>
+        /// <item><description>All (default): All statuses.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
