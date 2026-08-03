@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             /// <summary>
             /// <para>The resource type.</para>
             /// <remarks>
-            /// <para>This parameter is case-sensitive. Make sure that the spelling is correct.</para>
+            /// <para>This parameter is case-sensitive. Make sure that the value is spelled correctly.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string PackageCode { get; set; }
 
         /// <summary>
-        /// <para>The user ID for resource ownership in the reseller pattern. You do not need to specify this parameter in the non-reseller pattern.</para>
+        /// <para>The user ID of the resource ownership in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>182864463481****</para>

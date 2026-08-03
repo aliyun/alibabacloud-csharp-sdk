@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The discount amount.</para>
+                /// <para>The discount price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>534.6</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     public List<DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsModuleDetails> ModuleDetails { get; set; }
                     public class DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsModuleDetails : TeaModel {
                         /// <summary>
-                        /// <para>The discount amount.</para>
+                        /// <para>The discount price.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>734.65</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                         /// <para>The module name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Enterprise Office - 8C32G</para>
+                        /// <para>Enterprise Office-8C32G</para>
                         /// </summary>
                         [NameInMap("ModuleName")]
                         [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                         public float? SavingPlanDiscountPrice { get; set; }
 
                         /// <summary>
-                        /// <para>The actual payment price. The value is the original price minus the discount amount.</para>
+                        /// <para>The actual payment price. The value is the original price minus the discount.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>292.2</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     public DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsPriceDetail PriceDetail { get; set; }
                     public class DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsPriceDetail : TeaModel {
                         /// <summary>
-                        /// <para>The discount amount.</para>
+                        /// <para>The discount price.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>20.00</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                         public float? SavingPlanRecommendPrice { get; set; }
 
                         /// <summary>
-                        /// <para>The actual payment price. The value is the original price minus the discount amount.</para>
+                        /// <para>The actual payment price. The value is the original price minus the discount.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>80.00</para>
@@ -211,6 +211,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     [Validation(Required=false)]
                     public string ActivityId { get; set; }
 
+                    [NameInMap("Effective")]
+                    [Validation(Required=false)]
+                    public bool? Effective { get; set; }
+
+                    [NameInMap("EndTimestamp")]
+                    [Validation(Required=false)]
+                    public string EndTimestamp { get; set; }
+
                     /// <summary>
                     /// <para>The description of the promotion rule.</para>
                     /// 
@@ -220,6 +228,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     [NameInMap("OptionCode")]
                     [Validation(Required=false)]
                     public string OptionCode { get; set; }
+
+                    [NameInMap("PriceBreakReduceValue")]
+                    [Validation(Required=false)]
+                    public string PriceBreakReduceValue { get; set; }
+
+                    [NameInMap("PriceBreakThreshold")]
+                    [Validation(Required=false)]
+                    public string PriceBreakThreshold { get; set; }
 
                     /// <summary>
                     /// <para>The description of the promotion.</para>
@@ -232,7 +248,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     public string PromotionDesc { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the promotion.</para>
+                    /// <para>The promotion ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>youhuiquan_promotion_option_id_for_blank</para>
@@ -242,10 +258,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     public string PromotionId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the promotion.</para>
+                    /// <para>The promotion name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Promotion name</para>
+                    /// <para>PromotionName</para>
                     /// </summary>
                     [NameInMap("PromotionName")]
                     [Validation(Required=false)]
@@ -260,6 +276,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     [NameInMap("Selected")]
                     [Validation(Required=false)]
                     public bool? Selected { get; set; }
+
+                    [NameInMap("StartTimestamp")]
+                    [Validation(Required=false)]
+                    public string StartTimestamp { get; set; }
 
                 }
 
@@ -281,7 +301,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public float? RefundPrice { get; set; }
 
                 /// <summary>
-                /// <para>The actual payment price. The value is the original price minus the discount amount.</para>
+                /// <para>The actual payment price. The value is the original price minus the discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>82.6</para>
@@ -310,7 +330,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the promotion rule.</para>
+                /// <para>The promotion rule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hrzdvc</para>
