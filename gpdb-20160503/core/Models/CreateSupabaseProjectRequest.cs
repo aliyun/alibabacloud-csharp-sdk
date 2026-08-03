@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value false is used.</para>
+        /// <para>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? AutoScale { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. Ensures that duplicate requests do not result in duplicate operations.</para>
+        /// <para>The idempotency token. Ensures that repeated requests do not execute the same operation more than once.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -82,9 +82,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The billing method. If this parameter is not specified, the default value Free is used.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Free: free tier.</description></item>
-        /// <item><description>Postpaid: pay-as-you-go.</description></item>
-        /// <item><description>Prepaid: subscription.</description></item>
+        /// <item><description>Free: Free tier.</description></item>
+        /// <item><description>Postpaid: Pay-as-you-go.</description></item>
+        /// <item><description>Prepaid: Subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -167,6 +167,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("StorageSize")]
         [Validation(Required=false)]
         public long? StorageSize { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public List<CreateSupabaseProjectRequestTags> Tags { get; set; }
+        public class CreateSupabaseProjectRequestTags : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value is 1.</para>

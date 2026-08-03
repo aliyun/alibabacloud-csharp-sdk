@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetServiceAccessInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The redirect URL for logging on to the service console.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://xxxxxxxxx">http://xxxxxxxxx</a></para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The verification code for the service console logon URL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dcwedsxcx</para>
         /// </summary>

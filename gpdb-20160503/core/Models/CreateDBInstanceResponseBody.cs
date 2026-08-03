@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is deprecated and is no longer returned.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the connection string of the instance.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and no value is returned.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the endpoint of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated and is no longer returned.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and no value is returned.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the port number of the instance.</para>
         /// 
         /// <b>Example:</b>

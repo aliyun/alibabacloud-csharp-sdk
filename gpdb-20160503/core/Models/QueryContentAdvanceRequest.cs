@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The name of the source image file to search in image-to-image search scenarios.</para>
         /// <remarks>
-        /// <para>The image file must have a file extension. Supported image extensions: bmp, jpg, jpeg, png, and tiff.</para>
+        /// <para>The image file must have a file extension. Currently supported image extensions: bmp, jpg, jpeg, png, and tiff.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The publicly accessible URL of the image file in image-to-image search scenarios.</para>
         /// <remarks>
-        /// <para>The image file must have a file extension. Supported image extensions: bmp, jpg, jpeg, png, and tiff.</para>
+        /// <para>The image file must have a file extension. Currently supported image extensions: bmp, jpg, jpeg, png, and tiff.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public Stream FileUrlObject { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for the data to query, in SQL WHERE clause format. The filter is an expression that returns a Boolean value (true or false). Conditions can be simple comparison operators such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=). Conditions can also be more complex expressions combined with logical operators (AND, OR, NOT), as well as conditions using the IN, BETWEEN, and LIKE keywords.</para>
+        /// <para>The filter condition for the data to query, in SQL WHERE clause format. The expression returns a Boolean value (true or false). Conditions can be simple comparison operators such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=). Conditions can also be more complex expressions combined with logical operators (AND, OR, NOT), as well as conditions using IN, BETWEEN, and LIKE keywords.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a>.</description></item>
+        /// <item><description>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a></description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -118,12 +118,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The multi-channel recall algorithm. Default value: empty, which indicates that the dense vector and full-text index scores are directly compared and sorted.</para>
+        /// <para>The multi-channel recall algorithm. Default value: empty (scores from dense vectors and full-text retrieve are directly compared and sorting is performed).</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RRF: Reciprocal Rank Fusion. A parameter k controls the fusion effect. For more information, see the HybridSearchArgs configuration.</description></item>
-        /// <item><description>Weight: Weighted sorting. Parameters control the score weights of AISearch retrieve and full-text index results before sorting. For more information, see the HybridSearchArgs configuration.</description></item>
-        /// <item><description>Cascaded: Full-text index retrieve is performed first, followed by AISearch retrieve based on the full-text index results.</description></item>
+        /// <item><description>RRF: Reciprocal rank fusion. A parameter k controls the fusion effect. For more information, see the HybridSearchArgs configuration.</description></item>
+        /// <item><description>Weight: Weighted sorting. Parameters control the score weights of vector retrieve and full-text retrieve results before sorting. For more information, see the HybridSearchArgs configuration.</description></item>
+        /// <item><description>Cascaded: Full-text retrieve is performed first, followed by vector retrieve on the full-text retrieve results.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,9 +134,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string HybridSearch { get; set; }
 
         /// <summary>
-        /// <para>The algorithm parameters for multi-channel recall. RRF and Weight are supported. HybridPathsSetting specifies the recall paths: dense vectors (dense), sparse vectors (sparse), and full-text index (fulltext). If this value is empty, dense vectors (dense) and full-text index (fulltext) are used by default.</para>
+        /// <para>The algorithm parameters for multi-channel recall. Currently, RRF and Weight are supported. HybridPathsSetting specifies the recall paths: dense vectors (dense), sparse vectors (sparse), and full-text retrieve (fulltext). If the value is empty, dense vectors (dense) and full-text retrieve (fulltext) are recalled by default.</para>
         /// <list type="bullet">
-        /// <item><description>RRF: Specifies the constant k in the score calculation formula <c>1/(k+rank_i)</c>. The value must be a positive integer greater than 1. Format:</description></item>
+        /// <item><description>RRF: Specifies the k constant in the score calculation formula <c>1/(k+rank_i)</c>. The value must be a positive integer greater than 1. Format:</description></item>
         /// </list>
         /// <pre><c>{
         ///   &quot;HybridPathsSetting&quot;: {
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <list type="bullet">
         /// <item><description>Weight: <list type="bullet">
         /// <item><description>Dual-path recall (without specifying HybridPathsSetting, only specifying alpha):<list type="bullet">
-        /// <item><description>Formula: alpha * dense_score + (1-alpha) * fulltext_score. The alpha parameter specifies the score weight between dense vectors and full-text index retrieve. Valid values: 0 to 1, where 0 indicates full-text index only and 1 indicates dense vector only:</description></item>
+        /// <item><description>Formula: alpha * dense_score + (1-alpha) * fulltext_score. The alpha parameter specifies the score weight between dense vectors and full-text retrieve. Valid values: 0 to 1, where 0 indicates full-text retrieve only and 1 indicates dense vectors only:</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </c></pre>
         /// <list type="bullet">
         /// <item><description>Three-path recall pattern:<list type="bullet">
-        /// <item><description>Formula: normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score. The dense, sparse, and fulltext values represent the weights for dense vectors, sparse vectors, and full-text index retrieve respectively. Valid values: greater than or equal to 0. The system automatically performs normalization of the weights to 0 to 1 (normalized_x = x / (dense + sparse + fulltext)).</description></item>
+        /// <item><description>Formula: normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score. The dense, sparse, and fulltext parameters represent the weights of dense vectors, sparse vectors, and full-text retrieve respectively. Valid values: greater than or equal to 0. The system automatically performs normalization on the weights to 0–1 (normalized_x = x / (dense + sparse + fulltext)).</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? IncludeFileUrl { get; set; }
 
         /// <summary>
-        /// <para>The metadata fields to return. Default value: empty. Separate multiple fields with commas.</para>
+        /// <para>The metadata fields to return, separated by commas. Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>title,page</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? IncludeVector { get; set; }
 
         /// <summary>
-        /// <para>The similarity algorithm used for retrieval. If this value is empty, the algorithm specified when the knowledge base was created is used. Leave this parameter empty unless you have specific requirements.</para>
+        /// <para>The similarity algorithm used during retrieval. If this value is empty, the algorithm specified when the knowledge base was created is used. Leave this parameter empty unless you have specific requirements.</para>
         /// <remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The namespace. Default value: public.</para>
         /// <remarks>
-        /// <para>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and query namespaces by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</para>
+        /// <para>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and query the list of namespaces by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string NamespacePassword { get; set; }
 
         /// <summary>
-        /// <para>The offset for paged query. Used for paging through results.</para>
+        /// <para>The offset for paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -277,8 +277,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// <para>The field used for sorting. Default value: empty.</para>
-        /// <para>The field must belong to metadata or a default field in the table, such as id. Supported formats:</para>
-        /// <para>A single field, such as chunk_id.
+        /// <para>The field must belong to metadata or a default field in the table such as id. Supported formats:</para>
+        /// <para>Single field, such as chunk_id.
         /// Multiple fields separated by commas, such as block_id, chunk_id.
         /// Descending order, such as block_id DESC, chunk_id DESC.</para>
         /// 
@@ -294,11 +294,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The recall window. When this value is not empty, additional context around the retrieval results is returned. The format is a two-element array: List&lt;A, B&gt;, where -10&lt;=A&lt;=0 and 0&lt;=B&lt;=10.</para>
+        /// <para>The recall window. When this value is not empty, the context of the retrieval results is also returned. The format is a 2-element array: List&lt;A, B&gt;, where -10&lt;=A&lt;=0 and 0&lt;=B&lt;=10.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>Use this parameter when documents are split into overly small chunks and retrieval may lose contextual information.</description></item>
-        /// <item><description>Reranking takes priority over windowing. Reranking is performed first, followed by windowing.</description></item>
+        /// <item><description>Reranking takes priority over windowing, meaning reranking is performed first, followed by windowing.</description></item>
         /// </list>
         /// </remarks>
         /// </summary>
@@ -318,11 +318,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The reranking factor. When this value is not empty, the AISearch retrieve results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</para>
+        /// <para>The reranking factor. When this value is not empty, the vector retrieve results are reranked. Valid values: 1 &lt; RerankFactor &lt;= 5.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Reranking is slow when documents are sparsely chunked.</description></item>
-        /// <item><description>The total number of reranked results (TopK × Factor, rounded up) should not exceed 50.</description></item>
+        /// <item><description>Reranking is slower when documents are sparsely chunked.</description></item>
+        /// <item><description>The total number of items to rerank (TopK × Factor, rounded up) should not exceed 50.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -341,8 +341,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public QueryContentAdvanceRequestRerankModel RerankModel { get; set; }
         public class QueryContentAdvanceRequestRerankModel : TeaModel {
             /// <summary>
-            /// <para>This parameter can be set when RerankModel.Name is qwen3-rerank.
-            /// Adds a custom sorting task type description. This parameter guides the model to adopt different sorting strategies.</para>
+            /// <para>This parameter can be set when RerankModel.Name is qwen3-rerank. Specifies a custom sorting task type description that guides the model to adopt different sorting strategies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Given a web search query, retrieve relevant passages that answer the query</para>
@@ -352,7 +351,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Instruct { get; set; }
 
             /// <summary>
-            /// <para>The name of the rerank model. Valid values: qwen3-rerank, gte-rerank-v2.</para>
+            /// <para>The rerank model name. Valid values: qwen3-rerank, gte-rerank-v2.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen3-rerank</para>
@@ -396,7 +395,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string UrlExpiration { get; set; }
 
         /// <summary>
-        /// <para>(Deprecated) Specifies whether to use full-text retrieval (dual-path recall). Default value: false, which indicates that only vector retrieval is used.</para>
+        /// <para><b>[Deprecated]</b> Specifies whether to use full-text retrieve (dual-path recall). Default value: false, which indicates that only vector retrieve is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

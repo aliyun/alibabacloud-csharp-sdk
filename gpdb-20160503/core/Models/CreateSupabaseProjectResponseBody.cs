@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateSupabaseProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the associated order.</para>
+        /// <para>The associated order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>278880417310796</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Supabase instance.</para>
+        /// <para>The Supabase instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spb-xxxx</para>

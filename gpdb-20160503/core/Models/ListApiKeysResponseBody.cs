@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListApiKeysResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of API keys.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListApiKeysResponseBodyItems> Items { get; set; }
         public class ListApiKeysResponseBodyItems : TeaModel {
+            /// <summary>
+            /// <para>The service IDs.</para>
+            /// </summary>
             [NameInMap("AuthServices")]
             [Validation(Required=false)]
             public List<ListApiKeysResponseBodyItemsAuthServices> AuthServices { get; set; }
             public class ListApiKeysResponseBodyItemsAuthServices : TeaModel {
                 /// <summary>
+                /// <para>The service IDs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>agdb-xxxxxx</para>
                 /// </summary>
@@ -26,6 +34,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string ServiceId { get; set; }
 
                 /// <summary>
+                /// <para>The service type.</para>
+                /// <para>Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>memory</description></item>
+                /// <item><description>drama</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>memory</para>
                 /// </summary>
@@ -36,6 +51,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-10-09T04:54:08Z</para>
             /// </summary>
@@ -44,6 +61,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The description of the API key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my first api key</para>
             /// </summary>
@@ -52,6 +71,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The ID of the API key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>api-xxxxxxxx</para>
             /// </summary>
@@ -60,6 +81,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string KeyId { get; set; }
 
             /// <summary>
+            /// <para>The name of the API key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my first api key</para>
             /// </summary>
@@ -68,6 +91,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string KeyName { get; set; }
 
             /// <summary>
+            /// <para>The prefix of the API key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sk-12345****</para>
             /// </summary>
@@ -78,6 +103,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of records to return in this query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -86,6 +113,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page in a paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
@@ -94,6 +123,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
         /// </summary>
@@ -102,6 +133,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

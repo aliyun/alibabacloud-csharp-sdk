@@ -167,8 +167,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>: Succeeded.</description></item>
-        /// <item><description><b>fail</b>: Failed.</description></item>
+        /// <item><description><b>success</b>: The operation is successful.</description></item>
+        /// <item><description><b>fail</b>: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

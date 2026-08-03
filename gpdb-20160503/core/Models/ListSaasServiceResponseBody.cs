@@ -16,6 +16,36 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public List<ListSaasServiceResponseBodyItems> Items { get; set; }
         public class ListSaasServiceResponseBodyItems : TeaModel {
+            [NameInMap("Components")]
+            [Validation(Required=false)]
+            public List<ListSaasServiceResponseBodyItemsComponents> Components { get; set; }
+            public class ListSaasServiceResponseBodyItemsComponents : TeaModel {
+                [NameInMap("ComponentId")]
+                [Validation(Required=false)]
+                public string ComponentId { get; set; }
+
+                [NameInMap("ComponentType")]
+                [Validation(Required=false)]
+                public string ComponentType { get; set; }
+
+                [NameInMap("CreateTime")]
+                [Validation(Required=false)]
+                public string CreateTime { get; set; }
+
+                [NameInMap("Cu")]
+                [Validation(Required=false)]
+                public string Cu { get; set; }
+
+                [NameInMap("DeletionProtection")]
+                [Validation(Required=false)]
+                public bool? DeletionProtection { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The creation time.</para>
             /// 
@@ -35,6 +65,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [NameInMap("Cu")]
             [Validation(Required=false)]
             public int? Cu { get; set; }
+
+            [NameInMap("DeletionProtection")]
+            [Validation(Required=false)]
+            public bool? DeletionProtection { get; set; }
 
             /// <summary>
             /// <para>The expiration time.</para>
@@ -61,7 +95,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>[Deprecated]</para>
+            /// <para><b>[Deprecated]</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>deprecated</para>

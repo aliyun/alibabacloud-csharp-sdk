@@ -39,14 +39,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                 {"eu-west-1", "gpdb.eu-west-1.aliyuncs.com"},
                 {"eu-central-1", "gpdb.eu-central-1.aliyuncs.com"},
                 {"cn-zhangjiakou", "gpdb.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "gpdb.cn-wulanchabu.aliyuncs.com"},
                 {"cn-huhehaote", "gpdb.cn-huhehaote.aliyuncs.com"},
                 {"cn-chengdu", "gpdb.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing-finance-1", "gpdb.aliyuncs.com"},
+                {"cn-beijing-finance-1", "gpdb.cn-beijing-finance-1.aliyuncs.com"},
                 {"ap-southeast-7", "gpdb.ap-southeast-7.aliyuncs.com"},
                 {"ap-southeast-5", "gpdb.ap-southeast-5.aliyuncs.com"},
                 {"ap-southeast-3", "gpdb.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-2", "gpdb.ap-southeast-2.aliyuncs.com"},
-                {"ap-south-1", "gpdb.ap-south-1.aliyuncs.com"},
                 {"ap-northeast-2", "gpdb.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "gpdb.ap-northeast-1.aliyuncs.com"},
             };
@@ -2909,12 +2908,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建API密钥</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建API密钥。</para>
+        /// <para>Creates an API key.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2978,12 +2977,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建API密钥</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建API密钥。</para>
+        /// <para>Creates an API key.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3047,12 +3046,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建API密钥</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建API密钥。</para>
+        /// <para>Creates an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3070,12 +3069,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建API密钥</para>
+        /// <para>Creates an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建API密钥。</para>
+        /// <para>Creates an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3749,12 +3748,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Creates an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> for AnalyticDB for PostgreSQL.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3976,12 +3975,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Creates an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> for AnalyticDB for PostgreSQL.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4203,12 +4202,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Creates an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> for AnalyticDB for PostgreSQL.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4226,12 +4225,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Creates an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> for AnalyticDB for PostgreSQL.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8503,6 +8502,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["StorageSize"] = request.StorageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
                 query["UsedTime"] = request.UsedTime;
@@ -8609,6 +8612,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
             {
                 query["StorageSize"] = request.StorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
             {
@@ -9529,12 +9536,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除API密钥</para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除API密钥。</para>
+        /// <para>Deletes an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9580,12 +9587,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除API密钥</para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除API密钥。</para>
+        /// <para>Deletes an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9631,12 +9638,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除API密钥</para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除API密钥。</para>
+        /// <para>Deletes an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9654,12 +9661,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除API密钥</para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除API密钥。</para>
+        /// <para>Deletes an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14041,12 +14048,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除SaaS工作空间</para>
+        /// <para>Deletes a SaaS workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>此接口为删除上下文服务工作空间</para>
+        /// <para>Deletes a context service workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14092,12 +14099,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除SaaS工作空间</para>
+        /// <para>Deletes a SaaS workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>此接口为删除上下文服务工作空间</para>
+        /// <para>Deletes a context service workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14143,12 +14150,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除SaaS工作空间</para>
+        /// <para>Deletes a SaaS workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>此接口为删除上下文服务工作空间</para>
+        /// <para>Deletes a context service workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14166,12 +14173,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除SaaS工作空间</para>
+        /// <para>Deletes a SaaS workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>此接口为删除上下文服务工作空间</para>
+        /// <para>Deletes a context service workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28085,12 +28092,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API密钥详情</para>
+        /// <para>Retrieves the details of an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取API密钥详情。</para>
+        /// <para>Retrieves the details of an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28136,12 +28143,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API密钥详情</para>
+        /// <para>Retrieves the details of an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取API密钥详情。</para>
+        /// <para>Retrieves the details of an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28187,12 +28194,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API密钥详情</para>
+        /// <para>Retrieves the details of an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取API密钥详情。</para>
+        /// <para>Retrieves the details of an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28210,12 +28217,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取API密钥详情</para>
+        /// <para>Retrieves the details of an API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取API密钥详情。</para>
+        /// <para>Retrieves the details of an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28565,12 +28572,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取SaaS服务信息</para>
+        /// <para>Retrieves SaaS service information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除模型服务。</para>
+        /// <para>Deletes a model service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28616,12 +28623,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取SaaS服务信息</para>
+        /// <para>Retrieves SaaS service information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除模型服务。</para>
+        /// <para>Deletes a model service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28667,12 +28674,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取SaaS服务信息</para>
+        /// <para>Retrieves SaaS service information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除模型服务。</para>
+        /// <para>Deletes a model service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28690,12 +28697,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取SaaS服务信息</para>
+        /// <para>Retrieves SaaS service information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除模型服务。</para>
+        /// <para>Deletes a model service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28873,15 +28880,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取SaaS服务访问信息</para>
+        /// <para>Retrieves access information for a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>使用说明</h2>
-        /// <para>本接口用于查看所有模型服务信息。</para>
-        /// <h2>QPS限制</h2>
-        /// <para>本接口的单用户QPS限制默认为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query information about all model services.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The default single-user QPS limit for this operation is 1,000 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28927,15 +28934,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取SaaS服务访问信息</para>
+        /// <para>Retrieves access information for a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>使用说明</h2>
-        /// <para>本接口用于查看所有模型服务信息。</para>
-        /// <h2>QPS限制</h2>
-        /// <para>本接口的单用户QPS限制默认为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query information about all model services.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The default single-user QPS limit for this operation is 1,000 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28981,15 +28988,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取SaaS服务访问信息</para>
+        /// <para>Retrieves access information for a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>使用说明</h2>
-        /// <para>本接口用于查看所有模型服务信息。</para>
-        /// <h2>QPS限制</h2>
-        /// <para>本接口的单用户QPS限制默认为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query information about all model services.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The default single-user QPS limit for this operation is 1,000 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29007,15 +29014,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取SaaS服务访问信息</para>
+        /// <para>Retrieves access information for a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>使用说明</h2>
-        /// <para>本接口用于查看所有模型服务信息。</para>
-        /// <h2>QPS限制</h2>
-        /// <para>本接口的单用户QPS限制默认为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query information about all model services.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The default single-user QPS limit for this operation is 1,000 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30065,13 +30072,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询SaaS工作空间</para>
+        /// <para>Queries a SaaS workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>使用说明</h2>
-        /// <para>本接口用于查看指定工作空间信息。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query information about a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30117,13 +30124,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询SaaS工作空间</para>
+        /// <para>Queries a SaaS workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>使用说明</h2>
-        /// <para>本接口用于查看指定工作空间信息。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query information about a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30169,13 +30176,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询SaaS工作空间</para>
+        /// <para>Queries a SaaS workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>使用说明</h2>
-        /// <para>本接口用于查看指定工作空间信息。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query information about a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30193,13 +30200,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询SaaS工作空间</para>
+        /// <para>Queries a SaaS workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>使用说明</h2>
-        /// <para>本接口用于查看指定工作空间信息。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query information about a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30997,12 +31004,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API密钥列表</para>
+        /// <para>Queries a list of API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询API密钥列表。</para>
+        /// <para>Queries a list of API keys.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31060,12 +31067,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API密钥列表</para>
+        /// <para>Queries a list of API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询API密钥列表。</para>
+        /// <para>Queries a list of API keys.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31123,12 +31130,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API密钥列表</para>
+        /// <para>Queries a list of API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询API密钥列表。</para>
+        /// <para>Queries a list of API keys.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31146,12 +31153,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API密钥列表</para>
+        /// <para>Queries a list of API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询API密钥列表。</para>
+        /// <para>Queries a list of API keys.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33962,7 +33969,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Usage notes</h2>
         /// <para>This operation is used to query information about all SaaS services.</para>
         /// </description>
         /// 
@@ -34026,7 +34033,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Usage notes</h2>
         /// <para>This operation is used to query information about all SaaS services.</para>
         /// </description>
         /// 
@@ -34090,7 +34097,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Usage notes</h2>
         /// <para>This operation is used to query information about all SaaS services.</para>
         /// </description>
         /// 
@@ -34114,7 +34121,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Usage notes</h2>
         /// <para>This operation is used to query information about all SaaS services.</para>
         /// </description>
         /// 
@@ -35999,7 +36006,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation is used to query information about all workspaces.</para>
+        /// <para>This operation is used to view information about all workspaces.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36063,7 +36070,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation is used to query information about all workspaces.</para>
+        /// <para>This operation is used to view information about all workspaces.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36127,7 +36134,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation is used to query information about all workspaces.</para>
+        /// <para>This operation is used to view information about all workspaces.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36151,7 +36158,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This operation is used to query information about all workspaces.</para>
+        /// <para>This operation is used to view information about all workspaces.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41481,12 +41488,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停SaaS服务</para>
+        /// <para>Pauses a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除模型服务。</para>
+        /// <para>Deletes a model service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41532,12 +41539,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停SaaS服务</para>
+        /// <para>Pauses a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除模型服务。</para>
+        /// <para>Deletes a model service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41583,12 +41590,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停SaaS服务</para>
+        /// <para>Pauses a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除模型服务。</para>
+        /// <para>Deletes a model service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41606,12 +41613,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停SaaS服务</para>
+        /// <para>Pauses a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除模型服务。</para>
+        /// <para>Deletes a model service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44905,12 +44912,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复SaaS服务</para>
+        /// <para>Resumes a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除模型服务。</para>
+        /// <para>Deletes a model service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44956,12 +44963,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复SaaS服务</para>
+        /// <para>Resumes a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除模型服务。</para>
+        /// <para>Deletes a model service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45007,12 +45014,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复SaaS服务</para>
+        /// <para>Resumes a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除模型服务。</para>
+        /// <para>Deletes a model service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45030,12 +45037,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复SaaS服务</para>
+        /// <para>Resumes a SaaS service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除模型服务。</para>
+        /// <para>Deletes a model service.</para>
         /// </description>
         /// 
         /// <param name="request">
