@@ -16,30 +16,73 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public List<ListSaasServiceResponseBodyItems> Items { get; set; }
         public class ListSaasServiceResponseBodyItems : TeaModel {
+            /// <summary>
+            /// <para>The list of service subcomponents.</para>
+            /// </summary>
             [NameInMap("Components")]
             [Validation(Required=false)]
             public List<ListSaasServiceResponseBodyItemsComponents> Components { get; set; }
             public class ListSaasServiceResponseBodyItemsComponents : TeaModel {
+                /// <summary>
+                /// <para>The component ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0644c5aa-5306-478b-ac39-bb4660cdc9f7</para>
+                /// </summary>
                 [NameInMap("ComponentId")]
                 [Validation(Required=false)]
                 public string ComponentId { get; set; }
 
+                /// <summary>
+                /// <para>The type of the subcomponent.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>gamestudio</para>
+                /// </summary>
                 [NameInMap("ComponentType")]
                 [Validation(Required=false)]
                 public string ComponentType { get; set; }
 
+                /// <summary>
+                /// <para>The creation time.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-10-09T04:54:08Z</para>
+                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                /// <summary>
+                /// <para>The compute resource of the component.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("Cu")]
                 [Validation(Required=false)]
                 public string Cu { get; set; }
 
+                /// <summary>
+                /// <para>The release protection status.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("DeletionProtection")]
                 [Validation(Required=false)]
                 public bool? DeletionProtection { get; set; }
 
+                /// <summary>
+                /// <para>The service status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>active: Running.</description></item>
+                /// <item><description>creating: Being created.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>active</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
@@ -66,6 +109,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public int? Cu { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the release protection feature is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: Enabled.</description></item>
+            /// <item><description><b>false</b>: Disabled.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>True</para>
+            /// </summary>
             [NameInMap("DeletionProtection")]
             [Validation(Required=false)]
             public bool? DeletionProtection { get; set; }
