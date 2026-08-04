@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The deployment type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>4</b>: instance that is accessible over the internet and a VPC</para>
+        /// <item><description><para><b>4</b>: Internet- and VPC-connected instance</para>
         /// </description></item>
-        /// <item><description><para><b>5</b>: instance that is accessible only over a VPC</para>
+        /// <item><description><para><b>5</b>: VPC-connected instance</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// <para>The disk capacity.</para>
-        /// <para>For more information about the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <para>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// <remarks>
-        /// <para>This parameter is not required when you create a Serverless instance.</para>
+        /// <para>This parameter is not required if you create a serverless instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <item><description><para><b>0</b>: ultra disk</para>
         /// </description></item>
         /// <item><description><para><b>1</b>: SSD</para>
+        /// <remarks>
+        /// <para>This parameter is not required if you create a serverless instance.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is not required when you create a Serverless instance.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -62,13 +62,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The Internet traffic.</para>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required if you set <b>DeployType</b> to <b>4</b>.</para>
+        /// <item><description><para>This parameter is required if <b>DeployType</b> is set to <b>4</b>.</para>
         /// </description></item>
-        /// <item><description><para>For more information about the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <item><description><para>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is not required when you create a Serverless instance.</para>
+        /// <para>This parameter is not required if you create a serverless instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The traffic specification.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is not required when you create a Serverless instance.</para>
+        /// <para>This parameter is not required if you create a serverless instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,12 +95,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string IoMaxSpec { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1 (default): pay-as-you-go for reserved instances.</para>
-        /// </description></item>
-        /// <item><description><para>3: pay-as-you-go for reserved capacity and elastic scaling of Serverless instances.</para>
-        /// </description></item>
+        /// <item><description>1 (default): pay-as-you-go for reserved instances.</description></item>
+        /// <item><description>3: pay-as-you-go for serverless reserved specifications + pay-as-you-go for serverless elastic scaling.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,13 +109,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? PaidType { get; set; }
 
         /// <summary>
-        /// <para>The number of partitions.</para>
+        /// <para>The number of partitions to purchase.</para>
         /// <list type="bullet">
-        /// <item><description>For more information about the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This parameter is not required if the instance is a Serverless instance.</para>
+        /// <item><description>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.<remarks>
+        /// <para>This parameter is not required if the instance is a serverless instance.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -138,8 +136,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// <para>If you do not specify this parameter, the instance is added to the default resource group. You can view the resource group ID in the Resource Group console.</para>
+        /// <para>The resource group ID.</para>
+        /// <para>If this parameter is not specified, the instance is placed in the default resource group. You can view the resource group ID in the Resource Management console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ac***********7q</para>
@@ -149,33 +147,27 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The settings of the Serverless instance. This parameter is required when you create a Serverless instance.</para>
+        /// <para>The settings for the serverless instance. This parameter is required when you create a serverless instance.</para>
         /// </summary>
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
         public string ServerlessConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The edition of the instance.</para>
-        /// <para>If you set the PaidType parameter to 1 (pay-as-you-go for reserved instances), valid values are:</para>
+        /// <para>The specification type.</para>
+        /// <para>Valid values when PaidType is set to 1 (pay-as-you-go for reserved instances):</para>
         /// <list type="bullet">
-        /// <item><description><para>normal: Standard Edition (High-write)</para>
-        /// </description></item>
-        /// <item><description><para>professional: Professional Edition (High-write)</para>
-        /// </description></item>
-        /// <item><description><para>professionalForHighRead: Professional Edition (High-read)</para>
-        /// </description></item>
+        /// <item><description>normal: Standard Edition (shared throughput)</description></item>
+        /// <item><description>professional: Professional Edition (shared throughput)</description></item>
+        /// <item><description>professionalForHighRead: Professional Edition (shared throughput for high read)</description></item>
         /// </list>
-        /// <para>If you set the PaidType parameter to 3 (pay-as-you-go for reserved capacity and elastic scaling of Serverless instances), valid values are:</para>
+        /// <para>Valid values when PaidType is set to 3 (pay-as-you-go for serverless reserved specifications + pay-as-you-go for serverless elastic scaling):</para>
         /// <list type="bullet">
-        /// <item><description><para>basic: Serverless Basic Edition</para>
-        /// </description></item>
-        /// <item><description><para>normal: Serverless Standard Edition</para>
-        /// </description></item>
-        /// <item><description><para>professional: Serverless Professional Edition</para>
-        /// </description></item>
+        /// <item><description>basic: Serverless Basic Edition</description></item>
+        /// <item><description>normal: Serverless Standard Edition</description></item>
+        /// <item><description>professional: Serverless Professional Edition</description></item>
         /// </list>
-        /// <para>For more information about these instance editions, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <para>For more information about the specification types, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>professional</para>
@@ -185,7 +177,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string SpecType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -194,12 +186,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// <para>The tag key of the resource.</para>
             /// <list type="bullet">
-            /// <item><description><para>The value of N can be from 1 to 20.</para>
-            /// </description></item>
-            /// <item><description><para>If this parameter is left empty, all tag keys are matched.</para>
-            /// </description></item>
-            /// <item><description><para>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</para>
-            /// </description></item>
+            /// <item><description>N ranges from 1 to 20.</description></item>
+            /// <item><description>If this parameter is left empty, all tag keys are matched.</description></item>
+            /// <item><description>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -213,12 +202,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// <para>The tag value of the resource.</para>
             /// <list type="bullet">
-            /// <item><description><para>The value of N can be from 1 to 20.</para>
-            /// </description></item>
-            /// <item><description><para>If the tag key is empty, this parameter must also be empty. If this parameter is empty, all tag values are matched.</para>
-            /// </description></item>
-            /// <item><description><para>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</para>
-            /// </description></item>
+            /// <item><description>N ranges from 1 to 20.</description></item>
+            /// <item><description>If the tag key is left empty, this parameter must also be left empty. If this parameter is left empty, all tag values are matched.</description></item>
+            /// <item><description>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

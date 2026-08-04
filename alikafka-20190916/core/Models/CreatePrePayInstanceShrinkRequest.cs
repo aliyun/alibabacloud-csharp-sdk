@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreatePrePayInstanceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of the Confluent components.</para>
+        /// <para>The Confluent component configurations.</para>
         /// <remarks>
-        /// <para>This parameter is required if you create a Confluent instance.</para>
+        /// <para>This parameter is required when you create a Confluent instance.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ConfluentConfig")]
@@ -22,13 +22,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The deployment type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>4</b>: an instance accessible from the internet and a VPC</para>
+        /// <item><description><para><b>4</b>: Internet- and VPC-connected instance</para>
         /// </description></item>
-        /// <item><description><para><b>5</b>: an instance accessible from a VPC only</para>
+        /// <item><description><para><b>5</b>: VPC-connected instance</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you create a Confluent instance, you cannot specify the deployment type and must set this parameter to 5. After the instance is created, you can configure internet access for each component.</para>
+        /// <para>When you create a Confluent instance, you cannot select the deployment type. Only the value 5 is allowed. After the purchase, you can configure whether to enable public access for each component.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? DeployType { get; set; }
 
         /// <summary>
-        /// <para>The disk capacity, in GB.</para>
+        /// <para>The disk capacity. Unit: GB.</para>
         /// <para>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// <remarks>
-        /// <para>This parameter is not required if you create a Confluent instance.</para>
+        /// <para>This parameter is not required when you create a Confluent instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,13 +55,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The disk type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: ultra disk</para>
+        /// <item><description><para><b>0</b>: ultra cloud disk</para>
         /// </description></item>
         /// <item><description><para><b>1</b>: SSD</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is not required if you create a Confluent instance.</para>
+        /// <para>This parameter is not required when you create a Confluent instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,12 +72,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration, in months. Default value: 1. Valid values:</para>
+        /// <para>The subscription duration. Unit: months. Default value: 1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Confluent instances: <b>1</b> and <b>12</b></para>
-        /// </description></item>
-        /// <item><description><para>Kafka instances: <b>1</b></para>
-        /// </description></item>
+        /// <item><description><b>Confluent instances: 1 or 12</b></description></item>
+        /// <item><description><b>ApsaraMQ for Kafka instances: 1</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,15 +86,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>The peak internet bandwidth.</para>
+        /// <para>The Internet traffic.</para>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required if you set <b>DeployType</b> to <b>4</b>.</para>
+        /// <item><description><para>This parameter is required if <b>DeployType</b> is set to <b>4</b>.</para>
         /// </description></item>
-        /// <item><description><para>For the value range, see <a href="https://help.aliyun.com/document_detail/72142.html">pay-as-you-go</a>.</para>
+        /// <item><description><para>For the value range, see <a href="https://help.aliyun.com/document_detail/72142.html">Pay-as-you-go billing method</a>.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is not required if you create a Confluent instance.</para>
+        /// <para>This parameter is not required when you create a Confluent instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,13 +105,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? EipMax { get; set; }
 
         /// <summary>
-        /// <para>The I/O specification.</para>
+        /// <para>The traffic specification.</para>
         /// <list type="bullet">
-        /// <item><description>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This parameter is not required if you create a Confluent instance.</para>
+        /// <item><description>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.<remarks>
+        /// <para>This parameter is not required when you create a Confluent instance.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>alikafka.hw.2xlarge</para>
@@ -123,11 +121,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string IoMaxSpec { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>0</b>: subscription</para>
         /// </description></item>
-        /// <item><description><para><b>4</b>: subscription for Confluent instances</para>
+        /// <item><description><para><b>4</b>: Confluent subscription</para>
         /// </description></item>
         /// </list>
         /// 
@@ -139,13 +137,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? PaidType { get; set; }
 
         /// <summary>
-        /// <para>The number of partitions.</para>
+        /// <para>The number of partitions to purchase.</para>
         /// <list type="bullet">
-        /// <item><description>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This parameter is not required if you create a Confluent instance.</para>
+        /// <item><description>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.<remarks>
+        /// <para>This parameter is not required when you create a Confluent instance.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -166,8 +164,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// <para>If you do not specify this parameter, the instance is placed in the default resource group. You can find the resource group ID in the Resource Group console.</para>
+        /// <para>The resource group ID.</para>
+        /// <para>If you do not specify this parameter, the instance is placed in the default resource group. You can view the resource group ID in the Resource Management console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ac***********7q</para>
@@ -177,14 +175,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The specification type.</para>
-        /// <para>Valid values for Kafka instances:</para>
+        /// <para>The edition type.</para>
+        /// <para>Valid values for ApsaraMQ for Kafka instances:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>normal</b>: Standard Edition (High-write)</para>
+        /// <item><description><para><b>normal</b>: Standard Edition (shared throughput for writes)</para>
         /// </description></item>
-        /// <item><description><para><b>professional</b>: Professional Edition (High-write)</para>
+        /// <item><description><para><b>professional</b>: Professional Edition (shared throughput for writes)</para>
         /// </description></item>
-        /// <item><description><para><b>professionalForHighRead</b>: Professional Edition (High-read)</para>
+        /// <item><description><para><b>professionalForHighRead</b>: Professional Edition (shared throughput for reads)</para>
         /// </description></item>
         /// </list>
         /// <para>Valid values for Confluent instances:</para>
@@ -204,18 +202,20 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string SpecType { get; set; }
 
         /// <summary>
-        /// <para>The tags to attach to the instance. You can specify up to 20 tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreatePrePayInstanceShrinkRequestTag> Tag { get; set; }
         public class CreatePrePayInstanceShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tag key of the resource.</para>
             /// <list type="bullet">
-            /// <item><description></description></item>
-            /// <item><description></description></item>
-            /// <item><description><para>The key must be 1 to 128 characters long. It cannot start with aliyun or acs:, nor can it contain http\:// or https\://.</para>
+            /// <item><description><para>N ranges from 1 to 20.</para>
+            /// </description></item>
+            /// <item><description><para>If this parameter is left empty, all tag keys are matched.</para>
+            /// </description></item>
+            /// <item><description><para>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
@@ -228,11 +228,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag value of the resource.</para>
             /// <list type="bullet">
-            /// <item><description></description></item>
-            /// <item><description></description></item>
-            /// <item><description><para>The value can be 0 to 128 characters long. It cannot start with aliyun or acs:, nor can it contain http\:// or https\://.</para>
+            /// <item><description><para>N ranges from 1 to 20.</para>
+            /// </description></item>
+            /// <item><description><para>This parameter can be left empty.</para>
+            /// </description></item>
+            /// <item><description><para>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// </description></item>
             /// </list>
             /// 

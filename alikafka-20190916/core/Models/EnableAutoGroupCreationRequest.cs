@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class EnableAutoGroupCreationRequest : TeaModel {
         /// <summary>
-        /// <para>Enable or disable the free use of Groups. Valid values:</para>
+        /// <para>Specifies whether to enable the free use of groups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enable.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disable.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Enable.</description></item>
+        /// <item><description><b>false</b>: Disable.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,7 +26,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
         /// <summary>
         /// <para>The instance ID.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> to obtain it.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/437663.html">GetInstanceList</a> to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

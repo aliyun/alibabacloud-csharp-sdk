@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class DeleteAclRequest : TeaModel {
         /// <summary>
-        /// <para>Operation type. Valid values:</para>
+        /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Write</b>: Write</para>
+        /// <item><description><para><b>Write</b>: write.</para>
         /// </description></item>
-        /// <item><description><para><b>Read</b>: Read</para>
+        /// <item><description><para><b>Read</b>: read.</para>
         /// </description></item>
-        /// <item><description><para><b>Describe</b>: Read TransactionalId</para>
+        /// <item><description><para><b>Describe</b>: read TransactionalId.</para>
         /// </description></item>
-        /// <item><description><para><b>IdempotentWrite</b>: Idempotent write to Cluster</para>
+        /// <item><description><para><b>IdempotentWrite</b>: idempotent write to Cluster.</para>
         /// </description></item>
-        /// <item><description><para><b>IDEMPOTENT_WRITE</b>: Idempotent write to Cluster, only available for Serverless instances.</para>
+        /// <item><description><para><b>IDEMPOTENT_WRITE</b>: idempotent write to Cluster. This value is available only for serverless instances.</para>
         /// </description></item>
-        /// <item><description><para><b>DESCRIBE_CONFIGS</b>: Query configuration, only available for Serverless instances.</para>
+        /// <item><description><para><b>DESCRIBE_CONFIGS</b>: query configurations. This value is available only for serverless instances.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -35,24 +35,24 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclOperationType { get; set; }
 
         /// <summary>
-        /// <para>Batch authorization operation types. Multiple operations are separated by commas (,).</para>
+        /// <para>The batch authorization operation types. Separate multiple operations with commas (,).</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Write</b>: Read</para>
+        /// <item><description><para><b>Write</b>: write.</para>
         /// </description></item>
-        /// <item><description><para><b>Read</b>: Write</para>
+        /// <item><description><para><b>Read</b>: read.</para>
         /// </description></item>
-        /// <item><description><para><b>Describe</b>: Read TransactionalId</para>
+        /// <item><description><para><b>Describe</b>: read TransactionalId.</para>
         /// </description></item>
-        /// <item><description><para><b>IdempotentWrite</b>: Idempotent write to Cluster</para>
+        /// <item><description><para><b>IdempotentWrite</b>: idempotent write to Cluster.</para>
         /// </description></item>
-        /// <item><description><para><b>IDEMPOTENT_WRITE</b>: Idempotent write to Cluster, only available for Serverless instances.</para>
+        /// <item><description><para><b>IDEMPOTENT_WRITE</b>: idempotent write to Cluster. This value is available only for serverless instances.</para>
         /// </description></item>
-        /// <item><description><para><b>DESCRIBE_CONFIGS</b>: Query configuration, only available for Serverless instances.</para>
+        /// <item><description><para><b>DESCRIBE_CONFIGS</b>: query configurations. This value is available only for serverless instances.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is only supported for Serverless instances.</para>
+        /// <para>This parameter is available only for serverless instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,15 +63,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclOperationTypes { get; set; }
 
         /// <summary>
-        /// <para>Authorization method. Valid values:</para>
+        /// <para>The authorization method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DENY: Deny</para>
-        /// </description></item>
-        /// <item><description><para>ALLOW: Allow</para>
-        /// </description></item>
+        /// <item><description>DENY: deny.</description></item>
+        /// <item><description>ALLOW: allow.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is only supported for Serverless instances.</para>
+        /// <para>This parameter is available only for serverless instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,11 +80,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclPermissionType { get; set; }
 
         /// <summary>
-        /// <para>Resource name.</para>
+        /// <para>The resource name.</para>
         /// <list type="bullet">
-        /// <item><description><para>Topic name or Group name.</para>
+        /// <item><description><para>The name of a topic or consumer group.</para>
         /// </description></item>
-        /// <item><description><para>Asterisk (\*) represents all Topic or Group names.</para>
+        /// <item><description><para>An asterisk (\*) indicates the names of all topics or consumer groups.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -99,11 +97,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclResourceName { get; set; }
 
         /// <summary>
-        /// <para>Matching pattern. Valid values:</para>
+        /// <para>The matching mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>LITERAL</b>: Exact matching pattern</para>
+        /// <item><description><para><b>LITERAL</b>: full-name match.</para>
         /// </description></item>
-        /// <item><description><para><b>PREFIXED</b>: Prefix matching pattern</para>
+        /// <item><description><para><b>PREFIXED</b>: prefix match.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -116,15 +114,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclResourcePatternType { get; set; }
 
         /// <summary>
-        /// <para>Resource type.</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Topic</b>: Message topic.</para>
+        /// <item><description><para><b>Topic</b>: topic.</para>
         /// </description></item>
-        /// <item><description><para><b>Group</b>: Consumer group.</para>
+        /// <item><description><para><b>Group</b>: consumer group.</para>
         /// </description></item>
-        /// <item><description><para><b>Cluster</b>: Instance.</para>
+        /// <item><description><para><b>Cluster</b>: instance.</para>
         /// </description></item>
-        /// <item><description><para><b>TransactionalId</b>: Transaction ID.</para>
+        /// <item><description><para><b>TransactionalId</b>: transaction ID.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -137,13 +135,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string AclResourceType { get; set; }
 
         /// <summary>
-        /// <para>Source IP.</para>
+        /// <para>The source IP address.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Only supports specific IP addresses or setting \* (all IPs), does not support IP segments.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter is only supported for Serverless instances.</para>
-        /// </description></item>
+        /// <item><description>Only specific IP addresses or an asterisk (\*) to allow all IP addresses are supported. CIDR blocks are not supported.</description></item>
+        /// <item><description>This parameter is available only for serverless instances.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -157,7 +153,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -168,7 +164,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -179,7 +175,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Username.</para>
+        /// <para>The username.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

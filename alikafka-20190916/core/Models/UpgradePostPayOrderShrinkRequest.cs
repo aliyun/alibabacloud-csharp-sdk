@@ -29,15 +29,15 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? DiskSize { get; set; }
 
         /// <summary>
-        /// <para>The Internet traffic.</para>
+        /// <para>The public network traffic.</para>
         /// <list type="bullet">
-        /// <item><description>The Internet traffic that you specify must be greater than or equal to the current Internet traffic of the instance.</description></item>
+        /// <item><description>The public network traffic that you specify must be greater than or equal to the current public network traffic of the instance.</description></item>
         /// <item><description>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If EipModel is set to true, the value of EipMax must be greater than 0.</description></item>
-        /// <item><description>If EipModel is set to false, the value of EipMax must be 0.</description></item>
+        /// <item><description>If <b>EipModel</b> is set to <b>true</b>, the value of <b>EipMax</b> must be greater than 0.</description></item>
+        /// <item><description>If <b>EipModel</b> is set to <b>false</b>, the value of <b>EipMax</b> must be <b>0</b>.</description></item>
         /// <item><description>If the instance is a serverless instance, you do not need to specify this parameter.</description></item>
         /// </list>
         /// </remarks>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <list type="bullet">
         /// <item><description><para>The peak traffic that you specify must be greater than or equal to the current peak traffic of the instance.</para>
         /// </description></item>
-        /// <item><description><para>You must specify either the peak traffic or the traffic specification. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</para>
+        /// <item><description><para>You must specify either the traffic specification or the peak traffic. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</para>
         /// </description></item>
         /// <item><description><para>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// <remarks>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <list type="bullet">
         /// <item><description><para>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</para>
         /// </description></item>
-        /// <item><description><para>You must specify either the peak traffic or the traffic specification. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</para>
+        /// <item><description><para>You must specify either the traffic specification or the peak traffic. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</para>
         /// </description></item>
         /// <item><description><para>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// <remarks>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <list type="bullet">
         /// <item><description><para>You must specify either the number of partitions or the topic specification. Specify only the number of partitions.</para>
         /// </description></item>
-        /// <item><description><para>If you specify both the number of partitions and the topic specification, the system validates whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, an error is returned. If they are equivalent, the purchase is made based on the number of partitions.</para>
+        /// <item><description><para>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</para>
         /// </description></item>
         /// <item><description><para>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// <remarks>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The settings of the serverless instance. This parameter is required when you change the specifications of a serverless instance.</para>
+        /// <para>The settings of the serverless instance. This parameter is required when you upgrade a serverless instance.</para>
         /// </summary>
         [NameInMap("ServerlessConfig")]
         [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <list type="bullet">
         /// <item><description>normal: Standard Edition (shared throughput)</description></item>
         /// <item><description>professional: Professional Edition (shared throughput)</description></item>
-        /// <item><description>professionalForHighRead: Professional Edition (shared read throughput)</description></item>
+        /// <item><description>professionalForHighRead: Professional Edition (shared throughput for high read)</description></item>
         /// </list>
         /// <para>If the PaidType of the instance is 3 (reserved specification pay-as-you-go + serverless elastic scaling pay-as-you-go), valid values:</para>
         /// <list type="bullet">
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <list type="bullet">
         /// <item><description><para>You must specify either the number of partitions or the topic specification. Specify only the number of partitions.</para>
         /// </description></item>
-        /// <item><description><para>If you specify both the number of partitions and the topic specification, the system validates whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, an error is returned. If they are equivalent, the purchase is made based on the number of partitions.</para>
+        /// <item><description><para>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</para>
         /// </description></item>
         /// <item><description><para>The default value varies based on the traffic specification. Additional fees are charged if the value exceeds the default value.</para>
         /// </description></item>

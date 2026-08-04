@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreateTopicRequest : TeaModel {
         /// <summary>
-        /// <para>The cleanup policy for the topic. This parameter is available only if the storage engine of the topic is local storage. Valid values:</para>
+        /// <para>The cleanup policy configured when the storage engine of the topic is set to local storage. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false: The delete cleanup policy.</para>
-        /// </description></item>
-        /// <item><description><para>true: The compact cleanup policy.</para>
-        /// </description></item>
+        /// <item><description>false: delete cleanup policy.</description></item>
+        /// <item><description>true: compact cleanup policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,30 +24,24 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public bool? CompactTopic { get; set; }
 
         /// <summary>
-        /// <para>The advanced configurations of the topic.</para>
+        /// <para>The supplementary configuration.</para>
         /// <list type="bullet">
-        /// <item><description><para>Configure this parameter in the JSON format.</para>
+        /// <item><description><para>Must be in JSON format.</para>
         /// </description></item>
-        /// <item><description><para>This parameter is available only if <b>LocalTopic</b> is set to <b>true</b>.</para>
+        /// <item><description><para>This parameter takes effect only when <b>LocalTopic</b> is set to <b>true</b>.</para>
         /// </description></item>
-        /// <item><description><para>The following configurations are supported for reserved instances:</para>
+        /// <item><description><para>Supported configurations for reserved instances:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>retention.ms</b>: The message retention period. The value must be an integer from 3,600,000 to 31,536,000,000. Unit: milliseconds.</para>
-        /// </description></item>
-        /// <item><description><para><b>max.message.bytes</b>: The maximum size of a message that can be sent. The value must be an integer from 1,048,576 to 10,485,760. Unit: bytes.</para>
-        /// </description></item>
-        /// <item><description><para>message.timestamp.type: The timestamp type of a message. Valid values: CreateTime or LogAppendTime. CreateTime indicates that the message timestamp is the time when the producer creates the message. If you do not specify a timestamp, the client time is used. LogAppendTime indicates that the message timestamp is the time when the server stores the message. The default value is CreateTime. We recommend that you set this parameter to <b>LogAppendTime</b>.</para>
-        /// </description></item>
+        /// <item><description><b>retention.ms</b> (message retention period): ranges from 3600000 to 31536000000 milliseconds.</description></item>
+        /// <item><description><b>max.message.bytes</b> (maximum message size): ranges from 1048576 to 10485760 bytes. </description></item>
+        /// <item><description><b>message.timestamp.type</b>: specifies the type of message timestamp. CreateTime indicates the timestamp specified by the producer when sending a message. If not specified, it is the message creation time on the client. LogAppendTime indicates the time when the message is written to disk on the server. Valid values: CreateTime or LogAppendTime. Default value: CreateTime. We recommend LogAppendTime.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>The following configurations are supported for Serverless instances:</para>
+        /// <item><description><para>Supported configurations for Serverless instances:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>retention.hours</b>: The message retention period. The value is of the string type. The value must be an integer from 24 to 8,760.</para>
-        /// </description></item>
-        /// <item><description><para><b>max.message.bytes</b>: The maximum size of a message that can be sent. The value is of the string type. The value must be an integer from 1,048,576 to 10,485,760.</para>
-        /// </description></item>
-        /// <item><description><para>message.timestamp.type: The timestamp type of a message. Valid values: CreateTime or LogAppendTime. CreateTime indicates that the message timestamp is the time when the producer creates the message. If you do not specify a timestamp, the client time is used. LogAppendTime indicates that the message timestamp is the time when the server stores the message. The default value is CreateTime. We recommend that you set this parameter to <b>LogAppendTime</b>.</para>
-        /// </description></item>
+        /// <item><description><b>retention.hours</b> (message retention period): value type is String. Valid values: 24 to 8760.</description></item>
+        /// <item><description><b>max.message.bytes</b> (maximum message size): value type is String. Valid values: 1048576 to 10485760.</description></item>
+        /// <item><description><b>message.timestamp.type</b> (type of message timestamp): CreateTime indicates the timestamp specified by the producer when sending a message. If not specified, it is the message creation time on the client. LogAppendTime indicates the time when the message is written to disk on the server. Valid values: CreateTime or LogAppendTime. Default value: CreateTime. We recommend LogAppendTime.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -65,7 +57,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,10 +70,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The storage engine of the topic. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false: cloud storage.</para>
-        /// </description></item>
-        /// <item><description><para>true: local storage.</para>
-        /// </description></item>
+        /// <item><description>false: cloud storage.</description></item>
+        /// <item><description>true: local storage.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,13 +82,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public bool? LocalTopic { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of in-sync replicas (ISRs).</para>
+        /// <para>The minimum number of in-sync replicas (ISR).</para>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is available only if <b>LocalTopic</b> is set to <b>true</b>.</para>
+        /// <item><description><para>This parameter takes effect only when <b>LocalTopic</b> is set to <b>true</b>.</para>
         /// </description></item>
-        /// <item><description><para>The value of this parameter must be smaller than the number of replicas for the topic.</para>
+        /// <item><description><para>The value must be less than the number of topic replicas.</para>
         /// </description></item>
-        /// <item><description><para>The value must be an integer from 1 to 3.</para>
+        /// <item><description><para>The number of in-sync replicas ranges from 1 to 3.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -113,18 +103,18 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public long? MinInsyncReplicas { get; set; }
 
         /// <summary>
-        /// <para>The number of partitions in the topic.</para>
+        /// <para>The number of partitions for the topic.</para>
         /// <list type="bullet">
-        /// <item><description><para>The value must be an integer from 1 to 360.</para>
+        /// <item><description><para>The number of partitions ranges from 1 to 360.</para>
         /// </description></item>
-        /// <item><description><para>The console suggests a number of partitions based on the instance type. Follow the suggestion to reduce the risk of data skew.</para>
+        /// <item><description><para>The console provides different configuration suggestions based on the instance edition. Configure the number of partitions based on the console suggestions to reduce the risk of data skew.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description><para>Reserved instance: 12</para>
+        /// <item><description><para>Reserved instances: 12</para>
         /// </description></item>
-        /// <item><description><para>Serverless instance: 3</para>
+        /// <item><description><para>Serverless instances: 3</para>
         /// </description></item>
         /// </list>
         /// 
@@ -136,7 +126,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string PartitionNum { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance that contains the topic is located.</para>
+        /// <para>The region ID of the instance to which the topic belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -147,11 +137,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The remarks on the topic.</para>
+        /// <para>The description of the topic.</para>
         /// <list type="bullet">
-        /// <item><description><para>The remarks can contain only letters, digits, underscores (_), and hyphens (-).</para>
+        /// <item><description><para>Can contain only letters, digits, underscores (_), and hyphens (-).</para>
         /// </description></item>
-        /// <item><description><para>The remarks must be 3 to 64 characters in length.</para>
+        /// <item><description><para>Must be 3 to 64 characters in length.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -166,13 +156,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The number of replicas for the topic.</para>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is available only if <b>LocalTopic</b> is set to <b>true</b>.</para>
+        /// <item><description><para>This parameter takes effect only when <b>LocalTopic</b> is set to <b>true</b>.</para>
         /// </description></item>
-        /// <item><description><para>The value must be an integer from 1 to 3.</para>
+        /// <item><description><para>The number of replicas ranges from 1 to 3.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you set the number of replicas to <b>1</b>, you may lose data. Set this parameter with caution.</para>
+        /// <para>If the number of replicas is set to <b>1</b>, data loss may occur. Set this parameter with caution.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -186,7 +176,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public long? ReplicationFactor { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -195,11 +185,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// <para>The tag key of the resource.</para>
             /// <list type="bullet">
-            /// <item><description><para>N specifies the number of the tag. The value of N must be an integer from 1 to 20.</para>
+            /// <item><description><para>N ranges from 1 to 20.</para>
             /// </description></item>
             /// <item><description><para>If this parameter is left empty, all tag keys are matched.</para>
             /// </description></item>
-            /// <item><description><para>The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <item><description><para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
             /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
@@ -214,11 +204,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// <para>The tag value of the resource.</para>
             /// <list type="bullet">
-            /// <item><description><para>N specifies the number of the tag. The value of N must be an integer from 1 to 20.</para>
+            /// <item><description><para>N ranges from 1 to 20.</para>
             /// </description></item>
-            /// <item><description><para>The tag value can be empty.</para>
+            /// <item><description><para>This parameter can be left empty.</para>
             /// </description></item>
-            /// <item><description><para>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http\:// or https\://.</para>
+            /// <item><description><para>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:, or contain http:// or https://.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -234,10 +224,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The name of the topic.</para>
         /// <list type="bullet">
-        /// <item><description><para>Reserved instance: The name can contain uppercase letters, lowercase letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 3 to 64 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>Serverless instance: The name can contain uppercase letters, lowercase letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 1 to 249 characters in length.</para>
-        /// </description></item>
+        /// <item><description>Reserved instances:
+        /// Supports uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 3 to 64 characters in length.</description></item>
+        /// <item><description>Serverless instances:
+        /// Supports uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 1 to 249 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

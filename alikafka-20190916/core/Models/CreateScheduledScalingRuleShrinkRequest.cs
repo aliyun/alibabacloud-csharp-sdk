@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreateScheduledScalingRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The duration (unit: minutes) of a scheduled elastic task.</para>
+        /// <para>The duration (unit: minutes) of a single scheduled elastic scaling task.</para>
         /// <remarks>
-        /// <para>The parameter value must be at least 15 minutes.</para>
+        /// <para>The value must be at least 15 minutes.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? DurationMinutes { get; set; }
 
         /// <summary>
-        /// <para>Enables or disables the scheduled task policy. Valid values:</para>
+        /// <para>Specifies whether to enable or disable the scheduled policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enables the policy.</description></item>
-        /// <item><description><b>false</b>: Disables the policy.</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,14 +38,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The time when the scheduled policy starts to execute.</para>
-        /// <para>For a one-time scheduling policy type, the start execution time must be more than 30 minutes later than the current time.</para>
+        /// <para>The time when the scheduled policy starts to take effect.</para>
+        /// <para>If the schedule type is single execution, the start time must be at least 30 minutes later than the current time.</para>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: To prevent the server from continuously performing scale-up and scale-down tasks, the interval between different scheduled tasks must be at least 60 minutes.</para>
         /// </remarks>
-        /// <para>To avoid the service from continuously executing upgrade and downgrade tasks, the time interval between different scheduled tasks must be at least 60 minutes.</para>
-        /// </notice>
-        /// 
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,13 +75,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>When ScheduleType is set to repeat, you need to fill in this parameter. Enumeration values are:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Daily: Daily scheduled task.</para>
-        /// </description></item>
-        /// <item><description><para>Weekly: Weekly scheduled task.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The repeat type. This parameter is required when ScheduleType is set to repeat. Valid values:
+        ///       <item><description> Daily: timed scheduling every day.
+        ///       <item><description> Weekly: timed scheduling every week.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Weekly</para>
@@ -94,9 +87,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RepeatType { get; set; }
 
         /// <summary>
-        /// <para>The scheduled elastic reserved production specification (unit: MB/s).</para>
+        /// <para>The reserved production specification for scheduled elastic scaling (unit: MB/s).</para>
         /// <remarks>
-        /// <para>At least one of the ReservedPubFlow and ReservedSubFlow parameters must be higher than the current specification.</para>
+        /// <para>At least one of ReservedPubFlow and ReservedSubFlow must be higher than the current specification.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -108,9 +101,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? ReservedPubFlow { get; set; }
 
         /// <summary>
-        /// <para>The scheduled elastic reserved consumption specification (unit: MB/s).</para>
+        /// <para>The reserved consumption specification for scheduled elastic scaling (unit: MB/s).</para>
         /// <remarks>
-        /// <para>At least one of the ReservedSubFlow and ReservedPubFlow parameters must be higher than the current specification.</para>
+        /// <para>At least one of ReservedSubFlow and ReservedPubFlow must be higher than the current specification.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -124,7 +117,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The name of the scheduled policy rule.</para>
         /// <remarks>
-        /// <para>The name cannot be the same as other rule names for the same instance.</para>
+        /// <para>The name must be unique among all rules of the same instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -138,8 +131,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The schedule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>at: Scheduled only once.</description></item>
-        /// <item><description>repeat: Scheduled repeatedly.</description></item>
+        /// <item><description><para>at: scheduled once only.</para>
+        /// </description></item>
+        /// <item><description><para>repeat: scheduled repeatedly.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -162,7 +157,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string TimeZone { get; set; }
 
         /// <summary>
-        /// <para>The weekly types. Supports execution on multiple days.</para>
+        /// <para>The days of the week. Multiple days are supported for repeated execution.</para>
         /// </summary>
         [NameInMap("WeeklyTypes")]
         [Validation(Required=false)]

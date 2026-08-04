@@ -22,13 +22,16 @@ namespace AlibabaCloud.SDK.Alikafka20190916
             this._endpointMap = new Dictionary<string, string>
             {
                 {"us-west-1", "alikafka.us-west-1.aliyuncs.com"},
+                {"us-southeast-1", "alikafka.us-southeast-1.aliyuncs.com"},
                 {"us-east-1", "alikafka.us-east-1.aliyuncs.com"},
                 {"na-south-1", "alikafka.na-south-1.aliyuncs.com"},
                 {"me-east-1", "alikafka.me-east-1.aliyuncs.com"},
                 {"me-central-1", "alikafka.me-central-1.aliyuncs.com"},
                 {"eu-west-1", "alikafka.eu-west-1.aliyuncs.com"},
                 {"eu-central-1", "alikafka.eu-central-1.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "alikafka.cn-zhengzhou-jva.aliyuncs.com"},
                 {"cn-zhangjiakou", "alikafka.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu-gic-1", "alikafka.cn-wulanchabu-gic-1.aliyuncs.com"},
                 {"cn-wulanchabu", "alikafka.cn-wulanchabu.aliyuncs.com"},
                 {"cn-shenzhen-finance-1", "alikafka.cn-shenzhen-finance-1.aliyuncs.com"},
                 {"cn-shenzhen", "alikafka.cn-shenzhen.aliyuncs.com"},
@@ -41,13 +44,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916
                 {"cn-hangzhou-finance", "alikafka.cn-hangzhou-finance.aliyuncs.com"},
                 {"cn-hangzhou", "alikafka.cn-hangzhou.aliyuncs.com"},
                 {"cn-guangzhou", "alikafka.cn-guangzhou.aliyuncs.com"},
+                {"cn-fuzhou", "alikafka.cn-fuzhou.aliyuncs.com"},
                 {"cn-chengdu", "alikafka.cn-chengdu.aliyuncs.com"},
                 {"cn-beijing-finance-1", "alikafka.cn-beijing-finance-1.aliyuncs.com"},
                 {"cn-beijing", "alikafka.cn-beijing.aliyuncs.com"},
                 {"ap-southeast-7", "alikafka.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "alikafka.ap-southeast-6.aliyuncs.com"},
                 {"ap-southeast-5", "alikafka.ap-southeast-5.aliyuncs.com"},
                 {"ap-southeast-3", "alikafka.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-2", "alikafka.ap-southeast-2.aliyuncs.com"},
                 {"ap-southeast-1", "alikafka.ap-southeast-1.aliyuncs.com"},
                 {"ap-northeast-2", "alikafka.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "alikafka.ap-northeast-1.aliyuncs.com"},
@@ -220,7 +224,155 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a resource to a different resource group.</para>
+        /// <para>删除</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchDeleteTopicsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteTopicsResponse
+        /// </returns>
+        public BatchDeleteTopicsResponse BatchDeleteTopicsWithOptions(BatchDeleteTopicsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchDeleteTopicsShrinkRequest request = new BatchDeleteTopicsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Topics))
+            {
+                request.TopicsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Topics, "Topics", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicsShrink))
+            {
+                query["Topics"] = request.TopicsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeleteTopics",
+                Version = "2019-09-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeleteTopicsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchDeleteTopicsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteTopicsResponse
+        /// </returns>
+        public async Task<BatchDeleteTopicsResponse> BatchDeleteTopicsWithOptionsAsync(BatchDeleteTopicsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchDeleteTopicsShrinkRequest request = new BatchDeleteTopicsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Topics))
+            {
+                request.TopicsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Topics, "Topics", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicsShrink))
+            {
+                query["Topics"] = request.TopicsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchDeleteTopics",
+                Version = "2019-09-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchDeleteTopicsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteTopicsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteTopicsResponse
+        /// </returns>
+        public BatchDeleteTopicsResponse BatchDeleteTopics(BatchDeleteTopicsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchDeleteTopicsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchDeleteTopicsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchDeleteTopicsResponse
+        /// </returns>
+        public async Task<BatchDeleteTopicsResponse> BatchDeleteTopicsAsync(BatchDeleteTopicsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchDeleteTopicsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Transfers a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -270,7 +422,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a resource to a different resource group.</para>
+        /// <para>Transfers a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -320,7 +472,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a resource to a different resource group.</para>
+        /// <para>Transfers a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -338,7 +490,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a resource to a different resource group.</para>
+        /// <para>Transfers a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -500,7 +652,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation is used to create an access control list (ACL).</para>
+        /// <para>Creates an access control list (ACL).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -578,7 +730,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation is used to create an access control list (ACL).</para>
+        /// <para>Creates an access control list (ACL).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -656,7 +808,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation is used to create an access control list (ACL).</para>
+        /// <para>Creates an access control list (ACL).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -674,7 +826,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation is used to create an access control list (ACL).</para>
+        /// <para>Creates an access control list (ACL).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -692,7 +844,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call CreateConsumerGroup to create a consumer group.</para>
+        /// <para>Calls CreateConsumerGroup to create a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -750,7 +902,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call CreateConsumerGroup to create a consumer group.</para>
+        /// <para>Calls CreateConsumerGroup to create a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -808,7 +960,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call CreateConsumerGroup to create a consumer group.</para>
+        /// <para>Calls CreateConsumerGroup to create a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -826,7 +978,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call CreateConsumerGroup to create a consumer group.</para>
+        /// <para>Calls CreateConsumerGroup to create a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -844,7 +996,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation creates a pay-as-you-go instance and returns the instance ID and order ID.</para>
+        /// <para>Creates a pay-as-you-go instance and returns the instance ID and order ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -936,7 +1088,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation creates a pay-as-you-go instance and returns the instance ID and order ID.</para>
+        /// <para>Creates a pay-as-you-go instance and returns the instance ID and order ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1028,7 +1180,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation creates a pay-as-you-go instance and returns the instance ID and order ID.</para>
+        /// <para>Creates a pay-as-you-go instance and returns the instance ID and order ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1046,7 +1198,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation creates a pay-as-you-go instance and returns the instance ID and order ID.</para>
+        /// <para>Creates a pay-as-you-go instance and returns the instance ID and order ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1064,12 +1216,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pay-as-you-go instances are billed based on actual usage. This billing method is ideal for testing or short-term scenarios with unpredictable traffic peaks. This topic describes how to call the CreatePostPayOrder operation to create a pay-as-you-go instance.</para>
+        /// <para>Pay-as-you-go instances are billed based on the actual usage of purchased resource specifications. You use resources first and then pay for them. This billing method is suitable for testing or short-term scenarios with unpredictable traffic peaks. This topic describes how to call CreatePostPayOrder to create a pay-as-you-go instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure you understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <para>Before you use this operation, make sure that you fully understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1169,12 +1321,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pay-as-you-go instances are billed based on actual usage. This billing method is ideal for testing or short-term scenarios with unpredictable traffic peaks. This topic describes how to call the CreatePostPayOrder operation to create a pay-as-you-go instance.</para>
+        /// <para>Pay-as-you-go instances are billed based on the actual usage of purchased resource specifications. You use resources first and then pay for them. This billing method is suitable for testing or short-term scenarios with unpredictable traffic peaks. This topic describes how to call CreatePostPayOrder to create a pay-as-you-go instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure you understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <para>Before you use this operation, make sure that you fully understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1274,12 +1426,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pay-as-you-go instances are billed based on actual usage. This billing method is ideal for testing or short-term scenarios with unpredictable traffic peaks. This topic describes how to call the CreatePostPayOrder operation to create a pay-as-you-go instance.</para>
+        /// <para>Pay-as-you-go instances are billed based on the actual usage of purchased resource specifications. You use resources first and then pay for them. This billing method is suitable for testing or short-term scenarios with unpredictable traffic peaks. This topic describes how to call CreatePostPayOrder to create a pay-as-you-go instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure you understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <para>Before you use this operation, make sure that you fully understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1297,12 +1449,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pay-as-you-go instances are billed based on actual usage. This billing method is ideal for testing or short-term scenarios with unpredictable traffic peaks. This topic describes how to call the CreatePostPayOrder operation to create a pay-as-you-go instance.</para>
+        /// <para>Pay-as-you-go instances are billed based on the actual usage of purchased resource specifications. You use resources first and then pay for them. This billing method is suitable for testing or short-term scenarios with unpredictable traffic peaks. This topic describes how to call CreatePostPayOrder to create a pay-as-you-go instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure you understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <para>Before you use this operation, make sure that you fully understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1326,8 +1478,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, ensure you understand the billing methods and pricing of subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">billing overview</a>.</description></item>
-        /// <item><description>By default, a subscription instance created using this operation has a one-month subscription period and is set to auto-renew monthly. To change the renewal period or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">renewal management</a> page in the Alibaba Cloud Management Console.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Set up auto-renewal</a>.</description></item>
+        /// <item><description>Make sure that you fully understand the billing methods and pricing of subscription instances before you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description>After you call this operation, the upfront instance is purchased for one epoch of one month by default. Auto-renewal is enabled by default, and the Unified Auto Renewal Cycle is one month. If you want to modify the Unified Auto Renewal Cycle or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal</a> page in the Alibaba Cloud Management Console.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Settings for auto-renewal</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1430,8 +1582,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, ensure you understand the billing methods and pricing of subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">billing overview</a>.</description></item>
-        /// <item><description>By default, a subscription instance created using this operation has a one-month subscription period and is set to auto-renew monthly. To change the renewal period or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">renewal management</a> page in the Alibaba Cloud Management Console.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Set up auto-renewal</a>.</description></item>
+        /// <item><description>Make sure that you fully understand the billing methods and pricing of subscription instances before you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description>After you call this operation, the upfront instance is purchased for one epoch of one month by default. Auto-renewal is enabled by default, and the Unified Auto Renewal Cycle is one month. If you want to modify the Unified Auto Renewal Cycle or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal</a> page in the Alibaba Cloud Management Console.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Settings for auto-renewal</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1534,8 +1686,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, ensure you understand the billing methods and pricing of subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">billing overview</a>.</description></item>
-        /// <item><description>By default, a subscription instance created using this operation has a one-month subscription period and is set to auto-renew monthly. To change the renewal period or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">renewal management</a> page in the Alibaba Cloud Management Console.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Set up auto-renewal</a>.</description></item>
+        /// <item><description>Make sure that you fully understand the billing methods and pricing of subscription instances before you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description>After you call this operation, the upfront instance is purchased for one epoch of one month by default. Auto-renewal is enabled by default, and the Unified Auto Renewal Cycle is one month. If you want to modify the Unified Auto Renewal Cycle or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal</a> page in the Alibaba Cloud Management Console.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Settings for auto-renewal</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1560,8 +1712,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, ensure you understand the billing methods and pricing of subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">billing overview</a>.</description></item>
-        /// <item><description>By default, a subscription instance created using this operation has a one-month subscription period and is set to auto-renew monthly. To change the renewal period or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">renewal management</a> page in the Alibaba Cloud Management Console.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Set up auto-renewal</a>.</description></item>
+        /// <item><description>Make sure that you fully understand the billing methods and pricing of subscription instances before you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description>After you call this operation, the upfront instance is purchased for one epoch of one month by default. Auto-renewal is enabled by default, and the Unified Auto Renewal Cycle is one month. If you want to modify the Unified Auto Renewal Cycle or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal</a> page in the Alibaba Cloud Management Console.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Settings for auto-renewal</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1580,14 +1732,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Subscription instances require prepayment for resources and are ideal for long-term, stable business scenarios. This topic describes how to call the CreatePrePayOrder operation to create a subscription instance.</para>
+        /// <para>Creates a subscription instance. Subscription instances require upfront payment before you can use resources. This billing method is suitable for long-term stable business scenarios.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, ensure that you understand the billing method and pricing of subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
-        /// <item><description>By default, when you call this operation, the subscription duration is one month and auto-renewal is enabled with a Unified Auto Renewal Cycle of one month. To modify the Unified Auto Renewal Cycle or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal Management</a> page in the Alibaba Cloud Management Console. For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Configure auto-renewal</a>.</description></item>
+        /// <item><description>Before calling this operation, make sure that you fully understand the billing method and pricing of upfront instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description>After you call this operation, the subscription instance is purchased for one epoch by default, and auto-renewal is enabled by default with a Unified Auto Renewal Cycle of one month. To modify the auto-renewal epoch or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal Management</a> page in the Alibaba Cloud Management Console Settings.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Configure auto-renewal</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1692,14 +1844,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Subscription instances require prepayment for resources and are ideal for long-term, stable business scenarios. This topic describes how to call the CreatePrePayOrder operation to create a subscription instance.</para>
+        /// <para>Creates a subscription instance. Subscription instances require upfront payment before you can use resources. This billing method is suitable for long-term stable business scenarios.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, ensure that you understand the billing method and pricing of subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
-        /// <item><description>By default, when you call this operation, the subscription duration is one month and auto-renewal is enabled with a Unified Auto Renewal Cycle of one month. To modify the Unified Auto Renewal Cycle or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal Management</a> page in the Alibaba Cloud Management Console. For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Configure auto-renewal</a>.</description></item>
+        /// <item><description>Before calling this operation, make sure that you fully understand the billing method and pricing of upfront instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description>After you call this operation, the subscription instance is purchased for one epoch by default, and auto-renewal is enabled by default with a Unified Auto Renewal Cycle of one month. To modify the auto-renewal epoch or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal Management</a> page in the Alibaba Cloud Management Console Settings.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Configure auto-renewal</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1804,14 +1956,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Subscription instances require prepayment for resources and are ideal for long-term, stable business scenarios. This topic describes how to call the CreatePrePayOrder operation to create a subscription instance.</para>
+        /// <para>Creates a subscription instance. Subscription instances require upfront payment before you can use resources. This billing method is suitable for long-term stable business scenarios.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, ensure that you understand the billing method and pricing of subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
-        /// <item><description>By default, when you call this operation, the subscription duration is one month and auto-renewal is enabled with a Unified Auto Renewal Cycle of one month. To modify the Unified Auto Renewal Cycle or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal Management</a> page in the Alibaba Cloud Management Console. For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Configure auto-renewal</a>.</description></item>
+        /// <item><description>Before calling this operation, make sure that you fully understand the billing method and pricing of upfront instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description>After you call this operation, the subscription instance is purchased for one epoch by default, and auto-renewal is enabled by default with a Unified Auto Renewal Cycle of one month. To modify the auto-renewal epoch or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal Management</a> page in the Alibaba Cloud Management Console Settings.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Configure auto-renewal</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1830,14 +1982,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Subscription instances require prepayment for resources and are ideal for long-term, stable business scenarios. This topic describes how to call the CreatePrePayOrder operation to create a subscription instance.</para>
+        /// <para>Creates a subscription instance. Subscription instances require upfront payment before you can use resources. This billing method is suitable for long-term stable business scenarios.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, ensure that you understand the billing method and pricing of subscription instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
-        /// <item><description>By default, when you call this operation, the subscription duration is one month and auto-renewal is enabled with a Unified Auto Renewal Cycle of one month. To modify the Unified Auto Renewal Cycle or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal Management</a> page in the Alibaba Cloud Management Console. For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Configure auto-renewal</a>.</description></item>
+        /// <item><description>Before calling this operation, make sure that you fully understand the billing method and pricing of upfront instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</description></item>
+        /// <item><description>After you call this operation, the subscription instance is purchased for one epoch by default, and auto-renewal is enabled by default with a Unified Auto Renewal Cycle of one month. To modify the auto-renewal epoch or disable auto-renewal, go to the <a href="https://renew.console.aliyun.com/#/ecs">Renewal Management</a> page in the Alibaba Cloud Management Console Settings.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/37128.html">Configure auto-renewal</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1856,7 +2008,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation creates a SASL user.</para>
+        /// <para>Creates a Simple Authentication and Security Layer (SASL) user by calling CreateSaslUser.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1918,7 +2070,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation creates a SASL user.</para>
+        /// <para>Creates a Simple Authentication and Security Layer (SASL) user by calling CreateSaslUser.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1980,7 +2132,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation creates a SASL user.</para>
+        /// <para>Creates a Simple Authentication and Security Layer (SASL) user by calling CreateSaslUser.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1998,7 +2150,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation creates a SASL user.</para>
+        /// <para>Creates a Simple Authentication and Security Layer (SASL) user by calling CreateSaslUser.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2016,12 +2168,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you deploy a serverless instance, you can use this API to create a scheduled scaling rule for the instance.</para>
+        /// <para>Creates a scheduled elastic scaling policy for a serverless instance after deployment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h6>This operation supports only serverless instances.</h6>
+        /// <h6>Only serverless instances are supported.</h6>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2113,12 +2265,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you deploy a serverless instance, you can use this API to create a scheduled scaling rule for the instance.</para>
+        /// <para>Creates a scheduled elastic scaling policy for a serverless instance after deployment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h6>This operation supports only serverless instances.</h6>
+        /// <h6>Only serverless instances are supported.</h6>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2210,12 +2362,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you deploy a serverless instance, you can use this API to create a scheduled scaling rule for the instance.</para>
+        /// <para>Creates a scheduled elastic scaling policy for a serverless instance after deployment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h6>This operation supports only serverless instances.</h6>
+        /// <h6>Only serverless instances are supported.</h6>
         /// </description>
         /// 
         /// <param name="request">
@@ -2233,12 +2385,12 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you deploy a serverless instance, you can use this API to create a scheduled scaling rule for the instance.</para>
+        /// <para>Creates a scheduled elastic scaling policy for a serverless instance after deployment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h6>This operation supports only serverless instances.</h6>
+        /// <h6>Only serverless instances are supported.</h6>
         /// </description>
         /// 
         /// <param name="request">
@@ -2262,8 +2414,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Each user can send up to 20 queries per second (QPS).</description></item>
-        /// <item><description>The maximum number of topics for an instance depends on its instance type.</description></item>
+        /// <item><description>The maximum request frequency per user is 20 QPS.</description></item>
+        /// <item><description>The maximum number of topics that can be created for each instance depends on the instance edition you purchased.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2352,8 +2504,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Each user can send up to 20 queries per second (QPS).</description></item>
-        /// <item><description>The maximum number of topics for an instance depends on its instance type.</description></item>
+        /// <item><description>The maximum request frequency per user is 20 QPS.</description></item>
+        /// <item><description>The maximum number of topics that can be created for each instance depends on the instance edition you purchased.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2442,8 +2594,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Each user can send up to 20 queries per second (QPS).</description></item>
-        /// <item><description>The maximum number of topics for an instance depends on its instance type.</description></item>
+        /// <item><description>The maximum request frequency per user is 20 QPS.</description></item>
+        /// <item><description>The maximum number of topics that can be created for each instance depends on the instance edition you purchased.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2468,8 +2620,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Each user can send up to 20 queries per second (QPS).</description></item>
-        /// <item><description>The maximum number of topics for an instance depends on its instance type.</description></item>
+        /// <item><description>The maximum request frequency per user is 20 QPS.</description></item>
+        /// <item><description>The maximum number of topics that can be created for each instance depends on the instance edition you purchased.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2680,7 +2832,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Group.</para>
+        /// <para>Deletes a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2730,7 +2882,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Group.</para>
+        /// <para>Deletes a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2780,7 +2932,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Group.</para>
+        /// <para>Deletes a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2798,7 +2950,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Group.</para>
+        /// <para>Deletes a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2816,7 +2968,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DeleteInstance operation deletes an instance after a subscription instance or a pay-as-you-go instance is released.</para>
+        /// <para>Deletes an instance after a subscription or pay-as-you-go instance is released. This topic describes how to call the DeleteInstance operation to delete an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2862,7 +3014,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DeleteInstance operation deletes an instance after a subscription instance or a pay-as-you-go instance is released.</para>
+        /// <para>Deletes an instance after a subscription or pay-as-you-go instance is released. This topic describes how to call the DeleteInstance operation to delete an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2908,7 +3060,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DeleteInstance operation deletes an instance after a subscription instance or a pay-as-you-go instance is released.</para>
+        /// <para>Deletes an instance after a subscription or pay-as-you-go instance is released. This topic describes how to call the DeleteInstance operation to delete an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2926,7 +3078,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DeleteInstance operation deletes an instance after a subscription instance or a pay-as-you-go instance is released.</para>
+        /// <para>Deletes an instance after a subscription or pay-as-you-go instance is released. This topic describes how to call the DeleteInstance operation to delete an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3536,7 +3688,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access control list (ACL) resource names.</para>
+        /// <para>Queries ACL resource names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3590,7 +3742,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access control list (ACL) resource names.</para>
+        /// <para>Queries ACL resource names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3644,7 +3796,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access control list (ACL) resource names.</para>
+        /// <para>Queries ACL resource names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3662,7 +3814,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access control list (ACL) resource names.</para>
+        /// <para>Queries ACL resource names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4424,13 +4576,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes how to call EnableAutoGroupCreation to enable or disable the free use of Groups.</para>
+        /// <para>Enables or disables the free use of groups by calling EnableAutoGroupCreation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, only reserved instances support this API.
-        /// Serverless instances are not supported at this time.</para>
+        /// <para>Only reserved instances support this API operation.
+        /// Serverless instances are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4480,13 +4632,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes how to call EnableAutoGroupCreation to enable or disable the free use of Groups.</para>
+        /// <para>Enables or disables the free use of groups by calling EnableAutoGroupCreation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, only reserved instances support this API.
-        /// Serverless instances are not supported at this time.</para>
+        /// <para>Only reserved instances support this API operation.
+        /// Serverless instances are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4536,13 +4688,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes how to call EnableAutoGroupCreation to enable or disable the free use of Groups.</para>
+        /// <para>Enables or disables the free use of groups by calling EnableAutoGroupCreation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, only reserved instances support this API.
-        /// Serverless instances are not supported at this time.</para>
+        /// <para>Only reserved instances support this API operation.
+        /// Serverless instances are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4560,13 +4712,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes how to call EnableAutoGroupCreation to enable or disable the free use of Groups.</para>
+        /// <para>Enables or disables the free use of groups by calling EnableAutoGroupCreation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, only reserved instances support this API.
-        /// Serverless instances are not supported at this time.</para>
+        /// <para>Only reserved instances support this API operation.
+        /// Serverless instances are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6240,7 +6392,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about topics.</para>
+        /// <para>Retrieves topic information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6298,7 +6450,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about topics.</para>
+        /// <para>Retrieves topic information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6356,7 +6508,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about topics.</para>
+        /// <para>Retrieves topic information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6374,7 +6526,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about topics.</para>
+        /// <para>Retrieves topic information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7688,7 +7840,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries messages stored in a topic by message creation time or offset.</para>
+        /// <para>Queries messages stored in a topic by message creation time or offset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7726,7 +7878,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries messages stored in a topic by message creation time or offset.</para>
+        /// <para>Queries messages stored in a topic by message creation time or offset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7764,7 +7916,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries messages stored in a topic by message creation time or offset.</para>
+        /// <para>Queries messages stored in a topic by message creation time or offset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7782,7 +7934,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries messages stored in a topic by message creation time or offset.</para>
+        /// <para>Queries messages stored in a topic by message creation time or offset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9849,7 +10001,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9942,7 +10094,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10035,7 +10187,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10058,7 +10210,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing method and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of pay-as-you-go instances. For more information, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">

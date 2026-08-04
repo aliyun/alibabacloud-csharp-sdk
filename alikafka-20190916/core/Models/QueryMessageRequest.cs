@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class QueryMessageRequest : TeaModel {
         /// <summary>
-        /// <para>The start timestamp of the query range. Unit: milliseconds.</para>
+        /// <para>The beginning of the time range to query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1672410180000</para>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         /// <summary>
         /// <para>The query type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>byOffset: Query by offset. When selecting offset query, you need to fill in the partition ID and partition offset parameters.</para>
+        /// <item><description><para>byOffset: queries messages by offset. If you select this type, you must specify the Partition and Offset parameters.</para>
         /// </description></item>
-        /// <item><description><para>byTimestamp: Query by time. When selecting time query, you need to fill in the BeginTime parameter.</para>
+        /// <item><description><para>byTimestamp: queries messages by time. If you select this type, you must specify the BeginTime parameter.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

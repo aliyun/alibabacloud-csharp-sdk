@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class ConvertPostPayOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The subscription duration in months. The default value is 1. Valid values:</para>
+        /// <para>The subscription duration. Unit: months. Default value: 1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1 to <b>12</b></para>
+        /// <item><description><para><b>1 to 12</b></para>
         /// </description></item>
         /// <item><description><para><b>24</b></para>
         /// </description></item>
@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: subscription</para>
+        /// <item><description><para><b>0</b>: subscription.</para>
         /// </description></item>
-        /// <item><description><para><b>4</b>: Confluent series subscription</para>
+        /// <item><description><para><b>4</b>: Confluent series subscription.</para>
         /// </description></item>
         /// </list>
         /// 

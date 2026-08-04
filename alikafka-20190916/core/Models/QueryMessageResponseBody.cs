@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class QueryMessageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code. A value of 200 indicates success.</para>
+        /// <para>The returned code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The query message results.</para>
+        /// <para>The query results of messages.</para>
         /// </summary>
         [NameInMap("MessageList")]
         [Validation(Required=false)]
         public List<QueryMessageResponseBodyMessageList> MessageList { get; set; }
         public class QueryMessageResponseBodyMessageList : TeaModel {
             /// <summary>
-            /// <para>The chaincode checksum.</para>
+            /// <para>The checksum value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public long? Checksum { get; set; }
 
             /// <summary>
-            /// <para>The message key.</para>
+            /// <para>The key of the message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>this is key</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? SerializedValueSize { get; set; }
 
             /// <summary>
-            /// <para>The message creation time. Represented as a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The message creation time. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1705482172640</para>
@@ -137,9 +137,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public string Topic { get; set; }
 
             /// <summary>
-            /// <para>The size of the truncated key message. Value: bytes.</para>
+            /// <para>The size of the truncated key message. Unit: bytes.</para>
             /// <remarks>
-            /// <para>Each queried message displays up to 1 KB of content; content exceeding this limit will be automatically truncated. <a href="https://help.aliyun.com/document_detail/113172.html">Learn more</a>.</para>
+            /// <para>Each queried message displays a maximum of 1 KB of content. Content that exceeds 1 KB is automatically truncated.
+            /// <a href="https://help.aliyun.com/document_detail/113172.html">For more information, refer to the documentation</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -152,7 +153,8 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             /// <summary>
             /// <para>The size of the truncated value message. Unit: bytes.</para>
             /// <remarks>
-            /// <para>Each queried message displays up to 1 KB of content; content exceeding this limit will be automatically truncated. <a href="https://help.aliyun.com/document_detail/113172.html">Learn more</a>.</para>
+            /// <para>Each queried message displays a maximum of 1 KB of content. Content that exceeds 1 KB is automatically truncated.
+            /// <a href="https://help.aliyun.com/document_detail/113172.html">For more information, refer to the documentation</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -163,7 +165,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             public int? TruncatedValueSize { get; set; }
 
             /// <summary>
-            /// <para>The message value.</para>
+            /// <para>The value of the message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Welcome to Ali kafka</para>
@@ -195,12 +197,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The call was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The call failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

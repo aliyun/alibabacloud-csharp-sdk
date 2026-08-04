@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 {
     public class CreateSaslUserRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The encryption method. Valid values:</para>
+        /// <para>The encryption mechanism. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SCRAM-SHA-512 (default)</para>
+        /// <item><description><para>SCRAM-SHA-512 (selected by default)</para>
         /// </description></item>
         /// <item><description><para>SCRAM-SHA-256</para>
         /// </description></item>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,13 +62,13 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The SASL mechanism. Valid values:</para>
+        /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>plain: a simple username and password authentication mechanism. Message Queue for Apache Kafka optimizes the PLAIN mechanism to support the dynamic creation of SASL users without the need to restart the instance.</para>
+        /// <item><description><para>plain: a simple username and password verification mechanism. ApsaraMQ for Kafka has optimized the PLAIN mechanism to support dynamically adding SASL users without restarting the instance.</para>
         /// </description></item>
-        /// <item><description><para>scram: a username and password authentication mechanism that provides higher security than the PLAIN mechanism. Message Queue for Apache Kafka uses Salted Challenge Response Authentication Mechanism (SCRAM)-SHA-256.</para>
+        /// <item><description><para>scram: a username and password verification mechanism that provides higher security than PLAIN. ApsaraMQ for Kafka uses SCRAM-SHA-256.</para>
         /// </description></item>
-        /// <item><description><para>LDAP: This value is applicable only when you create users for Confluent instances.</para>
+        /// <item><description><para>LDAP: applicable only to adding users for Confluent instances.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: plain.</para>
