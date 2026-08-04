@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string CaInstanceStatus { get; set; }
 
+        [NameInMap("CaType")]
+        [Validation(Required=false)]
+        public string CaType { get; set; }
+
         /// <summary>
         /// <para>The cron expression.</para>
         /// 

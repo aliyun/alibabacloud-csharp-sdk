@@ -72,6 +72,13 @@ namespace AlibabaCloud.SDK.Cas20200630
                 {"rus-west-1-pop", "cas.aliyuncs.com"},
                 {"us-east-1", "cas.aliyuncs.com"},
                 {"us-west-1", "cas.aliyuncs.com"},
+                {"me-east-1", "cas.me-east-1.aliyuncs.com"},
+                {"me-central-1", "cas.me-central-1.aliyuncs.com"},
+                {"eu-central-1", "cas.eu-central-1.aliyuncs.com"},
+                {"ap-southeast-2", "cas.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com"},
+                {"ap-south-1", "cas.ap-south-1.aliyuncs.com"},
+                {"ap-northeast-1", "cas.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2781,15 +2788,15 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a certificate authority (CA) certificate.</para>
+        /// <para>Queries the details of a CA certificate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of a root or subordinate CA certificate by its unique identifier. The details include the serial number, subject information, and certificate content.
-        /// Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>.</para>
+        /// <para>This operation queries the details of a root CA certificate or sub-CA certificate by using the unique identifier of the certificate. The details include the serial number, subject information, and certificate content of the CA certificate.
+        /// Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a sub-CA certificate.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled, which can affect your business. Plan your calls accordingly.</para>
+        /// <para>The China site (aliyun.com) allows up to 10 queries per second (QPS) for a single user. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2831,15 +2838,15 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a certificate authority (CA) certificate.</para>
+        /// <para>Queries the details of a CA certificate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of a root or subordinate CA certificate by its unique identifier. The details include the serial number, subject information, and certificate content.
-        /// Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>.</para>
+        /// <para>This operation queries the details of a root CA certificate or sub-CA certificate by using the unique identifier of the certificate. The details include the serial number, subject information, and certificate content of the CA certificate.
+        /// Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a sub-CA certificate.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled, which can affect your business. Plan your calls accordingly.</para>
+        /// <para>The China site (aliyun.com) allows up to 10 queries per second (QPS) for a single user. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2881,15 +2888,15 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a certificate authority (CA) certificate.</para>
+        /// <para>Queries the details of a CA certificate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of a root or subordinate CA certificate by its unique identifier. The details include the serial number, subject information, and certificate content.
-        /// Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>.</para>
+        /// <para>This operation queries the details of a root CA certificate or sub-CA certificate by using the unique identifier of the certificate. The details include the serial number, subject information, and certificate content of the CA certificate.
+        /// Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a sub-CA certificate.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled, which can affect your business. Plan your calls accordingly.</para>
+        /// <para>The China site (aliyun.com) allows up to 10 queries per second (QPS) for a single user. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2907,15 +2914,15 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a certificate authority (CA) certificate.</para>
+        /// <para>Queries the details of a CA certificate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of a root or subordinate CA certificate by its unique identifier. The details include the serial number, subject information, and certificate content.
-        /// Before you call this operation, you must create a root CA certificate by calling <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> and a subordinate CA certificate by calling <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a>.</para>
+        /// <para>This operation queries the details of a root CA certificate or sub-CA certificate by using the unique identifier of the certificate. The details include the serial number, subject information, and certificate content of the CA certificate.
+        /// Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a sub-CA certificate.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled, which can affect your business. Plan your calls accordingly.</para>
+        /// <para>The China site (aliyun.com) allows up to 10 queries per second (QPS) for a single user. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
