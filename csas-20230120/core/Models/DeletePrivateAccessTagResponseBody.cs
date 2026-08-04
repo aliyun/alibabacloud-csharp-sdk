@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeletePrivateAccessTagResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FD724DBC-CD76-5235-BF76-59C51B73296D</para>
         /// </summary>

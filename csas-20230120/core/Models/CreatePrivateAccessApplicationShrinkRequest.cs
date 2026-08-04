@@ -14,17 +14,17 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<AddressGroup> AddressGroups { get; set; }
 
         /// <summary>
-        /// <para>The addresses of the office applications. You can enter up to 1,000 addresses of office applications.</para>
+        /// <para>The addresses of the internal-facing access application. You can specify up to 1,000 addresses.</para>
         /// </summary>
         [NameInMap("Addresses")]
         [Validation(Required=false)]
         public List<string> Addresses { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow access from a browser. Default value: <b>Disabled</b>. Valid values:</para>
+        /// <para>The browser access status of the internal-facing access application. After this feature is enabled, you can access internal applications without a client. Default value: <b>Disabled</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b></description></item>
-        /// <item><description><b>Disabled</b></description></item>
+        /// <item><description><b>Enabled</b>: enabled.</description></item>
+        /// <item><description><b>Disabled</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,21 +39,24 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ConfigMode { get; set; }
 
         /// <summary>
-        /// <para>The description of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</para>
+        /// <para>The description of the internal-facing access application. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>这是一条内网访问应用</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The browser access mode parameter. The parameter specifies the configurations of Layer 7 applications.</para>
+        /// <para>The browser access mode parameter: the application configuration.</para>
         /// </summary>
         [NameInMap("L7Config")]
         [Validation(Required=false)]
         public string L7ConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The browser access mode parameter. The parameter specifies the prefix of the domain name that the proxy gateway uses. The prefix must be 3 to 20 characters in length, and can contain lowercase letters, digits, and hyphens (-).</para>
+        /// <para>The browser access mode parameter: the prefix of the mapped proxy domain name. The prefix must be 3 to 20 characters in length and can contain lowercase letters, digits, and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-sample</para>
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string L7ProxyDomainAutomaticPrefix { get; set; }
 
         /// <summary>
-        /// <para>The browser access mode parameter. The parameter specifies the custom domain name of the proxy gateway. Enter a valid domain name.</para>
+        /// <para>The browser access mode parameter: the custom proxy domain name. The value must be a valid domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app1.example.com</para>
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string L7ProxyDomainCustom { get; set; }
 
         /// <summary>
-        /// <para>The name of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the internal-facing access application. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,14 +87,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The port ranges of the office applications. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicated or overlapped.</para>
+        /// <para>The port ranges of the internal-facing access application. You can specify up to 65,535 port ranges. Port ranges cannot be duplicate or overlapping.</para>
         /// </summary>
         [NameInMap("PortRanges")]
         [Validation(Required=false)]
         public List<CreatePrivateAccessApplicationShrinkRequestPortRanges> PortRanges { get; set; }
         public class CreatePrivateAccessApplicationShrinkRequestPortRanges : TeaModel {
             /// <summary>
-            /// <para>The start port. The start port must be less than or equal to the end port.</para>
+            /// <para>The start port. The value must be less than or equal to the end port.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public int? Begin { get; set; }
 
             /// <summary>
-            /// <para>The end port. The end port must be greater than or equal to the start port.</para>
+            /// <para>The end port. The value must be greater than or equal to the start port.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -115,11 +118,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>The protocol that is used by the office application. Valid values:</para>
+        /// <para>The protocol of the internal-facing access application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b></description></item>
+        /// <item><description><b>All</b>: all protocols.</description></item>
         /// <item><description><b>TCP</b></description></item>
-        /// <item><description><b>UDP</b></description></item>
+        /// <item><description><b>UDP</b>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -131,10 +134,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The status of the office application. Valid values:</para>
+        /// <para>The status of the internal-facing access application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b></description></item>
-        /// <item><description><b>Disabled</b></description></item>
+        /// <item><description><b>Enabled</b>: enabled.</description></item>
+        /// <item><description><b>Disabled</b>: disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -146,11 +149,15 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the tags for the office applications. You can add up to six custom tags to an office application.</para>
+        /// <para>The IDs of internal-facing access tags. You can associate up to 6 custom internal-facing access tags with each internal-facing access application.</para>
         /// </summary>
         [NameInMap("TagIds")]
         [Validation(Required=false)]
         public List<string> TagIds { get; set; }
+
+        [NameInMap("UnauthorizedAccessConfig")]
+        [Validation(Required=false)]
+        public string UnauthorizedAccessConfigShrink { get; set; }
 
     }
 

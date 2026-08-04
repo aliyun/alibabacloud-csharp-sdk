@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateClientUserStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The status of the user. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Enabled</b>: The user is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>Disabled</b>: The user is disabled.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

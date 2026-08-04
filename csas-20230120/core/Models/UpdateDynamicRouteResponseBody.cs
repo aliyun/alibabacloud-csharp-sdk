@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateDynamicRouteResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BE4FB974-11BC-5453-9BE1-1606A73EACA6</para>
         /// </summary>

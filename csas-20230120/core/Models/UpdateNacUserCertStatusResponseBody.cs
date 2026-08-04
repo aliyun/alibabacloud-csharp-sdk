@@ -10,6 +10,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateNacUserCertStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>The HTTP status code or POP error code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>2xx</b>: Success.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: Redirection.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: Client error.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: Server error.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +30,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Additional information about the result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -26,6 +40,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>102350E7-1A20-58F5-9D63-ABEA820AE6E1</para>
         /// </summary>

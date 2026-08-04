@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class RevokeUserSessionRequest : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the user in the external identity source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ExternalIds { get; set; }
 
         /// <summary>
+        /// <para>The ID of the identity source configuration to which the user belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

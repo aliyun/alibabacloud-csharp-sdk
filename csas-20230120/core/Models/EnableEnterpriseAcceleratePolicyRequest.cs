@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class EnableEnterpriseAcceleratePolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the enterprise acceleration policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

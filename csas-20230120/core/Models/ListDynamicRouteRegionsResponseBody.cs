@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListDynamicRouteRegionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of regions for POP cluster access points authorized for the SASE Global Office service.</para>
+        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<string> Regions { get; set; }
 
         /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>58D6B23E-E5DA-5418-8F61-51A3B5A30049</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of regions for POP cluster access points authorized for the SASE Global Office service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

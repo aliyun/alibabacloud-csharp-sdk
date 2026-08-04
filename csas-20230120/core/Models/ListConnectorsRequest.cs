@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListConnectorsRequest : TeaModel {
         /// <summary>
-        /// <para>Collection of ConnectorIDs. Up to 100 ConnectorIDs can be entered.</para>
+        /// <para>An array of up to 100 ConnectorIDs.</para>
         /// </summary>
         [NameInMap("ConnectorIds")]
         [Validation(Required=false)]
         public List<string> ConnectorIds { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paginated query. Value: 1~10000.</para>
+        /// <para>The number of the page to return. Valid values: 1 to 10,000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Connector name. Length: 1~128 characters, supporting Chinese and uppercase/lowercase English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the connector. The name must be 1 to 128 characters long and can contain letters, Chinese characters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>connector_name</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of items per page in a paginated query. Value: 1~1000.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 1,000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,10 +49,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Connector connection status. Values:</para>
+        /// <para>The connection status of the connector. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Online</b>: Online.</description></item>
-        /// <item><description><b>Offline</b>: Offline.</description></item>
+        /// <item><description><para><b>Online</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Offline</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,10 +65,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Connector instance status. Values:</para>
+        /// <para>The state of the connector instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: Enabled.</description></item>
-        /// <item><description><b>Disabled</b>: Disabled.</description></item>
+        /// <item><description><para><b>Enabled</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Disabled</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

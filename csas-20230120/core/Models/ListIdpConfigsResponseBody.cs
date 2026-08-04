@@ -9,19 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListIdpConfigsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>IdP configurations.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListIdpConfigsResponseBodyData Data { get; set; }
         public class ListIdpConfigsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>List of IdP configurations.</para>
+            /// </summary>
             [NameInMap("DataList")]
             [Validation(Required=false)]
             public List<ListIdpConfigsResponseBodyDataDataList> DataList { get; set; }
             public class ListIdpConfigsResponseBodyDataDataList : TeaModel {
+                /// <summary>
+                /// <para>IdP configuration description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>示例描述</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>IdP configuration ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>277</para>
                 /// </summary>
@@ -30,6 +44,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Id { get; set; }
 
                 /// <summary>
+                /// <para>Multi-factor authentication (MFA) type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>totp</para>
                 /// </summary>
@@ -38,6 +54,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Mfa { get; set; }
 
                 /// <summary>
+                /// <para>Mobile login type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>password</para>
                 /// </summary>
@@ -46,6 +64,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string MobileLoginType { get; set; }
 
                 /// <summary>
+                /// <para>Mobile MFA configuration type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>password</para>
                 /// </summary>
@@ -54,6 +74,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string MobileMfaConfigType { get; set; }
 
                 /// <summary>
+                /// <para>List of multiple IdP configuration IDs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1482,1355</para>
                 /// </summary>
@@ -61,11 +83,19 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 [Validation(Required=false)]
                 public string MultiIdpInfo { get; set; }
 
+                /// <summary>
+                /// <para>IdP configuration name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>示例身份源</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>PC login type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>password</para>
                 /// </summary>
@@ -74,6 +104,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string PcLoginType { get; set; }
 
                 /// <summary>
+                /// <para>IdP configuration enable status. Values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>Enabled</b>: Enabled.</para>
+                /// </description></item>
+                /// <item><description><para><b>Disabled</b>: Disabled.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Disabled</para>
                 /// </summary>
@@ -82,6 +120,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>IdP configuration type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>DingTalk</para>
                 /// </summary>
@@ -90,6 +130,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Type { get; set; }
 
                 /// <summary>
+                /// <para>Update time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2023-05-09T02:22:41.430Z</para>
                 /// </summary>
@@ -100,6 +142,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
+            /// <para>Total number of records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -110,6 +154,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FD724DBC-CD76-5235-BF76-59C51B73296D</para>
         /// </summary>

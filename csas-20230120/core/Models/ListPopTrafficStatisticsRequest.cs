@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListPopTrafficStatisticsRequest : TeaModel {
         /// <summary>
+        /// <para>The end time for the data. This is a UNIX timestamp in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1681293719</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The start time for the data. This is a UNIX timestamp in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1681035708</para>
         /// </summary>

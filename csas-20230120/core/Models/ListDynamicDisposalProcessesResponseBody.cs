@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>User\&quot;s department.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>IT</para>
+            /// <para>场景险部</para>
             /// </summary>
             [NameInMap("Department")]
             [Validation(Required=false)]
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <para>Username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>测试</para>
                 /// </summary>
                 [NameInMap("Username")]
                 [Validation(Required=false)]
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <para>Identified office area name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>office</para>
+                /// <para>办公地点</para>
                 /// </summary>
                 [NameInMap("Workshop")]
                 [Validation(Required=false)]

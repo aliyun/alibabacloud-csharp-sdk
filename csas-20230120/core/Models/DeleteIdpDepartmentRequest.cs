@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeleteIdpDepartmentRequest : TeaModel {
         /// <summary>
+        /// <para>ID of the department.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,10 +21,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string DepartmentId { get; set; }
 
         /// <summary>
+        /// <para>ID of the custom identity provider configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>507</para>
+        /// <para>idp-cfg68956d86e********</para>
         /// </summary>
         [NameInMap("IdpConfigId")]
         [Validation(Required=false)]

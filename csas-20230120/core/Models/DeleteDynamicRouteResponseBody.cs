@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeleteDynamicRouteResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>748CFDC7-1EB6-5B8B-9405-DA76ED5BB60D</para>
         /// </summary>

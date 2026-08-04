@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeleteEnterpriseAcceleratePolicyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2CABFEBB-0CE7-575E-833A-266F75D46713</para>
         /// </summary>

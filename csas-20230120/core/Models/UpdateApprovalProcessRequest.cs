@@ -13,6 +13,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public int? ApprovalType { get; set; }
 
+        /// <summary>
+        /// <para>The description of the approval flow. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a test</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -253,6 +259,38 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            [NameInMap("PrivateAccessBlockSchemaConfig")]
+            [Validation(Required=false)]
+            public UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig PrivateAccessBlockSchemaConfig { get; set; }
+            public class UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfig : TeaModel {
+                [NameInMap("ExternalProcessId")]
+                [Validation(Required=false)]
+                public string ExternalProcessId { get; set; }
+
+                [NameInMap("FieldMap")]
+                [Validation(Required=false)]
+                public List<UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap> FieldMap { get; set; }
+                public class UpdateApprovalProcessRequestMatchSchemaConfigsPrivateAccessBlockSchemaConfigFieldMap : TeaModel {
+                    [NameInMap("DisplayField")]
+                    [Validation(Required=false)]
+                    public string DisplayField { get; set; }
+
+                    [NameInMap("DisplayFieldValue")]
+                    [Validation(Required=false)]
+                    public string DisplayFieldValue { get; set; }
+
+                    [NameInMap("SystemField")]
+                    [Validation(Required=false)]
+                    public string SystemField { get; set; }
+
+                }
+
+                [NameInMap("SchemaId")]
+                [Validation(Required=false)]
+                public string SchemaId { get; set; }
+
+            }
+
             [NameInMap("SoftwareBlockSchemaConfig")]
             [Validation(Required=false)]
             public UpdateApprovalProcessRequestMatchSchemaConfigsSoftwareBlockSchemaConfig SoftwareBlockSchemaConfig { get; set; }
@@ -319,11 +357,16 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         }
 
+        /// <summary>
+        /// <para>The matched approval templates.</para>
+        /// </summary>
         [NameInMap("MatchSchemas")]
         [Validation(Required=false)]
         public UpdateApprovalProcessRequestMatchSchemas MatchSchemas { get; set; }
         public class UpdateApprovalProcessRequestMatchSchemas : TeaModel {
             /// <summary>
+            /// <para>The ID of the device uninstall approval template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>approval-schema-090134f1ebff****</para>
             /// </summary>
@@ -332,6 +375,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string AppUninstallSchemaId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the device registration approval template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>approval-schema-090134f1ebff****</para>
             /// </summary>
@@ -340,6 +385,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DeviceRegistrationSchemaId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the file outgoing approval template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>approval-schema-090134f1ebff****</para>
             /// </summary>
@@ -348,6 +395,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DlpSendSchemaId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the domain name blacklist approval template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>approval-schema-090134f1ebff****</para>
             /// </summary>
@@ -356,6 +405,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DomainBlacklistSchemaId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the domain name whitelist approval template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>approval-schema-090134f1ebff****</para>
             /// </summary>
@@ -368,6 +419,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string EndpointHardeningSchemaId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the peripheral control approval template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>approval-schema-090134f1ebff****</para>
             /// </summary>
@@ -375,7 +428,13 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string PeripheralBlockSchemaId { get; set; }
 
+            [NameInMap("PrivateAccessBlockSchemaId")]
+            [Validation(Required=false)]
+            public string PrivateAccessBlockSchemaId { get; set; }
+
             /// <summary>
+            /// <para>The ID of the software blocking approval template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>approval-schema-090134f1ebff****</para>
             /// </summary>
@@ -390,6 +449,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
+        /// <para>The ID of the approval flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -399,10 +459,19 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string ProcessId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the approval flow. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test</para>
+        /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]
         public string ProcessName { get; set; }
 
+        /// <summary>
+        /// <para>The list of approval nodes. You can define up to 5 approval nodes.</para>
+        /// </summary>
         [NameInMap("ProcessNodes")]
         [Validation(Required=false)]
         public List<List<string>> ProcessNodes { get; set; }

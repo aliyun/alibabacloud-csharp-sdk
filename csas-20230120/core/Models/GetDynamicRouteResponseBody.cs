@@ -9,15 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetDynamicRouteResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The dynamic route.</para>
+        /// </summary>
         [NameInMap("DynamicRoute")]
         [Validation(Required=false)]
         public GetDynamicRouteResponseBodyDynamicRoute DynamicRoute { get; set; }
         public class GetDynamicRouteResponseBodyDynamicRoute : TeaModel {
+            /// <summary>
+            /// <para>The list of internal network application IDs for the dynamic route. This field appears only when ApplicationType is set to <b>Application</b>.</para>
+            /// </summary>
             [NameInMap("ApplicationIds")]
             [Validation(Required=false)]
             public List<string> ApplicationIds { get; set; }
 
             /// <summary>
+            /// <para>The application type for the dynamic route. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>All</b>: All applications.</para>
+            /// </description></item>
+            /// <item><description><para><b>Application</b>: An application.</para>
+            /// </description></item>
+            /// <item><description><para><b>Tag</b>: A tag.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Application</para>
             /// </summary>
@@ -26,6 +42,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string ApplicationType { get; set; }
 
             /// <summary>
+            /// <para>The time when the dynamic route was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-02-09 10:31:47</para>
             /// </summary>
@@ -33,11 +51,19 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>A description of the dynamic route.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>这是一条动态路由</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The ID of the dynamic route.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dr-16ff07c8207d****</para>
             /// </summary>
@@ -46,6 +72,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DynamicRouteId { get; set; }
 
             /// <summary>
+            /// <para>The type of the dynamic route. Valid value: <b>connector</b> (dedicated line).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>connector</para>
             /// </summary>
@@ -54,6 +82,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DynamicRouteType { get; set; }
 
             /// <summary>
+            /// <para>The name of the dynamic route.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dynamic_route_name</para>
             /// </summary>
@@ -62,6 +92,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The instance ID of the next hop for the dynamic route.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>connector-8ccb13b6f52c****</para>
             /// </summary>
@@ -70,6 +102,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string NextHop { get; set; }
 
             /// <summary>
+            /// <para>The priority of the dynamic route. A value of 1 indicates the highest priority. Priority order matches the display order in lists.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -77,11 +111,22 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
+            /// <summary>
+            /// <para>The list of regions supported by the SASE POP cluster access points.</para>
+            /// </summary>
             [NameInMap("RegionIds")]
             [Validation(Required=false)]
             public List<string> RegionIds { get; set; }
 
             /// <summary>
+            /// <para>The status of the dynamic route. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Enabled</b>: The dynamic route is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>Disabled</b>: The dynamic route is disabled.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Enabled</para>
             /// </summary>
@@ -89,6 +134,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The list of internal network tag IDs for the dynamic route. This field appears only when ApplicationType is set to <b>Tag</b>.</para>
+            /// </summary>
             [NameInMap("TagIds")]
             [Validation(Required=false)]
             public List<string> TagIds { get; set; }
@@ -96,6 +144,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>58D6B23E-E5DA-5418-8F61-51A3B5A30049</para>
         /// </summary>

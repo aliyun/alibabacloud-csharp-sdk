@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class AttachPolicy2ApprovalProcessResponseBody : TeaModel {
         /// <summary>
+        /// <para>ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C51D9340-4604-5331-AE62-407F3B408F86</para>
         /// </summary>

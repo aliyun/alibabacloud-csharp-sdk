@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeleteRegistrationPoliciesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D6707286-A50E-57B1-B2CF-EFAC59E850D8</para>
         /// </summary>

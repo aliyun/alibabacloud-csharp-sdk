@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreatePrivateAccessTagResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>102350E7-1A20-58F5-9D63-ABEA820AE6E1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The private access tag ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tag-d3f64e8bdd4a****</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListSoftwareForUserDeviceRequest : TeaModel {
         /// <summary>
+        /// <para>The page number. Valid values: 1 to 10,000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user device. Call one of the following operations to obtain the device ID:</para>
+        /// <list type="bullet">
+        /// <item><description><para><a href="~~GetUserDevice~~">GetUserDevice</a>: Get the details of a user device.</para>
+        /// </description></item>
+        /// <item><description><para><a href="~~ListUserDevices~~">ListUserDevices</a>: Get a list of user devices.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +38,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string DeviceTag { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values: 1 to 500.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

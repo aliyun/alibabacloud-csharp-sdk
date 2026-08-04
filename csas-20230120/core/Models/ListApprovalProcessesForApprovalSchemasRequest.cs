@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListApprovalProcessesForApprovalSchemasRequest : TeaModel {
         /// <summary>
+        /// <para>A collection of approval template IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SchemaIds")]

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DetachApplication2ConnectorShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Collection of private network access application IDs. Enter a maximum of 100 private network access application IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
@@ -17,7 +18,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ApplicationIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>ConnectorID。</para>
+        /// <para>Connector ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

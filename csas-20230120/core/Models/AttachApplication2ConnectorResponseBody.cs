@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class AttachApplication2ConnectorResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the current request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7E9D7ACD-53D5-56EF-A913-79D148D06299</para>
         /// </summary>

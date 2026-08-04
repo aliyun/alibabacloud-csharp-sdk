@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeleteApprovalProcessesRequest : TeaModel {
         /// <summary>
+        /// <para>A collection of approval process IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ProcessIds")]

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeleteEnterpriseAccelerateTargetRequest : TeaModel {
         /// <summary>
+        /// <para>Enterprise acceleration policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string EapId { get; set; }
 
         /// <summary>
+        /// <para>List of enterprise acceleration targets.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Target")]

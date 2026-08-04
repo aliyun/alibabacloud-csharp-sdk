@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListPolicesForPrivateAccessApplicationRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the private access applications. You can specify up to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplicationIds")]

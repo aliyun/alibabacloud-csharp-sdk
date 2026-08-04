@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateDynamicRouteResponseBody : TeaModel {
         /// <summary>
+        /// <para>The dynamic route ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dr-ca9fddfac7c6****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string DynamicRouteId { get; set; }
 
         /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>102350E7-1A20-58F5-9D63-ABEA820AE6E1</para>
         /// </summary>

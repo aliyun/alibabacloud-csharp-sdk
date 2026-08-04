@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class PAL7ConfigReplaceRule : TeaModel {
         /// <summary>
+        /// <para>The original content to be replaced.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>before</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string From { get; set; }
 
         /// <summary>
+        /// <para>The target content for replacement.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>after</para>
         /// </summary>

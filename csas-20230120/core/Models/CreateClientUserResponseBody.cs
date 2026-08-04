@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateClientUserResponseBody : TeaModel {
         /// <summary>
+        /// <para>ID of the created user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>726</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>58D6B23E-E5DA-5418-8F61-51A3B5A30049</para>
         /// </summary>

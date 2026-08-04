@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DetachPolicy2ApprovalProcessRequest : TeaModel {
         /// <summary>
+        /// <para>Business policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,21 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PolicyId { get; set; }
 
         /// <summary>
+        /// <para>Policy type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>DomainBlacklist</b>: Domain blacklist.</para>
+        /// </description></item>
+        /// <item><description><para><b>DomainWhitelist</b>: Domain whitelist.</para>
+        /// </description></item>
+        /// <item><description><para><b>SoftwareBlock</b>: Software disable.</para>
+        /// </description></item>
+        /// <item><description><para><b>AppUninstall</b>: Terminal uninstall.</para>
+        /// </description></item>
+        /// <item><description><para><b>DlpSend</b>: File outbound transfer.</para>
+        /// </description></item>
+        /// <item><description><para><b>PeripheralBlock</b>: Peripheral control.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +46,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string PolicyType { get; set; }
 
         /// <summary>
+        /// <para>Approval process ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListPrivateAccessTagsForDynamicRouteRequest : TeaModel {
         /// <summary>
+        /// <para>A collection of dynamic route IDs. You can enter a maximum of 100 dynamic route IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DynamicRouteIds")]

@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// <para>Description of the private access policy. The length is 1 to 128 characters, supporting Chinese and uppercase and lowercase English letters, and can include numbers, periods (.), underscores (_), hyphens (-), and spaces.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>这是一条内网访问策略</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

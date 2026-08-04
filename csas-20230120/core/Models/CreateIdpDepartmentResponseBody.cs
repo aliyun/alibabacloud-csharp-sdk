@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateIdpDepartmentResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the created department.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>726</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D6707286-A50E-57B1-B2CF-EFAC59E850D8</para>
         /// </summary>

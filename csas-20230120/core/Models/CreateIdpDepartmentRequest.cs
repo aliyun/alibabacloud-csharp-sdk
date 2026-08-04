@@ -10,17 +10,22 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateIdpDepartmentRequest : TeaModel {
         /// <summary>
+        /// <para>The department name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例部门</para>
         /// </summary>
         [NameInMap("DepartmentName")]
         [Validation(Required=false)]
         public string DepartmentName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the custom identity source configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1222</para>
+        /// <para>idp-cfg68956d86e********</para>
         /// </summary>
         [NameInMap("IdpConfigId")]
         [Validation(Required=false)]

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class AttachApplication2ConnectorRequest : TeaModel {
         /// <summary>
+        /// <para>The set of private access application IDs. The number of private access applications that can be attached to a single Connector cannot exceed the total number of private access applications.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplicationIds")]
@@ -17,7 +18,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// <para>ConnectorID。</para>
+        /// <para>The Connector ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

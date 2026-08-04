@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListTagsForPrivateAccessPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>IDs of internal network access policies. You can specify up to 100 policy IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PolicyIds")]

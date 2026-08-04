@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DisableEnterpriseAcceleratePolicyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E4C3E4CA-87CC-5EF6-91DD-D400A812EB43</para>
         /// </summary>

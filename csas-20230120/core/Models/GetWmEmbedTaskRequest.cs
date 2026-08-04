@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetWmEmbedTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The job ID obtained when creating the embedding job. Source of the value:  </para>
+        /// <list type="bullet">
+        /// <item><description><a href="~~CreateWmEmbedTask~~">CreateWmEmbedTask</a>: Create a watermark embedding job.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

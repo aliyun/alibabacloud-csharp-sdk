@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>Intranet access policy description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>这是一条内网访问策略</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

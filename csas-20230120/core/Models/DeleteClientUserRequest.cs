@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DeleteClientUserRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the user to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

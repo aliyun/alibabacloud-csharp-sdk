@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetUserDeviceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the endpoint device. Valid values:</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

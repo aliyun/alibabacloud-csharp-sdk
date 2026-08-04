@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             /// <summary>
             /// <para>The description of the internal access tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>这是一条内网访问标签</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

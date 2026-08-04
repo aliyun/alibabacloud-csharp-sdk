@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class DetachApplication2ConnectorResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4D169859-A4F2-5EC8-853B-8447787C0D8A</para>
         /// </summary>

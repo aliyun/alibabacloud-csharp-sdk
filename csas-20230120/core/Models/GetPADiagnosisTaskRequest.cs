@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetPADiagnosisTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the diagnostic task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

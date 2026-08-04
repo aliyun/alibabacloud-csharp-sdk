@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListUserPrivateAccessPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of authorized policies.</para>
+        /// <para>The list of authorized access policies.</para>
         /// </summary>
         [NameInMap("Polices")]
         [Validation(Required=false)]
         public List<ListUserPrivateAccessPoliciesResponseBodyPolices> Polices { get; set; }
         public class ListUserPrivateAccessPoliciesResponseBodyPolices : TeaModel {
             /// <summary>
-            /// <para>Set of custom user group attributes. Multiple custom user group attributes are in an OR relationship, effective as a union.</para>
+            /// <para>The collection of custom user group attributes. Multiple custom user group attributes have an OR relationship and take effect as a union.</para>
             /// </summary>
             [NameInMap("CustomUserAttributes")]
             [Validation(Required=false)]
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public int? IdpId { get; set; }
 
                 /// <summary>
-                /// <para>Relation of the user group. Values:</para>
+                /// <para>The relationship of the user group. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Equal</b>: Equal.</description></item>
-                /// <item><description><b>Unequal</b>: Not equal.</description></item>
+                /// <item><description><b>Equal</b>: equal to.</description></item>
+                /// <item><description><b>Unequal</b>: not equal to.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -48,12 +48,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Relation { get; set; }
 
                 /// <summary>
-                /// <para>Type of the user group. Values:</para>
+                /// <para>The type of the user group. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>username</b>: Username.</description></item>
-                /// <item><description><b>department</b>: Department.</description></item>
-                /// <item><description><b>email</b>: Email.</description></item>
-                /// <item><description><b>telephone</b>: Telephone.</description></item>
+                /// <item><description><b>username</b>: the username.</description></item>
+                /// <item><description><b>department</b>: the department.</description></item>
+                /// <item><description><b>email</b>: the email address.</description></item>
+                /// <item><description><b>telephone</b>: the mobile phone number.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <summary>
                 /// <para>The value of the user group attribute.</para>
                 /// <list type="bullet">
-                /// <item><description>When the user group type is <b>username</b>, it represents the value of the username. The length is 1 to 128 characters, supporting Chinese and case-sensitive English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</description></item>
-                /// <item><description>When the user group type is <b>department</b>, it represents the value of the department. For example: OU=Department1,OU=SASE DingTalk.</description></item>
-                /// <item><description>When the user group type is <b>email</b>, it represents the value of the email. For example: <a href="mailto:username@example.com">username@example.com</a>.</description></item>
-                /// <item><description>When the user group type is <b>telephone</b>, it represents the value of the phone number. For example: 13900001234.</description></item>
+                /// <item><description>When the user group type is <b>username</b>, this parameter indicates the value of the username. The value must be 1 to 128 characters in length, and can contain Chinese characters, uppercase letters, lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</description></item>
+                /// <item><description>When the user group type is <b>department</b>, this parameter indicates the value of the department. For example: OU=Department1,OU=SASE DingTalk.</description></item>
+                /// <item><description>When the user group type is <b>email</b>, this parameter indicates the value of the email address. For example: <a href="mailto:username@example.com">username@example.com</a>.</description></item>
+                /// <item><description>When the user group type is <b>telephone</b>, this parameter indicates the value of the mobile phone number. For example: 13900001234.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
-            /// <para>Associated security baseline.</para>
+            /// <para>The associated security baseline.</para>
             /// 
             /// <b>Example:</b>
             /// <para>device_attribute_name</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string DeviceAttributeName { get; set; }
 
             /// <summary>
-            /// <para>Associated user group.</para>
+            /// <para>The user group to which the policy belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_group_name</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string MatchedUserGroup { get; set; }
 
             /// <summary>
-            /// <para>Intranet access policy name.</para>
+            /// <para>The name of the private access policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>private_access_policy_name</para>
@@ -112,10 +112,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Action of the intranet access policy. Values:</para>
+            /// <para>The action of the private access policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Block</b>: Block.</description></item>
-            /// <item><description><b>Allow</b>: Allow.</description></item>
+            /// <item><description><b>Block</b>: blocks the access.</description></item>
+            /// <item><description><b>Allow</b>: allows the access.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string PolicyAction { get; set; }
 
             /// <summary>
-            /// <para>Intranet access policy ID.</para>
+            /// <para>The ID of the private access policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pa-policy-1b0d0e8b4bcf****</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string PolicyId { get; set; }
 
             /// <summary>
-            /// <para>Priority of the intranet access policy. The number 1 indicates the highest priority.</para>
+            /// <para>The priority of the private access policy. The number 1 indicates the highest priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,24 +146,24 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public long? Priority { get; set; }
 
             /// <summary>
-            /// <para>List of trusted process group IDs.</para>
+            /// <para>The list of trusted process group IDs.</para>
             /// </summary>
             [NameInMap("TrustedProcessGroupIds")]
             [Validation(Required=false)]
             public List<string> TrustedProcessGroupIds { get; set; }
 
             /// <summary>
-            /// <para>List of trusted software IDs.</para>
+            /// <para>The list of trusted software IDs.</para>
             /// </summary>
             [NameInMap("TrustedSoftwareIds")]
             [Validation(Required=false)]
             public List<string> TrustedSoftwareIds { get; set; }
 
             /// <summary>
-            /// <para>Type of the user group for the intranet access policy. Values:</para>
+            /// <para>The user group type of the private access policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: Normal user group.</description></item>
-            /// <item><description><b>Custom</b>: Custom user group.</description></item>
+            /// <item><description><b>Normal</b>: a normal user group.</description></item>
+            /// <item><description><b>Custom</b>: a custom user group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
-        /// <para>ID of the request.</para>
+        /// <para>Id of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9D852F87-AFB5-51B8-AACD-F7D0EFB8277D</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of authorized policies.</para>
+        /// <para>The total number of authorized access policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

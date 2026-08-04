@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListUserGroupsForRegistrationPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>A collection of device registration policy IDs. You can specify up to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PolicyIds")]

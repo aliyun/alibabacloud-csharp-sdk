@@ -52,10 +52,23 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string Filename { get; set; }
 
+        /// <summary>
+        /// <para>Image extraction parameters</para>
+        /// </summary>
         [NameInMap("ImageExtractParamsOpenApi")]
         [Validation(Required=false)]
         public string ImageExtractParamsOpenApiShrink { get; set; }
 
+        /// <summary>
+        /// <para>Audio watermark parameter: specifies whether the watermark was embedded by the client SDK. Default value: false. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes  </description></item>
+        /// <item><description><b>false</b>: No</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("IsClientEmbed")]
         [Validation(Required=false)]
         public bool? IsClientEmbed { get; set; }

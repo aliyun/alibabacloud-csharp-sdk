@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListPolicesForPrivateAccessTagResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4D169859-A4F2-5EC8-853B-8447787C0D8A</para>
         /// </summary>
@@ -17,15 +19,29 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>List of private network access tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListPolicesForPrivateAccessTagResponseBodyTags> Tags { get; set; }
         public class ListPolicesForPrivateAccessTagResponseBodyTags : TeaModel {
+            /// <summary>
+            /// <para>Collection of private network access policies.</para>
+            /// </summary>
             [NameInMap("Polices")]
             [Validation(Required=false)]
             public List<ListPolicesForPrivateAccessTagResponseBodyTagsPolices> Polices { get; set; }
             public class ListPolicesForPrivateAccessTagResponseBodyTagsPolices : TeaModel {
                 /// <summary>
+                /// <para>The application type of the private network access policy. Values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>Application</b>: Application.</para>
+                /// </description></item>
+                /// <item><description><para><b>Tag</b>: Tag.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Application</para>
                 /// </summary>
@@ -34,7 +50,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string ApplicationType { get; set; }
 
                 /// <summary>
-                /// <para>内网访问策略创建时间。</para>
+                /// <para>Creation time of the private network access policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-02-21 14:10:16</para>
@@ -44,14 +60,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>自定义用户组属性集合。多个自定义用户组属性之间是或的关系，按照合集生效。</para>
+                /// <para>A collection of custom user group attributes. Multiple custom user group attributes have an OR relationship and take effect as a union.</para>
                 /// </summary>
                 [NameInMap("CustomUserAttributes")]
                 [Validation(Required=false)]
                 public List<ListPolicesForPrivateAccessTagResponseBodyTagsPolicesCustomUserAttributes> CustomUserAttributes { get; set; }
                 public class ListPolicesForPrivateAccessTagResponseBodyTagsPolicesCustomUserAttributes : TeaModel {
                     /// <summary>
-                    /// <para>用户组的身份源ID。当自定义用户组类型为<b>department</b>时，存在该值。</para>
+                    /// <para>The identity provider ID of the user group. This value exists if the custom user group type is <b>department</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12</para>
@@ -61,10 +77,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     public int? IdpId { get; set; }
 
                     /// <summary>
-                    /// <para>用户组的关系。取值：</para>
+                    /// <para>The relationship of the user group. Values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>Equal</b>：等于。</description></item>
-                    /// <item><description><b>Unequal</b>：不等于。</description></item>
+                    /// <item><description><para><b>Equal</b>: Equal.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>Unequal</b>: Unequal.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -75,12 +93,16 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     public string Relation { get; set; }
 
                     /// <summary>
-                    /// <para>用户组的类型。取值：</para>
+                    /// <para>The type of user group. Values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>username</b>：用户名。</description></item>
-                    /// <item><description><b>department</b>：部门。</description></item>
-                    /// <item><description><b>email</b>：邮箱。</description></item>
-                    /// <item><description><b>telephone</b>：手机。</description></item>
+                    /// <item><description><para><b>username</b>: Username.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>department</b>: Department.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>email</b>: Mailbox.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>telephone</b>: Mobile phone.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -91,12 +113,16 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                     public string UserGroupType { get; set; }
 
                     /// <summary>
-                    /// <para>用户组属性的值。</para>
+                    /// <para>The value of the user group attribute.</para>
                     /// <list type="bullet">
-                    /// <item><description>当用户组类型为<b>username</b>时，表示用户名的值。长度为1~128个字符，支持中文和大小写英文字母，可包含数字、半角句号（.）、下划线（_）和短划线（-）。</description></item>
-                    /// <item><description>当用户组类型为<b>department</b>时，表示部门的值。如：OU=部门1,OU=SASE钉钉。</description></item>
-                    /// <item><description>当用户组类型为<b>email</b>时，表示邮箱的值。如：<a href="mailto:username@example.com">username@example.com</a>。</description></item>
-                    /// <item><description>当用户组类型为<b>telephone</b>时，表示手机的值。如：13900001234。</description></item>
+                    /// <item><description><para>If the user group type is <b>username</b>, this indicates the username\&quot;s value. The length is 1 to 128 characters. It supports Chinese characters, uppercase and lowercase English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</para>
+                    /// </description></item>
+                    /// <item><description><para>If the user group type is <b>department</b>, this indicates the department\&quot;s value. For example: OU=Department 1,OU=SASE DingTalk.</para>
+                    /// </description></item>
+                    /// <item><description><para>If the user group type is <b>email</b>, this indicates the mailbox\&quot;s value. For example: username\@example.com.</para>
+                    /// </description></item>
+                    /// <item><description><para>If the user group type is <b>telephone</b>, this indicates the mobile phone\&quot;s value. For example: 13900001234.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -108,11 +134,19 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
                 }
 
+                /// <summary>
+                /// <para>Description of the private network access policy.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>这是一条内网访问策略</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>Private network access policy name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>private_access_policy_name</para>
                 /// </summary>
@@ -121,6 +155,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The action that the private access policy performs. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>Block</b>: Blocks access.</para>
+                /// </description></item>
+                /// <item><description><para><b>Allow</b>: Allows access.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Allow</para>
                 /// </summary>
@@ -129,6 +171,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string PolicyAction { get; set; }
 
                 /// <summary>
+                /// <para>Private network access policy ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>pa-policy-867ef4007c8a****</para>
                 /// </summary>
@@ -137,6 +181,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string PolicyId { get; set; }
 
                 /// <summary>
+                /// <para>The private network access policy priority. The number 1 indicates the highest priority.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -145,6 +191,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
+                /// <para>The status of the private network access policy. Values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>Enabled</b>: Enabled.</para>
+                /// </description></item>
+                /// <item><description><para><b>Disabled</b>: Disabled.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Enabled</para>
                 /// </summary>
@@ -153,6 +207,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>The user group type of the private network access policy. Values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>Normal</b>: Normal user group.</para>
+                /// </description></item>
+                /// <item><description><para><b>Custom</b>: Custom user group.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
                 /// </summary>
@@ -163,6 +225,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
+            /// <para>Private network access tag ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tag-b927baf3e592****</para>
             /// </summary>

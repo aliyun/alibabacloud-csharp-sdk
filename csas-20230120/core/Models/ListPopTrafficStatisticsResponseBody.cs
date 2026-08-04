@@ -19,15 +19,23 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>A list of bandwidth data for the POPs.</para>
+        /// </summary>
         [NameInMap("TrafficData")]
         [Validation(Required=false)]
         public List<ListPopTrafficStatisticsResponseBodyTrafficData> TrafficData { get; set; }
         public class ListPopTrafficStatisticsResponseBodyTrafficData : TeaModel {
+            /// <summary>
+            /// <para>A list of bandwidth data points for the POPs.</para>
+            /// </summary>
             [NameInMap("Datapoints")]
             [Validation(Required=false)]
             public List<ListPopTrafficStatisticsResponseBodyTrafficDataDatapoints> Datapoints { get; set; }
             public class ListPopTrafficStatisticsResponseBodyTrafficDataDatapoints : TeaModel {
                 /// <summary>
+                /// <para>The average bandwidth value per minute. The unit is Byte/s.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>15325</para>
                 /// </summary>
@@ -36,6 +44,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public double? Average { get; set; }
 
                 /// <summary>
+                /// <para>The time that corresponds to the data point.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2023-12-06 15:29:00</para>
                 /// </summary>
@@ -46,6 +56,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             }
 
             /// <summary>
+            /// <para>The name of the metric. Metrics are categorized as inbound or outbound.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>InternetTx</para>
             /// </summary>

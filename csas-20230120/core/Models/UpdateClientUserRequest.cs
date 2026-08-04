@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class UpdateClientUserRequest : TeaModel {
         /// <summary>
+        /// <para>Department ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10701</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string DepartmentId { get; set; }
 
+        /// <summary>
+        /// <para>User description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例用户</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Email address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:johndoe@example.com">johndoe@example.com</a></para>
         /// </summary>
@@ -30,6 +40,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Email { get; set; }
 
         /// <summary>
+        /// <para>User ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +51,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Mobile phone number without country code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13641966835</para>
         /// </summary>

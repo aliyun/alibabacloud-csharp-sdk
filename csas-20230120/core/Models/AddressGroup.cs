@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class AddressGroup : TeaModel {
+        /// <summary>
+        /// <para>Address list.</para>
+        /// </summary>
         [NameInMap("Addresses")]
         [Validation(Required=false)]
         public List<string> Addresses { get; set; }
 
+        /// <summary>
+        /// <para>Port list.</para>
+        /// </summary>
         [NameInMap("Ports")]
         [Validation(Required=false)]
         public List<AddressGroupPorts> Ports { get; set; }
         public class AddressGroupPorts : TeaModel {
             /// <summary>
+            /// <para>Start port. Must be less than or equal to the end port.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public int? Begin { get; set; }
 
             /// <summary>
+            /// <para>End port. Must be greater than or equal to the start port.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234</para>
             /// </summary>

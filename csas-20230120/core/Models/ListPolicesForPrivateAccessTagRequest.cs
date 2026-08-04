@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListPolicesForPrivateAccessTagRequest : TeaModel {
         /// <summary>
+        /// <para>A collection of private network access tag IDs. Enter a maximum of 100 private network access tag IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TagIds")]

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateWmEmbedTaskResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Job information.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateWmEmbedTaskResponseBodyData Data { get; set; }
         public class CreateWmEmbedTaskResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The Job ID, used for subsequent queries of task execution results.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>job:5GfrJYsoaffmCE7Z5bZtjUefzxfd****</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         }
 
         /// <summary>
+        /// <para>The ID of this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BE4FB974-11BC-5453-9BE1-1606A73EACA6</para>
         /// </summary>

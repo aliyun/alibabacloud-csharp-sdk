@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetWmExtractTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the extraction task. You can obtain the task ID by calling the <a href="~~CreateWmExtractTask~~">CreateWmExtractTask</a> operation.</para>
+        /// <list type="bullet">
+        /// <item><description><a href="~~CreateWmExtractTask~~">CreateWmExtractTask</a>: Create a watermark extraction task.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreatePrivateAccessApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the office application.</para>
+        /// <para>The ID of the internal-facing access application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pa-application-e12860ef6c48****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE4FB974-11BC-5453-9BE1-1606A73EACA6</para>

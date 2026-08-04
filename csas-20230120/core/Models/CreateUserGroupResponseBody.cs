@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateUserGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>102350E7-1A20-58F5-9D63-ABEA820AE6E1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>usergroup-6f1ef2fc56b6****</para>
         /// </summary>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetPrivateAccessApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the office application. You can obtain the value by calling the following operations:</para>
+        /// <para>The ID of the internal-facing access application. You can obtain the value from:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: queries office applications.</description></item>
-        /// <item><description><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: creates an office application.</description></item>
+        /// <item><description><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal-facing access applications.</description></item>
+        /// <item><description><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Creates an internal-facing access application.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

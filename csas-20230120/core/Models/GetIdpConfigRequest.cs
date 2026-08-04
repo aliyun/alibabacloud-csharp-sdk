@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class GetIdpConfigRequest : TeaModel {
         /// <summary>
+        /// <para>ID of the identity provider configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1465</para>
+        /// <para>idp-cfg68956d86e********</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

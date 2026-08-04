@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class CreateClientUserRequest : TeaModel {
         /// <summary>
+        /// <para>Department ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10797</para>
         /// </summary>
@@ -17,11 +19,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public string DepartmentId { get; set; }
 
+        /// <summary>
+        /// <para>User description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>示例用户</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Email address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +41,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Email { get; set; }
 
         /// <summary>
+        /// <para>ID of the custom identity source configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +52,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string IdpConfigId { get; set; }
 
         /// <summary>
+        /// <para>Mobile phone number without country code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13641966835</para>
         /// </summary>
@@ -50,6 +62,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string MobileNumber { get; set; }
 
         /// <summary>
+        /// <para>Password. If empty, a random password is generated automatically.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>kehudiyi</para>
         /// </summary>
@@ -58,7 +72,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>Username.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>张三</para>
         /// </summary>
         [NameInMap("Username")]
         [Validation(Required=false)]

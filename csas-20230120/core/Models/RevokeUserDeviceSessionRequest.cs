@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class RevokeUserDeviceSessionRequest : TeaModel {
         /// <summary>
+        /// <para>The device tag.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string DevTag { get; set; }
 
         /// <summary>
+        /// <para>The SASE user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
