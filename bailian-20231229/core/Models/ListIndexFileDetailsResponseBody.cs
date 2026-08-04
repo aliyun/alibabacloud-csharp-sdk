@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public ListIndexFileDetailsResponseBodyData Data { get; set; }
         public class ListIndexFileDetailsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of files in the knowledge base, sorted by file import time in descending order (consistent with the console).</para>
+            /// <para>The list of files in the knowledge base, sorted in descending order by file import time (consistent with the console).</para>
             /// </summary>
             [NameInMap("Documents")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string EnableHeaders { get; set; }
 
                 /// <summary>
-                /// <para>The time when the file was imported to the knowledge base, in Unix timestamp format.</para>
+                /// <para>The time when the file was imported to the knowledge base, in UNIX timestamp format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1744856423000</para>
@@ -113,6 +113,15 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
+                /// <summary>
+                /// <para>The metadata extracted from the document.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{
+                ///   &quot;doc_summary&quot;: [&quot;Example 1.&quot;],
+                ///   &quot;health_rule&quot;: [&quot;Example 2&quot;]
+                /// }</para>
+                /// </summary>
                 [NameInMap("MetaExtractInfo")]
                 [Validation(Required=false)]
                 public string MetaExtractInfo { get; set; }
@@ -196,7 +205,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string IndexId { get; set; }
 
             /// <summary>
-            /// <para>The specified page number.</para>
+            /// <para>The returned page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -206,7 +215,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The specified number of entries per page.</para>
+            /// <para>The returned number of items per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class SubmitIndexAddDocumentsJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned on failure.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Index.InvalidParameter</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The business data.</para>
+        /// <para>The business data returned by the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitIndexAddDocumentsJobResponseBodyData Data { get; set; }
         public class SubmitIndexAddDocumentsJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The job ID, also known as <c>JobId</c>.</para>
+            /// <para>The task ID, also known as <c>JobId</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42687eb254a34802bed398357f5498ae</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         }
 
         /// <summary>
-        /// <para>The error message returned on failure.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Required parameter(%s) missing or invalid, please check the request parameters.</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -69,12 +69,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

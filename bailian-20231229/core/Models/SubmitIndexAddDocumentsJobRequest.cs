@@ -10,31 +10,25 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class SubmitIndexAddDocumentsJobRequest : TeaModel {
         /// <summary>
-        /// <para>A list of category IDs.</para>
+        /// <para>The list of category IDs.</para>
         /// </summary>
         [NameInMap("CategoryIds")]
         [Validation(Required=false)]
         public List<string> CategoryIds { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>The custom chunking mode. This setting applies only to the documents added in the current job. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a>. Valid values (you can specify only one value):</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// Enables custom chunking (applies only to files appended in this request). For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>. Valid values (only one value can be specified at a time):</para>
         /// <list type="bullet">
-        /// <item><description><para><b>length</b>: Splits the text by a fixed length. The chunking strictly follows the specified <c>ChunkSize</c> and <c>OverlapSize</c>. If you do not specify these parameters, the system uses the default values: a <c>ChunkSize</c> of 500 and an <c>OverlapSize</c> of 100. This mode ignores the <c>Separator</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para><b>page</b>: Splits the text by page. If <c>ChunkSize</c> is specified, its value is also applied during chunking. If <c>ChunkSize</c> is not set, a default value of 500 is used. This mode ignores the <c>OverlapSize</c> and <c>Separator</c> parameters.</para>
-        /// </description></item>
-        /// <item><description><para><b>h1</b>: Splits the text by level-1 headings. If <c>ChunkSize</c> is specified, its value is also applied during chunking. If <c>ChunkSize</c> is not set, a default value of 500 is used. This mode ignores the <c>OverlapSize</c> and <c>Separator</c> parameters.</para>
-        /// </description></item>
-        /// <item><description><para><b>h2</b>: Splits the text by level-2 headings. If <c>ChunkSize</c> is specified, its value is also applied during chunking. If <c>ChunkSize</c> is not set, a default value of 500 is used. This mode ignores the <c>OverlapSize</c> and <c>Separator</c> parameters.</para>
-        /// </description></item>
-        /// <item><description><para><b>regex</b>: Splits the text by using a regular expression. The <c>Separator</c> parameter is required for this mode. If <c>ChunkSize</c> is specified, its value is also applied during chunking. If <c>ChunkSize</c> is not set, a default value of 500 is used. This mode ignores the <c>OverlapSize</c> parameter.</para>
-        /// </description></item>
+        /// <item><description><b>length</b>: chunk by length. Strictly chunks according to the specified <c>ChunkSize</c> and <c>OverlapSize</c>. If these two parameters are not specified, the system uses default values (<c>ChunkSize</c> of 500 and <c>OverlapSize</c> of 100). Chunking by length does not support <c>Separator</c> (even if specified, it does not take effect).</description></item>
+        /// <item><description><b>page</b>: chunk by page. If <c>ChunkSize</c> is specified, it is also considered during chunking (if not specified, the default value of 500 is used). Chunking by page does not support <c>OverlapSize</c> or <c>Separator</c> (even if specified, they do not take effect).</description></item>
+        /// <item><description><b>h1</b>~<b>h5</b>: chunk by headings at the corresponding level (<c>h1</c> is the first-level heading, and so on, with support up to <c>h5</c> fifth-level heading). If <c>ChunkSize</c> is specified, it is also considered during chunking (if not specified, the default value of 500 is used). Chunking by heading does not support <c>OverlapSize</c> or <c>Separator</c> (even if specified, they do not take effect).</description></item>
+        /// <item><description><b>regex</b>: chunk by regular expression. The <c>Separator</c> parameter must be specified. If <c>ChunkSize</c> is specified, it is also considered during chunking (if not specified, the default value of 500 is used). Chunking by regex does not support <c>OverlapSize</c> (even if specified, it does not take effect).</description></item>
         /// </list>
-        /// <para>If this parameter is not set, intelligent chunking is used by default.</para>
+        /// <para>Default value: empty, which uses intelligent chunking.</para>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>This parameter is not available. Do not specify it.</para>
+        /// <para>This parameter is not yet available. Do not specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,22 +39,20 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string ChunkMode { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>The chunk size. Specifies the maximum number of characters for each text chunk. This setting applies only to the documents added in the current job. If a text segment exceeds this size, the behavior depends on the chunking mode:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// The chunk length, which is the maximum number of characters per text chunk (applies only to files appended in this request). When this length is exceeded:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Intelligent chunking</b> (if <c>ChunkMode</c> is not set): The text may be truncated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Custom chunking</b> (if <c>ChunkMode</c> is set): The text is forcibly split.</para>
-        /// </description></item>
+        /// <item><description><b>Intelligent chunking</b> (without specifying <c>chunkMode</c>): the text is likely to be truncated.</description></item>
+        /// <item><description><b>Custom chunking</b> (with <c>chunkMode</c> specified): the text is forcibly split.</description></item>
         /// </list>
-        /// <para>The value must be in the range of [1, 6000]. Defaults to 500 if not specified.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a>.</para>
+        /// <para>Valid values: 1 to 6000. If this parameter is not specified, the default value of 500 is used.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</para>
         /// <remarks>
-        /// <para>If you specify a <c>ChunkSize</c> less than 100, you must also specify the <c>OverlapSize</c> parameter. You can also omit both parameters to use the system defaults.</para>
+        /// <para>If you specify <c>ChunkSize</c> with a value less than 100, you must also specify <c>OverlapSize</c>. You can also leave both parameters unspecified (the system uses default values).</para>
         /// </remarks>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>This parameter is not available. Do not specify it.</para>
+        /// <para>This parameter is not yet available. Do not specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,23 +63,21 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? ChunkSize { get; set; }
 
         /// <summary>
-        /// <para>A list of file IDs.</para>
+        /// <para>The list of file IDs.</para>
         /// </summary>
         [NameInMap("DocumentIds")]
         [Validation(Required=false)]
         public List<string> DocumentIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include Excel file headers. If set to <c>true</c>, the knowledge base treats the first row of all .xlsx and .xls files as the header and automatically prepends it to each text chunk (data row). This prevents the large language model (LLM) from misinterpreting the header as a regular data row.</para>
+        /// <para>Specifies whether to enable header assembly for Excel files. When enabled, the knowledge base treats the first row of all xlsx and xls files as headers and automatically appends them to each text chunk (data row), preventing the large language model from treating headers as regular data rows.</para>
         /// <remarks>
-        /// <para>Enable this parameter only if all imported documents are Excel files that contain a header.</para>
+        /// <para>Enable this feature only when all imported files are in xlsx or xls format and contain headers. Otherwise, leave it disabled.</para>
         /// </remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para>false: Disabled.</para>
-        /// </description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -109,7 +99,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         }
 
         /// <summary>
-        /// <para>The knowledge base ID. This is the <c>Data.Id</c> returned by the <b>CreateIndex</b> API.</para>
+        /// <para>The knowledge base ID, which is the <c>Data.Id</c> returned by the <b>CreateIndex</b> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,15 +110,15 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string IndexId { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>Specifies the number of overlapping characters between adjacent text chunks. This setting applies only to the documents added in the current job. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a>. The value must be in the range of [0, 1024].</para>
-        /// <para>Defaults to 100 if not specified.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// The chunk overlap length (applies only to files appended in this request). It indicates the number of overlapping characters between the current text chunk and the previous text chunk. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>. Valid values: 0 to 1024.</para>
+        /// <para>If this parameter is not specified, the default value of 100 is used.</para>
         /// <remarks>
-        /// <para>The value of <c>OverlapSize</c> must be less than the value of <c>ChunkSize</c>. Otherwise, the chunking process may fail.</para>
+        /// <para>The value of <c>OverlapSize</c> must be less than the value of <c>ChunkSize</c>. Otherwise, chunking exceptions may occur.</para>
         /// </remarks>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>This parameter is not available. Do not specify it.</para>
+        /// <para>This parameter is not yet available. Do not specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -139,12 +129,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? OverlapSize { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>The separator for chunking. This parameter is used only when <c>ChunkMode</c> is set to <b>regex</b>. You can specify a single regular expression (multiple expressions are not supported) to split the file into smaller text chunks. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">knowledge base</a>.</para>
-        /// <para>When you use intelligent chunking (when <c>ChunkMode</c> is not specified), leave this parameter empty.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// The sentence separator, which takes effect only when <c>chunkMode</c> is set to <b>regex</b> (otherwise, it does not take effect even if specified). You can specify a regular expression (only one is supported) to split the file into small text chunks. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</para>
+        /// <para>When using intelligent chunking (without specifying <c>chunkMode</c>), keep the default empty value.</para>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>This parameter is not available. Do not specify it.</para>
+        /// <para>This parameter is not yet available. Do not specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -155,15 +145,13 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Separator { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Valid values:</para>
+        /// <para>The data source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DATA_CENTER_CATEGORY: Imports all documents from specified categories in &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">application data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">application data</a>. You can import documents from multiple categories.</para>
-        /// </description></item>
-        /// <item><description><para>DATA_CENTER_FILE: Imports specified files from &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">application data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">application data</a>. You can import multiple files.</para>
-        /// </description></item>
+        /// <item><description>DATA_CENTER_CATEGORY: category type. Imports all documents under specified categories in &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. Multiple categories are supported.</description></item>
+        /// <item><description>DATA_CENTER_FILE: document type. Imports specified files from &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. Multiple files are supported.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you set this parameter to <c>DATA_CENTER_CATEGORY</c>, you must specify the <c>CategoryIds</c> parameter. If you set this parameter to <c>DATA_CENTER_FILE</c>, you must specify the <c>DocumentIds</c> parameter.</para>
+        /// <para>If this parameter is set to DATA_CENTER_CATEGORY, you must specify the <c>CategoryIds</c> parameter. If this parameter is set to DATA_CENTER_FILE, you must specify the <c>DocumentIds</c> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
