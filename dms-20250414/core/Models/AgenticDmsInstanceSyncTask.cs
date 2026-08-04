@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string GmtModified { get; set; }
 
+        [NameInMap("OperatorMode")]
+        [Validation(Required=false)]
+        public string OperatorMode { get; set; }
+
+        [NameInMap("RequestedOperatorMode")]
+        [Validation(Required=false)]
+        public string RequestedOperatorMode { get; set; }
+
         [NameInMap("SkippedCount")]
         [Validation(Required=false)]
         public int? SkippedCount { get; set; }

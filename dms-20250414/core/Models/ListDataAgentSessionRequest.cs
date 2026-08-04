@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataAgentSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the session creation period.</para>
+        /// <para>The end time for session creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1770912000000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? CreateEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the session creation period.</para>
+        /// <para>The start time for session creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1770825600000</para>
@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [NameInMap("CreateStartTime")]
         [Validation(Required=false)]
         public long? CreateStartTime { get; set; }
+
+        [NameInMap("CreatorId")]
+        [Validation(Required=false)]
+        public string CreatorId { get; set; }
 
         /// <summary>
         /// <para>The custom agent ID.</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CustomAgentId { get; set; }
 
         /// <summary>
-        /// <para>The current DMS unit.</para>
+        /// <para>The current Data Management unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -59,6 +63,13 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public bool? IsSaved { get; set; }
 
+        /// <summary>
+        /// <para>The mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Analysis</description></item>
+        /// <item><description>Coding</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
@@ -84,7 +95,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The session type. This parameter is required if a workspace is specified.</para>
+        /// <para>The session type. This parameter is required when a workspace is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myFavorite</para>
@@ -97,7 +108,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The Data Agent title. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>帮我分析一下这份数据</para>
+        /// <para>Analyze this data for me</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

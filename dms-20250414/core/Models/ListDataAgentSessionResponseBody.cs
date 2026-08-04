@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <para>The usage stage of the custom agent. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>debug</b>: Debug stage.</description></item>
-                /// <item><description><b>prod</b>: Production stage.</description></item>
+                /// <item><description><b>prod</b>: Production environment stage.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The name of the user OSS bucket.</para>
                 /// <list type="bullet">
-                /// <item><description>Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</description></item>
+                /// <item><description>Analysis process files and report outputs can be uploaded to the user-specified OSS bucket.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>分析一下这份文件，给出报告。</para>
+            /// <para>Analyze this file and generate a report</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request fails.</para>
+        /// <para>The error code returned when the request is abnormal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -254,10 +254,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request is successful.</description></item>
-        /// <item><description><b>false</b>: The request fails.</description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

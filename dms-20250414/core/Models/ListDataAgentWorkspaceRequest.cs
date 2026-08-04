@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataAgentWorkspaceRequest : TeaModel {
+        [NameInMap("Creator")]
+        [Validation(Required=false)]
+        public string Creator { get; set; }
+
         /// <summary>
         /// <para>The current DMS unit.</para>
         /// 
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The field name used for sorting.</para>
+        /// <para>The name of the field by which to sort.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>

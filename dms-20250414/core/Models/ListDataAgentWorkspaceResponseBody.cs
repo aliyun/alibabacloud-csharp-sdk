@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public List<ListDataAgentWorkspaceResponseBodyDataContent> Content { get; set; }
             public class ListDataAgentWorkspaceResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The creation time of the workspace, in UNIX timestamp format (milliseconds).</para>
+                /// <para>The creation time of the workspace, in milliseconds (UNIX timestamp).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1765960516000</para>
@@ -42,6 +42,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
                 public string Creator { get; set; }
+
+                [NameInMap("CreatorName")]
+                [Validation(Required=false)]
+                public string CreatorName { get; set; }
 
                 /// <summary>
                 /// <para>The description of the workspace.</para>
@@ -64,7 +68,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? IsSessionShareEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The most recent modification time of the workspace, in UNIX timestamp format (milliseconds).</para>
+                /// <para>The most recent modification time of the workspace, in milliseconds (UNIX timestamp).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1765961516000</para>
@@ -83,6 +87,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public string RoleName { get; set; }
 
+                [NameInMap("RunningSessionCount")]
+                [Validation(Required=false)]
+                public int? RunningSessionCount { get; set; }
+
                 /// <summary>
                 /// <para>The number of members in the workspace.</para>
                 /// 
@@ -92,6 +100,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [NameInMap("TotalMember")]
                 [Validation(Required=false)]
                 public long? TotalMember { get; set; }
+
+                [NameInMap("TotalSessionCount")]
+                [Validation(Required=false)]
+                public int? TotalSessionCount { get; set; }
 
                 /// <summary>
                 /// <para>The workspace type.</para>
