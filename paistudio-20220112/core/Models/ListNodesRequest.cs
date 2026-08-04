@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListNodesRequest : TeaModel {
         /// <summary>
+        /// <para>The accelerator type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>CPU</para>
+        /// </description></item>
+        /// <item><description><para>GPU</para>
+        /// </description></item>
+        /// </list>
+        /// <para>If omitted, this operation returns nodes of all accelerator types.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CPU</para>
         /// </summary>
@@ -30,6 +39,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string DiskPL { get; set; }
 
         /// <summary>
+        /// <para>When used with <c>ResourceGroupIds</c>, this parameter further filters the results to include only nodes from the specified resource quota.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>quotamtl37ge7gkvdz</para>
         /// </summary>
@@ -38,6 +49,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string FilterByQuotaId { get; set; }
 
         /// <summary>
+        /// <para>When used with <c>QuotaId</c>, this parameter further filters the results to include only nodes from the specified resource groups.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg69rj0leslwdnbe</para>
         /// </summary>
@@ -46,6 +59,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string FilterByResourceGroupIds { get; set; }
 
         /// <summary>
+        /// <para>The GPU type. Fuzzy matching is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>T4</para>
         /// </summary>
@@ -98,6 +113,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string MachineGroupIds { get; set; }
 
         /// <summary>
+        /// <para>A comma-separated list of node names. Only nodes with names that match this list are returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>lingjxxxx</para>
         /// </summary>
@@ -106,6 +123,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NodeNames { get; set; }
 
         /// <summary>
+        /// <para>A comma-separated list of node statuses. If this parameter is omitted, this operation returns nodes of all statuses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ready</para>
         /// </summary>
@@ -114,6 +133,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NodeStatuses { get; set; }
 
         /// <summary>
+        /// <para>A comma-separated list of node specifications. If this parameter is omitted, this operation returns nodes of all specifications.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.xlarge</para>
         /// </summary>
@@ -122,6 +143,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NodeTypes { get; set; }
 
         /// <summary>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>desc</c>: Descending</para>
+        /// </description></item>
+        /// <item><description><para><c>asc</c>: Ascending</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>desc</para>
         /// </summary>
@@ -130,6 +159,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>A comma-separated list of order IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>260590501560397</para>
         /// </summary>
@@ -138,6 +169,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string OrderInstanceIds { get; set; }
 
         /// <summary>
+        /// <para>A comma-separated list of order statuses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ready</para>
         /// </summary>
@@ -146,6 +179,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string OrderStatuses { get; set; }
 
         /// <summary>
+        /// <para>The page number. The first page is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -154,6 +189,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -170,6 +207,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? PodNum { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource quota that contains the nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>quotamtl37ge7gkvdz</para>
         /// </summary>
@@ -182,6 +221,17 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ReasonCodes { get; set; }
 
         /// <summary>
+        /// <para>A comma-separated list of resource group IDs. You must specify either this parameter or <c>QuotaId</c>.
+        /// Constraints:</para>
+        /// <ol>
+        /// <item><description><para>The user ID of the request must match the user ID associated with the specified resource groups.</para>
+        /// </description></item>
+        /// <item><description><para>All specified resource groups must be of the same type.</para>
+        /// </description></item>
+        /// <item><description><para>All specified resource groups must be in the same VPC.</para>
+        /// </description></item>
+        /// </ol>
+        /// 
         /// <b>Example:</b>
         /// <para>rg69rj0leslwdnbe</para>
         /// </summary>
@@ -194,6 +244,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ResourceGroupName { get; set; }
 
         /// <summary>
+        /// <para>The field by which to sort the results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>
         /// </summary>
@@ -202,6 +254,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return resource usage information. This parameter applies only when <c>QuotaId</c> is specified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

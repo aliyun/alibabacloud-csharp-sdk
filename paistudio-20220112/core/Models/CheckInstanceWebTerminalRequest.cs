@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class CheckInstanceWebTerminalRequest : TeaModel {
         /// <summary>
+        /// <para>The check information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>wss://pai-dlc-proxy-cn-shanghai.aliyun.com/terminal/t1157703270994901/dlcmjzjt1dxbmx4h/dlcmjzjt1dxbmx4h-worker-0?Token=******</para>
         /// </summary>

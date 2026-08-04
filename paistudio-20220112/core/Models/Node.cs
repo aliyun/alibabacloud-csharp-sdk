@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class Node : TeaModel {
         /// <summary>
+        /// <para>The accelerator type of the resource node instance, such as CPU or GPU.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CPU</para>
         /// </summary>
@@ -17,10 +19,16 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AcceleratorType { get; set; }
 
+        /// <summary>
+        /// <para>The number of allocatable CPU cores.</para>
+        /// </summary>
         [NameInMap("AllocatableCPU")]
         [Validation(Required=false)]
         public string AllocatableCPU { get; set; }
 
+        /// <summary>
+        /// <para>The amount of allocatable memory in GiB.</para>
+        /// </summary>
         [NameInMap("AllocatableMemory")]
         [Validation(Required=false)]
         public string AllocatableMemory { get; set; }
@@ -33,11 +41,16 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string AvailabilityZone { get; set; }
 
+        /// <summary>
+        /// <para>The list of quotas that are bound to the node.</para>
+        /// </summary>
         [NameInMap("BoundQuotas")]
         [Validation(Required=false)]
         public List<QuotaIdName> BoundQuotas { get; set; }
 
         /// <summary>
+        /// <para>The number of CPU cores.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -46,6 +59,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string CPU { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who created the resource node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>281044699048527748</para>
         /// </summary>
@@ -66,6 +81,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string DiskPL { get; set; }
 
         /// <summary>
+        /// <para>The number of GPUs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -73,11 +90,16 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GPU { get; set; }
 
+        /// <summary>
+        /// <para>The GPU memory size in GiB.</para>
+        /// </summary>
         [NameInMap("GPUMemory")]
         [Validation(Required=false)]
         public string GPUMemory { get; set; }
 
         /// <summary>
+        /// <para>The GPU model.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -88,6 +110,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>The time when the resource node was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-07-10T11:49:47Z</para>
@@ -102,6 +125,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtCreatedTime { get; set; }
 
         /// <summary>
+        /// <para>The time when the resource node expires.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-06-22T00:00:00Z</para>
         /// </summary>
@@ -110,6 +135,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtExpiredTime { get; set; }
 
         /// <summary>
+        /// <para>The time when the resource node was last modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-07-10T11:49:47Z</para>
         /// </summary>
@@ -122,6 +149,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string HyperZone { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the node is bound to a quota.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -130,6 +159,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? IsBound { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of CPU cores.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -138,6 +169,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string LimitCPU { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of GPUs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -146,6 +179,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string LimitGPU { get; set; }
 
         /// <summary>
+        /// <para>The maximum memory size in GiB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>
@@ -154,6 +189,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string LimitMemory { get; set; }
 
         /// <summary>
+        /// <para>The ID of the machine group to which the resource node belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mg1234456</para>
         /// </summary>
@@ -162,6 +199,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string MachineGroupId { get; set; }
 
         /// <summary>
+        /// <para>The memory size in GiB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>
@@ -170,6 +209,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Memory { get; set; }
 
         /// <summary>
+        /// <para>The name of the resource node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>lingjxxxx</para>
         /// </summary>
@@ -178,6 +219,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NodeName { get; set; }
 
         /// <summary>
+        /// <para>The status of the resource node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ready</para>
         /// </summary>
@@ -186,6 +229,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NodeStatus { get; set; }
 
         /// <summary>
+        /// <para>The instance type of the resource node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ecs.c8i.xlarge</para>
         /// </summary>
@@ -194,6 +239,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NodeType { get; set; }
 
         /// <summary>
+        /// <para>The order status of the resource node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ready</para>
         /// </summary>
@@ -202,6 +249,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string OrderStatus { get; set; }
 
         /// <summary>
+        /// <para>The number of pods on the node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -210,6 +259,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PodNum { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -218,6 +269,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ReasonCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -226,6 +279,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ReasonMessage { get; set; }
 
         /// <summary>
+        /// <para>The number of requested CPU cores.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -234,6 +289,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestCPU { get; set; }
 
         /// <summary>
+        /// <para>The number of requested GPUs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -242,6 +299,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestGPU { get; set; }
 
         /// <summary>
+        /// <para>The requested memory size in GiB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>
@@ -250,6 +309,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestMemory { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group to which the resource node belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rgf0zhfqn1d4ity2</para>
         /// </summary>
@@ -258,6 +319,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The name of the resource group to which the resource node belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -273,19 +336,30 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public List<string> SubNodes { get; set; }
 
+        /// <summary>
+        /// <para>The number of CPU cores that are reserved for the system.</para>
+        /// </summary>
         [NameInMap("SystemReservedCPU")]
         [Validation(Required=false)]
         public string SystemReservedCPU { get; set; }
 
+        /// <summary>
+        /// <para>The amount of memory that is reserved for the system in GiB.</para>
+        /// </summary>
         [NameInMap("SystemReservedMemory")]
         [Validation(Required=false)]
         public string SystemReservedMemory { get; set; }
 
+        /// <summary>
+        /// <para>The user information.</para>
+        /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<UserInfo> Users { get; set; }
 
         /// <summary>
+        /// <para>The number of workloads on the node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class DeleteResourceGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F082BD0D-21E1-5F9B-81A0-AB07485B03CD</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The globally unique ID of the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rgvl9d6utwcscukh</para>
         /// </summary>

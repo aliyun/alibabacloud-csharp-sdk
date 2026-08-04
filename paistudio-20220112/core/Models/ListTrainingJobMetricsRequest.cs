@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListTrainingJobMetricsRequest : TeaModel {
         /// <summary>
+        /// <para>The end time in UTC, in ISO 8601 format. If you omit this parameter, the current time is used.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the metric.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>accuracy</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The sort order of returned metrics. Valid values: ASC or DESC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -52,6 +61,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start time in UTC, in ISO 8601 format. If you omit this parameter, the task start time is used.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>

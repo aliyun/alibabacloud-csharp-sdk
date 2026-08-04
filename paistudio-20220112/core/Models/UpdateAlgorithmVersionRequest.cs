@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class UpdateAlgorithmVersionRequest : TeaModel {
+        /// <summary>
+        /// <para>The details of the algorithm.</para>
+        /// </summary>
         [NameInMap("AlgorithmSpec")]
         [Validation(Required=false)]
         public AlgorithmSpec AlgorithmSpec { get; set; }

@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetResourceGroupRequestRequest : TeaModel {
         /// <summary>
+        /// <para>The container status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Waiting</description></item>
+        /// <item><description>Running</description></item>
+        /// <item><description>Terminated</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Running</para>
         /// 
@@ -21,6 +28,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PodStatus { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID. Each resource group has a globally unique resource group ID. You can use the resource group ID to obtain information about the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ResourceSpec : TeaModel {
+        /// <summary>
+        /// <para>The resource node specifications.</para>
+        /// </summary>
         [NameInMap("NodeSpecs")]
         [Validation(Required=false)]
         public List<NodeSpec> NodeSpecs { get; set; }

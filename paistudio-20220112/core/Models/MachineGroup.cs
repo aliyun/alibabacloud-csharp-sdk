@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? Cpu { get; set; }
 
         /// <summary>
+        /// <para>Machine group creator ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1612285282502324</para>
         /// </summary>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string CreatorID { get; set; }
 
         /// <summary>
+        /// <para>Default driver supported by the machine group</para>
+        /// 
         /// <b>Example:</b>
         /// <para>470.199.02</para>
         /// </summary>
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string DiskPL { get; set; }
 
         /// <summary>
+        /// <para>Resource count</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? EcsCount { get; set; }
 
         /// <summary>
+        /// <para>ECS specification</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.large</para>
         /// </summary>
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string EcsSpec { get; set; }
 
         /// <summary>
+        /// <para>Creation Time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
         /// </summary>
@@ -70,6 +80,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtCreatedTime { get; set; }
 
         /// <summary>
+        /// <para>Expiration Time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-08-22T00:00:00Z</para>
         /// </summary>
@@ -78,6 +90,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtExpiredTime { get; set; }
 
         /// <summary>
+        /// <para>Update Time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
         /// </summary>
@@ -86,6 +100,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>Start At</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
         /// </summary>
@@ -106,6 +122,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GpuType { get; set; }
 
         /// <summary>
+        /// <para>Machine Group ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mg1</para>
         /// </summary>
@@ -118,6 +136,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? Memory { get; set; }
 
         /// <summary>
+        /// <para>Order ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>“”</para>
         /// </summary>
@@ -126,6 +146,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string OrderInstanceId { get; set; }
 
         /// <summary>
+        /// <para>Duration</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -134,7 +156,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PaymentDuration { get; set; }
 
         /// <summary>
-        /// <para>region ID</para>
+        /// <para>Region ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>Monthly</para>
@@ -144,6 +166,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PaymentDurationUnit { get; set; }
 
         /// <summary>
+        /// <para>Payment type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PREPAY</para>
         /// </summary>
@@ -152,6 +176,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PaymentType { get; set; }
 
         /// <summary>
+        /// <para>Machine group error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>“”</para>
         /// </summary>
@@ -160,6 +186,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ReasonCode { get; set; }
 
         /// <summary>
+        /// <para>Machine group fault message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>“”</para>
         /// </summary>
@@ -168,6 +196,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ReasonMessage { get; set; }
 
         /// <summary>
+        /// <para>Resource group ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rgf0zhfqn1d4ity2</para>
         /// </summary>
@@ -180,6 +210,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>Machine group status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -187,6 +219,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>List of NVIDIA GPU driver versions supported by the machine group</para>
+        /// </summary>
         [NameInMap("SupportedDrivers")]
         [Validation(Required=false)]
         public List<string> SupportedDrivers { get; set; }

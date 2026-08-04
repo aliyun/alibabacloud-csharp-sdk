@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetTrainingJobLatestMetricsRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the metric.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>loss</para>
         /// </summary>

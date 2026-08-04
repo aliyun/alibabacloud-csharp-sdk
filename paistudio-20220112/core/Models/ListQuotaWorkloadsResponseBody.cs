@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListQuotaWorkloadsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42F23B58-3684-5443-848A-8DA81FF99712</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of workloads that match the filter criteria.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23</para>
         /// </summary>
@@ -27,6 +29,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>A list of workloads.</para>
+        /// </summary>
         [NameInMap("Workloads")]
         [Validation(Required=false)]
         public List<QueueInfo> Workloads { get; set; }

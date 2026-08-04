@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class CheckInstanceWebTerminalResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F2D0392B-D749-5C48-A98A-3FAE5C9444A6</para>
         /// </summary>

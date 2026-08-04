@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ScaleQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>Quota Id</para>
+        /// <para>Quota ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quotamtl37ge7gkvdz</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string QuotaId { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F2D0392B-D749-5C48-A98A-3FAE5C9444A6</para>
         /// </summary>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class CreateAlgorithmVersionShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Algorithm configuration.</para>
+        /// </summary>
         [NameInMap("AlgorithmSpec")]
         [Validation(Required=false)]
         public string AlgorithmSpecShrink { get; set; }

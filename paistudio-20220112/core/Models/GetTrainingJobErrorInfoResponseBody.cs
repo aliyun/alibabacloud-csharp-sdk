@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetTrainingJobErrorInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The fault error message.</para>
+        /// </summary>
         [NameInMap("ErrorInfo")]
         [Validation(Required=false)]
         public GetTrainingJobErrorInfoResponseBodyErrorInfo ErrorInfo { get; set; }
         public class GetTrainingJobErrorInfoResponseBodyErrorInfo : TeaModel {
             /// <summary>
+            /// <para>The additional information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>additional info</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string AdditionalInfo { get; set; }
 
             /// <summary>
+            /// <para>The error code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The fault error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>success</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>

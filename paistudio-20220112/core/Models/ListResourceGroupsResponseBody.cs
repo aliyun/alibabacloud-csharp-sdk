@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListResourceGroupsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9CFA2665-1FFE-5929-8468-C14C25890486</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The list of resource groups.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RG1</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public List<ResourceGroup> ResourceGroups { get; set; }
 
         /// <summary>
+        /// <para>The total number of matching resource groups.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

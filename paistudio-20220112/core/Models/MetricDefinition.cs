@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class MetricDefinition : TeaModel {
+        /// <summary>
+        /// <para>The description of the metric.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>训练损失函数。</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The name of the metric.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +31,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The regular expression to collect metrics from logs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

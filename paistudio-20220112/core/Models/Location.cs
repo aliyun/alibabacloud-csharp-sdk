@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class Location : TeaModel {
         /// <summary>
+        /// <para>The code location type. Valid values: OSS and NAS.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string LocationType { get; set; }
 
         /// <summary>
+        /// <para>The code path.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss://${bucket_name}.oss-${region}.aliyuncs.com/oss/location/path/</para>
         /// </summary>

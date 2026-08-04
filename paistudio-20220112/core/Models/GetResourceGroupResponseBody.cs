@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetResourceGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster to which the resource group belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cb2c7bde30b774e46a329c</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ClusterID { get; set; }
 
         /// <summary>
+        /// <para>The provider of computing resources for the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ComputingResourceProvider { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who created the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1612285282502324</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string CreatorID { get; set; }
 
         /// <summary>
+        /// <para>The description of the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The time when the resource group was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtCreatedTime { get; set; }
 
         /// <summary>
+        /// <para>The time when the resource group was last modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TestResourceGroup</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The type of computing resource for the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ecs</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The status of the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ready</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the resource group supports RDMA.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -97,11 +119,16 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public bool? SupportRDMA { get; set; }
 
+        /// <summary>
+        /// <para>A list of tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetResourceGroupResponseBodyTags> Tags { get; set; }
         public class GetResourceGroupResponseBodyTags : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testKey</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string TagKey { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testValue</para>
             /// </summary>
@@ -119,6 +148,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 
         }
 
+        /// <summary>
+        /// <para>The details of the VPC connected to the resource group.</para>
+        /// </summary>
         [NameInMap("UserVpc")]
         [Validation(Required=false)]
         public UserVpc UserVpc { get; set; }
@@ -128,6 +160,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Version { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>35201</para>
         /// </summary>

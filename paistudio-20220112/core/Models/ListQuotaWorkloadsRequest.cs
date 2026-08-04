@@ -10,21 +10,32 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListQuotaWorkloadsRequest : TeaModel {
         /// <summary>
+        /// <para>Retrieves workloads that precede the specified workload ID in the queue.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>dsw65443322</para>
+        /// <para>dsw654433**</para>
         /// </summary>
         [NameInMap("BeforeWorkloadId")]
         [Validation(Required=false)]
         public string BeforeWorkloadId { get; set; }
 
+        /// <summary>
+        /// <para>Filters workloads by their dequeue time range.</para>
+        /// </summary>
         [NameInMap("GmtDequeuedTimeRange")]
         [Validation(Required=false)]
         public TimeRangeFilter GmtDequeuedTimeRange { get; set; }
 
+        /// <summary>
+        /// <para>Filters workloads by their enqueue time range.</para>
+        /// </summary>
         [NameInMap("GmtEnqueuedTimeRange")]
         [Validation(Required=false)]
         public TimeRangeFilter GmtEnqueuedTimeRange { get; set; }
 
+        /// <summary>
+        /// <para>Filters workloads by the time range of their last queue position change.</para>
+        /// </summary>
         [NameInMap("GmtPositionModifiedTimeRange")]
         [Validation(Required=false)]
         public TimeRangeFilter GmtPositionModifiedTimeRange { get; set; }
@@ -34,14 +45,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Filters workloads by node name.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>lrn48278127617</para>
+        /// <para>lrn482781276**</para>
         /// </summary>
         [NameInMap("NodeName")]
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
         /// <summary>
+        /// <para>The sort order for the results. Valid values are <c>asc</c> for ascending and <c>desc</c> for descending.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>desc</para>
         /// </summary>
@@ -50,6 +65,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>The number of the page to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -58,6 +75,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries to return on a single page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -74,6 +93,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? Priority { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return only workloads that belong to the specified quota.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -82,6 +103,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? ShowOwn { get; set; }
 
         /// <summary>
+        /// <para>The field to use for sorting the results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GmtCreatedTime</para>
         /// </summary>
@@ -90,6 +113,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>Filters workloads by their status in the queue.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Enqueued</para>
         /// </summary>
@@ -98,8 +123,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Filters workloads by sub-quota ID. You can specify multiple IDs, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>quota12344666,quota64432233</para>
+        /// <para>quota123446**,quota644322**</para>
         /// </summary>
         [NameInMap("SubQuotaIds")]
         [Validation(Required=false)]
@@ -110,24 +137,34 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? UseOversoldResource { get; set; }
 
         /// <summary>
+        /// <para>Filters workloads by user ID. You can specify multiple IDs, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>29043893812,23829093093</para>
+        /// <para>290438938**,238290930**</para>
         /// </summary>
         [NameInMap("UserIds")]
         [Validation(Required=false)]
         public string UserIds { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to include historical data in the query results.</para>
+        /// </summary>
         [NameInMap("WithHistoricalData")]
         [Validation(Required=false)]
         public bool? WithHistoricalData { get; set; }
 
+        /// <summary>
+        /// <para>Filters workloads based on their creation time range.</para>
+        /// </summary>
         [NameInMap("WorkloadCreatedTimeRange")]
         [Validation(Required=false)]
         public TimeRangeFilter WorkloadCreatedTimeRange { get; set; }
 
         /// <summary>
+        /// <para>Filters workloads by workload ID. You can specify multiple IDs, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>dlc12344556</para>
+        /// <para>dlc123445**</para>
         /// </summary>
         [NameInMap("WorkloadIds")]
         [Validation(Required=false)]
@@ -138,6 +175,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string WorkloadNames { get; set; }
 
         /// <summary>
+        /// <para>Filters workloads by status. You can specify multiple statuses, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Pending</para>
         /// </summary>
@@ -146,6 +185,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string WorkloadStatuses { get; set; }
 
         /// <summary>
+        /// <para>Filters workloads by the sub-product type of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dlc</para>
         /// </summary>
@@ -154,8 +195,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string WorkloadType { get; set; }
 
         /// <summary>
+        /// <para>Filters workloads by workspace ID. You can specify multiple IDs, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>186692</para>
+        /// <para>1866**</para>
         /// </summary>
         [NameInMap("WorkspaceIds")]
         [Validation(Required=false)]

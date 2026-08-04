@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Pagination token for the next page of results</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3iEiu84Yk3TwHLzJV.usagf1Ain49xYKGoB6zffsDqPYZQQ5</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CE22EE94-8AFE-53B5-9C2C-B36207B1CBF9</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of resources.</para>
+        /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
+            /// <para>Resource ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rgqssemfn6vjqqev</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string ResourceId { get; set; }
 
             /// <summary>
+            /// <para>Resource type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ResourceGroup</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string ResourceType { get; set; }
 
             /// <summary>
+            /// <para>Tag key</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tagKey</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
             public string TagKey { get; set; }
 
             /// <summary>
+            /// <para>Tag value</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tagValue</para>
             /// </summary>

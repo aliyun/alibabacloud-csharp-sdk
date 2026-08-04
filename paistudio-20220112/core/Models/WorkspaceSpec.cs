@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class WorkspaceSpec : TeaModel {
         /// <summary>
+        /// <para>Invalidity reason code when using guaranteed resources is invalid</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Type of invalidity reason when using guaranteed resources is invalid</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string CodeType { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the use of guaranteed resources is valid.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? IsGuaranteedValid { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the use of oversold resources is valid.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? IsOverSoldValid { get; set; }
 
         /// <summary>
+        /// <para>Invalidity reason content when using guaranteed resources is invalid</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -49,11 +59,16 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Reason { get; set; }
 
+        /// <summary>
+        /// <para>Specification resource information</para>
+        /// </summary>
         [NameInMap("Spec")]
         [Validation(Required=false)]
         public ResourceAmount Spec { get; set; }
 
         /// <summary>
+        /// <para>Template Name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>spec_test</para>
         /// </summary>

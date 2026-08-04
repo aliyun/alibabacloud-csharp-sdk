@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ResourceAmount : TeaModel {
         /// <summary>
+        /// <para>Total CPU</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string CPU { get; set; }
 
         /// <summary>
+        /// <para>Total GPU cards</para>
+        /// 
         /// <b>Example:</b>
         /// <para>16</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GPU { get; set; }
 
         /// <summary>
+        /// <para>GPU card type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GPU</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GPUType { get; set; }
 
         /// <summary>
+        /// <para>Total memory</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100Gi</para>
         /// </summary>

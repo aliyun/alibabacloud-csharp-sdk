@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class NodeMetric : TeaModel {
         /// <summary>
+        /// <para>The type of GPU.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GU108</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GPUType { get; set; }
 
         /// <summary>
+        /// <para>Performance Metrics.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23000</para>
         /// </summary>
@@ -26,8 +30,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public List<Metric> Metrics { get; set; }
 
         /// <summary>
+        /// <para>Edge zone ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>-i121212node</para>
+        /// <para>-i12****node</para>
         /// </summary>
         [NameInMap("NodeID")]
         [Validation(Required=false)]

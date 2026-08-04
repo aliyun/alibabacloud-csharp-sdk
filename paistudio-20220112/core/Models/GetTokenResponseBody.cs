@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetTokenResponseBody : TeaModel {
         /// <summary>
+        /// <para>ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F2D0392B-D749-5C48-A98A-3FAE5C9444A6</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Share token for the training task. Use this token as the Token parameter in the GetJob API to view details of the shared task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ql4OU830nJaF17LP6KTry4a9DvnjIXHP</para>
         /// </summary>

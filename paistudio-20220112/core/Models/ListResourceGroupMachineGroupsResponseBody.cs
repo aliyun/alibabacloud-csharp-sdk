@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListResourceGroupMachineGroupsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of machine groups.</para>
+        /// </summary>
         [NameInMap("MachineGroups")]
         [Validation(Required=false)]
         public List<MachineGroup> MachineGroups { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E7C42CC7-2E85-508A-84F4-923B605FD10F</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of machine groups.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>

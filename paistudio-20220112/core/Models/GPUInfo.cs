@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GPUInfo : TeaModel {
         /// <summary>
+        /// <para>Quantity</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? Count { get; set; }
 
         /// <summary>
+        /// <para>Type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>T4</para>
         /// </summary>

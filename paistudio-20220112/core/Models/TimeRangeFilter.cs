@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class TimeRangeFilter : TeaModel {
         /// <summary>
+        /// <para>The end time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
         /// </summary>

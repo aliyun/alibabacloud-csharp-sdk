@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListNodesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of nodes.</para>
+        /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]
         public List<Node> Nodes { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of nodes that meet the filter conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23</para>
         /// </summary>

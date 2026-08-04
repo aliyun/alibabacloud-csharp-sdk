@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ResourceGroup : TeaModel {
         /// <summary>
-        /// <para>CreatorID</para>
+        /// <para>The user ID of the creator.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1612285282502324</para>
+        /// <para>161228528250****</para>
         /// </summary>
         [NameInMap("CreatorID")]
         [Validation(Required=false)]
         public string CreatorID { get; set; }
 
         /// <summary>
-        /// <para>pai resource created time</para>
+        /// <para>The time the PAI resource group was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtCreatedTime { get; set; }
 
         /// <summary>
-        /// <para>GmtModified</para>
+        /// <para>The time the PAI resource group was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-22T00:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>pai resource group name</para>
+        /// <para>The name of the PAI resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RG1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>NodeCount</para>
+        /// <para>The number of nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? NodeCount { get; set; }
 
         /// <summary>
-        /// <para>pai resource group id</para>
+        /// <para>The ID of the PAI resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg17tmvwiokhzaxg</para>
+        /// <para>rg17tmvwiokh****</para>
         /// </summary>
         [NameInMap("ResourceGroupID")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>UserVpc</para>
+        /// <para>The VPC configuration.</para>
         /// </summary>
         [NameInMap("UserVpc")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>pworkspace id</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23000</para>

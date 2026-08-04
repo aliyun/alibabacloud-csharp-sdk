@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class QuotaIdName : TeaModel {
         /// <summary>
+        /// <para>Resource quota ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>quota12345</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string QuotaId { get; set; }
 
         /// <summary>
+        /// <para>Resource quota name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dlc-quota</para>
         /// </summary>

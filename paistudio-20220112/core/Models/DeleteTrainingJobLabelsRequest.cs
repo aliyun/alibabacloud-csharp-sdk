@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class DeleteTrainingJobLabelsRequest : TeaModel {
         /// <summary>
+        /// <para>The keys of the labels.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

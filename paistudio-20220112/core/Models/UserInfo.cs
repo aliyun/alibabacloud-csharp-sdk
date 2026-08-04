@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class UserInfo : TeaModel {
         /// <summary>
+        /// <para>User ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>161222222222</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>username</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

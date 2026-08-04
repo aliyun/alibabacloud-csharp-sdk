@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class CreateAlgorithmVersionResponseBody : TeaModel {
         /// <summary>
+        /// <para>ID of the training algorithm.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>algo-xsldfvu1334</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AlgorithmId { get; set; }
 
         /// <summary>
+        /// <para>Algorithm version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v0.0.1</para>
         /// </summary>

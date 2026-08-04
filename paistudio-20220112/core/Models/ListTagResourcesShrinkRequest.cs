@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListTagResourcesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Pagination token for the next page of results</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ad31d453a1f3f23ce0b5e8707e68181f</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Region ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,11 +30,15 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Resource IDs. Maximum: 50 items.</para>
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceIdShrink { get; set; }
 
         /// <summary>
+        /// <para>Resource type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,6 +48,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>Tags to filter by. Maximum: 20 items.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string TagShrink { get; set; }

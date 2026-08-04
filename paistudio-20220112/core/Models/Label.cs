@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class Label : TeaModel {
         /// <summary>
+        /// <para>The key of the label.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testAccTag</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>The value of the label.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>nihao</para>
         /// </summary>

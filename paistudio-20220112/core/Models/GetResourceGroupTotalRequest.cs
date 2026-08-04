@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetResourceGroupTotalRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Resource Group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rgf0zhfqn1d4ity2</para>
         /// </summary>

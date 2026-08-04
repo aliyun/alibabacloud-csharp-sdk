@@ -10,13 +10,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class WorkspaceIdName : TeaModel {
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>ws123456</para>
+        /// <para>ws123***</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
+        /// <summary>
+        /// <para>The workspace name.</para>
+        /// </summary>
         [NameInMap("WorkspaceName")]
         [Validation(Required=false)]
         public string WorkspaceName { get; set; }

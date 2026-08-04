@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class Channel : TeaModel {
+        /// <summary>
+        /// <para>Channel description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>模型输出。</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Channel name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +31,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Storage configuration of the channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -32,6 +41,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public Dictionary<string, object> Properties { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the channel must be configured.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -39,6 +50,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public bool? Required { get; set; }
 
+        /// <summary>
+        /// <para>List of storage classes supported by the channel.</para>
+        /// </summary>
         [NameInMap("SupportedChannelTypes")]
         [Validation(Required=false)]
         public List<string> SupportedChannelTypes { get; set; }

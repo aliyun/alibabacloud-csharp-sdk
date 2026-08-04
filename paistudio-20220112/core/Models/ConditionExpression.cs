@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ConditionExpression : TeaModel {
         /// <summary>
+        /// <para>The type of required resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>The criterion for evaluation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Operator { get; set; }
 
         /// <summary>
+        /// <para>List of resource values.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Values")]

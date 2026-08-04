@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListAlgorithmsRequest : TeaModel {
         /// <summary>
+        /// <para>Algorithm ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>algo-xsldfvu1334</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AlgorithmId { get; set; }
 
         /// <summary>
+        /// <para>Algorithm name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm_training</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AlgorithmName { get; set; }
 
         /// <summary>
+        /// <para>Algorithm provider.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pai</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AlgorithmProvider { get; set; }
 
         /// <summary>
+        /// <para>Page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>

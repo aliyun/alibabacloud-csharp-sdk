@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetNodeMetricsRequest : TeaModel {
         /// <summary>
+        /// <para>The end time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-07-10T10:17:06</para>
         /// </summary>
@@ -18,6 +20,15 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The GPU type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>V100</description></item>
+        /// <item><description>A100</description></item>
+        /// <item><description>A10</description></item>
+        /// <item><description>T4</description></item>
+        /// <item><description>P100</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>V100</para>
         /// </summary>
@@ -26,6 +37,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GPUType { get; set; }
 
         /// <summary>
+        /// <para>The start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-07-08T02:23:30.292Z</para>
         /// </summary>
@@ -34,6 +47,17 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The time step. Default value: 5m. The supported time units are:</para>
+        /// <list type="bullet">
+        /// <item><description><para>h: hours.</para>
+        /// </description></item>
+        /// <item><description><para>m: minutes.</para>
+        /// </description></item>
+        /// <item><description><para>s: seconds.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>If the value does not contain a unit, the default unit is s (seconds).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1h</para>
         /// </summary>
@@ -42,6 +66,11 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string TimeStep { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to display non-essential information. Non-essential information currently includes Labels.
+        /// Valid values:</para>
+        /// <para>false: does not display non-essential information (default value)
+        /// true: displays non-essential information</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

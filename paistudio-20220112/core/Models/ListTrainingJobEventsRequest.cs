@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListTrainingJobEventsRequest : TeaModel {
         /// <summary>
+        /// <para>End UTC time (ISO8601 format). If empty, it is the current time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>Page number (default is 1).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size (default is 100).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Start UTC time (ISO8601 format). If empty, it is the task start time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>

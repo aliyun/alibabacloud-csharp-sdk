@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class WorkspaceSpecs : TeaModel {
         /// <summary>
+        /// <para>Applicable product (DLC, DSW, EAS, ...)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DLC</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string Product { get; set; }
 
+        /// <summary>
+        /// <para>List of resource specifications</para>
+        /// </summary>
         [NameInMap("Specs")]
         [Validation(Required=false)]
         public List<WorkspaceSpec> Specs { get; set; }
 
         /// <summary>
+        /// <para>Workspace ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>122421</para>
         /// </summary>

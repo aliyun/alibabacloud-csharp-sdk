@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetTokenRequest : TeaModel {
         /// <summary>
+        /// <para>Time-to-live (TTL) of the share link in seconds. Default is 604800. Minimum is 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? ExpireTime { get; set; }
 
         /// <summary>
+        /// <para>ID of the training task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

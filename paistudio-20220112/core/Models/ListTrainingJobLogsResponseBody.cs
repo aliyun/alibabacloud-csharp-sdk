@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListTrainingJobLogsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of logs.</para>
+        /// </summary>
         [NameInMap("Logs")]
         [Validation(Required=false)]
         public List<string> Logs { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CBF05F13-B24C-5129-9048-4FA684DCD579</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of logs that match the filter condition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23</para>
         /// </summary>

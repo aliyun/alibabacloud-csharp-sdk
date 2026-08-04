@@ -10,6 +10,22 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class UntagResourcesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Whether to detach all tags from the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Detach all tags from the resource.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Do not detach all tags from the resource.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Default value: false.</description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>If you specify both TagKey and this parameter, this parameter is ignored.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +34,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? All { get; set; }
 
         /// <summary>
+        /// <para>Region</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +45,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Resource IDs. Maximum: 50 items.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -35,6 +53,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ResourceIdShrink { get; set; }
 
         /// <summary>
+        /// <para>Resource type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +63,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>List of tag keys. Maximum: 20 items.</para>
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public string TagKeyShrink { get; set; }
