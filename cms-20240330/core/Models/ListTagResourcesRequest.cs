@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results to return. The maximum value is 200.</para>
+        /// <para>The maximum number of results to return. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>A list of resource IDs.</para>
+        /// <para>The list of resource IDs.</para>
         /// </summary>
         [NameInMap("resourceId")]
         [Validation(Required=false)]
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags. These are used as filter conditions for the query.</para>
-        /// <para>You can specify up to 20 tags.</para>
+        /// <para>The labels. Used as filter conditions for the query.</para>
+        /// <para>You can specify up to 20 labels.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]

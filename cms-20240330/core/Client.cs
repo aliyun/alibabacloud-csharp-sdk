@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group of a resource.</para>
+        /// <para>Modifies the resource group to which a resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -486,7 +486,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group of a resource.</para>
+        /// <para>Modifies the resource group to which a resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -540,7 +540,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group of a resource.</para>
+        /// <para>Modifies the resource group to which a resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -559,7 +559,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the resource group of a resource.</para>
+        /// <para>Modifies the resource group to which a resource belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11016,7 +11016,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query integration center policy information.</para>
+        /// <para>Queries the policy information of the DDoS Access Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11056,7 +11056,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query integration center policy information.</para>
+        /// <para>Queries the policy information of the DDoS Access Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11096,7 +11096,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query integration center policy information.</para>
+        /// <para>Queries the policy information of the DDoS Access Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11115,7 +11115,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query integration center policy information.</para>
+        /// <para>Queries the policy information of the DDoS Access Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12960,13 +12960,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ServiceTask</para>
+        /// <para>Queries the details of a single ServiceTask under a specified application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据 taskId 查询单个服务任务详情。
-        /// 返回内容随 type 变化：heapdump 返回堆转储任务信息；LiveDebug 返回任务记录及 taskConfig（extraInfo）等字段。</para>
+        /// <para>Queries the details of a single service task based on the taskId.
+        /// The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13012,13 +13012,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ServiceTask</para>
+        /// <para>Queries the details of a single ServiceTask under a specified application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据 taskId 查询单个服务任务详情。
-        /// 返回内容随 type 变化：heapdump 返回堆转储任务信息；LiveDebug 返回任务记录及 taskConfig（extraInfo）等字段。</para>
+        /// <para>Queries the details of a single service task based on the taskId.
+        /// The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13064,13 +13064,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ServiceTask</para>
+        /// <para>Queries the details of a single ServiceTask under a specified application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据 taskId 查询单个服务任务详情。
-        /// 返回内容随 type 变化：heapdump 返回堆转储任务信息；LiveDebug 返回任务记录及 taskConfig（extraInfo）等字段。</para>
+        /// <para>Queries the details of a single service task based on the taskId.
+        /// The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13089,13 +13089,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ServiceTask</para>
+        /// <para>Queries the details of a single ServiceTask under a specified application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据 taskId 查询单个服务任务详情。
-        /// 返回内容随 type 变化：heapdump 返回堆转储任务信息；LiveDebug 返回任务记录及 taskConfig（extraInfo）等字段。</para>
+        /// <para>Queries the details of a single service task based on the taskId.
+        /// The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18652,17 +18652,17 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举ServiceTask</para>
+        /// <para>Lists service tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>按任务类型列举应用下的服务任务。</para>
+        /// <para>Lists service tasks under an application by task type.</para>
         /// <list type="bullet">
-        /// <item><description>type=heapdump：返回堆转储任务列表</description></item>
-        /// <item><description>type=pprof：返回 pprof dump 列表（需配合 searchCondition）</description></item>
-        /// <item><description>type=live_debug_*：返回对应 LiveDebug 任务列表
-        /// 支持 nextToken / maxResults 分页，以及 searchCondition 过滤。</description></item>
+        /// <item><description>type=heapdump: Returns the list of heap dump tasks.</description></item>
+        /// <item><description>type=pprof: Returns the list of pprof dumps (requires searchCondition).</description></item>
+        /// <item><description>type=live_debug_*: Returns the list of corresponding LiveDebug tasks.
+        /// Supports nextToken/maxResults pagination and searchCondition filtering.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18721,17 +18721,17 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举ServiceTask</para>
+        /// <para>Lists service tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>按任务类型列举应用下的服务任务。</para>
+        /// <para>Lists service tasks under an application by task type.</para>
         /// <list type="bullet">
-        /// <item><description>type=heapdump：返回堆转储任务列表</description></item>
-        /// <item><description>type=pprof：返回 pprof dump 列表（需配合 searchCondition）</description></item>
-        /// <item><description>type=live_debug_*：返回对应 LiveDebug 任务列表
-        /// 支持 nextToken / maxResults 分页，以及 searchCondition 过滤。</description></item>
+        /// <item><description>type=heapdump: Returns the list of heap dump tasks.</description></item>
+        /// <item><description>type=pprof: Returns the list of pprof dumps (requires searchCondition).</description></item>
+        /// <item><description>type=live_debug_*: Returns the list of corresponding LiveDebug tasks.
+        /// Supports nextToken/maxResults pagination and searchCondition filtering.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18790,17 +18790,17 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举ServiceTask</para>
+        /// <para>Lists service tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>按任务类型列举应用下的服务任务。</para>
+        /// <para>Lists service tasks under an application by task type.</para>
         /// <list type="bullet">
-        /// <item><description>type=heapdump：返回堆转储任务列表</description></item>
-        /// <item><description>type=pprof：返回 pprof dump 列表（需配合 searchCondition）</description></item>
-        /// <item><description>type=live_debug_*：返回对应 LiveDebug 任务列表
-        /// 支持 nextToken / maxResults 分页，以及 searchCondition 过滤。</description></item>
+        /// <item><description>type=heapdump: Returns the list of heap dump tasks.</description></item>
+        /// <item><description>type=pprof: Returns the list of pprof dumps (requires searchCondition).</description></item>
+        /// <item><description>type=live_debug_*: Returns the list of corresponding LiveDebug tasks.
+        /// Supports nextToken/maxResults pagination and searchCondition filtering.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18820,17 +18820,17 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举ServiceTask</para>
+        /// <para>Lists service tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>按任务类型列举应用下的服务任务。</para>
+        /// <para>Lists service tasks under an application by task type.</para>
         /// <list type="bullet">
-        /// <item><description>type=heapdump：返回堆转储任务列表</description></item>
-        /// <item><description>type=pprof：返回 pprof dump 列表（需配合 searchCondition）</description></item>
-        /// <item><description>type=live_debug_*：返回对应 LiveDebug 任务列表
-        /// 支持 nextToken / maxResults 分页，以及 searchCondition 过滤。</description></item>
+        /// <item><description>type=heapdump: Returns the list of heap dump tasks.</description></item>
+        /// <item><description>type=pprof: Returns the list of pprof dumps (requires searchCondition).</description></item>
+        /// <item><description>type=live_debug_*: Returns the list of corresponding LiveDebug tasks.
+        /// Supports nextToken/maxResults pagination and searchCondition filtering.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19032,7 +19032,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags attached to resources.</para>
+        /// <para>Queries labels associated with resources.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19104,7 +19104,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags attached to resources.</para>
+        /// <para>Queries labels associated with resources.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19176,7 +19176,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags attached to resources.</para>
+        /// <para>Queries labels associated with resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19195,7 +19195,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags attached to resources.</para>
+        /// <para>Queries labels associated with resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19235,6 +19235,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListWorkspacesShrinkRequest request = new ListWorkspacesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkspaceNameList))
             {
                 request.WorkspaceNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkspaceNameList, "workspaceNameList", "simple");
@@ -19251,6 +19255,14 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["tags"] = request.TagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
             {
@@ -19303,6 +19315,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListWorkspacesShrinkRequest request = new ListWorkspacesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WorkspaceNameList))
             {
                 request.WorkspaceNameListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WorkspaceNameList, "workspaceNameList", "simple");
@@ -19319,6 +19335,14 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["tags"] = request.TagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
             {
@@ -19688,9 +19712,17 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 body["displayName"] = request.DisplayName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsProject))
             {
                 body["slsProject"] = request.SlsProject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                body["tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -19742,9 +19774,17 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 body["displayName"] = request.DisplayName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsProject))
             {
                 body["slsProject"] = request.SlsProject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                body["tags"] = request.Tags;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -20416,7 +20456,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to one or more resources.</para>
+        /// <para>Attaches labels to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20470,7 +20510,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to one or more resources.</para>
+        /// <para>Attaches labels to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20524,7 +20564,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to one or more resources.</para>
+        /// <para>Attaches labels to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20543,7 +20583,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to one or more resources.</para>
+        /// <para>Attaches labels to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20562,7 +20602,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a tag</para>
+        /// <para>Unbinds labels from a resource.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -20630,7 +20670,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a tag</para>
+        /// <para>Unbinds labels from a resource.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -20698,7 +20738,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a tag</para>
+        /// <para>Unbinds labels from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20717,7 +20757,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a tag</para>
+        /// <para>Unbinds labels from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">

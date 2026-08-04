@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results to return. The maximum value is 200.</para>
+        /// <para>The maximum number of results to return. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of tags.</para>
+        /// <para>The label list.</para>
         /// </summary>
         [NameInMap("tagResources")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The label key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The label value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

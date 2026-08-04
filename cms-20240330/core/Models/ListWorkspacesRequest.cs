@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListWorkspacesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 50. Maximum value: 50.</para>
+        /// <para>The number of entries per page.
+        /// Default value:
+        ///     50
+        /// Maximum value:
+        ///     50</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxx</para>
@@ -43,7 +47,40 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace. This parameter supports fuzzy search.</para>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-ae******ey</para>
+        /// </summary>
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<ListWorkspacesRequestTags> Tags { get; set; }
+        public class ListWorkspacesRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// </summary>
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// </summary>
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The workspace name. Fuzzy match is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test-001</para>
@@ -53,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string WorkspaceName { get; set; }
 
         /// <summary>
-        /// <para>The names of the workspaces. This parameter supports exact search.</para>
+        /// <para>The workspace name. Exact match is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test-001</para>

@@ -30,6 +30,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group specified when the workspace is created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-ae******ey</para>
+        /// </summary>
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
+        /// <summary>
         /// <para>The name of the Simple Log Service project.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,6 +49,29 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("slsProject")]
         [Validation(Required=false)]
         public string SlsProject { get; set; }
+
+        /// <summary>
+        /// <para>The tags attached to the workspace when it is created.</para>
+        /// </summary>
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<PutWorkspaceRequestTags> Tags { get; set; }
+        public class PutWorkspaceRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// </summary>
+            [NameInMap("key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// </summary>
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 
