@@ -100,6 +100,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("parentId")]
+        [Validation(Required=false)]
+        public long? ParentId { get; set; }
+
+        /// <summary>
         /// <para>Filters the results by status.</para>
         /// 
         /// <b>Example:</b>

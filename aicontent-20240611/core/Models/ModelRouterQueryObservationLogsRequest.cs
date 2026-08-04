@@ -60,6 +60,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>30001,30002</para>
+        /// </summary>
+        [NameInMap("memberUserIds")]
+        [Validation(Required=false)]
+        public string MemberUserIds { get; set; }
+
+        /// <summary>
         /// <para>The model ID used to filter the results.</para>
         /// 
         /// <b>Example:</b>

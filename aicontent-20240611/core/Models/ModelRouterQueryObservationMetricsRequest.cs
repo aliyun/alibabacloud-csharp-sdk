@@ -60,6 +60,16 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Optional. Filters by member IDs. Separate multiple IDs with commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001,30002</para>
+        /// </summary>
+        [NameInMap("memberUserIds")]
+        [Validation(Required=false)]
+        public string MemberUserIds { get; set; }
+
+        /// <summary>
         /// <para>The model ID used to filter the results.</para>
         /// 
         /// <b>Example:</b>
@@ -140,7 +150,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The time range for the query. Valid values: 1h, 6h, 24h, 7d, and 30d.</para>
+        /// <para>The time range for the query. Valid values: 1h, 6h, 24h, 7d, 30d.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24h</para>

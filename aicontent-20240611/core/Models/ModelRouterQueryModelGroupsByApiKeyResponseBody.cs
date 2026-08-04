@@ -17,7 +17,15 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public ModelRouterQueryModelGroupsByApiKeyResponseBodyData Data { get; set; }
         public class ModelRouterQueryModelGroupsByApiKeyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the department to which the key belongs.</para>
+            /// <b>Example:</b>
+            /// <para>department</para>
+            /// </summary>
+            [NameInMap("bindType")]
+            [Validation(Required=false)]
+            public string BindType { get; set; }
+
+            /// <summary>
+            /// <para>The department ID to which the key belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001</para>

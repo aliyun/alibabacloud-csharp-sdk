@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryApiKeyListRequest : TeaModel {
         /// <summary>
-        /// <para>Filters the results by the specified client ID.</para>
+        /// <para>The client ID used to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
-        /// <para>The grouping field.</para>
+        /// <para>The field by which to group the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
@@ -28,6 +28,16 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("groupBy")]
         [Validation(Required=false)]
         public string GroupBy { get; set; }
+
+        /// <summary>
+        /// <para>Optional. If set to true, the keys of members under the department are also included when filtering by department.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("includeMemberKeys")]
+        [Validation(Required=false)]
+        public bool? IncludeMemberKeys { get; set; }
 
         /// <summary>
         /// <para>The search keyword.</para>
@@ -50,7 +60,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the total count of results.</para>
+        /// <para>Optional. Filters by member IDs. Separate multiple member IDs with commas. If this parameter is not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001,30002</para>
+        /// </summary>
+        [NameInMap("memberUserIds")]
+        [Validation(Required=false)]
+        public string MemberUserIds { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to return the total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +80,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public bool? NeedTotalCount { get; set; }
 
         /// <summary>
-        /// <para>The token for retrieving the next page of results. An empty value indicates that all results have been returned.</para>
+        /// <para>The pagination token. An empty value indicates that no more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +90,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort field.</para>
+        /// <para>The field by which to sort the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
@@ -80,7 +100,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The sort order.</para>
+        /// <para>The sort direction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -90,7 +110,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderDirection { get; set; }
 
         /// <summary>
-        /// <para>The page number to retrieve.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -100,7 +120,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -110,7 +130,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by the specified status.</para>
+        /// <para>The status used to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

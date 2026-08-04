@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryObservationChartsRequest : TeaModel {
         /// <summary>
-        /// <para>The API key ID to use as a filter.</para>
+        /// <para>The API key ID used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>The client ID to use as a filter.</para>
+        /// <para>The client ID used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the custom time range, in ISO 8601 UTC format. If specified, <c>startTime</c> must also be provided.</para>
+        /// <para>The custom end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-02T00:00:00Z</para>
@@ -40,7 +40,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The model ID to use as a filter.</para>
+        /// <para>Optional. Filters by member IDs. Separate multiple IDs with commas. If this parameter is not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001,30002</para>
+        /// </summary>
+        [NameInMap("memberUserIds")]
+        [Validation(Required=false)]
+        public string MemberUserIds { get; set; }
+
+        /// <summary>
+        /// <para>The model ID used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +60,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ModelId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the custom time range, in ISO 8601 UTC format. If specified, <c>endTime</c> must also be provided.</para>
+        /// <para>The custom start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
@@ -60,7 +70,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The time range for the query. Valid values are <c>1h</c>, <c>6h</c>, <c>24h</c>, <c>7d</c>, and <c>30d</c>. This parameter is mutually exclusive with <c>startTime</c> and <c>endTime</c>.</para>
+        /// <para>The time range for the query. Valid values: 1h, 6h, 24h, 7d, and 30d.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24h</para>

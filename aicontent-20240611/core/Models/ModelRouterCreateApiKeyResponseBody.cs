@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public ApiKeyDTO Data { get; set; }
 
         /// <summary>
-        /// <para>The fault code.</para>
+        /// <para>The fault message code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>

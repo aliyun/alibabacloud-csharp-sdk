@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
     public class ClientTreeDTO : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>杭州市</para>
+        /// <para>Hangzhou</para>
         /// </summary>
         [NameInMap("address")]
         [Validation(Required=false)]
@@ -115,11 +115,19 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>我的客户</para>
+        /// <para>My customer</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>department</para>
+        /// </summary>
+        [NameInMap("nodeType")]
+        [Validation(Required=false)]
+        public string NodeType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -131,11 +139,19 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>备注</para>
+        /// <para>Remarks</para>
         /// </summary>
         [NameInMap("remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30001</para>
+        /// </summary>
+        [NameInMap("userId")]
+        [Validation(Required=false)]
+        public long? UserId { get; set; }
 
     }
 

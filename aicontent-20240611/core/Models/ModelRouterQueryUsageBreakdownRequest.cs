@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
-        /// <para>The query end time, in UNIX timestamp (seconds).</para>
+        /// <para>The query end time, in UNIX timestamp format (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +60,16 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// <para>Optional. Filters results by members (member IDs, separated by commas). If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001,30002</para>
+        /// </summary>
+        [NameInMap("memberUserIds")]
+        [Validation(Required=false)]
+        public string MemberUserIds { get; set; }
 
         /// <summary>
         /// <para>The pagination token.</para>
@@ -92,7 +102,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query start time, in UNIX timestamp (seconds).</para>
+        /// <para>The query start time, in UNIX timestamp format (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

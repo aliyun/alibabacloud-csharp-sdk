@@ -71,6 +71,22 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>30001</para>
+        /// </summary>
+        [NameInMap("memberUserId")]
+        [Validation(Required=false)]
+        public long? MemberUserId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>张三</para>
+        /// </summary>
+        [NameInMap("memberUserName")]
+        [Validation(Required=false)]
+        public string MemberUserName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>MyApiKey</para>
         /// </summary>
         [NameInMap("name")]

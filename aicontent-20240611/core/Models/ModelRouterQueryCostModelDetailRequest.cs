@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryCostModelDetailRequest : TeaModel {
         /// <summary>
+        /// <para>Optional. Filters by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>The department ID by which to filter results.</para>
+        /// <para>The department ID used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query, specified as a Unix timestamp in seconds.</para>
+        /// <para>The end time, in UNIX timestamp (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per page. This parameter is recommended for pagination.</para>
+        /// <para>maxResults</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -47,6 +49,16 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// <para>Optional. Filters by member IDs. Separate multiple IDs with commas. If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001,30002</para>
+        /// </summary>
+        [NameInMap("memberUserIds")]
+        [Validation(Required=false)]
+        public string MemberUserIds { get; set; }
 
         /// <summary>
         /// <para>The model ID.</para>
@@ -60,7 +72,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ModelId { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. Obtain this token from the <c>nextToken</c> field in a previous response.</para>
+        /// <para>nextToken</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxx-xxxxx</para>
@@ -70,7 +82,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number. This parameter is part of an older pagination method. For better performance and consistency, use <c>maxResults</c> and <c>nextToken</c> instead.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -80,7 +92,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The page number. This parameter is part of an older pagination method. For better performance and consistency, use <c>maxResults</c> and <c>nextToken</c> instead.</para>
+        /// <para>The page number. This parameter takes priority over the page parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +102,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The page size. Default: 20.</para>
+        /// <para>The number of entries per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -100,7 +112,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query, specified as a Unix timestamp in seconds.</para>
+        /// <para>The start time, in UNIX timestamp (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

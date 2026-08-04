@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryCostTrendMetricsRequest : TeaModel {
         /// <summary>
+        /// <para>Optional. Filters results by API Key ID. This parameter works in conjunction with the department and requires clientId to be specified first.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by department ID.</para>
+        /// <para>Filters results by department ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query, specified as a Unix timestamp in seconds.</para>
+        /// <para>The end time, in UNIX timestamp format (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +41,12 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The granularity of the data. Valid values: <c>hourly</c> and <c>daily</c>. Default: <c>hourly</c>.</para>
+        /// <para>The time granularity. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>hourly</description></item>
+        /// <item><description>daily</description></item>
+        /// </list>
+        /// <para>Default value: hourly.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hourly</para>
@@ -49,7 +56,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Granularity { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per page.</para>
+        /// <para>The maximum number of results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -59,7 +66,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The model types to query, separated by commas.</para>
+        /// <para>Optional. Filters results by members (member IDs, separated by commas). If not specified, the department and all its members are included. If an empty value is specified, only the department is included without members.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001,30002</para>
+        /// </summary>
+        [NameInMap("memberUserIds")]
+        [Validation(Required=false)]
+        public string MemberUserIds { get; set; }
+
+        /// <summary>
+        /// <para>The model types, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LLM,VL</para>
@@ -69,7 +86,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelTypes { get; set; }
 
         /// <summary>
-        /// <para>The pagination token from a previous response to retrieve the next page of results. If this parameter is omitted, the first page of results is returned.</para>
+        /// <para>nextToken</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxx-xxxxx</para>
@@ -79,7 +96,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query, specified as a Unix timestamp in seconds.</para>
+        /// <para>The start time, in UNIX timestamp format (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

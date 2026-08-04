@@ -64,6 +64,22 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string DimValues { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>30001</para>
+        /// </summary>
+        [NameInMap("memberUserId")]
+        [Validation(Required=false)]
+        public long? MemberUserId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>张三</para>
+        /// </summary>
+        [NameInMap("memberUserName")]
+        [Validation(Required=false)]
+        public string MemberUserName { get; set; }
+
+        /// <summary>
         /// <para>Model identifier</para>
         /// 
         /// <b>Example:</b>
@@ -94,6 +110,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelName { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>qwen</para>
+        /// </summary>
+        [NameInMap("modelSymbol")]
+        [Validation(Required=false)]
+        public string ModelSymbol { get; set; }
+
+        /// <summary>
         /// <para>Statistics category</para>
         /// 
         /// <b>Example:</b>
@@ -102,6 +126,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("modelType")]
         [Validation(Required=false)]
         public string ModelType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("modelVersion")]
+        [Validation(Required=false)]
+        public int? ModelVersion { get; set; }
 
         /// <summary>
         /// <para>Payable amount, rounded to 8 decimal places</para>
