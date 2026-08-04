@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ScanCodeBindResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned error code. A value of 200 indicates that the invocation succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Result message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>686DF82F-45C4-7DF7-8B67-27B91CFD63A9</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Detailed information returned.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ScanCodeBindResponseBodyResult Result { get; set; }
         public class ScanCodeBindResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Product group</para>
+            /// 
             /// <b>Example:</b>
             /// <para>X1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string BizGroup { get; set; }
 
             /// <summary>
+            /// <para>Product categorization</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AILABS</para>
             /// </summary>
@@ -67,7 +80,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             /// <para>DAFE****ce3ej=</para>
             /// 
             /// <b>Example:</b>
-            /// <para>用户opneId</para>
+            /// <para>用户OpenId</para>
             /// </summary>
             [NameInMap("UserOpenId")]
             [Validation(Required=false)]

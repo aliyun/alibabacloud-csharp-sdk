@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ThirdImmediateMsgPushRequest : TeaModel {
         /// <summary>
+        /// <para>Business type (FLIGHT: flight, TRAIN: train)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FLIGHT</para>
         /// </summary>
@@ -18,14 +20,18 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string BizType { get; set; }
 
         /// <summary>
+        /// <para>Change details (JSON-formatted change data)</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>changeDetail</para>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("ChangeDetail")]
         [Validation(Required=false)]
         public string ChangeDetail { get; set; }
 
         /// <summary>
+        /// <para>Order ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>orderId</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>Passenger IDs to change</para>
+        /// 
         /// <b>Example:</b>
         /// <para>psgIds</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string PsgIds { get; set; }
 
         /// <summary>
+        /// <para>Request source</para>
+        /// 
         /// <b>Example:</b>
         /// <para>source</para>
         /// </summary>
@@ -50,22 +60,28 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Source { get; set; }
 
         /// <summary>
+        /// <para>change type (TRAIN_ISSUED, FLIGHT_CHANGED)</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>trafficChangeType</para>
+        /// <para>TRAIN_ISSUED</para>
         /// </summary>
         [NameInMap("TrafficChangeType")]
         [Validation(Required=false)]
         public string TrafficChangeType { get; set; }
 
         /// <summary>
+        /// <para>change type description (ticket issued, rebooked)</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>trafficChangeTypeDesc</para>
+        /// <para>已出票</para>
         /// </summary>
         [NameInMap("TrafficChangeTypeDesc")]
         [Validation(Required=false)]
         public string TrafficChangeTypeDesc { get; set; }
 
         /// <summary>
+        /// <para>Journey IDs to change</para>
+        /// 
         /// <b>Example:</b>
         /// <para>trafficJourneyIds</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string TrafficJourneyIds { get; set; }
 
         /// <summary>
+        /// <para>sub-order ID of the changed train request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>trafficSubOrderIds</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string TrafficSubOrderIds { get; set; }
 
         /// <summary>
+        /// <para>user ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>userId</para>
         /// </summary>

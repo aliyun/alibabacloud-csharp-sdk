@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class CreateScheduleTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>Error message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>调用成功</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F7E2****B7C94</para>
         /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>ID of the successfully created job</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567</para>
         /// </summary>

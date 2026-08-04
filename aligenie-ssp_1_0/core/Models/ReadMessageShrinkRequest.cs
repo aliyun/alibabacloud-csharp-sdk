@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ReadMessageShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Message ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public long? MessageId { get; set; }
 
         /// <summary>
+        /// <para>User information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

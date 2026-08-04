@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class AuthLoginWithThirdUserInfoRequest : TeaModel {
         /// <summary>
+        /// <para>Extension information</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// 
@@ -21,6 +23,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public Dictionary<string, object> ExtInfo { get; set; }
 
         /// <summary>
+        /// <para>Scene code, which must be requested from Tmall Genie in advance</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +34,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string SceneCode { get; set; }
 
         /// <summary>
+        /// <para>Third-party User Identifier</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,6 +45,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string ThirdUserIdentifier { get; set; }
 
         /// <summary>
+        /// <para>Third-party User Type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

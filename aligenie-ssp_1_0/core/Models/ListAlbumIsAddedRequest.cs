@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListAlbumIsAddedRequest : TeaModel {
+        /// <summary>
+        /// <para>Album ID list</para>
+        /// </summary>
         [NameInMap("AlbumIdList")]
         [Validation(Required=false)]
         public List<string> AlbumIdList { get; set; }
 
+        /// <summary>
+        /// <para>Device Information</para>
+        /// </summary>
         [NameInMap("DeviceInfo")]
         [Validation(Required=false)]
         public ListAlbumIsAddedRequestDeviceInfo DeviceInfo { get; set; }
@@ -39,6 +45,9 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 
         }
 
+        /// <summary>
+        /// <para>User information</para>
+        /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public ListAlbumIsAddedRequestUserInfo UserInfo { get; set; }

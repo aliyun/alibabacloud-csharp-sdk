@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class AuthLoginWithTaobaoUserInfoRequest : TeaModel {
         /// <summary>
+        /// <para>Encrypted Taobao User Identifier</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string EncryptedTaobaoUserIdentifier { get; set; }
 
         /// <summary>
+        /// <para>Session ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

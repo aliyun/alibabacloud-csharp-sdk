@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class GetUserByDeviceIdRequest : TeaModel {
         /// <summary>
+        /// <para>List of device identity information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public GetUserByDeviceIdRequestDeviceInfo DeviceInfo { get; set; }
         public class GetUserByDeviceIdRequestDeviceInfo : TeaModel {
             /// <summary>
+            /// <para>The value corresponding to the encoding type. Set this parameter to the Project ID of the product’s ProductKey in the Tmall Genie AI platform.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. Set this parameter to <b>PROJECT_ID</b>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>Device identifier, configured as either deviceOpenId or deviceUnionId.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +51,11 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Type of the device ID:  </para>
+            /// <list type="bullet">
+            /// <item><description>OPEN_ID: The default device ID.  </description></item>
+            /// <item><description>UNION_ID: The organization-dimension device ID. You must request an organization on the Open Platform in advance.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +66,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string IdType { get; set; }
 
             /// <summary>
+            /// <para>Organization ID. Required if IdType is set to UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1**2</para>
             /// </summary>

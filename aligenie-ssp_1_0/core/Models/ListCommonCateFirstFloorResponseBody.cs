@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListCommonCateFirstFloorResponseBody : TeaModel {
         /// <summary>
+        /// <para>Code encoding</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Message information</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F12B6147-5925-19E5-A3AD-E1EE1360F34E</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Return Result</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListCommonCateFirstFloorResponseBodyResult> Result { get; set; }
         public class ListCommonCateFirstFloorResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Category ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>80012</para>
             /// </summary>
@@ -45,11 +56,19 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             [Validation(Required=false)]
             public long? CateId { get; set; }
 
+            /// <summary>
+            /// <para>Category name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>有声内容</para>
+            /// </summary>
             [NameInMap("CateName")]
             [Validation(Required=false)]
             public string CateName { get; set; }
 
             /// <summary>
+            /// <para>Parent category ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>

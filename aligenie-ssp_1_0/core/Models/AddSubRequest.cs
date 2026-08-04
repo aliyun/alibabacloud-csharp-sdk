@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class AddSubRequest : TeaModel {
+        /// <summary>
+        /// <para>Subscribe to album request</para>
+        /// </summary>
         [NameInMap("AddSubscriptionInfoRequest")]
         [Validation(Required=false)]
         public AddSubRequestAddSubscriptionInfoRequest AddSubscriptionInfoRequest { get; set; }
         public class AddSubRequestAddSubscriptionInfoRequest : TeaModel {
             /// <summary>
+            /// <para>Album ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>51999575</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string AlbumId { get; set; }
 
             /// <summary>
+            /// <para>Daily study quantity</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public int? DailyStudyCnt { get; set; }
 
             /// <summary>
+            /// <para>Playback pattern (currently only supports sequence)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sequence</para>
             /// </summary>
@@ -37,15 +46,23 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             [Validation(Required=false)]
             public string PlayMode { get; set; }
 
+            /// <summary>
+            /// <para>Schedule information</para>
+            /// </summary>
             [NameInMap("ScheduleInfo")]
             [Validation(Required=false)]
             public AddSubRequestAddSubscriptionInfoRequestScheduleInfo ScheduleInfo { get; set; }
             public class AddSubRequestAddSubscriptionInfoRequestScheduleInfo : TeaModel {
+                /// <summary>
+                /// <para>The specific days of the week for weekly reminders. Valid values are 1 to 7.</para>
+                /// </summary>
                 [NameInMap("DaysOfWeek")]
                 [Validation(Required=false)]
                 public List<int?> DaysOfWeek { get; set; }
 
                 /// <summary>
+                /// <para>The hour of the clock when the reminder is triggered.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public int? Hour { get; set; }
 
                 /// <summary>
+                /// <para>The minute of the hour when the reminder is triggered.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>23</para>
                 /// </summary>
@@ -65,6 +84,9 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 
         }
 
+        /// <summary>
+        /// <para>Device Information</para>
+        /// </summary>
         [NameInMap("DeviceInfo")]
         [Validation(Required=false)]
         public AddSubRequestDeviceInfo DeviceInfo { get; set; }
@@ -103,6 +125,9 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 
         }
 
+        /// <summary>
+        /// <para>User Information</para>
+        /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public AddSubRequestUserInfo UserInfo { get; set; }

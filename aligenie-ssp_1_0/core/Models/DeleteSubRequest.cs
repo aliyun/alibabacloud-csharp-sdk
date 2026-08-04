@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class DeleteSubRequest : TeaModel {
         /// <summary>
+        /// <para>Subscription album record ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

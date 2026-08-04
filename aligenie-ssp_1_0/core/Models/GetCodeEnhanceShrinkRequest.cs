@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class GetCodeEnhanceShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Activation Channel, such as WeChat mini program or third-party app.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ChannelInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string ChannelInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>List of User Identifier information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

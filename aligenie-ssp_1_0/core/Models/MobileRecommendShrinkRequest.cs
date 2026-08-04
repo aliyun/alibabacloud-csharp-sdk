@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class MobileRecommendShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Bot ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string BotId { get; set; }
 
         /// <summary>
+        /// <para>Quantity of recommended Result</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -26,17 +30,26 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Count { get; set; }
 
         /// <summary>
+        /// <para>Device identification information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
         [Validation(Required=false)]
         public string DeviceInfoShrink { get; set; }
 
+        /// <summary>
+        /// <para>Required when the request type is STYLE.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>轻音乐</para>
+        /// </summary>
         [NameInMap("Style")]
         [Validation(Required=false)]
         public string Style { get; set; }
 
         /// <summary>
+        /// <para>Request Type: Obtain daily recommendations, hot songs, or genre-based playlists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DAILY_REC</para>
         /// </summary>
@@ -45,6 +58,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>User information – userId</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

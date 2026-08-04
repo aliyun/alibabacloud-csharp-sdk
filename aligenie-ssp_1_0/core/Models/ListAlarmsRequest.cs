@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListAlarmsRequest : TeaModel {
         /// <summary>
+        /// <para>Device identity information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public ListAlarmsRequestDeviceInfo DeviceInfo { get; set; }
         public class ListAlarmsRequestDeviceInfo : TeaModel {
             /// <summary>
+            /// <para>The value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. There are multiple ways to obtain the device ID for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME: APK package name, used in the Android application customer link; SKILL_ID: skill ID, used in the cloud link.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>Device ID (deviceOpenId or deviceUnionId)</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Device ID type: OPEN_ID: default device ID; UNION_ID: organization-level device ID, available only after an organization has been requested on the Maojing Skill Application Open Platform.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +62,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string IdType { get; set; }
 
             /// <summary>
+            /// <para>Organization ID. Required if IdType is UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1**2</para>
             /// </summary>
@@ -67,6 +74,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         }
 
         /// <summary>
+        /// <para>Input parameters for the service request</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Payload")]
@@ -74,6 +82,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public ListAlarmsRequestPayload Payload { get; set; }
         public class ListAlarmsRequestPayload : TeaModel {
             /// <summary>
+            /// <para>Current page</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -82,6 +92,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
+            /// <para>Number of entries per page: maximum value is 100</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -92,6 +104,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         }
 
         /// <summary>
+        /// <para>User identifier information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]
@@ -99,6 +112,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public ListAlarmsRequestUserInfo UserInfo { get; set; }
         public class ListAlarmsRequestUserInfo : TeaModel {
             /// <summary>
+            /// <para>The value corresponding to the encoding type. When the encoding type is SKILL_ID, the value is the application\&quot;s SkillID. When the encoding type is PACKAGE_NAME, the value is the packageName of the corresponding client app.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -109,6 +123,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. There are multiple ways to obtain the user identifier for Maojing, and each method corresponds to a different encoding type: PACKAGE_NAME refers to the APK package name, which is the encoding type for the Android application customer link; SKILL_ID refers to the skill ID, which is the encoding type for the cloud link.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -119,6 +134,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>User Identifier (userOpenId or userUnionId)</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -129,6 +145,11 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Type of the User ID:  </para>
+            /// <list type="bullet">
+            /// <item><description>OPEN_ID: The default User ID identity.  </description></item>
+            /// <item><description>UNION_ID: The User ID identity at the organization dimension. This is available only after an organization has been requested on the Maojing Skill Application Open Platform.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -139,6 +160,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string IdType { get; set; }
 
             /// <summary>
+            /// <para>Organization ID. Required when IdType is UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1**2</para>
             /// </summary>

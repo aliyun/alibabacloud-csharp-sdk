@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class AddAndRemoveFavoriteContentShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Device identification information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string DeviceInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>Business parameters</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OpenAddAndRemoveFavoriteContentRequest")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string OpenAddAndRemoveFavoriteContentRequestShrink { get; set; }
 
         /// <summary>
+        /// <para>User identification information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

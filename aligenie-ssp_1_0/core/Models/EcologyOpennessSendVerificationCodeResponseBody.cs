@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class EcologyOpennessSendVerificationCodeResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Response message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>73C67BD9-175A-1324-8202-9FAABBB3E6FA</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Response Result</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public EcologyOpennessSendVerificationCodeResponseBodyResult Result { get; set; }
         public class EcologyOpennessSendVerificationCodeResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Validity Period (unit: seconds)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>900</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public int? ExpireIn { get; set; }
 
             /// <summary>
+            /// <para>Recency before the next resend is allowed (unit: seconds)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>60</para>
             /// </summary>
@@ -55,6 +68,9 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 
         }
 
+        /// <summary>
+        /// <para>Flag indicating whether the invocation succeeded</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

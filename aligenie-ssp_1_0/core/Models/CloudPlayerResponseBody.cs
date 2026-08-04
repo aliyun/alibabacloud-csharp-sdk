@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class CloudPlayerResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Return Result: true indicates validation succeeded; false indicates validation failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

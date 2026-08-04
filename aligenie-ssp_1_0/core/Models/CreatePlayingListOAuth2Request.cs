@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class CreatePlayingListOAuth2Request : TeaModel {
         /// <summary>
+        /// <para>Device identification information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public CreatePlayingListOAuth2RequestDeviceInfo DeviceInfo { get; set; }
         public class CreatePlayingListOAuth2RequestDeviceInfo : TeaModel {
             /// <summary>
+            /// <para>The value corresponding to the encoding type. Enter the Project ID of the project to which the product belongs. You can view it in the Tmall Genie AI Platform console.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. Enter PROJECT_ID here.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>Device ID. Enter the value of deviceOpenId or deviceUnionId.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The type of device ID:<br>OPEN_ID: The default device ID.<br>UNION_ID: The organization-level device ID. You must request an organization in advance on the Open Platform.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +62,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string IdType { get; set; }
 
             /// <summary>
+            /// <para>Organization ID. Required when IdType is UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -67,6 +74,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         }
 
         /// <summary>
+        /// <para>Business parameters</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OpenCreatePlayingListRequest")]
@@ -74,6 +82,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public CreatePlayingListOAuth2RequestOpenCreatePlayingListRequest OpenCreatePlayingListRequest { get; set; }
         public class CreatePlayingListOAuth2RequestOpenCreatePlayingListRequest : TeaModel {
             /// <summary>
+            /// <para>Playback objects</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ContentList")]
@@ -81,6 +90,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public List<CreatePlayingListOAuth2RequestOpenCreatePlayingListRequestContentList> ContentList { get; set; }
             public class CreatePlayingListOAuth2RequestOpenCreatePlayingListRequestContentList : TeaModel {
                 /// <summary>
+                /// <para>Third-party ID.  </para>
+                /// <para>If the item is content, this is the content ID; if it is an album, this is the album ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -91,6 +102,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public string RawId { get; set; }
 
                 /// <summary>
+                /// <para>Source</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -103,6 +115,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             }
 
             /// <summary>
+            /// <para>Content type for playback</para>
+            /// <para>Content: content; Album: album; Playlist: collect</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -112,11 +126,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             [Validation(Required=false)]
             public string ContentType { get; set; }
 
+            /// <summary>
+            /// <para>Extension information</para>
+            /// </summary>
             [NameInMap("ExtendInfo")]
             [Validation(Required=false)]
             public Dictionary<string, object> ExtendInfo { get; set; }
 
             /// <summary>
+            /// <para>Index of the item to play</para>
+            /// <para>Can be empty. Default is 0, which means playback starts from the beginning.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -125,6 +145,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public int? Index { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether album playback should continue from the last played episode. For example, if the last playback stopped at episode 5, whether to resume from episode 5. Default is true.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -133,6 +155,9 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public bool? NeedAlbumContinued { get; set; }
 
             /// <summary>
+            /// <para>Playback source, the unique identifier for configuring playback control capabilities.  </para>
+            /// <para>Optional. Default value is &quot;default&quot;.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>default</para>
             /// </summary>
@@ -141,6 +166,9 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string PlayFrom { get; set; }
 
             /// <summary>
+            /// <para>Playback pattern</para>
+            /// <para>Repeat all: Repeat; Shuffle: Shuffle; Repeat one: RepeatOne; Play in order: Normal.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Repeat</para>
             /// </summary>

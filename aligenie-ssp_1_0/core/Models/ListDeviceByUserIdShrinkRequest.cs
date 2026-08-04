@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListDeviceByUserIdShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>List of User Identifier information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

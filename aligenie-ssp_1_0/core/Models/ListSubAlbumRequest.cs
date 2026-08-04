@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListSubAlbumRequest : TeaModel {
+        /// <summary>
+        /// <para>Device Information</para>
+        /// </summary>
         [NameInMap("DeviceInfo")]
         [Validation(Required=false)]
         public ListSubAlbumRequestDeviceInfo DeviceInfo { get; set; }
@@ -43,6 +46,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public ListSubAlbumRequestQuerySubscriptionAlbumRequest QuerySubscriptionAlbumRequest { get; set; }
         public class ListSubAlbumRequestQuerySubscriptionAlbumRequest : TeaModel {
             /// <summary>
+            /// <para>Album ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4476001</para>
             /// </summary>
@@ -51,6 +56,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string AlbumId { get; set; }
 
             /// <summary>
+            /// <para>Category ID</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -61,6 +67,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public int? CategoryId { get; set; }
 
             /// <summary>
+            /// <para>Pagination Parameters</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Page")]
@@ -68,6 +75,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public ListSubAlbumRequestQuerySubscriptionAlbumRequestPage Page { get; set; }
             public class ListSubAlbumRequestQuerySubscriptionAlbumRequestPage : TeaModel {
                 /// <summary>
+                /// <para>Page number</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -76,6 +85,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public int? PageNum { get; set; }
 
                 /// <summary>
+                /// <para>Number of entries per page</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -86,6 +97,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             }
 
             /// <summary>
+            /// <para>Album title</para>
+            /// 
             /// <b>Example:</b>
             /// <para>睡前故事</para>
             /// </summary>
@@ -95,6 +108,9 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 
         }
 
+        /// <summary>
+        /// <para>User information</para>
+        /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public ListSubAlbumRequestUserInfo UserInfo { get; set; }

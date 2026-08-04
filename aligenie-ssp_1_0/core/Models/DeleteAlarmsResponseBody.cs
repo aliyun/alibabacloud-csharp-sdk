@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class DeleteAlarmsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code returned by the alarm service</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>error message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>闹钟id为空</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>43<em><b>28C-A810-5</b></em>-8747-EC226A086881</para>
         /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the alarm deletion was executed successfully</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

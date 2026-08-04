@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class GetAlbumDetailByIdResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Additional information</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A0B7CACD-485B-14E2-854F-39EACB09E45B</para>
         /// </summary>
@@ -33,15 +39,23 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Album content</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetAlbumDetailByIdResponseBodyResult Result { get; set; }
         public class GetAlbumDetailByIdResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>Album content list</para>
+            /// </summary>
             [NameInMap("AlbumContentList")]
             [Validation(Required=false)]
             public List<GetAlbumDetailByIdResponseBodyResultAlbumContentList> AlbumContentList { get; set; }
             public class GetAlbumDetailByIdResponseBodyResultAlbumContentList : TeaModel {
                 /// <summary>
+                /// <para>Album content duration</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3分24秒</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public string Duration { get; set; }
 
                 /// <summary>
+                /// <para>Album content ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>468009044</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public string Id { get; set; }
 
                 /// <summary>
+                /// <para>Album content sorting</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public string OrderIndex { get; set; }
 
                 /// <summary>
+                /// <para>Album content title</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>001为什么肚子饿时会咕咕叫</para>
                 /// </summary>
@@ -76,6 +96,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             }
 
             /// <summary>
+            /// <para>Album thumbnail</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://ailabs.alibabausercontent.com/images/8838/1600839452498.jpg">https://ailabs.alibabausercontent.com/images/8838/1600839452498.jpg</a></para>
             /// </summary>
@@ -84,6 +106,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string AlbumCoverUrl { get; set; }
 
             /// <summary>
+            /// <para>Album Description</para>
+            /// 
             /// <b>Example:</b>
             /// <para>每次一个百科知识或者故事\n丰富孩子的视野，拓展眼界和知识面，培养和孩子的探究能力和好奇心\n\n</para>
             /// </summary>
@@ -92,6 +116,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string AlbumDescription { get; set; }
 
             /// <summary>
+            /// <para>Album ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>51999575</para>
             /// </summary>
@@ -100,6 +126,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string AlbumId { get; set; }
 
             /// <summary>
+            /// <para>Album Title</para>
+            /// 
             /// <b>Example:</b>
             /// <para>小科学家探索</para>
             /// </summary>

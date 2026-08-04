@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ProgressControlResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code of the invocation</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Additional information. In typical scenarios, this provides a brief description of a failed invocation to help the caller identify the issue.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10002398812</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Actual return result of the service</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public bool? Result { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the invocation succeeded. true indicates success, and false indicates failure. When the invocation fails, pay attention to the Message field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

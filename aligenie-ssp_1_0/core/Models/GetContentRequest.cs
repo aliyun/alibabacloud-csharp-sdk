@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class GetContentRequest : TeaModel {
         /// <summary>
+        /// <para>Content ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>Default value: song</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

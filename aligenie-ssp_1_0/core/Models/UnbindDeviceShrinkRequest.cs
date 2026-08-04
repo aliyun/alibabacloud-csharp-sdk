@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class UnbindDeviceShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>List of device identity information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string DeviceInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>List of user identifier information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

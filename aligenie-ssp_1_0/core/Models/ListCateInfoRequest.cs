@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListCateInfoRequest : TeaModel {
         /// <summary>
+        /// <para>Default value is song (the extension field currently only supports song)</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

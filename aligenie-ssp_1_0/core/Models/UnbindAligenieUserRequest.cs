@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class UnbindAligenieUserRequest : TeaModel {
         /// <summary>
+        /// <para>Logon credential</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

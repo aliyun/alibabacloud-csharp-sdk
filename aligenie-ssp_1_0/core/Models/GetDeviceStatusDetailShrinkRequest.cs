@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class GetDeviceStatusDetailShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>List of device identification information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string DeviceInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>A collection of specified keys for device settings:<br>Player: player<br>Device volume: speaker<br>Battery level: power</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Keys")]

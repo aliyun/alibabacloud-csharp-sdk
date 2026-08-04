@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListCommonCateFirstFloorRequest : TeaModel {
         /// <summary>
+        /// <para>Default value: song (extension field currently only supports song)</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

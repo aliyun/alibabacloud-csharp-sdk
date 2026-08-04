@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class InvalidateThirdPartyAppLoginStateShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Device identification information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string DeviceInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>Third-party application identity</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

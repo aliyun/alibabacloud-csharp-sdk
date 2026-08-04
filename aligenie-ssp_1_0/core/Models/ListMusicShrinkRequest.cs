@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListMusicShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Device ID information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string DeviceInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>Input parameters for the service request</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Payload")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string PayloadShrink { get; set; }
 
         /// <summary>
+        /// <para>User identifier information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

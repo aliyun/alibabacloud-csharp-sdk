@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class PreviousAndNextControlRequest : TeaModel {
         /// <summary>
+        /// <para>Device ID information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public PreviousAndNextControlRequestDeviceInfo DeviceInfo { get; set; }
         public class PreviousAndNextControlRequestDeviceInfo : TeaModel {
             /// <summary>
+            /// <para>The value corresponding to the encoding type.</para>
+            /// <para>When the encoding type is <c>SKILL_ID</c>, the value is the Skill ID of the application. When the encoding type is <c>PACKAGE_NAME</c>, the value is the packageName of the corresponding client app.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. There are multiple ways to obtain the device ID for Tmall Genie, and each method corresponds to a different encoding type.  </para>
+            /// <para><c>PACKAGE_NAME</c>: APK package name, used for Android application customer journeys. <c>SKILL_ID</c>: Skill ID, used for cloud-based journeys.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +42,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>Device ID, set to deviceOpenId or deviceUnionId.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +53,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The type of Device ID.</para>
+            /// <para><c>OPEN_ID</c>: The default device identity. <c>UNION_ID</c>: The organization-dimension device identity, which is available only after an organization has been requested on the Tmall Genie Skill Application Open Platform.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +65,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string IdType { get; set; }
 
             /// <summary>
+            /// <para>Organization ID. Required if IdType is UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -67,6 +77,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         }
 
         /// <summary>
+        /// <para>Business parameters</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OpenControlPlayingListRequest")]
@@ -74,6 +85,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public PreviousAndNextControlRequestOpenControlPlayingListRequest OpenControlPlayingListRequest { get; set; }
         public class PreviousAndNextControlRequestOpenControlPlayingListRequest : TeaModel {
             /// <summary>
+            /// <para>Next track: NEXT; Previous track: PREVIOUS</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -88,6 +100,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public Dictionary<string, object> ExtendInfo { get; set; }
 
             /// <summary>
+            /// <para>Whether initiated by the device. Default is false.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -98,6 +112,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         }
 
         /// <summary>
+        /// <para>User identity information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]
@@ -105,6 +120,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public PreviousAndNextControlRequestUserInfo UserInfo { get; set; }
         public class PreviousAndNextControlRequestUserInfo : TeaModel {
             /// <summary>
+            /// <para>The value corresponding to the encoding type.</para>
+            /// <para>When the encoding type is <c>SKILL_ID</c>, the value is the Skill ID of the application. When the encoding type is <c>PACKAGE_NAME</c>, the value is the packageName of the corresponding client app.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -115,6 +132,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. There are multiple ways to obtain the user identity from Tmall Genie, and each method corresponds to a different encoding type.</para>
+            /// <para><c>PACKAGE_NAME</c>: APK package name, used for Android application client-side flows. <c>SKILL_ID</c>: Skill ID, used for cloud-side flows.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -125,6 +144,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>User identifier, set to userOpenId or userUnionId.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -135,6 +155,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The type of User ID.</para>
+            /// <para><c>OPEN_ID</c>: The default user identity. <c>UNION_ID</c>: The organization-dimension user identity, which is available only after an organization has been requested on the Tmall Genie Skill Application Open Platform.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -145,6 +167,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string IdType { get; set; }
 
             /// <summary>
+            /// <para>Organization ID. Required if IdType is UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>

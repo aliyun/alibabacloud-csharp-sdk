@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListSubResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Additional information</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0D0C09C2-ADC1-198B-964D-24F4FAD967DB</para>
         /// </summary>
@@ -33,15 +39,23 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Result</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListSubResponseBodyResult Result { get; set; }
         public class ListSubResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>Subscription list</para>
+            /// </summary>
             [NameInMap("DataList")]
             [Validation(Required=false)]
             public List<ListSubResponseBodyResultDataList> DataList { get; set; }
             public class ListSubResponseBodyResultDataList : TeaModel {
                 /// <summary>
+                /// <para>Album ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>51999575</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public string AlbumId { get; set; }
 
                 /// <summary>
+                /// <para>Album thumbnail</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://ailabs.alibabausercontent.com/images/8838/1600839452498.jpg">https://ailabs.alibabausercontent.com/images/8838/1600839452498.jpg</a></para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public string CoverUrl { get; set; }
 
                 /// <summary>
+                /// <para>Daily study quantity</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public int? DailyStudyCnt { get; set; }
 
                 /// <summary>
+                /// <para>Device ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>5874DBCCA3038FAA1A70A8060F07F26D</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public string DeviceId { get; set; }
 
                 /// <summary>
+                /// <para>Subscription record ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>Playback mode</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>sequence</para>
                 /// </summary>
@@ -89,15 +113,23 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 [Validation(Required=false)]
                 public string PlayMode { get; set; }
 
+                /// <summary>
+                /// <para>Schedule information</para>
+                /// </summary>
                 [NameInMap("ScheduleInfo")]
                 [Validation(Required=false)]
                 public ListSubResponseBodyResultDataListScheduleInfo ScheduleInfo { get; set; }
                 public class ListSubResponseBodyResultDataListScheduleInfo : TeaModel {
+                    /// <summary>
+                    /// <para>Trigger epoch</para>
+                    /// </summary>
                     [NameInMap("DaysOfWeek")]
                     [Validation(Required=false)]
                     public List<int?> DaysOfWeek { get; set; }
 
                     /// <summary>
+                    /// <para>Trigger hour</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>12</para>
                     /// </summary>
@@ -106,6 +138,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                     public int? Hour { get; set; }
 
                     /// <summary>
+                    /// <para>Trigger minute</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>23</para>
                     /// </summary>
@@ -116,6 +150,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 }
 
                 /// <summary>
+                /// <para>Album title</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>小科学家探索</para>
                 /// </summary>
@@ -124,6 +160,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
                 public string Title { get; set; }
 
                 /// <summary>
+                /// <para>User ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1152893538998276761</para>
                 /// </summary>
@@ -133,11 +171,16 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 
             }
 
+            /// <summary>
+            /// <para>Is there a next page</para>
+            /// </summary>
             [NameInMap("HasNext")]
             [Validation(Required=false)]
             public bool? HasNext { get; set; }
 
             /// <summary>
+            /// <para>Total number of data entries</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -146,6 +189,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public long? TotalCount { get; set; }
 
             /// <summary>
+            /// <para>Total number of pages</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

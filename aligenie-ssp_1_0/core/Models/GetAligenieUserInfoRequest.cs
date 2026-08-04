@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class GetAligenieUserInfoRequest : TeaModel {
         /// <summary>
+        /// <para>Logon state access credential</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ResultValue : TeaModel {
         /// <summary>
+        /// <para>The openId corresponding to the device.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A963*0158</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string DeviceOpenId { get; set; }
 
+        /// <summary>
+        /// <para>The organization ID and UnionId information corresponding to the device.</para>
+        /// </summary>
         [NameInMap("DeviceUnionIds")]
         [Validation(Required=false)]
         public List<ResultValueDeviceUnionIds> DeviceUnionIds { get; set; }
         public class ResultValueDeviceUnionIds : TeaModel {
             /// <summary>
+            /// <para>The organization ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1**2</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string OrganizationId { get; set; }
 
             /// <summary>
+            /// <para>The UnionId of the device.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1553*B0C3</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         }
 
         /// <summary>
+        /// <para>The name of the device.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>我的设备</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The firmware version of the device.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2.0.3</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string FirmwareVersion { get; set; }
 
         /// <summary>
+        /// <para>The MAC address of the device.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>b4:xx:xx:xx:65:2b</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Mac { get; set; }
 
         /// <summary>
+        /// <para>The SN information of the device.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1200xx048</para>
         /// </summary>

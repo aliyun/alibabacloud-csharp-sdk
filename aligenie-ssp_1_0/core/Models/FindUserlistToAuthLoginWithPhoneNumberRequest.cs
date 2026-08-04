@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class FindUserlistToAuthLoginWithPhoneNumberRequest : TeaModel {
         /// <summary>
+        /// <para>Text message verification code</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Phone number</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string PhoneNumber { get; set; }
 
         /// <summary>
+        /// <para>Region encoding</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>Session ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ScanCodeBindShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Input parameters for QR code scanning binding</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BindReq")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string BindReqShrink { get; set; }
 
         /// <summary>
+        /// <para>User identity information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

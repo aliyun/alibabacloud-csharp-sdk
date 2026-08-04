@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class UnbindDeviceRequest : TeaModel {
         /// <summary>
+        /// <para>List of device identity information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public UnbindDeviceRequestDeviceInfo DeviceInfo { get; set; }
         public class UnbindDeviceRequestDeviceInfo : TeaModel {
             /// <summary>
+            /// <para>The value corresponding to the encoding type, which is the Project ID of the project where the product resides. You can view it in the Tmall Genie AI platform console.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. Set this parameter to <b>PROJECT_ID</b>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>Device identifier. Enter the value of deviceOpenId or deviceUnionId.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +51,11 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The type of Device ID.  </para>
+            /// <list type="bullet">
+            /// <item><description>OPEN_ID: The default device ID identity.  </description></item>
+            /// <item><description>UNION_ID: The organization-dimension device ID identity. You must request an organization in advance on the Open Platform.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +66,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string IdType { get; set; }
 
             /// <summary>
+            /// <para>Organization ID. This parameter is required if IdType is set to UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1**2</para>
             /// </summary>
@@ -67,6 +78,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         }
 
         /// <summary>
+        /// <para>List of user identifier information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]
@@ -74,6 +86,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public UnbindDeviceRequestUserInfo UserInfo { get; set; }
         public class UnbindDeviceRequestUserInfo : TeaModel {
             /// <summary>
+            /// <para>The value corresponding to the encoding type, which is the Project ID of the project where this product resides. You can view it in the Tmall Genie AI Platform console.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -84,6 +97,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. Enter <b>PROJECT_ID</b> here.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -94,6 +108,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>User identifier. Enter the value of userOpenId or userUnionId.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -104,6 +119,11 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The type of User ID:  </para>
+            /// <list type="bullet">
+            /// <item><description>OPEN_ID: The default user ID identity.  </description></item>
+            /// <item><description>UNION_ID: The organization-dimension user ID identity. You must request an organization in advance on the Open Platform.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -114,6 +134,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string IdType { get; set; }
 
             /// <summary>
+            /// <para>Organization ID. Required if IdType is UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1**2</para>
             /// </summary>

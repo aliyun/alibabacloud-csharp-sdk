@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("aligenie", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>收藏/取消收藏</para>
+        /// <para>Collect or remove from favorites.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>收藏/取消收藏</para>
+        /// <para>Collect or remove from favorites.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>收藏/取消收藏</para>
+        /// <para>Collect or remove from favorites.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>收藏/取消收藏</para>
+        /// <para>Collect or remove from favorites.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增订阅</para>
+        /// <para>Subscribe to an album.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增订阅</para>
+        /// <para>Subscribe to an album.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -405,7 +405,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增订阅</para>
+        /// <para>Subscribe to an album.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -424,7 +424,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增订阅</para>
+        /// <para>Subscribe to an album.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过指定精灵账号进行授权登录</para>
+        /// <para>Authorize logon by specifying an Aligenie account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -506,7 +506,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过指定精灵账号进行授权登录</para>
+        /// <para>Authorize logon by specifying an Aligenie account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -569,7 +569,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过指定精灵账号进行授权登录</para>
+        /// <para>Authorize logon by specifying an Aligenie account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -588,7 +588,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过指定精灵账号进行授权登录</para>
+        /// <para>Authorize logon by specifying an Aligenie account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -607,7 +607,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过手机号生成精灵账号进行授权登录</para>
+        /// <para>Generate a Genie account by phone number for authorization logon.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -666,7 +666,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过手机号生成精灵账号进行授权登录</para>
+        /// <para>Generate a Genie account by phone number for authorization logon.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -725,7 +725,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过手机号生成精灵账号进行授权登录</para>
+        /// <para>Generate a Genie account by phone number for authorization logon.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -744,7 +744,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过手机号生成精灵账号进行授权登录</para>
+        /// <para>Generate a Genie account by phone number for authorization logon.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -763,7 +763,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过指定淘宝账号进行授权登录</para>
+        /// <para>Authorize logon by specifying a Taobao account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -826,7 +826,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过指定淘宝账号进行授权登录</para>
+        /// <para>Authorize logon by specifying a Taobao account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -889,7 +889,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过指定淘宝账号进行授权登录</para>
+        /// <para>Authorize logon by specifying a Taobao account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -908,7 +908,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过指定淘宝账号进行授权登录</para>
+        /// <para>Authorize logon by specifying a Taobao account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -927,7 +927,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过三方用户信息进行授权登录</para>
+        /// <para>Authorize logon by using third-party user information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1004,7 +1004,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过三方用户信息进行授权登录</para>
+        /// <para>Authorize logon by using third-party user information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1081,7 +1081,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过三方用户信息进行授权登录</para>
+        /// <para>Authorize logon by using third-party user information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1100,7 +1100,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过三方用户信息进行授权登录</para>
+        /// <para>Authorize logon by using third-party user information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1327,7 +1327,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轮询激活绑定结果</para>
+        /// <para>Poll the result of the activation attachment.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1404,7 +1404,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轮询激活绑定结果</para>
+        /// <para>Poll the result of the activation attachment.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1481,7 +1481,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轮询激活绑定结果</para>
+        /// <para>Poll the result of the activation attachment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1500,7 +1500,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轮询激活绑定结果</para>
+        /// <para>Poll the result of the activation attachment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1519,8 +1519,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云播放器：对外</para>
+        /// <para>Cloud Push Song: Create a playlist by providing the device openUuid and the Tmall Genie openUserId.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After synchronously validating the input parameters, the system asynchronously creates the playlist.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CloudPlayerRequest
@@ -1616,8 +1621,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云播放器：对外</para>
+        /// <para>Cloud Push Song: Create a playlist by providing the device openUuid and the Tmall Genie openUserId.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After synchronously validating the input parameters, the system asynchronously creates the playlist.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CloudPlayerRequest
@@ -1713,8 +1723,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云播放器：对外</para>
+        /// <para>Cloud Push Song: Create a playlist by providing the device openUuid and the Tmall Genie openUserId.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After synchronously validating the input parameters, the system asynchronously creates the playlist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloudPlayerRequest
@@ -1732,8 +1747,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云播放器：对外</para>
+        /// <para>Cloud Push Song: Create a playlist by providing the device openUuid and the Tmall Genie openUserId.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After synchronously validating the input parameters, the system asynchronously creates the playlist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloudPlayerRequest
@@ -1751,7 +1771,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建闹钟</para>
+        /// <para>Create an alarm that supports three types: one-time, weekly, and legal working days.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1832,7 +1852,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建闹钟</para>
+        /// <para>Create an alarm that supports three types: one-time, weekly, and legal working days.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1913,7 +1933,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建闹钟</para>
+        /// <para>Create an alarm that supports three types: one-time, weekly, and legal working days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1932,7 +1952,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建闹钟</para>
+        /// <para>Create an alarm that supports three types: one-time, weekly, and legal working days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1951,7 +1971,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放列表创建</para>
+        /// <para>Create a playlist and play the specified content.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2034,7 +2054,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放列表创建</para>
+        /// <para>Create a playlist and play the specified content.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2117,7 +2137,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放列表创建</para>
+        /// <para>Create a playlist and play the specified content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2136,7 +2156,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放列表创建</para>
+        /// <para>Create a playlist and play the specified content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2155,7 +2175,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放列表创建走OAuth2授权</para>
+        /// <para>Playlist creation uses OAuth2 authorization.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2217,7 +2237,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放列表创建走OAuth2授权</para>
+        /// <para>Playlist creation uses OAuth2 authorization.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2279,7 +2299,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放列表创建走OAuth2授权</para>
+        /// <para>Playlist creation uses OAuth2 authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2298,7 +2318,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放列表创建走OAuth2授权</para>
+        /// <para>Playlist creation uses OAuth2 authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2317,8 +2337,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定时任务</para>
+        /// <para>Create a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configure a triggering task for Custom instruction data in the ecosystem based on scheduling rules such as one-time, daily, or business days.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateScheduleTaskRequest
@@ -2398,8 +2423,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定时任务</para>
+        /// <para>Create a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configure a triggering task for Custom instruction data in the ecosystem based on scheduling rules such as one-time, daily, or business days.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateScheduleTaskRequest
@@ -2479,8 +2509,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定时任务</para>
+        /// <para>Create a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configure a triggering task for Custom instruction data in the ecosystem based on scheduling rules such as one-time, daily, or business days.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScheduleTaskRequest
@@ -2498,8 +2533,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定时任务</para>
+        /// <para>Create a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configure a triggering task for Custom instruction data in the ecosystem based on scheduling rules such as one-time, daily, or business days.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScheduleTaskRequest
@@ -2517,7 +2557,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>闹钟批量删除</para>
+        /// <para>Delete alarms. You can delete multiple alarms at the same time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2598,7 +2638,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>闹钟批量删除</para>
+        /// <para>Delete alarms. You can delete multiple alarms at the same time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2679,7 +2719,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>闹钟批量删除</para>
+        /// <para>Delete alarms. You can delete multiple alarms at the same time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2698,7 +2738,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>闹钟批量删除</para>
+        /// <para>Delete alarms. You can delete multiple alarms at the same time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2717,8 +2757,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除定时任务</para>
+        /// <para>Delete a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified scheduled task by its ID.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteScheduleTaskRequest
@@ -2798,8 +2843,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除定时任务</para>
+        /// <para>Delete a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified scheduled task by its ID.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteScheduleTaskRequest
@@ -2879,8 +2929,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除定时任务</para>
+        /// <para>Delete a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified scheduled task by its ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteScheduleTaskRequest
@@ -2898,8 +2953,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除定时任务</para>
+        /// <para>Delete a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified scheduled task by its ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteScheduleTaskRequest
@@ -2917,7 +2977,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除订阅</para>
+        /// <para>Delete a subscribed album.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2976,7 +3036,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除订阅</para>
+        /// <para>Delete a subscribed album.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3035,7 +3095,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除订阅</para>
+        /// <para>Delete a subscribed album.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3054,7 +3114,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除订阅</para>
+        /// <para>Delete a subscribed album.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3073,8 +3133,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设备控制</para>
+        /// <para>Control property values such as device volume.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Specify a device to modify property values such as volume.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeviceControlRequest
@@ -3148,8 +3213,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设备控制</para>
+        /// <para>Control property values such as device volume.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Specify a device to modify property values such as volume.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeviceControlRequest
@@ -3223,8 +3293,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设备控制</para>
+        /// <para>Control property values such as device volume.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Specify a device to modify property values such as volume.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeviceControlRequest
@@ -3242,8 +3317,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设备控制</para>
+        /// <para>Control property values such as device volume.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Specify a device to modify property values such as volume.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeviceControlRequest
@@ -3261,8 +3341,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生态开放鉴权</para>
+        /// <para>Use the login-state access token for authentication to obtain the third-party user identifier and the Tmall Genie user\&quot;s openId.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: When the login state expires, the integrator must reinitiate the authorization login flow to obtain a new login state (entry service API: AuthLoginWithThirdUserInfo).</para>
+        /// <list type="bullet">
+        /// <item><description>Invoke the service API with the login-state access credential (LoginStateAccessToken) parameter by using the Java SDK (for SDKs in other languages, consult Tmall Genie developers during integration).<br>If the API call throws a TeaException and TeaException.code is InvalidAuthentication, the login state has expired.</description></item>
+        /// <item><description>Invoke the service API by sending an HTTP request with the login-state access credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the login state has expired.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EcologyOpennessAuthenticateRequest
@@ -3328,8 +3417,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生态开放鉴权</para>
+        /// <para>Use the login-state access token for authentication to obtain the third-party user identifier and the Tmall Genie user\&quot;s openId.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: When the login state expires, the integrator must reinitiate the authorization login flow to obtain a new login state (entry service API: AuthLoginWithThirdUserInfo).</para>
+        /// <list type="bullet">
+        /// <item><description>Invoke the service API with the login-state access credential (LoginStateAccessToken) parameter by using the Java SDK (for SDKs in other languages, consult Tmall Genie developers during integration).<br>If the API call throws a TeaException and TeaException.code is InvalidAuthentication, the login state has expired.</description></item>
+        /// <item><description>Invoke the service API by sending an HTTP request with the login-state access credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the login state has expired.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EcologyOpennessAuthenticateRequest
@@ -3395,8 +3493,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生态开放鉴权</para>
+        /// <para>Use the login-state access token for authentication to obtain the third-party user identifier and the Tmall Genie user\&quot;s openId.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: When the login state expires, the integrator must reinitiate the authorization login flow to obtain a new login state (entry service API: AuthLoginWithThirdUserInfo).</para>
+        /// <list type="bullet">
+        /// <item><description>Invoke the service API with the login-state access credential (LoginStateAccessToken) parameter by using the Java SDK (for SDKs in other languages, consult Tmall Genie developers during integration).<br>If the API call throws a TeaException and TeaException.code is InvalidAuthentication, the login state has expired.</description></item>
+        /// <item><description>Invoke the service API by sending an HTTP request with the login-state access credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the login state has expired.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EcologyOpennessAuthenticateRequest
@@ -3414,8 +3521,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生态开放鉴权</para>
+        /// <para>Use the login-state access token for authentication to obtain the third-party user identifier and the Tmall Genie user\&quot;s openId.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: When the login state expires, the integrator must reinitiate the authorization login flow to obtain a new login state (entry service API: AuthLoginWithThirdUserInfo).</para>
+        /// <list type="bullet">
+        /// <item><description>Invoke the service API with the login-state access credential (LoginStateAccessToken) parameter by using the Java SDK (for SDKs in other languages, consult Tmall Genie developers during integration).<br>If the API call throws a TeaException and TeaException.code is InvalidAuthentication, the login state has expired.</description></item>
+        /// <item><description>Invoke the service API by sending an HTTP request with the login-state access credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the login state has expired.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EcologyOpennessAuthenticateRequest
@@ -3433,7 +3549,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生态开放发送短信验证码</para>
+        /// <para>Ecosystem Open API for sending SMS verification codes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3500,7 +3616,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生态开放发送短信验证码</para>
+        /// <para>Ecosystem Open API for sending SMS verification codes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3567,7 +3683,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生态开放发送短信验证码</para>
+        /// <para>Ecosystem Open API for sending SMS verification codes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3586,7 +3702,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生态开放发送短信验证码</para>
+        /// <para>Ecosystem Open API for sending SMS verification codes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3605,7 +3721,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过手机号寻找可授权登录的账号列表</para>
+        /// <para>Find a list of accounts that can be authorized to log on by phone number</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3676,7 +3792,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过手机号寻找可授权登录的账号列表</para>
+        /// <para>Find a list of accounts that can be authorized to log on by phone number</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3747,7 +3863,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过手机号寻找可授权登录的账号列表</para>
+        /// <para>Find a list of accounts that can be authorized to log on by phone number</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3766,7 +3882,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过手机号寻找可授权登录的账号列表</para>
+        /// <para>Find a list of accounts that can be authorized to log on by phone number</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3785,7 +3901,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个闹钟</para>
+        /// <para>Retrieve the detailed information of a specific alarm clock.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3866,7 +3982,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个闹钟</para>
+        /// <para>Retrieve the detailed information of a specific alarm clock.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3947,7 +4063,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个闹钟</para>
+        /// <para>Retrieve the detailed information of a specific alarm clock.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3966,7 +4082,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个闹钟</para>
+        /// <para>Retrieve the detailed information of a specific alarm clock.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3985,7 +4101,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据id获取专辑信息</para>
+        /// <para>Retrieve album information by a specific ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4048,7 +4164,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据id获取专辑信息</para>
+        /// <para>Retrieve album information by a specific ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4111,7 +4227,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据id获取专辑信息</para>
+        /// <para>Retrieve album information by a specific ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4130,7 +4246,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据id获取专辑信息</para>
+        /// <para>Retrieve album information by a specific ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4149,7 +4265,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取专辑数据</para>
+        /// <para>Retrieve album information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4208,7 +4324,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取专辑数据</para>
+        /// <para>Retrieve album information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4267,7 +4383,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取专辑数据</para>
+        /// <para>Retrieve album information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4286,7 +4402,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取专辑数据</para>
+        /// <para>Retrieve album information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4305,8 +4421,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取三方绑定的精灵账号信息</para>
+        /// <para>Obtain the Aligenie account information bound to a third party by using the logon state credential</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: When the logon state expires, the integrator must initiate the authorization logon flow again to obtain a new logon state (entry service API: AuthLoginWithThirdUserInfo).</para>
+        /// <list type="bullet">
+        /// <item><description>Invoke the service API with the logon state access credential (LoginStateAccessToken) parameter by using the Java software development kit (SDK). For SDKs in other languages, consult the Tmall Genie developer team during integration.<br>If the API call throws a TeaException and TeaException.code is InvalidAuthentication, the logon state has expired.</description></item>
+        /// <item><description>Invoke the service API by sending an HTTP request with the logon state access credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the logon state has expired.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAligenieUserInfoRequest
@@ -4364,8 +4489,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取三方绑定的精灵账号信息</para>
+        /// <para>Obtain the Aligenie account information bound to a third party by using the logon state credential</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: When the logon state expires, the integrator must initiate the authorization logon flow again to obtain a new logon state (entry service API: AuthLoginWithThirdUserInfo).</para>
+        /// <list type="bullet">
+        /// <item><description>Invoke the service API with the logon state access credential (LoginStateAccessToken) parameter by using the Java software development kit (SDK). For SDKs in other languages, consult the Tmall Genie developer team during integration.<br>If the API call throws a TeaException and TeaException.code is InvalidAuthentication, the logon state has expired.</description></item>
+        /// <item><description>Invoke the service API by sending an HTTP request with the logon state access credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the logon state has expired.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAligenieUserInfoRequest
@@ -4423,8 +4557,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取三方绑定的精灵账号信息</para>
+        /// <para>Obtain the Aligenie account information bound to a third party by using the logon state credential</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: When the logon state expires, the integrator must initiate the authorization logon flow again to obtain a new logon state (entry service API: AuthLoginWithThirdUserInfo).</para>
+        /// <list type="bullet">
+        /// <item><description>Invoke the service API with the logon state access credential (LoginStateAccessToken) parameter by using the Java software development kit (SDK). For SDKs in other languages, consult the Tmall Genie developer team during integration.<br>If the API call throws a TeaException and TeaException.code is InvalidAuthentication, the logon state has expired.</description></item>
+        /// <item><description>Invoke the service API by sending an HTTP request with the logon state access credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the logon state has expired.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAligenieUserInfoRequest
@@ -4442,8 +4585,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取三方绑定的精灵账号信息</para>
+        /// <para>Obtain the Aligenie account information bound to a third party by using the logon state credential</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: When the logon state expires, the integrator must initiate the authorization logon flow again to obtain a new logon state (entry service API: AuthLoginWithThirdUserInfo).</para>
+        /// <list type="bullet">
+        /// <item><description>Invoke the service API with the logon state access credential (LoginStateAccessToken) parameter by using the Java software development kit (SDK). For SDKs in other languages, consult the Tmall Genie developer team during integration.<br>If the API call throws a TeaException and TeaException.code is InvalidAuthentication, the logon state has expired.</description></item>
+        /// <item><description>Invoke the service API by sending an HTTP request with the logon state access credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the logon state has expired.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAligenieUserInfoRequest
@@ -4461,8 +4613,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取authCode</para>
+        /// <para>Obtain the authCode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Obtain the corresponding authCode by specifying the user ID.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetCodeEnhanceRequest
@@ -4534,8 +4691,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取authCode</para>
+        /// <para>Obtain the authCode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Obtain the corresponding authCode by specifying the user ID.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetCodeEnhanceRequest
@@ -4607,8 +4769,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取authCode</para>
+        /// <para>Obtain the authCode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Obtain the corresponding authCode by specifying the user ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCodeEnhanceRequest
@@ -4626,8 +4793,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取authCode</para>
+        /// <para>Obtain the authCode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Obtain the corresponding authCode by specifying the user ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCodeEnhanceRequest
@@ -4645,7 +4817,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按照特定的id获取内容信息</para>
+        /// <para>Retrieve content information by a specific ID</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4708,7 +4880,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按照特定的id获取内容信息</para>
+        /// <para>Retrieve content information by a specific ID</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4771,7 +4943,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按照特定的id获取内容信息</para>
+        /// <para>Retrieve content information by a specific ID</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4790,7 +4962,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按照特定的id获取内容信息</para>
+        /// <para>Retrieve content information by a specific ID</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4809,7 +4981,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前播放项</para>
+        /// <para>Obtain the current playback item.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4882,7 +5054,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前播放项</para>
+        /// <para>Obtain the current playback item.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4955,7 +5127,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前播放项</para>
+        /// <para>Obtain the current playback item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4974,7 +5146,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前播放项</para>
+        /// <para>Obtain the current playback item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4993,7 +5165,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前播放列表</para>
+        /// <para>Obtain the current playlist.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5076,7 +5248,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前播放列表</para>
+        /// <para>Obtain the current playlist.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5159,7 +5331,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前播放列表</para>
+        /// <para>Obtain the current playlist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5178,7 +5350,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前播放列表</para>
+        /// <para>Obtain the current playlist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5197,7 +5369,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备认证信息</para>
+        /// <para>Obtain basic device information by Device ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5262,7 +5434,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备认证信息</para>
+        /// <para>Obtain basic device information by Device ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5327,7 +5499,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备认证信息</para>
+        /// <para>Obtain basic device information by Device ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5346,7 +5518,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备认证信息</para>
+        /// <para>Obtain basic device information by Device ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5365,7 +5537,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备信息</para>
+        /// <para>Obtain the Device ID based on the device MAC or SN.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5440,7 +5612,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备信息</para>
+        /// <para>Obtain the Device ID based on the device MAC or SN.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5515,7 +5687,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备信息</para>
+        /// <para>Obtain the Device ID based on the device MAC or SN.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5534,7 +5706,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备信息</para>
+        /// <para>Obtain the Device ID based on the device MAC or SN.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5553,7 +5725,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备的用户设置</para>
+        /// <para>Obtain the user settings of a device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5626,7 +5798,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备的用户设置</para>
+        /// <para>Obtain the user settings of a device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5699,7 +5871,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备的用户设置</para>
+        /// <para>Obtain the user settings of a device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5718,7 +5890,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备的用户设置</para>
+        /// <para>Obtain the user settings of a device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5737,7 +5909,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备状态详情</para>
+        /// <para>Obtain device status details.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5810,7 +5982,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备状态详情</para>
+        /// <para>Obtain device status details.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5883,7 +6055,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备状态详情</para>
+        /// <para>Obtain device status details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5902,7 +6074,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备状态详情</para>
+        /// <para>Obtain device status details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5921,7 +6093,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备状态信息</para>
+        /// <para>Obtain the online status of a device based on its openID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5986,7 +6158,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备状态信息</para>
+        /// <para>Obtain the online status of a device based on its openID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6051,7 +6223,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备状态信息</para>
+        /// <para>Obtain the online status of a device based on its openID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6070,7 +6242,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备状态信息</para>
+        /// <para>Obtain the online status of a device based on its openID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6089,7 +6261,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备标签</para>
+        /// <para>Obtain the tag information of a device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6154,7 +6326,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备标签</para>
+        /// <para>Obtain the tag information of a device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6219,7 +6391,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备标签</para>
+        /// <para>Obtain the tag information of a device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6238,7 +6410,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取设备标签</para>
+        /// <para>Obtain the tag information of a device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6257,7 +6429,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>江苏电信号百</para>
+        /// <para>Derived requirements from Jiangsu Telecom\&quot;s self-developed desktop launcher project. HaoBai expects to collect statistics on the activation rate, active user rate, and top user usage patterns after the project is published, and to generate daily and weekly reports. Daily reports are synchronized automatically via API, while weekly reports are synchronized offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6316,7 +6488,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>江苏电信号百</para>
+        /// <para>Derived requirements from Jiangsu Telecom\&quot;s self-developed desktop launcher project. HaoBai expects to collect statistics on the activation rate, active user rate, and top user usage patterns after the project is published, and to generate daily and weekly reports. Daily reports are synchronized automatically via API, while weekly reports are synchronized offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6375,7 +6547,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>江苏电信号百</para>
+        /// <para>Derived requirements from Jiangsu Telecom\&quot;s self-developed desktop launcher project. HaoBai expects to collect statistics on the activation rate, active user rate, and top user usage patterns after the project is published, and to generate daily and weekly reports. Daily reports are synchronized automatically via API, while weekly reports are synchronized offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6394,7 +6566,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>江苏电信号百</para>
+        /// <para>Derived requirements from Jiangsu Telecom\&quot;s self-developed desktop launcher project. HaoBai expects to collect statistics on the activation rate, active user rate, and top user usage patterns after the project is published, and to generate daily and weekly reports. Daily reports are synchronized automatically via API, while weekly reports are synchronized offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6413,8 +6585,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询定时任务</para>
+        /// <para>Obtain scheduled task information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the details of a specified scheduled task by its ID.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetScheduleTaskRequest
@@ -6494,8 +6671,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询定时任务</para>
+        /// <para>Obtain scheduled task information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the details of a specified scheduled task by its ID.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetScheduleTaskRequest
@@ -6575,8 +6757,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询定时任务</para>
+        /// <para>Obtain scheduled task information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the details of a specified scheduled task by its ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScheduleTaskRequest
@@ -6594,8 +6781,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询定时任务</para>
+        /// <para>Obtain scheduled task information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the details of a specified scheduled task by its ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScheduleTaskRequest
@@ -6613,7 +6805,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询未读留言数量</para>
+        /// <para>Query the number of unread messages for a user.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6678,7 +6870,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询未读留言数量</para>
+        /// <para>Query the number of unread messages for a user.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6743,7 +6935,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询未读留言数量</para>
+        /// <para>Query the number of unread messages for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6762,7 +6954,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询未读留言数量</para>
+        /// <para>Query the number of unread messages for a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6781,7 +6973,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询设备绑定的用户</para>
+        /// <para>Obtain the User ID attached to a device by the device\&quot;s openID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6846,7 +7038,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询设备绑定的用户</para>
+        /// <para>Obtain the User ID attached to a device by the device\&quot;s openID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6911,7 +7103,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询设备绑定的用户</para>
+        /// <para>Obtain the User ID attached to a device by the device\&quot;s openID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6930,7 +7122,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询设备绑定的用户</para>
+        /// <para>Obtain the User ID attached to a device by the device\&quot;s openID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6949,8 +7141,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询天气</para>
+        /// <para>Query the weather.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the weather data for the location of the device based on the Device Information obtained from system parameters.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetWeatherRequest
@@ -7030,8 +7227,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询天气</para>
+        /// <para>Query the weather.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the weather data for the location of the device based on the Device Information obtained from system parameters.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetWeatherRequest
@@ -7111,8 +7313,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询天气</para>
+        /// <para>Query the weather.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the weather data for the location of the device based on the Device Information obtained from system parameters.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWeatherRequest
@@ -7130,8 +7337,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询天气</para>
+        /// <para>Query the weather.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query the weather data for the location of the device based on the Device Information obtained from system parameters.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWeatherRequest
@@ -7149,7 +7361,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放列表点击播放</para>
+        /// <para>Click a playlist to start playback.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7232,7 +7444,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放列表点击播放</para>
+        /// <para>Click a playlist to start playback.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7315,7 +7527,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放列表点击播放</para>
+        /// <para>Click a playlist to start playback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7334,7 +7546,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放列表点击播放</para>
+        /// <para>Click a playlist to start playback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7353,8 +7565,18 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>失效三方应用登录态</para>
+        /// <para>When a user operation (not initiated from the device side) causes the login session of a third-party application on the device to become invalid (for example, the user logs on to the same account from a new device, invalidating the session on the old device, or the user changes their password, which invalidates the session on the old device), the third party must invoke this API to notify Tmall Genie.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Modify message notification template  </para>
+        /// <list type="bullet">
+        /// <item><description>You need to query the templateId first, then modify other parameters based on the templateId.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// InvalidateThirdPartyAppLoginStateRequest
@@ -7422,8 +7644,18 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>失效三方应用登录态</para>
+        /// <para>When a user operation (not initiated from the device side) causes the login session of a third-party application on the device to become invalid (for example, the user logs on to the same account from a new device, invalidating the session on the old device, or the user changes their password, which invalidates the session on the old device), the third party must invoke this API to notify Tmall Genie.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Modify message notification template  </para>
+        /// <list type="bullet">
+        /// <item><description>You need to query the templateId first, then modify other parameters based on the templateId.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// InvalidateThirdPartyAppLoginStateRequest
@@ -7491,8 +7723,18 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>失效三方应用登录态</para>
+        /// <para>When a user operation (not initiated from the device side) causes the login session of a third-party application on the device to become invalid (for example, the user logs on to the same account from a new device, invalidating the session on the old device, or the user changes their password, which invalidates the session on the old device), the third party must invoke this API to notify Tmall Genie.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Modify message notification template  </para>
+        /// <list type="bullet">
+        /// <item><description>You need to query the templateId first, then modify other parameters based on the templateId.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// InvalidateThirdPartyAppLoginStateRequest
@@ -7510,8 +7752,18 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>失效三方应用登录态</para>
+        /// <para>When a user operation (not initiated from the device side) causes the login session of a third-party application on the device to become invalid (for example, the user logs on to the same account from a new device, invalidating the session on the old device, or the user changes their password, which invalidates the session on the old device), the third party must invoke this API to notify Tmall Genie.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Modify message notification template  </para>
+        /// <list type="bullet">
+        /// <item><description>You need to query the templateId first, then modify other parameters based on the templateId.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// InvalidateThirdPartyAppLoginStateRequest
@@ -7529,7 +7781,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询闹钟列表</para>
+        /// <para>Perform a paged query to retrieve the alarm clock list of a specific User on a device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7610,7 +7862,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询闹钟列表</para>
+        /// <para>Perform a paged query to retrieve the alarm clock list of a specific User on a device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7691,7 +7943,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询闹钟列表</para>
+        /// <para>Perform a paged query to retrieve the alarm clock list of a specific User on a device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7710,7 +7962,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询闹钟列表</para>
+        /// <para>Perform a paged query to retrieve the alarm clock list of a specific User on a device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7729,7 +7981,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音乐音频专辑里面的内容列表</para>
+        /// <para>Obtain the content list within a music audio album.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7796,7 +8048,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音乐音频专辑里面的内容列表</para>
+        /// <para>Obtain the content list within a music audio album.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7863,7 +8115,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音乐音频专辑里面的内容列表</para>
+        /// <para>Obtain the content list within a music audio album.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7882,7 +8134,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音乐音频专辑里面的内容列表</para>
+        /// <para>Obtain the content list within a music audio album.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7901,7 +8153,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>专辑是否被订阅</para>
+        /// <para>Whether the album is subscribed.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7982,7 +8234,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>专辑是否被订阅</para>
+        /// <para>Whether the album is subscribed.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8063,7 +8315,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>专辑是否被订阅</para>
+        /// <para>Whether the album is subscribed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8082,7 +8334,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>专辑是否被订阅</para>
+        /// <para>Whether the album is subscribed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8101,7 +8353,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据特定的类目,按照指定的排序顺序获取该类目下的内容.</para>
+        /// <para>Obtain the content under a specific category according to the specified sorting order.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8184,7 +8436,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据特定的类目,按照指定的排序顺序获取该类目下的内容.</para>
+        /// <para>Obtain the content under a specific category according to the specified sorting order.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8267,7 +8519,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据特定的类目,按照指定的排序顺序获取该类目下的内容.</para>
+        /// <para>Obtain the content under a specific category according to the specified sorting order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8286,7 +8538,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据特定的类目,按照指定的排序顺序获取该类目下的内容.</para>
+        /// <para>Obtain the content under a specific category according to the specified sorting order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8305,7 +8557,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音乐音频类目列表</para>
+        /// <para>Obtain category information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8364,7 +8616,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音乐音频类目列表</para>
+        /// <para>Obtain category information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8423,7 +8675,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音乐音频类目列表</para>
+        /// <para>Obtain category information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8442,7 +8694,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音乐音频类目列表</para>
+        /// <para>Obtain category information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8461,7 +8713,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音乐/音频的一级类目列表</para>
+        /// <para>Obtain the top-level category list for music or audio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8520,7 +8772,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音乐/音频的一级类目列表</para>
+        /// <para>Obtain the top-level category list for music or audio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8579,7 +8831,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音乐/音频的一级类目列表</para>
+        /// <para>Obtain the top-level category list for music or audio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8598,7 +8850,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音乐/音频的一级类目列表</para>
+        /// <para>Obtain the top-level category list for music or audio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8617,7 +8869,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定一级类目下面的二级类目列表</para>
+        /// <para>Retrieve the list of level-2 categories under a specified level-1 category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8676,7 +8928,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定一级类目下面的二级类目列表</para>
+        /// <para>Retrieve the list of level-2 categories under a specified level-1 category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8735,7 +8987,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定一级类目下面的二级类目列表</para>
+        /// <para>Retrieve the list of level-2 categories under a specified level-1 category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8754,7 +9006,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定一级类目下面的二级类目列表</para>
+        /// <para>Retrieve the list of level-2 categories under a specified level-1 category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8773,7 +9025,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取设备基本信息</para>
+        /// <para>Batch retrieve basic device information based on a list of device openIDs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8838,7 +9090,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取设备基本信息</para>
+        /// <para>Batch retrieve basic device information based on a list of device openIDs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8903,7 +9155,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取设备基本信息</para>
+        /// <para>Batch retrieve basic device information based on a list of device openIDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8922,7 +9174,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取设备基本信息</para>
+        /// <para>Batch retrieve basic device information based on a list of device openIDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8941,7 +9193,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户名下的设备</para>
+        /// <para>Obtain the list of attached Device IDs based on the user\&quot;s openID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9006,7 +9258,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户名下的设备</para>
+        /// <para>Obtain the list of attached Device IDs based on the user\&quot;s openID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9071,7 +9323,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户名下的设备</para>
+        /// <para>Obtain the list of attached Device IDs based on the user\&quot;s openID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9090,7 +9342,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户名下的设备</para>
+        /// <para>Obtain the list of attached Device IDs based on the user\&quot;s openID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9109,7 +9361,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定渠道的设备列表</para>
+        /// <para>Obtain the device list for a specified channel.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9182,7 +9434,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定渠道的设备列表</para>
+        /// <para>Obtain the device list for a specified channel.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9255,7 +9507,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定渠道的设备列表</para>
+        /// <para>Obtain the device list for a specified channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9274,7 +9526,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定渠道的设备列表</para>
+        /// <para>Obtain the device list for a specified channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9293,7 +9545,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取设备openId</para>
+        /// <para>Batch retrieve Device IDs by device MAC/SN.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9374,7 +9626,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取设备openId</para>
+        /// <para>Batch retrieve Device IDs by device MAC/SN.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9455,7 +9707,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取设备openId</para>
+        /// <para>Batch retrieve Device IDs by device MAC/SN.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9474,7 +9726,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取设备openId</para>
+        /// <para>Batch retrieve Device IDs by device MAC/SN.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9493,7 +9745,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于音乐类型查询铃声列表（分页）</para>
+        /// <para>Query the list of ringtones under a specified music category.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9574,7 +9826,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于音乐类型查询铃声列表（分页）</para>
+        /// <para>Query the list of ringtones under a specified music category.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9655,7 +9907,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于音乐类型查询铃声列表（分页）</para>
+        /// <para>Query the list of ringtones under a specified music category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9674,7 +9926,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于音乐类型查询铃声列表（分页）</para>
+        /// <para>Query the list of ringtones under a specified music category.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9693,7 +9945,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户的播放历史</para>
+        /// <para>Obtain the history playback API.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9776,7 +10028,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户的播放历史</para>
+        /// <para>Obtain the history playback API.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9859,7 +10111,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户的播放历史</para>
+        /// <para>Obtain the history playback API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9878,7 +10130,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户的播放历史</para>
+        /// <para>Obtain the history playback API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9897,7 +10149,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取每日推荐的音乐或者音频</para>
+        /// <para>Obtain daily recommended music or audio.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9980,7 +10232,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取每日推荐的音乐或者音频</para>
+        /// <para>Obtain daily recommended music or audio.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10063,7 +10315,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取每日推荐的音乐或者音频</para>
+        /// <para>Obtain daily recommended music or audio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10082,7 +10334,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取每日推荐的音乐或者音频</para>
+        /// <para>Obtain daily recommended music or audio.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10101,7 +10353,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅列表</para>
+        /// <para>The user has subscribed to the list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10182,7 +10434,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅列表</para>
+        /// <para>The user has subscribed to the list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10263,7 +10515,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅列表</para>
+        /// <para>The user has subscribed to the list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10282,7 +10534,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅列表</para>
+        /// <para>The user has subscribed to the list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10301,7 +10553,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅专辑元数据列表</para>
+        /// <para>Album List.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10382,7 +10634,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅专辑元数据列表</para>
+        /// <para>Album List.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10463,7 +10715,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅专辑元数据列表</para>
+        /// <para>Album List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10482,7 +10734,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅专辑元数据列表</para>
+        /// <para>Album List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10501,7 +10753,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容订阅元数据分类</para>
+        /// <para>Album categorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10560,7 +10812,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容订阅元数据分类</para>
+        /// <para>Album categorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10619,7 +10871,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容订阅元数据分类</para>
+        /// <para>Album categorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10638,7 +10890,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>内容订阅元数据分类</para>
+        /// <para>Album categorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10657,7 +10909,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取留言列表</para>
+        /// <para>Query the list of user message records based on the query conditions, including the start time and the number of entries to return.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10730,7 +10982,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取留言列表</para>
+        /// <para>Query the list of user message records based on the query conditions, including the start time and the number of entries to return.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10803,7 +11055,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取留言列表</para>
+        /// <para>Query the list of user message records based on the query conditions, including the start time and the number of entries to return.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10822,7 +11074,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取留言列表</para>
+        /// <para>Query the list of user message records based on the query conditions, including the start time and the number of entries to return.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10841,8 +11093,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动轻纳管</para>
+        /// <para>Shift the project to obtain recommended songs, including daily recommendations, popular songs, and genre-based playlists.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Different scenarios (such as daily recommendations and popular songs) can be distinguished by the Type parameter.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// MobileRecommendRequest
@@ -10930,8 +11187,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动轻纳管</para>
+        /// <para>Shift the project to obtain recommended songs, including daily recommendations, popular songs, and genre-based playlists.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Different scenarios (such as daily recommendations and popular songs) can be distinguished by the Type parameter.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// MobileRecommendRequest
@@ -11019,8 +11281,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动轻纳管</para>
+        /// <para>Shift the project to obtain recommended songs, including daily recommendations, popular songs, and genre-based playlists.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Different scenarios (such as daily recommendations and popular songs) can be distinguished by the Type parameter.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MobileRecommendRequest
@@ -11038,8 +11305,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动轻纳管</para>
+        /// <para>Shift the project to obtain recommended songs, including daily recommendations, popular songs, and genre-based playlists.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Different scenarios (such as daily recommendations and popular songs) can be distinguished by the Type parameter.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MobileRecommendRequest
@@ -11057,7 +11329,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放暂停控制</para>
+        /// <para>Playback and pause control.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11140,7 +11412,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放暂停控制</para>
+        /// <para>Playback and pause control.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11223,7 +11495,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放暂停控制</para>
+        /// <para>Playback and pause control.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11242,7 +11514,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放暂停控制</para>
+        /// <para>Playback and pause control.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11261,7 +11533,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放模式切换</para>
+        /// <para>Switch playback mode.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11344,7 +11616,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放模式切换</para>
+        /// <para>Switch playback mode.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11427,7 +11699,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放模式切换</para>
+        /// <para>Switch playback mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11446,7 +11718,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>播放模式切换</para>
+        /// <para>Switch playback mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11465,7 +11737,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上下首控制</para>
+        /// <para>Control the next or previous track in the created playlist.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11548,7 +11820,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上下首控制</para>
+        /// <para>Control the next or previous track in the created playlist.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11631,7 +11903,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上下首控制</para>
+        /// <para>Control the next or previous track in the created playlist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11650,7 +11922,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上下首控制</para>
+        /// <para>Control the next or previous track in the created playlist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11669,7 +11941,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>进度控制</para>
+        /// <para>Progress control.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11752,7 +12024,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>进度控制</para>
+        /// <para>Progress control.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11835,7 +12107,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>进度控制</para>
+        /// <para>Progress control.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11854,7 +12126,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>进度控制</para>
+        /// <para>Progress control.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11873,7 +12145,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闹钟音乐类型列表</para>
+        /// <para>Obtain the collection of alarm music types supported by the device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11954,7 +12226,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闹钟音乐类型列表</para>
+        /// <para>Obtain the collection of alarm music types supported by the device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12035,7 +12307,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闹钟音乐类型列表</para>
+        /// <para>Obtain the collection of alarm music types supported by the device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12054,7 +12326,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闹钟音乐类型列表</para>
+        /// <para>Obtain the collection of alarm music types supported by the device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12073,7 +12345,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过tme用户id获取授权的天猫精灵用户+设备列表</para>
+        /// <para>Obtain the list of authorized Tmall Genie users and their devices by using the TME user ID, for use by KuGou Cloud Push Song service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12136,7 +12408,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过tme用户id获取授权的天猫精灵用户+设备列表</para>
+        /// <para>Obtain the list of authorized Tmall Genie users and their devices by using the TME user ID, for use by KuGou Cloud Push Song service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12199,7 +12471,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过tme用户id获取授权的天猫精灵用户+设备列表</para>
+        /// <para>Obtain the list of authorized Tmall Genie users and their devices by using the TME user ID, for use by KuGou Cloud Push Song service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12218,7 +12490,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过tme用户id获取授权的天猫精灵用户+设备列表</para>
+        /// <para>Obtain the list of authorized Tmall Genie users and their devices by using the TME user ID, for use by KuGou Cloud Push Song service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12237,7 +12509,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>读取留言</para>
+        /// <para>Set a message to read status.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12306,7 +12578,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>读取留言</para>
+        /// <para>Set a message to read status.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12375,7 +12647,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>读取留言</para>
+        /// <para>Set a message to read status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12394,7 +12666,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>读取留言</para>
+        /// <para>Set a message to read status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12413,8 +12685,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扫描二维码激活绑定设备</para>
+        /// <para>A screen-equipped device completes activation and attachment between the user and the device by scanning a QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Perform activation and attachment by scanning the QR code related to activation and attachment displayed on the device.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ScanCodeBindRequest
@@ -12486,8 +12763,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扫描二维码激活绑定设备</para>
+        /// <para>A screen-equipped device completes activation and attachment between the user and the device by scanning a QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Perform activation and attachment by scanning the QR code related to activation and attachment displayed on the device.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ScanCodeBindRequest
@@ -12559,8 +12841,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扫描二维码激活绑定设备</para>
+        /// <para>A screen-equipped device completes activation and attachment between the user and the device by scanning a QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Perform activation and attachment by scanning the QR code related to activation and attachment displayed on the device.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ScanCodeBindRequest
@@ -12578,8 +12865,13 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扫描二维码激活绑定设备</para>
+        /// <para>A screen-equipped device completes activation and attachment between the user and the device by scanning a QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Perform activation and attachment by scanning the QR code related to activation and attachment displayed on the device.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ScanCodeBindRequest
@@ -12597,7 +12889,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>选品池投放能力</para>
+        /// <para>Query the content of a selection pool by its ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12666,7 +12958,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>选品池投放能力</para>
+        /// <para>Query the content of a selection pool by its ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12735,7 +13027,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>选品池投放能力</para>
+        /// <para>Query the content of a selection pool by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12754,7 +13046,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>选品池投放能力</para>
+        /// <para>Query the content of a selection pool by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12773,7 +13065,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按照特定的搜索条件搜索</para>
+        /// <para>Search according to specific search criteria.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12856,7 +13148,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按照特定的搜索条件搜索</para>
+        /// <para>Search according to specific search criteria.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12939,7 +13231,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按照特定的搜索条件搜索</para>
+        /// <para>Search according to specific search criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12958,7 +13250,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按照特定的搜索条件搜索</para>
+        /// <para>Search according to specific search criteria.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12977,7 +13269,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送留言</para>
+        /// <para>Send a message.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13046,7 +13338,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送留言</para>
+        /// <para>Send a message.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13115,7 +13407,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送留言</para>
+        /// <para>Send a message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13134,7 +13426,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送留言</para>
+        /// <para>Send a message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13153,7 +13445,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改设备设置</para>
+        /// <para>Modify the user settings of a device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13228,7 +13520,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改设备设置</para>
+        /// <para>Modify the user settings of a device.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13303,7 +13595,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改设备设置</para>
+        /// <para>Modify the user settings of a device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13322,7 +13614,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改设备设置</para>
+        /// <para>Modify the user settings of a device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13341,7 +13633,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>三方即时信息数据变更事件推送</para>
+        /// <para>Third-party real-time information data change event push</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13436,7 +13728,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>三方即时信息数据变更事件推送</para>
+        /// <para>Third-party real-time information data change event push</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13531,7 +13823,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>三方即时信息数据变更事件推送</para>
+        /// <para>Third-party real-time information data change event push</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13550,7 +13842,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>三方即时信息数据变更事件推送</para>
+        /// <para>Third-party real-time information data change event push</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13569,8 +13861,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除三方和精灵账号的关系</para>
+        /// <para>Detach the relationship between a third-party account and a Tmall Genie account by using a logon credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: When the logon credential expires, the integrator must initiate the authorization logon flow again to obtain a new logon credential (entry service API: AuthLoginWithThirdUserInfo).</para>
+        /// <list type="bullet">
+        /// <item><description>Invoke the service API with the logon credential (LoginStateAccessToken) parameter via the Java software development kit (SDK). For SDKs in other languages, consult Tmall Genie developers during integration.<br>If the API call throws a TeaException and TeaException.code is &quot;InvalidAuthentication&quot;, the logon credential has expired.</description></item>
+        /// <item><description>Invoke the service API by sending an HTTP request with the logon credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the logon credential has expired.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnbindAligenieUserRequest
@@ -13628,8 +13929,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除三方和精灵账号的关系</para>
+        /// <para>Detach the relationship between a third-party account and a Tmall Genie account by using a logon credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: When the logon credential expires, the integrator must initiate the authorization logon flow again to obtain a new logon credential (entry service API: AuthLoginWithThirdUserInfo).</para>
+        /// <list type="bullet">
+        /// <item><description>Invoke the service API with the logon credential (LoginStateAccessToken) parameter via the Java software development kit (SDK). For SDKs in other languages, consult Tmall Genie developers during integration.<br>If the API call throws a TeaException and TeaException.code is &quot;InvalidAuthentication&quot;, the logon credential has expired.</description></item>
+        /// <item><description>Invoke the service API by sending an HTTP request with the logon credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the logon credential has expired.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnbindAligenieUserRequest
@@ -13687,8 +13997,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除三方和精灵账号的关系</para>
+        /// <para>Detach the relationship between a third-party account and a Tmall Genie account by using a logon credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: When the logon credential expires, the integrator must initiate the authorization logon flow again to obtain a new logon credential (entry service API: AuthLoginWithThirdUserInfo).</para>
+        /// <list type="bullet">
+        /// <item><description>Invoke the service API with the logon credential (LoginStateAccessToken) parameter via the Java software development kit (SDK). For SDKs in other languages, consult Tmall Genie developers during integration.<br>If the API call throws a TeaException and TeaException.code is &quot;InvalidAuthentication&quot;, the logon credential has expired.</description></item>
+        /// <item><description>Invoke the service API by sending an HTTP request with the logon credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the logon credential has expired.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnbindAligenieUserRequest
@@ -13706,8 +14025,17 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除三方和精灵账号的关系</para>
+        /// <para>Detach the relationship between a third-party account and a Tmall Genie account by using a logon credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: When the logon credential expires, the integrator must initiate the authorization logon flow again to obtain a new logon credential (entry service API: AuthLoginWithThirdUserInfo).</para>
+        /// <list type="bullet">
+        /// <item><description>Invoke the service API with the logon credential (LoginStateAccessToken) parameter via the Java software development kit (SDK). For SDKs in other languages, consult Tmall Genie developers during integration.<br>If the API call throws a TeaException and TeaException.code is &quot;InvalidAuthentication&quot;, the logon credential has expired.</description></item>
+        /// <item><description>Invoke the service API by sending an HTTP request with the logon credential (LoginStateAccessToken) parameter.<br>If the HTTP response status code returned by the API call is 400, the logon credential has expired.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnbindAligenieUserRequest
@@ -13725,7 +14053,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑设备</para>
+        /// <para>Detach the binding relationship based on the user\&quot;s open information and the device\&quot;s open information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13798,7 +14126,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑设备</para>
+        /// <para>Detach the binding relationship based on the user\&quot;s open information and the device\&quot;s open information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13871,7 +14199,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑设备</para>
+        /// <para>Detach the binding relationship based on the user\&quot;s open information and the device\&quot;s open information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13890,7 +14218,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑设备</para>
+        /// <para>Detach the binding relationship based on the user\&quot;s open information and the device\&quot;s open information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13909,7 +14237,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新闹钟</para>
+        /// <para>Update an alarm, including its trigger time, loop type, and music.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13990,7 +14318,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新闹钟</para>
+        /// <para>Update an alarm, including its trigger time, loop type, and music.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14071,7 +14399,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新闹钟</para>
+        /// <para>Update an alarm, including its trigger time, loop type, and music.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14090,7 +14418,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新闹钟</para>
+        /// <para>Update an alarm, including its trigger time, loop type, and music.</para>
         /// </summary>
         /// 
         /// <param name="request">

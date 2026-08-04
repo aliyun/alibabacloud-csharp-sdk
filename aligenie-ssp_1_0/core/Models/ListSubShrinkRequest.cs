@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListSubShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Device Information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string DeviceInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>Pagination Parameters</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Page")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string PageShrink { get; set; }
 
         /// <summary>
+        /// <para>User information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class SearchContentShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Device identification information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string DeviceInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>Request Parameters</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Request")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string RequestShrink { get; set; }
 
         /// <summary>
+        /// <para>User identification information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

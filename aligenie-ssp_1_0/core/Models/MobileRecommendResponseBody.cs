@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class MobileRecommendResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return code of the invocation</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>If an error occurs, the error message will be output.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -35,15 +39,23 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Request result.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<MobileRecommendResponseBodyResult> Result { get; set; }
         public class MobileRecommendResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>Author information</para>
+            /// </summary>
             [NameInMap("Authors")]
             [Validation(Required=false)]
             public List<string> Authors { get; set; }
 
             /// <summary>
+            /// <para>Album thumbnail image</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://img4.kuwo.cn/star/albumcover/120/78/77/1688821132.jpg">http://img4.kuwo.cn/star/albumcover/120/78/77/1688821132.jpg</a></para>
             /// </summary>
@@ -52,6 +64,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string Cover { get; set; }
 
             /// <summary>
+            /// <para>Third-party ID of the content</para>
+            /// 
             /// <b>Example:</b>
             /// <para>550144364</para>
             /// </summary>
@@ -60,6 +74,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string RawId { get; set; }
 
             /// <summary>
+            /// <para>Source of the content</para>
+            /// 
             /// <b>Example:</b>
             /// <para>KG</para>
             /// </summary>
@@ -67,6 +83,12 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             [Validation(Required=false)]
             public string Source { get; set; }
 
+            /// <summary>
+            /// <para>Content title</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>稻香</para>
+            /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }

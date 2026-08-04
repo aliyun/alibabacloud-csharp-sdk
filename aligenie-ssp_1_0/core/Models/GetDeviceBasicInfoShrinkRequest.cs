@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class GetDeviceBasicInfoShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>List of device identity information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]

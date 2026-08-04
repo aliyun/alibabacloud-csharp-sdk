@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class EcologyOpennessAuthenticateRequest : TeaModel {
         /// <summary>
+        /// <para>entity key</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string EncodeKey { get; set; }
 
         /// <summary>
+        /// <para>entity Type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string EncodeType { get; set; }
 
         /// <summary>
+        /// <para>logon state access token</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

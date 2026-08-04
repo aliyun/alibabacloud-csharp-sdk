@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListUserMessageShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>After a specific point in time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-07-27 14:06:55.984</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string BeforeTime { get; set; }
 
         /// <summary>
+        /// <para>User identifier information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]
@@ -25,6 +28,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string UserInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>Number of records to query</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

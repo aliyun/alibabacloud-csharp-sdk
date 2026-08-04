@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListDeviceBasicInfoRequest : TeaModel {
+        /// <summary>
+        /// <para>List of device identity information.</para>
+        /// </summary>
         [NameInMap("DeviceInfos")]
         [Validation(Required=false)]
         public ListDeviceBasicInfoRequestDeviceInfos DeviceInfos { get; set; }
         public class ListDeviceBasicInfoRequestDeviceInfos : TeaModel {
             /// <summary>
+            /// <para>Value corresponding to the encoding type. Enter the Project ID of the project where the product resides. You can view this in the Tmall Genie AI Platform console.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -24,6 +28,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeKey { get; set; }
 
             /// <summary>
+            /// <para>Encoding type. Enter <b>PROJECT_ID</b> here.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -34,6 +39,11 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string EncodeType { get; set; }
 
             /// <summary>
+            /// <para>Type of device ID:</para>
+            /// <list type="bullet">
+            /// <item><description>OPEN_ID: Default device ID identity.</description></item>
+            /// <item><description>UNION_ID: Organization-dimension device ID identity. You must request an organization in advance on the Open Platform.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -43,11 +53,16 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             [Validation(Required=false)]
             public string IdType { get; set; }
 
+            /// <summary>
+            /// <para>List of device identity information.</para>
+            /// </summary>
             [NameInMap("Ids")]
             [Validation(Required=false)]
             public List<string> Ids { get; set; }
 
             /// <summary>
+            /// <para>Organization ID of the device. Required if IdType is UNION_ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

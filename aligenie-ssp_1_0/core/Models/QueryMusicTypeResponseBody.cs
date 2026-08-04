@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class QueryMusicTypeResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code returned by the alarm service</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>error message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>设备账号未关联</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>43<em><b>28C-A810-5</b></em>-8747-EC226A086881</para>
         /// </summary>
@@ -29,11 +39,16 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>List of ringtone types</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<QueryMusicTypeResponseBodyResult> Result { get; set; }
         public class QueryMusicTypeResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Ringtone type ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -42,6 +57,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public long? MusicType { get; set; }
 
             /// <summary>
+            /// <para>Name of the ringtone category</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xx</para>
             /// </summary>

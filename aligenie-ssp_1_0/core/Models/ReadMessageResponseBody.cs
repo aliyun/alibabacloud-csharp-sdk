@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ReadMessageResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code returned by the service. Only &quot;SUCCESS&quot; indicates success; all other values indicate failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>error message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>外部userId映射关系不存在</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Succeeded in marking as read</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

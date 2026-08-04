@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class SetDeviceSettingShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>List of user identifier information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string DeviceInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>The collection of keys specified for device settings:<br>Do Not Disturb mode: nightMode</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>Attribute Value</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;enable&quot;:true}</para>
         /// </summary>

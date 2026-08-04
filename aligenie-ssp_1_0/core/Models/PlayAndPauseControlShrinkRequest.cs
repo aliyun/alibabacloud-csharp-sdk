@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class PlayAndPauseControlShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Device identity information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string DeviceInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>Business parameters</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OpenPlayAndPauseControlParam")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string OpenPlayAndPauseControlParamShrink { get; set; }
 
         /// <summary>
+        /// <para>User identity information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

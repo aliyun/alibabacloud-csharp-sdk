@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class GetAligenieUserInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Response message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>73C67BD9-175A-1324-8202-9FAABBB3E6FA</para>
         /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public GetAligenieUserInfoResponseBodyResult Result { get; set; }
         public class GetAligenieUserInfoResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Aligenie user nickname</para>
+            /// 
             /// <b>Example:</b>
             /// <para>XXX</para>
             /// </summary>
@@ -46,6 +54,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string AligenieNickname { get; set; }
 
             /// <summary>
+            /// <para>URL of the Aligenie user profile picture</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://img.alicdn.com/xxx.jpg">http://img.alicdn.com/xxx.jpg</a></para>
             /// </summary>
@@ -53,12 +63,18 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             [Validation(Required=false)]
             public string Avatar { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the account can be logged off</para>
+            /// </summary>
             [NameInMap("Deletable")]
             [Validation(Required=false)]
             public bool? Deletable { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>Flag indicating whether the invocation succeeded</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

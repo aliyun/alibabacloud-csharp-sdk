@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class SendMessageShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Message URL</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://xx">http://xx</a></para>
         /// </summary>

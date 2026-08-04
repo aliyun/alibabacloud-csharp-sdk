@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class AuthLoginWithAligenieUserInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Response message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>73C67BD9-175A-1324-8202-9FAABBB3E6FA</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Response Result</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public AuthLoginWithAligenieUserInfoResponseBodyResult Result { get; set; }
         public class AuthLoginWithAligenieUserInfoResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Expiration time of the login state access token (long integer)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1659506854230</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public long? ExpiredTimeLong { get; set; }
 
             /// <summary>
+            /// <para>Login state access token</para>
+            /// 
             /// <b>Example:</b>
             /// <para>d15aa92de679d0d225aa845268be19ee</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         }
 
         /// <summary>
+        /// <para>Flag indicating whether the invocation succeeded</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

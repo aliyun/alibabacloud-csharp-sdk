@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListDeviceBasicInfoShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>List of device identity information.</para>
+        /// </summary>
         [NameInMap("DeviceInfos")]
         [Validation(Required=false)]
         public string DeviceInfosShrink { get; set; }

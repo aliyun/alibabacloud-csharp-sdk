@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListCommonCateSecondFloorRequest : TeaModel {
         /// <summary>
+        /// <para>Parent category ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80010</para>
         /// </summary>

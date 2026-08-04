@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListSubRequest : TeaModel {
         /// <summary>
+        /// <para>Device Information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceInfo")]
@@ -63,6 +64,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         }
 
         /// <summary>
+        /// <para>Pagination Parameters</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Page")]
@@ -70,6 +72,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public ListSubRequestPage Page { get; set; }
         public class ListSubRequestPage : TeaModel {
             /// <summary>
+            /// <para>Page number</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -78,6 +82,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public int? PageNum { get; set; }
 
             /// <summary>
+            /// <para>Number of entries per page</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -88,6 +94,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         }
 
         /// <summary>
+        /// <para>User information</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserInfo")]

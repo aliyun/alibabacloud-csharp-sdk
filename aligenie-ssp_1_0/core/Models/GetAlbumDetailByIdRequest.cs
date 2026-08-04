@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class GetAlbumDetailByIdRequest : TeaModel {
         /// <summary>
+        /// <para>Album ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>51999575</para>
         /// </summary>

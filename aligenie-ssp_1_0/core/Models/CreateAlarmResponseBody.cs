@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class CreateAlarmResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request result status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>error message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xx为空</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>43<em><b>28C-A810-5</b></em>-8747-EC226A086881</para>
         /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Alarm ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567</para>
         /// </summary>

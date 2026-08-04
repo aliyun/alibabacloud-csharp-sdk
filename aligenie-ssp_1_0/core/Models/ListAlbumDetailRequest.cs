@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListAlbumDetailRequest : TeaModel {
         /// <summary>
+        /// <para>album ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>page number</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>number of records per page</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

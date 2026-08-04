@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
 {
     public class ListSubscriptionAlbumCategoryResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>Additional information</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60E7A523-9766-1D07-87A2-6E587420C59B</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>List of categories</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListSubscriptionAlbumCategoryResponseBodyResult> Result { get; set; }
         public class ListSubscriptionAlbumCategoryResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Category ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>80011</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AliGeniessp_1_0.Models
             public string CategoryId { get; set; }
 
             /// <summary>
+            /// <para>Category name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>儿童</para>
             /// </summary>
