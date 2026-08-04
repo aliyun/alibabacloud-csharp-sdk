@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>An array of objects defining the file quota rules for specific directories.</para>
+        /// <para>The details of the quota rules to apply to directories.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FilePathQuotas")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<SetPolarFsFileQuotaRequestFilePathQuotas> FilePathQuotas { get; set; }
         public class SetPolarFsFileQuotaRequestFilePathQuotas : TeaModel {
             /// <summary>
-            /// <para>The capacity quota in GB.</para>
+            /// <para>The quota capacity. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The absolute path of the directory.</para>
+            /// <para>The directory path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/a/project</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string FilePathId { get; set; }
 
             /// <summary>
-            /// <para>The inode quota.</para>
+            /// <para>The quota inodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? Inodes { get; set; }
 
             /// <summary>
-            /// <para>The maximum depth of subdirectories to traverse under the path specified by <c>FilePathId</c>. A value of 1 traverses only the first level of subdirectories. A value of 0 traverses to the deepest level.</para>
+            /// <para>The number of subdirectory levels to traverse under <c>FilePathId</c>. A value of 1 indicates that only the first-level subdirectories are traversed. A value of 0 indicates that all levels are traversed to the deepest level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? MaxDepth { get; set; }
 
             /// <summary>
-            /// <para>A list of file quota rule IDs, separated by a comma (<c>,</c>).</para>
+            /// <para>The IDs of the rules to apply, separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1,2</para>
@@ -78,12 +78,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string QuotaIds { get; set; }
 
             /// <summary>
-            /// <para>Specifies how to apply the rule to existing files. Valid values:</para>
+            /// <para>The mode in which rules take effect on existing files. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>missing</b>: Applies the rule only if one does not already exist. (Default)</para>
-            /// </description></item>
-            /// <item><description><para><b>all</b>: Applies the rule to all files.</para>
-            /// </description></item>
+            /// <item><description><b>missing</b>: Rules take effect only when they are missing. This is the default value.</description></item>
+            /// <item><description><b>all</b>: Rules take effect on all files.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,7 +94,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the PolarFS instance.</para>
+        /// <para>The Polarlakebase instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

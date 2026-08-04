@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateGwConsumerOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence token.</para>
+        /// <para>The idempotency token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f54a343f1a42***********</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the API key in ISO 8601 format. The value must be later than the current time.</para>
+        /// <para>The expiration time of the API key in ISO-8601 format. The value must be later than the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2027-07-23T03:09:08Z</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The number of API keys to generate, which is the number of resource plans to order. Valid values: 1 to 30.</para>
+        /// <para>The number of API keys to generate (the number of capacity plans to order). Valid values: 1 to 30.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,17 +52,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? KeyCount { get; set; }
 
         /// <summary>
-        /// <para>The specification tier of the resource plan. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>basic</description></item>
-        /// <item><description>advanced</description></item>
-        /// <item><description>pro</description></item>
-        /// </list>
-        /// <para>Each value represents the number of credits for a single key.</para>
+        /// <para>The number of credits per API key. The value is a positive integer string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>basic</para>
+        /// <para>3000</para>
         /// </summary>
         [NameInMap("PackageSpec")]
         [Validation(Required=false)]

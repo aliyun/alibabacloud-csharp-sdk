@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarFsQuotaListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The PolarFS instance ID.</para>
+        /// <para>The PolarFs instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pfs-test****</para>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A list of directory quotas.</para>
+        /// <para>The directory quotas.</para>
         /// </summary>
         [NameInMap("QuotaItems")]
         [Validation(Required=false)]
         public List<DescribePolarFsQuotaListResponseBodyQuotaItems> QuotaItems { get; set; }
         public class DescribePolarFsQuotaListResponseBodyQuotaItems : TeaModel {
             /// <summary>
-            /// <para>The capacity in bytes.</para>
+            /// <para>The capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1073741824</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The inode quota.</para>
+            /// <para>Inodes</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The used capacity in bytes.</para>
+            /// <para>The used capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>104857600</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? UsedCapacity { get; set; }
 
             /// <summary>
-            /// <para>The number of inodes in use.</para>
+            /// <para>The number of used inodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>EBEAA83D-1734-42E3-85E3-E25F6E******</para>

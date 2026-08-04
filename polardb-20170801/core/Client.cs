@@ -47643,7 +47643,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the quota list.</para>
+        /// <para>Queries the quota list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47705,7 +47705,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the quota list.</para>
+        /// <para>Queries the quota list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47767,7 +47767,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the quota list.</para>
+        /// <para>Queries the quota list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47785,7 +47785,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the quota list.</para>
+        /// <para>Queries the quota list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -74339,17 +74339,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets file quota rules for specific directories in a PolarFS instance.</para>
+        /// <para>Sets file quota rules for a specified directory in a Polarlakebase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This operation sets file quota rules for specific directories in a PolarFS instance. Use the <c>FilePathQuotas</c> parameter to define the target directories and their properties. The path for <c>FilePathId</c> must be an absolute path from the root directory, not from a mount target. The <c>Strategy</c> parameter controls how the rule applies to existing files. By default, the operation applies a rule only if one does not already exist.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation sets file quota rules for a specific directory in a Polarlakebase instance. By configuring the <c>FilePathQuotas</c> parameter, you can specify the directories to which quota rules are applied and their related attributes. When you use <c>FilePathId</c> to specify a directory, ensure that the path is an absolute path from the root directory rather than a mount point path. You can also use the <c>Strategy</c> parameter to control how rules take effect on existing files. By default, rules take effect only when they are missing.</para>
         /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>The <c>FilePathQuotas</c> list can contain up to 21 items.</description></item>
-        /// <item><description>To apply the rule to subdirectories at multiple levels under <c>FilePathId</c>, set the <c>MaxDepth</c> parameter. To traverse to the deepest level, set this value to 0.</description></item>
+        /// <item><description>The maximum length of the <c>FilePathQuotas</c> list is 21.</description></item>
+        /// <item><description>To apply rules to multiple levels of subdirectories under <c>FilePathId</c>, set the <c>MaxDepth</c> parameter. To traverse to the deepest level, set this value to 0.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -74400,17 +74400,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets file quota rules for specific directories in a PolarFS instance.</para>
+        /// <para>Sets file quota rules for a specified directory in a Polarlakebase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This operation sets file quota rules for specific directories in a PolarFS instance. Use the <c>FilePathQuotas</c> parameter to define the target directories and their properties. The path for <c>FilePathId</c> must be an absolute path from the root directory, not from a mount target. The <c>Strategy</c> parameter controls how the rule applies to existing files. By default, the operation applies a rule only if one does not already exist.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation sets file quota rules for a specific directory in a Polarlakebase instance. By configuring the <c>FilePathQuotas</c> parameter, you can specify the directories to which quota rules are applied and their related attributes. When you use <c>FilePathId</c> to specify a directory, ensure that the path is an absolute path from the root directory rather than a mount point path. You can also use the <c>Strategy</c> parameter to control how rules take effect on existing files. By default, rules take effect only when they are missing.</para>
         /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>The <c>FilePathQuotas</c> list can contain up to 21 items.</description></item>
-        /// <item><description>To apply the rule to subdirectories at multiple levels under <c>FilePathId</c>, set the <c>MaxDepth</c> parameter. To traverse to the deepest level, set this value to 0.</description></item>
+        /// <item><description>The maximum length of the <c>FilePathQuotas</c> list is 21.</description></item>
+        /// <item><description>To apply rules to multiple levels of subdirectories under <c>FilePathId</c>, set the <c>MaxDepth</c> parameter. To traverse to the deepest level, set this value to 0.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -74461,17 +74461,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets file quota rules for specific directories in a PolarFS instance.</para>
+        /// <para>Sets file quota rules for a specified directory in a Polarlakebase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This operation sets file quota rules for specific directories in a PolarFS instance. Use the <c>FilePathQuotas</c> parameter to define the target directories and their properties. The path for <c>FilePathId</c> must be an absolute path from the root directory, not from a mount target. The <c>Strategy</c> parameter controls how the rule applies to existing files. By default, the operation applies a rule only if one does not already exist.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation sets file quota rules for a specific directory in a Polarlakebase instance. By configuring the <c>FilePathQuotas</c> parameter, you can specify the directories to which quota rules are applied and their related attributes. When you use <c>FilePathId</c> to specify a directory, ensure that the path is an absolute path from the root directory rather than a mount point path. You can also use the <c>Strategy</c> parameter to control how rules take effect on existing files. By default, rules take effect only when they are missing.</para>
         /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>The <c>FilePathQuotas</c> list can contain up to 21 items.</description></item>
-        /// <item><description>To apply the rule to subdirectories at multiple levels under <c>FilePathId</c>, set the <c>MaxDepth</c> parameter. To traverse to the deepest level, set this value to 0.</description></item>
+        /// <item><description>The maximum length of the <c>FilePathQuotas</c> list is 21.</description></item>
+        /// <item><description>To apply rules to multiple levels of subdirectories under <c>FilePathId</c>, set the <c>MaxDepth</c> parameter. To traverse to the deepest level, set this value to 0.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -74490,17 +74490,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets file quota rules for specific directories in a PolarFS instance.</para>
+        /// <para>Sets file quota rules for a specified directory in a Polarlakebase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This operation sets file quota rules for specific directories in a PolarFS instance. Use the <c>FilePathQuotas</c> parameter to define the target directories and their properties. The path for <c>FilePathId</c> must be an absolute path from the root directory, not from a mount target. The <c>Strategy</c> parameter controls how the rule applies to existing files. By default, the operation applies a rule only if one does not already exist.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation sets file quota rules for a specific directory in a Polarlakebase instance. By configuring the <c>FilePathQuotas</c> parameter, you can specify the directories to which quota rules are applied and their related attributes. When you use <c>FilePathId</c> to specify a directory, ensure that the path is an absolute path from the root directory rather than a mount point path. You can also use the <c>Strategy</c> parameter to control how rules take effect on existing files. By default, rules take effect only when they are missing.</para>
         /// <h3>Notes</h3>
         /// <list type="bullet">
-        /// <item><description>The <c>FilePathQuotas</c> list can contain up to 21 items.</description></item>
-        /// <item><description>To apply the rule to subdirectories at multiple levels under <c>FilePathId</c>, set the <c>MaxDepth</c> parameter. To traverse to the deepest level, set this value to 0.</description></item>
+        /// <item><description>The maximum length of the <c>FilePathQuotas</c> list is 21.</description></item>
+        /// <item><description>To apply rules to multiple levels of subdirectories under <c>FilePathId</c>, set the <c>MaxDepth</c> parameter. To traverse to the deepest level, set this value to 0.</description></item>
         /// </list>
         /// </description>
         /// 

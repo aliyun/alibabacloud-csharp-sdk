@@ -1,3 +1,6 @@
+2026-08-04 Version: 7.10.2
+- Generated csharp 2017-08-01 for polardb.
+
 2026-07-30 Version: 7.10.1
 - Generated csharp 2017-08-01 for polardb.
 
