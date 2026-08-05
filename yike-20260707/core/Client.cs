@@ -856,13 +856,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询媒资</para>
+        /// <para>Queries a media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Operation description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -912,13 +911,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询媒资</para>
+        /// <para>Queries a media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Operation description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -968,13 +966,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询媒资</para>
+        /// <para>Queries a media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Operation description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -992,13 +989,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询媒资</para>
+        /// <para>Queries a media asset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于查询媒资内容理解作业。</para>
+        /// <h2>Operation description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -1408,7 +1404,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询爆款新视频渲染任务</para>
+        /// <para>Submits a video rendering and composition task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1450,7 +1446,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询爆款新视频渲染任务</para>
+        /// <para>Submits a video rendering and composition task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1492,7 +1488,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询爆款新视频渲染任务</para>
+        /// <para>Submits a video rendering and composition task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1510,7 +1506,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询爆款新视频渲染任务</para>
+        /// <para>Submits a video rendering and composition task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1524,6 +1520,178 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetVideoRenderJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频翻译任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于根据<c>JobId</c>获取视频翻译任务的状态和详细信息。</description></item>
+        /// <item><description><c>JobId</c>是必需参数，通过query或form方式传递。</description></item>
+        /// <item><description>如果任务不存在或者不属于当前调用方，则返回<c>InvalidParameter</c>错误码与400状态码。</description></item>
+        /// <item><description>成功响应时，HTTP状态码为200，任务对象位于<c>data.Job</c>中。</description></item>
+        /// <item><description>当任务完成(<c>Status=Finished</c>)时，业务产物可以在<c>data.Job.Output</c>字段中找到，需要客户端进行一次JSON解析以获取具体结果。</description></item>
+        /// <item><description>对于多语言目标的任务，直接使用<c>Output.AiResult.ResultMap</c>来获取各语言的具体结果；如果仅有一个目标语言，可以通过<c>data.Job.EditingProjectId</c>便捷地获取剪辑工程ID。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoTranslationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoTranslationJobResponse
+        /// </returns>
+        public GetVideoTranslationJobResponse GetVideoTranslationJobWithOptions(GetVideoTranslationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoTranslationJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoTranslationJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频翻译任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于根据<c>JobId</c>获取视频翻译任务的状态和详细信息。</description></item>
+        /// <item><description><c>JobId</c>是必需参数，通过query或form方式传递。</description></item>
+        /// <item><description>如果任务不存在或者不属于当前调用方，则返回<c>InvalidParameter</c>错误码与400状态码。</description></item>
+        /// <item><description>成功响应时，HTTP状态码为200，任务对象位于<c>data.Job</c>中。</description></item>
+        /// <item><description>当任务完成(<c>Status=Finished</c>)时，业务产物可以在<c>data.Job.Output</c>字段中找到，需要客户端进行一次JSON解析以获取具体结果。</description></item>
+        /// <item><description>对于多语言目标的任务，直接使用<c>Output.AiResult.ResultMap</c>来获取各语言的具体结果；如果仅有一个目标语言，可以通过<c>data.Job.EditingProjectId</c>便捷地获取剪辑工程ID。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoTranslationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoTranslationJobResponse
+        /// </returns>
+        public async Task<GetVideoTranslationJobResponse> GetVideoTranslationJobWithOptionsAsync(GetVideoTranslationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoTranslationJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoTranslationJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频翻译任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于根据<c>JobId</c>获取视频翻译任务的状态和详细信息。</description></item>
+        /// <item><description><c>JobId</c>是必需参数，通过query或form方式传递。</description></item>
+        /// <item><description>如果任务不存在或者不属于当前调用方，则返回<c>InvalidParameter</c>错误码与400状态码。</description></item>
+        /// <item><description>成功响应时，HTTP状态码为200，任务对象位于<c>data.Job</c>中。</description></item>
+        /// <item><description>当任务完成(<c>Status=Finished</c>)时，业务产物可以在<c>data.Job.Output</c>字段中找到，需要客户端进行一次JSON解析以获取具体结果。</description></item>
+        /// <item><description>对于多语言目标的任务，直接使用<c>Output.AiResult.ResultMap</c>来获取各语言的具体结果；如果仅有一个目标语言，可以通过<c>data.Job.EditingProjectId</c>便捷地获取剪辑工程ID。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoTranslationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoTranslationJobResponse
+        /// </returns>
+        public GetVideoTranslationJobResponse GetVideoTranslationJob(GetVideoTranslationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVideoTranslationJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询视频翻译任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该API用于根据<c>JobId</c>获取视频翻译任务的状态和详细信息。</description></item>
+        /// <item><description><c>JobId</c>是必需参数，通过query或form方式传递。</description></item>
+        /// <item><description>如果任务不存在或者不属于当前调用方，则返回<c>InvalidParameter</c>错误码与400状态码。</description></item>
+        /// <item><description>成功响应时，HTTP状态码为200，任务对象位于<c>data.Job</c>中。</description></item>
+        /// <item><description>当任务完成(<c>Status=Finished</c>)时，业务产物可以在<c>data.Job.Output</c>字段中找到，需要客户端进行一次JSON解析以获取具体结果。</description></item>
+        /// <item><description>对于多语言目标的任务，直接使用<c>Output.AiResult.ResultMap</c>来获取各语言的具体结果；如果仅有一个目标语言，可以通过<c>data.Job.EditingProjectId</c>便捷地获取剪辑工程ID。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetVideoTranslationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoTranslationJobResponse
+        /// </returns>
+        public async Task<GetVideoTranslationJobResponse> GetVideoTranslationJobAsync(GetVideoTranslationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVideoTranslationJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2472,13 +2640,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交媒资内容理解作业</para>
+        /// <para>Submits a media asset content understanding job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的媒资文件（比如视频链接）进行内容理解。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2532,13 +2700,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交媒资内容理解作业</para>
+        /// <para>Submits a media asset content understanding job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的媒资文件（比如视频链接）进行内容理解。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2592,13 +2760,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交媒资内容理解作业</para>
+        /// <para>Submits a media asset content understanding job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的媒资文件（比如视频链接）进行内容理解。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2616,13 +2784,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交媒资内容理解作业</para>
+        /// <para>Submits a media asset content understanding job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的媒资文件（比如视频链接）进行内容理解。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2640,12 +2808,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交爆款复刻新脚本生成任务</para>
+        /// <para>Submits a creative script generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该 API 用于根据内容理解的结果与新商品/模特信息，仿写生成新的口播脚本。此外，支持通过UserData字段传递自定义参数，在回调时原样返回。</para>
+        /// <para>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2695,12 +2863,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交爆款复刻新脚本生成任务</para>
+        /// <para>Submits a creative script generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该 API 用于根据内容理解的结果与新商品/模特信息，仿写生成新的口播脚本。此外，支持通过UserData字段传递自定义参数，在回调时原样返回。</para>
+        /// <para>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2750,12 +2918,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交爆款复刻新脚本生成任务</para>
+        /// <para>Submits a creative script generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该 API 用于根据内容理解的结果与新商品/模特信息，仿写生成新的口播脚本。此外，支持通过UserData字段传递自定义参数，在回调时原样返回。</para>
+        /// <para>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2773,12 +2941,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交爆款复刻新脚本生成任务</para>
+        /// <para>Submits a creative script generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该 API 用于根据内容理解的结果与新商品/模特信息，仿写生成新的口播脚本。此外，支持通过UserData字段传递自定义参数，在回调时原样返回。</para>
+        /// <para>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2996,7 +3164,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交爆款新视频渲染任务</para>
+        /// <para>Submits a video rendering and compositing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3046,7 +3214,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交爆款新视频渲染任务</para>
+        /// <para>Submits a video rendering and compositing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3096,7 +3264,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交爆款新视频渲染任务</para>
+        /// <para>Submits a video rendering and compositing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3114,7 +3282,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交爆款新视频渲染任务</para>
+        /// <para>Submits a video rendering and compositing task.</para>
         /// </summary>
         /// 
         /// <param name="request">

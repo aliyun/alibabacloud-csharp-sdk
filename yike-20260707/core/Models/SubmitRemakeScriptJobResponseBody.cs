@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitRemakeScriptJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The business error code. An empty string is returned when the submission is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>68ca759e798b40b4903b255********</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
         /// </summary>

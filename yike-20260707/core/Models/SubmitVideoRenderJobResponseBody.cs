@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitVideoRenderJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code. This parameter is returned when the task is in the Failed state.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>68ca759e798b40b4903b255*******</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>

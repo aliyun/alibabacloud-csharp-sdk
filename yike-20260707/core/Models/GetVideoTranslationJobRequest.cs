@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
-    public class GetVideoRenderJobRequest : TeaModel {
+    public class GetVideoTranslationJobRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>68ca759e798b40b4903b255*******</para>
+        /// <para>vtj_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

@@ -1,3 +1,7 @@
+2026-08-05 Version: 2.2.0
+- Support API GetVideoTranslationJob.
+
+
 2026-07-30 Version: 2.1.0
 - Support API GetRemakeScriptJob.
 - Support API GetVideoRenderJob.
