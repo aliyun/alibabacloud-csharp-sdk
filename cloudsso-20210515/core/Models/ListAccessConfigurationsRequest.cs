@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListAccessConfigurationsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the directory.</para>
+        /// <para>The ID of the folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>
@@ -21,8 +21,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The filter condition.</para>
-        /// <para>The value is not case-sensitive. You must specify the value in the \<Attribute> \<Operator> \<Value> format. You can set \<Attribute> only to AccessConfigurationName and \<Operator> only to eq or sw. The value eq indicates Equals. The value sw indicates Starts With.</para>
-        /// <para>For example, if you set Filter to AccessConfigurationName sw test, the operation queries all access configurations whose names start with test. If you set Filter to AccessConfigurationName eq TestAccessConfiguration, the operation queries the access configuration whose name is TestAccessConfiguration.</para>
+        /// <para>The format is <c>&lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt;</c> . The filter is not case-sensitive. The <c>&lt;Attribute&gt;</c> only supports <c>AccessConfigurationName</c>. The <c>&lt;Operator&gt;</c> only supports <c>eq</c> (equal to) and <c>sw</c> (starts with).</para>
+        /// <para>Examples:</para>
+        /// <para>If you configure this parameter to <c>AccessConfigurationName sw test</c>, the system queries all access configurations whose names start with <c>test</c>. If you configure this parameter to <c>AccessConfigurationName eq TestAccessConfiguration</c>, the system queries the access configuration named <c>TestAccessConfiguration</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AccessConfigurationName sw test</para>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -44,8 +45,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
-        /// <para>When you call this operation for the first time, if the total number of entries to return is larger than the value of the <c>MaxResults</c> parameter, the entries are truncated. The system returns entries based on the value of the <c>MaxResults</c> parameter, and does not return the excess entries. In this case, the value of the response parameter <c>IsTruncated</c> is <c>true</c>, and the <c>NextToken</c> parameter is returned. In the next call, you can use the value of the <c>NextToken</c> parameter and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <c>IsTruncated</c> becomes <c>false</c>. This way, all entries are returned.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</para>
+        /// <para>If the number of results exceeds the value of <c>MaxResults</c>, the response is truncated. The <c>IsTruncated</c> parameter is set to <c>true</c>, and a <c>NextToken</c> is returned. You can use the <c>NextToken</c> in a subsequent request with the same parameters to retrieve the next page of results. Repeat this process until <c>IsTruncated</c> is <c>false</c> to query all results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</para>
@@ -55,8 +56,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The status notification. The status notification can be used to filter access configurations.</para>
-        /// <para>Set the value to ReprovisionRequired, which indicates that the operation queries all access configurations that need to be re-provisioned.</para>
+        /// <para>The status notification, which is used as a filter condition.</para>
+        /// <para>A value of ReprovisionRequired returns only the access configurations that need to be reprovisioned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ReprovisionRequired</para>
@@ -65,14 +66,29 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         [Validation(Required=false)]
         public string StatusNotifications { get; set; }
 
+        /// <summary>
+        /// <para>The tags attached to the access configuration.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListAccessConfigurationsRequestTags> Tags { get; set; }
         public class ListAccessConfigurationsRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

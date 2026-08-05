@@ -45,8 +45,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The identity ID of the RAM user provisioning. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <c>Group</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</description></item>
-        /// <item><description>If <c>User</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</description></item>
+        /// <item><description><para>If <c>Group</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</para>
+        /// </description></item>
+        /// <item><description><para>If <c>User</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,8 +61,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The identity type of the RAM user provisioning. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>User: The identity of the RAM user provisioning is a CloudSSO user.</description></item>
-        /// <item><description>Group: The identity of the RAM user provisioning is a CloudSSO user group.</description></item>
+        /// <item><description><para>User: The identity of the RAM user provisioning is a CloudSSO user.</para>
+        /// </description></item>
+        /// <item><description><para>Group: The identity of the RAM user provisioning is a CloudSSO user group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

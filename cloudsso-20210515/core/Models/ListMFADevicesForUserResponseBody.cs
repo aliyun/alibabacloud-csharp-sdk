@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListMFADevicesForUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The MFA devices.</para>
+        /// <para>The list of MFA devices.</para>
         /// </summary>
         [NameInMap("MFADevices")]
         [Validation(Required=false)]
         public List<ListMFADevicesForUserResponseBodyMFADevices> MFADevices { get; set; }
         public class ListMFADevicesForUserResponseBodyMFADevices : TeaModel {
             /// <summary>
-            /// <para>The ID of the MFA device.</para>
+            /// <para>The MFA device ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mfa-00ujhet8pycljj7j****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string DeviceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the MFA device.</para>
+            /// <para>The MFA device name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alice-MFA1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string DeviceName { get; set; }
 
             /// <summary>
-            /// <para>The type of the MFA device. The value is fixed as TOTP, which indicates a virtual MFA device. Virtual MFA devices are based on the Time-based One-time Password (TOTP) algorithm.</para>
+            /// <para>The MFA device type. Valid values: TOTP: a virtual MFA device based on the Time-based One-Time Password algorithm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TOTP</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string DeviceType { get; set; }
 
             /// <summary>
-            /// <para>The time when the MFA device was enabled.</para>
+            /// <para>The effective period. The time is displayed in UTC in RFC 3339 format (YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-29T09:14:06Z</para>
@@ -56,8 +56,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [Validation(Required=false)]
             public string EffectiveTime { get; set; }
 
+            [NameInMap("LastUseTime")]
+            [Validation(Required=false)]
+            public string LastUseTime { get; set; }
+
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>u-00q8wbq42wiltcrk****</para>

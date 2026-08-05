@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</description></item>
-        /// <item><description>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</description></item>
+        /// <item><description><para>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</para>
+        /// </description></item>
+        /// <item><description><para>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the deletion policy that is configured when you create the RAM user provisioning is used.</para>
+        /// <para>If you do not specify this parameter, the deletion policy that is configured when you create the RAM user provisioning is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

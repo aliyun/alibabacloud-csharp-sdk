@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetMFAAuthenticationSettingInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the directory.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>u-00q8wbq42wiltcrk****</para>

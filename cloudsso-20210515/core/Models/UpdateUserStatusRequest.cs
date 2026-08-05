@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The new status of the user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: The logon of the user is enabled.</description></item>
-        /// <item><description>Disabled: The logon of the user is disabled.</description></item>
+        /// <item><description><para>Enabled: The logon of the user is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>Disabled: The logon of the user is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

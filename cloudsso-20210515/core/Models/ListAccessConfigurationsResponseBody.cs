@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListAccessConfigurationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access configurations.</para>
+        /// <para>The list of access configurations.</para>
         /// </summary>
         [NameInMap("AccessConfigurations")]
         [Validation(Required=false)]
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The initial web page</para>
-            /// <para>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</para>
+            /// <para>The initial access page.</para>
+            /// <para>This is the page that a CloudSSO user is redirected to after they uses the access configuration to access an account in your resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></para>
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string RelayState { get; set; }
 
             /// <summary>
-            /// <para>The duration of a session</para>
-            /// <para>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</para>
+            /// <para>The session duration.</para>
+            /// <para>The maximum session duration for a CloudSSO user who uses the access configuration to access an account in your resource directory.</para>
             /// <para>Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
@@ -86,14 +86,29 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [Validation(Required=false)]
             public List<string> StatusNotifications { get; set; }
 
+            /// <summary>
+            /// <para>The tags attached to the access configuration.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListAccessConfigurationsResponseBodyAccessConfigurationsTags> Tags { get; set; }
             public class ListAccessConfigurationsResponseBodyAccessConfigurationsTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -101,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             }
 
             /// <summary>
-            /// <para>The time when the information about the access configuration was modified.</para>
+            /// <para>The time when the access configuration was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-02T08:44:23Z</para>
@@ -113,10 +128,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the queried entries are truncated. Valid values:</para>
+        /// <para>Indicates whether the response is truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The response was truncated.</para>
+        /// </description></item>
+        /// <item><description><para>false: The response was not truncated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,7 +144,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -139,7 +156,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of the <c>IsTruncated</c> parameter is <c>true</c>.</para>
+        /// <para>This parameter is returned only when <c>IsTruncated</c> is set to <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -160,7 +177,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

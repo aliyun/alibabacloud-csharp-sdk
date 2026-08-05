@@ -69,8 +69,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The type of the CloudSSO identity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>User</description></item>
-            /// <item><description>Group</description></item>
+            /// <item><description><para>User</para>
+            /// </description></item>
+            /// <item><description><para>Group</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -130,8 +132,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>Indicates whether the queried entries are truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -154,7 +158,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of IsTruncated is <c>true</c>.``</para>
+        /// <para>This parameter is returned only when the value of IsTruncated is <c>true</c>.\<c>\\</c></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

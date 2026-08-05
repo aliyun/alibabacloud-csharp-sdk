@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The SCIM credential.</para>
             /// <remarks>
-            /// <para> The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.</para>
+            /// <para>The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

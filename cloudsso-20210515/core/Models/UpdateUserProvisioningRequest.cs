@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The new deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</description></item>
-        /// <item><description>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</description></item>
+        /// <item><description><para>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</para>
+        /// </description></item>
+        /// <item><description><para>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,8 +48,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The new conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <c>_sso</c>.</description></item>
-        /// <item><description>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</description></item>
+        /// <item><description><para>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <c>_sso</c>.</para>
+        /// </description></item>
+        /// <item><description><para>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

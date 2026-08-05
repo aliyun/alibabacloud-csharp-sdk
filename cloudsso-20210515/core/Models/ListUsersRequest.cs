@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource directory.</para>
+        /// <para>The CloudSSO directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>
@@ -21,8 +21,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The filter condition.</para>
-        /// <para>You must specify the value in the <c>&lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt;</c> format. The value is not case-sensitive. You can set <c>&lt;Attribute&gt;</c> only to <c>UserName</c> and <c>Operator</c> only to <c>eq</c> or <c>sw</c>. The value eq indicates Equals, and the value sw indicates Start With.</para>
-        /// <para>For example, if you set the Filter parameter to UserName sw test, the operation queries the users whose names start with test. If you set the Filter parameter to UserName eq testuser, the operation queries the user whose name is <c>testuser</c>.</para>
+        /// <para>The format is <c>&lt;Attribute&gt; &lt;Operator&gt; &lt;Value&gt;</c>. The filter is not case-sensitive. The <c>&lt;Attribute&gt;</c> only supports <c>UserName</c>. The <c>&lt;Operator&gt;</c> only supports <c>eq</c> (equal to) and <c>sw</c> (starts with).</para>
+        /// <para>Examples:</para>
+        /// <para>If you configure this parameter to <c>UserName sw test</c>, the system queries all users whose usernames start with <c>test</c>. If you configure this parameter to <c>UserName eq testuser</c>, the system queries the user whose username is <c>testuser</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UserName sw test</para>
@@ -32,7 +33,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -44,8 +45,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of the <c>NextToken</c> parameter.</para>
-        /// <para>When you call this operation for the first time, if the total number of entries to return is larger than the value of the <c>MaxResults</c> parameter, the entries are truncated. The system returns entries based on the value of the <c>MaxResults</c> parameter, and does not return the excess entries. In this case, the value of the response parameter <c>IsTruncated</c> is <c>true</c>, and the <c>NextToken</c> parameter is returned. In the next call, you can use the value of the <c>NextToken</c> parameter and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of the <c>IsTruncated</c> parameter becomes <c>false</c>. This way, all entries are returned.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</para>
+        /// <para>If the total number of entries exceeds the value of <c>MaxResults</c>, the entries are truncated. The system returns the value of <c>MaxResults</c> and a <c>NextToken</c>. The <c>IsTruncated</c> parameter is set to <c>true</c>. You can use the returned <c>NextToken</c> in the next call to query the remaining entries. Keep the other request parameters unchanged. Repeat this process until the <c>IsTruncated</c> parameter is <c>false</c>. This indicates that all entries are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</para>
@@ -55,10 +56,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The type of the user. The parameter can be used to filter users. Valid values:</para>
+        /// <para>The user type. This parameter is used as a filter condition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Manual: The user is manually created.</description></item>
-        /// <item><description>Synchronized: The user is synchronized from an external identity provider (IdP).</description></item>
+        /// <item><description><para>Manual: The user was manually created.</para>
+        /// </description></item>
+        /// <item><description><para>Synchronized: The user was synchronized from an external IdP.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,10 +72,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string ProvisionType { get; set; }
 
         /// <summary>
-        /// <para>The status of the user. The parameter can be used to filter users. Valid values:</para>
+        /// <para>The user status. This parameter is used as a filter condition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: The logon of the user is enabled.</description></item>
-        /// <item><description>Disabled: The logon of the user is disabled.</description></item>
+        /// <item><description><para>Enabled</para>
+        /// </description></item>
+        /// <item><description><para>Disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,14 +87,29 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The tags attached to the user.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListUsersRequestTags> Tags { get; set; }
         public class ListUsersRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

@@ -55,9 +55,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The status of the access configuration. The value can be used to filter accounts. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Provisioned: The access configuration is provisioned.</description></item>
-        /// <item><description>ReprovisionRequired: The access configuration needs to be re-provisioned.</description></item>
-        /// <item><description>DeprovisionFailed: The access configuration failed to be provisioned.</description></item>
+        /// <item><description><para>Provisioned: The access configuration is provisioned.</para>
+        /// </description></item>
+        /// <item><description><para>ReprovisionRequired: The access configuration needs to be re-provisioned.</para>
+        /// </description></item>
+        /// <item><description><para>DeprovisionFailed: The access configuration failed to be provisioned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The ID of the task object. The ID can be used to filter access permissions.</para>
         /// <remarks>
-        /// <para> You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
+        /// <para>You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <para>The type of the task object. The type can be used to filter access permissions.</para>
         /// <para>Set the value to RD-Account, which specifies the accounts in the resource directory.</para>
         /// <remarks>
-        /// <para> You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
+        /// <para>You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

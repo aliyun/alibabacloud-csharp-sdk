@@ -11,8 +11,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
     public class CreateAccessConfigurationRequest : TeaModel {
         /// <summary>
         /// <para>The name of the access configuration.</para>
-        /// <para>The name can contain letters, digits, and hyphens (-).</para>
-        /// <para>The name can be up to 32 characters in length.</para>
+        /// <para>Format: contains letters, digits, or hyphens (-).</para>
+        /// <para>Length: up to 32 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS-Admin</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The description of the access configuration.</para>
-        /// <para>The description can be up to 1,024 characters in length.</para>
+        /// <para>Length: up to 1024 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is an access configuration.</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the directory.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The initial web page</para>
-        /// <para>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</para>
-        /// <para>The web page must be a page of the Alibaba Cloud Management Console. By default, this parameter is empty, which indicates that the initial web page is the homepage of the Alibaba Cloud Management Console.</para>
+        /// <para>The initial access page.</para>
+        /// <para>The page address that a CloudSSO user initially accesses when using the access configuration to access an account in a resource directory.</para>
+        /// <para>The page must be an Alibaba Cloud Management Console page. Default value: empty, which indicates that the user is redirected to the homepage of the Alibaba Cloud Management Console.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></para>
@@ -55,11 +55,11 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RelayState { get; set; }
 
         /// <summary>
-        /// <para>The duration of a session</para>
-        /// <para>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</para>
+        /// <para>The session duration.</para>
+        /// <para>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in a resource directory.</para>
         /// <para>Unit: seconds.</para>
-        /// <para>Valid values: 900 to 43200. The value 900 indicates 15 minutes. The value 43200 indicates 12 hours.</para>
-        /// <para>Default value: 3600. The value indicates 1 hour.</para>
+        /// <para>Valid values: 900 to 43200 (15 minutes to 12 hours).</para>
+        /// <para>Default value: 3600 (1 hour).</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -68,14 +68,29 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         [Validation(Required=false)]
         public int? SessionDuration { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateAccessConfigurationRequestTags> Tags { get; set; }
         public class CreateAccessConfigurationRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

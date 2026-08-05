@@ -19,6 +19,15 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "cloudsso.us-west-1.aliyuncs.com"},
+                {"eu-central-1", "cloudsso.eu-central-1.aliyuncs.com"},
+                {"cn-shanghai", "cloudsso.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "cloudsso.cn-hongkong.aliyuncs.com"},
+                {"ap-southeast-1", "cloudsso.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "cloudsso.ap-northeast-2.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cloudsso", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -860,7 +869,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Overview of access configurations</a>.
+        /// <para>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
         /// This topic provides an example on how to create an access configuration named <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
@@ -928,7 +937,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Overview of access configurations</a>.
+        /// <para>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
         /// This topic provides an example on how to create an access configuration named <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
@@ -996,7 +1005,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Overview of access configurations</a>.
+        /// <para>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
         /// This topic provides an example on how to create an access configuration named <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
@@ -1020,7 +1029,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Overview of access configurations</a>.
+        /// <para>For more information about access configurations, see <a href="https://help.aliyun.com/document_detail/266737.html">Access configuration overview</a>.
         /// This topic provides an example on how to create an access configuration named <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
@@ -1514,11 +1523,6 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <para>Creates a user.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to create a user named <c>Alice</c>.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// CreateUserRequest
         /// </param>
@@ -1592,11 +1596,6 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <summary>
         /// <para>Creates a user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to create a user named <c>Alice</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -1672,11 +1671,6 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <para>Creates a user.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to create a user named <c>Alice</c>.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// CreateUserRequest
         /// </param>
@@ -1694,11 +1688,6 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <summary>
         /// <para>Creates a user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to create a user named <c>Alice</c>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -2635,12 +2624,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a multi-factor authentication (MFA) device from a user.</para>
+        /// <para>Deletes the MFA device of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to unbind the MFA device whose ID is <c>mfa-00ujhet8pycljj7j****</c> from the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <para>This topic provides an example on how to delete the MFA device <c>mfa-00ujhet8pycljj7j****</c> that is attached to the user <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2664,6 +2653,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MFADeviceId))
             {
                 query["MFADeviceId"] = request.MFADeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MfaType))
+            {
+                query["MfaType"] = request.MfaType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
@@ -2690,12 +2683,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a multi-factor authentication (MFA) device from a user.</para>
+        /// <para>Deletes the MFA device of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to unbind the MFA device whose ID is <c>mfa-00ujhet8pycljj7j****</c> from the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <para>This topic provides an example on how to delete the MFA device <c>mfa-00ujhet8pycljj7j****</c> that is attached to the user <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2719,6 +2712,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MFADeviceId))
             {
                 query["MFADeviceId"] = request.MFADeviceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MfaType))
+            {
+                query["MfaType"] = request.MfaType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
@@ -2745,12 +2742,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a multi-factor authentication (MFA) device from a user.</para>
+        /// <para>Deletes the MFA device of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to unbind the MFA device whose ID is <c>mfa-00ujhet8pycljj7j****</c> from the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <para>This topic provides an example on how to delete the MFA device <c>mfa-00ujhet8pycljj7j****</c> that is attached to the user <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2768,12 +2765,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a multi-factor authentication (MFA) device from a user.</para>
+        /// <para>Deletes the MFA device of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to unbind the MFA device whose ID is <c>mfa-00ujhet8pycljj7j****</c> from the user whose ID is <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <para>This topic provides an example on how to delete the MFA device <c>mfa-00ujhet8pycljj7j****</c> that is attached to the user <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3692,12 +3689,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If your CloudSSO has no directory, you can disable CloudSSO based on your business requirements. After you disable CloudSSO, you can enable it at any time.</para>
+        /// <para>You can disable CloudSSO only when no directories exist in CloudSSO. After you disable CloudSSO, you can re-enable it at any time.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DisableServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -3730,12 +3724,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If your CloudSSO has no directory, you can disable CloudSSO based on your business requirements. After you disable CloudSSO, you can enable it at any time.</para>
+        /// <para>You can disable CloudSSO only when no directories exist in CloudSSO. After you disable CloudSSO, you can re-enable it at any time.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DisableServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -3768,7 +3759,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If your CloudSSO has no directory, you can disable CloudSSO based on your business requirements. After you disable CloudSSO, you can enable it at any time.</para>
+        /// <para>You can disable CloudSSO only when no directories exist in CloudSSO. After you disable CloudSSO, you can re-enable it at any time.</para>
         /// </description>
         /// 
         /// <returns>
@@ -3787,7 +3778,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If your CloudSSO has no directory, you can disable CloudSSO based on your business requirements. After you disable CloudSSO, you can enable it at any time.</para>
+        /// <para>You can disable CloudSSO only when no directories exist in CloudSSO. After you disable CloudSSO, you can re-enable it at any time.</para>
         /// </description>
         /// 
         /// <returns>
@@ -3950,13 +3941,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has the permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
-        /// If you call this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</para>
+        /// <para>Only users under the management account of a resource directory who have the permissions to enable CloudSSO can call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
+        /// By calling this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// EnableServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -3989,13 +3977,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has the permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
-        /// If you call this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</para>
+        /// <para>Only users under the management account of a resource directory who have the permissions to enable CloudSSO can call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
+        /// By calling this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// EnableServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4028,8 +4013,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has the permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
-        /// If you call this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</para>
+        /// <para>Only users under the management account of a resource directory who have the permissions to enable CloudSSO can call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
+        /// By calling this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</para>
         /// </description>
         /// 
         /// <returns>
@@ -4048,8 +4033,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has the permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
-        /// If you call this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</para>
+        /// <para>Only users under the management account of a resource directory who have the permissions to enable CloudSSO can call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
+        /// By calling this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</para>
         /// </description>
         /// 
         /// <returns>
@@ -4063,12 +4048,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an access configuration.</para>
+        /// <para>Queries the details of an access configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
+        /// <para>This topic provides an example of how to query the details of an access configuration with the ID <c>ac-00ccule7tadaijxc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4114,12 +4099,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an access configuration.</para>
+        /// <para>Queries the details of an access configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
+        /// <para>This topic provides an example of how to query the details of an access configuration with the ID <c>ac-00ccule7tadaijxc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4165,12 +4150,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an access configuration.</para>
+        /// <para>Queries the details of an access configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
+        /// <para>This topic provides an example of how to query the details of an access configuration with the ID <c>ac-00ccule7tadaijxc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4188,12 +4173,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an access configuration.</para>
+        /// <para>Queries the details of an access configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
+        /// <para>This topic provides an example of how to query the details of an access configuration with the ID <c>ac-00ccule7tadaijxc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5043,13 +5028,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-factor authentication (MFA) setting of all users.</para>
+        /// <para>Queries the global multi-factor authentication (MFA) configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable username-password logon for CloudSSO users, you can query the MFA setting for the users.
-        /// This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <para>When username-password logon is enabled, you can retrieve the global MFA verification policy for user logon.
+        /// This topic provides an example on how to query the global MFA verification policy for CloudSSO users in the directory <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5091,13 +5076,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-factor authentication (MFA) setting of all users.</para>
+        /// <para>Queries the global multi-factor authentication (MFA) configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable username-password logon for CloudSSO users, you can query the MFA setting for the users.
-        /// This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <para>When username-password logon is enabled, you can retrieve the global MFA verification policy for user logon.
+        /// This topic provides an example on how to query the global MFA verification policy for CloudSSO users in the directory <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5139,13 +5124,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-factor authentication (MFA) setting of all users.</para>
+        /// <para>Queries the global multi-factor authentication (MFA) configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable username-password logon for CloudSSO users, you can query the MFA setting for the users.
-        /// This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <para>When username-password logon is enabled, you can retrieve the global MFA verification policy for user logon.
+        /// This topic provides an example on how to query the global MFA verification policy for CloudSSO users in the directory <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5163,13 +5148,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-factor authentication (MFA) setting of all users.</para>
+        /// <para>Queries the global multi-factor authentication (MFA) configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable username-password logon for CloudSSO users, you can query the MFA setting for the users.
-        /// This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <c>u-00q8wbq42wiltcrk****</c>.</para>
+        /// <para>When username-password logon is enabled, you can retrieve the global MFA verification policy for user logon.
+        /// This topic provides an example on how to query the global MFA verification policy for CloudSSO users in the directory <c>u-00q8wbq42wiltcrk****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5742,9 +5727,6 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <para>Queries the status of CloudSSO.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetServiceStatusRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5775,9 +5757,6 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <para>Queries the status of CloudSSO.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetServiceStatusRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6133,13 +6112,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a user.</para>
+        /// <para>Queries the information about a user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to query information about the user whose ID is <c>u-00q8wbq42wiltcrk****</c> in the <c>d-00fc2p61****</c> directory.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetUserRequest
@@ -6184,13 +6158,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a user.</para>
+        /// <para>Queries the information about a user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to query information about the user whose ID is <c>u-00q8wbq42wiltcrk****</c> in the <c>d-00fc2p61****</c> directory.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetUserRequest
@@ -6235,13 +6204,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a user.</para>
+        /// <para>Queries the information about a user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to query information about the user whose ID is <c>u-00q8wbq42wiltcrk****</c> in the <c>d-00fc2p61****</c> directory.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetUserRequest
@@ -6258,13 +6222,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a user.</para>
+        /// <para>Queries the information about a user.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to query information about the user whose ID is <c>u-00q8wbq42wiltcrk****</c> in the <c>d-00fc2p61****</c> directory.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// GetUserRequest
@@ -7585,12 +7544,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access configurations.</para>
+        /// <para>Queries a list of access configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the access configurations within the directory <c>d-00fc2p61****</c>. The returned result shows that the directory contains the <c>VPC-Admin</c> and <c>ECS-Admin</c> access configurations.</para>
+        /// <para>This topic provides an example of how to query the access configurations in the folder <c>d-00fc2p61****</c>. The response shows two access configurations: <c>VPC-Admin</c> and <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7652,12 +7611,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access configurations.</para>
+        /// <para>Queries a list of access configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the access configurations within the directory <c>d-00fc2p61****</c>. The returned result shows that the directory contains the <c>VPC-Admin</c> and <c>ECS-Admin</c> access configurations.</para>
+        /// <para>This topic provides an example of how to query the access configurations in the folder <c>d-00fc2p61****</c>. The response shows two access configurations: <c>VPC-Admin</c> and <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7719,12 +7678,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access configurations.</para>
+        /// <para>Queries a list of access configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the access configurations within the directory <c>d-00fc2p61****</c>. The returned result shows that the directory contains the <c>VPC-Admin</c> and <c>ECS-Admin</c> access configurations.</para>
+        /// <para>This topic provides an example of how to query the access configurations in the folder <c>d-00fc2p61****</c>. The response shows two access configurations: <c>VPC-Admin</c> and <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7742,12 +7701,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access configurations.</para>
+        /// <para>Queries a list of access configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the access configurations within the directory <c>d-00fc2p61****</c>. The returned result shows that the directory contains the <c>VPC-Admin</c> and <c>ECS-Admin</c> access configurations.</para>
+        /// <para>This topic provides an example of how to query the access configurations in the folder <c>d-00fc2p61****</c>. The response shows two access configurations: <c>VPC-Admin</c> and <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7773,9 +7732,6 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <para>This topic provides an example on how to query the directories within your Alibaba Cloud account. The returned result shows that only one directory with the ID <c>d-00fc2p61****</c> is created within your Alibaba Cloud account.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// ListDirectoriesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7811,9 +7767,6 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <para>This topic provides an example on how to query the directories within your Alibaba Cloud account. The returned result shows that only one directory with the ID <c>d-00fc2p61****</c> is created within your Alibaba Cloud account.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// ListDirectoriesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8519,12 +8472,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-factor authentication (MFA) devices that are bound to a user. Up to two MFA devices can be bound to a user.</para>
+        /// <para>Queries the list of MFA devices for a user. Each user can have a maximum of two MFA devices.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the MFA devices that are bound to the user <c>u-00q8wbq42wiltcrk****</c>. The returned result shows that the MFA device named <c>Alice-MFA1</c> is bound to the user.</para>
+        /// <para>This topic provides an example on how to query the MFA device list for the user <c>u-00q8wbq42wiltcrk****</c>. The response shows that the user has one MFA device named <c>Alice-MFA1</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8570,12 +8523,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-factor authentication (MFA) devices that are bound to a user. Up to two MFA devices can be bound to a user.</para>
+        /// <para>Queries the list of MFA devices for a user. Each user can have a maximum of two MFA devices.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the MFA devices that are bound to the user <c>u-00q8wbq42wiltcrk****</c>. The returned result shows that the MFA device named <c>Alice-MFA1</c> is bound to the user.</para>
+        /// <para>This topic provides an example on how to query the MFA device list for the user <c>u-00q8wbq42wiltcrk****</c>. The response shows that the user has one MFA device named <c>Alice-MFA1</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8621,12 +8574,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-factor authentication (MFA) devices that are bound to a user. Up to two MFA devices can be bound to a user.</para>
+        /// <para>Queries the list of MFA devices for a user. Each user can have a maximum of two MFA devices.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the MFA devices that are bound to the user <c>u-00q8wbq42wiltcrk****</c>. The returned result shows that the MFA device named <c>Alice-MFA1</c> is bound to the user.</para>
+        /// <para>This topic provides an example on how to query the MFA device list for the user <c>u-00q8wbq42wiltcrk****</c>. The response shows that the user has one MFA device named <c>Alice-MFA1</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8644,12 +8597,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the multi-factor authentication (MFA) devices that are bound to a user. Up to two MFA devices can be bound to a user.</para>
+        /// <para>Queries the list of MFA devices for a user. Each user can have a maximum of two MFA devices.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the MFA devices that are bound to the user <c>u-00q8wbq42wiltcrk****</c>. The returned result shows that the MFA device named <c>Alice-MFA1</c> is bound to the user.</para>
+        /// <para>This topic provides an example on how to query the MFA device list for the user <c>u-00q8wbq42wiltcrk****</c>. The response shows that the user has one MFA device named <c>Alice-MFA1</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9499,13 +9452,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries users.</para>
+        /// <para>Queries a list of users.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to query users in the <c>d-00fc2p61****</c> directory. The returned result shows that the directory contains two users. The user <c>AliceLee</c> is synchronized from an external identity provider (IdP). The user <c>user1</c> is manually created within CloudSSO.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListUsersRequest
@@ -9570,13 +9518,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries users.</para>
+        /// <para>Queries a list of users.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to query users in the <c>d-00fc2p61****</c> directory. The returned result shows that the directory contains two users. The user <c>AliceLee</c> is synchronized from an external identity provider (IdP). The user <c>user1</c> is manually created within CloudSSO.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListUsersRequest
@@ -9641,13 +9584,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries users.</para>
+        /// <para>Queries a list of users.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to query users in the <c>d-00fc2p61****</c> directory. The returned result shows that the directory contains two users. The user <c>AliceLee</c> is synchronized from an external identity provider (IdP). The user <c>user1</c> is manually created within CloudSSO.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListUsersRequest
@@ -9664,13 +9602,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries users.</para>
+        /// <para>Queries a list of users.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This topic provides an example on how to query users in the <c>d-00fc2p61****</c> directory. The returned result shows that the directory contains two users. The user <c>AliceLee</c> is synchronized from an external identity provider (IdP). The user <c>user1</c> is manually created within CloudSSO.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListUsersRequest
@@ -10338,7 +10271,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</para>
         /// <remarks>
-        /// <para> After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
+        /// <para>After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
         /// This topic provides an example on how to reset the password of the user <c>u-00q8wbq42wiltcrk****</c>. The new password is automatically generated by the system.</para>
         /// </remarks>
         /// </description>
@@ -10405,7 +10338,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</para>
         /// <remarks>
-        /// <para> After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
+        /// <para>After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
         /// This topic provides an example on how to reset the password of the user <c>u-00q8wbq42wiltcrk****</c>. The new password is automatically generated by the system.</para>
         /// </remarks>
         /// </description>
@@ -10472,7 +10405,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</para>
         /// <remarks>
-        /// <para> After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
+        /// <para>After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
         /// This topic provides an example on how to reset the password of the user <c>u-00q8wbq42wiltcrk****</c>. The new password is automatically generated by the system.</para>
         /// </remarks>
         /// </description>
@@ -10499,7 +10432,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</para>
         /// <remarks>
-        /// <para> After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
+        /// <para>After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
         /// This topic provides an example on how to reset the password of the user <c>u-00q8wbq42wiltcrk****</c>. The new password is automatically generated by the system.</para>
         /// </remarks>
         /// </description>
@@ -11858,7 +11791,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>You can modify <c>GroupName</c> and <c>Description</c> for a group.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
         /// This topic provides an example on how to modify the name of the group <c>g-00jqzghi2n3o5hkh****</c> to <c>NewTestGroup</c>.</para>
         /// </remarks>
         /// </description>
@@ -11921,7 +11854,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>You can modify <c>GroupName</c> and <c>Description</c> for a group.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
         /// This topic provides an example on how to modify the name of the group <c>g-00jqzghi2n3o5hkh****</c> to <c>NewTestGroup</c>.</para>
         /// </remarks>
         /// </description>
@@ -11984,7 +11917,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>You can modify <c>GroupName</c> and <c>Description</c> for a group.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
         /// This topic provides an example on how to modify the name of the group <c>g-00jqzghi2n3o5hkh****</c> to <c>NewTestGroup</c>.</para>
         /// </remarks>
         /// </description>
@@ -12011,7 +11944,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>You can modify <c>GroupName</c> and <c>Description</c> for a group.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
         /// This topic provides an example on how to modify the name of the group <c>g-00jqzghi2n3o5hkh****</c> to <c>NewTestGroup</c>.</para>
         /// </remarks>
         /// </description>
@@ -12195,16 +12128,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the multi-factor authentication (MFA) setting of all users.</para>
+        /// <para>Modifies the global multi-factor authentication (MFA) settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-        /// This topic provides an example on how to enable MFA for all CloudSSO users that belong to the directory named <c>d-00fc2p61****</c>.</para>
+        /// <para>When username-password logon is enabled, you can configure the global MFA verification policy for user logon.
+        /// This topic provides an example on how to enable MFA verification for all CloudSSO users in the directory <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateMFAAuthenticationSettingsRequest
         /// </param>
         /// <param name="runtime">
@@ -12214,10 +12147,20 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <returns>
         /// UpdateMFAAuthenticationSettingsResponse
         /// </returns>
-        public UpdateMFAAuthenticationSettingsResponse UpdateMFAAuthenticationSettingsWithOptions(UpdateMFAAuthenticationSettingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateMFAAuthenticationSettingsResponse UpdateMFAAuthenticationSettingsWithOptions(UpdateMFAAuthenticationSettingsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMFAAuthenticationSettingsShrinkRequest request = new UpdateMFAAuthenticationSettingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AllowedVerificationTypes))
+            {
+                request.AllowedVerificationTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AllowedVerificationTypes, "AllowedVerificationTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedVerificationTypesShrink))
+            {
+                query["AllowedVerificationTypes"] = request.AllowedVerificationTypesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
             {
                 query["DirectoryId"] = request.DirectoryId;
@@ -12251,16 +12194,16 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the multi-factor authentication (MFA) setting of all users.</para>
+        /// <para>Modifies the global multi-factor authentication (MFA) settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-        /// This topic provides an example on how to enable MFA for all CloudSSO users that belong to the directory named <c>d-00fc2p61****</c>.</para>
+        /// <para>When username-password logon is enabled, you can configure the global MFA verification policy for user logon.
+        /// This topic provides an example on how to enable MFA verification for all CloudSSO users in the directory <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateMFAAuthenticationSettingsRequest
         /// </param>
         /// <param name="runtime">
@@ -12270,10 +12213,20 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <returns>
         /// UpdateMFAAuthenticationSettingsResponse
         /// </returns>
-        public async Task<UpdateMFAAuthenticationSettingsResponse> UpdateMFAAuthenticationSettingsWithOptionsAsync(UpdateMFAAuthenticationSettingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateMFAAuthenticationSettingsResponse> UpdateMFAAuthenticationSettingsWithOptionsAsync(UpdateMFAAuthenticationSettingsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMFAAuthenticationSettingsShrinkRequest request = new UpdateMFAAuthenticationSettingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AllowedVerificationTypes))
+            {
+                request.AllowedVerificationTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AllowedVerificationTypes, "AllowedVerificationTypes", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedVerificationTypesShrink))
+            {
+                query["AllowedVerificationTypes"] = request.AllowedVerificationTypesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
             {
                 query["DirectoryId"] = request.DirectoryId;
@@ -12307,13 +12260,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the multi-factor authentication (MFA) setting of all users.</para>
+        /// <para>Modifies the global multi-factor authentication (MFA) settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-        /// This topic provides an example on how to enable MFA for all CloudSSO users that belong to the directory named <c>d-00fc2p61****</c>.</para>
+        /// <para>When username-password logon is enabled, you can configure the global MFA verification policy for user logon.
+        /// This topic provides an example on how to enable MFA verification for all CloudSSO users in the directory <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12331,13 +12284,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the multi-factor authentication (MFA) setting of all users.</para>
+        /// <para>Modifies the global multi-factor authentication (MFA) settings.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-        /// This topic provides an example on how to enable MFA for all CloudSSO users that belong to the directory named <c>d-00fc2p61****</c>.</para>
+        /// <para>When username-password logon is enabled, you can configure the global MFA verification policy for user logon.
+        /// This topic provides an example on how to enable MFA verification for all CloudSSO users in the directory <c>d-00fc2p61****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12518,7 +12471,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>You can modify <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> for a user. You cannot modify <c>UserName</c> for a user.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12592,7 +12545,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>You can modify <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> for a user. You cannot modify <c>UserName</c> for a user.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12666,7 +12619,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>You can modify <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> for a user. You cannot modify <c>UserName</c> for a user.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -12692,7 +12645,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
         /// <description>
         /// <para>You can modify <c>FirstName</c>, <c>LastName</c>, <c>DisplayName</c>, <c>Email</c>, and <c>Description</c> for a user. You cannot modify <c>UserName</c> for a user.</para>
         /// <remarks>
-        /// <para> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
+        /// <para>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</para>
         /// </remarks>
         /// </description>
         /// 

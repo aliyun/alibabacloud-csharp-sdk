@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the queried entries are truncated. Valid values:</para>
+        /// <para>Indicates whether the results are truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -34,9 +36,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the <c>IsTruncated</c> parameter is <c>true</c>.</para>
+        /// <para>This parameter is returned only when <c>IsTruncated</c> is <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -67,14 +69,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? TotalCounts { get; set; }
 
         /// <summary>
-        /// <para>The users.</para>
+        /// <para>The list of users.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListUsersResponseBodyUsers> Users { get; set; }
         public class ListUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>The time when the user was created. The value is displayed in UTC.</para>
+            /// <para>The time when the user was created. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-30T09:20:08Z</para>
@@ -114,14 +116,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The identifier information about the user synchronized from an external IdP.</para>
+            /// <para>The identifier of the user in an external IdP.</para>
             /// </summary>
             [NameInMap("ExternalId")]
             [Validation(Required=false)]
             public ListUsersResponseBodyUsersExternalId ExternalId { get; set; }
             public class ListUsersResponseBodyUsersExternalId : TeaModel {
                 /// <summary>
-                /// <para>The identifier of the user that is synchronized from an external IdP.</para>
+                /// <para>The identifier of the user in the external IdP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c73******a5fdd5</para>
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.</para>
+                /// <para>The channel for external user synchronization. Currently, only SCIM synchronization is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SCIM</para>
@@ -165,8 +167,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The type of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Manual: The user is manually created.</description></item>
-            /// <item><description>Synchronized: The user is synchronized from an external IdP.</description></item>
+            /// <item><description><para>Manual: The user was manually created.</para>
+            /// </description></item>
+            /// <item><description><para>Synchronized: The user was synchronized from an external IdP.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,8 +183,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The status of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled: The logon of the user is enabled.</description></item>
-            /// <item><description>Disabled: The logon of the user is disabled.</description></item>
+            /// <item><description><para>Enabled</para>
+            /// </description></item>
+            /// <item><description><para>Disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -190,14 +196,29 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The tags attached to the user.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListUsersResponseBodyUsersTags> Tags { get; set; }
             public class ListUsersResponseBodyUsersTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -205,7 +226,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             }
 
             /// <summary>
-            /// <para>The time when the information about the user was modified. The value is displayed in UTC.</para>
+            /// <para>The time when the user was last modified. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-30T09:20:08Z</para>
@@ -215,7 +236,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>u-00bikzkuzbb58luh****</para>
@@ -225,7 +246,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The name of the user.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:AliceLee@example.onmicrosoft.com">AliceLee@example.onmicrosoft.com</a></para>

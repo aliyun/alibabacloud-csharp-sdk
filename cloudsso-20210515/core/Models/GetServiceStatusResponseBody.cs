@@ -37,13 +37,15 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether you have the permissions to enable CloudSSO. Valid values:</para>
+            /// <para>Indicates whether the prerequisites for enabling CloudSSO are met. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Success: You have the permissions to enable CloudSSO.</description></item>
-            /// <item><description>Failed: You do not have the permissions to enable CloudSSO.</description></item>
+            /// <item><description><para>Success: The prerequisites are met.</para>
+            /// </description></item>
+            /// <item><description><para>Failed: The prerequisites are not met.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> The value of this parameter is returned only if the value of <c>Status</c> is <c>Disabled</c>.</para>
+            /// <para>The value of this parameter is returned only if the value of <c>Status</c> is <c>Disabled</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -54,17 +56,19 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string PrerequisiteCheckResult { get; set; }
 
             /// <summary>
-            /// <para>The region IDs.</para>
+            /// <para>The IDs of regions where directories are deployed.</para>
             /// </summary>
             [NameInMap("RegionsInUse")]
             [Validation(Required=false)]
             public List<string> RegionsInUse { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether CloudSSO is enabled. Valid values:</para>
+            /// <para>The status of CloudSSO. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled</description></item>
-            /// <item><description>Disabled</description></item>
+            /// <item><description><para>Enabled</para>
+            /// </description></item>
+            /// <item><description><para>Disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

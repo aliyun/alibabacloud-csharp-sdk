@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
-    public class UpdateMFAAuthenticationSettingsRequest : TeaModel {
+    public class UpdateMFAAuthenticationSettingsShrinkRequest : TeaModel {
         [NameInMap("AllowedVerificationTypes")]
         [Validation(Required=false)]
-        public List<string> AllowedVerificationTypes { get; set; }
+        public string AllowedVerificationTypesShrink { get; set; }
 
         /// <summary>
         /// <para>The directory ID.</para>

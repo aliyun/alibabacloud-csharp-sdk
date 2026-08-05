@@ -42,8 +42,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The type of the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>System: system policy.</description></item>
-        /// <item><description>Inline: inline policy.</description></item>
+        /// <item><description><para>System: system policy.</para>
+        /// </description></item>
+        /// <item><description><para>Inline: inline policy.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

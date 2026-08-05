@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the directory.</para>
+        /// <para>The ID of the CloudSSO directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>
@@ -77,8 +77,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The status of the user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled (default)</description></item>
-        /// <item><description>Disabled</description></item>
+        /// <item><description><para>Enabled (default)</para>
+        /// </description></item>
+        /// <item><description><para>Disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,14 +90,29 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateUserRequestTags> Tags { get; set; }
         public class CreateUserRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -103,8 +120,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// <para>The username of the user. The username must be unique within the directory. and cannot be changed.</para>
-        /// <para>The username can contain digits, letters, and the following special characters: <c>@_-.</c></para>
+        /// <para>The username. The username must be unique within the directory and cannot be modified.</para>
+        /// <para>The username can contain digits, letters, and the following special characters: <c>@_-.</c>.</para>
         /// <para>The username can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>

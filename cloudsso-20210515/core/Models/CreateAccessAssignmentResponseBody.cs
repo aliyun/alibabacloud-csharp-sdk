@@ -69,8 +69,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The type of the CloudSSO identity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>User</description></item>
-            /// <item><description>Group</description></item>
+            /// <item><description><para>User</para>
+            /// </description></item>
+            /// <item><description><para>Group</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,9 +85,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>InProgress: The task is running.</description></item>
-            /// <item><description>Success: The task is successful.</description></item>
-            /// <item><description>Failed: The task failed.</description></item>
+            /// <item><description><para>InProgress: The task is running.</para>
+            /// </description></item>
+            /// <item><description><para>Success: The task is successful.</para>
+            /// </description></item>
+            /// <item><description><para>Failed: The task failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

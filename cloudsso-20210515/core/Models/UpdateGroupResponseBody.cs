@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The type of the group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Manual: The group is manually created.</description></item>
-            /// <item><description>Synchronized: The group is synchronized from an external identity provider (IdP).</description></item>
+            /// <item><description><para>Manual: The group is manually created.</para>
+            /// </description></item>
+            /// <item><description><para>Synchronized: The group is synchronized from an external identity provider (IdP).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

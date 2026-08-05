@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>Specifies whether to de-provision the access configuration when you remove the access permissions from the CloudSSO identity. The access configuration is used to assign the access permissions, and the identity is the only one that uses the access configuration and is associated with the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DeprovisionForLastAccessAssignmentOnAccount: de-provisions the access configuration.</description></item>
-        /// <item><description>None: does not de-provision the access configuration. This is the default value.</description></item>
+        /// <item><description><para>DeprovisionForLastAccessAssignmentOnAccount: de-provisions the access configuration.</para>
+        /// </description></item>
+        /// <item><description><para>None: does not de-provision the access configuration. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,8 +48,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The ID of the CloudSSO identity.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <c>PrincipalType</c> to <c>User</c>, set <c>PrincipalId</c> to the ID of the CloudSSO user.</description></item>
-        /// <item><description>If you set <c>PrincipalType</c> to <c>Group</c>, set <c>PrincipalId</c> to the ID of the CloudSSO group.</description></item>
+        /// <item><description><para>If you set <c>PrincipalType</c> to <c>User</c>, set <c>PrincipalId</c> to the ID of the CloudSSO user.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>PrincipalType</c> to <c>Group</c>, set <c>PrincipalId</c> to the ID of the CloudSSO group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,8 +64,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The type of the CloudSSO identity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>User</description></item>
-        /// <item><description>Group</description></item>
+        /// <item><description><para>User</para>
+        /// </description></item>
+        /// <item><description><para>Group</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

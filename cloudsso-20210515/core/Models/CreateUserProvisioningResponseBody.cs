@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</description></item>
-            /// <item><description>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</description></item>
+            /// <item><description><para>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</para>
+            /// </description></item>
+            /// <item><description><para>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>this is a user provisioning.</para>
+            /// <para>This is a user provisioning.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -73,8 +75,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <c>_sso</c>.</description></item>
-            /// <item><description>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</description></item>
+            /// <item><description><para>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <c>_sso</c>.</para>
+            /// </description></item>
+            /// <item><description><para>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,8 +101,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The identity ID of the RAM user provisioning. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If <c>Group</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</description></item>
-            /// <item><description>If <c>User</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</description></item>
+            /// <item><description><para>If <c>Group</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</para>
+            /// </description></item>
+            /// <item><description><para>If <c>User</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,8 +117,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The identity name of the RAM user provisioning. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If <c>Group</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the name of a CloudSSO user group.</description></item>
-            /// <item><description>If <c>User</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the name of a CloudSSO user.</description></item>
+            /// <item><description><para>If <c>Group</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the name of a CloudSSO user group.</para>
+            /// </description></item>
+            /// <item><description><para>If <c>User</c> is returned for the <c>PrincipalType</c> parameter, the value of this parameter is the name of a CloudSSO user.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,8 +133,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The identity type of the RAM user provisioning. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>User: The identity of the RAM user provisioning is a CloudSSO user.</description></item>
-            /// <item><description>Group: The identity of the RAM user provisioning is a CloudSSO user group.</description></item>
+            /// <item><description><para>User: The identity of the RAM user provisioning is a CloudSSO user.</para>
+            /// </description></item>
+            /// <item><description><para>Group: The identity of the RAM user provisioning is a CloudSSO user group.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,8 +149,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The status of the RAM user provisioning. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled</description></item>
-            /// <item><description>Disabled</description></item>
+            /// <item><description><para>Enabled</para>
+            /// </description></item>
+            /// <item><description><para>Disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

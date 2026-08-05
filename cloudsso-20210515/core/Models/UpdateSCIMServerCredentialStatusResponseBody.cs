@@ -79,8 +79,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The status of the SCIM credential. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled: The SCIM credential is enabled.</description></item>
-            /// <item><description>Disabled: The SCIM credential is disabled.</description></item>
+            /// <item><description><para>Enabled: The SCIM credential is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>Disabled: The SCIM credential is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

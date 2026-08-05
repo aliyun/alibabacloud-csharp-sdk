@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The ID of the CloudSSO identity.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <c>PrincipalType</c> to <c>User</c>, set <c>PrincipalId</c> to the ID of the CloudSSO user.</description></item>
-        /// <item><description>If you set <c>PrincipalType</c> to <c>Group</c>, set <c>PrincipalId</c> to the ID of the CloudSSO group.</description></item>
+        /// <item><description><para>If you set <c>PrincipalType</c> to <c>User</c>, set <c>PrincipalId</c> to the ID of the CloudSSO user.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>PrincipalType</c> to <c>Group</c>, set <c>PrincipalId</c> to the ID of the CloudSSO group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,8 +48,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The type of the CloudSSO identity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>User</description></item>
-        /// <item><description>Group</description></item>
+        /// <item><description><para>User</para>
+        /// </description></item>
+        /// <item><description><para>Group</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

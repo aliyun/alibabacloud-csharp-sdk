@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <para>The condition is not case-sensitive. The condition must be in the StartTime ge YYYY-MM-DDTHH:mm:SSZ format. You must set YYYY-MM-DDTHH:mm:SSZ to a value that is no more than 7 days from the current time. ge indicates Greater Than or Equals.</para>
         /// <para>For example, if you set the Filter parameter to StartTime ge 2021-03-15T01:12:23Z, the operation queries the tasks from 2021-03-15T01:12:23 GMT.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the operation queries the tasks within the previous 24 hours by default.</para>
+        /// <para>If you do not specify this parameter, the operation queries the tasks within the previous 24 hours by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,11 +70,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The ID of the CloudSSO identity. The ID can be used to filter access permissions.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <c>PrincipalType</c> to <c>User</c>, set <c>PrincipalId</c> to the ID of the CloudSSO user.</description></item>
-        /// <item><description>If you set <c>PrincipalType</c> to <c>Group</c>, set <c>PrincipalId</c> to the ID of the CloudSSO group.</description></item>
+        /// <item><description><para>If you set <c>PrincipalType</c> to <c>User</c>, set <c>PrincipalId</c> to the ID of the CloudSSO user.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>PrincipalType</c> to <c>Group</c>, set <c>PrincipalId</c> to the ID of the CloudSSO group.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can use the type to filter access permissions only if you specify both <c>PrincipalId</c> and <c>PrincipalType</c>.</para>
+        /// <para>You can use the type to filter access permissions only if you specify both <c>PrincipalId</c> and <c>PrincipalType</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,11 +89,13 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The type of the CloudSSO identity. The type can be used to filter access permissions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>User</description></item>
-        /// <item><description>Group</description></item>
+        /// <item><description><para>User</para>
+        /// </description></item>
+        /// <item><description><para>Group</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can use the type to filter access permissions only if you specify both <c>PrincipalId</c> and <c>PrincipalType</c>.</para>
+        /// <para>You can use the type to filter access permissions only if you specify both <c>PrincipalId</c> and <c>PrincipalType</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -104,9 +108,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The ID of the task. The ID can be used to filter tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>InProgress: The task is running.</description></item>
-        /// <item><description>Success: The task is successful.</description></item>
-        /// <item><description>Failed: The task failed.</description></item>
+        /// <item><description><para>InProgress: The task is running.</para>
+        /// </description></item>
+        /// <item><description><para>Success: The task is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Failed: The task failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The ID of the task object. The ID can be used to filter access permissions.</para>
         /// <remarks>
-        /// <para> You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
+        /// <para>You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -133,7 +140,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <para>The type of the task object. The type can be used to filter access permissions.</para>
         /// <para>Set the value to RD-Account, which specifies the accounts in the resource directory.</para>
         /// <remarks>
-        /// <para> You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
+        /// <para>You can use the type to filter access permissions only if you specify both <c>TargetId</c> and <c>TargetType</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -146,10 +153,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The type of the task. The type can be used to filter tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ProvisionAccessConfiguration: An access configuration is provisioned.</description></item>
-        /// <item><description>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</description></item>
-        /// <item><description>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</description></item>
-        /// <item><description>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</description></item>
+        /// <item><description><para>ProvisionAccessConfiguration: An access configuration is provisioned.</para>
+        /// </description></item>
+        /// <item><description><para>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</para>
+        /// </description></item>
+        /// <item><description><para>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</para>
+        /// </description></item>
+        /// <item><description><para>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

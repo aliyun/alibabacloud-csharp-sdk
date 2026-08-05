@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class CreateAccessConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the access configuration.</para>
+        /// <para>The access configuration information.</para>
         /// </summary>
         [NameInMap("AccessConfiguration")]
         [Validation(Required=false)]
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The initial web page</para>
-            /// <para>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</para>
+            /// <para>The initial access page.</para>
+            /// <para>The page address that a CloudSSO user initially accesses when using the access configuration to access an account in a resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></para>
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string RelayState { get; set; }
 
             /// <summary>
-            /// <para>The duration of a session</para>
-            /// <para>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</para>
+            /// <para>The session duration.</para>
+            /// <para>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in a resource directory.</para>
             /// <para>Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
@@ -80,20 +80,35 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public int? SessionDuration { get; set; }
 
             /// <summary>
-            /// <para>The status notifications.</para>
+            /// <para>The status notification information.</para>
             /// </summary>
             [NameInMap("StatusNotifications")]
             [Validation(Required=false)]
             public List<string> StatusNotifications { get; set; }
 
+            /// <summary>
+            /// <para>The list of tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<CreateAccessConfigurationResponseBodyAccessConfigurationTags> Tags { get; set; }
             public class CreateAccessConfigurationResponseBodyAccessConfigurationTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -101,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             }
 
             /// <summary>
-            /// <para>The time when the information about the access configuration was modified.</para>
+            /// <para>The time when the access configuration was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-02T08:44:23Z</para>

@@ -44,8 +44,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The name of the policy.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <c>PermissionPolicyType</c> to <c>System</c>, you must set PermissionPolicyName to the name of a system policy. You can obtain the name of the system policy from RAM.</description></item>
-        /// <item><description>If you set <c>PermissionPolicyType</c> to <c>Inline</c>, you must set PermissionPolicyName to the name of an inline policy. A custom value is supported. The value can be up to 32 characters in length.</description></item>
+        /// <item><description><para>If you set <c>PermissionPolicyType</c> to <c>System</c>, you must set PermissionPolicyName to the name of a system policy. You can obtain the name of the system policy from RAM.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>PermissionPolicyType</c> to <c>Inline</c>, you must set PermissionPolicyName to the name of an inline policy. A custom value is supported. The value can be up to 32 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,8 +60,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The type of the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>System: system policy. Resource Access Management (RAM) system policies are reused.</description></item>
-        /// <item><description>Inline: inline policy. Inline policies are created based on the RAM policy syntax and structure.</description></item>
+        /// <item><description><para>System: system policy. Resource Access Management (RAM) system policies are reused.</para>
+        /// </description></item>
+        /// <item><description><para>Inline: inline policy. Inline policies are created based on the RAM policy syntax and structure.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

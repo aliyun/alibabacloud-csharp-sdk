@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>Specifies whether to enable MFA for the user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: enables MFA for the user.</description></item>
-        /// <item><description>Disabled: disables MFA for the user.</description></item>
+        /// <item><description><para>Enabled: enables MFA for the user.</para>
+        /// </description></item>
+        /// <item><description><para>Disabled: disables MFA for the user.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

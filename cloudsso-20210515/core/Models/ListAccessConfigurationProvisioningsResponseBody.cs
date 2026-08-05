@@ -76,9 +76,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The status of the access configuration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Provisioned: The access configuration is provisioned.</description></item>
-            /// <item><description>ReprovisionRequired: The access configuration needs to be re-provisioned.</description></item>
-            /// <item><description>DeprovisionFailed: The access configuration failed to be provisioned.</description></item>
+            /// <item><description><para>Provisioned: The access configuration is provisioned.</para>
+            /// </description></item>
+            /// <item><description><para>ReprovisionRequired: The access configuration needs to be re-provisioned.</para>
+            /// </description></item>
+            /// <item><description><para>DeprovisionFailed: The access configuration failed to be provisioned.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,8 +152,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>Indicates whether the queried entries are truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -173,7 +178,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of <c>IsTruncated</c> is <c>true</c>.</para>
+        /// <para>This parameter is returned only when the value of <c>IsTruncated</c> is <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
