@@ -1608,6 +1608,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.KnowledgeConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeConfigList, "KnowledgeConfigList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeSemanticConfigList))
+            {
+                request.KnowledgeSemanticConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleTaskConfig))
             {
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
@@ -1644,6 +1648,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeConfigListShrink))
             {
                 query["KnowledgeConfigList"] = request.KnowledgeConfigListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeSemanticConfigListShrink))
+            {
+                query["KnowledgeSemanticConfigList"] = request.KnowledgeSemanticConfigListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -1724,6 +1732,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.KnowledgeConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeConfigList, "KnowledgeConfigList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeSemanticConfigList))
+            {
+                request.KnowledgeSemanticConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleTaskConfig))
             {
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
@@ -1760,6 +1772,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeConfigListShrink))
             {
                 query["KnowledgeConfigList"] = request.KnowledgeConfigListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeSemanticConfigListShrink))
+            {
+                query["KnowledgeSemanticConfigList"] = request.KnowledgeSemanticConfigListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -5522,7 +5538,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
+        /// <para>Retrieves the details of a custom agent by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5568,7 +5584,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
+        /// <para>Retrieves the details of a custom agent by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5614,7 +5630,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
+        /// <para>Retrieves the details of a custom agent by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5632,7 +5648,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
+        /// <para>Retrieves the details of a custom agent by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14436,6 +14452,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.KnowledgeConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeConfigList, "KnowledgeConfigList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeSemanticConfigList))
+            {
+                request.KnowledgeSemanticConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleTaskConfig))
             {
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
@@ -14476,6 +14496,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeConfigListShrink))
             {
                 query["KnowledgeConfigList"] = request.KnowledgeConfigListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeSemanticConfigListShrink))
+            {
+                query["KnowledgeSemanticConfigList"] = request.KnowledgeSemanticConfigListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -14556,6 +14580,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.KnowledgeConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeConfigList, "KnowledgeConfigList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeSemanticConfigList))
+            {
+                request.KnowledgeSemanticConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ScheduleTaskConfig))
             {
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
@@ -14596,6 +14624,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeConfigListShrink))
             {
                 query["KnowledgeConfigList"] = request.KnowledgeConfigListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeSemanticConfigListShrink))
+            {
+                query["KnowledgeSemanticConfigList"] = request.KnowledgeSemanticConfigListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {

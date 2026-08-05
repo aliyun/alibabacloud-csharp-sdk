@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CustomAgentId { get; set; }
 
             /// <summary>
-            /// <para>The current DMS unit.</para>
+            /// <para>The current Data Management unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -96,7 +96,18 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The specified data scope in JSON string format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{</para>
+            /// <para>{
+            ///   &quot;tableFlag&quot; : true,
+            ///   &quot;scope&quot; : &quot;personal&quot;,
+            ///   &quot;personal&quot; : {
+            ///     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
+            ///     &quot;FileId&quot; : &quot;f-5qlrwaw10<b><b><b><b>s3gpw1z&quot;,
+            ///     &quot;Database&quot; : &quot;TestTable</b></b></b>.xlsx&quot;,
+            ///     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
+            ///     &quot;TableIds&quot; : [ &quot;</b>****&quot; ],
+            ///     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
+            ///   }
+            /// }</para>
             /// </summary>
             [NameInMap("DataJson")]
             [Validation(Required=false)]
@@ -106,14 +117,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The description of the custom agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AgentTestDescription.</para>
+            /// <para>AgentTestDescription</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The current DMS unit.</para>
+            /// <para>The current Data Management unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -196,13 +207,18 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// 
             /// <b>Example:</b>
             /// <para>Analysis framework:</para>
+            /// <ol>
+            /// <item><description>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, analyze trends and year-over-year/month-over-month fluctuations;</description></item>
+            /// <item><description>Segment by new/existing customers, channels, and regions to identify growth drivers and weaknesses;</description></item>
+            /// <item><description>Conduct funnel analysis based on user behavior paths (browsing → add to cart → payment) to pinpoint drop-off stages;</description></item>
+            /// </ol>
             /// </summary>
             [NameInMap("Instruction")]
             [Validation(Required=false)]
             public string Instruction { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a periodic task is configured.</para>
+            /// <para>Indicates whether a scheduled task is configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -216,6 +232,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// 
             /// <b>Example:</b>
             /// <para>Core metric definitions:</para>
+            /// <ol>
+            /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</description></item>
+            /// <item><description>Order volume is the number of valid orders placed per day.</description></item>
+            /// <item><description>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</description></item>
+            /// <item><description>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency.</description></item>
+            /// </ol>
             /// </summary>
             [NameInMap("Knowledge")]
             [Validation(Required=false)]
@@ -254,6 +276,28 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
             }
 
+            [NameInMap("KnowledgeSemanticConfigList")]
+            [Validation(Required=false)]
+            public List<CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList> KnowledgeSemanticConfigList { get; set; }
+            public class CreateCustomAgentResponseBodyDataKnowledgeSemanticConfigList : TeaModel {
+                [NameInMap("DbId")]
+                [Validation(Required=false)]
+                public string DbId { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
+
+                [NameInMap("KnowledgeUuid")]
+                [Validation(Required=false)]
+                public string KnowledgeUuid { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The modifier.</para>
             /// 
@@ -278,14 +322,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The name of the custom agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AgentTestName.</para>
+            /// <para>AgentTestName</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The next run time of the periodic task.</para>
+            /// <para>The next run time of the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1767715200</para>
@@ -314,6 +358,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Region { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the referenced historical session.</para>
+            /// </summary>
             [NameInMap("RelatedSessionId")]
             [Validation(Required=false)]
             public string RelatedSessionId { get; set; }
@@ -329,14 +376,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ReleaseTime { get; set; }
 
             /// <summary>
-            /// <para>The periodic task configuration.</para>
+            /// <para>The scheduled task configuration.</para>
             /// </summary>
             [NameInMap("ScheduleTaskConfig")]
             [Validation(Required=false)]
             public CreateCustomAgentResponseBodyDataScheduleTaskConfig ScheduleTaskConfig { get; set; }
             public class CreateCustomAgentResponseBodyDataScheduleTaskConfig : TeaModel {
                 /// <summary>
-                /// <para>The cron expression for the time-based scheduling.</para>
+                /// <para>The cron expression for time-based scheduling.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 0 0 ? * 1-7</para>
@@ -349,7 +396,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <para>The query for the scheduled task.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Analyze this data and provide a brief report.</para>
+                /// <para>Analyze this data and provide a brief report</para>
                 /// </summary>
                 [NameInMap("Query")]
                 [Validation(Required=false)]
@@ -381,7 +428,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The text report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals.</para>
+            /// <para>The text report requires all numbers to be written in words instead of Arabic numerals</para>
             /// </summary>
             [NameInMap("TextReportConfig")]
             [Validation(Required=false)]
@@ -391,7 +438,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The web report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals.</para>
+            /// <para>The web report requires all numbers to be written in words instead of Arabic numerals</para>
             /// </summary>
             [NameInMap("WebReportConfig")]
             [Validation(Required=false)]
@@ -444,7 +491,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>True: The request is successful.</description></item>
+        /// <item><description>False: The request fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

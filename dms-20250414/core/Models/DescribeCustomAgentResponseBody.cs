@@ -83,6 +83,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CustomAgentId { get; set; }
 
             /// <summary>
+            /// <para>The current DMS unit.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             ///   &quot;personal&quot; : {
             ///     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
             ///     &quot;FileId&quot; : &quot;f-5qlrwaw10<b><b><b><b>s3gpw1z&quot;,
-            ///     &quot;Database&quot; : &quot;TestTable</b></b></b>.xlsx&quot;,
+            ///     &quot;Database&quot; : &quot;Test spreadsheet</b></b></b>.xlsx&quot;,
             ///     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
             ///     &quot;TableIds&quot; : [ &quot;</b>****&quot; ],
             ///     &quot;RegionId&quot; : &quot;ap-southeast-1&quot;
@@ -119,7 +121,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The description of the custom agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Agent test description.</para>
+            /// <para>Agent test description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -173,7 +175,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? SkipSqlConfirm { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to skip the web report rendering confirmation.</para>
+                /// <para>Specifies whether to skip the web report drawing confirmation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -212,7 +214,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <ol>
             /// <item><description>Monitor core metrics (GMV, order volume, UV, conversion rate) by day, week, and month dimensions, and analyze trends and year-over-year/month-over-month fluctuations;</description></item>
             /// <item><description>Segment by new/existing customers, channels, and regions to identify growth sources and weaknesses;</description></item>
-            /// <item><description>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to locate drop-off points;</description></item>
+            /// <item><description>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to identify drop-off points;</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Instruction")]
@@ -263,6 +265,28 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
             }
 
+            [NameInMap("KnowledgeSemanticConfigList")]
+            [Validation(Required=false)]
+            public List<DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList> KnowledgeSemanticConfigList { get; set; }
+            public class DescribeCustomAgentResponseBodyDataKnowledgeSemanticConfigList : TeaModel {
+                [NameInMap("DbId")]
+                [Validation(Required=false)]
+                public string DbId { get; set; }
+
+                [NameInMap("InstanceId")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
+
+                [NameInMap("KnowledgeUuid")]
+                [Validation(Required=false)]
+                public string KnowledgeUuid { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The modifier.</para>
             /// 
@@ -287,7 +311,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The name of the custom agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Agent test name.</para>
+            /// <para>Agent test name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -324,6 +348,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Region { get; set; }
 
             /// <summary>
+            /// <para>The referenced historical session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5xyz...</para>
             /// </summary>
@@ -341,6 +367,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string ReleaseTime { get; set; }
 
+            /// <summary>
+            /// <para>The periodic task configuration.</para>
+            /// </summary>
             [NameInMap("ScheduleTaskConfig")]
             [Validation(Required=false)]
             public DescribeCustomAgentResponseBodyDataScheduleTaskConfig ScheduleTaskConfig { get; set; }
@@ -359,7 +388,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <para>The query of the periodic task.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Analyze this data and provide a brief report.</para>
+                /// <para>Analyze this data and provide a brief report</para>
                 /// </summary>
                 [NameInMap("Query")]
                 [Validation(Required=false)]
@@ -391,7 +420,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The text report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The text report requires all numbers to be converted from Arabic numerals to Chinese numerals.</para>
+            /// <para>The text report requires all numbers to be converted from Arabic numerals to Chinese numerals</para>
             /// </summary>
             [NameInMap("TextReportConfig")]
             [Validation(Required=false)]
@@ -401,7 +430,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The web report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The web report requires all numbers to be converted from Arabic numerals to Chinese numerals.</para>
+            /// <para>The web report requires all numbers to be converted from Arabic numerals to Chinese numerals</para>
             /// </summary>
             [NameInMap("WebReportConfig")]
             [Validation(Required=false)]
@@ -434,7 +463,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the call fails.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>

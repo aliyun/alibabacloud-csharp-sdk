@@ -268,6 +268,28 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
                 }
 
+                [NameInMap("KnowledgeSemanticConfigList")]
+                [Validation(Required=false)]
+                public List<ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList> KnowledgeSemanticConfigList { get; set; }
+                public class ListCustomAgentResponseBodyDataContentKnowledgeSemanticConfigList : TeaModel {
+                    [NameInMap("DbId")]
+                    [Validation(Required=false)]
+                    public string DbId { get; set; }
+
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
+                    public string InstanceId { get; set; }
+
+                    [NameInMap("KnowledgeUuid")]
+                    [Validation(Required=false)]
+                    public string KnowledgeUuid { get; set; }
+
+                    [NameInMap("Type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The user who last modified the agent.</para>
                 /// 
