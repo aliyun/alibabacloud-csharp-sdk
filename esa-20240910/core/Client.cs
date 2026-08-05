@@ -3435,7 +3435,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the name of a real-time log delivery task.</para>
+        /// <para>Checks the project name of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3473,7 +3473,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the name of a real-time log delivery task.</para>
+        /// <para>Checks the project name of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3511,7 +3511,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the name of a real-time log delivery task.</para>
+        /// <para>Checks the project name of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3529,7 +3529,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the name of a real-time log delivery task.</para>
+        /// <para>Checks the project name of a real-time log delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11490,6 +11490,11 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <para>Creates a real-time log delivery task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The site plan associated with SiteId must support real-time log delivery (such as the Standard plan). Call GetSiteLogDeliveryQuota to perform a pre-check, or verify the plan level by checking the PlanName field returned by ListSites.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// CreateSiteDeliveryTaskRequest
         /// </param>
@@ -11601,6 +11606,11 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <summary>
         /// <para>Creates a real-time log delivery task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The site plan associated with SiteId must support real-time log delivery (such as the Standard plan). Call GetSiteLogDeliveryQuota to perform a pre-check, or verify the plan level by checking the PlanName field returned by ListSites.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateSiteDeliveryTaskRequest
@@ -11714,6 +11724,11 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <para>Creates a real-time log delivery task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The site plan associated with SiteId must support real-time log delivery (such as the Standard plan). Call GetSiteLogDeliveryQuota to perform a pre-check, or verify the plan level by checking the PlanName field returned by ListSites.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSiteDeliveryTaskRequest
         /// </param>
@@ -11731,6 +11746,11 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <summary>
         /// <para>Creates a real-time log delivery task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The site plan associated with SiteId must support real-time log delivery (such as the Standard plan). Call GetSiteLogDeliveryQuota to perform a pre-check, or verify the plan level by checking the PlanName field returned by ListSites.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSiteDeliveryTaskRequest
@@ -12179,23 +12199,23 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom log delivery task for the user to destinations such as Simple Log Service (SLS), HTTP, Object Storage Service (OSS), S3, or Kafka.</para>
+        /// <para>Creates a custom log delivery task to deliver logs to destinations such as SLS, HTTP, OSS, S3, or Kafka.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to create a delivery task for specific log data. Multiple delivery destinations and detailed configuration options are supported, including but not limited to SLS storage, HTTP services, Alibaba Cloud OSS, S3-compatible storage, and Kafka message queues. You can customize the task name, select log fields, specify the data center, set the discard rate, choose the delivery type, and configure the delivery details based on the selected type.</para>
+        /// <para>This operation allows you to create a delivery node for specific log data. Multiple delivery destinations and detailed configuration options are supported, including but not limited to Simple Log Service (SLS), HTTP services, Alibaba Cloud Object Storage Service (OSS), S3-compatible storage, and Kafka MSMQ. You can customize the node name, select log fields, specify a data center, set the discard rate, select a delivery type, and configure the corresponding delivery details based on the selected type.</para>
         /// <list type="bullet">
-        /// <item><description><b>Field selection</b>: Use <c>FieldName</c> to specify the log fields to be delivered.</description></item>
-        /// <item><description><b>Filter rules</b>: Use <c>FilterRules</c> to preprocess and filter log data.</description></item>
-        /// <item><description><b>Diverse delivery</b>: Supports SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka, each with its specific configuration parameters.</description></item>
+        /// <item><description><b>Field selection</b>: Use <c>FieldName</c> to specify the log fields to deliver.</description></item>
+        /// <item><description><b>Filter rules</b>: Use <c>FilterRules</c> to implement pre-processing and filtering of log data.</description></item>
+        /// <item><description><b>Diverse delivery</b>: Supports SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka delivery methods, each with its own specific configuration parameters.</description></item>
         /// </list>
-        /// <h2>Usage notes</h2>
+        /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Ensure that the authentication information (such as AccessKey and SecretKey) has sufficient permissions to perform the delivery operation.</description></item>
-        /// <item><description>When you select an encrypted or authenticated delivery method, correctly configure the related security parameters.</description></item>
-        /// <item><description>Verify the syntax correctness of <c>FilterRules</c> to ensure that the filtering logic meets expectations.</description></item>
-        /// <item><description>Adjust advanced parameters such as retries and timeout based on actual requirements to optimize delivery efficiency and stability.</description></item>
+        /// <item><description>Ensure that the provided credentials (such as AccessKey and SecretKey) have sufficient permissions to perform the delivery operation.</description></item>
+        /// <item><description>When you select a delivery method that requires encryption or authentication, correctly configure the related security parameters.</description></item>
+        /// <item><description>Verify the syntax of <c>FilterRules</c> to ensure that the filtering logic meets your expectations.</description></item>
+        /// <item><description>Adjust advanced parameters such as the maximum number of retries and timeout period as needed to optimize delivery efficiency and stability.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12308,23 +12328,23 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom log delivery task for the user to destinations such as Simple Log Service (SLS), HTTP, Object Storage Service (OSS), S3, or Kafka.</para>
+        /// <para>Creates a custom log delivery task to deliver logs to destinations such as SLS, HTTP, OSS, S3, or Kafka.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to create a delivery task for specific log data. Multiple delivery destinations and detailed configuration options are supported, including but not limited to SLS storage, HTTP services, Alibaba Cloud OSS, S3-compatible storage, and Kafka message queues. You can customize the task name, select log fields, specify the data center, set the discard rate, choose the delivery type, and configure the delivery details based on the selected type.</para>
+        /// <para>This operation allows you to create a delivery node for specific log data. Multiple delivery destinations and detailed configuration options are supported, including but not limited to Simple Log Service (SLS), HTTP services, Alibaba Cloud Object Storage Service (OSS), S3-compatible storage, and Kafka MSMQ. You can customize the node name, select log fields, specify a data center, set the discard rate, select a delivery type, and configure the corresponding delivery details based on the selected type.</para>
         /// <list type="bullet">
-        /// <item><description><b>Field selection</b>: Use <c>FieldName</c> to specify the log fields to be delivered.</description></item>
-        /// <item><description><b>Filter rules</b>: Use <c>FilterRules</c> to preprocess and filter log data.</description></item>
-        /// <item><description><b>Diverse delivery</b>: Supports SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka, each with its specific configuration parameters.</description></item>
+        /// <item><description><b>Field selection</b>: Use <c>FieldName</c> to specify the log fields to deliver.</description></item>
+        /// <item><description><b>Filter rules</b>: Use <c>FilterRules</c> to implement pre-processing and filtering of log data.</description></item>
+        /// <item><description><b>Diverse delivery</b>: Supports SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka delivery methods, each with its own specific configuration parameters.</description></item>
         /// </list>
-        /// <h2>Usage notes</h2>
+        /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Ensure that the authentication information (such as AccessKey and SecretKey) has sufficient permissions to perform the delivery operation.</description></item>
-        /// <item><description>When you select an encrypted or authenticated delivery method, correctly configure the related security parameters.</description></item>
-        /// <item><description>Verify the syntax correctness of <c>FilterRules</c> to ensure that the filtering logic meets expectations.</description></item>
-        /// <item><description>Adjust advanced parameters such as retries and timeout based on actual requirements to optimize delivery efficiency and stability.</description></item>
+        /// <item><description>Ensure that the provided credentials (such as AccessKey and SecretKey) have sufficient permissions to perform the delivery operation.</description></item>
+        /// <item><description>When you select a delivery method that requires encryption or authentication, correctly configure the related security parameters.</description></item>
+        /// <item><description>Verify the syntax of <c>FilterRules</c> to ensure that the filtering logic meets your expectations.</description></item>
+        /// <item><description>Adjust advanced parameters such as the maximum number of retries and timeout period as needed to optimize delivery efficiency and stability.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12437,23 +12457,23 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom log delivery task for the user to destinations such as Simple Log Service (SLS), HTTP, Object Storage Service (OSS), S3, or Kafka.</para>
+        /// <para>Creates a custom log delivery task to deliver logs to destinations such as SLS, HTTP, OSS, S3, or Kafka.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to create a delivery task for specific log data. Multiple delivery destinations and detailed configuration options are supported, including but not limited to SLS storage, HTTP services, Alibaba Cloud OSS, S3-compatible storage, and Kafka message queues. You can customize the task name, select log fields, specify the data center, set the discard rate, choose the delivery type, and configure the delivery details based on the selected type.</para>
+        /// <para>This operation allows you to create a delivery node for specific log data. Multiple delivery destinations and detailed configuration options are supported, including but not limited to Simple Log Service (SLS), HTTP services, Alibaba Cloud Object Storage Service (OSS), S3-compatible storage, and Kafka MSMQ. You can customize the node name, select log fields, specify a data center, set the discard rate, select a delivery type, and configure the corresponding delivery details based on the selected type.</para>
         /// <list type="bullet">
-        /// <item><description><b>Field selection</b>: Use <c>FieldName</c> to specify the log fields to be delivered.</description></item>
-        /// <item><description><b>Filter rules</b>: Use <c>FilterRules</c> to preprocess and filter log data.</description></item>
-        /// <item><description><b>Diverse delivery</b>: Supports SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka, each with its specific configuration parameters.</description></item>
+        /// <item><description><b>Field selection</b>: Use <c>FieldName</c> to specify the log fields to deliver.</description></item>
+        /// <item><description><b>Filter rules</b>: Use <c>FilterRules</c> to implement pre-processing and filtering of log data.</description></item>
+        /// <item><description><b>Diverse delivery</b>: Supports SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka delivery methods, each with its own specific configuration parameters.</description></item>
         /// </list>
-        /// <h2>Usage notes</h2>
+        /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Ensure that the authentication information (such as AccessKey and SecretKey) has sufficient permissions to perform the delivery operation.</description></item>
-        /// <item><description>When you select an encrypted or authenticated delivery method, correctly configure the related security parameters.</description></item>
-        /// <item><description>Verify the syntax correctness of <c>FilterRules</c> to ensure that the filtering logic meets expectations.</description></item>
-        /// <item><description>Adjust advanced parameters such as retries and timeout based on actual requirements to optimize delivery efficiency and stability.</description></item>
+        /// <item><description>Ensure that the provided credentials (such as AccessKey and SecretKey) have sufficient permissions to perform the delivery operation.</description></item>
+        /// <item><description>When you select a delivery method that requires encryption or authentication, correctly configure the related security parameters.</description></item>
+        /// <item><description>Verify the syntax of <c>FilterRules</c> to ensure that the filtering logic meets your expectations.</description></item>
+        /// <item><description>Adjust advanced parameters such as the maximum number of retries and timeout period as needed to optimize delivery efficiency and stability.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12472,23 +12492,23 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom log delivery task for the user to destinations such as Simple Log Service (SLS), HTTP, Object Storage Service (OSS), S3, or Kafka.</para>
+        /// <para>Creates a custom log delivery task to deliver logs to destinations such as SLS, HTTP, OSS, S3, or Kafka.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to create a delivery task for specific log data. Multiple delivery destinations and detailed configuration options are supported, including but not limited to SLS storage, HTTP services, Alibaba Cloud OSS, S3-compatible storage, and Kafka message queues. You can customize the task name, select log fields, specify the data center, set the discard rate, choose the delivery type, and configure the delivery details based on the selected type.</para>
+        /// <para>This operation allows you to create a delivery node for specific log data. Multiple delivery destinations and detailed configuration options are supported, including but not limited to Simple Log Service (SLS), HTTP services, Alibaba Cloud Object Storage Service (OSS), S3-compatible storage, and Kafka MSMQ. You can customize the node name, select log fields, specify a data center, set the discard rate, select a delivery type, and configure the corresponding delivery details based on the selected type.</para>
         /// <list type="bullet">
-        /// <item><description><b>Field selection</b>: Use <c>FieldName</c> to specify the log fields to be delivered.</description></item>
-        /// <item><description><b>Filter rules</b>: Use <c>FilterRules</c> to preprocess and filter log data.</description></item>
-        /// <item><description><b>Diverse delivery</b>: Supports SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka, each with its specific configuration parameters.</description></item>
+        /// <item><description><b>Field selection</b>: Use <c>FieldName</c> to specify the log fields to deliver.</description></item>
+        /// <item><description><b>Filter rules</b>: Use <c>FilterRules</c> to implement pre-processing and filtering of log data.</description></item>
+        /// <item><description><b>Diverse delivery</b>: Supports SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka delivery methods, each with its own specific configuration parameters.</description></item>
         /// </list>
-        /// <h2>Usage notes</h2>
+        /// <h2>Before you begin</h2>
         /// <list type="bullet">
-        /// <item><description>Ensure that the authentication information (such as AccessKey and SecretKey) has sufficient permissions to perform the delivery operation.</description></item>
-        /// <item><description>When you select an encrypted or authenticated delivery method, correctly configure the related security parameters.</description></item>
-        /// <item><description>Verify the syntax correctness of <c>FilterRules</c> to ensure that the filtering logic meets expectations.</description></item>
-        /// <item><description>Adjust advanced parameters such as retries and timeout based on actual requirements to optimize delivery efficiency and stability.</description></item>
+        /// <item><description>Ensure that the provided credentials (such as AccessKey and SecretKey) have sufficient permissions to perform the delivery operation.</description></item>
+        /// <item><description>When you select a delivery method that requires encryption or authentication, correctly configure the related security parameters.</description></item>
+        /// <item><description>Verify the syntax of <c>FilterRules</c> to ensure that the filtering logic meets your expectations.</description></item>
+        /// <item><description>Adjust advanced parameters such as the maximum number of retries and timeout period as needed to optimize delivery efficiency and stability.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26139,7 +26159,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource plan information of the current user by calling DescribeUserResourcePackage.</para>
+        /// <para>Queries the resource plan information of the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26205,7 +26225,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource plan information of the current user by calling DescribeUserResourcePackage.</para>
+        /// <para>Queries the resource plan information of the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26271,7 +26291,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource plan information of the current user by calling DescribeUserResourcePackage.</para>
+        /// <para>Queries the resource plan information of the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26289,7 +26309,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource plan information of the current user by calling DescribeUserResourcePackage.</para>
+        /// <para>Queries the resource plan information of the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34783,7 +34803,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduled automatic release time.</para>
+        /// <para>Queries the scheduled release time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34825,7 +34845,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduled automatic release time.</para>
+        /// <para>Queries the scheduled release time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34867,7 +34887,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduled automatic release time.</para>
+        /// <para>Queries the scheduled release time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34885,7 +34905,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scheduled automatic release time.</para>
+        /// <para>Queries the scheduled release time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38191,12 +38211,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the remaining log delivery quota of each log category in your account.</para>
+        /// <para>Queries the remaining log delivery quota for each business type of a specified user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to query the remaining real-time log delivery quota of each log category in your Alibaba Cloud account. You must provide your Alibaba Cloud account ID (aliUid) and log category (BusinessType). The system then returns the remaining quota of the log category to help you track the usage.</para>
+        /// <para>This operation allows you to query the real-time log delivery quota for different business types in your Alibaba Cloud account. You must provide your Alibaba Cloud user ID (aliUid) and the business type (BusinessType). The system returns the remaining quota for the specified business type, helping you understand the current quota usage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38234,12 +38254,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the remaining log delivery quota of each log category in your account.</para>
+        /// <para>Queries the remaining log delivery quota for each business type of a specified user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to query the remaining real-time log delivery quota of each log category in your Alibaba Cloud account. You must provide your Alibaba Cloud account ID (aliUid) and log category (BusinessType). The system then returns the remaining quota of the log category to help you track the usage.</para>
+        /// <para>This operation allows you to query the real-time log delivery quota for different business types in your Alibaba Cloud account. You must provide your Alibaba Cloud user ID (aliUid) and the business type (BusinessType). The system returns the remaining quota for the specified business type, helping you understand the current quota usage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38277,12 +38297,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the remaining log delivery quota of each log category in your account.</para>
+        /// <para>Queries the remaining log delivery quota for each business type of a specified user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to query the remaining real-time log delivery quota of each log category in your Alibaba Cloud account. You must provide your Alibaba Cloud account ID (aliUid) and log category (BusinessType). The system then returns the remaining quota of the log category to help you track the usage.</para>
+        /// <para>This operation allows you to query the real-time log delivery quota for different business types in your Alibaba Cloud account. You must provide your Alibaba Cloud user ID (aliUid) and the business type (BusinessType). The system returns the remaining quota for the specified business type, helping you understand the current quota usage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38300,12 +38320,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the remaining log delivery quota of each log category in your account.</para>
+        /// <para>Queries the remaining log delivery quota for each business type of a specified user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to query the remaining real-time log delivery quota of each log category in your Alibaba Cloud account. You must provide your Alibaba Cloud account ID (aliUid) and log category (BusinessType). The system then returns the remaining quota of the log category to help you track the usage.</para>
+        /// <para>This operation allows you to query the real-time log delivery quota for different business types in your Alibaba Cloud account. You must provide your Alibaba Cloud user ID (aliUid) and the business type (BusinessType). The system returns the remaining quota for the specified business type, helping you understand the current quota usage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56635,6 +56655,238 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Trace站点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 请确保在使用该接口前，站点已接入ESA平台并启用。</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// TraceSiteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TraceSiteResponse
+        /// </returns>
+        public TraceSiteResponse TraceSiteWithOptions(TraceSiteRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TraceSiteShrinkRequest request = new TraceSiteShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "Body", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Context))
+            {
+                request.ContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Context, "Context", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Cookies))
+            {
+                request.CookiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Cookies, "Cookies", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Headers))
+            {
+                request.HeadersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Headers, "Headers", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["Body"] = request.BodyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextShrink))
+            {
+                body["Context"] = request.ContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CookiesShrink))
+            {
+                body["Cookies"] = request.CookiesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HeadersShrink))
+            {
+                body["Headers"] = request.HeadersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Method))
+            {
+                body["Method"] = request.Method;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                body["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TraceSite",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TraceSiteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trace站点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 请确保在使用该接口前，站点已接入ESA平台并启用。</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// TraceSiteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TraceSiteResponse
+        /// </returns>
+        public async Task<TraceSiteResponse> TraceSiteWithOptionsAsync(TraceSiteRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TraceSiteShrinkRequest request = new TraceSiteShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "Body", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Context))
+            {
+                request.ContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Context, "Context", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Cookies))
+            {
+                request.CookiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Cookies, "Cookies", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Headers))
+            {
+                request.HeadersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Headers, "Headers", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["Body"] = request.BodyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextShrink))
+            {
+                body["Context"] = request.ContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CookiesShrink))
+            {
+                body["Cookies"] = request.CookiesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HeadersShrink))
+            {
+                body["Headers"] = request.HeadersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Method))
+            {
+                body["Method"] = request.Method;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                body["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TraceSite",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TraceSiteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trace站点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 请确保在使用该接口前，站点已接入ESA平台并启用。</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TraceSiteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TraceSiteResponse
+        /// </returns>
+        public TraceSiteResponse TraceSite(TraceSiteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return TraceSiteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Trace站点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 请确保在使用该接口前，站点已接入ESA平台并启用。</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// TraceSiteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TraceSiteResponse
+        /// </returns>
+        public async Task<TraceSiteResponse> TraceSiteAsync(TraceSiteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await TraceSiteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a resource tag based on a specified resource ID.</para>
         /// </summary>
         /// 
@@ -56791,6 +57043,134 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications of a bot instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBotSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBotSpecResponse
+        /// </returns>
+        public UpdateBotSpecResponse UpdateBotSpecWithOptions(UpdateBotSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BotInstanceLevel))
+            {
+                query["BotInstanceLevel"] = request.BotInstanceLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBotSpec",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBotSpecResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications of a bot instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBotSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBotSpecResponse
+        /// </returns>
+        public async Task<UpdateBotSpecResponse> UpdateBotSpecWithOptionsAsync(UpdateBotSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BotInstanceLevel))
+            {
+                query["BotInstanceLevel"] = request.BotInstanceLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBotSpec",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBotSpecResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications of a bot instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBotSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBotSpecResponse
+        /// </returns>
+        public UpdateBotSpecResponse UpdateBotSpec(UpdateBotSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateBotSpecWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the specifications of a bot instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBotSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBotSpecResponse
+        /// </returns>
+        public async Task<UpdateBotSpecResponse> UpdateBotSpecAsync(UpdateBotSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateBotSpecWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -58695,6 +59075,150 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateCustomScenePolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the specifications of an Anti-DDoS instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDDoSSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDDoSSpecResponse
+        /// </returns>
+        public UpdateDDoSSpecResponse UpdateDDoSSpecWithOptions(UpdateDDoSSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DDoSBillingMode))
+            {
+                query["DDoSBillingMode"] = request.DDoSBillingMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DDoSBurstableDomesticProtection))
+            {
+                query["DDoSBurstableDomesticProtection"] = request.DDoSBurstableDomesticProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DDoSBurstableOverseasProtection))
+            {
+                query["DDoSBurstableOverseasProtection"] = request.DDoSBurstableOverseasProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDDoSSpec",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDDoSSpecResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the specifications of an Anti-DDoS instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDDoSSpecRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDDoSSpecResponse
+        /// </returns>
+        public async Task<UpdateDDoSSpecResponse> UpdateDDoSSpecWithOptionsAsync(UpdateDDoSSpecRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DDoSBillingMode))
+            {
+                query["DDoSBillingMode"] = request.DDoSBillingMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DDoSBurstableDomesticProtection))
+            {
+                query["DDoSBurstableDomesticProtection"] = request.DDoSBurstableDomesticProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DDoSBurstableOverseasProtection))
+            {
+                query["DDoSBurstableOverseasProtection"] = request.DDoSBurstableOverseasProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDDoSSpec",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDDoSSpecResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the specifications of an Anti-DDoS instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDDoSSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDDoSSpecResponse
+        /// </returns>
+        public UpdateDDoSSpecResponse UpdateDDoSSpec(UpdateDDoSSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateDDoSSpecWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the specifications of an Anti-DDoS instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDDoSSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDDoSSpecResponse
+        /// </returns>
+        public async Task<UpdateDDoSSpecResponse> UpdateDDoSSpecAsync(UpdateDDoSSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateDDoSSpecWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -66207,8 +66731,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a delivery task configuration. You can modify the task name, selected fields, real-time log type, and discard rate.</para>
+        /// <para>Modifies the delivery task configuration of a user, allowing you to set the task name, select fields, specify the real-time log type, and adjust the discard rate.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, you must have successfully created a task with the target TaskName by using CreateUserDeliveryTask. Only then can you use this operation to update the delivery task configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserDeliveryTaskRequest
@@ -66269,8 +66798,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a delivery task configuration. You can modify the task name, selected fields, real-time log type, and discard rate.</para>
+        /// <para>Modifies the delivery task configuration of a user, allowing you to set the task name, select fields, specify the real-time log type, and adjust the discard rate.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, you must have successfully created a task with the target TaskName by using CreateUserDeliveryTask. Only then can you use this operation to update the delivery task configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserDeliveryTaskRequest
@@ -66331,8 +66865,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a delivery task configuration. You can modify the task name, selected fields, real-time log type, and discard rate.</para>
+        /// <para>Modifies the delivery task configuration of a user, allowing you to set the task name, select fields, specify the real-time log type, and adjust the discard rate.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, you must have successfully created a task with the target TaskName by using CreateUserDeliveryTask. Only then can you use this operation to update the delivery task configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserDeliveryTaskRequest
@@ -66349,8 +66888,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a delivery task configuration. You can modify the task name, selected fields, real-time log type, and discard rate.</para>
+        /// <para>Modifies the delivery task configuration of a user, allowing you to set the task name, select fields, specify the real-time log type, and adjust the discard rate.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, you must have successfully created a task with the target TaskName by using CreateUserDeliveryTask. Only then can you use this operation to update the delivery task configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserDeliveryTaskRequest

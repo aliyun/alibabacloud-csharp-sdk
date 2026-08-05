@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeSiteLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time for retrieving logs.</para>
+        /// <para>The end time for log retrieval.</para>
         /// <para>The date is in ISO 8601 format and uses UTC+0 time in the format of yyyy-MM-ddTHH:mm:ssZ.</para>
         /// <remarks>
         /// <para>Note: The end time must be later than the start time.</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The start time for retrieving logs.</para>
+        /// <para>The start time for log retrieval.</para>
         /// <para>The date is in ISO 8601 format and uses UTC+0 time in the format of yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>

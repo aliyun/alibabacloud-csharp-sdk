@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<DescribeSiteLogsResponseBodySiteLogDetails> SiteLogDetails { get; set; }
         public class DescribeSiteLogsResponseBodySiteLogDetails : TeaModel {
             /// <summary>
-            /// <para>The total number of entries returned on the current page.</para>
+            /// <para>The total number of entries returned on this page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public class DescribeSiteLogsResponseBodySiteLogDetailsLogInfos : TeaModel {
                 /// <summary>
                 /// <para>The end time.</para>
+                /// <remarks>
+                /// <para>Date format example: yyyy-MM-ddTHH:mm:ssZ</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-11-06T17:00:00Z</para>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <summary>
                 /// <para>The log path.</para>
                 /// <remarks>
-                /// <para>Pay attention to the Expires field (expiration timestamp) in the LogPath response parameter. After the expiration time, the log download link becomes invalid and must be obtained again.</para>
+                /// <para>Note the Expires field (expiration timestamp) in the LogPath response parameter. After the expiration time, the log download link becomes invalid and must be obtained again.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -88,6 +91,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The start time.</para>
+                /// <remarks>
+                /// <para>Date format example: yyyy-MM-ddTHH:mm:ssZ</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-11-06T16:00:00Z</para>

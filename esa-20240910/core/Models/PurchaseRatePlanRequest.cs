@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Auto-renewal is enabled.</description></item>
-        /// <item><description>false: Auto-renewal is not enabled.</description></item>
+        /// <item><description>false: Auto-renewal is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,6 +83,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Coverage { get; set; }
 
+        /// <summary>
+        /// <para>The overage policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>limit_speed</para>
+        /// </summary>
         [NameInMap("OveragePolicy")]
         [Validation(Required=false)]
         public string OveragePolicy { get; set; }
@@ -99,7 +105,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The plan code.</para>
-        /// <para>Chinese site</para>
+        /// <para>China site</para>
         /// <list type="bullet">
         /// <item><description>Free Edition: entranceplan</description></item>
         /// <item><description>Basic: basicplan</description></item>
@@ -122,7 +128,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The plan name.</para>
-        /// <para>Chinese site</para>
+        /// <para>China site</para>
         /// <list type="bullet">
         /// <item><description>Free Edition: entranceplan</description></item>
         /// <item><description>Basic: basic</description></item>

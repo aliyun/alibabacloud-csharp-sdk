@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The current remaining capacity of the instance.</para>
             /// <list type="bullet">
-            /// <item><description><para>Unit for traffic plans: bytes.</para>
+            /// <item><description><para>Unit for data transfer plans: Byte.</para>
             /// </description></item>
-            /// <item><description><para>Unit for request plans: count.</para>
+            /// <item><description><para>Unit for request count plans: count.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The expiration time in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-02T15:59:59Z</para>
@@ -125,9 +125,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The total capacity of the resource plan.</para>
             /// <list type="bullet">
-            /// <item><description><para>Unit for traffic plans: bytes.</para>
+            /// <item><description><para>Unit for data transfer plans: Byte.</para>
             /// </description></item>
-            /// <item><description><para>Unit for request plans: count.</para>
+            /// <item><description><para>Unit for request count plans: count.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InitCapacityShowValue { get; set; }
 
             /// <summary>
-            /// <para>The resource plan instance ID.</para>
+            /// <para>The instance ID of the resource plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>_ResourcePack-cn-</b></b></para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The effective period.</para>
+            /// <para>The effective period in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-20T16:00:00Z</para>

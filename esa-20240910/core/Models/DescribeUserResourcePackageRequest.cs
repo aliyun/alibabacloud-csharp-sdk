@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeUserResourcePackageRequest : TeaModel {
         /// <summary>
-        /// <para>The resource plan instance ID.</para>
+        /// <para>The instance ID of the resource plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>_ResourcePack-cn-</b></b></para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortField { get; set; }
 
         /// <summary>
-        /// <para>The sorting collation. Default value: desc. Valid values:</para>
+        /// <para>The collation. Default value: desc. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>asc</description></item>
         /// <item><description>desc</description></item>

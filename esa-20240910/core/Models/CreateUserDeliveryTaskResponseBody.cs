@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The data center. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn</b>: Chinese mainland.</description></item>
+        /// <item><description><b>cn</b>: the Chinese mainland.</description></item>
         /// <item><description><b>sg</b>: global (excluding the Chinese mainland).</description></item>
         /// </list>
         /// 

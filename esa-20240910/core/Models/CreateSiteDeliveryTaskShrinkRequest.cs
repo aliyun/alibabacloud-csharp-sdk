@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The delivery type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sls</b>: Alibaba Cloud Simple Log Service.</description></item>
+        /// <item><description><b>sls</b>: Simple Log Service.</description></item>
         /// <item><description><b>http</b>: HTTP service.</description></item>
         /// <item><description><b>aws3</b>: Amazon S3 service.</description></item>
-        /// <item><description><b>oss</b>: Alibaba Cloud Object Storage Service.</description></item>
+        /// <item><description><b>oss</b>: Object Storage Service (OSS).</description></item>
         /// <item><description><b>kafka</b>: Kafka service.</description></item>
         /// <item><description><b>aws3cmpt</b>: Amazon S3-compatible service.</description></item>
         /// </list>
@@ -71,10 +71,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The selected log fields, separated by commas (,).</para>
+        /// <remarks>
+        /// <para>The field names must come from the FieldName values returned by the GetRealtimeDeliveryField operation, and the corresponding BusinessType must be specified.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>user_agent,ip_adress,ip_port</para>
+        /// <para>ClientIP,ClientRequestURI,EdgeResponseStatusCode</para>
         /// </summary>
         [NameInMap("FieldName")]
         [Validation(Required=false)]
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The filter rule version.</para>
         /// <remarks>
-        /// <para>For backward compatibility with legacy filter rules, the default value is v1. New tasks use v2.</para>
+        /// <para>For backward compatibility with legacy filter rules, the default value is v1. Newly created tasks use v2.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -115,7 +118,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OssDeliveryShrink { get; set; }
 
         /// <summary>
-        /// <para>The S3/S3-compatible delivery configuration parameters.</para>
+        /// <para>The S3 or S3-compatible delivery configuration parameters.</para>
         /// </summary>
         [NameInMap("S3Delivery")]
         [Validation(Required=false)]
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The SLS delivery configuration.</para>
+        /// <para>The Simple Log Service (SLS) delivery configuration.</para>
         /// </summary>
         [NameInMap("SlsDelivery")]
         [Validation(Required=false)]

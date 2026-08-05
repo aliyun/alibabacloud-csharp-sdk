@@ -12,14 +12,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The real-time log type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>dcdn_log_access_l1 (default)</b>: access log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_er</b>: edge function log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_waf</b>: WAF log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_ipa</b>: layer 4 acceleration log.</para>
-        /// </description></item>
+        /// <item><description><b>dcdn_log_access_l1 (default)</b>: access logs.</description></item>
+        /// <item><description><b>dcdn_log_er</b>: Edge Routine function logs.</description></item>
+        /// <item><description><b>dcdn_log_waf</b>: security protection logs.</description></item>
+        /// <item><description><b>dcdn_log_ipa</b>: Layer 4 acceleration logs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,12 +25,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string BusinessType { get; set; }
 
+        /// <summary>
+        /// <para>The list of ER PODs to configure.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx,xxx</para>
+        /// </summary>
         [NameInMap("Details")]
         [Validation(Required=false)]
         public string Details { get; set; }
 
         /// <summary>
-        /// <para>The default value is 0.</para>
+        /// <para>The discard rate. If not specified, the default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? DiscardRate { get; set; }
 
         /// <summary>
-        /// <para>The selected fields. Separate multiple fields with a comma.</para>
+        /// <para>The selected fields, separated by commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +56,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string FieldName { get; set; }
 
+        /// <summary>
+        /// <para>The version of the filter rule.</para>
+        /// <remarks>
+        /// <para>Compatible with legacy filter rules. The default value is v1. Newly created tasks use v2.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>v2</para>
+        /// </summary>
         [NameInMap("FilterVer")]
         [Validation(Required=false)]
         public string FilterVer { get; set; }

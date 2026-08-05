@@ -14,6 +14,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <list type="bullet">
         /// <item><description><b>cn</b>: the Chinese mainland.</description></item>
         /// <item><description><b>oversea</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><b>global</b>: global.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
