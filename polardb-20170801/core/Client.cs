@@ -13263,6 +13263,158 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a PolarFS S3 account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLakebaseS3AccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLakebaseS3AccountResponse
+        /// </returns>
+        public CreateLakebaseS3AccountResponse CreateLakebaseS3AccountWithOptions(CreateLakebaseS3AccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccAk))
+            {
+                query["UserAccAk"] = request.UserAccAk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccPolicy))
+            {
+                query["UserAccPolicy"] = request.UserAccPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccSk))
+            {
+                query["UserAccSk"] = request.UserAccSk;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLakebaseS3Account",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLakebaseS3AccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a PolarFS S3 account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLakebaseS3AccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLakebaseS3AccountResponse
+        /// </returns>
+        public async Task<CreateLakebaseS3AccountResponse> CreateLakebaseS3AccountWithOptionsAsync(CreateLakebaseS3AccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccAk))
+            {
+                query["UserAccAk"] = request.UserAccAk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccPolicy))
+            {
+                query["UserAccPolicy"] = request.UserAccPolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccSk))
+            {
+                query["UserAccSk"] = request.UserAccSk;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLakebaseS3Account",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLakebaseS3AccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a PolarFS S3 account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLakebaseS3AccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLakebaseS3AccountResponse
+        /// </returns>
+        public CreateLakebaseS3AccountResponse CreateLakebaseS3Account(CreateLakebaseS3AccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateLakebaseS3AccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a PolarFS S3 account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLakebaseS3AccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLakebaseS3AccountResponse
+        /// </returns>
+        public async Task<CreateLakebaseS3AccountResponse> CreateLakebaseS3AccountAsync(CreateLakebaseS3AccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateLakebaseS3AccountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a model API.</para>
         /// </summary>
         /// 
@@ -14927,6 +15079,310 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreatePolarClawCronJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables PolarFS support.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePolarFsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolarFsResponse
+        /// </returns>
+        public CreatePolarFsResponse CreatePolarFsWithOptions(CreatePolarFsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerateStorageSize))
+            {
+                query["AccelerateStorageSize"] = request.AccelerateStorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerateSwitch))
+            {
+                query["AccelerateSwitch"] = request.AccelerateSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerateType))
+            {
+                query["AccelerateType"] = request.AccelerateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizedUserIds))
+            {
+                query["AuthorizedUserIds"] = request.AuthorizedUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
+            {
+                query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreationCategory))
+            {
+                query["CreationCategory"] = request.CreationCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomBucketCount))
+            {
+                query["CustomBucketCount"] = request.CustomBucketCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomBucketPath))
+            {
+                query["CustomBucketPath"] = request.CustomBucketPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomBucketPathList))
+            {
+                query["CustomBucketPathList"] = request.CustomBucketPathList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssAk))
+            {
+                query["CustomOssAk"] = request.CustomOssAk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssSk))
+            {
+                query["CustomOssSk"] = request.CustomOssSk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBType))
+            {
+                query["DBType"] = request.DBType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                query["PromotionCode"] = request.PromotionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSpace))
+            {
+                query["StorageSpace"] = request.StorageSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
+            {
+                query["VPCId"] = request.VPCId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePolarFs",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePolarFsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables PolarFS support.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePolarFsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolarFsResponse
+        /// </returns>
+        public async Task<CreatePolarFsResponse> CreatePolarFsWithOptionsAsync(CreatePolarFsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerateStorageSize))
+            {
+                query["AccelerateStorageSize"] = request.AccelerateStorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerateSwitch))
+            {
+                query["AccelerateSwitch"] = request.AccelerateSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccelerateType))
+            {
+                query["AccelerateType"] = request.AccelerateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizedUserIds))
+            {
+                query["AuthorizedUserIds"] = request.AuthorizedUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
+            {
+                query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreationCategory))
+            {
+                query["CreationCategory"] = request.CreationCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomBucketCount))
+            {
+                query["CustomBucketCount"] = request.CustomBucketCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomBucketPath))
+            {
+                query["CustomBucketPath"] = request.CustomBucketPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomBucketPathList))
+            {
+                query["CustomBucketPathList"] = request.CustomBucketPathList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssAk))
+            {
+                query["CustomOssAk"] = request.CustomOssAk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssSk))
+            {
+                query["CustomOssSk"] = request.CustomOssSk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBType))
+            {
+                query["DBType"] = request.DBType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionCode))
+            {
+                query["PromotionCode"] = request.PromotionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSpace))
+            {
+                query["StorageSpace"] = request.StorageSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
+            {
+                query["VPCId"] = request.VPCId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePolarFs",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePolarFsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables PolarFS support.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePolarFsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolarFsResponse
+        /// </returns>
+        public CreatePolarFsResponse CreatePolarFs(CreatePolarFsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreatePolarFsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables PolarFS support.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePolarFsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolarFsResponse
+        /// </returns>
+        public async Task<CreatePolarFsResponse> CreatePolarFsAsync(CreatePolarFsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreatePolarFsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -21239,6 +21695,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a PolarFS S3 account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLakebaseS3AccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLakebaseS3AccountResponse
+        /// </returns>
+        public DeleteLakebaseS3AccountResponse DeleteLakebaseS3AccountWithOptions(DeleteLakebaseS3AccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccAk))
+            {
+                query["UserAccAk"] = request.UserAccAk;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLakebaseS3Account",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLakebaseS3AccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a PolarFS S3 account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLakebaseS3AccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLakebaseS3AccountResponse
+        /// </returns>
+        public async Task<DeleteLakebaseS3AccountResponse> DeleteLakebaseS3AccountWithOptionsAsync(DeleteLakebaseS3AccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccAk))
+            {
+                query["UserAccAk"] = request.UserAccAk;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLakebaseS3Account",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLakebaseS3AccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a PolarFS S3 account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLakebaseS3AccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLakebaseS3AccountResponse
+        /// </returns>
+        public DeleteLakebaseS3AccountResponse DeleteLakebaseS3Account(DeleteLakebaseS3AccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteLakebaseS3AccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a PolarFS S3 account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLakebaseS3AccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLakebaseS3AccountResponse
+        /// </returns>
+        public async Task<DeleteLakebaseS3AccountResponse> DeleteLakebaseS3AccountAsync(DeleteLakebaseS3AccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteLakebaseS3AccountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes the specified data masking rules.</para>
         /// </summary>
         /// 
@@ -22547,6 +23139,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeletePolarClawCronJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a pay-as-you-go PolarFs instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsResponse
+        /// </returns>
+        public DeletePolarFsResponse DeletePolarFsWithOptions(DeletePolarFsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePolarFs",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePolarFsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a pay-as-you-go PolarFs instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsResponse
+        /// </returns>
+        public async Task<DeletePolarFsResponse> DeletePolarFsWithOptionsAsync(DeletePolarFsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePolarFs",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePolarFsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a pay-as-you-go PolarFs instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsResponse
+        /// </returns>
+        public DeletePolarFsResponse DeletePolarFs(DeletePolarFsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeletePolarFsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a pay-as-you-go PolarFs instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsResponse
+        /// </returns>
+        public async Task<DeletePolarFsResponse> DeletePolarFsAsync(DeletePolarFsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeletePolarFsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -42571,6 +43291,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of a PolarFS S3 account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLakebaseS3AccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLakebaseS3AccountResponse
+        /// </returns>
+        public DescribeLakebaseS3AccountResponse DescribeLakebaseS3AccountWithOptions(DescribeLakebaseS3AccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccAk))
+            {
+                query["UserAccAk"] = request.UserAccAk;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLakebaseS3Account",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLakebaseS3AccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a PolarFS S3 account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLakebaseS3AccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLakebaseS3AccountResponse
+        /// </returns>
+        public async Task<DescribeLakebaseS3AccountResponse> DescribeLakebaseS3AccountWithOptionsAsync(DescribeLakebaseS3AccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccAk))
+            {
+                query["UserAccAk"] = request.UserAccAk;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLakebaseS3Account",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLakebaseS3AccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a PolarFS S3 account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLakebaseS3AccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLakebaseS3AccountResponse
+        /// </returns>
+        public DescribeLakebaseS3AccountResponse DescribeLakebaseS3Account(DescribeLakebaseS3AccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLakebaseS3AccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a PolarFS S3 account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLakebaseS3AccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLakebaseS3AccountResponse
+        /// </returns>
+        public async Task<DescribeLakebaseS3AccountResponse> DescribeLakebaseS3AccountAsync(DescribeLakebaseS3AccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLakebaseS3AccountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a license order.</para>
         /// </summary>
         /// 
@@ -47267,6 +48123,150 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribePolarFsAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of PolarFS path mappings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsMappingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsMappingResponse
+        /// </returns>
+        public DescribePolarFsMappingResponse DescribePolarFsMappingWithOptions(DescribePolarFsMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarFsMapping",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarFsMappingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of PolarFS path mappings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsMappingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsMappingResponse
+        /// </returns>
+        public async Task<DescribePolarFsMappingResponse> DescribePolarFsMappingWithOptionsAsync(DescribePolarFsMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarFsMapping",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarFsMappingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of PolarFS path mappings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsMappingResponse
+        /// </returns>
+        public DescribePolarFsMappingResponse DescribePolarFsMapping(DescribePolarFsMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePolarFsMappingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of PolarFS path mappings.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsMappingResponse
+        /// </returns>
+        public async Task<DescribePolarFsMappingResponse> DescribePolarFsMappingAsync(DescribePolarFsMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePolarFsMappingWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -55439,6 +56439,150 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InstallPolarClawSkillWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists PolarFS S3 accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLakebaseS3AccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLakebaseS3AccountsResponse
+        /// </returns>
+        public ListLakebaseS3AccountsResponse ListLakebaseS3AccountsWithOptions(ListLakebaseS3AccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLakebaseS3Accounts",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLakebaseS3AccountsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists PolarFS S3 accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLakebaseS3AccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLakebaseS3AccountsResponse
+        /// </returns>
+        public async Task<ListLakebaseS3AccountsResponse> ListLakebaseS3AccountsWithOptionsAsync(ListLakebaseS3AccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLakebaseS3Accounts",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLakebaseS3AccountsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists PolarFS S3 accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLakebaseS3AccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLakebaseS3AccountsResponse
+        /// </returns>
+        public ListLakebaseS3AccountsResponse ListLakebaseS3Accounts(ListLakebaseS3AccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListLakebaseS3AccountsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists PolarFS S3 accounts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLakebaseS3AccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLakebaseS3AccountsResponse
+        /// </returns>
+        public async Task<ListLakebaseS3AccountsResponse> ListLakebaseS3AccountsAsync(ListLakebaseS3AccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListLakebaseS3AccountsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -69127,6 +70271,166 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyPendingMaintenanceActionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the bucket credentials for a PolarFS path mapping.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPolarFsMappingAuthRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolarFsMappingAuthResponse
+        /// </returns>
+        public ModifyPolarFsMappingAuthResponse ModifyPolarFsMappingAuthWithOptions(ModifyPolarFsMappingAuthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bucket))
+            {
+                query["Bucket"] = request.Bucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketAccessKeyId))
+            {
+                query["BucketAccessKeyId"] = request.BucketAccessKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketAccessKeySecret))
+            {
+                query["BucketAccessKeySecret"] = request.BucketAccessKeySecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyPolarFsMappingAuth",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyPolarFsMappingAuthResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the bucket credentials for a PolarFS path mapping.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPolarFsMappingAuthRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolarFsMappingAuthResponse
+        /// </returns>
+        public async Task<ModifyPolarFsMappingAuthResponse> ModifyPolarFsMappingAuthWithOptionsAsync(ModifyPolarFsMappingAuthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bucket))
+            {
+                query["Bucket"] = request.Bucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketAccessKeyId))
+            {
+                query["BucketAccessKeyId"] = request.BucketAccessKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketAccessKeySecret))
+            {
+                query["BucketAccessKeySecret"] = request.BucketAccessKeySecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyPolarFsMappingAuth",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyPolarFsMappingAuthResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the bucket credentials for a PolarFS path mapping.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPolarFsMappingAuthRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolarFsMappingAuthResponse
+        /// </returns>
+        public ModifyPolarFsMappingAuthResponse ModifyPolarFsMappingAuth(ModifyPolarFsMappingAuthRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyPolarFsMappingAuthWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the bucket credentials for a PolarFS path mapping.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyPolarFsMappingAuthRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyPolarFsMappingAuthResponse
+        /// </returns>
+        public async Task<ModifyPolarFsMappingAuthResponse> ModifyPolarFsMappingAuthAsync(ModifyPolarFsMappingAuthRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyPolarFsMappingAuthWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
