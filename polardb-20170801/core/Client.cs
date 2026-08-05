@@ -47991,7 +47991,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a PolarLakebase instance.</para>
+        /// <para>Retrieves the details of a Polarlakebase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48041,7 +48041,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a PolarLakebase instance.</para>
+        /// <para>Retrieves the details of a Polarlakebase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48091,7 +48091,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a PolarLakebase instance.</para>
+        /// <para>Retrieves the details of a Polarlakebase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48109,7 +48109,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a PolarLakebase instance.</para>
+        /// <para>Retrieves the details of a Polarlakebase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
