@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>获取巡检报告列表成功</para>
+        /// <para>Successfully retrieved the inspection report list</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A list of inspection reports.</para>
+        /// <para>The report details.</para>
         /// </summary>
         [NameInMap("Reports")]
         [Validation(Required=false)]
         public List<GetScheduledReportsResponseBodyReports> Reports { get; set; }
         public class GetScheduledReportsResponseBodyReports : TeaModel {
             /// <summary>
-            /// <para>The time when the report was created, in YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01T22:59:59Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The inspection end time, in YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The inspection end time (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01T23:59:59Z</para>
@@ -70,9 +70,6 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string InspectionItems { get; set; }
 
-            /// <summary>
-            /// <para>The region ID.</para>
-            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
@@ -86,7 +83,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ReportType { get; set; }
 
             /// <summary>
-            /// <para>The inspection start time, in YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The inspection start time (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01T00:00:00Z</para>
@@ -96,7 +93,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the report.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -106,7 +103,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The inspection report ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>65f0053b-f933-49f5-bf65-4e4593e1****</para>
@@ -128,7 +125,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -138,7 +135,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

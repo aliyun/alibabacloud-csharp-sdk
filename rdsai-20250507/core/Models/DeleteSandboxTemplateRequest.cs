@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DeleteSandboxTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the AI application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The sandbox template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

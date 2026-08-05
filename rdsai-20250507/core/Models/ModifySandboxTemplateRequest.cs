@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifySandboxTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The number of CPUs for sandboxes created from this template. Valid values: 1 to 4.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DefaultCpu { get; set; }
 
         /// <summary>
+        /// <para>The memory size for sandboxes created from this template. Unit: Gi. Valid values: 1Gi to 8Gi.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1Gi</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DefaultMemory { get; set; }
 
         /// <summary>
+        /// <para>The instance ID of the AI application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The initial number of instances. Valid values: 1 to 1000.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -52,6 +61,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? Replicas { get; set; }
 
         /// <summary>
+        /// <para>The sandbox template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetInspectionReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the result.</para>
+        /// <para>The result details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetInspectionReportResponseBodyData> Data { get; set; }
         public class GetInspectionReportResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The returned results.</para>
+            /// <para>The request result.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string Group { get; set; }
 
                 /// <summary>
-                /// <para>The items in the result.</para>
+                /// <para>The attached resource names.</para>
                 /// </summary>
                 [NameInMap("Items")]
                 [Validation(Required=false)]
                 public List<GetInspectionReportResponseBodyDataDataItems> Items { get; set; }
                 public class GetInspectionReportResponseBodyDataDataItems : TeaModel {
                     /// <summary>
-                    /// <para>The returned results.</para>
+                    /// <para>The request result.</para>
                     /// </summary>
                     [NameInMap("Data")]
                     [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                     }
 
                     /// <summary>
-                    /// <para>The level of the alert.</para>
+                    /// <para>The alert level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Normal</para>
@@ -80,17 +80,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                     public string Level { get; set; }
 
                     /// <summary>
-                    /// <para>The response message.</para>
+                    /// <para>The result message.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>实例运行状态正常</para>
+                    /// <para>Instance running status is normal</para>
                     /// </summary>
                     [NameInMap("Message")]
                     [Validation(Required=false)]
                     public string Message { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the category.</para>
+                    /// <para>The category name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>instance_runningstatus</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
-            /// <para>The end time of the inspection. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The inspection end time in the format of YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-31T02:05:04Z</para>
@@ -124,10 +124,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string EngineType { get; set; }
 
             /// <summary>
-            /// <para>The description of the instance.</para>
+            /// <para>The instance description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试实例</para>
+            /// <para>Test instance</para>
             /// </summary>
             [NameInMap("InstanceDesc")]
             [Validation(Required=false)]
@@ -144,14 +144,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The hierarchical summary of the report.</para>
+            /// <para>The level summary.</para>
             /// </summary>
             [NameInMap("LevelSummary")]
             [Validation(Required=false)]
             public GetInspectionReportResponseBodyDataLevelSummary LevelSummary { get; set; }
             public class GetInspectionReportResponseBodyDataLevelSummary : TeaModel {
                 /// <summary>
-                /// <para>The number of errors in the report.</para>
+                /// <para>The number of error items.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public long? Error { get; set; }
 
                 /// <summary>
-                /// <para>The number of failures in the report.</para>
+                /// <para>The number of failed items.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public long? Failed { get; set; }
 
                 /// <summary>
-                /// <para>The number of normal records in the report.</para>
+                /// <para>The number of normal items.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public long? Normal { get; set; }
 
                 /// <summary>
-                /// <para>The number of warnings in the report.</para>
+                /// <para>The number of warning items.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -193,21 +193,21 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
-            /// <para>The report text in the markdown format.</para>
+            /// <para>The Markdown text.</para>
             /// <list type="bullet">
-            /// <item><description>If the InstanceId parameter is not specified, all content of the inspection report is returned. However, the MarkdownText field is empty.</description></item>
-            /// <item><description>If the InstanceId parameter is specified, the content related to the instance is returned in the MarkdownText field.</description></item>
+            /// <item><description>If the InstanceId parameter is not specified: the reports for all instances in the inspection report are returned, but the MarkdownText field is empty (&quot;&quot;).</description></item>
+            /// <item><description>If the InstanceId parameter is specified: the report for the specified instance is returned, and the MarkdownText field contains the specific content.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <h1>RDS实例巡检报告\n\n<b>实例ID</b>: <c>rm-2zep6e5u6l2yu****</c>\n\n<b>引擎类型</b>: MySQL\n\n<b>地域</b>: cn-beijing\n\n<b>时间范围(UTC)</b>: 2026-02-04T03:31:00Z ~ 2026-02-05T03:31:00Z\n\n&gt; 本次巡检共包含 <b>60</b> 项检查，其中 1项警告、57项正常、2项数据获取失败。……</h1>
+            /// <h1>RDS Instance Inspection Report\n\n<b>Instance ID</b>: <c>rm-2zep6e5u6l2yu****</c>\n\n<b>Engine Type</b>: MySQL\n\n<b>Region</b>: cn-beijing\n\n<b>Time Range (UTC)</b>: 2026-02-04T03:31:00Z ~ 2026-02-05T03:31:00Z\n\n&gt; This inspection includes <b>60</b> checks, of which 1 warning, 57 normal, and 2 failed to retrieve data.……</h1>
             /// </summary>
             [NameInMap("MarkdownText")]
             [Validation(Required=false)]
             public string MarkdownText { get; set; }
 
             /// <summary>
-            /// <para>The region where the instance resides.</para>
+            /// <para>The region information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The start time of the inspection task. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+            /// <para>The inspection start time in the format of YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-11-06T16:00:00Z</para>
@@ -229,10 +229,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The report text in the markdown format.</para>
+        /// <para>The Markdown text.</para>
         /// 
         /// <b>Example:</b>
-        /// <h1>RDS批量巡检汇总报告\n\n&gt; 本次批量巡检共检查 <b>1</b> 个实例；发现 <b>1</b> 个实例存在警告（共 1 项警告）……</h1>
+        /// <h1>RDS Batch Inspection Summary Report\n\n&gt; This batch inspection checked <b>1</b> instance; found <b>1</b> instance with warnings (1 warning item in total)……</h1>
         /// </summary>
         [NameInMap("MarkdownText")]
         [Validation(Required=false)]
@@ -257,6 +257,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
+
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
+
+        [NameInMap("TemplateName")]
+        [Validation(Required=false)]
+        public string TemplateName { get; set; }
 
     }
 

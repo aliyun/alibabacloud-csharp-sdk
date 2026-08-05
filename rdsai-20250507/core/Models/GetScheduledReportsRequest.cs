@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetScheduledReportsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query range. The time must be in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+        /// <para>The end time for filtering (format: YYYY-MM-DDTHH:mm:ssZ). If not specified, no end time filter is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-25T02:02:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The default value is 20, and the maximum value is 100.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the inspection task.</para>
+        /// <para>The inspection task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ScheduledId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query range. The time must be in the YYYY-MM-DDTHH:mm:ssZ format.</para>
+        /// <para>The start time for filtering (format: YYYY-MM-DDTHH:mm:ssZ). If not specified, no start time filter is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-25T01:02:00Z</para>

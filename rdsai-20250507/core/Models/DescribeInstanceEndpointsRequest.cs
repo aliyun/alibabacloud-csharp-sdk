@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceEndpointsRequest : TeaModel {
+        /// <summary>
+        /// <para>Reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Reserved parameter</para>
+        /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }

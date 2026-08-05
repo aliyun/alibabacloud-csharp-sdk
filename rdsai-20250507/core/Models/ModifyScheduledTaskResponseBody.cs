@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>定时任务更新成功</para>
+        /// <para>Scheduled task updated successfully</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

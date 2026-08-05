@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateInspectionTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateInspectionTaskResponseBodyData Data { get; set; }
         public class CreateInspectionTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the inspection task.</para>
+            /// <para>The inspection task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9adf8567-b619-4d37-8ff2-01d38a76****</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>任务创建成功</para>
+        /// <para>Task created successfully</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

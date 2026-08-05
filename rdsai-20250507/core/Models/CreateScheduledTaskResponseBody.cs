@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateScheduledTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Provides details about the request outcome, such as a success message or an error description.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>创建定时巡检任务成功</para>
+        /// <para>Scheduled inspection task created successfully</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduled inspection task.</para>
+        /// <para>The ID of the scheduled inspection configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>847268a4-196f-416b-aa12-bfe0c115****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ScheduledId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. A value of true indicates success.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

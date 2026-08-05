@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceEndpointsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Reserved parameter</para>
+        /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>The endpoints of the database instance.</para>
+        /// <para>The list of endpoint information of the database instance.</para>
         /// </summary>
         [NameInMap("DBInstanceEndpoints")]
         [Validation(Required=false)]
@@ -57,7 +63,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The endpoints of the AI application instance.</para>
+        /// <para>The list of endpoint information of the AI application instance.</para>
         /// </summary>
         [NameInMap("InstanceEndpoints")]
         [Validation(Required=false)]
@@ -73,6 +79,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string ConnectionString { get; set; }
 
+            /// <summary>
+            /// <para>The domain name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx.apsaradb.com</para>
+            /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
             public string Domain { get; set; }

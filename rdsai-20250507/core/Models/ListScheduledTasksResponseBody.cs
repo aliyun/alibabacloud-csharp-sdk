@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>任务信息查询成功</para>
+        /// <para>Task information queried successfully</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of scheduled inspection tasks.</para>
+        /// <para>The list of scheduled inspection tasks.</para>
         /// </summary>
         [NameInMap("Schedules")]
         [Validation(Required=false)]
         public List<ListScheduledTasksResponseBodySchedules> Schedules { get; set; }
         public class ListScheduledTasksResponseBodySchedules : TeaModel {
             /// <summary>
-            /// <para>The time the task was created, in UTC.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-02-04T06:51:24Z</para>
@@ -67,36 +67,28 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the inspection.</para>
+            /// <para>The inspection description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>每天凌晨2点自动巡检生产环境RDS实例</para>
+            /// <para>Automatically inspect production ApsaraDB RDS instances at 2:00 AM every day</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The inspection frequency. Multiple values are separated by commas. The default is DAILY. Valid values:</para>
+            /// <para>The new inspection frequency. Separate multiple values with commas (,). Default value: DAILY. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>DAILY: Every day</para>
-            /// </description></item>
-            /// <item><description><para>Monday: Monday</para>
-            /// </description></item>
-            /// <item><description><para>Tuesday: Tuesday</para>
-            /// </description></item>
-            /// <item><description><para>Wednesday: Wednesday</para>
-            /// </description></item>
-            /// <item><description><para>Thursday: Thursday</para>
-            /// </description></item>
-            /// <item><description><para>Friday: Friday</para>
-            /// </description></item>
-            /// <item><description><para>Saturday: Saturday</para>
-            /// </description></item>
-            /// <item><description><para>Sunday: Sunday</para>
-            /// </description></item>
+            /// <item><description>DAILY: every day</description></item>
+            /// <item><description>Monday: Monday</description></item>
+            /// <item><description>Tuesday: Tuesday</description></item>
+            /// <item><description>Wednesday: Wednesday</description></item>
+            /// <item><description>Thursday: Thursday</description></item>
+            /// <item><description>Friday: Friday</description></item>
+            /// <item><description>Saturday: Saturday</description></item>
+            /// <item><description>Sunday: Sunday</description></item>
             /// </list>
-            /// <h3>Note: The DAILY setting overrides any specified days of the week. For example, if you specify DAILY,Monday, the inspection runs daily.</h3>
+            /// <h3>Note: DAILY overrides weekly values. For example, if you specify DAILY,Monday, the backend uses DAILY as the inspection frequency.</h3>
             /// 
             /// <b>Example:</b>
             /// <para>Monday</para>
@@ -110,7 +102,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InspectionItems { get; set; }
 
             /// <summary>
-            /// <para>The number of instances in the task.</para>
+            /// <para>The number of task instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -120,10 +112,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? InstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>巡检测试</para>
+            /// <para>InspectionTest</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -152,7 +144,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ScheduledId { get; set; }
 
             /// <summary>
-            /// <para>The task start time, in UTC.</para>
+            /// <para>The actual start time of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18:00:00Z</para>
@@ -161,11 +153,19 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string TaskStartTime { get; set; }
 
+            [NameInMap("TemplateId")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
+
+            [NameInMap("TemplateName")]
+            [Validation(Required=false)]
+            public string TemplateName { get; set; }
+
             /// <summary>
-            /// <para>The inspection time range in hours. Default: 24. Valid values: 1 to 168.</para>
+            /// <para>The inspection time range. Default value: the last 24 hours. Valid values: 1 to 168 (up to 7 days).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>24小时</para>
+            /// <para>24 hours</para>
             /// </summary>
             [NameInMap("TimeRange")]
             [Validation(Required=false)]
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string BranchName { get; set; }
 
         /// <summary>
+        /// <para>The idempotency parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
         /// </summary>
@@ -21,6 +23,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The list of modules.</para>
+        /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public string ComponentsShrink { get; set; }
@@ -34,6 +39,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
+        /// <para>The instance ID of the AI application.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ra-8moov5lxba****</para>
         /// </summary>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>

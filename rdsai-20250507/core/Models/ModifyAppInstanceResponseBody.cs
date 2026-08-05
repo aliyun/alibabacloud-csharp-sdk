@@ -13,11 +13,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string BranchName { get; set; }
 
+        /// <summary>
+        /// <para>The list of modules.</para>
+        /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public List<ModifyAppInstanceResponseBodyComponents> Components { get; set; }
         public class ModifyAppInstanceResponseBodyComponents : TeaModel {
             /// <summary>
+            /// <para>The module status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>enable</para>
             /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The module type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>supabase</para>
             /// </summary>
@@ -36,6 +43,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The instance ID of the AI application.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ra-8moov5lxba****</para>
         /// </summary>
@@ -44,6 +53,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>

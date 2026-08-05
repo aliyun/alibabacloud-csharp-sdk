@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>获取巡检报告列表成功</para>
+        /// <para>Successfully retrieved the inspection report list</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The default value is 20 and the maximum value is 100.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A list of inspection reports.</para>
+        /// <para>The list of reports.</para>
         /// </summary>
         [NameInMap("Reports")]
         [Validation(Required=false)]
         public List<GetStandAloneReportsResponseBodyReports> Reports { get; set; }
         public class GetStandAloneReportsResponseBodyReports : TeaModel {
             /// <summary>
-            /// <para>The time the inspection task was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-22T08:20:31Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the inspection. The time is in UTC and uses the <c>YYYY-MM-DDTHH:mm:ssZ</c> format.</para>
+            /// <para>The inspection end time (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-23T08:20:31Z</para>
@@ -70,9 +70,6 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string InspectionItems { get; set; }
 
-            /// <summary>
-            /// <para>The ID of the region.</para>
-            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
@@ -86,7 +83,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ReportType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the inspection. The time is in UTC and uses the <c>YYYY-MM-DDTHH:mm:ssZ</c> format.</para>
+            /// <para>The inspection start time (format: YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-23T08:00:31Z</para>
@@ -96,7 +93,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the inspection task.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -106,7 +103,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the inspection task.</para>
+            /// <para>The inspection report ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0f19210c-7bb8-4e38-a099-f94152df****</para>
@@ -114,6 +111,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
+
+            [NameInMap("TemplateId")]
+            [Validation(Required=false)]
+            public string TemplateId { get; set; }
+
+            [NameInMap("TemplateName")]
+            [Validation(Required=false)]
+            public string TemplateName { get; set; }
 
         }
 
@@ -128,7 +133,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -138,7 +143,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries across all pages.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
