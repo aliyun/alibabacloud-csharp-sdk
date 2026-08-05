@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class DescribeDeductionStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>The end time, specified as a Unix timestamp.</para>
+        /// <para>The end time (timestamp).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-06T02:14:00Z</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs, specified as a JSON array.</para>
+        /// <para>The list of instance IDs (JSON array).</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The list of periods, formatted as a JSON array of <c>PeriodParam</c> objects.</para>
+        /// <para>The list of time periods in JSON array format. Each element is a <c>PeriodParam</c> object.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string BaseTime { get; set; }
 
             /// <summary>
-            /// <para>The period unit. For valid values, see the <c>PeriodUnit</c> enumeration.</para>
+            /// <para>The time period unit. For more information, see the <c>PeriodUnit</c> enumeration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Year</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         }
 
         /// <summary>
-        /// <para>The list of resource types, specified as a JSON array.</para>
+        /// <para>The list of resource types in JSON array format.</para>
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public List<string> ResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The start time, specified as a Unix timestamp.</para>
+        /// <para>The start time (timestamp).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-03-20T16:00:00Z</para>

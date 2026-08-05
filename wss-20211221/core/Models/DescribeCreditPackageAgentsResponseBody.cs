@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class DescribeCreditPackageAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of agents.</para>
+        /// <para>The Agent list.</para>
         /// </summary>
         [NameInMap("Agents")]
         [Validation(Required=false)]
         public List<DescribeCreditPackageAgentsResponseBodyAgents> Agents { get; set; }
         public class DescribeCreditPackageAgentsResponseBodyAgents : TeaModel {
             /// <summary>
-            /// <para>The ID of the agent.</para>
+            /// <para>Agent ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-abc</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para><b>The creation time of the instance.</b></para>
+            /// <para><b>The instance creation time.</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-01 10:00:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para><b>The ID of the active credit package instance.</b></para>
+            /// <para><b>The ID of the currently active credit package instance.</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>cp-inst-001</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string CreditPackageId { get; set; }
 
             /// <summary>
-            /// <para><b>The expiration time of the instance.</b></para>
+            /// <para><b>The time when the instance expires.</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-01 10:00:00</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para><b>The total credit.</b></para>
+            /// <para><b>The total number of credits.</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>2000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public long? TotalCredit { get; set; }
 
             /// <summary>
-            /// <para><b>The amount of credit used.</b></para>
+            /// <para><b>The amount of credits used.</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public long? UsedCredit { get; set; }
 
             /// <summary>
-            /// <para><b>The alarm threshold, specified as a percentage. Valid values: 0 to 100.</b></para>
+            /// <para><b>The alert threshold percentage (0–100).</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         }
 
         /// <summary>
-        /// <para>The number of results returned on the current page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. If this value is empty, all results have been returned.</para>
+        /// <para>The pagination token. Set this parameter to an empty string for the first request. For subsequent requests, use the <c>nextToken</c> value from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJvZmZzZXQiOjIwfQ==</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Provide this ID when contacting support.</para>
+        /// <para>The request trace ID, which is used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public List<DescribeMultiPriceRequestOrderItems> OrderItems { get; set; }
         public class DescribeMultiPriceRequestOrderItems : TeaModel {
             /// <summary>
-            /// <para>The purchase quantity.</para>
+            /// <para>The quantity to purchase.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -45,38 +45,6 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 
                 /// <summary>
                 /// <para>The value of the module.</para>
-                /// <para>The following example values and valid values are for the Enterprise Edition monthly duration package:</para>
-                /// <list type="bullet">
-                /// <item><description>RegionId: cn-shanghai</description></item>
-                /// <item><description>InstanceType: eds.enterprise_office.4c8g</description></item>
-                /// <item><description>DurationType (hours): Valid values: <list type="bullet">
-                /// <item><description>120</description></item>
-                /// <item><description>250</description></item>
-                /// </list>
-                /// </description></item>
-                /// <item><description>OsType: Valid values: <list type="bullet">
-                /// <item><description>Windows</description></item>
-                /// <item><description>Linux</description></item>
-                /// </list>
-                /// </description></item>
-                /// <item><description>RootDiskSize (GiB): 80</description></item>
-                /// <item><description>RootDiskCategory: Valid values: <list type="bullet">
-                /// <item><description>cloud_efficiency: ultra cloud disk</description></item>
-                /// <item><description>cloud_auto: ESSD AutoPL cloud disk</description></item>
-                /// <item><description>cloud_essd: enhanced standard SSD. Only specific instance types support this value.</description></item>
-                /// </list>
-                /// </description></item>
-                /// <item><description>RootPerformanceLevel: Valid values: <list type="bullet">
-                /// <item><description>PL0</description></item>
-                /// <item><description>PL1</description></item>
-                /// <item><description>PL2</description></item>
-                /// <item><description>PL3</description></item>
-                /// </list>
-                /// </description></item>
-                /// <item><description>DataDiskSize (GiB): same as RootDiskSize</description></item>
-                /// <item><description>DataDiskCategory: same as RootDiskCategory</description></item>
-                /// <item><description>DataPerformanceLevel: same as RootPerformanceLevel</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai</para>
@@ -87,6 +55,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 
             }
 
+            /// <summary>
+            /// <para>The extended properties.</para>
+            /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public string Data { get; set; }
@@ -100,12 +71,6 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 
             /// <summary>
             /// <para>The subscription duration. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>If PeriodUnit is set to Year: 1, 2, or 3.</para>
-            /// </description></item>
-            /// <item><description><para>If PeriodUnit is set to Month: 1, 2, 3, or 6.</para>
-            /// </description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -143,9 +108,6 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 
             /// <summary>
             /// <para>The resource type.</para>
-            /// <remarks>
-            /// <para>This parameter is case-sensitive. Make sure that the value is spelled correctly.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>DurationPackage</para>
@@ -154,6 +116,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            /// <summary>
+            /// <para>The period of the savings plan.</para>
+            /// </summary>
             [NameInMap("SavingPlanPeriod")]
             [Validation(Required=false)]
             public string SavingPlanPeriod { get; set; }
@@ -171,7 +136,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The package code. You do not need to specify this parameter for non-package types.</para>
+        /// <para>The package code. You do not need to specify this parameter if the product is not a package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pacakge</para>
@@ -181,7 +146,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string PackageCode { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the resource ownership in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</para>
+        /// <para>The user ID of resource ownership in the reselling pattern. You do not need to specify this parameter if the product is not in the reselling pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>182864463481****</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class DescribeCreditPackageAgentsRequest : TeaModel {
         /// <summary>
-        /// <para>An array of agent IDs to query. Example: <c>[&quot;agent-1&quot;,&quot;agent-2&quot;]</c>.</para>
+        /// <para>A JSON string of the AgentId list. Example: <c>[&quot;agent-1&quot;,&quot;agent-2&quot;]</c>.</para>
         /// </summary>
         [NameInMap("AgentIds")]
         [Validation(Required=false)]
         public List<string> AgentIds { get; set; }
 
         /// <summary>
-        /// <para>The agent type. Valid values: <c>CREDIT_PACKAGE</c>, <c>JVS_CLAW</c>, <c>OPEN_CLAW</c>, and <c>JVS_COPILOT</c>.</para>
+        /// <para>The Agent type. Valid values: <c>CREDIT_PACKAGE</c>, <c>JVS_CLAW</c>, <c>OPEN_CLAW</c>, and <c>JVS_COPILOT</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>JVS_COPILOT</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. Obtain this value from the <c>NextToken</c> parameter of the previous response. For the first request, set this parameter to an empty string.</para>
+        /// <para>The pagination token. Set this parameter to an empty string for the first request. For subsequent requests, use the <c>nextToken</c> value from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJvZmZzZXQiOjIwfQ==</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class DescribePackageDeductionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The deduction details.</para>
+        /// <para>The list of deduction details.</para>
         /// </summary>
         [NameInMap("Deductions")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer name.</para>
+            /// <para>The name of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DemoComputer</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para>The desktop type.</para>
+            /// <para>The specifications of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eds.enterprise_office.4c8g</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string DesktopType { get; set; }
 
             /// <summary>
-            /// <para>The billing cycle end time.</para>
+            /// <para>The end time of the period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-31T03:00Z</para>
@@ -66,16 +66,22 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            /// <summary>
+            /// <para>The group resource type.</para>
+            /// </summary>
             [NameInMap("GroupResourceType")]
             [Validation(Required=false)]
             public string GroupResourceType { get; set; }
 
+            /// <summary>
+            /// <para>The instance ID.</para>
+            /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The core-hour package state.</para>
+            /// <para>The status of the core-hour package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Deleted</para>
@@ -84,12 +90,15 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public string InstanceState { get; set; }
 
+            /// <summary>
+            /// <para>The instance type.</para>
+            /// </summary>
             [NameInMap("InstanceType")]
             [Validation(Required=false)]
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The memory size, in MB.</para>
+            /// <para>The memory size. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8192</para>
@@ -99,7 +108,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The OS of the cloud computer.</para>
+            /// <para>The operating system type of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Windows</para>
@@ -109,7 +118,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The region ID of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -128,12 +137,15 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            /// <summary>
+            /// <para>The session ID.</para>
+            /// </summary>
             [NameInMap("SessionId")]
             [Validation(Required=false)]
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The billing cycle start time.</para>
+            /// <para>The start time of the period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-31T02:00Z</para>
@@ -143,7 +155,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string StaTime { get; set; }
 
             /// <summary>
-            /// <para>The deducted core-hours.</para>
+            /// <para>The number of cores deducted in this period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4.0</para>
@@ -153,7 +165,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public float? UsedCoreTime { get; set; }
 
             /// <summary>
-            /// <para>The usage duration, in seconds.</para>
+            /// <para>The usage duration. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -162,10 +174,16 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public long? UsedTime { get; set; }
 
+            /// <summary>
+            /// <para>The usage duration in decimal format.</para>
+            /// </summary>
             [NameInMap("UsedTimeDecimal")]
             [Validation(Required=false)]
             public string UsedTimeDecimal { get; set; }
 
+            /// <summary>
+            /// <para>The usage duration after proportional scaling.</para>
+            /// </summary>
             [NameInMap("UsedTimeWithScale")]
             [Validation(Required=false)]
             public long? UsedTimeWithScale { get; set; }
@@ -183,7 +201,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in Settings for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -203,7 +221,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of matching entries.</para>
+        /// <para>The total number of deduction detail records returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -213,7 +231,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total core-hours deducted for all matching entries.</para>
+        /// <para>The total deducted core-hours.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.1</para>
@@ -223,7 +241,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public float? TotalUsedCoreTime { get; set; }
 
         /// <summary>
-        /// <para>The total usage duration of all matching entries, in seconds.</para>
+        /// <para>The total usage duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>
@@ -232,6 +250,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         [Validation(Required=false)]
         public long? TotalUsedTime { get; set; }
 
+        /// <summary>
+        /// <para>The total usage duration in decimal format.</para>
+        /// </summary>
         [NameInMap("TotalUsedTimeDecimal")]
         [Validation(Required=false)]
         public string TotalUsedTimeDecimal { get; set; }

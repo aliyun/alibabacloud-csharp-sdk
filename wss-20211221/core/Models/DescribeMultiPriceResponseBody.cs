@@ -25,8 +25,6 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public class DescribeMultiPriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
                 /// <para>The currency unit.</para>
-                /// <para>China site: CNY.</para>
-                /// <para>International site: USD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -119,6 +117,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                         [Validation(Required=false)]
                         public float? OriginalPrice { get; set; }
 
+                        /// <summary>
+                        /// <para>The savings plan discount price.</para>
+                        /// </summary>
                         [NameInMap("SavingPlanDiscountPrice")]
                         [Validation(Required=false)]
                         public float? SavingPlanDiscountPrice { get; set; }
@@ -182,6 +183,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                         [Validation(Required=false)]
                         public string ResourceType { get; set; }
 
+                        /// <summary>
+                        /// <para>The savings plan recommended price.</para>
+                        /// </summary>
                         [NameInMap("SavingPlanRecommendPrice")]
                         [Validation(Required=false)]
                         public float? SavingPlanRecommendPrice { get; set; }
@@ -207,14 +211,23 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 [Validation(Required=false)]
                 public List<DescribeMultiPriceResponseBodyPriceInfoPricePromotions> Promotions { get; set; }
                 public class DescribeMultiPriceResponseBodyPriceInfoPricePromotions : TeaModel {
+                    /// <summary>
+                    /// <para>The activity ID.</para>
+                    /// </summary>
                     [NameInMap("ActivityId")]
                     [Validation(Required=false)]
                     public string ActivityId { get; set; }
 
+                    /// <summary>
+                    /// <para>Indicates whether the activity is effective.</para>
+                    /// </summary>
                     [NameInMap("Effective")]
                     [Validation(Required=false)]
                     public bool? Effective { get; set; }
 
+                    /// <summary>
+                    /// <para>The timestamp when the activity ends.</para>
+                    /// </summary>
                     [NameInMap("EndTimestamp")]
                     [Validation(Required=false)]
                     public string EndTimestamp { get; set; }
@@ -229,10 +242,16 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     [Validation(Required=false)]
                     public string OptionCode { get; set; }
 
+                    /// <summary>
+                    /// <para>The tiered pricing discount value.</para>
+                    /// </summary>
                     [NameInMap("PriceBreakReduceValue")]
                     [Validation(Required=false)]
                     public string PriceBreakReduceValue { get; set; }
 
+                    /// <summary>
+                    /// <para>The tiered pricing threshold.</para>
+                    /// </summary>
                     [NameInMap("PriceBreakThreshold")]
                     [Validation(Required=false)]
                     public string PriceBreakThreshold { get; set; }
@@ -261,7 +280,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     /// <para>The promotion name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>PromotionName</para>
+                    /// <para>Promotion name</para>
                     /// </summary>
                     [NameInMap("PromotionName")]
                     [Validation(Required=false)]
@@ -277,6 +296,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     [Validation(Required=false)]
                     public bool? Selected { get; set; }
 
+                    /// <summary>
+                    /// <para>The timestamp when the activity starts.</para>
+                    /// </summary>
                     [NameInMap("StartTimestamp")]
                     [Validation(Required=false)]
                     public string StartTimestamp { get; set; }

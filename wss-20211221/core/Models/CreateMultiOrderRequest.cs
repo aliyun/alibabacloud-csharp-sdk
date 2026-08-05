@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class CreateMultiOrderRequest : TeaModel {
+        /// <summary>
+        /// <para>The channel cookie information.</para>
+        /// </summary>
         [NameInMap("ChannelCookie")]
         [Validation(Required=false)]
         public string ChannelCookie { get; set; }
@@ -50,6 +53,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public bool? AutoRenew { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether this is a change purchase.</para>
+            /// </summary>
             [NameInMap("BuyChange")]
             [Validation(Required=false)]
             public bool? BuyChange { get; set; }
@@ -73,28 +79,28 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 
                 /// <summary>
                 /// <para>The value of the module.</para>
-                /// <para>The following example values or valid values are available for each key of the Enterprise Edition monthly duration package:</para>
+                /// <para>The following section describes the sample values and valid values for each key of the Enterprise Edition monthly duration package:</para>
                 /// <list type="bullet">
-                /// <item><description>RegionId: cn-shanghai</description></item>
+                /// <item><description>RegionId: ap-southeast-1</description></item>
                 /// <item><description>InstanceType: eds.enterprise_office.4c8g</description></item>
-                /// <item><description>DurationType (hours): [Valid values] <list type="bullet">
+                /// <item><description>DurationType (hours): Valid values: <list type="bullet">
                 /// <item><description>120</description></item>
                 /// <item><description>250</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description>OsType: [Valid values] <list type="bullet">
+                /// <item><description>OsType: Valid values: <list type="bullet">
                 /// <item><description>Windows</description></item>
                 /// <item><description>Linux</description></item>
                 /// </list>
                 /// </description></item>
                 /// <item><description>RootDiskSize (GiB): 80</description></item>
-                /// <item><description>RootDiskCategory: [Valid values] <list type="bullet">
+                /// <item><description>RootDiskCategory: Valid values: <list type="bullet">
                 /// <item><description>cloud_efficiency (ultra cloud disk)</description></item>
                 /// <item><description>cloud_auto (ultra-fast cloud disk)</description></item>
                 /// <item><description>cloud_essd (enhanced standard SSD. Only specific instance types support this value.)</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description>RootPerformanceLevel: [Valid values] <list type="bullet">
+                /// <item><description>RootPerformanceLevel: Valid values: <list type="bullet">
                 /// <item><description>PL0</description></item>
                 /// <item><description>PL1</description></item>
                 /// <item><description>PL2</description></item>
@@ -115,10 +121,16 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of instance IDs.</para>
+            /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
             public List<string> InstanceIds { get; set; }
 
+            /// <summary>
+            /// <para>The callback URL after the payment is completed.</para>
+            /// </summary>
             [NameInMap("PaidCallBackUrl")]
             [Validation(Required=false)]
             public string PaidCallBackUrl { get; set; }
@@ -126,9 +138,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             /// <summary>
             /// <para>The subscription duration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Year</c>: 1, 2, 3, or 5.</para>
+            /// <item><description><para>If PeriodUnit is set to Year: 1, 2, 3, and 5.</para>
             /// </description></item>
-            /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Month</c>: 1, 2, 3, or 6.</para>
+            /// <item><description><para>If PeriodUnit is set to Month: 1, 2, 3, and 6.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -140,9 +152,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public int? Period { get; set; }
 
             /// <summary>
-            /// <para>The unit of the billing cycle for the subscription instance.</para>
+            /// <para>The unit of the subscription duration for a subscription instance.</para>
             /// <remarks>
-            /// <para>This parameter is required only when the billing method of the instance is subscription. This parameter is case-sensitive. Make sure that the spelling is correct.</para>
+            /// <para>This parameter is required only when the billing method of the instance is subscription. This parameter is case-sensitive. Make sure that the value is spelled correctly.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -165,7 +177,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             /// <summary>
             /// <para>The list of resource IDs.</para>
             /// <remarks>
-            /// <para>For monthly duration packages, this parameter corresponds to the cloud desktop ID. This parameter is required when OrderType is not <c>create</c>.</para>
+            /// <para>For monthly duration packages, this parameter corresponds to the cloud desktop ID. This parameter is required when OrderType is not set to create.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ResourceIds")]
@@ -175,7 +187,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             /// <summary>
             /// <para>The resource type.</para>
             /// <remarks>
-            /// <para>This parameter is case-sensitive. Make sure that the spelling is correct.</para>
+            /// <para>This parameter is case-sensitive. Make sure that the value is spelled correctly.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -205,6 +217,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Properties { get; set; }
 
+        /// <summary>
+        /// <para>The UID of the reseller owner.</para>
+        /// </summary>
         [NameInMap("ResellerOwnerUid")]
         [Validation(Required=false)]
         public long? ResellerOwnerUid { get; set; }

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public DescribeDeductionStatisticResponseBodyData Data { get; set; }
         public class DescribeDeductionStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para><b>The available core-hour packages.</b></para>
+            /// <para><b>The list of available core-hour package resources.</b></para>
             /// </summary>
             [NameInMap("AvailableCorePackages")]
             [Validation(Required=false)]
             public List<DescribeDeductionStatisticResponseBodyDataAvailableCorePackages> AvailableCorePackages { get; set; }
             public class DescribeDeductionStatisticResponseBodyDataAvailableCorePackages : TeaModel {
                 /// <summary>
-                /// <para>The Alibaba Cloud account ID.</para>
+                /// <para>The Alibaba Cloud UID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1568857911493620</para>
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public string GroupResourceType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the resource is a No-Lx resource.</para>
+                /// <para>Indicates whether LingXiao is excluded.</para>
                 /// </summary>
                 [NameInMap("NoLx")]
                 [Validation(Required=false)]
                 public bool? NoLx { get; set; }
 
                 /// <summary>
-                /// <para>The source of the No-Lx resource.</para>
+                /// <para>The source when LingXiao is excluded.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>无凌霄来源示例值</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public List<DescribeDeductionStatisticResponseBodyDataDeductions> Deductions { get; set; }
             public class DescribeDeductionStatisticResponseBodyDataDeductions : TeaModel {
                 /// <summary>
-                /// <para>The consumption duration in seconds.</para>
+                /// <para>The consumption duration, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7000</para>
@@ -202,14 +202,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             }
 
             /// <summary>
-            /// <para><b>The usage details.</b></para>
+            /// <para><b>The usage list.</b></para>
             /// </summary>
             [NameInMap("Usages")]
             [Validation(Required=false)]
             public List<DescribeDeductionStatisticResponseBodyDataUsages> Usages { get; set; }
             public class DescribeDeductionStatisticResponseBodyDataUsages : TeaModel {
                 /// <summary>
-                /// <para><b>The consumption duration in seconds.</b></para>
+                /// <para><b>The consumption duration, in seconds.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6000</para>
