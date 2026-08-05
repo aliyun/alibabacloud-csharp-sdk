@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the production studio.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the CasterId parameter that is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If you create a production studio in the LIVE console, go to the <b>LIVE Console</b>&gt; <b>Production Studio</b> &gt; <b>Production Studio</b> page to view the ID.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The name of the production studio in the production studio list serves as the production studio ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,14 +30,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The components. Components in the production studio are listed from the bottom to the top in an array.</para>
-        /// <para>If a component was added by calling the <a href="https://help.aliyun.com/document_detail/2848030.html">AddCasterComponent</a> operation, check the value of the response parameter ComponentId to obtain the component ID.</para>
+        /// <para>A list of component IDs. The components are layered from bottom to top in the specified order.</para>
+        /// <para>If you add a component by calling the <a href="https://help.aliyun.com/document_detail/2848030.html">AddCasterComponent</a> operation, check the value of the ComponentId parameter that is returned.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter takes effect and is required when the EpisodeType parameter is set to <b>Component</b>.</description></item>
-        /// <item><description>This parameter is optional when the EpisodeType parameter is set to <b>Resource</b>. In this case, if this parameter is specified, the components are bound to and switched together with video resources.</description></item>
+        /// <item><description><para>This parameter is required and applies only when the resource type is <b>Component</b>.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is optional when the resource type is <b>Resource</b>. If you specify this parameter, the component is attached to the video source and they are switched synchronously.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The variable N specifies the sequence number of the component. For example, <b>ComponentId.1</b> specifies the ID of the first component and <b>ComponentId.2</b> specifies the ID of the second component.</para>
+        /// <para>N specifies the sequence number of a component ID. For example, <b>ComponentId.1</b> specifies the first component ID and <b>ComponentId.2</b> specifies the second component ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<string> ComponentId { get; set; }
 
         /// <summary>
-        /// <para>The time when the episode ends. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,10 +71,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EpisodeName { get; set; }
 
         /// <summary>
-        /// <para>The type of the episode. Valid values:</para>
+        /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Resource</b>: a video resource.</description></item>
-        /// <item><description><b>Component</b>: a component.</description></item>
+        /// <item><description><para><b>Resource</b>: A video source. If you set this parameter to Resource, you must also specify the ResourceId and SwitchType parameters.</para>
+        /// </description></item>
+        /// <item><description><para><b>Component</b>: A component.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -85,17 +91,23 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the video resource.</para>
+        /// <para>The ID of the video source.</para>
         /// <remarks>
-        /// <para> This parameter takes effect and is required when the EpisodeType parameter is set to Resource.</para>
+        /// <para>Notice: </para>
         /// </remarks>
-        /// <para>\
-        /// If the video resource was added by calling the <a href="https://help.aliyun.com/document_detail/2848020.html">AddCasterVideoResource</a> operation, check the value of the response parameter ResourceId to obtain the ID.</para>
+        /// <para>This parameter is required and applies only when EpisodeType is set to Resource.</para>
+        /// <para>If you add a video source by calling the <a href="https://help.aliyun.com/document_detail/2848020.html">AddCasterVideoResource</a> operation, check the value of the ResourceId parameter that is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a2b8e671-2fe5-4642-a2ec-bf93880e****</para>
@@ -105,7 +117,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The time when the episode starts. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,14 +128,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The policy for switching episodes. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>TimeFirst</b>: The episode starts when the preceding episode ends and ends when the next episode starts. If no next episode exists, the episode keeps repeating until a new episode is added or the production studio stops.</description></item>
-        /// <item><description><b>ContentFirst</b>: The episode starts and ends as scheduled.</description></item>
-        /// </list>
-        /// <para>This parameter takes effect only when the EpisodeType parameter is set to Resource.</para>
+        /// <para>The switch policy. Valid values:</para>
         /// <remarks>
-        /// <para> This parameter must be set to TimeFirst when the video resource is a live stream.</para>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This parameter applies only when EpisodeType is set to Resource.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>TimeFirst</b>: Time first.</para>
+        /// </description></item>
+        /// <item><description><para><b>ContentFirst</b>: Content first.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>For more information about video sources, see <a href="https://help.aliyun.com/document_detail/66094.html">Add a video source</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

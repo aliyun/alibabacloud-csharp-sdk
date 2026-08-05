@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class GetMessageAppRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application.</para>
+        /// <para>The ID of the interactive message application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -11,6 +11,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
     public class DescribeLiveDomainPvUvDataRequest : TeaModel {
         /// <summary>
         /// <para>The streaming domain.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Make sure that the specified domain name is a streaming domain and that you have the required permissions to operate on it.</description></item>
+        /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +26,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time must be in UTC.</para>
+        /// <para>The end time. The time must be later than the start time. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-03-20T16:00:00Z</para>
@@ -34,12 +39,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time must be in UTC.</para>
+        /// <para>The start time. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-03-17T16:00:00Z</para>

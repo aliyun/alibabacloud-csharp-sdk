@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteMixStreamRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The name of the app.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveApp****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The domain name of the output stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the stream mixing task. If the task was created by calling the <a href="https://help.aliyun.com/document_detail/2848087.html">CreateMixStream</a> operation, check the value of the response parameter MixStreamId to obtain the ID.</para>
+        /// <para>The ID of the stream mixing task. Obtain this ID from the MixStreamId parameter returned by the <a href="https://help.aliyun.com/document_detail/2848087.html">CreateMixStream</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,6 +45,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

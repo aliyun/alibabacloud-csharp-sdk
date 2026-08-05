@@ -17,18 +17,23 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<UpdateCasterSceneAudioRequestAudioLayer> AudioLayer { get; set; }
         public class UpdateCasterSceneAudioRequestAudioLayer : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable the features provided by the audio 3A algorithms. This parameter consists of the following fields:</para>
+            /// <para>Specifies whether to enable the features provided by the 3A audio algorithm. This parameter consists of the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>enableAgc</b>: specifies whether to enable automatic gain control (AGC). This field is optional. Valid values: 0 and 1. <b>0</b> is the default value, which specifies that AGC is disabled. <b>1</b> specifies that AGC is enabled.</description></item>
-            /// <item><description><b>enableAns</b>: specifies whether to enable active noise suppression (ANS). This field is optional. Valid values: 0 and 1. <b>0</b> is the default value, which specifies that ANS is disabled. <b>1</b> specifies that ANS is enabled.</description></item>
-            /// <item><description><b>ansMode</b>: specifies the mode for ANS. This field is optional and takes effect only if you set <b>enableAns</b> to <b>1</b>. Valid values: 0 and 1. <b>0</b> is the default value, which specifies the speech noise reduction mode. <b>1</b> specifies the music noise reduction mode.</description></item>
+            /// <item><description><para><b>enableAgc</b>: (Optional) Specifies whether to enable the automatic gain control (AGC) feature of the 3A algorithm. Valid values: <b>0</b> (disabled, default) and <b>1</b> (enabled).</para>
+            /// </description></item>
+            /// <item><description><para><b>enableAns</b>: (Optional) Specifies whether to enable the intelligent noise reduction feature of the 3A algorithm. Valid values: <b>0</b> (disabled, default) and <b>1</b> (enabled).</para>
+            /// </description></item>
+            /// <item><description><para><b>ansMode</b>: (Optional) The mode of the intelligent noise reduction feature. This field is active only when <b>enableAns</b> is set to <b>1</b>. Valid values: <b>0</b> (speech noise reduction, default) and <b>1</b> (music noise reduction).</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> To ensure a better noise reduction effect, we recommend that you set ansMode to 1.</para>
+            /// <para>For better noise reduction, set ansMode to 1.</para>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description><b>enableBeautify</b>: specifies whether to enable voice change. This field is optional. Valid values: 0 and 1. <b>0</b> is the default value, which specifies that voice change is disabled. <b>1</b> specifies that voice change is enabled.</description></item>
-            /// <item><description><b>voiceBeautifyMode</b>: specifies the mode for voice change. This field is optional and takes effect only if you set <b>enableBeautify</b> to <b>1</b>. Valid values: 0 and 1. <b>0</b> is the default value, which specifies the magnetic male voice mode. <b>1</b> specifies the fresh female voice mode.</description></item>
+            /// <item><description><para><b>enableBeautify</b>: (Optional) Specifies whether to enable voice beautification. Valid values: <b>0</b> (disabled, default) and <b>1</b> (enabled).</para>
+            /// </description></item>
+            /// <item><description><para><b>voiceBeautifyMode</b>: (Optional) The voice beautification mode. This field is active only when <b>enableBeautify</b> is set to <b>1</b>. Valid values: <b>0</b> (magnetic male voice, default) and <b>1</b> (fresh female voice).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -39,8 +44,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Filter { get; set; }
 
             /// <summary>
-            /// <para>The fixed delay of the audio layer. This parameter is used to synchronize the audio with subtitles.</para>
-            /// <para>Unit: milliseconds. Valid values: <b>0 to 5000</b>. Default value: <b>0</b>.</para>
+            /// <para>The fixed latency of the audio layer. This parameter is used to synchronize the audio with captions.</para>
+            /// <para>Unit: milliseconds. Valid values: 0 to <b>5000</b>. Default value: <b>0</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -50,11 +55,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? FixedDelayDuration { get; set; }
 
             /// <summary>
-            /// <para>The sound channels that are used for volume input in the audio layer. Valid values:</para>
+            /// <para>The sound channels that are used for volume input. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>leftChannel</b>: the left channel</description></item>
-            /// <item><description><b>rightChannel</b>: the right channel</description></item>
-            /// <item><description><b>all</b> (default): both the left and right channels</description></item>
+            /// <item><description><para><b>leftChannel</b>: the left sound channel.</para>
+            /// </description></item>
+            /// <item><description><para><b>rightChannel</b>: the right sound channel.</para>
+            /// </description></item>
+            /// <item><description><para><b>all</b> (default): both sound channels.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,11 +73,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string ValidChannel { get; set; }
 
             /// <summary>
-            /// <para>The multiple of the original volume at which the audio layer plays audio. Valid values: <b>0 to 10.0</b>. Default value: <b>1.0</b>.</para>
+            /// <para>The volume multiplier for the audio stream. Valid values: 0 to <b>10.0</b>. Default value: <b>1.0</b>.</para>
             /// <list type="bullet">
-            /// <item><description><b>1.0</b>: specifies that the audio layer plays audio at the original volume.</description></item>
-            /// <item><description>A value smaller than <b>1</b>: specifies that the audio layer plays audio at a volume that is less than the original volume.</description></item>
-            /// <item><description>A value greater than <b>1</b>: specifies that the audio layer plays audio at a volume that is more than the original volume.</description></item>
+            /// <item><description><para><b>1.0</b>: The original volume is used.</para>
+            /// </description></item>
+            /// <item><description><para>A value less than <b>1</b> decreases the volume.</para>
+            /// </description></item>
+            /// <item><description><para>A value greater than <b>1</b> increases the volume.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,11 +95,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the production studio.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, you can obtain the ID from the CasterId parameter in the response.</para>
+        /// </description></item>
+        /// <item><description><para>If you create a production studio in the LIVE console, go to the <b>LIVE Console</b> &gt; <b>Production Studio</b> &gt; <b>Cloud Production Studio</b> page to view the ID.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The name of the production studio in the list on the Cloud Production Studio page is the ID of the production studio.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -100,10 +113,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The audio mode. By default, the AFV mode is used. If you do not specify this parameter, the scene retains the last configuration. Valid values:</para>
+        /// <para>Specifies whether to enable the AFV mode. If you leave this parameter empty, the last configuration is retained. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: the audio mixing mode.</description></item>
-        /// <item><description><b>1</b>: the AFV mode.</description></item>
+        /// <item><description><para><b>0</b>: audio mixing mode.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: audio-follows-video mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +129,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? FollowEnable { get; set; }
 
         /// <summary>
-        /// <para>The location IDs of the audio layers, which are in the same order as the audio layers.</para>
+        /// <para>The list of associated location IDs. The order of the location IDs must be the same as the order of the audio layers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RV01</para>
@@ -127,12 +142,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scene. If you call the <a href="https://help.aliyun.com/document_detail/2848039.html">DescribeCasterScenes</a> operation to query scenes of the production studio, check the value of the response parameter ComponentId to obtain the ID.</para>
+        /// <para>The ID of the scene. If you query the list of scenes in a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848039.html">DescribeCasterScenes</a> operation, you can obtain the ID from the ComponentId parameter in the response.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteMessageAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-****-CB92E68F4CD8</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DeleteMessageAppResponseBodyResult Result { get; set; }
         public class DeleteMessageAppResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the application was deleted. Valid values:</para>
+            /// <para>Indicates whether the deletion was successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The application was deleted.</description></item>
-            /// <item><description>false: The application failed to be deleted.</description></item>
+            /// <item><description>true: The deletion was successful.</description></item>
+            /// <item><description>false: The deletion failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

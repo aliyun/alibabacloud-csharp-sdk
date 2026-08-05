@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListPlaylistResponseBody : TeaModel {
         /// <summary>
-        /// <para>The episode lists.</para>
+        /// <para>The list of playlists.</para>
         /// </summary>
         [NameInMap("ProgramList")]
         [Validation(Required=false)]
         public List<ListPlaylistResponseBodyProgramList> ProgramList { get; set; }
         public class ListPlaylistResponseBodyProgramList : TeaModel {
             /// <summary>
-            /// <para>The ID of the production studio to which the episode list belongs. You can use the ID as a request parameter in the API operation that is used to add a layout to the virtual studio, delete a layout in the virtual studio, modify a layout of the virtual studio, or query layouts of the virtual studio.</para>
+            /// <para>The ID of the production studio to which the playlist belongs. Use this ID as a request parameter to add, delete, modify, or query the layout of a virtual studio.</para>
             /// 
             /// <b>Example:</b>
             /// <para>casdfasdfasfdasdflkasjdflaj****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string CasterId { get; set; }
 
             /// <summary>
-            /// <para>The main streaming domain.</para>
+            /// <para>The streaming domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the episode list.</para>
+            /// <para>The ID of the playlist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string ProgramId { get; set; }
 
             /// <summary>
-            /// <para>The name of the episode list.</para>
+            /// <para>The name of the playlist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>playlist1</para>
@@ -57,11 +57,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string ProgramName { get; set; }
 
             /// <summary>
-            /// <para>The number of playbacks after the first playback is complete. Valid values:</para>
+            /// <para>The number of times the playlist repeats after the first playback. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b> (default): specifies that the episode list is played only once.</description></item>
-            /// <item><description><b>-1</b>: specifies that the episode list is played in loop mode.</description></item>
-            /// <item><description>Positive integer: specifies the number of times the episode list repeats after the first playback is complete.</description></item>
+            /// <item><description><para><b>0</b> (default): The playlist does not repeat.</para>
+            /// </description></item>
+            /// <item><description><para><b>-1</b>: The playlist plays in a loop.</para>
+            /// </description></item>
+            /// <item><description><para>Other positive integers: The number of times the playlist repeats.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,10 +75,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? RepeatNumber { get; set; }
 
             /// <summary>
-            /// <para>The status of the episode list. Valid values:</para>
+            /// <para>The status of the playlist. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: stopped</description></item>
-            /// <item><description><b>1</b>: running</description></item>
+            /// <item><description><para><b>0</b>: stopped.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: running.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,7 +103,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of episode lists returned.</para>
+        /// <para>The total number of playlists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

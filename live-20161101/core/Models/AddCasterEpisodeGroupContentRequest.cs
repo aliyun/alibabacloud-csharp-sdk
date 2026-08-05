@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterEpisodeGroupContentRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-generated token that is used to ensure the idempotence of the request.</para>
+        /// <remarks>
+        /// <para>The client generates this value. Make sure that the value is unique among different requests. The value can be up to 64 ASCII characters in length.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,29 +24,32 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The information about the episode list. The value is a JSON string. Use upper camel case for fields of the string. This parameter contains the following fields:</para>
+        /// <para>The properties of the episode in the production studio. This parameter is a JSON string. The parameter names are in upper camel case. The properties are described as follows:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>CallbackUrl</b>: the callback URL.</para>
+        /// <item><description><para><b>CallbackUrl</b>: The webhook address.</para>
         /// </description></item>
-        /// <item><description><para><b>SideOutputUrl</b>: the custom standby URL.</para>
+        /// <item><description><para><b>SideOutputUrl</b>: The custom bypass output URL.</para>
         /// </description></item>
-        /// <item><description><para><b>RepeatNum</b>: the number of times the episode list repeats after the first playback is complete. A value of 0 indicates that the episode list is played only once. A value of -1 indicates that the episode list is played in loop mode.</para>
+        /// <item><description><para><b>RepeatNum</b>: The number of times to loop the episode. A value of 0 means the episode does not loop. A value of -1 means the episode loops indefinitely.</para>
         /// </description></item>
-        /// <item><description><para><b>DomainName</b>: the domain name.</para>
+        /// <item><description><para><b>StartTime</b>: The start time in UTC. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z.</para>
         /// </description></item>
-        /// <item><description><para><b>StartTime</b>: the time when the episode list starts to play. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <item><description><para><b>DomainName</b>: The domain name.</para>
         /// </description></item>
-        /// <item><description><para><b>Items</b>: the information about the episode list. It is an array of ItemName and VodUrl.</para>
+        /// <item><description><para><b>Items</b></para>
+        /// <para>: The list of items in the episode.</para>
         /// <list type="bullet">
-        /// <item><description><b>ItemName</b>: the name of the episode.</description></item>
-        /// <item><description><b>VodUrl</b>: the URL of the VOD file. This field takes effect only when the video resource is a video file that is not from the media library. The video file must be in the MP4, FLV, or TS format.</description></item>
+        /// <item><description><para><b>ItemName</b>: The item name.</para>
+        /// </description></item>
+        /// <item><description><para><b>VodUrl</b>: The URL of the video-on-demand (VOD) file. This parameter is required only when the resource is a video file that has not been imported to the Material Library. The MP4, FLV, and TS formats are supported.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CallbackUrl</para>
+        /// <para>{&quot;CallbackUrl&quot;:&quot;<a href="http://example.aliyundoc.com/callBackLive%22,%22SideOutputUrl%22:%22rtmp://guide.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****%22,%22DomainName%22:%22developer.aliyundoc.com">http://example.aliyundoc.com/callBackLive&quot;,&quot;SideOutputUrl&quot;:&quot;rtmp://guide.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****&quot;,&quot;DomainName&quot;:&quot;developer.aliyundoc.com</a> &quot;,&quot;StartTime&quot;:&quot;2018-03-26T16:00:00Z&quot;,&quot;RepeatNum&quot;:-1,&quot;Items&quot;:[{&quot;ItemName&quot;:&quot;program1&quot;,&quot;VodUrl&quot;:&quot;<a href="http://learn.aliyundoc.com%22%7D,%7B%22ItemName%22:%22program2%22,%22VodUrl%22:%22http://demo.aliyundoc.com%22%7D%5D%7D">http://learn.aliyundoc.com&quot;},{&quot;ItemName&quot;:&quot;program2&quot;,&quot;VodUrl&quot;:&quot;http://demo.aliyundoc.com&quot;}]}</a></para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -54,6 +59,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateLiveMessageAppRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application. The name must be 2 to 16 characters in length.</para>
+        /// <para>The application name. The name must be 2 to 16 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testApp</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The content moderation method. Valid values:</para>
+        /// <para>The security audit mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0 (default): disables content moderation.</description></item>
-        /// <item><description>1: uses built-in content moderation.</description></item>
-        /// <item><description>2: uses custom content moderation.</description></item>
+        /// <item><description>0: default value. Security audit is disabled.</description></item>
+        /// <item><description>1: built-in security audit.</description></item>
+        /// <item><description>2: custom security audit.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? AuditType { get; set; }
 
         /// <summary>
-        /// <para>The URL for content moderation. If you set AuditType to 2, you must specify this parameter. The URL must start with http:// or https:// and cannot contain a private IP address or a port number. For more information about custom content moderation, see the &quot;Custom content moderation&quot; section of this topic.</para>
+        /// <para>The URL for custom security audit. This parameter is required when custom security audit is selected (AuditType=2). The URL must start with http:// or https://, must not contain private IP addresses, and must not include port numbers. For the format of custom security audit content, see the following section.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://demo.aliyundoc.com/exampleaudit">http://demo.aliyundoc.com/exampleaudit</a></para>
@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The data center. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-shanghai (default)</description></item>
-        /// <item><description>ap-southeast-1: Singapore</description></item>
+        /// <item><description>cn-shanghai: default value. Shanghai.</description></item>
+        /// <item><description>ap-southeast-1: Singapore.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> When you call other operations to manage the interactive messaging application, you must specify the same data center in which the application is created.</para>
+        /// <para>When calling other interactive messaging API operations, the data center must be the same as the one specified when creating the interactive messaging application.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataCenter { get; set; }
 
         /// <summary>
-        /// <para>The callback URL for events, such as logon, logoff, and joining and leaving a group. If you leave this parameter empty, event callbacks are disabled. <a href="~~2672836~~"></a>The callback URL must start with http:// or https:// and cannot contain a private IP address or a port number. For information about the callback message format and authentication logic, see the &quot;Event callbacks&quot; and &quot;Callback authentication&quot; sections of this topic.</para>
+        /// <para>The event callback URL for client logon, logout, join group, and leave group events. If this parameter is empty, event callbacks are disabled. For the callback API operations that are triggered, see <a href="https://help.aliyun.com/document_detail/2672836.html">Client access</a>. The event callback URL must start with http:// or https://, must not contain private IP addresses, and must not include port numbers. For the event callback format and callback authentication logic, see the following section.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://demo.aliyundoc.com/examplecallback">http://demo.aliyundoc.com/examplecallback</a></para>
@@ -72,11 +72,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EventCallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The retention period of group messages in the application. Valid values:</para>
+        /// <para>The storage duration tier for group messages within the application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0 (default): 30 days.</description></item>
-        /// <item><description>1: 90 days.</description></item>
-        /// <item><description>2: 180 days.</description></item>
+        /// <item><description>0: default value. Messages are stored for 30 days.</description></item>
+        /// <item><description>1: messages are stored for 90 days.</description></item>
+        /// <item><description>2: messages are stored for 180 days.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

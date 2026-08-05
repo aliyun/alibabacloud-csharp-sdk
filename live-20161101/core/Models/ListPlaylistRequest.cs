@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the episode list. If you set this parameter, only the information about the specified episode lists is returned. If you do not set this parameter, the information about all episode lists that belong to the account is returned. If the episode list was created by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, check the value of the response parameter ProgramId to obtain the ID.</para>
+        /// <para>The ID of the playlist. If you specify this parameter, only the information about the specified playlist is returned. If you leave this parameter empty, the information about all playlists that belong to your account is returned. Use the ProgramId value returned by the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</para>
@@ -43,6 +43,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string ProgramId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

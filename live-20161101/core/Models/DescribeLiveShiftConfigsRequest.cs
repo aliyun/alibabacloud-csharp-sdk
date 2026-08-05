@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveShiftConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The streaming domain.</para>
+        /// <para>The streaming domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the streaming domain resides.</para>
+        /// <para>The ID of the region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

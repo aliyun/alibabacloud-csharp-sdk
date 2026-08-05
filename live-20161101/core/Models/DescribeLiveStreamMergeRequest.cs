@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamMergeRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application that generates the output stream. You can view the application name on the <a href="https://help.aliyun.com/document_detail/606583.html">Primary/Secondary Stream Mixing Settings</a> page of the ApsaraVideo Live console.</para>
+        /// <para>Merged output App name. You can view this on the <a href="https://help.aliyun.com/document_detail/606583.html">Primary/Backup Stream Merge Configuration</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The streaming domain.</para>
+        /// <para>Streaming domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The streaming protocol. Valid values:</para>
+        /// <para>Streaming protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>rtmp</b>: This is the default value.</description></item>
-        /// <item><description><b>rtc</b></description></item>
+        /// <item><description><para><b>rtmp</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>rtc</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,12 +50,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
+        /// <summary>
+        /// <para>Region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the output stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/606583.html">Primary/Secondary Stream Mixing Settings</a> page of the ApsaraVideo Live console.</para>
+        /// <para>Merged output Stream name. You can view this on the <a href="https://help.aliyun.com/document_detail/606583.html">Primary/Backup Stream Merge Configuration</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>StreamName</para>

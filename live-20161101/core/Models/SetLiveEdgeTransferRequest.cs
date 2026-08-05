@@ -10,15 +10,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetLiveEdgeTransferRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs. Regular expressions are supported, with a few limits. For more information, see the <b>Description about the AppName and StreamName parameters</b> section. For example, a value of <b>liveApp\<em>\</em>\<em>\</em>[1,2,3]</b> specifies that stream relay is configured for three applications: liveApp\<em>\</em>\<em>\<em>1, liveApp\</em>\</em>\<em>\<em>2, and liveApp\</em>\</em>\<em>\<em>3.</em></em>**</para>
+        /// <para>The application name to which the live stream belongs. Regular expressions are supported for configuration with exceptions. For more information, see <b>AppName and StreamName Parameter Configuration Instructions</b> below. For example: liveApp****[1,2,3] indicates that the three apps liveApp<b><b>1, liveApp</b></b>2, and liveApp****3 are allowed for stream relay.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter takes effect for only destination domain names that are specified by the TargetDomainList parameter.</para>
-        /// </description></item>
-        /// <item><description><para>You cannot use a caret (^) or a dollar sign ($) in a regular expression to configure the <c>AppName</c> parameter. Otherwise, stream relay fails.</para>
-        /// </description></item>
+        /// <item><description>This parameter only takes effect for the TargetDomainList in the request parameters.</description></item>
+        /// <item><description>When configuring the <c>AppName</c> parameter value using regular expressions, the ^ or $ characters cannot be used, otherwise stream relay will fail.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>liveApp****</para>
@@ -28,7 +26,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The ingest domain. Stream relay is configured based on the ingest domain. Only one stream relay configuration can be set for an ingest domain.</para>
+        /// <para>The ingest domain name. Live stream relay is configured at the granularity of the ingest DomainName. Each domain can have only one live stream relay configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,11 +37,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The HTTPDNS API that is used to obtain the destination URLs. The request must contain the <c>TargetDomainList</c> parameter or the <c>HttpDns</c> parameter. The two parameters are mutually exclusive.</para>
+        /// <para>The HTTPDNS interface for obtaining the stream relay target address. The request must contain one of the <c>TargetDomainList</c> and <c>HttpDns</c> parameters, and the two are mutually exclusive.</para>
         /// <remarks>
-        /// <para> If the <c>HttpDns</c> parameter is configured, you cannot configure the <c>TargetDomainList</c> parameter, and the <c>AppName</c> and <c>StreamName</c> parameters do not take effect.</para>
+        /// <para>If <c>HttpDns</c> is set in the request parameters, the <c>TargetDomainList</c> parameter cannot be set, and the <c>AppName</c> and <c>StreamName</c> restrictions do not take effect.</para>
         /// </remarks>
-        /// <para>For information about the requirements on the structure of messages that are returned by the HTTPDNS API, see the <b>Description about the HTTPDNS API</b> section.</para>
+        /// <para>Live stream relay has requirements for the message structure returned by the HTTPDNS interface. For more information, see <b>HTTPDNS Instructions</b> below.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://developer.aliyundoc.com">http://developer.aliyundoc.com</a></para>
@@ -56,20 +54,24 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ingested stream. Regular expressions are supported, with a few limits. For more information, see the <b>Description about the AppName and StreamName parameters</b> section. For example, a value of <b>liveStream\<em>\</em>\<em>\</em>[1,2,3]</b> specifies that stream relay is configured for three streams: liveStream\<em>\</em>\<em>\<em>1, liveStream\</em>\</em>\<em>\<em>2, and liveStream\</em>\</em>\<em>\<em>3.</em></em>**</para>
+        /// <para>The stream name. Regular expressions are supported for configuration with exceptions. For more information, see <b>AppName and StreamName Parameter Configuration Instructions</b> below. For example: liveStream****[1,2,3] indicates that the three streams liveStream<b><b>1, liveStream</b></b>2, and liveStream****3 are allowed for stream relay.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter takes effect for only destination domain names that are specified by the TargetDomainList parameter.</para>
-        /// </description></item>
-        /// <item><description><para>You cannot use a caret (^) or a dollar sign ($) in a regular expression to configure the <c>StreamName</c> parameter. Otherwise, stream relay fails.</para>
-        /// </description></item>
+        /// <item><description>This parameter only takes effect for the TargetDomainList in the request parameters.</description></item>
+        /// <item><description>When configuring the <c>StreamName</c> parameter value using regular expressions, the ^ or $ characters cannot be used, otherwise stream relay will fail.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>liveStream****</para>
@@ -79,15 +81,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamName { get; set; }
 
         /// <summary>
-        /// <para>The destination domain names to which you want to relay the ingested stream. Separate multiple domain names with commas (,). The request must contain the <c>TargetDomainList</c> parameter or the <c>HttpDns</c> parameter. The two parameters are mutually exclusive.</para>
+        /// <para>The list of target domains specified by the user for stream relay. Multiple domains are separated by commas (,). The request must contain one of the <c>TargetDomainList</c> and <c>HttpDns</c> parameters, and the two are mutually exclusive.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The <c>AppName</c> and <c>StreamName</c> parameters take effect only when the <c>TargetDomainList</c> parameter is configured.</para>
-        /// </description></item>
-        /// <item><description><para>If the <c>TargetDomainList</c> parameter is configured, you cannot configure the <c>HttpDns</c> parameter.</para>
-        /// </description></item>
+        /// <item><description>When <c>TargetDomainList</c> is set in the request parameters, the <c>AppName</c> and <c>StreamName</c> parameters take effect.</description></item>
+        /// <item><description>When <c>TargetDomainList</c> is set in the request parameters, the <c>HttpDns</c> parameter cannot be set.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>learn.aliyundoc.com,guide.aliyundoc.com</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string TargetDomainList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to pass through stream ingest parameters. Valid values:</para>
+        /// <para>Specifies whether to pass through ingest parameters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b>: passes through stream ingest parameters.</description></item>
-        /// <item><description><b>no</b>: does not pass through stream ingest parameters.</description></item>
+        /// <item><description><b>yes</b>: Ingest parameters are passed through.</description></item>
+        /// <item><description><b>no</b> (default): Ingest parameters are not passed through.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

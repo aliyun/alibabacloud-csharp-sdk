@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The number of successful screenshot deletions.</para>
+        /// <para>The number of snapshots that were deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

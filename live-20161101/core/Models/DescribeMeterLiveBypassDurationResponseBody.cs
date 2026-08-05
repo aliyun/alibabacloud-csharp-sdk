@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeMeterLiveBypassDurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total audio-only duration. Audio-only is a basic specification. Unit: minutes.</para>
+        /// <para>The total audio-only duration at the basic specification. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? AudioSummaryDuration { get; set; }
 
         /// <summary>
-        /// <para>The usage statistics for each time granularity.</para>
+        /// <para>The usage statistics information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeMeterLiveBypassDurationResponseBodyData> Data { get; set; }
         public class DescribeMeterLiveBypassDurationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The audio-only duration. Audio-only is a basic specification. Unit: minutes.</para>
+            /// <para>The audio-only duration at the basic specification. Unit: minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? AudioDuration { get; set; }
 
             /// <summary>
-            /// <para>The single-stream relay duration for audio. Unit: minutes.</para>
+            /// <para>The single-stream relay audio duration. Unit: minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? SingleAudio { get; set; }
 
             /// <summary>
-            /// <para>The single-stream relay duration for video. Unit: minutes.</para>
+            /// <para>The single-stream relay video duration. Unit: minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? SingleVideo { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the data returned.</para>
+            /// <para>The start time of the time segment. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format in UTC+0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-10-10T20:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Timestamp { get; set; }
 
             /// <summary>
-            /// <para>The duration. Unit: minutes.</para>
+            /// <para>The total duration. Unit: minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>150</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? TotalDuration { get; set; }
 
             /// <summary>
-            /// <para>The Full HD duration. The video resolution is 1920 × 1080 or lower. Unit: minutes.</para>
+            /// <para>The full high definition duration, with a video resolution of 1920 × 1080 or lower. Unit: minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? V1080Duration { get; set; }
 
             /// <summary>
-            /// <para>The SD duration. The video resolution is 640 × 480 or lower. Unit: minutes.</para>
+            /// <para>The standard definition duration, with a video resolution of 640 × 480 or lower. Unit: minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? V480Duration { get; set; }
 
             /// <summary>
-            /// <para>The HD duration. The video resolution is 1280 × 720 or lower. Unit: minutes.</para>
+            /// <para>The high definition duration, with a video resolution of 1280 × 720 or lower. Unit: minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total single-stream relay duration for audio. Unit: minutes.</para>
+        /// <para>The total single-stream relay audio duration. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? SingleAudioSummaryDuration { get; set; }
 
         /// <summary>
-        /// <para>The total single-stream relay duration for video. Unit: minutes.</para>
+        /// <para>The total single-stream relay video duration. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? TotalSummaryDuration { get; set; }
 
         /// <summary>
-        /// <para>The total Full HD duration. The video resolution is 1920 × 1080 or lower. Unit: minutes.</para>
+        /// <para>The total full high definition duration, with a video resolution of 1920 × 1080 or lower. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? V1080SummaryDuration { get; set; }
 
         /// <summary>
-        /// <para>The total standard definition (SD) duration. The video resolution is 640 × 480 or lower. Unit: minutes.</para>
+        /// <para>The total standard definition duration, with a video resolution of 640 × 480 or lower. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? V480SummaryDuration { get; set; }
 
         /// <summary>
-        /// <para>The total high definition (HD) duration. The video resolution is 1280 × 720 or lower. Unit: minutes.</para>
+        /// <para>The total high definition duration, with a video resolution of 1280 × 720 or lower. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>

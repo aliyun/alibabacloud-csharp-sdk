@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>34AB41F1-04A5-496F-8C8D-634BDBE6A9FB</para>
+        /// <para><b><b>41F1-04A5-496F-8C8D-634BDBE6</b></b></para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the resource.</para>
+        /// <para>A list of resources and their associated tags.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<DescribeLiveTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class DescribeLiveTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The resource.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The key-value pair of the tag.</para>
+            /// <para>The tags bound to the resource.</para>
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<DescribeLiveTagResourcesResponseBodyTagResourcesTag> Tag { get; set; }
             public class DescribeLiveTagResourcesResponseBodyTagResourcesTag : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>env</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the tag.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>product</para>

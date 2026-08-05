@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range that was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The end of the time range for the returned data. The time follows the ISO 8601 standard in the UTC time zone.</para>
+        /// <para>Format: YYYY-MM-DDThh:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-09-10T21:00:00Z</para>
@@ -30,8 +31,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. When you call this operation, up to 5,000 rows of data can be returned per query. If the number of rows exceeds 5,000, the response includes a pagination token that is used in the next request to retrieve a new page of results.</para>
-        /// <para>When you specify the token in the next query, data continues to be obtained from the end of the previous query.</para>
+        /// <para>The paging query token. Each query returns a maximum of 5,000 rows of data. If the data to be queried exceeds 5,000 rows, the response includes the start index for the next query.</para>
+        /// <para>Pass this token in the request to continue querying data from the row after the last row returned in the previous query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UjsM9x3aVcJi9a0-ArwJUTTC67C***37C0=</para>
@@ -41,7 +42,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string NextPageToken { get; set; }
 
         /// <summary>
-        /// <para>The number of rows returned.</para>
+        /// <para>The number of returned data rows.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5000</para>
@@ -51,7 +52,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5EBF2AC3-4B73-40A5-8B32-83F49D5F035E</para>
@@ -61,7 +62,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range that was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the UTC time zone.</para>
+        /// <para>Format: YYYY-MM-DDThh:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-09-10T20:00:00Z</para>

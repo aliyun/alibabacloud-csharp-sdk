@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyLiveMessageAppAuditResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application.</para>
+        /// <para>The ID of the interactive messaging application to modify.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The signature of the interactive messaging application. It is required by the interactive messaging SDK.</para>
+        /// <para>The signature of the interactive messaging application. This information is required by the interactive messaging service SDK.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppSign { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether authentication is enabled. If custom content moderation is used, the value of this parameter is true by default.</para>
+        /// <para>Indicates whether call authentication is enabled. If custom security audit is used, this parameter is set to true by default to enable call authentication.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? AuditNeedAuthentication { get; set; }
 
         /// <summary>
-        /// <para>The content moderation method.</para>
+        /// <para>The security audit method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? AuditType { get; set; }
 
         /// <summary>
-        /// <para>The URL for content moderation. This parameter is returned when the value of AuditType is 2.</para>
+        /// <para>The security audit URL provided when AuditType is set to 2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http: //example.aliyundoc.com/exampleaudit</para>

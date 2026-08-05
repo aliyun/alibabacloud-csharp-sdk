@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration details of the domain name.</para>
+        /// <para>The details of the domain configuration.</para>
         /// </summary>
         [NameInMap("DomainDetail")]
         [Validation(Required=false)]
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string CertName { get; set; }
 
             /// <summary>
-            /// <para>The CNAME that is assigned to the domain name. You must add a CNAME record in the system of your Domain Name System (DNS) service provider to map the domain name to the CNAME.</para>
+            /// <para>The canonical name (CNAME). A CNAME is generated for the live streaming domain. You must add a CNAME record at your DNS provider to map the live streaming domain to this CNAME.</para>
             /// <remarks>
-            /// <para> A time-to-live (TTL) value is specified in the CNAME record of a domain name to indicate how long the CNAME record can be cached on the DNS resolver. If you modify the CNAME record of the domain name, the new settings take effect after the cache expires, which takes about 10 minutes. For more information, see <a href="https://help.aliyun.com/document_detail/362010.html">CNAME resolution</a>.</para>
+            /// <para>Local DNS records are cached. After you add the CNAME record, it may take up to 10 minutes to take effect. For more information, see <a href="https://help.aliyun.com/document_detail/362010.html">FAQ about CNAME records</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The streaming domain or ingest domain.</para>
+            /// <para>The ingest domain or streaming domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo.aliyundoc.com</para>
@@ -60,11 +60,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The status of the domain name. Valid values:</para>
+            /// <para>The status of the domain. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: The domain name is enabled.</description></item>
-            /// <item><description><b>offline</b>: The domain name is disabled.</description></item>
-            /// <item><description><b>configuring</b>: The domain is being configured.</description></item>
+            /// <item><description><para><b>online</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>offline</b>: disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>configuring</b>: being configured.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +78,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string DomainStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the domain name was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the domain was added. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-07-27T06:51:25Z</para>
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The time when the domain name was last modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the domain was last modified. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-08-07T06:51Z</para>
@@ -97,8 +100,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The type of the domain name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>liveVideo</b>: streaming domain</description></item>
-            /// <item><description><b>liveEdge</b>: ingest domain</description></item>
+            /// <item><description><para><b>liveVideo</b>: streaming domain.</para>
+            /// </description></item>
+            /// <item><description><para><b>liveEdge</b>: ingest domain.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +114,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string LiveDomainType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the domain name resides.</para>
+            /// <para>The region where the domain name is added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -122,17 +127,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rg-aek2ogvt4nwmi7i</para>
+            /// <para>rg-<b>k3bpq2yjw22</b></para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the SSL certificate is enabled. Valid values:</para>
+            /// <para>Indicates whether SSL is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>on</b></description></item>
-            /// <item><description><b>off</b></description></item>
+            /// <item><description><para><b>on</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>off</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -155,9 +162,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The acceleration region. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>domestic</b>: regions in the Chinese mainland.</description></item>
-            /// <item><description><b>overseas</b>: regions outside the Chinese mainland.</description></item>
-            /// <item><description><b>global</b>: regions in and outside the Chinese mainland.</description></item>
+            /// <item><description><para><b>domestic</b>: the Chinese mainland.</para>
+            /// </description></item>
+            /// <item><description><para><b>overseas</b>: regions outside the Chinese mainland.</para>
+            /// </description></item>
+            /// <item><description><para><b>global</b>: global.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

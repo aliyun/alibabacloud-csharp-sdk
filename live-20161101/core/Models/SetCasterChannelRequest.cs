@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the production studio.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value returned in the response.</para>
+        /// </description></item>
+        /// <item><description><para>If you create a production studio in the ApsaraVideo Live console, go to the <b>Production Studio</b> &gt; <b>Cloud Production Studio</b> page to view the ID.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The production studio name in the list on the Cloud Production Studio page is the production studio ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,8 +30,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the channel.</para>
-        /// <para>When channels are enabled, the layout references the channel IDs. You can specify up to one resource for a channel. The number of resources is limited by the number of the channels of the production studio. The value must be in the RV[Number] format, such as RV01 and RV12.</para>
+        /// <para>The channel ID.</para>
+        /// <para>The reference ID for the layout scene. You can set a maximum of one resource for each channel. The total number of channels is determined when you create the production studio. The format is \<c>RV01\\</c> to \<c>RV12\\</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ChannelId { get; set; }
 
         /// <summary>
-        /// <para>The face retouching effect. Valid values: 0 (all effects), 1 (skin smoothing), 2 (skin whitening), 3 (dark circles removal), and 4 (nasolabial folds removal).</para>
+        /// <para>The facial retouching settings. Valid values: 0 (whole), 1 (skin smoothing), 2 (skin whitening), 3 (dark circle removal), and 4 (nasolabial fold removal).</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -54,10 +56,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The playback status. This parameter take effects for video files, but not for live streams. Valid values:</para>
+        /// <para>The playback status. This parameter applies only to video files, not live streams. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: specifies that the video source is playing. This is the default value.</description></item>
-        /// <item><description><b>0</b>: specifies that the playback of the video source is paused.</description></item>
+        /// <item><description><para><b>1</b> (default): Playback.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Pause.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,6 +71,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PlayStatus { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -82,7 +92,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The offset of the position where the production studio starts reading the video source. The value must be greater than or equal to 0, indicating an offset from the first frame. This parameter take effects for video files, but not for live streams. Unit: milliseconds.</para>
+        /// <para>This parameter applies only to video files, not live streams. The value must be greater than or equal to 0. It specifies the offset from the first frame at which to start reading the file. Unit: milliseconds (ms).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

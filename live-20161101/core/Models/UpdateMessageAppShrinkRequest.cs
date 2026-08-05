@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateMessageAppShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of the application.</para>
+        /// <para>Application configuration.</para>
         /// </summary>
         [NameInMap("AppConfig")]
         [Validation(Required=false)]
         public string AppConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the interactive messaging application.</para>
+        /// <para>Interactive message application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The name of the interactive messaging application.</para>
+        /// <para>Interactive message application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testApp</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The extended field.</para>
+        /// <para>Extension field.</para>
         /// </summary>
         [NameInMap("Extension")]
         [Validation(Required=false)]

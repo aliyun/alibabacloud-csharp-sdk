@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? AudioFrom { get; set; }
 
             /// <summary>
-            /// <para>The callback URL that sends monitoring alerts.</para>
+            /// <para>The webhook address for monitoring alert notifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string DingTalkWebHookUrl { get; set; }
 
             /// <summary>
-            /// <para>The domain name.</para>
+            /// <para>The output domain name for monitoring.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo.aliyundoc.com</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The list of monitored input streams.</para>
+            /// <para>The list of input streams for monitoring.</para>
             /// </summary>
             [NameInMap("InputList")]
             [Validation(Required=false)]
             public List<DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputList> InputList { get; set; }
             public class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputList : TeaModel {
                 /// <summary>
-                /// <para>The index.</para>
+                /// <para>The index. This parameter is used by the frontend.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputListLayoutConfig LayoutConfig { get; set; }
                 public class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputListLayoutConfig : TeaModel {
                     /// <summary>
-                    /// <para>The fill type. Set this value to none.</para>
+                    /// <para>The fill mode. For frontend development, set this parameter to none.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>none</para>
@@ -101,19 +101,23 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public string FillMode { get; set; }
 
                     /// <summary>
-                    /// <para>The position of the layer, in the format of [unk][x,y][unk]. The values of x and y need to be normalized.</para>
+                    /// <para>The normalized coordinates of the element\&quot;s position, in the format of [x,y]. The default value is [0,0]. The values of x and y must be normalized.</para>
                     /// </summary>
                     [NameInMap("PositionNormalized")]
                     [Validation(Required=false)]
                     public List<float?> PositionNormalized { get; set; }
 
                     /// <summary>
-                    /// <para>The reference position of the element. Valid values:</para>
+                    /// <para>The reference point for the element\&quot;s position. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>topLeft</description></item>
-                    /// <item><description>topRight</description></item>
-                    /// <item><description>bottomLeft</description></item>
-                    /// <item><description>bottomRight</description></item>
+                    /// <item><description><para>topLeft</para>
+                    /// </description></item>
+                    /// <item><description><para>topRight</para>
+                    /// </description></item>
+                    /// <item><description><para>bottomLeft</para>
+                    /// </description></item>
+                    /// <item><description><para>bottomRight</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -124,7 +128,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public string PositionRefer { get; set; }
 
                     /// <summary>
-                    /// <para>The size of the layer. Unit: bytes.</para>
+                    /// <para>The normalized size of the element\&quot;s fill area, in the format of [w,h].</para>
                     /// </summary>
                     [NameInMap("SizeNormalized")]
                     [Validation(Required=false)]
@@ -133,7 +137,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 }
 
                 /// <summary>
-                /// <para>The layout ID, which must start from 1.</para>
+                /// <para>The layout ID. The value must start from 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -143,14 +147,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public int? LayoutId { get; set; }
 
                 /// <summary>
-                /// <para>The playback configurations.</para>
+                /// <para>The playback configuration.</para>
                 /// </summary>
                 [NameInMap("PlayConfig")]
                 [Validation(Required=false)]
                 public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputListPlayConfig PlayConfig { get; set; }
                 public class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputListPlayConfig : TeaModel {
                     /// <summary>
-                    /// <para>The volume. Valid values: 0 to 1. The value is rounded to two decimal places.</para>
+                    /// <para>The volume. The value must be between 0 and 1, inclusive, with up to two decimal places.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.50</para>
@@ -162,7 +166,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 }
 
                 /// <summary>
-                /// <para>The display name of the monitored stream.</para>
+                /// <para>The display name of the stream for monitoring.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>monitorStream****</para>
@@ -174,11 +178,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             }
 
             /// <summary>
-            /// <para>The monitoring alert thresholds. The following fields are included:</para>
+            /// <para>The settings for monitoring alert thresholds. The value is a JSON string that includes the following fields:</para>
             /// <list type="bullet">
-            /// <item><description>fpsLowThres: the video frame rate alert threshold. The value is a floating-point number.</description></item>
-            /// <item><description>brHighThres: the audio/video bitrate alert threshold. The value is a floating-point number.</description></item>
-            /// <item><description>eofDurationThresSec: the interruption duration alert threshold. The value is a floating-point number.</description></item>
+            /// <item><description><para>fpsLowThres: the alert threshold for the video frame rate. This is a float.</para>
+            /// </description></item>
+            /// <item><description><para>brHighThres: the alert threshold for the audio and video bitrate. This is a float.</para>
+            /// </description></item>
+            /// <item><description><para>eofDurationThresSec: the alert threshold for the stream interruption duration. This is a float.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -209,12 +216,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string MonitorName { get; set; }
 
             /// <summary>
-            /// <para>The output resolution template. Valid values:</para>
+            /// <para>The template for the output resolution. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>lp_ld</b>: low definition</description></item>
-            /// <item><description><b>lp_sd</b>: standard definition</description></item>
-            /// <item><description><b>lp_hd</b>: high definition</description></item>
-            /// <item><description><b>lp_ud</b>: ultra-high definition</description></item>
+            /// <item><description><para><b>lp_ld</b>: low definition</para>
+            /// </description></item>
+            /// <item><description><para><b>lp_sd</b>: standard definition</para>
+            /// </description></item>
+            /// <item><description><para><b>lp_hd</b>: high definition</para>
+            /// </description></item>
+            /// <item><description><para><b>lp_ud</b>: ultra-high definition</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -225,14 +236,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string OutputTemplate { get; set; }
 
             /// <summary>
-            /// <para>The output URLs.</para>
+            /// <para>The output URLs for monitoring.</para>
             /// </summary>
             [NameInMap("OutputUrls")]
             [Validation(Required=false)]
             public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListOutputUrls OutputUrls { get; set; }
             public class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListOutputUrls : TeaModel {
                 /// <summary>
-                /// <para>The output URL in the Flash Video (FLV) format.</para>
+                /// <para>The output URL in FLV format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://demo.aliyundoc.com/monitor/445409ec-7eaa-461d-8f29-4bec2eb9****.flv">http://demo.aliyundoc.com/monitor/445409ec-7eaa-461d-8f29-4bec2eb9****.flv</a></para>
@@ -242,7 +253,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string FlvUrl { get; set; }
 
                 /// <summary>
-                /// <para>The output URL in the Real-Time Messaging Protocol (RTMP) format.</para>
+                /// <para>The output URL in RTMP format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rtmp://demo.aliyundoc.com/monitor/445409ec-7eaa-461d-8f29-4bec2eb9****</para>
@@ -254,11 +265,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             }
 
             /// <summary>
-            /// <para>The ID of the region. Valid values:</para>
+            /// <para>The region. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cn-shanghai: China (Shanghai)</description></item>
-            /// <item><description>cn-beijing: China (Beijing)</description></item>
-            /// <item><description>ap-southeast-1: Singapore</description></item>
+            /// <item><description><para>cn-shanghai: China (Shanghai)</para>
+            /// </description></item>
+            /// <item><description><para>cn-beijing: China (Beijing)</para>
+            /// </description></item>
+            /// <item><description><para>ap-southeast-1: Singapore</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -269,7 +283,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The start time of live monitoring. The time is displayed in UTC.</para>
+            /// <para>The time when monitoring starts. The time is in UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-01-11T12:00:00Z</para>
@@ -281,8 +295,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The status of the monitoring session. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Monitoring</description></item>
-            /// <item><description>0: Unmonitored</description></item>
+            /// <item><description><para>1: The session is being monitored.</para>
+            /// </description></item>
+            /// <item><description><para>0: The session is not being monitored.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -293,7 +309,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The end time of live monitoring. The time is displayed in UTC.</para>
+            /// <para>The time when monitoring stops. The time is in UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2017-01-11T12:00:00Z</para>
@@ -315,7 +331,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of monitoring sessions.</para>
+        /// <para>The total number of monitoring sessions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamMetricDetailDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The accelerated domain name.</para>
+        /// <para>The accelerated domain name queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which data was queried.</para>
+        /// <para>The end time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T21:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. This parameter is returned if more data results are available.</para>
+        /// <para>The starting index for the next query. This value is returned when the queried data has not been fully retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UjsM9x3aVcJi9a0-ArwJUTTC67C***37C0=</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string NextPageToken { get; set; }
 
         /// <summary>
-        /// <para>The number of rows returned.</para>
+        /// <para>The number of returned data rows.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B955107D-E658-4E77-B913-E0AC3D31693E</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range during which data was queried.</para>
+        /// <para>The start time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T20:00:00Z</para>

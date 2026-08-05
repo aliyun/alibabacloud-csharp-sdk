@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveInteractionMetricDataRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The ARTC application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The start time of the query, specified as a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,12 +31,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? BeginTs { get; set; }
 
+        /// <summary>
+        /// <para>The channel ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>770513</para>
+        /// </summary>
         [NameInMap("ChannelId")]
         [Validation(Required=false)]
         public string ChannelId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The end time of the query, specified as a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,12 +53,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? EndTs { get; set; }
 
         /// <summary>
-        /// <para>The metric. Valid values:</para>
+        /// <para>The metric type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>JoinChannelSucRate: the success rate of joining a channel within 5 seconds.</description></item>
-        /// <item><description>VideoStuckRate: the video stuttering rate.</description></item>
-        /// <item><description>AudioStuckRate: the audio stuttering rate.</description></item>
-        /// <item><description>FirstFrameCost: the time to first frame.</description></item>
+        /// <item><description><para><c>JoinChannelSucRate</c>: the success rate of joining a channel within 5 seconds.</para>
+        /// </description></item>
+        /// <item><description><para><c>VideoStuckRate</c>: the video stuttering rate.</para>
+        /// </description></item>
+        /// <item><description><para><c>AudioStuckRate</c>: the audio stuttering rate.</para>
+        /// </description></item>
+        /// <item><description><para><c>FirstFrameCost</c>: the time to first frame.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,7 +74,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string MetricType { get; set; }
 
         /// <summary>
-        /// <para>The operating system. Valid values: iOS and Android.</para>
+        /// <para>The operating system. Valid values: <c>iOS</c> and <c>Android</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Android</para>
@@ -74,7 +84,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Os { get; set; }
 
         /// <summary>
-        /// <para>The terminal type. Valid values: web and mobile.</para>
+        /// <para>The terminal type. Valid values: <c>web</c> and <c>mobile</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mobile</para>

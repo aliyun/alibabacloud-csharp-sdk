@@ -13,12 +13,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the template that you want to delete. The value is a string.</para>
+        /// <para>The name of the template to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

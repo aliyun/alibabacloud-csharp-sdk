@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainMonitoringUsageDataRequest : TeaModel {
         /// <summary>
-        /// <para>The main streaming domain to query.</para>
+        /// <para>The streaming domain to query.</para>
         /// <list type="bullet">
-        /// <item><description>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</description></item>
-        /// <item><description>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</description></item>
+        /// <item><description>You can specify a single domain name or multiple domain names. Separate multiple domain names with commas (,).</description></item>
+        /// <item><description>If this parameter is left empty, the merged data of all live streaming domain names is returned by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-10T22:00:00Z</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the monitoring session. If you leave this parameter empty, data of all monitoring sessions is queried by default. Separate multiple session IDs with commas (,).</para>
+        /// <para>The monitoring session ID. If this parameter is left empty, the merged data of all monitoring sessions is returned by default. You can specify multiple IDs. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>e62af24d-a354-3b0c-9f1f-da592c4b****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The time granularity. Valid values: <b>3600</b> and <b>86400</b>. 3600 specifies that data is queried by hour and 86400 specifies that data is queried by day.</para>
+        /// <para>The time granularity for the query. Valid values: <b>3600</b> (hour) and <b>86400</b> (day).</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region of the live center. If you leave this parameter empty, data of all regions is queried by default. Separate multiple regions with commas (,).</para>
+        /// <para>The live center region. If this parameter is left empty, the merged data of all regions is returned by default. You can specify multiple regions. Separate multiple regions with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -67,12 +67,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The key that is used to group data. Valid values: <b>domain</b>, <b>region</b>, <b>instance</b>, and <b>resolution</b>. Default value: <b>resolution</b>. resolution specifies that data is grouped by resolution. Separate multiple values with commas (,).</para>
+        /// <para>The grouping key. Default value: <b>resolution</b>, which indicates grouping by resolution. Valid values: <b>domain</b>, <b>region</b>, <b>instance</b>, and <b>resolution</b>. You can specify multiple values. Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>resolution</para>
@@ -82,11 +88,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SplitBy { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</para>
+        /// <para>The start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
         /// <list type="bullet">
-        /// <item><description>The time must be in UTC.</description></item>
         /// <item><description>The minimum data granularity is 1 hour.</description></item>
-        /// <item><description>If you leave this parameter empty, data in the previous 24 hours is queried.</description></item>
+        /// <item><description>If this parameter is not specified, data of the last 24 hours is returned by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateMessageAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-****-CB92E68F4CD8</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public CreateMessageAppResponseBodyResult Result { get; set; }
         public class CreateMessageAppResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The ID of the interactive messaging application.</para>
+            /// <para>The ID of the interactive message application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VKL3***</para>

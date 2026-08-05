@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SendLiveMessageGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the message, which is a unique identifier that can be used to delete the message. The ID can be up to 64 bytes in length and can contain letters and digits.</para>
+        /// <para>The unique identifier of the message, which can be used to delete the message. The ID can contain only letters and digits and can be up to 64 bytes in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>169830****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string MsgTid { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E4C1245F-597B-1BD1-B9BB-9D220E99****</para>

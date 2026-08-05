@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterEpisodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the episode. You can use the ID as a request parameter in the API operation that is used to query the information about the episode list, modify the configurations of the episode, and delete the episode.</para>
+        /// <para>The ID of the episode. This ID can be used as a request parameter to query the episode list, modify an episode, or delete an episode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21926b36-7dd2-4fde-ae25-51b5bc8e****</para>

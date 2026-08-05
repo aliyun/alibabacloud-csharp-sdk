@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AccelerationArea { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>live</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The streamer\&quot;s streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query Global Accelerator (GA) instances. Valid values:</para>
+        /// <para>Specifies whether to query the Alibaba Cloud Global Accelerator (GA) instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>yes: queries the status of GA instances.</description></item>
-        /// <item><description>no: queries the binding information between GA instances and acceleration circuits.</description></item>
+        /// <item><description>yes: Queries the GA instance status.</description></item>
+        /// <item><description>no: Queries the attachment details between the GA instance and the live streaming link.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,12 +59,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream.</para>
+        /// <para>The live stream name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testStream</para>
@@ -74,7 +80,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamName { get; set; }
 
         /// <summary>
-        /// <para>The live center. Valid values: cn-beijing, cn-shanghai, cn-shenzhen, cn-qingdao, ap-northeast-1, ap-southeast-5, eu-central-1, ap-southeast-1, and ap-south-1. cn-beijing indicates China (Beijing). cn-shanghai indicates China (Shanghai). cn-shenzhen indicates China (Shenzhen). cn-qingdao indicates China (Qingdao). ap-northeast-1 indicates Japan (Tokyo). ap-southeast-5 indicates Indonesia (Jakarta). eu-central-1 indicates Germany (Frankfurt). ap-southeast-1 indicates Singapore.</para>
+        /// <para>The live center. Valid values: cn-beijing, cn-shanghai, cn-shenzhen, cn-qingdao, ap-northeast-1, ap-southeast-5, eu-central-1, and ap-southeast-1, ap-south-1, which represent the live centers located in Beijing, Shanghai, Shenzhen, Qingdao, Japan, Indonesia, Germany, and Singapore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

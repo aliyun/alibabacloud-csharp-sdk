@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainRealTimeBpsDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The interval at which data was queried.</para>
+        /// <para>The time granularity of the queried data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// <para>The streaming domain name or names that was queried.</para>
+        /// <para>The streaming domain name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example.com,example.aliyundoc.com</para>
+        /// <para>example1.aliyundoc.com,example2.aliyundoc.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The end of the time range. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-11-30T05:40:00Z</para>
@@ -60,17 +60,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>BC858082-736F-4A25-867B-E5B67C85ACF7</para>
+        /// <para>BC858082-736F-4A25-867B-E5B6******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The start of the time range. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-11-30T05:33:00Z</para>

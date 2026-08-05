@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteChannelRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. You can specify only one application ID.</para>
+        /// <para>The application ID. Only a single ID is supported. This parameter is required. If this parameter is not specified, the service returns InvalidInput.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eo85****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The channel ID. You can specify only one channel ID.</para>
+        /// <para>The ID of the channel that has been joined. Only a single ID is supported. This parameter is required. If this parameter is not specified, the service returns InvalidInput.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testid</para>

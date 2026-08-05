@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLivePackageConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The application name. If you leave this parameter empty, all applications are matched.</para>
+        /// <para>The app name. Leave empty to match all names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AppName</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The live streaming domain (primary playback domain).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b> (default): ascending order</description></item>
-        /// <item><description><b>desc</b>: descending order</description></item>
+        /// <item><description><para><b>asc</b> (default): ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>desc</b>: descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 5 to 30. Default value: 10.</para>
+        /// <para>The page size. Default value: 10. Valid values: 5 to 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -68,12 +70,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The stream name. If you leave this parameter empty, all streams are matched.</para>
+        /// <para>The live stream name. Leave empty to match all stream names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>StreamName</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StartPlaylistResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to stop playing the episode list.</para>
+        /// <para>The ID of the playlist. You can use this ID as a request parameter to stop the playlist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>445409ec-7eaa-461d-8f29-4bec2eb9****</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the live stream.</para>
+        /// <para>The information about the stream.</para>
         /// </summary>
         [NameInMap("StreamInfo")]
         [Validation(Required=false)]
         public StartPlaylistResponseBodyStreamInfo StreamInfo { get; set; }
         public class StartPlaylistResponseBodyStreamInfo : TeaModel {
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveApp****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The main streaming domain.</para>
+            /// <para>The streaming domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The name of the live stream.</para>
+            /// <para>The stream name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveStream****</para>

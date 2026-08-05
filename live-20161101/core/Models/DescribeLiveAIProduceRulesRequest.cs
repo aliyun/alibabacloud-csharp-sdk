@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveAIProduceRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The name of the application to which the stream belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AppName</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string App { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The primary playback domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo.aliyundoc.com</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: [1,100].</para>
+        /// <para>The page number. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: [1,100].</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -53,12 +53,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the subtitle rule.</para>
+        /// <para>The ID of the caption rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>445409ec-7eaa-461d-8f29-4bec****</para>
@@ -68,9 +74,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RulesId { get; set; }
 
         /// <summary>
-        /// <para>The suffix of the subtitle rule.</para>
+        /// <para>The caption suffix.</para>
         /// <remarks>
-        /// <para>Set the value to the name of the subtitle template.</para>
+        /// <para>Set this parameter to the value of SubtitleName that is specified for the caption template.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

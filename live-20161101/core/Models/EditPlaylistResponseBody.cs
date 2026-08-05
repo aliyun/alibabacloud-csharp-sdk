@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class EditPlaylistResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the production studio. You can use the ID as a request parameter in the API operation that is used to configure callbacks or add a virtual studio layout.</para>
+        /// <para>The ID of the production studio. Use this ID as a request parameter to add a callback or a virtual studio layout.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0e94d1f4-1a65-445c-9dcf-de8b3b8d****</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The information about the episodes.</para>
+        /// <para>The list of added playlist items.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public EditPlaylistResponseBodyItems Items { get; set; }
         public class EditPlaylistResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The episodes that failed to be added.</para>
+            /// <para>The list of playlist items that failed to be added.</para>
             /// </summary>
             [NameInMap("FailedItems")]
             [Validation(Required=false)]
             public List<EditPlaylistResponseBodyItemsFailedItems> FailedItems { get; set; }
             public class EditPlaylistResponseBodyItemsFailedItems : TeaModel {
                 /// <summary>
-                /// <para>The ID of the episode.</para>
+                /// <para>The ID of the playlist item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string ItemId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the episode.</para>
+                /// <para>The name of the playlist item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>item2</para>
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             }
 
             /// <summary>
-            /// <para>The episodes that were added.</para>
+            /// <para>The list of playlist items that were successfully added.</para>
             /// </summary>
             [NameInMap("SuccessItems")]
             [Validation(Required=false)]
             public List<EditPlaylistResponseBodyItemsSuccessItems> SuccessItems { get; set; }
             public class EditPlaylistResponseBodyItemsSuccessItems : TeaModel {
                 /// <summary>
-                /// <para>The ID of the episode.</para>
+                /// <para>The ID of the playlist item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string ItemId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the episode.</para>
+                /// <para>The name of the playlist item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>item1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to delete the episode list, query the information about the episode list, start the episode list, or stop the episode list.</para>
+        /// <para>The playlist ID. Use this ID as a request parameter to delete, query, start, or stop the playlist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>445409ec-7eaa-461d-8f29-4bec2eb9****</para>

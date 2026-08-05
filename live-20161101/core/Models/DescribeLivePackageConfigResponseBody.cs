@@ -54,10 +54,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The sorting order. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b> (default): ascending order</description></item>
-        /// <item><description><b>desc</b>: descending order</description></item>
+        /// <item><description><para><b>asc</b> (default): ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>desc</b>: descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of live stream encapsulation configurations.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

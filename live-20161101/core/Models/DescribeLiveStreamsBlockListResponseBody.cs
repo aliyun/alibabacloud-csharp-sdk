@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The total number of live stream URLs that meet the specified conditions.</para>
+        /// <para>The total number of entries that meet the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? TotalNum { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

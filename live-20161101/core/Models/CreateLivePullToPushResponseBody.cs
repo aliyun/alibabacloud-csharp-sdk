@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateLivePullToPushResponseBody : TeaModel {
         /// <summary>
-        /// <para>The description of the custom rule.</para>
+        /// <para>Error description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68*****</para>
@@ -30,15 +30,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The code that is returned for the request.</para>
+        /// <para>Return code.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>0 is returned if the request is normal.</para>
-        /// </description></item>
-        /// <item><description><para>For information about codes that are returned when exceptions occur, see the following Error codes table.</para>
-        /// </description></item>
+        /// <item><description>&quot;0&quot; is returned under normal conditions.</description></item>
+        /// <item><description>For abnormal conditions, refer to the error code list below.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -48,7 +46,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? RetCode { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>Task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fd245384-4067-4f91-9d75-9666a6bc9****</para>

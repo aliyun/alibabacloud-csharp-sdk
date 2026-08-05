@@ -24,24 +24,25 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The grouping method.</para>
+        /// <para>The grouping type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Domain name (default)</description></item>
-        /// <item><description>Template</description></item>
-        /// </list>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>domain</description></item>
-        /// <item><description>template</description></item>
+        /// <item><description>domain (default)</description></item>
+        /// <item><description>template.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>domain</para>
+        /// <para>template</para>
         /// </summary>
         [NameInMap("SplitType")]
         [Validation(Required=false)]

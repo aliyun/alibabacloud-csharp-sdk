@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class QuerySnapshotCallbackAuthResponseBody : TeaModel {
         /// <summary>
-        /// <para>The callback authentication key.</para>
+        /// <para>The authentication key for callbacks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourkey</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CallbackAuthKey { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether callback authentication is enabled. Valid values:</para>
+        /// <para>Indicates whether authentication for callbacks is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b>: Callback authentication is enabled.</description></item>
-        /// <item><description><b>no</b>: Callback authentication is disabled.</description></item>
+        /// <item><description><para><b>yes</b>: enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>no</b>: disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CallbackReqAuth { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The streaming domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.aliyundoc.com</para>

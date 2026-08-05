@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveUserStreamMetricDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>The streaming domain information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test.com</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F****</para>
         /// </summary>
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query. The time is in the ISO 8601 standard in the <c>YYYY-MM-DDThh:mm:ssZ</c> format in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T20:00:00Z</para>
         /// </summary>
@@ -59,11 +69,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// <para>The traffic data for each time interval.</para>
+        /// </summary>
         [NameInMap("StreamDetailData")]
         [Validation(Required=false)]
         public List<DescribeLiveUserStreamMetricDataResponseBodyStreamDetailData> StreamDetailData { get; set; }
         public class DescribeLiveUserStreamMetricDataResponseBodyStreamDetailData : TeaModel {
             /// <summary>
+            /// <para>The application name. This value is returned regardless of whether it is specified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>app</para>
             /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string AppName { get; set; }
 
             /// <summary>
+            /// <para>The total bandwidth per minute for the stream, in bps.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>423304182.66</para>
             /// </summary>
@@ -80,6 +97,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? Bps { get; set; }
 
             /// <summary>
+            /// <para>The total number of concurrent connections per minute for the stream.</para>
+            /// <remarks>
+            /// <para><b>Concurrent connections</b> refers to the count of client process connections to the same stream within a unit of time.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>423304182</para>
             /// </summary>
@@ -88,6 +110,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? Count { get; set; }
 
             /// <summary>
+            /// <para>The bandwidth for the FLV protocol, in bps. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>454</para>
             /// </summary>
@@ -96,6 +120,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? FlvBps { get; set; }
 
             /// <summary>
+            /// <para>The number of concurrent connections for the FLV protocol. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>32</para>
             /// </summary>
@@ -104,6 +130,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? FlvCount { get; set; }
 
             /// <summary>
+            /// <para>The traffic for the FLV protocol, in bytes. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1254</para>
             /// </summary>
@@ -112,6 +140,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public double? FlvTraffic { get; set; }
 
             /// <summary>
+            /// <para>The bandwidth for the HLS protocol, in bps. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4456</para>
             /// </summary>
@@ -120,6 +150,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? HlsBps { get; set; }
 
             /// <summary>
+            /// <para>The number of concurrent connections for the HLS protocol. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>56</para>
             /// </summary>
@@ -128,6 +160,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? HlsCount { get; set; }
 
             /// <summary>
+            /// <para>The traffic for the HLS protocol, in bytes. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>568</para>
             /// </summary>
@@ -136,6 +170,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public double? HlsTraffic { get; set; }
 
             /// <summary>
+            /// <para>The number of new connections per minute for the stream.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>450</para>
             /// </summary>
@@ -144,6 +180,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? NewConns { get; set; }
 
             /// <summary>
+            /// <para>The bandwidth for the P2P protocol, in bps. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6845</para>
             /// </summary>
@@ -152,6 +190,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? P2pBps { get; set; }
 
             /// <summary>
+            /// <para>The number of concurrent connections for the P2P protocol. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>78</para>
             /// </summary>
@@ -160,6 +200,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? P2pCount { get; set; }
 
             /// <summary>
+            /// <para>The traffic for the P2P protocol, in bytes. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4102</para>
             /// </summary>
@@ -168,6 +210,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public double? P2pTraffic { get; set; }
 
             /// <summary>
+            /// <para>The bandwidth for the RTMP protocol, in bps. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3323</para>
             /// </summary>
@@ -176,6 +220,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? RtmpBps { get; set; }
 
             /// <summary>
+            /// <para>The number of concurrent connections for the RTMP protocol. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>63</para>
             /// </summary>
@@ -184,6 +230,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? RtmpCount { get; set; }
 
             /// <summary>
+            /// <para>The traffic for the RTMP protocol, in bytes. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5568</para>
             /// </summary>
@@ -192,6 +240,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public double? RtmpTraffic { get; set; }
 
             /// <summary>
+            /// <para>The bandwidth for the RTS protocol, in bps. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2361</para>
             /// </summary>
@@ -200,6 +250,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public double? RtsBps { get; set; }
 
             /// <summary>
+            /// <para>The number of concurrent connections for the RTS protocol. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>89</para>
             /// </summary>
@@ -208,6 +260,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? RtsCount { get; set; }
 
             /// <summary>
+            /// <para>The traffic for the RTS protocol, in bytes. This field is not returned if the specified protocol does not match.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2322</para>
             /// </summary>
@@ -216,6 +270,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public double? RtsTraffic { get; set; }
 
             /// <summary>
+            /// <para>The stream name. This value is returned regardless of whether it is specified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test.flv</para>
             /// </summary>
@@ -224,6 +280,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string StreamName { get; set; }
 
             /// <summary>
+            /// <para>The start time of the time slice. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format in UTC+0.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2015-12-10T20:00:00Z</para>
             /// </summary>
@@ -232,6 +290,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string TimeStamp { get; set; }
 
             /// <summary>
+            /// <para>The total traffic per minute for the stream, in bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>423304182</para>
             /// </summary>
@@ -242,6 +302,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveTagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The token for the next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>q2j8bLtBdhONLRkgaPBa6A==</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -29,11 +33,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The list of resource IDs. ResourceId and Tag cannot both be empty.</para>
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,11 +51,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags. ResourceId and Tag cannot both be empty.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListLiveTagResourcesRequestTag> Tag { get; set; }
         public class ListLiveTagResourcesRequestTag : TeaModel {
             /// <summary>
+            /// <para>The tag key of the resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>env</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value that corresponds to the tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dev</para>
             /// </summary>
@@ -66,6 +81,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
+        /// <para>The Bid of the tag owner.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>26842</para>
         /// </summary>
@@ -74,6 +91,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string TagOwnerBid { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud account ID to which the tag belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx1234xxx</para>
         /// </summary>

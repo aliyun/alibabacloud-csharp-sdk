@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeMeterLiveBypassDurationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can view the application ID on the <a href="https://help.aliyun.com/document_detail/2355593.html">Applications</a> page in the ApsaraVideo Real-time Communication (ARTC) section of the ApsaraVideo Live console.</para>
+        /// <para>The application ID. You can view the application ID on the <a href="https://help.aliyun.com/document_detail/2355593.html">Application Management</a> page of ApsaraVideo Real-time Communication.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The end time must be later than the start time. The time range that can be specified is greater than or equal to 5 minutes and less than or equal to 31 days.</para>
+        /// <para>The end time of the query. The end time must be later than the start time. The query granularity must be ≥ 5 minutes and ≤ 31 days. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,13 +32,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The time granularity of the query. Unit: seconds. Valid values:</para>
+        /// <para>The time granularity for querying data. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>300</description></item>
         /// <item><description>3600</description></item>
         /// <item><description>86400</description></item>
         /// </list>
-        /// <para>If you specify an invalid value or do not specify this parameter, the default value 3600 is used.</para>
+        /// <para>If this parameter is not specified or set to an unsupported value, the default value 3600 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86400</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time of the query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

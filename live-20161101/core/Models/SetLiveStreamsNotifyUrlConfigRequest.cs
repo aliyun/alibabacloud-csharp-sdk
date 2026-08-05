@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Exception event callback URL.</para>
+        /// <para>The callback URL for exception events.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://4a7e5f08.r37.cpolar.top/live/Rsssd/call-back/streamStart">https://4a7e5f08.r37.cpolar.top/live/Rsssd/call-back/streamStart</a></para>
@@ -33,12 +33,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The authentication key.</para>
         /// <remarks>
-        /// <para> This parameter is required if you set the NotifyReqAuth parameter to <b>yes</b>.</para>
+        /// <para>This parameter is required when the NotifyReqAuth request parameter is set to <b>yes</b>.</para>
         /// </remarks>
         /// <para>Value requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The key must be 16 to 64 characters in length.</description></item>
-        /// <item><description>The key can contain letters and digits.</description></item>
+        /// <item><description><para>16 to 64 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>Supports uppercase letters, lowercase letters, and digits.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,15 +51,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string NotifyAuthKey { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable callback authentication. Valid values:</para>
+        /// <para>Specifies whether to enable authentication. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b>: enables callback authentication. If you set this parameter to <b>yes</b>, you must also specify the NotifyAuthKey parameter.</description></item>
-        /// <item><description><b>no</b>: disables callback authentication.</description></item>
+        /// <item><description><b>yes</b>: Enabled. If you set this parameter to <b>yes</b>, you must also set the NotifyAuthKey request parameter.</description></item>
+        /// <item><description><b>no</b>: Disabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the default value <b>no</b> is used.</para>
+        /// <para>If this parameter is not specified, the default value is <b>no</b>.</para>
         /// </remarks>
-        /// <para>For information about the authentication logic, see <b>Authentication for stream ingest callbacks</b>.</para>
+        /// <para>For the authentication logic, see <b>Stream ingest callback authentication description</b> below.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yes</para>
@@ -67,7 +69,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string NotifyReqAuth { get; set; }
 
         /// <summary>
-        /// <para>The URL to which the stream ingest callbacks are sent.</para>
+        /// <para>The URL to which live stream information is pushed.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></para>
@@ -80,6 +82,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The callback URL for stream switching information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="http://guide.aliyundoc.com/switchnotify">http://guide.aliyundoc.com/switchnotify</a></para>
+        /// </summary>
         [NameInMap("SwitchNotifyUrl")]
         [Validation(Required=false)]
         public string SwitchNotifyUrl { get; set; }

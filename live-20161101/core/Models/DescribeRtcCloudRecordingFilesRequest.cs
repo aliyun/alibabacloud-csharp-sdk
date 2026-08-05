@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeRtcCloudRecordingFilesRequest : TeaModel {
         /// <summary>
+        /// <para>The task ID. This ID is returned by StartRtcCloudRecording. Only tasks created within the last 3 days can be queried.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

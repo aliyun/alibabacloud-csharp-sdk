@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateLiveStreamWatermarkRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the custom rule.</para>
+        /// <para>The custom description of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my rule</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom rule.</para>
+        /// <para>The custom name of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WatermarkRule****</para>
@@ -33,6 +33,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -40,7 +46,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the watermark rule.</para>
         /// <remarks>
-        /// <para> You can obtain the rule ID by checking the value of the RuleId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/2848100.html">AddLiveStreamWatermarkRule</a> operation.</para>
+        /// <para>Get the rule ID from the response of the <a href="https://help.aliyun.com/document_detail/2848100.html">AddLiveStreamWatermarkRule</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the watermark template.</para>
         /// <remarks>
-        /// <para> You can obtain the template ID by checking the value of the TemplateId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/2848096.html">AddLiveStreamWatermark</a> operation.</para>
+        /// <para>Get the template ID from the response of the <a href="https://help.aliyun.com/document_detail/2848096.html">AddLiveStreamWatermark</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

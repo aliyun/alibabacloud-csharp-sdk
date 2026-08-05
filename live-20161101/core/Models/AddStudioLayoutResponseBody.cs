@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddStudioLayoutResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the layout. You can use the ID as a request parameter in the following operations: DeleteStudioLayout, ModifyStudioLayout, and DescribeStudioLayouts.</para>
+        /// <para>The layout ID. Use this ID to delete, modify, or query a virtual production studio layout.</para>
         /// 
         /// <b>Example:</b>
         /// <para>445409ec-7eaa-461d-8f29-4bec2eb9****</para>

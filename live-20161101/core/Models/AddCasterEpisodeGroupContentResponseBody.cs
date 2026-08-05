@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to create or add episodes, remove episodes, query episodes, edit an episode list, delete an episode list, query the information about an episode list, start playing an episode list, or stop playing an episode list.</para>
+        /// <para>The program ID. You can use this ID as a request parameter when you create, add, delete, or query program items. You can also use this ID to edit, delete, query, start, or stop a program.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68X****</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F****</para>
+        /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

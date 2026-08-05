@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E1564CBC-DCFE-5E1B-8B78-8DED9A39F334</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that match the conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

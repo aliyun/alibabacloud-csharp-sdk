@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeAutoShowListTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the production studio for which you want to query scheduled tasks.</para>
+        /// <para>The ID of the production studio whose scheduled tasks you want to query.</para>
         /// <remarks>
-        /// <para> If the scheduled tasks were created by calling the <a href="https://help.aliyun.com/document_detail/2848056.html">InitializeAutoShowListTask</a> operation, check the value of the response parameter CasterId to obtain the ID. If you do not specify this parameter, the system queries all the scheduled tasks that belong to the user specified by the OwnerId parameter.</para>
+        /// <para>If you create a scheduled task by calling the <a href="https://help.aliyun.com/document_detail/2848056.html">InitializeAutoShowListTask</a> operation, use the CasterId value returned by that operation. If you leave this parameter empty, all scheduled tasks under your account are queried by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

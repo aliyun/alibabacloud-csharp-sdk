@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual studio template.</para>
+        /// <para>The studio template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>369ced1f-c33a-49e5-91da-bdaae3d6c1c2</para>

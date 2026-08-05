@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainPushTrafficDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time granularity.</para>
+        /// <para>The data time granularity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which the data was queried.</para>
+        /// <para>The end time. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-10T21:00:00Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range during which the data was queried.</para>
+        /// <para>The start time. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-10T20:00:00Z</para>

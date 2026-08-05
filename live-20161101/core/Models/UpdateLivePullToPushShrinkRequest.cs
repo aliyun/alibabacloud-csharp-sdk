@@ -10,19 +10,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateLivePullToPushShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The callback URL. By default, this parameter is left empty.</para>
+        /// <para>The callback URL. Default value: empty.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The URL is used to receive callbacks related to the task.</para>
-        /// </description></item>
-        /// <item><description><para>The URL can be up to 2,000 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, no callbacks are returned for events related to the task.</para>
-        /// </description></item>
-        /// <item><description><para>The update takes effect for subsequent events that occur.</para>
-        /// </description></item>
+        /// <item><description>The URL that receives task-related callbacks.</description></item>
+        /// <item><description>Maximum length: 2000 characters.</description></item>
+        /// <item><description>If this parameter is not specified, task events are not sent as callbacks.</description></item>
+        /// <item><description>The update takes effect when the next event is triggered.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://callback*****.com">https://callback*****.com</a></para>
@@ -34,19 +30,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The end time of the task.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// </description></item>
-        /// <item><description><para>The time range specified by the StartTime and EndTime parameters cannot exceed seven days.</para>
-        /// </description></item>
-        /// <item><description><para>The end time must be later than the start time.</para>
-        /// </description></item>
-        /// <item><description><para>The end time must be later than the current time.</para>
-        /// </description></item>
-        /// <item><description><para>If the task has ended, the update does not take effect.</para>
-        /// </description></item>
+        /// <item><description>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</description></item>
+        /// <item><description>EndTime must be later than StartTime.</description></item>
+        /// <item><description>EndTime must be later than the current time.</description></item>
+        /// <item><description>If the task has already ended, this update does not take effect.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-27T14:30:00Z</para>
@@ -56,9 +46,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The file index. Default value: 0.</para>
+        /// <para>The video index. Default value: 0.</para>
         /// <remarks>
-        /// <para> You can modify this parameter only if the task is stopped. The update takes effect after you restart the task.</para>
+        /// <para>Update this parameter while the task is stopped. The update takes effect after the task is restarted.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,19 +59,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? FileIndex { get; set; }
 
         /// <summary>
-        /// <para>The offset of the position where the system starts to read the video resource. Unit: seconds. Valid values: positive numbers.</para>
+        /// <para>The start offset of the video file, in seconds. The value must be greater than 0.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter indicates an offset from the first frame.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</para>
-        /// </description></item>
-        /// <item><description><para>The update takes effect only for the first video in a video list.</para>
-        /// </description></item>
-        /// <item><description><para>You can modify this parameter only if the task is stopped. The update takes effect immediately.</para>
-        /// </description></item>
+        /// <item><description>Specifies the position relative to the first frame from which to start reading.</description></item>
+        /// <item><description>This parameter applies only to video-on-demand or third-party video streams.</description></item>
+        /// <item><description>This parameter takes effect only when the first video in the playlist is played.</description></item>
+        /// <item><description>Update this parameter while the task is stopped. The update takes effect after the task is restarted.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -95,12 +81,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the task is started. Valid values:</para>
+        /// <para>The region where the task is launched. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ap-southeast-1: Singapore</description></item>
-        /// <item><description>ap-southeast-5: Indonesia (Jakarta)</description></item>
-        /// <item><description>cn-beijing: China (Beijing)</description></item>
-        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
+        /// <item><description>ap-southeast-1 (Singapore)</description></item>
+        /// <item><description>ap-southeast-5 (Indonesia)</description></item>
+        /// <item><description>cn-beijing (Beijing)</description></item>
+        /// <item><description>cn-shanghai (Shanghai).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -111,25 +97,29 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of playbacks after the first playback is complete. Valid values:</para>
+        /// <para>The number of times playback repeats after the playlist finishes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0 (default): specifies that the video list is played only once.</description></item>
-        /// <item><description>\-1: specifies that the video list is played in loop mode.</description></item>
-        /// <item><description>Positive integer: specifies the number of times the video list repeats after the first playback is complete.</description></item>
+        /// <item><description>0 (default): no repeat.</description></item>
+        /// <item><description>-1: loop indefinitely.</description></item>
+        /// <item><description>Other positive integers: the number of times playback repeats after the playlist finishes.</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</para>
-        /// </description></item>
-        /// <item><description><para>The update can take effect immediately.</para>
-        /// </description></item>
+        /// <item><description>This parameter applies only to video-on-demand or third-party video streams.</description></item>
+        /// <item><description>The update takes effect immediately.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -139,25 +129,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? RepeatNumber { get; set; }
 
         /// <summary>
-        /// <para>The source URLs.</para>
+        /// <para>The list of source stream URLs.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If SourceType is set to live, you can specify only one streaming URL.</para>
-        /// </description></item>
-        /// <item><description><para>If SourceType is set to vod or url, you can specify up to 30 IDs or URLs.</para>
-        /// </description></item>
-        /// <item><description><para>If SourceType is set to live, the supported protocols for URLs are Real-Time Messaging Protocol (RTMP), Real-Time Streaming Protocol (RTSP), Secure Reliable Transport Protocol (SRT), and HTTP-FLV.</para>
-        /// </description></item>
-        /// <item><description><para>If SourceType is set to vod, specify the IDs of media assets from ApsaraVideo VOD.</para>
-        /// </description></item>
-        /// <item><description><para>If SourceType is set to url, the supported protocols for URLs are MP4 and HTTP-FLV.</para>
-        /// </description></item>
-        /// <item><description><para>If the source is a live stream, the update takes effect immediately. If the source is a list of video resources from ApsaraVideo VOD or a third party, the update does not take effect until the playback of the current video ends. After the update takes effect, the video list starts to play from the beginning.</para>
-        /// </description></item>
-        /// <item><description><para>You can modify this parameter only if the task is stopped. The update takes effect immediately.</para>
-        /// </description></item>
+        /// <item><description>For the live type, only one complete live streaming URL is supported.</description></item>
+        /// <item><description>For the vod and url types, up to 30 URLs can be specified.</description></item>
+        /// <item><description>The live type supports RTMP, SRT, and HTTP-FLV protocols.</description></item>
+        /// <item><description>For the vod type, specify ApsaraVideo VOD media asset IDs.</description></item>
+        /// <item><description>The url type supports MP4 and HTTP-FLV protocols.</description></item>
+        /// <item><description>For live source streams, the update takes effect immediately. For video file source streams, the update takes effect after the currently playing video ends, and playback restarts from the beginning of the updated video list.</description></item>
+        /// <item><description>Update this parameter while the task is stopped. The update takes effect after the task is restarted.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>changedtesturl</para>
@@ -169,15 +152,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The start time of the task.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// </description></item>
-        /// <item><description><para>The time range specified by the StartTime and EndTime parameters cannot exceed seven days.</para>
-        /// </description></item>
-        /// <item><description><para>If the task has already started, the update does not take effect.</para>
-        /// </description></item>
+        /// <item><description>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</description></item>
+        /// <item><description>If the task has already started running, this update does not take effect.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-23T15:30:00Z</para>

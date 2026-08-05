@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyCasterLayoutResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the layout. You can use this ID to query information about the layout.</para>
+        /// <para>The layout ID. This can be used as a request parameter to query the list of production studio layouts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21926b36-7dd2-4fde-ae25-51b5bc8e****</para>

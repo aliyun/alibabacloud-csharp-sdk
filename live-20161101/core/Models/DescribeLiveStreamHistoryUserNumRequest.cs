@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para> The time range specified by the StartTime and EndTime parameters cannot exceed one day. The end time must not be later than the current time.</para>
+        /// <para>The time range specified by the StartTime and EndTime parameters cannot exceed one day. The end time must not be later than the current time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para> You can query data in the last <b>30</b> days.</para>
+        /// <para>You can query data in the last <b>30</b> days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

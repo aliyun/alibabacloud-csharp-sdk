@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateRtcAsrTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the request. If success is returned, the request is successful. If an error message is returned, the request failed.</para>
+        /// <para>The result description. The value success indicates a successful operation. An error message is returned if a fault occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The gateway request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7FF5417D-06E9-5A2C-9A70-581F6149E6C1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned HTTP status code. HTTP status code 2000 indicates that the request is successful. If another HTTP status code is returned, the request failed.</para>
+        /// <para>The status code. A value of 2000 indicates success. Other values indicate exceptions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? RetCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The generated task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asr-a6ac15e0-9118-4b4c-9e64-306163a0****</para>

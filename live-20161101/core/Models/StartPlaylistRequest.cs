@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StartPlaylistRequest : TeaModel {
         /// <summary>
-        /// <para>The offset of the position where the system starts the playback. This parameter takes effect only if the input source is a video file. Unit: milliseconds.</para>
-        /// <para>A value greater than 0 indicates an offset from the first frame.</para>
+        /// <para>The start offset for the video file. This parameter is valid only for video files. Unit: milliseconds.</para>
+        /// <para>A value greater than 0 specifies the start time relative to the first frame.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the episode list. If the episode list was created by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, check the value of the response parameter ProgramId to obtain the ID.</para>
+        /// <para>The ID of the playlist. If you add items to the playlist by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, use the value of the ProgramId parameter that is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,16 +35,25 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string ProgramId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The method to resume the playback of the episode list. Valid values:</para>
+        /// <para>The restart mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Restart</b>: resumes the playback from the beginning.</description></item>
-        /// <item><description><b>Continue</b>: resumes the playback from the position where the previous playback stops. The <b>StartItemId</b> parameter is required only if you set <b>ResumeMode</b> to <b>Custom</b>.</description></item>
-        /// <item><description><b>Custom</b>: resumes the playback from a custom position.</description></item>
+        /// <item><description><para><b>Restart</b>: Starts from the beginning.</para>
+        /// </description></item>
+        /// <item><description><para><b>Continue</b>: Resumes playback from where it was stopped. The <b>StartItemId</b> parameter is required only when you set the <b>ResumeMode</b> parameter to <b>Custom</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>Custom</b>: Custom start point.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,10 +64,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ResumeMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the first episode to play. This episode is the first to play in carousel playback.</para>
+        /// <para>The ID of the item to play first. When the carousel starts, this item is played.</para>
         /// <remarks>
-        /// <para> This parameter is required only if you set ResumeMode to Custom.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>This parameter is required only when you set <b>ResumeMode</b> to <b>Custom</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asdfasdfasdf****</para>

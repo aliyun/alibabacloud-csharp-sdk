@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the production studio.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you create a production studio using the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value from the response.</para>
+        /// </description></item>
+        /// <item><description><para>If you create a production studio in the ApsaraVideo Live console, find the ID on the <b>Production Studio</b> &gt; <b>Cloud Production Studio</b> page.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The name of the production studio in the list is the ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -31,12 +33,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID. If you call the <a href="https://help.aliyun.com/document_detail/2848046.html">DescribeCasterChannels</a> operation to query the channels of the production studio, you can obtain the ID of the resource in a specific channel from the ResourceId parameter in the response.</para>
+        /// <para>The ID of the resource. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2848046.html">DescribeCasterChannels</a> operation and check the ResourceId value in the response.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +55,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scene. You can call the <a href="~~60262#doc-api-live-DescribeCasterScenes~~" title="Queries information about the scenes of a production studio.">DescribeCasterScenes</a> operation to get the ID.</para>
+        /// <para>The ID of the scenario.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

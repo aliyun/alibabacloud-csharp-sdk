@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLivePullToPushResponseBody : TeaModel {
         /// <summary>
-        /// <para>The current file index.</para>
+        /// <para>The currently effective playlist sequence offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? CurrentFileIndex { get; set; }
 
         /// <summary>
-        /// <para>The current offset for video playback.</para>
+        /// <para>The currently effective video playback offset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -43,22 +43,20 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3271ACD2-F143-1204-AFDB-9A87C131****</para>
+        /// <para>a05e6b15-15af-405b-a4a2-0152245d****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The code that is returned for the request.</para>
+        /// <para>The return code.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>0 is returned if the request is normal.</para>
-        /// </description></item>
-        /// <item><description><para>For information about codes that are returned when exceptions occur, see the following Error codes table.</para>
-        /// </description></item>
+        /// <item><description>&quot;0&quot; is returned under normal circumstances.</description></item>
+        /// <item><description>For abnormal cases, refer to the error code list below.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -68,13 +66,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? RetCode { get; set; }
 
         /// <summary>
-        /// <para>The reason why the task is stopped.</para>
+        /// <para>The reason for task exit:</para>
         /// <list type="bullet">
-        /// <item><description>TriggerByUser: You proactively stopped the task.</description></item>
-        /// <item><description>OverEndTime: The specified end time was exceeded.</description></item>
+        /// <item><description>TriggerByUser: Actively ended by the user.</description></item>
+        /// <item><description>OverEndTime: Exceeded the preset end time.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is returned only if the task is stopped.</para>
+        /// <para>Only returned when the task is in exited state.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,30 +83,30 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string TaskExitReason { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was exited. The value is a Unix timestamp in seconds.</para>
+        /// <para>The task exit time, in Unix seconds timestamp.</para>
         /// <remarks>
-        /// <para> This parameter is returned only if the task status is exited.</para>
+        /// <para>Only returned when the task is in exited state.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1724740200</para>
+        /// <para>1726354625</para>
         /// </summary>
         [NameInMap("TaskExitTime")]
         [Validation(Required=false)]
         public int? TaskExitTime { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The newly created task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>fd245384-4067-4f91-9d75-9666a6bc9****</para>
+        /// <para>fb0d4ac7-c7e3-4978-9743-0bf2f6e8****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The information about the task.</para>
+        /// <para>The task information.</para>
         /// </summary>
         [NameInMap("TaskInfo")]
         [Validation(Required=false)]
@@ -125,7 +123,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string CallbackURL { get; set; }
 
             /// <summary>
-            /// <para>The destination URL to which the stream is relayed.</para>
+            /// <para>The push stream destination address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rtmp://pushtest.********.aliyunlive.com/pulltest493/pulltest-w434</para>
@@ -135,7 +133,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string DstUrl { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The task end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-08-27T14:30:00Z</para>
@@ -145,7 +143,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The file index, which indicates the sequence of the file where the playback starts.</para>
+            /// <para>The file index, starting playback from the nth file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -155,32 +153,30 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? FileIndex { get; set; }
 
             /// <summary>
-            /// <para>The offset of the position where the system starts to read the video resource. Unit: seconds. Valid values: positive numbers.</para>
+            /// <para>The start offset, which is the starting offset value for the video file. Unit: seconds. Value: greater than 0.</para>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>This parameter indicates an offset from the first frame.</para>
-            /// </description></item>
-            /// <item><description><para>This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</para>
-            /// </description></item>
+            /// <item><description>Indicates starting to read from a position offset relative to the first frame.</description></item>
+            /// <item><description>Only valid for VOD resources or video files.</description></item>
             /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>2</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Offset")]
             [Validation(Required=false)]
             public int? Offset { get; set; }
 
             /// <summary>
-            /// <para>The number of playbacks after the first playback is complete. Valid values:</para>
+            /// <para>The number of times to repeat playback after completion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0 (default): specifies that the video list is played only once.</description></item>
-            /// <item><description>\-1: specifies that the video list is played in loop mode.</description></item>
-            /// <item><description>Positive integer: specifies the number of times the video list repeats after the first playback is complete.</description></item>
+            /// <item><description>0 (default): No repeat playback.</description></item>
+            /// <item><description>-1: Loop indefinitely.</description></item>
+            /// <item><description>Other positive integers: The number of times to repeat playback after completion.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</para>
+            /// <para>This parameter only applies to VOD or third-party video streams.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -191,7 +187,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? RepeatNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of retries allowed.</para>
+            /// <para>The number of retries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -201,7 +197,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? RetryCount { get; set; }
 
             /// <summary>
-            /// <para>The retry interval. Unit: seconds.</para>
+            /// <para>The retry interval, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -211,7 +207,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? RetryInterval { get; set; }
 
             /// <summary>
-            /// <para>The protocol of the source stream.</para>
+            /// <para>The source stream protocol name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RTMP</para>
@@ -221,22 +217,22 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string SourceProtocol { get; set; }
 
             /// <summary>
-            /// <para>The type of the source stream. Valid values:</para>
+            /// <para>The source stream type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>live: a live stream</description></item>
-            /// <item><description>vod: a list of ApsaraVideo VOD resources</description></item>
-            /// <item><description>url: a list of video resources from a third party</description></item>
+            /// <item><description>live: Live stream.</description></item>
+            /// <item><description>vod: Alibaba Cloud VOD resource.</description></item>
+            /// <item><description>url: Third-party video file resource.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>live</para>
+            /// <para>vod</para>
             /// </summary>
             [NameInMap("SourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The source URLs.</para>
+            /// <para>The source stream URL addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rtmp://pulltest.****.aliyunlive.com/pulltest493/pulltest-w434</para>
@@ -246,7 +242,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public List<string> SourceUrls { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The task start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-08-26T10:30:00Z</para>
@@ -278,35 +274,35 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The reason why the task was stopped.</para>
+        /// <para>The reason why the task stopped running:</para>
         /// <list type="bullet">
-        /// <item><description>PullStreamFailed: An exception occurred while pulling the source stream. A retry is in progress.</description></item>
-        /// <item><description>PushStreamFailed: An exception occurred while ingesting the stream. A retry is in progress.</description></item>
-        /// <item><description>UnknownError: An unknown exception occurred.</description></item>
+        /// <item><description>PullStreamFailed: Source stream pull exception, retrying.</description></item>
+        /// <item><description>PushStreamFailed: Destination stream push exception, retrying.</description></item>
+        /// <item><description>UnknownError: Unknown exception.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is returned only if the task status is stopped.</para>
+        /// <para>Only returned when the task is in stopped state.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>UnknownError</para>
+        /// <para>PullStreamFailed</para>
         /// </summary>
         [NameInMap("TaskInvalidReason")]
         [Validation(Required=false)]
         public string TaskInvalidReason { get; set; }
 
         /// <summary>
-        /// <para>The current status of the task.</para>
+        /// <para>The current task status:</para>
         /// <list type="bullet">
-        /// <item><description>0: not started.</description></item>
-        /// <item><description>1: running. Stream pulling and stream relay are normal.</description></item>
-        /// <item><description>2: abnormal.</description></item>
-        /// <item><description>3: stopped. It may be because exceptions occur during stream pulling or stream relay or you proactively call the StopLivePullToPush operation.</description></item>
-        /// <item><description>\-1: exited.</description></item>
+        /// <item><description>0: Not started (the start time has not been reached).</description></item>
+        /// <item><description>1: Running normally (pull streaming and push streaming are normal).</description></item>
+        /// <item><description>2: Running abnormally.</description></item>
+        /// <item><description>3: Stopped (pull streaming or push streaming is abnormal, or the task was actively stopped by calling the API).</description></item>
+        /// <item><description>-1: Exited.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("TaskStatus")]
         [Validation(Required=false)]

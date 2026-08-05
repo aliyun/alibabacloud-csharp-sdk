@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the production studio.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value returned in the response.</para>
+        /// </description></item>
+        /// <item><description><para>If you created the production studio in the LIVE console, find the production studio name on the Cloud Production Studio page. To go to the page, choose <b>LIVE Console</b> &gt; <b>Production Studio</b> &gt; <b>Cloud Production Studio</b>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The name of the production studio on the Cloud Production Studio page is the production studio ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,9 +30,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The episode of the highest priority.</para>
+        /// <para>The highest-priority show.</para>
         /// <remarks>
-        /// <para> You can configure this parameter only before the playback of the episode list starts.</para>
+        /// <para>This parameter can be configured only before the playlist starts.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,10 +43,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string HighPriorityShowId { get; set; }
 
         /// <summary>
-        /// <para>The time at which the episode of the highest priority is played. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.</para>
+        /// <para>The time to play the highest-priority show. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.</para>
         /// <remarks>
-        /// <para> You can configure this parameter only before the episode list starts playing.\
-        /// After you configure this parameter, when the specified point in time is reached, any episode that is playing stops and the episode of the highest priority in the episode list starts to play.</para>
+        /// <para>This parameter can be configured only before the playlist starts.<br>
+        /// After this parameter is configured, the system switches from the currently playing show to the highest-priority show at the specified time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -58,20 +60,26 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of additional times the episode list is played.</para>
+        /// <para>The number of times the playlist loops.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The RepeatTimes parameter specifies the number of repetitions. For example, if you set the value to <b>0</b>, the episode list is played <b>once</b>. If you set the value to <b>1</b>, the episode list is played <b>twice</b>.********</para>
+        /// <item><description><para>RepeatTimes specifies the number of repetitions. For example, a value of <b>0</b> means the playlist is played once without repetition. A value of <b>1</b> means the playlist is played twice (one initial playback and one repetition).</para>
         /// </description></item>
-        /// <item><description><para>If you set the value to -1, the episode list is repeated indefinitely.</para>
+        /// <item><description><para>A value of -1 indicates that the playlist loops indefinitely.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -81,9 +89,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? RepeatTimes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the episode for which you want to change the position in the playlist.</para>
+        /// <para>The ID of the show whose position in the playlist you want to modify.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2848051.html">AddShowIntoShowList</a> or <a href="https://help.aliyun.com/document_detail/2848054.html">DescribeShowList</a> operation and check the value of the response parameter ShowId to obtain the ID.</para>
+        /// <para>Obtain the ShowId value from the response of the <a href="https://help.aliyun.com/document_detail/2848051.html">AddShowIntoShowList</a> or <a href="https://help.aliyun.com/document_detail/2848054.html">DescribeShowList</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -94,9 +102,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ShowId { get; set; }
 
         /// <summary>
-        /// <para>The position of the episode in the episode list. If you want to change the position of an episode in a playlist, place the ID of the episode in <b>Spot</b>.</para>
+        /// <para>The new position of the show in the playlist. The show specified by ShowId is moved to the position specified by <b>Spot</b>.</para>
         /// <remarks>
-        /// <para> The value must be greater than or equal to 0 and less than or equal to the total number of episodes in the playlist.</para>
+        /// <para>The value must be greater than or equal to 0 and less than or equal to the total number of shows in the playlist.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeDomainWithIntegrityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The verification information.</para>
+        /// <para>The verification content.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The subpoints.</para>
+            /// <para>The data points.</para>
             /// </summary>
             [NameInMap("Points")]
             [Validation(Required=false)]

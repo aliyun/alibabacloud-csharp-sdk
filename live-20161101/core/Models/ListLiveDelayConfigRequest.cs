@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveDelayConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 5 to 30. Default value: 10.</para>
+        /// <para>The number of entries to return on each page. Valid values: 5 to 30. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -44,6 +44,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

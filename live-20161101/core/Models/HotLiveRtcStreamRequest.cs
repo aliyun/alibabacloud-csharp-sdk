@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class HotLiveRtcStreamRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The application name of the live stream to prefetch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The audio MSID.</para>
+        /// <para>The audio Msid.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AudioMsid { get; set; }
 
         /// <summary>
-        /// <para>The duration for which the prefetch connection is maintained. Unit: milliseconds. Default value: 0, which specifies that the prefetch connection is always maintained.</para>
+        /// <para>The duration to maintain the prefetch connection. Unit: milliseconds. The default value, 0, means the connection is always maintained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The custom period after which a timeout event is triggered. Unit: milliseconds.</para>
+        /// <para>The custom timeout period for a timeout event. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>
@@ -67,9 +67,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The code of the region in which the live stream is prefetched. For more information, see the following tables that list available region codes.</para>
+        /// <para>The prefetch area. For more information, see the RegionCode lookup table.</para>
         /// <remarks>
-        /// <para> Region codes include provincial codes for China and country codes for all countries.</para>
+        /// <para>For regions within China, specify the corresponding code from the &quot;Region codes for China&quot; table. For all other regions, specify the country code.</para>
+        /// <list type="bullet">
+        /// <item><description>If the CodeRegionHasNoNode error is returned after you specify a RegionCode, the corresponding area is not covered by L1 nodes and cannot be prefetched. In this case, specify a different RegionCode.</description></item>
+        /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,12 +83,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string RegionCode { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream that you want to prefetch.</para>
+        /// <para>The name of the live stream to prefetch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,7 +105,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamName { get; set; }
 
         /// <summary>
-        /// <para>The video MSID.</para>
+        /// <para>The video Msid.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteSnapshotFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The AppName of the live stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The timestamps when the snapshots that you want to delete were captured.</para>
+        /// <para>A list of timestamps of the snapshots to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<long?> CreateTimestampList { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,18 +46,26 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to also delete the corresponding file in Object Storage Service (OSS) at the same time. Value values:</para>
+        /// <para>Specifies whether to also delete the snapshot files from OSS. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: deletes the corresponding file in OSS.</description></item>
-        /// <item><description><b>false</b>: does not delete the corresponding file in OSS.</description></item>
+        /// <item><description><para><b>true</b>: Deletes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Does not delete.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> To delete the corresponding file in OSS, you must have the permissions on the OSS bucket.</para>
+        /// <para>To delete files from OSS, you must have the required permissions for OSS file operations.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +77,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? RemoveFile { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream.</para>
+        /// <para>The stream name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

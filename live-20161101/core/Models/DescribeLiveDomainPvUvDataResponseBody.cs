@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainPvUvDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time interval between the entries returned. Unit: seconds. Default value: 3600.</para>
+        /// <para>The time interval for each record. Unit: seconds. The value is fixed at 3600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time is displayed in UTC.</para>
+        /// <para>The end time. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-03-20T16:00:00Z</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time is displayed in UTC.</para>
+        /// <para>The start time. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-03-17T16:00:00Z</para>

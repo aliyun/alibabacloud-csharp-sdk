@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeAutoShowListTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the scheduled tasks. The following fields are included:</para>
+        /// <para>The list of scheduled tasks. The list contains the following parameters:</para>
         /// <list type="bullet">
-        /// <item><description>Status: the status of the scheduled task. Valid values: 0 and 1. A value of 0 indicates that the scheduled task is paused. A value of 1 indicates that the scheduled task is started.</description></item>
-        /// <item><description>LiveTemplate: the transcoding templates.</description></item>
-        /// <item><description>TranscodeConfig: the transcoding configuration for the source URL.</description></item>
-        /// <item><description>CasterId: the ID of the production studio.</description></item>
+        /// <item><description><para>Status: The status of the task. A value of 0 indicates that the task is paused. A value of 1 indicates that the task is started.</para>
+        /// </description></item>
+        /// <item><description><para>LiveTemplate: The list of transcoding configurations.</para>
+        /// </description></item>
+        /// <item><description><para>TranscodeConfig: The resolution for transcoding the pulled stream.</para>
+        /// </description></item>
+        /// <item><description><para>CasterId: The ID of the production studio.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

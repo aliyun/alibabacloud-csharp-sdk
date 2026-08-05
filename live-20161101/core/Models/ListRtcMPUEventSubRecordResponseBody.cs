@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListRtcMPUEventSubRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The total number of callback records returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current page is followed by a page.</para>
+        /// <para>Indicates whether there is a next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<ListRtcMPUEventSubRecordResponseBodyLogs> Logs { get; set; }
         public class ListRtcMPUEventSubRecordResponseBodyLogs : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The ID of the subscribed application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yourAppId</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? Cost { get; set; }
 
             /// <summary>
-            /// <para>For more information about the callback, see <a href="https://help.aliyun.com/document_detail/2804583.html">CreateRtcMPUEventSub</a>.</para>
+            /// <para>The callback content. For more information, see <a href="https://help.aliyun.com/document_detail/2804583.html">Create a stream mixing and forwarding event callback</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;EventType\&quot;:1,\&quot;MsgId\&quot;:\&quot;42bba8b5-94ab-468c-9dae-9b501dd6c***\&quot;,\&quot;AppId\&quot;:\&quot;rtcdev\&quot;,\&quot;SubId\&quot;:\&quot;Sub-9799B2C45009799B2C4***\&quot;,\&quot;TaskId\&quot;:\&quot;mpucallbacktest\&quot;,\&quot;CallbackTs\&quot;:1712656430***,\&quot;Payload\&quot;:{\&quot;DstUrl\&quot;:\&quot;rtmp://domain/app/stream?auth\&quot;,\&quot;EventTs\&quot;:1712656430***,\&quot;EventCode\&quot;:1,\&quot;ErrorCode\&quot;:0,\&quot;ErrorMessage\&quot;:\&quot;\&quot;}}</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Data { get; set; }
 
             /// <summary>
-            /// <para>The HTTP status code. 200 indicates that the callback is successful.</para>
+            /// <para>The error code. A value of 200 indicates that the callback was successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string HTTPCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the callback record.</para>
+            /// <para>The callback record ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42bba8b5-********-9b501dd6cb6e</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string MsgId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the subscription.</para>
+            /// <para>The event callback ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sub-<b><b><b>9799B2C4500</b></b></b></para>
@@ -107,7 +107,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string SubId { get; set; }
 
             /// <summary>
-            /// <para>The time when the callback was invoked. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The time when the callback was invoked.
+            /// Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1970-01-01T00:00:00Z</para>
@@ -119,7 +120,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>

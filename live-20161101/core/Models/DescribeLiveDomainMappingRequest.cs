@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainMappingRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name for which you want to query the mappings. The following types of domain names are supported:</para>
+        /// <para>The domain that you want to query. Valid types:</para>
         /// <list type="bullet">
-        /// <item><description>Ingest domain</description></item>
-        /// <item><description>Main streaming domain</description></item>
-        /// <item><description>Sub-streaming domain</description></item>
+        /// <item><description><para>Ingest domain</para>
+        /// </description></item>
+        /// <item><description><para>Main streaming domain</para>
+        /// </description></item>
+        /// <item><description><para>Sub-streaming domain</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,6 +32,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

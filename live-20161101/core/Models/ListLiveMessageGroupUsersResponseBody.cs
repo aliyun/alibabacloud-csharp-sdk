@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveMessageGroupUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the group queried.</para>
+        /// <para>The group ID of the group to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>grouptest</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current page is followed by another page.</para>
+        /// <para>Indicates whether there is a next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? Hasmore { get; set; }
 
         /// <summary>
-        /// <para>The starting page number for the next query. A value of 0 indicates that no further pages can be queried.</para>
+        /// <para>The start position of the next page. A value of 0 indicates that there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details about the users.</para>
+        /// <para>The array of objects.</para>
         /// </summary>
         [NameInMap("UserList")]
         [Validation(Required=false)]
         public List<ListLiveMessageGroupUsersResponseBodyUserList> UserList { get; set; }
         public class ListLiveMessageGroupUsersResponseBodyUserList : TeaModel {
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>uid1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The additional information about the user.</para>
+            /// <para>The extended information of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>info1</para>

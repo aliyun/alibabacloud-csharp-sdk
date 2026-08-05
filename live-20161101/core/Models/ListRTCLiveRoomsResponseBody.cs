@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of active channels.</para>
+        /// </summary>
         [NameInMap("Rooms")]
         [Validation(Required=false)]
         public List<string> Rooms { get; set; }
 
         /// <summary>
+        /// <para>The total number of query results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

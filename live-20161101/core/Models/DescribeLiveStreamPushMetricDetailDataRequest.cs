@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamPushMetricDetailDataRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs. The stream-level data of this application is returned.</para>
+        /// <para>The name of the application to which the live stream belongs. Specify the application name to query data at the stream granularity for the corresponding application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>app</para>
+        /// <para>liveApp****</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The accelerated domain name. You can specify only one domain name. If you specify multiple domain names, an error occurs.</description></item>
-        /// <item><description>If you do not specify the AppName and StreamName parameters, data of all streams under the specified domain name is returned. The data is not aggregated.</description></item>
-        /// <item><description>If you specify the DomainName parameter and set both the AppName and StreamName parameters to all, data of all streams in all applications under the specified domain name is aggregated and returned.</description></item>
+        /// <item><description>The accelerated domain name to query. Only a single domain name can be queried. An error is returned if you specify multiple domain names.</description></item>
+        /// <item><description>If you do not specify AppName or StreamName, data at the stream granularity for all streams under the specified accelerated domain name is returned without aggregation.</description></item>
+        /// <item><description>If DomainName is specified and both AppName and StreamName are set to all, aggregate data at the stream granularity for all streams under the specified accelerated domain name is returned.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time, and the maximum time range that can be specified is one day. Specify the time in the ISO 8601 standard</para>
-        /// <para>in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the UTC time zone. The end time must be later than the start time, and the difference cannot exceed 1 day.</para>
+        /// <para>Format: YYYY-MM-DDThh:mm:ssZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. When you call this operation, up to 5,000 rows of data can be returned per query. If the number of rows exceeds 5,000, the response includes a pagination token that is used in the next request to retrieve a new page of results.</para>
-        /// <para>When you specify the token in the next query, data continues to be obtained from the end of the previous query.</para>
+        /// <para>The paging query token. Each query returns a maximum of 5,000 rows of data. If the data to be queried exceeds 5,000 rows, the response includes the start index for the next query.</para>
+        /// <para>Pass this token in the request to continue querying data from the row after the last row returned in the previous query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UjsM9x3aVcJi9a0-ArwJUTTC67C***37C0=</para>
@@ -61,12 +61,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the UTC time zone.</para>
+        /// <para>Format: YYYY-MM-DDThh:mm:ssZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,10 +84,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream. The data of the stream in the specified application is returned. If the StreamName parameter is specified, the AppName parameter must also be specified.</para>
+        /// <para>The name of the live stream. If you specify StreamName, data at the stream granularity is returned for the specified StreamName under the specified AppName. You must specify AppName when you specify StreamName.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>liveStream****</para>
         /// </summary>
         [NameInMap("StreamName")]
         [Validation(Required=false)]

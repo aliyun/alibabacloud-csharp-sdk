@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamAuthCheckingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error message for failed authentication.</para>
+        /// <para>The error message returned if authentication failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INVALID AUTH_KEY</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the signed URL is valid. Valid values:</para>
+        /// <para>Indicates whether the authentication is passed.</para>
         /// <list type="bullet">
-        /// <item><description>pass: valid.</description></item>
-        /// <item><description>false: invalid.</description></item>
+        /// <item><description><para>pass: The authentication is passed.</para>
+        /// </description></item>
+        /// <item><description><para>false: The authentication failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The users whom you want to mute.</para>
+        /// <para>A list of users to mute. Separate multiple user IDs with a comma (,). You can specify a maximum of 30 users.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BannedUsers")]
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string BannedUsersShrink { get; set; }
 
         /// <summary>
-        /// <para>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application.</para>
+        /// <para>The data center. This must be the same data center that you specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation.</para>
         /// <remarks>
-        /// <para> Valid values: cn-shanghai and ap-southeast-1 (Singapore).</para>
+        /// <para>Currently, this operation is supported in Shanghai (value: cn-shanghai) and Singapore (value: ap-southeast-1).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

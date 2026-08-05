@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveRecordNotifyConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The streaming domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

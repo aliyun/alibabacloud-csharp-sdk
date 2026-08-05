@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveMessageGroupMessagesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application to query.</para>
+        /// <para>The ID of the interactive message application to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you leave this parameter empty, the earliest available time is used.</para>
+        /// <para>The query start time, expressed as a UNIX timestamp. Unit: seconds. If this parameter is left empty, the earliest time is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1697783235</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? BeginTime { get; set; }
 
         /// <summary>
-        /// <para>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</para>
+        /// <para>The data center. This value must be consistent with the data center specified in <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>. Currently supported data centers are Shanghai (cn-shanghai) and Singapore (ap-southeast-1).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataCenter { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you leave this parameter empty, the latest available time is used.</para>
+        /// <para>The query end time, expressed as a UNIX timestamp. Unit: seconds. If this parameter is left empty, the latest time is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1698301635</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the group to query.</para>
+        /// <para>The group ID of the group to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of messages that you want to query. If you leave this parameter empty, all types of messages are queried.</para>
+        /// <para>The message type to query. If this parameter is left empty, all message types are returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? MsgType { get; set; }
 
         /// <summary>
-        /// <para>The starting page number for the query. If you leave this parameter empty, the query starts from the first page.</para>
+        /// <para>The start position of the query page. If this parameter is left empty, the first page is returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? NextPageToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>10 to 50</b>.</para>
+        /// <para>The number of messages to display at a time. Valid values: <b>[10,50]</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,10 +93,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sort order based on the time when the messages were sent. Valid values:</para>
+        /// <para>The sort type. Messages are sorted by the time they were sent. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: ascending order</description></item>
-        /// <item><description>2: descending order</description></item>
+        /// <item><description><para>1: ascending order</para>
+        /// </description></item>
+        /// <item><description><para>2: descending order</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

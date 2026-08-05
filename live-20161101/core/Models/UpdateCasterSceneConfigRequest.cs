@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the production studio.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value from the response.</para>
+        /// </description></item>
+        /// <item><description><para>If you create a production studio in the ApsaraVideo Live console, find the ID on the <b>Cloud Production Studio</b> page. Navigate to this page by choosing <b>Production Studio</b> &gt; <b>Cloud Production Studio</b> in the ApsaraVideo Live console.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The name of the production studio in the list is its ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,11 +30,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the components. Components in the scene are listed from the bottom to the top in an array.</para>
+        /// <para>A list of component IDs. The components in the array are layered from bottom to top.</para>
         /// <remarks>
-        /// <para> N indicates a sequence number. Examples:\
-        /// ComponentId.1 indicates the ID of the first component.\
-        /// ComponentId.2 indicates the ID of the second component.</para>
+        /// <para>N indicates the sequence number. For example, ComponentId.1 is the ID of the first component and ComponentId.2 is the ID of the second component.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<string> ComponentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the layout. If you call the <a href="https://help.aliyun.com/document_detail/2848028.html">DescribeCasterLayouts</a> operation to query the layouts of the production studio, check the value of the response parameter LayoutId to obtain the ID.</para>
+        /// <para>The ID of the layout. If you query the layout list for the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848028.html">DescribeCasterLayouts</a> operation, use the LayoutId value from the response.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,6 +57,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

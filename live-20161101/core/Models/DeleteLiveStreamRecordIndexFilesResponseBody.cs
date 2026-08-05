@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveStreamRecordIndexFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A return value of 500 indicates an error. For details, see the Error codes section of this topic.</para>
+        /// <para>The status code. If an error occurs, see the error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The status description. A return value of 500 indicates an error. For details, see the Error codes section of this topic.</para>
+        /// <para>The status message. If an error occurs, see the error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>939D19EE-59A0-18E9-B458-*****</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The primary streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the auto mode of dual-stream disaster recovery. Valid values:</para>
+        /// <para>The automatic mode switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: enables the auto mode.</description></item>
-        /// <item><description><b>off</b>: disables the auto mode.</description></item>
+        /// <item><description><b>on</b>: enabled</description></item>
+        /// <item><description><b>off</b>: disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream.</para>
+        /// <para>The live stream name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

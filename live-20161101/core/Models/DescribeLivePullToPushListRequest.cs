@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLivePullToPushListRequest : TeaModel {
         /// <summary>
-        /// <para>The destination URL. Fuzzy search is performed based on the destination URL.</para>
+        /// <para>Destination push stream URL. Fuzzy search based on destination push stream URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rtmp://qd</para>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>Page number.</para>
         /// <remarks>
-        /// <para> The value must be greater than 0 and not greater than the maximum value of the Integer data type. Default value: 1.</para>
+        /// <para>The value of this parameter must be greater than 0 and cannot exceed the maximum value of Integer data type. Default value: 1.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Number of records displayed per page.</para>
         /// <remarks>
-        /// <para> Valid values: [1,100]. Default value: 10.</para>
+        /// <para>Default value: 10. Value range: [1, 100].</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,12 +50,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region of the live center. Valid values:</para>
+        /// <para>Specifies the live center for query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ap-southeast-1: Singapore</description></item>
-        /// <item><description>ap-southeast-5: Indonesia (Jakarta)</description></item>
-        /// <item><description>cn-beijing: China (Beijing)</description></item>
-        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
+        /// <item><description>ap-southeast-1 (Singapore)</description></item>
+        /// <item><description>ap-southeast-5 (Indonesia)</description></item>
+        /// <item><description>cn-beijing (Beijing)</description></item>
+        /// <item><description>cn-shanghai (Shanghai)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,14 +66,20 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>Region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The task ID. Fuzzy search is performed based on the task ID.</para>
+        /// <para>Task ID. Fuzzy search based on task ID.</para>
         /// <remarks>
-        /// <para> The ID can be up to 55 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The task ID consists of uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 55 characters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task name. Fuzzy search is performed based on the task name.</para>
+        /// <para>Task name. Fuzzy search based on task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task</para>

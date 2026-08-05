@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeStreamLocationBlockRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The AppName of the live stream.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveApp****</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The blocking type. Valid values:</para>
+        /// <para>The blocking method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>blacklist</description></item>
-        /// <item><description>whitelist</description></item>
+        /// <item><description><para>blacklist</para>
+        /// </description></item>
+        /// <item><description><para>whitelist</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The number of the page to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: integers from 1 to 100.</para>
+        /// <para>The number of entries to return on each page. Valid values: integers from 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -68,6 +70,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

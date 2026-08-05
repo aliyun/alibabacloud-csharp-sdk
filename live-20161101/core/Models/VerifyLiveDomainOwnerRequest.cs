@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class VerifyLiveDomainOwnerRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name for which you want to verify the ownership. You can specify only one domain name in each request.</para>
+        /// <para>The domain name to verify. Only one domain name can be verified at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +24,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -31,8 +37,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The verification method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>dnsCheck: DNS record verification</description></item>
-        /// <item><description>fileCheck: file verification</description></item>
+        /// <item><description><para>dnsCheck: DNS record verification</para>
+        /// </description></item>
+        /// <item><description><para>fileCheck: file verification</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveMessageGroupByPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of groups.</para>
+        /// <para>The group list.</para>
         /// </summary>
         [NameInMap("GroupList")]
         [Validation(Required=false)]
         public List<ListLiveMessageGroupByPageResponseBodyGroupList> GroupList { get; set; }
         public class ListLiveMessageGroupByPageResponseBodyGroupList : TeaModel {
             /// <summary>
-            /// <para>The list of administrators.</para>
+            /// <para>The list of administrator user IDs.</para>
             /// </summary>
             [NameInMap("AdminList")]
             [Validation(Required=false)]
             public List<string> AdminList { get; set; }
 
             /// <summary>
-            /// <para>The time when the group was created. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The creation time, expressed as a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1698299727</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? Createtime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who created the group.</para>
+            /// <para>The creator ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_77</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public bool? Delete { get; set; }
 
             /// <summary>
-            /// <para>The ID of the interactive messaging group.</para>
+            /// <para>The group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cU9MeBqf****</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The additional information about the group.</para>
+            /// <para>The extended information of the group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testgroupinfo</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string GroupInfo { get; set; }
 
             /// <summary>
-            /// <para>The name of the group.</para>
+            /// <para>The group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mytestgroup</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number of the returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B5D95365-5A46-1A6A-BBF5-C7B6BDED****</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

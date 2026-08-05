@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamsPublishListRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The name of the application to which the stream belongs. You can view AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveApp****</para>
@@ -20,7 +20,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The ingest domain or main streaming domain.</para>
+        /// <para>The ingest domain or streamer streaming domain.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>When you specify DomainName, make sure that the domain name is a live streaming domain name and that the user calling this operation has the permissions to operate on the specified domain name.</description></item>
+        /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,8 +36,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The time range specified by the StartTime and EndTime parameters cannot exceed 30 days.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time. The interval between EndTime and StartTime cannot exceed 30 days.</para>
+        /// <para>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,10 +50,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The sorting method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>stream_name_desc</b>: sorts the entries in descending order by stream name.</description></item>
-        /// <item><description><b>stream_name_asc</b>: sorts the entries in ascending order by stream name.</description></item>
-        /// <item><description><b>publish_time_desc</b>: sorts the entries in descending order by stream ingest time.</description></item>
-        /// <item><description><b>publish_time_asc</b> (default): sorts the entries in ascending order by stream ingest time.</description></item>
+        /// <item><description><b>stream_name_desc</b>: sorts by live stream name in descending order.</description></item>
+        /// <item><description><b>stream_name_asc</b>: sorts by live stream name in ascending order.</description></item>
+        /// <item><description><b>publish_time_desc</b>: sorts by stream ingest time in descending order.</description></item>
+        /// <item><description><b>publish_time_asc</b> (default): sorts by stream ingest time in ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +78,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 3000</b>. Default value: <b>2000</b>.</para>
+        /// <para>The page size. Valid values: <b>1 to 3000</b>. Default value: <b>2000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1500</para>
@@ -83,10 +88,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The mode in which stream names are matched. Valid values:</para>
+        /// <para>Specifies whether to use fuzzy match for the stream name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>fuzzy</b> (default): fuzzy match</description></item>
-        /// <item><description><b>strict</b>: exact match</description></item>
+        /// <item><description><b>fuzzy</b> (default): fuzzy match.</description></item>
+        /// <item><description><b>strict</b>: exact match.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,13 +101,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string QueryType { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time of stream ingest.</para>
+        /// <para>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,7 +124,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream.</para>
+        /// <para>The stream name. You can view StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveStream****</para>
@@ -123,11 +134,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamName { get; set; }
 
         /// <summary>
-        /// <para>The type of the streams to query. Valid values:</para>
+        /// <para>The stream type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>An empty value****: source streams</description></item>
-        /// <item><description><b>all</b>: all streams</description></item>
-        /// <item><description><b>trans</b>: transcoded streams</description></item>
+        /// <item><description><b>Not specified</b>: queries raw streams.</description></item>
+        /// <item><description><b>all</b>: queries all streams.</description></item>
+        /// <item><description><b>trans</b>: queries transcoded streams.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

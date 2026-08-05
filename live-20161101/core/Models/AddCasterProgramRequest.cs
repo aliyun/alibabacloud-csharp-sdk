@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterProgramRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the production studio.</para>
+        /// <para>The production studio ID.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster operation</a>, check the CasterId value returned by the CreateCaster operation.</para>
+        /// </description></item>
+        /// <item><description><para>If you created the production studio in the ApsaraVideo Live console, navigate to <b>ApsaraVideo Live console</b> &gt; <b>Production Studio</b> &gt; <b>Cloud Production Studio</b> to view the production studio name.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The production studio name in the production studio list on the Cloud Production Studio page is the production studio ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The information about episodes in the episode list.</para>
+        /// <para>The program list information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Episode")]
@@ -36,11 +38,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<AddCasterProgramRequestEpisode> Episode { get; set; }
         public class AddCasterProgramRequestEpisode : TeaModel {
             /// <summary>
-            /// <para>The components. Components in the production studio are listed from the bottom to the top in an array.</para>
+            /// <para>The component list. Elements are arranged from bottom to top in order.</para>
             /// <remarks>
-            /// <para> This parameter is required and takes effect when the Episode.N.EpisodeType parameter is set to Component.</para>
+            /// <para>Notice: This parameter is valid and required when Episode.N.EpisodeType is set to <b>Component</b>.</para>
             /// </remarks>
-            /// <para>This parameter is optional when the Episode.N.EpisodeType parameter is set to <b>Resource</b>. In this case, if this parameter is specified, the components are bound to and switched together with video resources.</para>
+            /// <para> When the node type is <b>Resource</b>, this indicates that the component is bound to the video source and switches synchronously.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[ &quot;a2b8e671-2fe5-4642-a2ec-bf931826****&quot;,  &quot;a2b8e671-2fe5-4642-a2ec-28374657****&quot;]</para>
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public List<string> ComponentId { get; set; }
 
             /// <summary>
-            /// <para>The end time of the episode. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+            /// <para>The end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC). This parameter is required. If not specified, MissingParameter is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2016-06-29T10:02:00Z</para>
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the episode.</para>
+            /// <para>The program name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>program_name_1</para>
@@ -70,11 +72,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string EpisodeName { get; set; }
 
             /// <summary>
-            /// <para>The type of the episode.</para>
+            /// <para>The node type. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description><b>Resource</b>: a video resource If you set this parameter to Resource, you must specify the Episode.N.ResourceId and Episode.N.SwitchType parameters.</description></item>
-            /// <item><description><b>Component</b>: a component If you set this parameter to Component, you must specify the Episode.N.ComponentId.N parameter.</description></item>
+            /// <item><description><b>Resource</b>: video source. If you select Resource, you must also set the request parameters Episode.N.ResourceId and Episode.N.SwitchType.</description></item>
+            /// <item><description><b>Component</b>: component. If you select Component, you must also set the request parameter Episode.N.ComponentId.N.</description></item>
             /// </list>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>When Resource is selected and the referenced resource contains a VodUrl (video-on-demand file), EndTime - StartTime cannot exceed the actual playback duration (in seconds) of the VOD file. Otherwise, InvalidParameter.EndTime is returned.</description></item>
+            /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>Resource</para>
@@ -84,13 +91,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string EpisodeType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the video resource.</para>
+            /// <para>The video source ID.</para>
             /// <remarks>
-            /// <para> This parameter takes effect and is required when the Episode.N.EpisodeType parameter is set to Resource.</para>
+            /// <para>Notice: This parameter is valid and required when Episode.N.EpisodeType is set to <b>Resource</b>.</para>
             /// </remarks>
-            /// <para>\
-            /// This parameter is invalid if you set the Episode.N.EpisodeType parameter to <b>Component</b>.</para>
-            /// <para>If the video resource was added by calling the <a href="https://help.aliyun.com/document_detail/60250.html">AddCasterVideoResource</a> operation, check the value of the response parameter ResourceId to obtain the ID.</para>
+            /// <para> This parameter is not applicable when Episode.N.EpisodeType is set to <b>Component</b>.</para>
+            /// <para>If you added the video source by calling the <a href="https://help.aliyun.com/document_detail/60250.html">AddCasterVideoResource operation</a>, check the ResourceId value returned by the AddCasterVideoResource operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a2b8e671-2fe5-4642-a2ec-bf93880e****</para>
@@ -100,7 +106,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The start time of the episode. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+            /// <para>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC). This parameter is required. If not specified, MissingParameter is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2016-06-29T09:00:00Z</para>
@@ -110,13 +116,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The policy for switching episodes. Valid values:</para>
+            /// <para>The switch policy. Valid values:</para>
             /// <remarks>
-            /// <para> This parameter takes effect only when the Episode.N.EpisodeType parameter is set to Resource.</para>
+            /// <para>Notice: This parameter is valid only when Episode.N.EpisodeType is set to <b>Resource</b>.</para>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description><b>TimeFirst</b>: The episode starts when the previous episode ends and ends when the next episode starts. If no next episode exists, the episode keeps repeating until a new episode is added or the production studio stops. This value is required for live video resources.</description></item>
-            /// <item><description><b>ContentFirst</b>: The episode starts and ends as scheduled.</description></item>
+            /// <item><description><b>TimeFirst</b>: time first. Live video sources can only use the time first policy. </description></item>
+            /// <item><description><b>ContentFirst</b>: content first.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -132,6 +138,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

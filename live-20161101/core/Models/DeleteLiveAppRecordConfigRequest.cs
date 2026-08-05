@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveAppRecordConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The AppName of the live stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -74,10 +74,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether carousel playback is enabled.</para>
+        /// <para>Indicates whether the program list is enabled.</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Carousel playback is disabled.</description></item>
-        /// <item><description><b>1</b>: Carousel playback is enabled.</description></item>
+        /// <item><description><para><b>0</b>: disabled</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: enabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? ProgramEffect { get; set; }
 
         /// <summary>
-        /// <para>The name of the episode list.</para>
+        /// <para>The name of the program list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>programs_name</para>
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

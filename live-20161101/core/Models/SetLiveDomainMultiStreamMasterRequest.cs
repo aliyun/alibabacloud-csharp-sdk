@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamName { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the stream ingest.</para>
+        /// <para>The unique identifier of the stream ingest. You can obtain this identifier by calling the <a href="https://help.aliyun.com/document_detail/2871872.html">QueryLiveDomainMultiStreamList</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

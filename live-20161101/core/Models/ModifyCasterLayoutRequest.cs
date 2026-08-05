@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyCasterLayoutRequest : TeaModel {
         /// <summary>
-        /// <para>The audio layers.</para>
+        /// <para>The audio information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AudioLayer")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<ModifyCasterLayoutRequestAudioLayer> AudioLayer { get; set; }
         public class ModifyCasterLayoutRequestAudioLayer : TeaModel {
             /// <summary>
-            /// <para>The fixed delay of the audio layer. This parameter is used to synchronize the audio with subtitles. Unit: milliseconds. Default value: <b>0</b>. Valid values: <b>0 to 5000</b>.</para>
+            /// <para>The fixed delay for the audio. This can be used for subtitle synchronization. Unit: milliseconds. Default value: <b>0</b>. Valid values: <b>0 to 5000</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5000</para>
@@ -28,11 +28,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? FixedDelayDuration { get; set; }
 
             /// <summary>
-            /// <para>The sound channels that are used for volume input in the audio layer. Valid values:</para>
+            /// <para>The audio channels that can be used as volume input. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>leftChannel</b>: the left channel</description></item>
-            /// <item><description><b>rightChannel</b>: the right channel</description></item>
-            /// <item><description><b>all</b> (default): both the left and right channels</description></item>
+            /// <item><description><b>leftChannel</b>: left channel.</description></item>
+            /// <item><description><b>rightChannel</b>: right channel.</description></item>
+            /// <item><description><b>all</b> (default): both channels.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string ValidChannel { get; set; }
 
             /// <summary>
-            /// <para>The normalized value of the height of the audio layer. The width of the audio layer is proportionally scaled based on this parameter.</para>
-            /// <para>The default value is <b>0</b>, which indicates that the audio layer is not scaled.</para>
+            /// <para>The normalized height ratio of the Layer element. The width of the element is proportionally scaled based on this height. </para>
+            /// <para>Default value: <b>0</b>, which indicates that the element is displayed at its original size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The location IDs of the video layers, which are in the same order as the video layers.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2848020.html">AddCasterVideoResource</a>.</para>
+        /// <para>The location ID (LocationId) of the video resource element.</para>
+        /// <para>For the LocationId, see <a href="https://help.aliyun.com/document_detail/2848020.html">Add a video source</a>. The elements correspond to the VideoLayers elements in order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,13 +68,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<string> BlendList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the production studio.</para>
+        /// <para>The production studio ID.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster operation</a>, check the CasterId parameter returned by the CreateCaster operation.</para>
+        /// </description></item>
+        /// <item><description><para>If you created the production studio in the ApsaraVideo Live console, go to <b>ApsaraVideo Live console</b> &gt; <b>Production Studio</b> &gt; <b>Cloud Production Studio</b> to view the ID.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The production studio name in the production studio list on the Cloud Production Studio page of the ApsaraVideo Live console is the production studio ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the layout. If the layout was added by calling the <a href="https://help.aliyun.com/document_detail/2848025.html">AddCasterLayout</a> operation, check the value of the response parameter LayoutId to obtain the ID.</para>
+        /// <para>The layout ID. If you added the production studio layout by calling the <a href="https://help.aliyun.com/document_detail/2848025.html">AddCasterLayout operation</a>, check the LayoutId parameter returned by the AddCasterLayout operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,8 +99,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string LayoutId { get; set; }
 
         /// <summary>
-        /// <para>The location IDs of the audio layers, which are in the same order as the audio layers.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2848020.html">AddCasterVideoResource</a>.</para>
+        /// <para>The location ID (LocationId) of the audio resource element.</para>
+        /// <para>For the LocationId, see <a href="https://help.aliyun.com/document_detail/2848020.html">Add a video source</a>. The elements correspond to the AudioLayers elements in order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,12 +114,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The video layers.</para>
+        /// <para>The video information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("VideoLayer")]
@@ -125,10 +133,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<ModifyCasterLayoutRequestVideoLayer> VideoLayer { get; set; }
         public class ModifyCasterLayoutRequestVideoLayer : TeaModel {
             /// <summary>
-            /// <para>The scaling mode of the video layer. Valid values:</para>
+            /// <para>The element fill mode. </para>
             /// <list type="bullet">
-            /// <item><description><b>none</b> (default): indicates that the video layer is not scaled. The video layer is displayed based on its original size.</description></item>
-            /// <item><description><b>fit</b>: indicates that the video layer is adapted to the fill area. In this case, the video layer is scaled proportionally, with its original aspect ratio retained. The video layer is placed in the center, with its longer sides aligned with the fill area. If the aspect ratio of the video layer is different from that of the fill area, the content of the lower layer is displayed alongside the shorter sides. If there is no lower layer, black bars are displayed instead.</description></item>
+            /// <item><description><b>none</b> (default): no fill. The Layer settings are configured with the image as the target.</description></item>
+            /// <item><description><b>fit</b>: adaptive. The Layer settings are configured with the fill area (box) as the target. The image is scaled based on the original aspect ratio and centered within the fill area (box) using a long-edge alignment method. If the aspect ratio of the fill area does not match the image, the short edges are not filled (the lower Layer image is displayed. If no lower Layer is configured, the default black background is displayed).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,7 +147,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string FillMode { get; set; }
 
             /// <summary>
-            /// <para>The fixed delay of the video layer. This parameter is used to synchronize the video with subtitles. Unit: milliseconds. Default value: <b>0</b>. Valid values: <b>0 to 5000</b>.</para>
+            /// <para>The fixed delay for the video. This can be used for subtitle synchronization. Unit: milliseconds. Default value: <b>0</b>. Valid values: <b>0 to 5000</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5000</para>
@@ -149,10 +157,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? FixedDelayDuration { get; set; }
 
             /// <summary>
-            /// <para>The normalized value of the height of the video layer.</para>
+            /// <para>The normalized height ratio of the Layer element. </para>
             /// <list type="bullet">
-            /// <item><description>If the FillMode parameter of the video layer is set to none, the width of the video layer is proportionally scaled based on this parameter. The default value is <b>0</b>, which indicates that the video layer is not scaled.</description></item>
-            /// <item><description>If the FillMode parameter of the video layer is set to fit, the value of this parameter is greater than <b>0</b>.</description></item>
+            /// <item><description>If the no-fill mode is used, the width of the element is proportionally scaled based on this height. Default value: <b>0</b>, which indicates that the image is displayed at its original size.</description></item>
+            /// <item><description>If the adaptive mode is used, this field is required and must be greater than <b>0</b>. It specifies the normalized height ratio of the fill area (box).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -163,9 +171,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? HeightNormalized { get; set; }
 
             /// <summary>
-            /// <para>The normalized value of the position of the video layer, in the format of <c>[x,y]</c>. Default value: <c>[0,0]</c>.</para>
+            /// <para>The normalized position values <c>[x,y]</c> of the Layer element. Default value: <c>[0,0]</c>.</para>
             /// <remarks>
-            /// <para> The values of x and y are normalized.</para>
+            /// <para>Note: The x and y values must be normalized.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -176,17 +184,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public List<float?> PositionNormalized { get; set; }
 
             /// <summary>
-            /// <para>The reference coordinates of the video layer. Valid values:</para>
+            /// <para>The reference coordinate for the position of the element. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>topLeft</b> (default): the upper-left corner</description></item>
-            /// <item><description><b>topRight</b>: the upper-right corner</description></item>
-            /// <item><description><b>bottomLeft</b>: the lower-left corner</description></item>
-            /// <item><description><b>bottomRight</b>: the lower-right corner</description></item>
-            /// <item><description><b>center</b>: the center</description></item>
-            /// <item><description><b>topCenter</b>: the upper center</description></item>
-            /// <item><description><b>bottomCenter</b>: the lower center</description></item>
-            /// <item><description><b>leftCenter</b>: the left center</description></item>
-            /// <item><description><b>rightCenter</b>: the right center</description></item>
+            /// <item><description><b>topLeft</b> (default): top-left.</description></item>
+            /// <item><description><b>topRight</b>: top-right.</description></item>
+            /// <item><description><b>bottomLeft</b>: bottom-left.</description></item>
+            /// <item><description><b>bottomRight</b>: bottom-right.</description></item>
+            /// <item><description><b>center</b>: center.</description></item>
+            /// <item><description><b>topCenter</b>: top-center.</description></item>
+            /// <item><description><b>bottomCenter</b>: bottom-center.</description></item>
+            /// <item><description><b>leftCenter</b>: left-center.</description></item>
+            /// <item><description><b>rightCenter</b>: right-center.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -197,10 +205,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string PositionRefer { get; set; }
 
             /// <summary>
-            /// <para>The normalized value of the width of the video layer.</para>
+            /// <para>The normalized width ratio of the Layer element. </para>
             /// <list type="bullet">
-            /// <item><description>If the FillMode parameter of the video layer is set to none, the height of the video layer is proportionally scaled based on this parameter. The default value is <b>0</b>, which indicates that the video layer is not scaled.</description></item>
-            /// <item><description>If the FillMode parameter of the video layer is set to fit, the value of this parameter is greater than <b>0</b>.</description></item>
+            /// <item><description>If the no-fill mode is used, the height of the element is proportionally scaled based on this width. Default value: <b>0</b>, which indicates that the image is displayed at its original size.</description></item>
+            /// <item><description>If the adaptive mode is used, this field is required and must be greater than <b>0</b>. It specifies the normalized width ratio of the fill area (box).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

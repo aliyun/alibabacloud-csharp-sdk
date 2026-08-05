@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class GetMessageTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-****-CB92E68F4CD8</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>Return results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetMessageTokenResponseBodyResult Result { get; set; }
         public class GetMessageTokenResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The token used to establish a persistent connection.</para>
+            /// <para>Token used for establishing persistent connections.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oauth_cloud_key:***-b0YY5Gy6Q</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string AccessToken { get; set; }
 
             /// <summary>
-            /// <para>Indicates how long until the token expires. Unit: milliseconds.</para>
+            /// <para>Logon token expiration time in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86400000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? AccessTokenExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The updated token. If a token expires, you can call RefreshToken to obtain a new token.</para>
+            /// <para>Refresh token. If the AccessToken expires, you can use the RefreshToken to obtain a new token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oauth_cloud_key:****-Q62xggOTdgk3gw=</para>

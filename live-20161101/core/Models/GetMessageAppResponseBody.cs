@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class GetMessageAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-****-CB92E68F4CD8</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The result of the request.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetMessageAppResponseBodyResult Result { get; set; }
         public class GetMessageAppResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The configurations of the application.</para>
+            /// <para>The application configuration.</para>
             /// </summary>
             [NameInMap("AppConfig")]
             [Validation(Required=false)]
             public Dictionary<string, string> AppConfig { get; set; }
 
             /// <summary>
-            /// <para>The ID of the interactive messaging application.</para>
+            /// <para>The ID of the interactive message application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VKL3***</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The name of the interactive messaging application.</para>
+            /// <para>The name of the interactive message application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testApp</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The time when the interactive messaging application was created. The time is displayed in UTC.</para>
+            /// <para>The UTC timestamp when the application was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>502280113</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public Dictionary<string, string> Extension { get; set; }
 
             /// <summary>
-            /// <para>The status of the interactive message application. A value of 1 indicates that the application is normal.</para>
+            /// <para>The status of the interactive message application. A value of 1 indicates that the application is in a normal state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class MuteAllGroupUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-****-CB92E68F4CD8</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public MuteAllGroupUserResponseBodyResult Result { get; set; }
         public class MuteAllGroupUserResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the mute was successful. Valid values:</para>
+            /// <para>Indicates whether the muting was successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The mute was successful.</description></item>
-            /// <item><description>false: The mute failed.</description></item>
+            /// <item><description>true: Successful.</description></item>
+            /// <item><description>false: Unsuccessful.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

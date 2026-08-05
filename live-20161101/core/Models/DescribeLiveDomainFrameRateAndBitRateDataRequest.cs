@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
     public class DescribeLiveDomainFrameRateAndBitRateDataRequest : TeaModel {
         /// <summary>
         /// <para>The ingest domain.</para>
+        /// <remarks>
+        /// <para>Make sure that the domain name added to ApsaraVideo Live and that you have the permissions to manage the domain name.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The point of time to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The time to query. The time is in UTC. Format: <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +38,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string QueryTime { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

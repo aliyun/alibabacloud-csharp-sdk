@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveSpecificStagingConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the configuration that you want to delete. If you want to specify multiple IDs, separate them with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/297374.html">DescribeLiveDomainStagingConfig</a> operation to obtain the configuration ID.</para>
+        /// <para>The configuration ID. To specify multiple IDs, separate them with commas (,). To obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2848231.html">DescribeLiveDomainStagingConfig</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

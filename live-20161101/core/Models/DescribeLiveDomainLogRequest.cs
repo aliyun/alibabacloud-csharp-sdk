@@ -11,7 +11,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
     public class DescribeLiveDomainLogRequest : TeaModel {
         /// <summary>
         /// <para>The streaming domain or ingest domain.</para>
-        /// <para>You can specify only one domain name.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>When you specify DomainName, make sure that the domain name is a live streaming domain name and that the user calling this operation has the required permissions on the specified domain name.</description></item>
+        /// <item><description>Only a single domain name can be queried at a time.</description></item>
+        /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,8 +27,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query data. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// <para>The end time must be later than the start time. The maximum time range that can be specified is 31 days.</para>
+        /// <para>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+        /// <para>The end time must be later than the start time. The interval between the start time and end time cannot exceed 31 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-10-20T05:00:00Z</para>
@@ -37,9 +42,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number.
+        /// Valid values: [1, 9223372036854775807].</para>
         /// <remarks>
-        /// <para> If you do not specify the PageNumber parameter, the data on the first page is returned.</para>
+        /// <para>If you do not specify PageNumber, the first page of data is returned by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,9 +56,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: integers from <b>1 to 1000</b>.</description></item>
+        /// <item><description>Any integer from <b>1</b> to <b>1000</b>.</description></item>
         /// <item><description>Default value: <b>300</b>.</description></item>
         /// <item><description>Maximum value: <b>1000</b>.</description></item>
         /// </list>
@@ -64,12 +70,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-10-20T04:00:00Z</para>

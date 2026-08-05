@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>Push domain.</para>
+        /// <para>The ingest domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CF60DB6A-7FD6-426E-9288-122CC1A52FA7</para>

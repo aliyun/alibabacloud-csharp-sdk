@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateLiveStreamMonitorRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application that plays the output streams of the monitoring session.</para>
-        /// <para>You can specify a name. If you do not specify a name, the system uses <b>monitor</b> as the name of the application.</para>
+        /// <para>The application name for the output stream of the monitoring session. You can specify a custom name. If you do not specify this parameter, <b>monitor</b> is used as the application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>monitor****</para>
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string App { get; set; }
 
         /// <summary>
-        /// <para>Supports input of callback addresses in HTTP(S) format.</para>
+        /// <para>The webhook address. HTTP and HTTPS are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></para>
@@ -31,9 +30,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>DingTalk alert monitoring sends alert notifications through a DingTalk group robot. Please set up the DingTalk group robot first and enter the HTTP(S) address of the robot here. For more details, see <a href="https://open.dingtalk.com/document/robots/custom-robot-access">Custom Robot Access</a>.</para>
+        /// <para>The webhook URL of the DingTalk chatbot. To receive alert notifications, configure a DingTalk chatbot and enter its webhook URL, which can be in HTTP or HTTPS format. For more information, see <a href="https://open.dingtalk.com/document/robots/custom-robot-access">Custom robot access</a>.</para>
         /// <remarks>
-        /// <para>Configure the custom keyword for the DingTalk group robot as \&quot;alert\&quot;, otherwise, messages will not be received.</para>
+        /// <para>Set the custom keyword for the DingTalk chatbot to &quot;Alerting&quot;. Otherwise, you cannot receive messages.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,7 +43,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DingTalkWebHookUrl { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the monitoring session.</para>
+        /// <para>The domain name to monitor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +54,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The list of input streams to monitor. For more information, see the following <b>InputConfig</b> table.</para>
+        /// <para>The list of input streams to monitor. For more information, see the <b>InputConfig</b> table below.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +65,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string InputList { get; set; }
 
         /// <summary>
-        /// <para>Alarm threshold setting for monitoring, in JSON format. For more details, please refer to the table below for MonitorConfig.</para>
+        /// <para>The alert threshold settings for monitoring. The value must be a JSON string. For more information, see the MonitorConfig table below.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;{\&quot;fpsLowThres\&quot;: 0.6,\&quot;brLowThres\&quot;: 1.1,\&quot;eofDurationThresSec\&quot;: 10}&quot;</para>
@@ -87,12 +86,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string MonitorName { get; set; }
 
         /// <summary>
-        /// <para>The output template of the monitoring session. Valid values:</para>
+        /// <para>The output template for the monitoring session. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lp_ld</b>: low definition.</description></item>
-        /// <item><description><b>lp_sd</b>: standard definition.</description></item>
-        /// <item><description><b>lp_hd</b>: high definition.</description></item>
-        /// <item><description><b>lp_ud</b>: ultra high definition.</description></item>
+        /// <item><description><para><b>lp_ld</b>: low definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_sd</b>: standard definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_hd</b>: high definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_ud</b>: ultra-high definition.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -107,12 +110,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the output stream of the monitoring session. If you do not specify a name, the system generates a name at random.</para>
+        /// <para>The name of the output stream for the monitoring session. If you do not specify this parameter, the system generates a random name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>monitorStream****</para>

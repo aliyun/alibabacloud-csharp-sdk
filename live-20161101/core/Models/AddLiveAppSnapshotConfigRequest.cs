@@ -68,9 +68,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The naming format of snapshots that are stored in the overwrite mode, which means that a new snapshot overwrites the previous snapshot.</para>
         /// <list type="bullet">
-        /// <item><description>The name must be less than 256 bytes in length.</description></item>
-        /// <item><description>Only JPG images are supported.</description></item>
-        /// <item><description>The name can contain variables such as {AppName} and {StreamName}.</description></item>
+        /// <item><description><para>The name must be less than 256 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>Only JPG images are supported.</para>
+        /// </description></item>
+        /// <item><description><para>The name can contain variables such as {AppName} and {StreamName}.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,9 +95,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The naming format of snapshots that are stored in sequence,</para>
         /// <para>which means that a new snapshot does not overwrite the previous snapshot. You can call the <a href="https://help.aliyun.com/document_detail/2847902.html">DescribeLiveStreamSnapshotInfo</a> operation to query the snapshots that were captured within a specific time period.</para>
         /// <list type="bullet">
-        /// <item><description>The name must be less than 256 bytes in length.</description></item>
-        /// <item><description>Only JPG images are supported.</description></item>
-        /// <item><description>The name can contain variables such as {AppName}, {StreamName}, {UnixTimestamp}, and {Sequence}. The name must contain at least one of the {UnixTimestamp} and {Sequence} variables.</description></item>
+        /// <item><description><para>The name must be less than 256 bytes in length.</para>
+        /// </description></item>
+        /// <item><description><para>Only JPG images are supported.</para>
+        /// </description></item>
+        /// <item><description><para>The name can contain variables such as {AppName}, {StreamName}, {UnixTimestamp}, and {Sequence}. The name must contain at least one of the {UnixTimestamp} and {Sequence} variables.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamWatermarksRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the main streaming domain.</para>
+        /// <para>The main streaming domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>live.yourdomain.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The keyword used in the query. You can specify the template ID or name. Fuzzy search is supported for the name.</para>
+        /// <para>The keyword for the search. You can specify a template ID or name. Fuzzy search is supported for names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>445409ec-7eaa-461d-8f29-4bec2eb9****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of templates per page. Default value: 100.</para>
+        /// <para>The number of templates to return on each page. The default value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -53,6 +53,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

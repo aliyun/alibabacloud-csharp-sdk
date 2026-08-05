@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeCasterConfigResponseBody : TeaModel {
+        [NameInMap("AudioMixerMode")]
+        [Validation(Required=false)]
+        public string AudioMixerMode { get; set; }
+
         /// <summary>
-        /// <para>The configuration for automatic switchover to the standby resource. The <c>eofThres</c> field specifies the duration after which the production studio automatically switches to the standby resource if a stream interruption occurs. Unit: seconds.</para>
+        /// <para>The automatic standby video switching configuration. <c>eofThres</c>: specifies the duration of stream interruption before automatically switching to the standby video. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;eofThres&quot;:3}</para>
@@ -20,10 +24,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AutoSwitchUrgentConfig { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the production studio automatically switches to the standby resource in case of a stream interruption.</para>
+        /// <para>Indicates whether automatic switchover to the standby video upon stream interruption is enabled.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Shutdown.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +38,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AutoSwitchUrgentOn { get; set; }
 
         /// <summary>
-        /// <para>The callback URL.</para>
+        /// <para>The user callback URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://learn.aliyundoc.com/callBackLive">http://learn.aliyundoc.com/callBackLive</a></para>
@@ -44,7 +48,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The ID of the production studio.</para>
+        /// <para>The production studio ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LIVEPRODUCER_POST-cn-0pp1czt****</para>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the production studio.</para>
+        /// <para>The production studio name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>coco-caster10</para>
@@ -64,10 +68,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether channels are enabled for the production studio. Valid values:</para>
+        /// <para>Indicates whether Channel is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Channels are disabled.</description></item>
-        /// <item><description><b>1</b>: Channels are enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,10 +82,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? ChannelEnable { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether stream delay is enabled. Unit: seconds.</para>
+        /// <para>The stream delay. Unit: seconds. </para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Stream delay is disabled.</description></item>
-        /// <item><description><b>A value greater than 0</b>: Stream delay is enabled.</description></item>
+        /// <item><description>Greater than <b>0</b>: Stream delay is enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,7 +96,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public float? Delay { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The primary streaming domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -102,10 +106,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the carousel playback feature is enabled. Valid values:</para>
+        /// <para>The playlist effective flag. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The carousel playback feature is disabled.</description></item>
-        /// <item><description><b>1</b>: The carousel playback feature is enabled.</description></item>
+        /// <item><description><b>0</b>: Not effective.</description></item>
+        /// <item><description><b>1</b>: Effective.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,7 +120,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? ProgramEffect { get; set; }
 
         /// <summary>
-        /// <para>The name of the playlist for carousel playback.</para>
+        /// <para>The playlist name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>program_name</para>
@@ -126,19 +130,23 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ProgramName { get; set; }
 
         /// <summary>
-        /// <para>The recording configuration. If this parameter is empty, the recording feature is disabled.</para>
+        /// <para>The recording configuration. If this parameter is empty, the recording feature is not enabled.</para>
         /// </summary>
         [NameInMap("RecordConfig")]
         [Validation(Required=false)]
         public DescribeCasterConfigResponseBodyRecordConfig RecordConfig { get; set; }
         public class DescribeCasterConfigResponseBodyRecordConfig : TeaModel {
             /// <summary>
-            /// <para>On-demand recording. Values:</para>
+            /// <para>The on-demand recording mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: Off. </description></item>
-            /// <item><description>1: Via HTTP callback. </description></item>
-            /// <item><description>2: Parse streaming parameters for on-demand recording. </description></item>
-            /// <item><description>7: Default to not record.</description></item>
+            /// <item><description><para>0: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para>1: HTTP callback-based.</para>
+            /// </description></item>
+            /// <item><description><para>2: On-demand recording by parsing stream ingest parameters.</para>
+            /// </description></item>
+            /// <item><description><para>7: Not recorded by default.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,7 +157,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? OnDemand { get; set; }
 
             /// <summary>
-            /// <para>The OSS bucket for storage.</para>
+            /// <para>The storage location.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveBucket****</para>
@@ -159,7 +167,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string OssBucket { get; set; }
 
             /// <summary>
-            /// <para>The Object Storage Service (OSS) endpoint.</para>
+            /// <para>The OSS endpoint of the storage location.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss-cn-shanghai.aliyundoc.com</para>
@@ -199,7 +207,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>97df6b7f-3490-47d2-ac50-8833e1b64597</para>
@@ -209,7 +217,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The custom stream redirect URL.</para>
+        /// <para>The custom side output URL of the production studio.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rtmp://sophon-developer.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****</para>
@@ -219,10 +227,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SideOutputUrl { get; set; }
 
         /// <summary>
-        /// <para>The list of custom stream redirect URLs.</para>
+        /// <para>The list of custom side output URLs of the production studio.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rtmp://sophon-developer.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****</para>
+        /// <para>[&quot;rtmp://domain/app1/stream1&quot;,&quot;rtmp://domain/app2/stream2&quot;]</para>
         /// </summary>
         [NameInMap("SideOutputUrlList")]
         [Validation(Required=false)]
@@ -266,16 +274,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public DescribeCasterConfigResponseBodyTranscodeConfig TranscodeConfig { get; set; }
         public class DescribeCasterConfigResponseBodyTranscodeConfig : TeaModel {
             /// <summary>
-            /// <para>The transcoding template of the production studio. Valid values:</para>
+            /// <para>The production studio transcoding template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>lp_ld</b>: low definition</description></item>
-            /// <item><description><b>lp_sd</b>: standard definition</description></item>
-            /// <item><description><b>lp_hd</b>: high definition</description></item>
-            /// <item><description><b>lp_ud</b>: ultra high definition</description></item>
-            /// <item><description><b>lp_ld_v</b>: low definition (portrait mode)</description></item>
-            /// <item><description><b>lp_sd_v</b>: standard definition (portrait mode)</description></item>
-            /// <item><description><b>lp_hd_v</b>: high definition (portrait mode)</description></item>
-            /// <item><description><b>lp_ud_v</b>: ultra high definition (portrait mode)</description></item>
+            /// <item><description><b>lp_ld</b>: low definition.</description></item>
+            /// <item><description><b>lp_sd</b>: standard definition.</description></item>
+            /// <item><description><b>lp_hd</b>: high definition.</description></item>
+            /// <item><description><b>lp_ud</b>: ultra-high definition.</description></item>
+            /// <item><description><b>lp_ld_v</b>: portrait low definition.</description></item>
+            /// <item><description><b>lp_sd_v</b>: portrait standard definition.</description></item>
+            /// <item><description><b>lp_hd_v</b>: portrait high definition.</description></item>
+            /// <item><description><b>lp_ud_v</b>: portrait ultra-high definition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -286,7 +294,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string CasterTemplate { get; set; }
 
             /// <summary>
-            /// <para>The custom settings.</para>
+            /// <para>The custom configuration.</para>
             /// </summary>
             [NameInMap("CustomParams")]
             [Validation(Required=false)]
@@ -320,7 +328,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public int? Fps { get; set; }
 
                     /// <summary>
-                    /// <para>The video height. Unit: pixels.</para>
+                    /// <para>The video height. Unit: pixels (px).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>720</para>
@@ -330,7 +338,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public int? Height { get; set; }
 
                     /// <summary>
-                    /// <para>The video width. Unit: pixels.</para>
+                    /// <para>The video width. Unit: pixels (px).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1080</para>
@@ -356,7 +364,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>Prepared broadcast image media asset ID.</para>
+        /// <para>The media library asset ID of the standby image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a089175eb5f4427684fc0715159a****</para>
@@ -366,7 +374,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string UrgentImageId { get; set; }
 
         /// <summary>
-        /// <para>URL of the standby image material.</para>
+        /// <para>The URL of the standby image.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://learn.aliyundoc.com/AppName/image.jpg">http://learn.aliyundoc.com/AppName/image.jpg</a></para>
@@ -386,7 +394,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string UrgentLiveStreamUrl { get; set; }
 
         /// <summary>
-        /// <para>The ID of the material that is used as the standby video from the media library.</para>
+        /// <para>The media library asset ID of the standby video.</para>
         /// 
         /// <b>Example:</b>
         /// <para>98646538-bcf9-4aef-bd4a-e6bb76588****</para>

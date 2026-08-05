@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddLiveAISubtitleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The background color of the subtitles, which is an RGBA value.</para>
+        /// <para>The background color of the subtitle. Specify the value in RGBA format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0xFF0000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string BgColor { get; set; }
 
         /// <summary>
-        /// <para>The background size of the subtitles. Valid values: [0,1].</para>
+        /// <para>The background size of the subtitle. Valid values: [0, 1].</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.09</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public float? BgWidthNormalized { get; set; }
 
         /// <summary>
-        /// <para>The font weight. Valid values: [0,1].</para>
+        /// <para>The font weight. Valid values: [0, 1].</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.05</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public float? BorderWidthNormalized { get; set; }
 
         /// <summary>
-        /// <para>The subtitle template that you copy. Set the value to the name of the subtitle template.</para>
+        /// <para>The subtitle template to copy from. Set this parameter to the value of SubtitleName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sub01</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CopyFrom { get; set; }
 
         /// <summary>
-        /// <para>The custom description of the subtitle template. The description can be up to 128 characters in length and can contain letters, digits, and special characters.</para>
+        /// <para>The custom description of the subtitle. The description can contain Chinese characters, letters, digits, and special characters, and can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>live AI subtitle template</para>
@@ -60,12 +60,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The target language. Valid values:</para>
+        /// <para>The target language for translation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>en-US: English </description></item>
-        /// <item><description>zh-CN: Chinese </description></item>
-        /// <item><description>es-ES: Spanish </description></item>
-        /// <item><description>ru-RU: Russian</description></item>
+        /// <item><description>English: en-US</description></item>
+        /// <item><description>Chinese: zh-CN</description></item>
+        /// <item><description>Spanish: es-ES</description></item>
+        /// <item><description>Russian: ru-RU.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DstLanguage { get; set; }
 
         /// <summary>
-        /// <para>The font color, which is an RGBA value.</para>
+        /// <para>The font color. Specify the value in RGBA format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0xFFFFFF</para>
@@ -88,13 +88,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The font. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>KaiTi (default)</description></item>
-        /// <item><description>AlibabaPuHuiTi-Regular</description></item>
-        /// <item><description>AlibabaPuHuiTi-Bold</description></item>
-        /// <item><description>AlibabaPuHuiTi-Light</description></item>
-        /// <item><description>NotoSansHans-Regular</description></item>
-        /// <item><description>NotoSansHans-Bold</description></item>
-        /// <item><description>NotoSansHans-Light</description></item>
+        /// <item><description>KaiTi: KaiTi (default)</description></item>
+        /// <item><description>AlibabaPuHuiTi-Regular: Alibaba PuHuiTi Regular</description></item>
+        /// <item><description>AlibabaPuHuiTi-Bold: Alibaba PuHuiTi Bold</description></item>
+        /// <item><description>AlibabaPuHuiTi-Light: Alibaba PuHuiTi Light</description></item>
+        /// <item><description>NotoSansHans-Regular: Noto Sans SC Regular</description></item>
+        /// <item><description>NotoSansHans-Bold: Noto Sans SC Bold</description></item>
+        /// <item><description>NotoSansHans-Light: Noto Sans SC Light.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string FontName { get; set; }
 
         /// <summary>
-        /// <para>The font size. Valid values: [0,1].</para>
+        /// <para>The font size. Valid values: [0, 1].</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,17 +116,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public float? FontSizeNormalized { get; set; }
 
         /// <summary>
-        /// <para>The preview height. Unit: pixels.
-        /// The following specifications of preview width × preview height are supported: </para>
+        /// <para>The height of the preview screen. Unit: px.</para>
+        /// <para>The width × height of the preview screen supports only the following specifications:          </para>
         /// <list type="bullet">
-        /// <item><description>Landscape low definition 360p (640×360) </description></item>
-        /// <item><description>Portrait low definition 360p (360×640)</description></item>
-        /// <item><description>Landscape standard definition 480p (854×480)</description></item>
-        /// <item><description>Portrait standard definition 480p (480×854)</description></item>
-        /// <item><description>Landscape high definition 720p (1280×720)</description></item>
-        /// <item><description>Portrait high definition 720p (720×1280)</description></item>
-        /// <item><description>Landscape ultra-high definition 1080p (1920×1080)</description></item>
-        /// <item><description>Portrait ultra-high definition 1080p (1080×1920)</description></item>
+        /// <item><description>Landscape low definition 360P: 640 × 360 </description></item>
+        /// <item><description>Portrait low definition 360P: 360 × 640</description></item>
+        /// <item><description>Landscape standard definition 480P: 854 × 480</description></item>
+        /// <item><description>Portrait standard definition 480P: 480 × 854</description></item>
+        /// <item><description>Landscape high definition 720P: 1280 × 720</description></item>
+        /// <item><description>Portrait high definition 720P: 720 × 1280</description></item>
+        /// <item><description>Landscape ultra-high definition 1080P: 1920 × 1080</description></item>
+        /// <item><description>Portrait ultra-high definition 1080P: 1080 × 1920.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Height { get; set; }
 
         /// <summary>
-        /// <para>The number of displayed lines.</para>
+        /// <para>The number of lines to display.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -151,13 +151,25 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The position of the subtitles. The value is a pair of coordinates for which the origin of the x and y axes is the lower-left corner of the screen.</para>
+        /// <para>The position of the subtitle. The value is the x,y coordinates with the bottom-left corner of the screen as the origin.</para>
+        /// <remarks>
+        /// <para>The x and y values must be normalized. The actual values are multiplied by the video height. For example, if the video height is 720p and PositionNormalized is set to [0.1, 0.5], the actual position of the subtitle is x = 72 and y = 360.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[0.32,0.27]</para>
         /// </summary>
         [NameInMap("PositionNormalized")]
         [Validation(Required=false)]
         public string PositionNormalizedShrink { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -175,9 +187,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The source language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>en-US: English </description></item>
-        /// <item><description>zh-CN: Chinese </description></item>
-        /// <item><description>ru-RU: Russian</description></item>
+        /// <item><description>English: en-US</description></item>
+        /// <item><description>Chinese: zh-CN</description></item>
+        /// <item><description>Russian: ru-RU.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -200,7 +212,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SubtitleName { get; set; }
 
         /// <summary>
-        /// <para>The preview width. Unit: pixels.</para>
+        /// <para>The width of the preview screen. Unit: px.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1280</para>
@@ -210,7 +222,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Width { get; set; }
 
         /// <summary>
-        /// <para>The number of words displayed per line. Valid values: integers from 1 to 500.</para>
+        /// <para>The number of characters per line. Valid values: integers in the range of [1, 500].</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

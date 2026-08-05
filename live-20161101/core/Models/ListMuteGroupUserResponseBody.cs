@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListMuteGroupUserResponseBodyResult Result { get; set; }
         public class ListMuteGroupUserResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the current page is followed by another page. Valid values:</para>
+            /// <para>Indicates whether there is a next page. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: There is a next page.</description></item>
+            /// <item><description>false: There is no next page.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

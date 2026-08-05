@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListMessageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application.</para>
+        /// <para>The interactive message application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message group.</para>
+        /// <para>The message group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1. Valid values: 1 to 100000.</para>
+        /// <para>The page number. Default value: 1. Valid values: 1 to 100000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. Valid values: 1 to 50.</para>
+        /// <para>The number of users displayed per page. Default value: 20. Valid values: 1 to 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,10 +54,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>The sorting method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: ascending order by time</description></item>
-        /// <item><description>1: descending order by time</description></item>
+        /// <item><description><para>0: ascending order by time.</para>
+        /// </description></item>
+        /// <item><description><para>1: descending order by time.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? SortType { get; set; }
 
         /// <summary>
-        /// <para>The type of the custom message. Valid values: integers greater than 10000.</para>
+        /// <para>The user-defined message type. The value must be greater than 10000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10002</para>

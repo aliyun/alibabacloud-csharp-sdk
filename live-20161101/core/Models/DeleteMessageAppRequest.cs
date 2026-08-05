@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteMessageAppRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application that you want to delete. You can specify only one ID.</para>
+        /// <para>The ID of the interactive message application to be deleted. Only one application ID can be specified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

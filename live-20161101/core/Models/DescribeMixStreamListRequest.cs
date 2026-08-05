@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeMixStreamListRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The app name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveApp****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The streaming domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-09-20T13:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the stream mixing task. If the task was created by calling the <a href="https://help.aliyun.com/document_detail/2848087.html">CreateMixStream</a> operation, check the value of the response parameter MixStreamId to obtain the ID.</para>
+        /// <para>The ID of the stream mixing task. If you create a stream mixing task by calling the <a href="https://help.aliyun.com/document_detail/2848087.html">CreateMixStream</a> operation, use the MixStreamId value that is returned in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5b2a046e-74d7-385e-d2d7-8a5b87e4****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Valid values: an integer that is greater than <b>0</b> and does not exceed the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be greater than <b>0</b> and cannot exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>1000</b>.</para>
+        /// <para>The number of records to display on each page. Default value: <b>1000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -73,12 +73,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-09-11T12:00:00Z</para>
@@ -88,7 +94,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the output stream.</para>
+        /// <para>The stream name of the stream mixing task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveStream****</para>

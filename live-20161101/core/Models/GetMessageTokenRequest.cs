@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class GetMessageTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application.</para>
+        /// <para>Interactive Messages application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the device. Each device has a unique ID. You can specify a custom ID. The ID can be up to 64 characters in length and can contain lowercase letters, digits, underscores (_), and hyphen (-). You can specify multiple device IDs. We recommend that you obtain the IDs from the devices and pass the IDs to the server.</para>
+        /// <para>Terminal device ID, uniquely representing a user terminal device, user-defined. It consists of lowercase letters, numbers, underscores (_), and hyphens (-), with a maximum length of 64 characters. Different terminal devices need to use different DeviceIds. We recommend obtaining it from the terminal device and passing it to the server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,12 +32,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DeviceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the device. Valid values:</para>
+        /// <para>Terminal device type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ios</description></item>
-        /// <item><description>android</description></item>
-        /// <item><description>web</description></item>
-        /// <item><description>pc</description></item>
+        /// <item><description><para>ios</para>
+        /// </description></item>
+        /// <item><description><para>android</para>
+        /// </description></item>
+        /// <item><description><para>web</para>
+        /// </description></item>
+        /// <item><description><para>pc</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,7 +53,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DeviceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user. Each user has a unique ID in the application. The ID can be up to 32 characters in length and can contain lowercase letters, digits, underscores (_), and periods (.). You can specify multiple user IDs.</para>
+        /// <para>User UserId, user-defined, unique within the AppId. It consists of lowercase letters, numbers, underscores (_), and periods (.), with a maximum length of 32 characters. Different users need to use different UserIds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CancelMuteAllGroupUserRequest : TeaModel {
         /// <summary>
-        /// <para>Interactive message application ID.</para>
+        /// <para>Interactive Messages application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,13 +21,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>系统消息扩散类型，取值：</para>
+        /// <para>System message diffusion type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0：不扩散。</para>
+        /// <item><description><para>0: No diffusion.</para>
         /// </description></item>
-        /// <item><description><para>1：扩散到指定人。</para>
+        /// <item><description><para>1: Diffusion to specified users.</para>
         /// </description></item>
-        /// <item><description><para>2：扩散到群组。</para>
+        /// <item><description><para>2: Diffusion to the group.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? BroadCastType { get; set; }
 
         /// <summary>
-        /// <para>Message group ID.</para>
+        /// <para>Group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>Operator\&quot;s UserId. &gt; This parameter is required and the user must be the creator of the group.</para>
+        /// <para>User ID of the operator.</para>
+        /// <remarks>
+        /// <para>This parameter is required. The user must be the creator of the group.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>de1**a0</para>

@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterVideoResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The offset of the position where the system starts to read the video source. Unit: milliseconds.</para>
-        /// <para>**</para>
-        /// <para><b>Important</b> This parameter takes effect only if the video source is a file.</para>
+        /// <para>The start offset of the video file. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>A value greater than <b>0</b> specifies an offset from the first frame.</para>
+        /// <para>Notice: This parameter takes effect only when the video source type is file video.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>A value greater than <b>0</b> indicates that reading starts from the offset time relative to the first frame.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,13 +26,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? BeginOffset { get; set; }
 
         /// <summary>
-        /// <para>The ID of the production studio.</para>
+        /// <para>The production studio ID.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/69338.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the CasterId parameter value returned by the CreateCaster operation.</para>
+        /// </description></item>
+        /// <item><description><para>If you created the production studio in the ApsaraVideo Live console, navigate to <b>ApsaraVideo Live console</b> &gt; <b>Production Studios</b> &gt; <b>Cloud Production Studio</b> to view the production studio name.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can find the ID of the production studio in the Instance Name column.</para>
+        /// <para>The production studio name in the production studio list on the Cloud Production Studio page of the ApsaraVideo Live console is the production studio ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -43,12 +46,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The offset of the position where the system stops reading the video source. Unit: milliseconds.</para>
-        /// <para>**</para>
-        /// <para><b>Important</b> This parameter takes effect only if the video source is a file.</para>
+        /// <para>The end offset of the video file. Unit: milliseconds.</para>
+        /// <remarks>
+        /// <para>Notice: This parameter takes effect only when the video source type is file video.</para>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>A value greater than <b>0</b> specifies an offset from the first frame.</description></item>
-        /// <item><description>A value less than <b>0</b> specifies an offset from the last frame.</description></item>
+        /// <item><description>A value greater than <b>0</b>: reading ends at the offset time relative to the first frame.</description></item>
+        /// <item><description>A value less than <b>0</b>: reading ends at the offset time relative to the last frame.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +63,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? EndOffset { get; set; }
 
         /// <summary>
-        /// <para>The fixed delay of the video layer. This parameter is used to synchronize the video with subtitles. Unit: milliseconds. Default value: 0. Valid values: <c>0 to 5000</c>.</para>
+        /// <para>The fixed delay for the video, which can be used for subtitle synchronization. Unit: ms. Default value: 0. Value range: <c>[0-5000]</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -69,9 +73,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? FixedDelayDuration { get; set; }
 
         /// <summary>
-        /// <para>ID of the media library image material. </para>
+        /// <para>The media asset library image material ID.</para>
         /// <remarks>
-        /// <para>This parameter is only available and must be provided when the video source type is an image.</para>
+        /// <para>This parameter is available and required only when the video source type is image.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,9 +86,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>Image material URL. </para>
+        /// <para>The image material URL.</para>
         /// <remarks>
-        /// <para>This parameter is available only when the video source type is an image and the image file has not been imported into the material library. Supports uploading images in jpg, png formats, with a maximum file size of 10MB.</para>
+        /// <para>This parameter is available only when the video source type is image and the image file has not been imported to the media asset library. JPG and PNG formats are supported. The maximum file size is 10 MB.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,12 +99,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The streaming URL.</para>
-        /// <para>**</para>
-        /// <para><b>Important</b> This parameter is required if the video source is a live stream.</para>
+        /// <para>The ApsaraVideo Live streaming URL.</para>
         /// <remarks>
-        /// <para>Do not specify this parameter in the request if the video source is not a live stream.</para>
+        /// <para>Notice:  </para>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is required when the video source type is live stream.</para>
+        /// </description></item>
+        /// <item><description><para>Do not include this parameter in the request when the video source type is not live stream.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>rtmp://guide.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****</para>
@@ -110,8 +118,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string LiveStreamUrl { get; set; }
 
         /// <summary>
-        /// <para>The ID that is used to identify the position of the video source.</para>
-        /// <para>Define the reference numbers in the layout. Each reference number is associated with only one resource. The value of this parameter must be in the RV[Number] format, where Number is <c>01 to 99</c>.</para>
+        /// <para>The location identifier of the video source. This parameter is required. </para>
+        /// <para>Defines the reference number of a scene in the layout. Each location can be associated with at most one resource. The format must match &quot;RV01<del>RV12&quot;, which is RV + a number in the range of `[01</del>99]`.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RV01</para>
@@ -121,12 +129,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string LocationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the material from the media library.</para>
-        /// <para>**</para>
-        /// <para><b>Important</b> This parameter takes effect and is required only if the video source is a material.</para>
-        /// <para>If you query the configurations of the production studio by calling the <a href="https://help.aliyun.com/document_detail/60259.html">DescribeCasterConfig</a> operation, obtain the value of the response parameter UrgentMaterialId.</para>
+        /// <para>The media asset library material ID.</para>
         /// <remarks>
-        /// <para>The value of the UrgentMaterialId parameter is the ID of the material from the media library.</para>
+        /// <para>Notice: This parameter is available and required only when the video source type is material.</para>
+        /// </remarks>
+        /// <para>If you call the <a href="https://help.aliyun.com/document_detail/2848011.html">DescribeCasterConfig</a> operation to query the production studio configuration, check the UrgentMaterialId parameter value returned by the DescribeCasterConfig operation.</para>
+        /// <remarks>
+        /// <para>The UrgentMaterialId value is the media asset library material ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -141,7 +150,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The interval between presentation timestamp (PTS) callbacks. Unit: milliseconds.</para>
+        /// <para>The PTS callback interval. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -150,17 +159,24 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PtsCallbackInterval { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of playbacks after the first playback is complete. Valid values:</para>
-        /// <para>**</para>
-        /// <para><b>Important</b> This parameter takes effect only if the video source is a file.</para>
+        /// <para>The number of times the video repeats after playback completes. Valid values:</para>
+        /// <remarks>
+        /// <para>Notice: This parameter takes effect only when the video source type is file video.</para>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: specifies that the video source is played only once. This is the default value.</description></item>
-        /// <item><description><b>-1</b>: specifies that the video source is played in loop mode.</description></item>
+        /// <item><description><b>0</b> (default): no repeat.</description></item>
+        /// <item><description><b>-1</b>: loops indefinitely.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -182,11 +198,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>The URL of the VOD file.</para>
-        /// <para>**</para>
-        /// <para><b>Important</b> This parameter takes effect only if the video source is a file that is not from the media library.</para>
+        /// <para>The video-on-demand file URL.</para>
         /// <remarks>
-        /// <para>The VOD file must be in the MP4, FLV, or TS format.</para>
+        /// <para>Notice: This parameter is available only when the video source type is file video and the video file has not been imported to the media asset library.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>Video-on-demand files are limited to MP4, FLV, and TS formats.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

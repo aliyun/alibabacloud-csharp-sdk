@@ -13,12 +13,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task that you want to query. If you do not specify this parameter, all running tasks under your UID are queried.</para>
+        /// <para>The ID of the task to query. If you do not specify this parameter, all running tasks under your user ID are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asr-a6ac15e0-9118-4b4c-9e64-306163a0****</para>

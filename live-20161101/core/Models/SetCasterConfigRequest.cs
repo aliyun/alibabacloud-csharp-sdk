@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetCasterConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration for automatic switchover to the standby resource.</para>
-        /// <para>The <c>eofThres</c> field specifies the duration after which the production studio automatically switches to the standby resource if a stream interruption occurs. Unit: seconds.</para>
+        /// <para>The automatic standby switchover configuration.
+        /// <c>eofThres</c>: the duration of stream interruption after which the system automatically switches to the standby video, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;eofThres&quot;:3}</para>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AutoSwitchUrgentConfig { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the production studio automatically switches to the standby resource in case of a stream interruption.</para>
+        /// <para>Specifies whether to enable automatic switchover to the standby video when the stream is interrupted.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? AutoSwitchUrgentOn { get; set; }
 
         /// <summary>
-        /// <para>The callback URL. Enter a valid HTTP address for receiving callback notifications. If you do not specify this parameter, the production studio does not send callback notifications.</para>
+        /// <para>The callback URL. To receive callback notifications, enter a valid receiving address that accepts the HTTP protocol. If this parameter is set to empty, callback notifications for the production studio are canceled by default.</para>
         /// <remarks>
-        /// <para> For more information about production studio callbacks, see <a href="https://help.aliyun.com/document_detail/213633.html">Production studio callbacks</a>.</para>
+        /// <para>For more information about production studio callbacks, see <a href="https://help.aliyun.com/document_detail/213633.html">Cloud production studio callback information</a>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("CallbackUrl")]
@@ -45,13 +45,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The ID of the production studio.</para>
+        /// <para>The production studio ID.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the CasterId value returned by the CreateCaster operation.</para>
+        /// </description></item>
+        /// <item><description><para>If you created the production studio in the ApsaraVideo Live console, go to <b>ApsaraVideo Live console</b> &gt; <b>Production Studio</b> &gt; <b>Cloud Production Studio</b> to view the ID.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The production studio name in the production studio list on the Cloud Production Studio page of the ApsaraVideo Live console is the production studio ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,13 +75,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable channels. Valid values:</para>
+        /// <para>Specifies whether to enable Channel. If Channel was previously enabled (ChannelEnable=1), you must explicitly pass ChannelEnable=1 in each call to maintain the channel status. Otherwise, the error InvalidCaster.ChannelDisableUnsupported is returned.</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b> (default): disables channels.</description></item>
-        /// <item><description><b>1</b>: enables channels.</description></item>
+        /// <item><description><b>0</b> (default): disabled.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You cannot disable channels after you enable them. If you set this parameter to 0, the production studio references video resources in a layout without using channels. If you enable channels for the first time, make sure that the production studio is in the idle state. After you enable channels, a new layout that references video resources by using channels is generated to replace the original one. Therefore, you must specify video resources for channels. You can use the channels to change the playback progress or status. If the video resource, preview, and program modules of the production studio use the same video source, the three modules display the same content.</para>
+        /// <para>Channel is disabled by default and cannot be disabled after it is enabled. When Channel is disabled, resources are directly referenced by layouts. To enable Channel for the first time, the production studio must be stopped. Existing layouts are discarded. Resources must first be assigned to a Channel, and new layouts directly reference the Channel. Through Channel, you can adjust the playback progress and status of video sources. In this mode, if the video source, PVW, and PGM areas reference the same resource, the corresponding views remain synchronized.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -90,15 +92,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? ChannelEnable { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable stream delay. Unit: seconds. Valid values:</para>
+        /// <para>The stream delay, in seconds.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b> (default): disables stream delay.</para>
-        /// </description></item>
-        /// <item><description><para><b>A value greater than 0</b>: enables stream delay.</para>
-        /// </description></item>
-        /// <item><description><para><b>Empty</b>: clears the stream delay configuration.</para>
-        /// <para>**</para>
-        /// <para>**Note **The maximum value can be 300 seconds.</para>
+        /// <item><description><b>0</b> (default): disables stream delay.</description></item>
+        /// <item><description>Greater than <b>0</b>: enables stream delay.</description></item>
+        /// <item><description><b>Empty</b>: clears the stream delay configuration by default.<remarks>
+        /// <para>The maximum value is 300 seconds.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -110,8 +110,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public float? Delay { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
-        /// <para>Complete the configuration of the domain name before the production studio is started. If you do not specify this parameter, the domain configuration for the production studio is cleared.</para>
+        /// <para>The primary streaming domain.</para>
+        /// <para>Complete the domain name configuration before starting the production studio. If this parameter is empty, the domain name configuration of the production studio is cleared by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -125,10 +125,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the carousel playback feature. Valid values:</para>
+        /// <para>Specifies whether the program list takes effect. </para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: disables carousel playback.</description></item>
-        /// <item><description><b>1</b>: enables carousel playback.</description></item>
+        /// <item><description><b>0</b>: does not take effect.</description></item>
+        /// <item><description><b>1</b>: takes effect.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? ProgramEffect { get; set; }
 
         /// <summary>
-        /// <para>The name of the playlist for carousel playback. You can specify this parameter if you enable the carousel playback feature.</para>
+        /// <para>The name of the program list. This parameter can be configured when the program list feature is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>program_name</para>
@@ -149,15 +149,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ProgramName { get; set; }
 
         /// <summary>
-        /// <para>The recording configuration. The value is a JSON string. You can configure the following fields:</para>
+        /// <para>The recording configuration in JSON format. The configuration elements are as follows:</para>
         /// <list type="bullet">
-        /// <item><description><b>endpoint</b>: the API server address of an Alibaba Cloud service.</description></item>
-        /// <item><description><b>ossBucket</b>: the name of the Object Storage Service (OSS) bucket.</description></item>
-        /// <item><description><b>videoFormat</b>: the format in which the video file can be exported. Example: <c>[{\\&quot;OssObjectPrefix\\&quot;:\\&quot;record/{AppName}/{StreamName}/{StartTime}_{EndTime}\\&quot;,\\&quot;Format\\&quot;:\\&quot;m3u8\\&quot;,\\&quot;CycleDuration\\&quot;:21600,\\&quot;SliceOssObjectPrefix\\&quot;:\\&quot;record/{AppName}/{StreamName}/{UnixTimestamp}\\&quot;},{\\&quot;OssObjectPrefix\\&quot;:\\&quot;record/{AppName}/{StreamName}/{StartTime}_{EndTime}\\&quot;,\\&quot;Format\\&quot;:\\&quot;flv\\&quot;,\\&quot;CycleDuration\\&quot;:21600}]</c>.</description></item>
-        /// <item><description><b>interval</b>: the interval between recordings. Unit: milliseconds.</description></item>
+        /// <item><description><b>endpoint</b>: the API endpoint of the Alibaba Cloud service.</description></item>
+        /// <item><description><b>ossBucket</b>: the name of the OSS bucket.</description></item>
+        /// <item><description><b>videoFormat</b>: the video file formats supported for export. Example: <c>[{\\&quot;OssObjectPrefix\\&quot;:\\&quot;record/{AppName}/{StreamName}/{StartTime}_{EndTime}\\&quot;,\\&quot;Format\\&quot;:\\&quot;m3u8\\&quot;,\\&quot;CycleDuration\\&quot;:21600,\\&quot;SliceOssObjectPrefix\\&quot;:\\&quot;record/{AppName}/{StreamName}/{UnixTimestamp}\\&quot;},{\\&quot;OssObjectPrefix\\&quot;:\\&quot;record/{AppName}/{StreamName}/{StartTime}_{EndTime}\\&quot;,\\&quot;Format\\&quot;:\\&quot;flv\\&quot;,\\&quot;CycleDuration\\&quot;:21600}]</c>.</description></item>
+        /// <item><description><b>interval</b>: the time interval, in milliseconds (ms).</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the recording feature is disabled and the recording configuration for the production studio is cleared.</para>
+        /// <para>If this parameter is set to empty, the recording feature is not enabled. If this parameter is set to empty, the recording configuration is cleared by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -167,15 +167,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string RecordConfig { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The custom stream redirect URL.</para>
-        /// <para>If you do not specify this parameter, the production studio uses the redirect URL generated by the system.</para>
+        /// <para>The ingest URL that corresponds to the custom bypass output address of the production studio. 
+        /// If this parameter is empty, the ingest URL that corresponds to the output address automatically generated by Alibaba Cloud is used by default.</para>
         /// <remarks>
-        /// <para>Redirect URLs support only the Real-Time Messaging Protocol (RTMP) protocol.</para>
+        /// <para>Currently, SideOutputUrl supports only the RTMP protocol for stream ingest.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("SideOutputUrl")]
@@ -183,9 +189,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SideOutputUrl { get; set; }
 
         /// <summary>
-        /// <para>The stream relay URLs. A relay URL can be an Alibaba Cloud URL or a URL from a third-party CDN provider. You can specify up to 20 relay URLs over the RTMP protocol.</para>
+        /// <para>The list of multi-destination relay streaming addresses. The addresses can be CDN ingest URLs from Alibaba Cloud or third-party providers. A maximum of 20 RTMP relay addresses can be added to a production studio.</para>
         /// <remarks>
-        /// <para>Use the following format to specify multiple relay URLs: &quot;rtmp://domain/app1/stream1&quot;,&quot;rtmp://domain/app2/stream2&quot;.</para>
+        /// <para>Specify multiple addresses in the array format: [&quot;rtmp://domain/app1/stream1&quot;,&quot;rtmp://domain/app2/stream2&quot;].</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -196,14 +202,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SideOutputUrlList { get; set; }
 
         /// <summary>
-        /// <para>The multi-view synchronization configuration. You can specify this parameter to synchronize multiple video sources.</para>
-        /// <para>There are two modes of multi-view synchronization.</para>
+        /// <para>The multi-view synchronization configuration that synchronizes multiple video sources.
+        /// Multi-view synchronization has two modes:</para>
         /// <list type="bullet">
-        /// <item><description>A value of 0 for the mode field specifies the streamer mode. In this mode, multiple video sources are synchronized based on the settings by the streamer.</description></item>
-        /// <item><description>A value of 1 for the mode field specifies the conference mode. In this mode, all video sources are synchronized.</description></item>
+        /// <item><description><para>mode: 0 (streamer mode. Multiple video sources are synchronized based on the specified mode.)</para>
+        /// </description></item>
+        /// <item><description><para>mode: 1 (conference mode. There is no concept of a streamer video. All video sources are synchronized with each other.)</para>
+        /// </description></item>
         /// </list>
-        /// <para>In the streamer mode, the hostResourceId field specifies the video source on the streamer side.</para>
-        /// <para>In the conference mode, the hostResourceId field is not available. You need to provide only resource IDs that are required.</para>
+        /// <para>Streamer mode: hostResourceId: the streamer video source in streamer mode.</para>
+        /// <para>Conference mode: the hostResourceId field is not required. Only the resource IDs in resourceIds need to be provided.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;[{\&quot;mode\&quot;:0,\&quot;resourceIds\&quot;:[\&quot;5a6c1c33-8424-46f6-813c-c152220a****\&quot;,\&quot;4e6521dc-a40a-4077-b6bf-1fb12a76****\&quot;],\&quot;hostResourceId\&quot;:\&quot;3aa2b39a-fd0e-4b8c-be73-b7af31c4****\&quot;}]&quot;</para>
@@ -213,8 +221,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SyncGroupsConfig { get; set; }
 
         /// <summary>
-        /// <para>The transcoding configuration.</para>
-        /// <para>The value is a JSON string. Use upper camel case for fields of the string. If you do not specify this parameter, the transcoding configuration is cleared. If no transcoding template is available, an error occurs when the production studio is started.</para>
+        /// <para>The transcoding configuration. </para>
+        /// <para>A JSON-formatted string. Use upper camel case for internal fields of the struct. If this parameter is set to empty, the transcoding configuration is cleared by default. If the transcoding template is empty, an error is returned when the production studio starts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;casterTemplate&quot;: &quot;lp_ld&quot;}</para>
@@ -224,7 +232,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string TranscodeConfig { get; set; }
 
         /// <summary>
-        /// <para>The ID of the standby image from the media library.</para>
+        /// <para>The media asset ID of the standby image in the media library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a089175eb5f4427684fc0715159a****</para>
@@ -254,7 +262,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string UrgentLiveStreamUrl { get; set; }
 
         /// <summary>
-        /// <para>The ID of the standby video from the media library. If you do not specify this parameter, the standby video configuration for the production studio is cleared.</para>
+        /// <para>The media asset ID of the standby video in the media library. If this parameter is set to empty, the standby configuration is cleared by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a2b8e671</para>

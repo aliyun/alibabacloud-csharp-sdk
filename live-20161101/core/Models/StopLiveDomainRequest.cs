@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StopLiveDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The streaming domain or ingest domain.</para>
+        /// <para>The ingest domain or streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

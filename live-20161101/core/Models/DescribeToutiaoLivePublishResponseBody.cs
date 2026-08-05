@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeToutiaoLivePublishResponseBody : TeaModel {
         /// <summary>
-        /// <para>The stream ingest details.</para>
+        /// <para>The details of the stream ingest information.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public List<DescribeToutiaoLivePublishResponseBodyContent> Content { get; set; }
         public class DescribeToutiaoLivePublishResponseBodyContent : TeaModel {
             /// <summary>
-            /// <para>The name of the application to which the live stream belongs.</para>
+            /// <para>The name of the application to which the stream belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveApp****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string App { get; set; }
 
             /// <summary>
-            /// <para>The bitrate. Unit: bit/s.</para>
+            /// <para>The bitrate in bit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>261587</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? BwDiff { get; set; }
 
             /// <summary>
-            /// <para>The name of the content delivery network (CDN) service.</para>
+            /// <para>The CDN name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ali</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? Fps { get; set; }
 
             /// <summary>
-            /// <para>The name of the ingested stream.</para>
+            /// <para>The stream name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveStream****</para>

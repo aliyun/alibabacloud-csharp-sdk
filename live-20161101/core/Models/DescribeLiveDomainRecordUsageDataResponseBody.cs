@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainRecordUsageDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The end of the time range during which data was queried.</para>
+        /// <para>The end time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-10T21:00:00Z</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range during which data was queried.</para>
+        /// <para>The start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-10T20:00:00Z</para>

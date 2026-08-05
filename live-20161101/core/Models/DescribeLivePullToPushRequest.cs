@@ -14,12 +14,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the task is started. Valid values:</para>
+        /// <para>The region where the task is launched. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ap-southeast-1: Singapore</description></item>
-        /// <item><description>ap-southeast-5: Indonesia (Jakarta)</description></item>
-        /// <item><description>cn-beijing: China (Beijing)</description></item>
-        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
+        /// <item><description>ap-southeast-1 (Singapore)</description></item>
+        /// <item><description>ap-southeast-5 (Indonesia)</description></item>
+        /// <item><description>cn-beijing (Beijing)</description></item>
+        /// <item><description>cn-shanghai (Shanghai)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainBpsDataByLayerRequest : TeaModel {
         /// <summary>
-        /// <para>The streaming domain. You can specify multiple domain names by separating them with commas (,). If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</para>
+        /// <para>The streaming domain. You can specify multiple domain names separated by commas (,). If this parameter is left empty, the aggregated data of all domain names is returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pull.aliyundoc.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be displayed in UTC.</para>
+        /// <para>The end of the time range to query, in the format of <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC). The end time must be later than the start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-16T16:59:59Z</para>
@@ -30,22 +30,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The time granularity of the query. Unit: seconds. Valid values:</para>
+        /// <para>The time granularity of the data to query. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>300</b></description></item>
-        /// <item><description><b>3600</b></description></item>
-        /// <item><description><b>86400</b></description></item>
-        /// </list>
+        /// <item><description><para><b>300</b></para>
+        /// </description></item>
+        /// <item><description><para><b>3600</b></para>
+        /// </description></item>
+        /// <item><description><para><b>86400</b></para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If the time range specified by the StartTime and EndTime parameters is smaller than or equal to 3 days, the supported time granularities include 300, 3,600, and 86,400 seconds.</para>
-        /// </description></item>
-        /// <item><description><para>If the time range is larger than 3 days but smaller than or equal to 31 days, the supported time granularities include 3,600 and 86,400 seconds.</para>
-        /// </description></item>
-        /// <item><description><para>If the time range is larger than 31 days, the supported time granularity is 86,400 seconds.</para>
-        /// </description></item>
-        /// <item><description><para>If you specify an invalid value or do not specify this parameter, the default time granularity of 300 seconds is used.</para>
+        /// <item><description>Time range ≤ 3 days: Valid data timestamp granularity values are 300, 3600, and 86400.</description></item>
+        /// <item><description>3 days &lt; time range ≤ 31 days: Valid data timestamp granularity values are 3600 and 86400.</description></item>
+        /// <item><description>Time range &gt; 31 days: The only valid value is 86400.</description></item>
+        /// <item><description>If this parameter is not specified or the specified value is not supported, the default value 300 is used.</description></item>
+        /// </list>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -57,9 +56,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>The name of the Internet service provider (ISP). If you do not specify this parameter, the data of all ISPs is returned.</para>
+        /// <para>The name of the Internet service provider (ISP) in English. If this parameter is not specified, data for all ISPs is returned.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeLiveRegionAndIsp</a> operation to query available regions and ISPs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeLiveRegionAndIsp</a> operation to query the English names of regions and ISPs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,12 +69,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string IspNameEn { get; set; }
 
         /// <summary>
-        /// <para>The layer at which you want to query the data. Valid values:</para>
+        /// <para>The query dimension. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPv4 and IPv6 (network layer)</description></item>
-        /// <item><description>http, https, and quic (application layer)</description></item>
-        /// <item><description>all (default)</description></item>
+        /// <item><description><para>Network layer (IPv4, IPv6)</para>
+        /// </description></item>
+        /// <item><description><para>Application layer (http, https, quic)</para>
+        /// </description></item>
+        /// <item><description><para>all (default)</para>
+        /// </description></item>
         /// </list>
+        /// <para>Valid values: all | IPv4 | IPv6 | http | https | quic (case-sensitive).</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>
@@ -85,9 +88,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Layer { get; set; }
 
         /// <summary>
-        /// <para>The name of the region. If you do not specify this parameter, the data of all regions is returned.</para>
+        /// <para>The name of the region in English. If this parameter is not specified, data for all regions is returned.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeLiveRegionAndIsp</a> operation to query available regions and ISPs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeLiveRegionAndIsp</a> operation to query the English names of regions and ISPs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -101,14 +104,20 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be displayed in UTC.</para>
+        /// <para>The beginning of the time range to query, in the format of <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC).</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the data of the last 24 hours is returned by default. The minimum time granularity is 5 minutes.</para>
+        /// <para>If this parameter is not specified, data for the last 24 hours is returned by default. The minimum data granularity is 5 minutes.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

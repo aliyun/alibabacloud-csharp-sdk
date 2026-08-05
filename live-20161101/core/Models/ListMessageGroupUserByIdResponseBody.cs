@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListMessageGroupUserByIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-****-CB92E68F4CD8</para>
@@ -20,17 +20,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>Return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListMessageGroupUserByIdResponseBodyResult Result { get; set; }
         public class ListMessageGroupUserByIdResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the current page is followed by another page. Valid values:</para>
+            /// <para>Indicates whether there is a next page. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: There is a next page.</para>
+            /// </description></item>
+            /// <item><description><para>false: There is no next page.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public bool? HasMore { get; set; }
 
             /// <summary>
-            /// <para>The total number of users returned.</para>
+            /// <para>Total number of users queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? Total { get; set; }
 
             /// <summary>
-            /// <para>The list of users.</para>
+            /// <para>User list information.</para>
             /// </summary>
             [NameInMap("UserList")]
             [Validation(Required=false)]
@@ -60,8 +62,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 /// <summary>
                 /// <para>Indicates whether the user is muted. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The user is muted.</description></item>
-                /// <item><description>false: The user is not muted.</description></item>
+                /// <item><description><para>true: Muted.</para>
+                /// </description></item>
+                /// <item><description><para>false: Not muted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -72,10 +76,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public bool? IsMute { get; set; }
 
                 /// <summary>
-                /// <para>The type of the mute. Valid values:</para>
+                /// <para>Mute type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>group: All members in the message group are muted.</description></item>
-                /// <item><description>user: Specific members in the message group are muted.</description></item>
+                /// <item><description><para>group: All members in the message group are muted.</para>
+                /// </description></item>
+                /// <item><description><para>user: Individual user is muted.</para>
+                /// </description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("MuteBy")]
@@ -83,7 +89,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public List<string> MuteBy { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the profile picture of the user.</para>
+                /// <para>Profile picture URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;<a href="http://www.aliyundoc.com/xxyy.png">http://www.aliyundoc.com/xxyy.png</a>&quot;</para>
@@ -93,7 +99,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string UserAvatar { get; set; }
 
                 /// <summary>
-                /// <para>The custom information about the user.</para>
+                /// <para>Custom user information content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12e</para>
@@ -103,7 +109,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string UserExtension { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user.</para>
+                /// <para>User ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ad***</para>
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// <para>The nickname of the user.</para>
+                /// <para>User nickname.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxyy</para>

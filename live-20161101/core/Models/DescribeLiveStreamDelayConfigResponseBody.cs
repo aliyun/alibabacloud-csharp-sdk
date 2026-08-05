@@ -29,9 +29,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The latency level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>short</b>: The latency is less than or equal to 4 seconds.</description></item>
-            /// <item><description><b>medium</b>: The latency is greater than 4 seconds, and less than or equal to 8 seconds.</description></item>
-            /// <item><description><b>long</b>: The latency is greater than 8 seconds.</description></item>
+            /// <item><description><para><b>short</b>: The latency is 2 seconds or less.</para>
+            /// </description></item>
+            /// <item><description><para><b>medium</b>: The latency is greater than 2 seconds and 4 seconds or less.</para>
+            /// </description></item>
+            /// <item><description><para><b>long</b>: The latency is greater than 4 seconds.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,9 +66,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The latency level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>short</b>: The latency is less than or equal to 4 seconds.</description></item>
-            /// <item><description><b>medium</b>: The latency is greater than 4 seconds, and less than or equal to 8 seconds.</description></item>
-            /// <item><description><b>long</b>: The latency is greater than 8 seconds.</description></item>
+            /// <item><description><para><b>short</b>: The latency is 2 seconds or less.</para>
+            /// </description></item>
+            /// <item><description><para><b>medium</b>: The latency is greater than 2 seconds and 4 seconds or less.</para>
+            /// </description></item>
+            /// <item><description><para><b>long</b>: The latency is greater than 4 seconds.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,9 +103,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The latency level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>short</b>: The latency is less than or equal to 4 seconds.</description></item>
-            /// <item><description><b>medium</b>: The latency is greater than 4 seconds, and less than or equal to 8 seconds.</description></item>
-            /// <item><description><b>long</b>: The latency is greater than 8 seconds.</description></item>
+            /// <item><description><para><b>short</b>: The latency is 2 seconds or less.</para>
+            /// </description></item>
+            /// <item><description><para><b>medium</b>: The latency is greater than 2 seconds and 4 seconds or less.</para>
+            /// </description></item>
+            /// <item><description><para><b>long</b>: The latency is greater than 4 seconds.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

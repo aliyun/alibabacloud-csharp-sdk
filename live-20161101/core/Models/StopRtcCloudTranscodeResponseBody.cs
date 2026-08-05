@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StopRtcCloudTranscodeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>

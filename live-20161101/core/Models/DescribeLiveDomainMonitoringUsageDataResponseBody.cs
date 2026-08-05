@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range.</para>
+        /// <para>The end time of the query. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-10T22:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the monitoring session.</para>
+        /// <para>The monitoring session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e62af24d-a354-3b0c-9f1f-da592c4b****</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The region of the live center.</para>
+        /// <para>The live center region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</para>
+        /// <para>3C6CCEC4-6B88-4D4A-93E4-D47B3******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range.</para>
+        /// <para>The start time of the query. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-10T20:00:00Z</para>

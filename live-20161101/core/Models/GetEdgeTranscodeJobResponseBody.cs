@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class GetEdgeTranscodeJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the edge transcoding task.</para>
+        /// <para>The edge transcoding job.</para>
         /// </summary>
         [NameInMap("Job")]
         [Validation(Required=false)]
         public GetEdgeTranscodeJobResponseBodyJob Job { get; set; }
         public class GetEdgeTranscodeJobResponseBodyJob : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The time when the job was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-24T16:44:55Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was last started.</para>
+            /// <para>The time when the job was last started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-25T02:48:58Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string LastStartAt { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was last stopped.</para>
+            /// <para>The time when the job was last stopped.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-25T05:48:58Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string LastStopAt { get; set; }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The job name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my_job</para>
@@ -67,10 +67,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The status of the task. Valid values:</para>
+            /// <para>The status of the transcoding job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: not started</description></item>
-            /// <item><description>1: in progress</description></item>
+            /// <item><description><para>0: The job is not started.</para>
+            /// </description></item>
+            /// <item><description><para>1: The job is running.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The URL of the input stream.</para>
+            /// <para>The input stream URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rtmp://mydomain/app/stream1</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string StreamInput { get; set; }
 
             /// <summary>
-            /// <para>The URL of the output stream.</para>
+            /// <para>The output stream URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rtmp://testdomain/app/stream2</para>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string StreamOutput { get; set; }
 
             /// <summary>
-            /// <para>The ID of the edge transcoding template used by the task.</para>
+            /// <para>The ID of the edge transcoding template used by the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9b1571b513cb44f7a1ba6ae561ff****</para>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the edge transcoding template used by the task.</para>
+            /// <para>The name of the edge transcoding template used by the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my_template</para>
@@ -123,9 +125,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The type of edge transcoding. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>common: standard transcoding and Narrowband HD™ 1.0 transcoding</description></item>
-            /// <item><description>nbhd-2: Narrowband HD™ 2.0 transcoding</description></item>
-            /// <item><description>ultra-hd: ultra-high definition transcoding</description></item>
+            /// <item><description><para>common: standard transcoding and Narrowband HD 1.0.</para>
+            /// </description></item>
+            /// <item><description><para>nbhd-2: Narrowband HD 2.0.</para>
+            /// </description></item>
+            /// <item><description><para>ultra-hd: ultra-high definition.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

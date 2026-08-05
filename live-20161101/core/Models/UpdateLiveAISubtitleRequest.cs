@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateLiveAISubtitleRequest : TeaModel {
         /// <summary>
-        /// <para>The background color of the subtitles. Color format: RGBA.</para>
+        /// <para>The background color of the subtitle. The value is in RGBA format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0xFF0000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string BgColor { get; set; }
 
         /// <summary>
-        /// <para>The size of the background box. Valid values: [0,1].</para>
+        /// <para>The background size of the subtitle. Valid values: [0, 1].</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.09</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public float? BgWidthNormalized { get; set; }
 
         /// <summary>
-        /// <para>The font weight. Valid values: [0,1].</para>
+        /// <para>The font weight. Valid values: [0, 1].</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.05</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public float? BorderWidthNormalized { get; set; }
 
         /// <summary>
-        /// <para>The description of the subtitle template. The description can be up to 128 characters in length and can contain letters, digits, and special characters.</para>
+        /// <para>The custom description of the subtitle. The description can contain Chinese characters, letters, digits, and special characters, and cannot exceed 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>live AI subtitle template</para>
@@ -50,12 +50,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The target language. Valid values:</para>
+        /// <para>The target language for translation. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>en-US: English</description></item>
         /// <item><description>zh-CN: Chinese</description></item>
         /// <item><description>es-ES: Spanish</description></item>
-        /// <item><description>ru-RU: Russian</description></item>
+        /// <item><description>ru-RU: Russian.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DstLanguage { get; set; }
 
         /// <summary>
-        /// <para>The font color. Color format: RGBA.</para>
+        /// <para>The font color. The value is in RGBA format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0xFFFFFF</para>
@@ -78,13 +78,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The font. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>KaiTi (default)</description></item>
-        /// <item><description>AlibabaPuHuiTi-Regular</description></item>
-        /// <item><description>AlibabaPuHuiTi-Bold</description></item>
-        /// <item><description>AlibabaPuHuiTi-Light</description></item>
-        /// <item><description>NotoSansHans-Regular</description></item>
-        /// <item><description>NotoSansHans-Bold</description></item>
-        /// <item><description>NotoSansHans-Light</description></item>
+        /// <item><description>KaiTi: KaiTi (default)</description></item>
+        /// <item><description>AlibabaPuHuiTi-Regular: Alibaba PuHuiTi Regular</description></item>
+        /// <item><description>AlibabaPuHuiTi-Bold: Alibaba PuHuiTi Bold</description></item>
+        /// <item><description>AlibabaPuHuiTi-Light: Alibaba PuHuiTi Light</description></item>
+        /// <item><description>NotoSansHans-Regular: Noto Sans Hans Regular</description></item>
+        /// <item><description>NotoSansHans-Bold: Noto Sans Hans Bold</description></item>
+        /// <item><description>NotoSansHans-Light: Noto Sans Hans Light.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string FontName { get; set; }
 
         /// <summary>
-        /// <para>The font size. Valid values: [0,1].</para>
+        /// <para>The font size. Valid values: [0, 1].</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.037</para>
@@ -105,17 +105,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public float? FontSizeNormalized { get; set; }
 
         /// <summary>
-        /// <para>The height of the preview. Unit: pixels.</para>
-        /// <para>The following preview specifications (width x height) are supported:</para>
+        /// <para>The height of the preview screen. Unit: px.</para>
+        /// <para>The width × height of the preview screen supports only the following specifications:</para>
         /// <list type="bullet">
-        /// <item><description>360p (640 x 360)</description></item>
-        /// <item><description>360p (360 x 640)</description></item>
-        /// <item><description>480p (854 x 480)</description></item>
-        /// <item><description>480p (480 x 854)</description></item>
-        /// <item><description>720p (1280 x 720)</description></item>
-        /// <item><description>720p (720 x 1280)</description></item>
-        /// <item><description>1080p (1920 x 1080)</description></item>
-        /// <item><description>1080p (1080 x 1920)</description></item>
+        /// <item><description>Landscape low definition 360P: 640×360</description></item>
+        /// <item><description>Portrait low definition 360P: 360×640</description></item>
+        /// <item><description>Landscape standard definition 480P: 854×480</description></item>
+        /// <item><description>Portrait standard definition 480P: 480×854</description></item>
+        /// <item><description>Landscape high definition 720P: 1280×720</description></item>
+        /// <item><description>Portrait high definition 720P: 720×1280</description></item>
+        /// <item><description>Landscape ultra-high definition 1080P: 1920×1080</description></item>
+        /// <item><description>Portrait ultra-high definition 1080P: 1080×1920.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Height { get; set; }
 
         /// <summary>
-        /// <para>The number of displayed lines.</para>
+        /// <para>The number of lines to display.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -140,18 +140,27 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The position of the subtitles relative to the lower-left corner of the screen. The value is a pair of coordinates.</para>
+        /// <para>The position of the subtitle, specified as x and y coordinates with the bottom-left corner of the screen as the origin.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[0.32,0.27]</para>
         /// </summary>
         [NameInMap("PositionNormalized")]
         [Validation(Required=false)]
         public List<float?> PositionNormalized { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display the source language. Valid values: true and false. Default value: false.</para>
+        /// <para>Specifies whether to display the source language. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -165,7 +174,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <list type="bullet">
         /// <item><description>en-US: English</description></item>
         /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>ru-RU: Russian</description></item>
+        /// <item><description>ru-RU: Russian.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -187,7 +196,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SubtitleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the subtitle template. The name can contain digits, letters, and hyphens (-) but cannot start with a hyphen (-).</para>
+        /// <para>The name of the subtitle template. The name can contain only digits, letters, and hyphens (-). The name cannot start with a hyphen.</para>
         /// 
         /// <b>Example:</b>
         /// <para>live AI subtitle template</para>
@@ -197,7 +206,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SubtitleName { get; set; }
 
         /// <summary>
-        /// <para>The width of the preview. Unit: pixels.</para>
+        /// <para>The width of the preview screen. Unit: px.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1280</para>
@@ -207,7 +216,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Width { get; set; }
 
         /// <summary>
-        /// <para>The number of characters per line. Valid values: 1 to 500.</para>
+        /// <para>The number of characters per line. Valid values: integers in the range of [1, 500].</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateLivePullToPushShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The HTTP callback URL. By default, this parameter is left empty.</para>
+        /// <para>HTTP callback URL. Default value: empty.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The URL is used to receive callbacks related to the task.</para>
-        /// </description></item>
-        /// <item><description><para>The URL can be up to 2,000 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, no callbacks are returned for events related to the task.</para>
-        /// </description></item>
+        /// <item><description>The URL that receives task-related callbacks.</description></item>
+        /// <item><description>Maximum length is 2000 characters.</description></item>
+        /// <item><description>If this parameter is not specified, no task event callbacks will be sent.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://callback*****.com">https://callback*****.com</a></para>
@@ -30,15 +27,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The destination URL to which the stream is relayed.</para>
+        /// <para>Destination URL address for pushing the stream.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The supported protocol for the URL is RTMP.</para>
-        /// </description></item>
-        /// <item><description><para>The URL can be up to 2,000 characters in length.</para>
-        /// </description></item>
+        /// <item><description>The rtmp protocol is supported.</description></item>
+        /// <item><description>Maximum length is 2000 characters.</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,19 +44,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DstUrl { get; set; }
 
         /// <summary>
-        /// <para>The end time of the task.</para>
+        /// <para>Task end time.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// </description></item>
-        /// <item><description><para>The time range specified by the StartTime and EndTime parameters cannot exceed seven days.</para>
-        /// </description></item>
-        /// <item><description><para>The end time must be later than the start time.</para>
-        /// </description></item>
-        /// <item><description><para>The end time must be later than the current time.</para>
-        /// </description></item>
+        /// <item><description>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</description></item>
+        /// <item><description>EndTime must be later than StartTime.</description></item>
+        /// <item><description>EndTime must be later than the current time.</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +62,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The file index, which specifies the sequence of the file where the playback starts.</para>
+        /// <para>File index. Starts playback from the nth file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -82,15 +72,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? FileIndex { get; set; }
 
         /// <summary>
-        /// <para>The offset of the position where the system starts to read the video resource. Unit: seconds. Valid values: positive numbers.</para>
+        /// <para>Start offset. The offset value from the beginning of the video file. Unit: seconds. Valid values: greater than 0.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter indicates an offset from the first frame of the first video resource in the list.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</para>
-        /// </description></item>
+        /// <item><description>Indicates the position to start reading from, relative to the first frame (applies to the first video).</description></item>
+        /// <item><description>This parameter applies only to VOD or third-party video streams.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -104,12 +92,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the task is started. Valid values:</para>
+        /// <para>Specifies the region where the task is launched. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ap-southeast-1: Singapore</description></item>
-        /// <item><description>ap-southeast-5: Indonesia (Jakarta)</description></item>
-        /// <item><description>cn-beijing: China (Beijing)</description></item>
-        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
+        /// <item><description>ap-southeast-1 (Singapore)</description></item>
+        /// <item><description>ap-southeast-5 (Indonesia)</description></item>
+        /// <item><description>cn-beijing (Beijing)</description></item>
+        /// <item><description>cn-shanghai (Shanghai)</description></item>
+        /// <item><description>cn-shenzhen (Shenzhen)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -120,19 +109,25 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>Region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of playbacks after the first playback is complete. Valid values:</para>
+        /// <para>Number of times to repeat playback after the initial playback is complete. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0 (default): specifies that the video list is played only once.</description></item>
-        /// <item><description>\-1: specifies that the video list is played in loop mode.</description></item>
-        /// <item><description>Positive integer: specifies the number of times the video list repeats after the first playback is complete.</description></item>
+        /// <item><description>0 (default): no repeat playback.</description></item>
+        /// <item><description>-1: loop indefinitely.</description></item>
+        /// <item><description>Other positive integers: number of times to repeat playback after the initial playback is complete.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</para>
+        /// <para>This parameter applies only to VOD or third-party video streams.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -143,7 +138,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? RepeatNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of retries allowed. Default value: 3.</para>
+        /// <para>Number of retries. Default value: 3.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -153,7 +148,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? RetryCount { get; set; }
 
         /// <summary>
-        /// <para>The retry interval. Unit: seconds. Valid values: [60,300]. Default value: 60.</para>
+        /// <para>Retry interval, in seconds. Valid values: [60, 300]. Default value: 60 seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -163,18 +158,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? RetryInterval { get; set; }
 
         /// <summary>
-        /// <para>The protocol of the source stream.</para>
+        /// <para>Source stream protocol name.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>rtmp</description></item>
-        /// <item><description>rtsp</description></item>
         /// <item><description>srt</description></item>
         /// <item><description>http-flv</description></item>
-        /// <item><description>flv</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> This parameter is required if you set the <b>SourceType</b> parameter to live, but does not take effect if you set the SourceType parameter to vod or url.</para>
+        /// <item><description>hls<remarks>
+        /// <para>This parameter is <b>required only when the SourceType parameter is set to live</b>, and is invalid when the value is vod or url.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>rtmp</para>
@@ -184,11 +178,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SourceProtocol { get; set; }
 
         /// <summary>
-        /// <para>The type of the source stream. Valid values:</para>
+        /// <para>Source stream type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>live: a live stream</description></item>
-        /// <item><description>vod: a list of ApsaraVideo VOD resources</description></item>
-        /// <item><description>url: a list of video resources from a third party</description></item>
+        /// <item><description>live: live stream.</description></item>
+        /// <item><description>vod: ApsaraVideo VOD resource.</description></item>
+        /// <item><description>url: third-party video file resource.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -200,40 +194,29 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The source URLs.</para>
+        /// <para>List of source stream URL addresses.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If SourceType is set to live, you can specify only one streaming URL.</para>
-        /// </description></item>
-        /// <item><description><para>If SourceType is set to vod or url, you can specify up to 30 IDs or URLs.</para>
-        /// </description></item>
-        /// <item><description><para>If SourceType is set to live, the supported protocols for URLs are Real-Time Messaging Protocol (RTMP), Real-Time Streaming Protocol (RTSP), Secure Reliable Transport Protocol (SRT), and HTTP-FLV.</para>
-        /// </description></item>
-        /// <item><description><para>If SourceType is set to vod, specify the IDs of media assets from ApsaraVideo VOD.</para>
-        /// </description></item>
-        /// <item><description><para>If SourceType is set to url, the supported protocols for URLs are MP4 and HTTP-FLV.</para>
-        /// </description></item>
+        /// <item><description>For the live type, only one complete live playback URL is supported.</description></item>
+        /// <item><description>For the vod and url types, a maximum of 30 URLs can be specified.</description></item>
+        /// <item><description>The live type supports: rtmp, srt, and http-flv protocols.</description></item>
+        /// <item><description>For the vod type, specify ApsaraVideo VOD media asset IDs.</description></item>
+        /// <item><description>The url type supports: mp4 and http-flv protocols.</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>testurls</para>
         /// </summary>
         [NameInMap("SourceUrls")]
         [Validation(Required=false)]
         public string SourceUrlsShrink { get; set; }
 
         /// <summary>
-        /// <para>The start time of the task.</para>
+        /// <para>Task start time.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// </description></item>
-        /// <item><description><para>The time range specified by the StartTime and EndTime parameters cannot exceed seven days.</para>
-        /// </description></item>
+        /// <item><description>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -244,7 +227,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the task. Default value: &quot;&quot;. Fuzzy search for task names is supported.</para>
+        /// <para>Task name, used to support fuzzy query. Default value: &quot;&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

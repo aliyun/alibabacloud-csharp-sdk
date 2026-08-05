@@ -12,12 +12,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The application ID.</para>
         /// <remarks>
-        /// <para> The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>VKL3***</para>
+        /// <para>yourAppId</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -26,12 +26,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The custom SEI.</para>
         /// <remarks>
-        /// <para> The value is a JSON string that can be up to 4,096 characters in length.</para>
+        /// <para>The value is a JSON string that can be up to 4,096 characters in length.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;name&quot;:&quot;myroom&quot;}</para>
+        /// <para>{&quot;key&quot;: &quot;value&quot;}</para>
         /// </summary>
         [NameInMap("CustomSei")]
         [Validation(Required=false)]
@@ -40,12 +40,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The task ID.</para>
         /// <remarks>
-        /// <para> The ID can be up to 55 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The ID can be up to 55 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AL-4bce036dd90277c50705b0599wgfffc7</para>
+        /// <para>yourTaskId</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

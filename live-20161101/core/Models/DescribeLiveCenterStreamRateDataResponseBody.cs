@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B6E125BE-E9B8-1103-8684-A3585CB632F1</para>
+        /// <para>B6E125BE-E9B8-1103-8684-A35*******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

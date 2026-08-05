@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveStreamWatermarkRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The AppName of the live stream.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveApp****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string App { get; set; }
 
         /// <summary>
-        /// <para>The streaming domain.</para>
+        /// <para>The main streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +34,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the watermark rule.</para>
         /// <remarks>
-        /// <para> You can obtain the rule ID by checking the value of the RuleId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/2848100.html">AddLiveStreamWatermarkRule</a> operation.</para>
+        /// <para>Get this ID from the response of the <a href="https://help.aliyun.com/document_detail/2848100.html">AddLiveStreamWatermarkRule</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,20 +58,23 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the stream. The following matching rules apply:</para>
+        /// <para>The stream name. The following rules apply:</para>
         /// <list type="bullet">
-        /// <item><description>A stream name can be exactly matched, Example: liveStreamA.</description></item>
-        /// <item><description>Fuzzy match is also supported. The use of an asterisk (<c>*</c>) allows all approximate matches to be found.</description></item>
-        /// <item><description>You can place the asterisk before or after an approximate string.</description></item>
+        /// <item><description><para>To match a specific stream, enter the full stream name. Example: liveStreamA.</para>
+        /// </description></item>
+        /// <item><description><para>Use a wildcard for matching. The asterisk (\*) matches all streams.</para>
+        /// </description></item>
+        /// <item><description><para>You can match by prefix or suffix.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Fuzzy match: Only one asterisk (<c>*</c>) before or after an approximate string is allowed. The approximate string must be enclosed in <c>()</c>. Separate multiple strings with vertical bars (<c>|</c>).</para>
+        /// <item><description><para>For wildcard matching, use only one asterisk (\*) at the beginning or end of the string. Enclose matching items in parentheses. Separate multiple matching items with a vertical bar (|).</para>
         /// </description></item>
-        /// <item><description><para>For example, <c>*(t1|t2)</c> matches all streams whose name has the <c>t1</c> or <c>t2</c> suffix, and <c>(abc|123)*</c> matches all streams whose name has the <c>abc</c> or <c>123</c> prefix.</para>
+        /// <item><description><para>Example: <c>*(t1|t2)</c> matches all streams ending with <c>t1</c> or <c>t2</c>. <c>(abc|123)*</c> matches all streams starting with <c>abc</c> or <c>123</c>.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>liveStreamA</para>

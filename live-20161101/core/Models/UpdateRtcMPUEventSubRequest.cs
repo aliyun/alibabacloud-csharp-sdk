@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the application.</para>
         /// <remarks>
-        /// <para> The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The callback URL.</para>
         /// <remarks>
-        /// <para> You can use headers such as HTTP and HTTPS in callback URLs. The URL can be up to 2,083 characters and contain letters, digits, and the following special characters: - _ ? % = # . / +</para>
+        /// <para>You can use headers such as HTTP and HTTPS in callback URLs. The URL can be up to 2,083 characters and contain letters, digits, and the following special characters: - _ ? % = # . / +</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

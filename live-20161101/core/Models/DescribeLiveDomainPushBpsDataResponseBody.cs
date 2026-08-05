@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The time granularity of the query.</para>
+        /// <para>The time granularity of the queried data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// <para>The ingest domain.</para>
+        /// <para>The ingest domain that was queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo.aliyundoc.com</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which the data was queried.</para>
+        /// <para>The end of the time range. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-10T21:00:00Z</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range during which the data was queried.</para>
+        /// <para>The beginning of the time range. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-10T20:00:00Z</para>

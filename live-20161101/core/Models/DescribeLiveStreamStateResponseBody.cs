@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the stream. Valid values:</para>
+        /// <para>The state of the stream. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>online: The stream is being ingested.</description></item>
-        /// <item><description>offline: The stream is offline. This may be caused by failed or completed stream ingest. For the specific reason, check the stream ingest callback. This operation does not provide detailed information.</description></item>
+        /// <item><description><para>online: The stream is active.</para>
+        /// </description></item>
+        /// <item><description><para>offline: The stream is offline. This may mean the stream ingest has failed or ended. For specific details, use the data returned by the stream ingest callback. This operation does not provide a detailed breakdown of the offline status.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +36,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamState { get; set; }
 
         /// <summary>
-        /// <para>The mode of the stream. Valid values:</para>
+        /// <para>The stream ingest method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>push: stream ingest</description></item>
-        /// <item><description>pull: triggered stream pulling</description></item>
+        /// <item><description><para>push</para>
+        /// </description></item>
+        /// <item><description><para>pull</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

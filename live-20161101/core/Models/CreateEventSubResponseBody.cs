@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The subscription ID.</para>
+        /// <para>The ID of the created subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ad53276431c****</para>

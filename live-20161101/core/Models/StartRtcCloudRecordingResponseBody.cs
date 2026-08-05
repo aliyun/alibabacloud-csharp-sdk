@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StartRtcCloudRecordingResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>58-5876-</b></b>-83CA-B56278</b>****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>73-8501-</b></b>-8ac1-72295a</b>****</para>
         /// </summary>

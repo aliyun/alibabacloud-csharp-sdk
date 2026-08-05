@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the application.</para>
         /// <remarks>
-        /// <para> The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLivePushProxyUsageDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-10-10T21:00:00Z</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-10-10T20:00:00Z</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddLiveAIProduceRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs. The name can be up to 256 characters in length and can contain digits, letters, hyphens (-), and underscores (_). The name must be the same as the application name in the ingest URL. Otherwise, the rule does not take effect.</para>
+        /// <para>The name of the live streaming application. The name can be up to 256 characters long and can contain digits, uppercase and lowercase letters, hyphens (-), and underscores (_). The AppName must match the AppName in the ingest URL for the template to take effect.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string App { get; set; }
 
         /// <summary>
-        /// <para>The description of the subtitle rule. The description can be up to 128 characters in length and can contain letters, digits, and special characters.</para>
+        /// <para>The description of the subtitle rule. The description can contain Chinese and English characters, digits, and special characters. It can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>live AI subtitle template</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,10 +42,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to trigger the subtitle rule when stream pulling starts. Valid values:</para>
+        /// <para>Specifies whether the rule is triggered by stream pulling. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: generates live subtitles when stream pulling starts and stops generating live subtitles when no stream is pulled for 5 minutes. When stream pulling restarts, live subtitles are generated again.</description></item>
-        /// <item><description>false: generates live subtitles when stream ingest starts, regardless of whether stream pulling starts.</description></item>
+        /// <item><description><para>true: Subtitles are generated when stream pulling starts. If no stream is pulled for 5 minutes, subtitle generation stops. Subtitle generation resumes when stream pulling starts again.</para>
+        /// </description></item>
+        /// <item><description><para>false: Subtitles are generated when stream ingest starts, regardless of whether a stream is being pulled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,16 +58,24 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? IsLazy { get; set; }
 
         /// <summary>
-        /// <para>The specification of the output subtitles. Valid values:</para>
+        /// <para>The specifications of the output subtitles. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>lp_ld</c>: landscape low definition 360p (640×360)</description></item>
-        /// <item><description><c>lp_ld_v</c>: portrait low definition 360p (360×640)</description></item>
-        /// <item><description><c>lp_sd</c>: landscape standard definition 480p (854×480)</description></item>
-        /// <item><description><c>lp_sd_v</c>: portrait standard definition 480p (480×854)</description></item>
-        /// <item><description><c>lp_hd</c>: landscape high definition 720p (1280×720)</description></item>
-        /// <item><description><c>lp_hd_v</c>: portrait high definition 720p (720×1280)</description></item>
-        /// <item><description><c>lp_ud</c>: landscape ultra-high definition 1080p (1920×1080)</description></item>
-        /// <item><description><c>lp_ud_v</c>: portrait ultra-high definition 1080p (1080×1920)</description></item>
+        /// <item><description><para>Landscape low definition 360p (640 × 360): <c>lp_ld</c></para>
+        /// </description></item>
+        /// <item><description><para>Portrait low definition 360p (360 × 640): <c>lp_ld_v</c></para>
+        /// </description></item>
+        /// <item><description><para>Landscape standard definition 480p (854 × 480): <c>lp_sd</c></para>
+        /// </description></item>
+        /// <item><description><para>Portrait standard definition 480p (480 × 854): <c>lp_sd_v</c></para>
+        /// </description></item>
+        /// <item><description><para>Landscape high definition 720p (1280 × 720): <c>lp_hd</c></para>
+        /// </description></item>
+        /// <item><description><para>Portrait high definition 720p (720 × 1280): <c>lp_hd_v</c></para>
+        /// </description></item>
+        /// <item><description><para>Landscape ultra high definition 1080p (1920 × 1080): <c>lp_ud</c></para>
+        /// </description></item>
+        /// <item><description><para>Portrait ultra high definition 1080p (1080 × 1920): <c>lp_ud_v</c></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,6 +90,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainRealtimeLogDeliveryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the Logstore to which log entries are delivered.</para>
+        /// <para>The name of the Logstore in Simple Log Service (SLS) for real-time log delivery.</para>
         /// 
         /// <b>Example:</b>
         /// <para>logstore_example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Logstore { get; set; }
 
         /// <summary>
-        /// <para>The name of the Log Service project that is used for real-time log delivery.</para>
+        /// <para>The name of the SLS project for real-time log delivery.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project_example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Project { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Log Service project is deployed.</para>
+        /// <para>The region where the SLS project is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -52,8 +52,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The status of real-time log delivery. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>online: Real-time log delivery is enabled.</description></item>
-        /// <item><description>offline: Real-time log delivery is disabled.</description></item>
+        /// <item><description><para>online: Real-time log delivery is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>offline: Real-time log delivery is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

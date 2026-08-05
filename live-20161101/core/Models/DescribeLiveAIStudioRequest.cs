@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The current page number. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Valid values: 1 to 50.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Valid values: 1 to 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -33,12 +33,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual studio template that you want to query. This parameter is optional.</para>
+        /// <para>The ID of the template to filter. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbe61b87-db9a-448f-8757-a875edb3f944</para>

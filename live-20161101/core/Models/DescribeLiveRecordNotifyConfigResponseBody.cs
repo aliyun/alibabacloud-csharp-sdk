@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveRecordNotifyConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration of callbacks for live stream recording.</para>
+        /// <para>The recording callback configuration for the domain name.</para>
         /// </summary>
         [NameInMap("LiveRecordNotifyConfig")]
         [Validation(Required=false)]
         public DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig LiveRecordNotifyConfig { get; set; }
         public class DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig : TeaModel {
             /// <summary>
-            /// <para>The main streaming domain.</para>
+            /// <para>The streaming domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -27,10 +27,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether recording status callbacks are enabled. Valid values:</para>
+            /// <para>Specifies whether to receive callbacks for the status of recording tasks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b> (default)</description></item>
+            /// <item><description><para><b>true</b>: Yes.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): No.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,16 +42,34 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public bool? NeedStatusNotify { get; set; }
 
+            /// <summary>
+            /// <para>The authentication key for the callback.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>KbT8mN2pQ9rS4vX7wZ1aB3cE5fG6hJ8kL</para>
+            /// </summary>
             [NameInMap("NotifyAuthKey")]
             [Validation(Required=false)]
             public string NotifyAuthKey { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable callback authentication. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>yes</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>no</b>: disabled.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>no</para>
+            /// </summary>
             [NameInMap("NotifyReqAuth")]
             [Validation(Required=false)]
             public bool? NotifyReqAuth { get; set; }
 
             /// <summary>
-            /// <para>The recording callback URL.</para>
+            /// <para>The webhook address for recording callbacks.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://learn.aliyundoc.com/examplecallback.action">http://learn.aliyundoc.com/examplecallback.action</a></para>

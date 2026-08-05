@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListMessageGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application.</para>
+        /// <para>Interactive Messages application ID.</para>
+        /// <remarks>
+        /// <para>You must correctly fill in this parameter to perform a normal query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>VKL3***</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1. Valid values: 1 to 100000.</para>
+        /// <para>Page number. Default value: 1. Valid values: 1 to 100000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of message groups to return on each page. Default value: 20.</para>
+        /// <para>Number of message groups to display per page. Default value: 20.</para>
         /// <para>Valid values: 1 to 50.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -43,10 +46,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>Sorting method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: ascending order by time</description></item>
-        /// <item><description>1: descending order by time</description></item>
+        /// <item><description>0: Ascending order by time.</description></item>
+        /// <item><description>1: Descending order by time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +60,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? SortType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user. Each user has a unique ID in the application. You can specify multiple user IDs.</para>
+        /// <para>User ID, which is customized by the user and must be unique within an AppId. Different users must use different UserIds.</para>
+        /// <remarks>
+        /// <para>You must correctly fill in this parameter to perform a normal query.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>de1**a0</para>

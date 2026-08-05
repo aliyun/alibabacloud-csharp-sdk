@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The new task ID.</para>
+        /// <para>The node ID returned when you create task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fb0d4ac7-c7e3-4978-9743-0bf2f6e8****</para>

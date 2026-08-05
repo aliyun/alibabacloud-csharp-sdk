@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveTagResourcesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The token for the next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6a5e8f4fae643e70d1a2ff1827cd91bd</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>

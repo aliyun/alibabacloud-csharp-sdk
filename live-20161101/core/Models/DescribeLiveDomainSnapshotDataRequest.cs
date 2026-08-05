@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainSnapshotDataRequest : TeaModel {
         /// <summary>
-        /// <para>The main streaming domain to query.</para>
+        /// <para>The ingest domain name to query.</para>
         /// <list type="bullet">
-        /// <item><description>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</description></item>
-        /// <item><description>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</description></item>
+        /// <item><description>You can specify a single domain name or multiple domain names. Separate multiple domain names with commas (,).</description></item>
+        /// <item><description>If this parameter is left empty, the merged data of all live streaming domain names is returned by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>example.com</para>
+        /// <para>example.aliyundoc.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,14 +38,20 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</para>
         /// <remarks>
-        /// <para> You can query data in the last <b>90</b> days.</para>
+        /// <para>You can query data from the last <b>90</b> days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

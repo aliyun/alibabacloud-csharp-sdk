@@ -34,8 +34,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The stream mixing mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: the single-stream relay mode. In this mode, the service only relays the original single stream, but does not transcode mixed streams. You do not need to set parameters for mixed-stream transcoding.</description></item>
-        /// <item><description><b>1</b> (default): the mixed-stream relay mode.</description></item>
+        /// <item><description><para><b>0</b>: the single-stream relay mode. In this mode, the service only relays the original single stream, but does not transcode mixed streams. You do not need to set parameters for mixed-stream transcoding.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b> (default): the mixed-stream relay mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,11 +57,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>Specifies whether to perform stream relay by using Alibaba Cloud CDN. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>false: performs stream relay by using a CDN service that is not Alibaba Cloud CDN.</description></item>
-            /// <item><description>true: performs stream relay by using Alibaba Cloud CDN.</description></item>
+            /// <item><description><para>false: performs stream relay by using a CDN service that is not Alibaba Cloud CDN.</para>
+            /// </description></item>
+            /// <item><description><para>true: performs stream relay by using Alibaba Cloud CDN.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> The default value of this parameter is false.</para>
+            /// <para>The default value of this parameter is false.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -98,8 +102,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 /// <summary>
                 /// <para>Specifies whether to include the SEI in an Instantaneous Decoder Refresh (IDR) frame. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: does not include the SEI.</description></item>
-                /// <item><description><b>1</b>: includes the SEI.</description></item>
+                /// <item><description><para><b>0</b>: does not include the SEI.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: includes the SEI.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -131,8 +137,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 /// <summary>
                 /// <para>Specifies whether to include the SEI in an IDR frame. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: does not include the SEI.</description></item>
-                /// <item><description><b>1</b>: includes the SEI.</description></item>
+                /// <item><description><para><b>0</b>: does not include the SEI.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: includes the SEI.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -186,8 +194,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The type of the video source. This parameter is valid only when you set StreamType to 2. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>camera</b> (default)</description></item>
-            /// <item><description><b>shareScreen</b></description></item>
+            /// <item><description><para><b>camera</b> (default)</para>
+            /// </description></item>
+            /// <item><description><para><b>shareScreen</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -200,9 +210,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The type of the stream that you want to relay. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b> (default): original stream</description></item>
-            /// <item><description><b>1</b>: only the audio track</description></item>
-            /// <item><description><b>2</b>: only the video track</description></item>
+            /// <item><description><para><b>0</b> (default): original stream</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: only the audio track</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: only the video track</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -230,9 +243,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If the ingest URL is under a domain name for which hotlink protection is enabled, you must include an access token in the URL.</description></item>
-        /// <item><description>You cannot use the same ingest URL in different tasks.</description></item>
-        /// <item><description>You cannot use the same ingest URL within 10 seconds after a task is stopped.</description></item>
+        /// <item><description><para>If the ingest URL is under a domain name for which hotlink protection is enabled, you must include an access token in the URL.</para>
+        /// </description></item>
+        /// <item><description><para>You cannot use the same ingest URL in different tasks.</para>
+        /// </description></item>
+        /// <item><description><para>You cannot use the same ingest URL within 10 seconds after a task is stopped.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -270,8 +286,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 /// <summary>
                 /// <para>The display mode of the global background image.</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: scales the background image proportionally to fit the view, with black bars displayed.</description></item>
-                /// <item><description><b>1</b> (default): crops the background image to fit the view.</description></item>
+                /// <item><description><para><b>0</b>: scales the background image proportionally to fit the view, with black bars displayed.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b> (default): crops the background image to fit the view.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -323,8 +341,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 /// <summary>
                 /// <para>Specifies whether the output stream is an audio-only stream. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: The output stream is an audio-only stream. If you set this parameter to true, you need to configure only audio-related parameters under EncodeParams.</description></item>
-                /// <item><description><b>false</b> (default): The output stream is not an audio-only stream. If you set this parameter to false, you need to configure all parameters under EncodeParams, except the VideoCodec and EnhancedParam parameters.</description></item>
+                /// <item><description><para><b>true</b>: The output stream is an audio-only stream. If you set this parameter to true, you need to configure only audio-related parameters under EncodeParams.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b> (default): The output stream is not an audio-only stream. If you set this parameter to false, you need to configure all parameters under EncodeParams, except the VideoCodec and EnhancedParam parameters.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -347,11 +367,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 /// <summary>
                 /// <para>The parameter used for encoding enhancement, which is a JSON string. The parameter includes the optional profile and preset fields.</para>
                 /// <list type="bullet">
-                /// <item><description>profile: the encoding level. If the video codec is H.264, the valid values of this field are baseline, main, and high. If the video codec is H.265, the valid value of this field is main.</description></item>
-                /// <item><description>preset: adjusts the trade-off between encoding speed and video quality. The valid values of this field are ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, and placebo. Each value specifies a level of trade-off between encoding speed and video quality. For example, the ultrafast preset has the fastest encoding speed but the lowest video quality, while the placebo preset sacrifices the encoding speed for the best video quality.</description></item>
+                /// <item><description><para>profile: the encoding level. If the video codec is H.264, the valid values of this field are baseline, main, and high. If the video codec is H.265, the valid value of this field is main.</para>
+                /// </description></item>
+                /// <item><description><para>preset: adjusts the trade-off between encoding speed and video quality. The valid values of this field are ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, and placebo. Each value specifies a level of trade-off between encoding speed and video quality. For example, the ultrafast preset has the fastest encoding speed but the lowest video quality, while the placebo preset sacrifices the encoding speed for the best video quality.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> A value of superfast for the preset field is suitable for real-time communication scenarios. We recommend that you not set the field if you are not a professional encoding engineer.</para>
+                /// <para>A value of superfast for the preset field is suitable for real-time communication scenarios. We recommend that you not set the field if you are not a professional encoding engineer.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -374,8 +396,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 /// <summary>
                 /// <para>The video codec. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>H.264 (default)</description></item>
-                /// <item><description>H.265</description></item>
+                /// <item><description><para>H.264 (default)</para>
+                /// </description></item>
+                /// <item><description><para>H.265</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -430,7 +454,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The video layout information.</para>
             /// <remarks>
-            /// <para> If video transcoding is required, you must specify the video layout information, including the x-coordinate and y-coordinate, the width and height, and the layer. For audio-only transcoding, leave the video layout information empty.</para>
+            /// <para>If video transcoding is required, you must specify the video layout information, including the x-coordinate and y-coordinate, the width and height, and the layer. For audio-only transcoding, leave the video layout information empty.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Layout")]
@@ -467,8 +491,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     /// <summary>
                     /// <para>The display mode of the pane. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>0</b>: scales the video proportionally to fit the view, with black bars displayed.</description></item>
-                    /// <item><description><b>1 (default)</b>: crops the video to fit the view.</description></item>
+                    /// <item><description><para><b>0</b>: scales the video proportionally to fit the view, with black bars displayed.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>1 (default)</b>: crops the video to fit the view.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -506,8 +532,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                         /// <summary>
                         /// <para>The type of the video source. This parameter is valid only when you set StreamType to 2. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>camera</b> (default)</description></item>
-                        /// <item><description><b>shareScreen</b></description></item>
+                        /// <item><description><para><b>camera</b> (default)</para>
+                        /// </description></item>
+                        /// <item><description><para><b>shareScreen</b></para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -593,8 +621,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 /// <summary>
                 /// <para>The type of the video source that is subscribed to. This parameter is valid only when you set StreamType to 2. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>camera</b> (default)</description></item>
-                /// <item><description><b>shareScreen</b></description></item>
+                /// <item><description><para><b>camera</b> (default)</para>
+                /// </description></item>
+                /// <item><description><para><b>shareScreen</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -607,9 +637,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 /// <summary>
                 /// <para>The type of the relayed stream that is subscribed to. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b> (default): original stream</description></item>
-                /// <item><description><b>1</b>: only the audio track</description></item>
-                /// <item><description><b>2</b>: only the video track</description></item>
+                /// <item><description><para><b>0</b> (default): original stream</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: only the audio track</para>
+                /// </description></item>
+                /// <item><description><para><b>2</b>: only the video track</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

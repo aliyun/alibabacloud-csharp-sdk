@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListEdgeTranscodeJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data center.</para>
+        /// <para>The data center ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the query.</para>
+        /// <para>The search keyword. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You can specify a task ID for an exact match.</description></item>
-        /// <item><description>You can specify a task name for a fuzzy match.</description></item>
+        /// <item><description>Task ID. Exact match is supported.</description></item>
+        /// <item><description>Task name. Fuzzy match is supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,15 +58,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The sort order of the tasks by creation time. Default value: desc. Valid values:</para>
+        /// <para>The collation based on CreateTime. Default value: desc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desc: descending order</description></item>
-        /// <item><description>asc: ascending order</description></item>
+        /// <item><description>desc: descending sorting.</description></item>
+        /// <item><description>asc: ascending sorting.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,10 +83,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The task status. Valid values:</para>
+        /// <para>The edge transcoding task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: not started</description></item>
-        /// <item><description>1: running</description></item>
+        /// <item><description>0: not started.</description></item>
+        /// <item><description>1: running.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,14 +97,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The type of edge transcoding. Valid values:</para>
+        /// <para>The edge transcoding type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>common: standard transcoding and Narrowband HD™ 1.0 transcoding.</description></item>
-        /// <item><description>nbhd-2: Narrowband HD™ 2.0 transcoding</description></item>
-        /// <item><description>ultra-hd: ultra-high definition transcoding</description></item>
+        /// <item><description>common: default transcoding (standard + Narrowband HD 1.0).</description></item>
+        /// <item><description>nbhd-2: Narrowband HD 2.0.</description></item>
+        /// <item><description>ultra-hd: ultra-high definition.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the query results are filtered based on the types of edge transcoding on which you are granted permissions.</para>
+        /// <para>If this parameter is not specified, transcoding templates for which the user has the corresponding transcoding type permissions are displayed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

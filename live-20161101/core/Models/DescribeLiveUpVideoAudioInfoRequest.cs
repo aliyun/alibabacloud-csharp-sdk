@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveUpVideoAudioInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time. The format is \<c>yyyy-MM-ddTHH:mm:ssZ\\</c> in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T15:10:00Z</para>
@@ -23,12 +23,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the stream that you want to query. Specify this parameter in the following format: <c>rtmp://Ingest domain/Application name/Stream name</c>.</para>
+        /// <para>The start time. The format is \<c>yyyy-MM-ddTHH:mm:ssZ\\</c> in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T15:00:00Z</para>
@@ -38,7 +44,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>DescribeLiveUpVideoAudioInfo</b>.</para>
+        /// <para>The full name of the stream to query. The format is <c>rtmp://&lt;ingest domain&gt;/&lt;AppName&gt;/&lt;StreamName&gt;</c></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

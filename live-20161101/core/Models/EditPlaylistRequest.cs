@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the episode list. For more information, see the <b>ProgramConfig</b> section of this topic.</para>
+        /// <para>The playlist configuration. For more information, see <b>ProgramConfig</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;RepeatNumber&quot;:&quot;0&quot;,&quot;ProgramName&quot;:&quot;my program&quot;}]</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ProgramConfig { get; set; }
 
         /// <summary>
-        /// <para>The ID of the episode list. If the episode list was created by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, check the value of the response parameter ProgramId to obtain the ID.</para>
+        /// <para>The playlist ID. If you add playlist items by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, use the ProgramId value returned by the call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ProgramId { get; set; }
 
         /// <summary>
-        /// <para>The episodes that you want to add to the production studio. The value is a JSON string. For more information, see the <b>InputProgramItem</b> section of this topic.</para>
+        /// <para>The list of playlist items. This is a JSON string. For more information, see <b>InputProgramItem</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,6 +45,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string ProgramItems { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamDetailFrameRateAndBitRateDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The audio and video frame rates and bitrates at each time granularity.</para>
+        /// <para>The detailed audio and video frame rate and bitrate data for each time interval.</para>
         /// </summary>
         [NameInMap("FrameRateAndBitRateInfos")]
         [Validation(Required=false)]
         public List<DescribeLiveStreamDetailFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfos> FrameRateAndBitRateInfos { get; set; }
         public class DescribeLiveStreamDetailFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfos : TeaModel {
             /// <summary>
-            /// <para>The audio bitrate of the live stream. Unit: bit/s.</para>
+            /// <para>The audio bitrate of the live stream. Unit: Bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? AudioFrameRate { get; set; }
 
             /// <summary>
-            /// <para>The bitrate of the live stream. Unit: bit/s.</para>
+            /// <para>The bitrate of the live stream. Unit: Bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1420</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string StreamUrl { get; set; }
 
             /// <summary>
-            /// <para>The time when the data was collected. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The timestamp of the data. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2016-09-13T16:04:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Time { get; set; }
 
             /// <summary>
-            /// <para>The video bitrate of the live stream. Unit: bit/s.</para>
+            /// <para>The video bitrate of the live stream. Unit: Bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? VideoBitRate { get; set; }
 
             /// <summary>
-            /// <para>The video frame rate of the live stream. Unit: frames per second (FPS).</para>
+            /// <para>The video frame rate of the live stream. Unit: FPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>

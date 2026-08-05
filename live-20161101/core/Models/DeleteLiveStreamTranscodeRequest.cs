@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveStreamTranscodeRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The AppName of the live stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,18 +44,26 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <list type="bullet">
         /// <item><description><para>Standard transcoding:</para>
         /// <list type="bullet">
-        /// <item><description>lld: low definition</description></item>
-        /// <item><description>lsd: standard definition</description></item>
-        /// <item><description>lhd: high definition</description></item>
-        /// <item><description>lud : ultra-high definition</description></item>
+        /// <item><description><para>lld: low definition</para>
+        /// </description></item>
+        /// <item><description><para>lsd: standard definition</para>
+        /// </description></item>
+        /// <item><description><para>lhd: high definition</para>
+        /// </description></item>
+        /// <item><description><para>lud : ultra-high definition</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Narrowband HD™ transcoding:</para>
         /// <list type="bullet">
-        /// <item><description>ld: low definition</description></item>
-        /// <item><description>sd: standard definition</description></item>
-        /// <item><description>hd: high definition</description></item>
-        /// <item><description>ud: ultra-high definition</description></item>
+        /// <item><description><para>ld: low definition</para>
+        /// </description></item>
+        /// <item><description><para>sd: standard definition</para>
+        /// </description></item>
+        /// <item><description><para>hd: high definition</para>
+        /// </description></item>
+        /// <item><description><para>ud: ultra-high definition</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Custom transcoding: a custom ID</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteCasterEpisodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the production studio. You can specify the ID as a parameter in the request to modify the episode in the production studio.</para>
+        /// <para>The production studio ID. You can use this ID as a request parameter to modify the episode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a2b8e671-2fe5-4642-a2ec-bf93880e****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the episode. You can specify the ID as a parameter in the request to modify the episode in the production studio.</para>
+        /// <para>The episode ID. You can use this ID as a request parameter to modify the episode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a2b8e671-2fe5-4642-a2ec-bf932738****</para>

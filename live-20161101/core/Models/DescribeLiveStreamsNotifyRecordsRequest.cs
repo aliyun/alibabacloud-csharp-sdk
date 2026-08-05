@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamsNotifyRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</para>
+        /// <para>The name of the application to which the live stream belongs. You can view the AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time. The end time must be later than the start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Maximum value: 500. Valid values: integers from 1 to 500.</para>
+        /// <para>The page size. Default value: 20. Maximum value: 500. Valid values: any integer from 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -65,14 +65,20 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// <remarks>
-        /// <para> The start time must be in the last seven days.</para>
+        /// <para>The start time must be within the last 7 days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -84,10 +90,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the records of successful or failed callbacks. Valid values:</para>
+        /// <para>Specifies whether the callback is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>success</description></item>
-        /// <item><description>failed</description></item>
+        /// <item><description>success: Successful.</description></item>
+        /// <item><description>failed: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</para>
+        /// <para>The name of the live stream. You can view the StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>stream</para>

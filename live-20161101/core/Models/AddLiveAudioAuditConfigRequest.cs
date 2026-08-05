@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddLiveAudioAuditConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs. The value of this parameter must be the same as the application name in the ingest URL. Otherwise, the configuration does not take effect. The application name is case-sensitive.</para>
+        /// <para>The AppName of the live stream. The AppName must match that in the ingest URL for the template to take effect. The value is case-sensitive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The business type. You can specify a model. The default value is the domain name.</para>
+        /// <para>The business type. This parameter can be used to select a model. The default value is the domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.edu</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The name of the OSS bucket in which the recording is stored.</para>
+        /// <para>The name of the OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveBucket****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string OssBucket { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of OSS.</para>
+        /// <para>The endpoint of the OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-oss-****.aliyuncs.com</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string OssEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The name of the recording stored in OSS.</para>
+        /// <para>The name of the recording file stored in OSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveObject****</para>
@@ -75,12 +75,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream. The value of this parameter must be the same as the stream name in the ingest URL. Otherwise, the configuration does not take effect. The stream name is case-sensitive.</para>
+        /// <para>The name of the live stream. The StreamName must match that in the ingest URL for the template to take effect. The value is case-sensitive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

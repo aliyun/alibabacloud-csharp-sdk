@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class MuteAllGroupUserRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application.</para>
+        /// <para>The application ID for interactive messages.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The mode in which system messages are broadcasted. Valid values:</para>
+        /// <para>The system message diffusion type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: specifies that system messages are not broadcasted.</description></item>
-        /// <item><description>1: specifies that system messages are broadcasted to specified users.</description></item>
-        /// <item><description>2: specifies that system messages are broadcasted to the message group.</description></item>
+        /// <item><description>0: No diffusion.</description></item>
+        /// <item><description>1: Diffusion to specified users.</description></item>
+        /// <item><description>2: Diffusion to the group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? BroadCastType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message group.</para>
+        /// <para>The message group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who performs the operation.</para>
+        /// <para>The user ID of the operator. This user must be the creator of the group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

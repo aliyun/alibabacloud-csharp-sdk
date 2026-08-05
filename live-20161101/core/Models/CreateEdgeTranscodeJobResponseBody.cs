@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateEdgeTranscodeJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the edge transcoding task.</para>
+        /// <para>The ID of the edge transcoding job.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>

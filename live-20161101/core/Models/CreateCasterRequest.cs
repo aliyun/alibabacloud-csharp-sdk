@@ -20,19 +20,27 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterName { get; set; }
 
         /// <summary>
-        /// <para>The preset resolution of the production studio. If the subscription billing method is used, this parameter supports the following valid values:</para>
+        /// <para>The preset resolution of the production studio. This parameter is available only for the subscription billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lp_ld</b>: low definition</description></item>
-        /// <item><description><b>lp_sd</b>: standard definition</description></item>
-        /// <item><description><b>lp_hd</b>: high definition</description></item>
-        /// <item><description><b>lp_ud</b>: ultra high definition</description></item>
-        /// <item><description><b>lp_ld_v</b>: low definition (portrait mode)</description></item>
-        /// <item><description><b>lp_sd_v</b>: standard definition (portrait mode)</description></item>
-        /// <item><description><b>lp_hd_v</b>: high definition (portrait mode)</description></item>
-        /// <item><description><b>lp_ud_v</b>: ultra high definition (portrait mode)</description></item>
+        /// <item><description><para><b>lp_ld</b>: low definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_sd</b>: standard definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_hd</b>: high definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_ud</b>: ultra-high definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_ld_v</b>: vertical low definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_sd_v</b>: vertical standard definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_hd_v</b>: vertical high definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_ud_v</b>: vertical ultra-high definition.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If the pay-as-you-go billing method is used, you must call the <a href="https://help.aliyun.com/document_detail/60271.html">SetCasterConfig</a> operation to specify the resolution.</para>
+        /// <para>If you use the pay-as-you-go billing method, call the <a href="https://help.aliyun.com/document_detail/60271.html">SetCasterConfig</a> operation to set the resolution.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,10 +51,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterTemplate { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Only the pay-as-you-go billing method is supported.**** Valid values:</para>
+        /// <para>The billing method. Only <b>PostPaid</b> is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b>: subscription. This billing method is not yet supported.</description></item>
-        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+        /// <item><description><para><b>PrePaid</b>: subscription (not supported).</para>
+        /// </description></item>
+        /// <item><description><para><b>PostPaid</b>: pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,7 +69,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can specify a custom value for this parameter, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Generate a token on your client and ensure that the token is unique among different requests. The token can be up to 64 ASCII characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,9 +80,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the production studio. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The expiration time of the production studio. The time is in the \<c>yyyy-MM-ddTHH:mm:ssZ\\</c> format and is displayed in UTC.</para>
         /// <remarks>
-        /// <para> This parameter is valid only if you set the <b>ChargeType</b> parameter to <b>PrePaid</b>.</para>
+        /// <para>This parameter is available only if you set <b>ChargeType</b> to <b>PrePaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,9 +94,23 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 
         /// <summary>
         /// <para>The type of the production studio. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: general mode</description></item>
-        /// <item><description><b>6</b>: playlist mode (for carousel playback)</description></item>
+        /// <item><description><para><b>1</b>: Standard.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: Lightweight Carousel.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: Virtual Studio.</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: Carousel (New Playlist).</para>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>1</b>: Standard.</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: Carousel (New Playlist).</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -102,9 +126,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The time when the production studio was purchased. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The purchase time of the production studio. The time is in the \<c>yyyy-MM-ddTHH:mm:ssZ\\</c> format and is displayed in UTC.</para>
         /// <remarks>
-        /// <para> This parameter is valid only if you set the <b>ChargeType</b> parameter to <b>PrePaid</b>.</para>
+        /// <para>This parameter is available only if you set <b>ChargeType</b> to <b>PrePaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -114,12 +138,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string PurchaseTime { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">Resource groups</a>.</para>
+        /// <para>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzw******</para>
@@ -136,7 +166,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<CreateCasterRequestTag> Tag { get; set; }
         public class CreateCasterRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -146,7 +176,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

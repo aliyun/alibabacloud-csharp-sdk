@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveRecordNotifyRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The name of the application to which the stream belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveApp****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The streamer\&quot;s streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time. The end time must be later than the start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 500. Default value: 20.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 500. Valid values: any integer from 1 to 500.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,14 +67,20 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// <remarks>
-        /// <para> You can query data within the last seven days.</para>
+        /// <para>You can query data within the last 7 days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -86,10 +92,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the callback is successful. Valid values:</para>
+        /// <para>Specifies whether the callback was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>success</description></item>
-        /// <item><description>failed</description></item>
+        /// <item><description>success: The callback was successful.</description></item>
+        /// <item><description>failed: The callback failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,12 +105,26 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The storage type of the recording for which to query callback records. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>oss: recorded to OSS</para>
+        /// </description></item>
+        /// <item><description><para>vod: recorded to ApsaraVideo VOD</para>
+        /// </description></item>
+        /// <item><description><para>all: queries callback records for all storage types</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss</para>
+        /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream.</para>
+        /// <para>The stream name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveStream****</para>

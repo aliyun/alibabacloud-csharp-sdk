@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The HTTPDNS API that is used to obtain the destination URLs.</para>
+        /// <para>The URL of the HTTPDNS service used to resolve the addresses of the target domains.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://developer.aliyundoc.com/">http://developer.aliyundoc.com/</a>****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ingested stream.</para>
+        /// <para>The name of the ingested live stream.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveStream****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamName { get; set; }
 
         /// <summary>
-        /// <para>The destination domain names to which the ingested stream is relayed. Multiple domain names are separated by commas (,).</para>
+        /// <para>A comma-separated list of the target domains where the stream is forwarded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>learn.aliyundoc.com,guide.aliyundoc.com</para>
@@ -70,10 +70,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string TargetDomainList { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether stream ingest parameters are passed through. Valid values:</para>
+        /// <para>Indicates whether the query parameters from the original ingest URL are passed through to the target URL.</para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b>: Stream ingest parameters are passed through.</description></item>
-        /// <item><description><b>no</b>: Stream ingest parameters are not passed through.</description></item>
+        /// <item><description><para><b>yes</b>: The parameters are passed through.</para>
+        /// </description></item>
+        /// <item><description><para><b>no</b>: The parameters are not passed through.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

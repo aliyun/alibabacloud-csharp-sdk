@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetCasterSceneConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the production studio.</para>
+        /// <para>The production studio ID.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/69338.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the CasterId parameter returned by the CreateCaster operation.</para>
+        /// </description></item>
+        /// <item><description><para>If you created the production studio in the ApsaraVideo Live console, go to <b>ApsaraVideo Live console</b> &gt; <b>Production Studios</b> &gt; <b>China Cloud Production Studio</b> to view the ID.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The name of the production studio in the production studio list on the China Cloud Production Studio page is the production studio ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,11 +30,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the components. Components in the scene are listed from the bottom to the top in an array.</para>
+        /// <para>The list of component IDs. The components are arranged in bottom-to-top order within the array.</para>
         /// <remarks>
-        /// <para> N indicates a sequence number. Examples:\
-        /// ComponentId.1 indicates the ID of the first component.\
-        /// ComponentId.2 indicates the ID of the second component.</para>
+        /// <para>N indicates the sequence number. For example:<br>ComponentId.1 indicates the first component ID.<br>ComponentId.2 indicates the second component ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<string> ComponentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the layout. If you call the <a href="https://help.aliyun.com/document_detail/60260.html">DescribeCasterLayouts</a> operation to query the layouts of the production studio, check the value of the response parameter LayoutId to obtain the ID.</para>
+        /// <para>The layout ID. If you call the <a href="https://help.aliyun.com/document_detail/2848028.html">DescribeCasterLayouts</a> operation to query the layout list of a production studio, check the LayoutId parameter returned by the DescribeCasterLayouts operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c6da077-f037-49e8-8440-3be13393****</para>
@@ -56,12 +56,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scene.</para>
+        /// <para>The scene ID. The scene must have been started by calling StartCasterScene. Otherwise, the IncorrectSceneStatus error is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

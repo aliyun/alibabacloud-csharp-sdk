@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyLiveMessageGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The list of administrators after your change.</para>
+        /// <para>The updated list of administrators. Separate multiple administrators with commas (,). You can specify up to three administrators.</para>
         /// </summary>
         [NameInMap("AdminList")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</para>
+        /// <para>The data center. It must be the same as the data center specified in the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> call. Valid values: cn-shanghai (Shanghai) and ap-southeast-1 (Singapore).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The additional information about the group after the modification. The value can be up to 32 KB in length.</para>
+        /// <para>The updated extended information of the group. The information can be up to 32 KB in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>newmeta</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupInfo { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to change the group administrators.</para>
+        /// <para>Specifies whether to modify the group administrators.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? ModifyAdmin { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to modify the additional information about the group.</para>
+        /// <para>Specifies whether to modify the extended information of the group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

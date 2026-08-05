@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the monitoring session.</para>
         /// <remarks>
-        /// <para> You can obtain the monitoring session ID from the response parameter MonitorId of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation. If you leave this parameter empty, the data of all monitoring sessions is returned.</para>
+        /// <para>Obtain the MonitorId value from the response parameters of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation. If you leave this parameter empty, the data of all monitoring sessions is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,11 +23,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string MonitorId { get; set; }
 
         /// <summary>
-        /// <para>The sorting order of monitoring sessions. Valid values:</para>
+        /// <para>The order in which to sort the monitoring sessions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Monitoring sessions are sorted by status.</description></item>
-        /// <item><description>1: Monitoring sessions are sorted by start time in descending order.</description></item>
-        /// <item><description>2: Monitoring sessions are sorted by start time in ascending order.</description></item>
+        /// <item><description><para>0: Default. The monitoring sessions are sorted by monitoring status in descending order (active sessions are listed first). The start time is not used for sorting.</para>
+        /// </description></item>
+        /// <item><description><para>1: The monitoring sessions are sorted by start time in descending order.</para>
+        /// </description></item>
+        /// <item><description><para>2: The monitoring sessions are sorted by start time in ascending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of monitoring sessions to return per page.</para>
+        /// <para>The number of monitoring sessions to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,6 +64,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -68,8 +77,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The status of the monitoring session. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: Monitoring</description></item>
-        /// <item><description>0: Unmonitored</description></item>
+        /// <item><description><para>1: The session is being monitored.</para>
+        /// </description></item>
+        /// <item><description><para>0: The session is not being monitored.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

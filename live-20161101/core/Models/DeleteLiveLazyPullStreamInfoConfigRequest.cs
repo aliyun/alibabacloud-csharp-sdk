@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveLazyPullStreamInfoConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The name of the application.</para>
         /// <remarks>
-        /// <para> If you want to delete configurations of triggered stream pulling for all applications, set the value to <b>ali_all_app</b>.</para>
+        /// <para>To delete configurations of triggered stream pulling for all applications, set it to <b>ali_all_app</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,6 +38,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

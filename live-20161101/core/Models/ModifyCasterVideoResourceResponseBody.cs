@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyCasterVideoResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the production studio. This parameter is used in the requests of the following operations: DescribeCasterVideoResources, AddCasterLayout, and DescribeCasterLayouts.</para>
+        /// <para>The ID of the production studio. You can use this ID to query video sources, add layouts, or query layout lists for the production studio.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LIVEPRODUCER_POST-cn-0pp1czt****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CF60DB6A-7FD6-426E-9288-122CC1A52FA7</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>The resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>98461064-1c94-4dc1-85ce-94098764****</para>

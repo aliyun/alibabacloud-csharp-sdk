@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListEventSubEventRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The ID of the subscribed application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time, expressed as a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number. Valid values: 1 and greater.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of callback records to return on each page. Valid values: 1 to 100.</para>
+        /// <para>The number of records per page. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time, expressed as a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The subscription ID. You can obtain the ID from the response to the <a href="https://help.aliyun.com/document_detail/2848209.html">CreateEventSub</a> operation.</para>
+        /// <para>The subscribe ID. You can obtain the subscribe ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/2848209.html">CreateEventSub</a> operation by using a parameter query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ad53276431c****</para>

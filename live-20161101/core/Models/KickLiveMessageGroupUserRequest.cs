@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>coims-****</para>
+        /// <para>demo</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]

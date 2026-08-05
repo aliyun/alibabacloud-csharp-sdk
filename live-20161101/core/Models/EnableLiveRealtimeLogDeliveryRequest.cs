@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
     public class EnableLiveRealtimeLogDeliveryRequest : TeaModel {
         /// <summary>
         /// <para>The streaming domain for which you want to enable real-time log delivery.</para>
-        /// <para>Separate multiple streaming domains with commas (,).</para>
+        /// <para>Separate multiple domain names with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,6 +25,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aek2egyoep3jp7a</para>
+        /// <para>rg-<b>kzvyjetyjjm</b></para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamRecordIndexFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the index file.</para>
+        /// <para>Recording configuration.</para>
         /// </summary>
         [NameInMap("RecordIndexInfo")]
         [Validation(Required=false)]
         public DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo RecordIndexInfo { get; set; }
         public class DescribeLiveStreamRecordIndexFileResponseBodyRecordIndexInfo : TeaModel {
             /// <summary>
-            /// <para>The name of the application to which the live stream belongs.</para>
+            /// <para>The AppName of the live stream.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveApp****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The time when the index file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2016-05-27T09:40:56Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The recording length. Unit: seconds.</para>
+            /// <para>The recording duration. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>588.849</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? Duration { get; set; }
 
             /// <summary>
-            /// <para>The end time of the index file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The end time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2016-05-25T05:47:11Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? Height { get; set; }
 
             /// <summary>
-            /// <para>The name of the Object Storage Service (OSS) bucket.</para>
+            /// <para>The name of the OSS bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveBucket****</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string OssObject { get; set; }
 
             /// <summary>
-            /// <para>The ID of the index file.</para>
+            /// <para>The manifest ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c4d7f0a4-b506-43f9-8de3-07732c3f****</para>
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string RecordId { get; set; }
 
             /// <summary>
-            /// <para>The URL of the index file.</para>
+            /// <para>The URL of the manifest.</para>
             /// </summary>
             [NameInMap("RecordUrl")]
             [Validation(Required=false)]
             public string RecordUrl { get; set; }
 
             /// <summary>
-            /// <para>The start time of the index file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The start time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-12-01T05:36:00Z</para>

@@ -115,18 +115,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The normalized value of the width of the video layer image.</para>
-        /// <list type="bullet">
-        /// <item><description>If the FillMode parameter of the video layer is set to none, the height of the video image is scaled based on this parameter. The default value is <b>0</b>, which indicates that the video image is displayed in the original size.</description></item>
-        /// <item><description>If the FillMode parameter of the video layer is set to fit, the value of the parameter is greater than <b>0</b>.</description></item>
-        /// </list>
+        /// <para>3be7ade8-d907-483c-b24a-0dad45****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

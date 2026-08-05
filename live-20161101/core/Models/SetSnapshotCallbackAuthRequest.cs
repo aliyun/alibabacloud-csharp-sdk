@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetSnapshotCallbackAuthRequest : TeaModel {
         /// <summary>
-        /// <para>The custom key that is used for callback authentication.</para>
+        /// <para>The authentication key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>Specifies whether to enable callback authentication. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b>: enables callback authentication.</description></item>
-        /// <item><description><b>no</b>: disables callback authentication.</description></item>
+        /// <item><description><para><b>yes</b>: enables</para>
+        /// </description></item>
+        /// <item><description><para><b>no</b>: disables</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,6 +52,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

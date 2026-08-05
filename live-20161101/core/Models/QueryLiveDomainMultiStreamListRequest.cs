@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class QueryLiveDomainMultiStreamListRequest : TeaModel {
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The primary streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// <para>The end time must be later than the start time. The time range specified by the StartTime and EndTime parameters cannot exceed seven days. If the two parameters are not specified, data of the last 24 hours is queried by default.</para>
+        /// <para>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC time).</para>
+        /// <para>The end time must be later than the start time. The interval between the start time and end time cannot exceed 7 days. Default value: the last 24 hours.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-02T01:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. The time range specified by the StartTime and EndTime parameters cannot exceed seven days.</para>
+        /// <para>The start time of the query range. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC time). The interval between StartTime and EndTime must be within 7 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-01T01:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream. This parameter is used for exact match.</para>
+        /// <para>The name of the live stream. This parameter is used for exact match filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>teststream</para>

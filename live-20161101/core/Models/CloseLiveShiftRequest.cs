@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CloseLiveShiftRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs. You can specify an asterisk (\*) as the value to match all applications under the domain name. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</para>
+        /// <para>The name of the application to which the live stream belongs. Wildcards (*) are supported, which indicates all AppName values under the domain name. You can view the AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveApp****</para>
@@ -34,12 +34,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream. You can specify an asterisk (\*) as the value to match all streams in the application. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</para>
+        /// <para>The name of the live stream. Wildcards (*) are supported, which indicates all StreamName values under the AppName. You can view the StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveStream****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateLiveStreamMonitorRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the output stream of the monitoring session belongs. You can specify a name. If you do not specify a name, the system uses <b>monitor</b> as the name of the application.</para>
+        /// <para>The application name for the output stream of the monitoring session. You can specify a custom name. If you do not specify this parameter, <b>monitor</b> is used as the AppName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>monitor****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string App { get; set; }
 
         /// <summary>
-        /// <para>The callback URL. Supported formats include HTTP and HTTPS.</para>
+        /// <para>The webhook address. HTTP and HTTPS are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The URL of the DingTalk chatbot. Specify a DingTalk chatbot that you have configured, and you can receive live monitoring alerts from the chatbot. For more information, see <a href="https://open.dingtalk.com/document/robots/custom-robot-access">Configure a custom chatbot</a>.</para>
+        /// <para>The webhook URL of the DingTalk chatbot. Monitoring alerts are sent to a DingTalk group using a chatbot. Set up a chatbot and enter its webhook URL, which must be an HTTP or HTTPS address. For more information, see <a href="https://open.dingtalk.com/document/robots/custom-robot-access">Custom robot access</a>.</para>
         /// <remarks>
-        /// <para> Specify &quot;Alert&quot; as the custom keyword of the DingTalk chatbot. Otherwise, you cannot receive messages.</para>
+        /// <para>Set the custom keyword of the DingTalk chatbot to &quot;Alerting&quot;. Otherwise, messages cannot be received.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DingTalkWebHookUrl { get; set; }
 
         /// <summary>
-        /// <para>The domain name.</para>
+        /// <para>The output domain name for the monitoring session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo.aliyundoc.com</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The list of input streams to monitor. For more information, see the following <b>InputConfig</b> table.</para>
+        /// <para>The list of input streams to monitor. For more information, see the <b>InputConfig</b> table below.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string InputList { get; set; }
 
         /// <summary>
-        /// <para>The monitoring alert thresholds. The value is a JSON string. For more information, see the following MonitorConfig table.</para>
+        /// <para>The settings for alert thresholds. The value is a JSON string. For more information, see the MonitorConfig table below.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;{\&quot;fpsLowThres\&quot;: 0.6,\&quot;brLowThres\&quot;: 1.1,\&quot;eofDurationThresSec\&quot;: 10}&quot;</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the monitoring session.</para>
         /// <remarks>
-        /// <para> You can obtain the monitoring session ID from the response of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation.</para>
+        /// <para>Obtain the MonitorId value from the response parameters of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -98,12 +98,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string MonitorName { get; set; }
 
         /// <summary>
-        /// <para>The output template of the monitoring session. Valid values:</para>
+        /// <para>The output template for the monitoring session. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lp_ld</b>: low definition</description></item>
-        /// <item><description><b>lp_sd</b>: standard definition</description></item>
-        /// <item><description><b>lp_hd</b>: high definition</description></item>
-        /// <item><description><b>lp_ud</b>: ultra-high definition</description></item>
+        /// <item><description><para><b>lp_ld</b>: low definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_sd</b>: standard definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_hd</b>: high definition.</para>
+        /// </description></item>
+        /// <item><description><para><b>lp_ud</b>: ultra-high definition.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,12 +121,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the output stream of the monitoring session.</para>
+        /// <para>The name of the output stream for the monitoring session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>monitorStream****</para>

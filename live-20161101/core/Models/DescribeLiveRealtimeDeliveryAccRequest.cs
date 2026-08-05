@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The streaming domain.</para>
         /// <list type="bullet">
-        /// <item><description>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</description></item>
-        /// <item><description>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</description></item>
+        /// <item><description>You can specify a single domain name or multiple domain names. Separate multiple domain names with commas (,).</description></item>
+        /// <item><description>If this parameter is not specified, the merged data of all live streaming domain names is returned by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// <para>The end time must be later than the start time. The maximum time range that can be specified is one year.</para>
+        /// <para>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+        /// <para>The end time must be later than the start time. The interval between the start time and end time cannot exceed one year.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T21:05:00Z</para>
@@ -35,13 +35,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The time granularity of the query. Unit: seconds. Valid values:</para>
+        /// <para>The time granularity of the queried data. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>300</b></description></item>
         /// <item><description><b>3600</b></description></item>
         /// <item><description><b>86400</b></description></item>
         /// </list>
-        /// <para>If you specify an invalid value or do not specify this parameter, the default value is used. If the specified time range is no more than three days, the default value is 300. If the specified time range is more than three days and no more than 30 days, the default value is 3600. If the specified time range is more than 30 days, the default value is 86400.</para>
+        /// <para>If this parameter is not specified or the specified value is not supported, the default value is 300 seconds when the time span does not exceed 3 days, 3600 seconds when the time span exceeds 3 days, and 86400 seconds when the time span exceeds 30 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore to which log entries are delivered. If you leave this parameter empty, the data of all Logstores is returned.</para>
+        /// <para>The Logstore for real-time log delivery. If this parameter is not specified, the merged data of all Logstores is returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>logstore_example</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Log Service project that is used for real-time log delivery. If you leave this parameter empty, the data of all Log Service projects is returned.</para>
+        /// <para>The Project for real-time log delivery. If this parameter is not specified, the merged data of all Projects is returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project_example</para>
@@ -74,12 +74,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Project { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T20:00:00Z</para>

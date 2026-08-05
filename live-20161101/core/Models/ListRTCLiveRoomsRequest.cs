@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListRTCLiveRoomsRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID. You can view your application IDs by navigating to <b>ApsaraVideo Live &gt; Live+ &gt; ApsaraVideo Real-time Communication &gt; Application Management</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The current page number, starting from 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The page size. Valid values: 10 to 100. Default value: 50.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the edge transcoding template.</para>
+        /// <para>The edge transcoding template.</para>
         /// </summary>
         [NameInMap("Template")]
         [Validation(Required=false)]
         public GetEdgeTranscodeTemplateResponseBodyTemplate Template { get; set; }
         public class GetEdgeTranscodeTemplateResponseBodyTemplate : TeaModel {
             /// <summary>
-            /// <para>The bitrate. If a numeric value is returned, a fixed bitrate is configured for the output stream. If ws is returned, the output stream maintains the same bitrate as the input stream.</para>
+            /// <para>The bitrate configuration. Valid values: a fixed bitrate value or ws (follow source).</para>
             /// 
             /// <b>Example:</b>
             /// <para>3000</para>
@@ -39,8 +39,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The video encoding format. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>H.264</description></item>
-            /// <item><description>H.265</description></item>
+            /// <item><description>H.264.</description></item>
+            /// <item><description>H.265.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Codec { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was created.</para>
+            /// <para>The time when the template was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-25T02:48:58Z</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The frame rate. If a numeric value is returned, a fixed frame rate is configured for the output stream. If ws is returned, the output stream maintains the same frame rate as the input stream.</para>
+            /// <para>The frame rate configuration. Valid values: a fixed frame rate value or ws (follow source).</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Fps { get; set; }
 
             /// <summary>
-            /// <para>The group of pictures (GOP) size. The GOP size can be defined by the number of frames or the time interval between I-frames. If ws is returned, the output stream maintains the same GOP size as the input stream.</para>
+            /// <para>The keyframe configuration. Valid values: frame-based, second-based, or ws (follow source).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2s</para>
@@ -91,9 +91,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The resolution. If width and height values are returned, a fixed resolution is configured for the output stream. If ws is returned, the output stream maintains the same resolution as the input stream.</para>
+            /// <para>The resolution configuration. Valid values: a fixed resolution value or ws (follow source).</para>
             /// <remarks>
-            /// <para> If the width value is -1, the width of the output stream is adapted to the height. If the height value is -2, the height of the output stream is adapted to the width.</para>
+            /// <para>When a fixed resolution is used and width or height is set to -1 or -2, the width or height is adaptive.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The type of edge transcoding.</para>
+            /// <para>The edge transcoding type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>common</para>

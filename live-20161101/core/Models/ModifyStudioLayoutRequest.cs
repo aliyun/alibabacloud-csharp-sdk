@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyStudioLayoutRequest : TeaModel {
         /// <summary>
-        /// <para>The background material configurations. The value is a JSON string. For more information, see <b>BgImageConfig</b>.</para>
+        /// <para>The configuration of the background resource. This parameter is a JSON string. For more information, see <b>BgImageConfig</b>.</para>
         /// <remarks>
-        /// <para> This parameter is required only if you set LayoutType to studio.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>This parameter is required only when LayoutType is set to studio.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;Id&quot;:&quot;k12kj31****&quot;, &quot;MaterialId&quot;:&quot;f080575eb5f4427684fc0715159a****&quot; }</para>
@@ -23,16 +24,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string BgImageConfig { get; set; }
 
         /// <summary>
-        /// <para>The ID of the production studio.</para>
-        /// <remarks>
-        /// <para> The production studio must be a virtual studio that you create in advance.</para>
-        /// </remarks>
+        /// <para>The ID of the production studio. &gt;Notice: The production studio must be created in advance and must be of the virtual studio type.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, use the CasterId value returned in the response.</para>
+        /// </description></item>
+        /// <item><description><para>If you create a production studio in the ApsaraVideo Live console, go to the <b>ApsaraVideo Live console</b> &gt; <b>Production Studio</b> &gt; <b>Cloud Production Studio</b> page to view the ID.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The name of the production studio in the list on the Cloud Production Studio page is the production studio ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,10 +44,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The common layout configurations. The value is a JSON string. For more information, see <b>CommonConfig</b>.</para>
-        /// <remarks>
-        /// <para> This parameter is required only if you set LayoutType to common.</para>
-        /// </remarks>
+        /// <para>The configuration of the common layout. This parameter is a JSON string. For more information, see <b>CommonConfig</b>. &gt;Notice: This parameter is required only when LayoutType is set to common.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{  &quot;ChannelId&quot;:&quot;RV01&quot; }</para>
@@ -57,7 +54,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CommonConfig { get; set; }
 
         /// <summary>
-        /// <para>The layer sorting configurations. The value is a JSON string. For more information, see <b>layerOrderConfig</b>. You can sort layers of background and multimedia materials. The chroma key layer cannot be sorted. A layer that is in the front of the code is placed behind other layers in the layout.</para>
+        /// <para>The layer order settings. This parameter is a JSON string. For more information, see <b>layerOrderConfig</b>. You can sort background and multimedia materials. Chroma keying layers are not supported. The earlier an item appears in the list, the lower its layer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[ { &quot;Type&quot;:&quot;media&quot;, &quot;Id&quot;:&quot;k12kj31****&quot; }, { &quot;Type&quot;:&quot;media&quot;, &quot;Id&quot;:&quot;k12kj31****&quot; } ]</para>
@@ -67,7 +64,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string LayerOrderConfigList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the layout. If the layout was added by calling the <a href="https://help.aliyun.com/document_detail/2848062.html">AddStudioLayout</a> operation, check the value of the response parameter LayoutId to obtain the ID.</para>
+        /// <para>The ID of the layout. If you add a layout for a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848062.html">AddStudioLayout</a> operation, use the LayoutId value returned in the response.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,20 +75,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string LayoutId { get; set; }
 
         /// <summary>
-        /// <para>The name of the layout.</para>
+        /// <para>The name of the production studio layout.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The name of the layout.</para>
+        /// <para>Test layout</para>
         /// </summary>
         [NameInMap("LayoutName")]
         [Validation(Required=false)]
         public string LayoutName { get; set; }
 
         /// <summary>
-        /// <para>The multimedia input configurations. The value is a JSON string. For more information, see <b>MediaInputConfig</b>.</para>
+        /// <para>The settings for the multimedia input resource. This parameter is a JSON string. For more information, see <b>MediaInputConfig</b>.</para>
         /// <remarks>
-        /// <para> This parameter is optional and takes effect only if you set LayoutType to studio.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>This parameter is valid and optional only when LayoutType is set to studio.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[ { &quot;Id&quot;:&quot;k12kj31****&quot;, &quot;Index&quot;:&quot;1&quot;, &quot;ChannelId&quot;:&quot;RV01&quot;, &quot;FillMode&quot;:&quot;none&quot;, &quot;PositionRefer&quot;:&quot;topLeft&quot;, &quot;WidthNormalized&quot;:&quot;0.4&quot;, &quot;HeightNormalized&quot;:&quot;0.4&quot;, &quot;PositionNormalized&quot;:&quot;[0.1, 0.2]&quot; }, { &quot;Id&quot;:&quot;k12kj31****&quot;, &quot;Index&quot;:&quot;2&quot;, &quot;ImageMaterialId&quot;:&quot;lkajsdfsa8fd89asd8****&quot;, &quot;FillMode&quot;:&quot;none&quot;, &quot;PositionRefer&quot;:&quot;topLeft&quot;, &quot;WidthNormalized&quot;:&quot;0.6&quot;, &quot;HeightNormalized&quot;:&quot;0.4&quot;, &quot;PositionNormalized&quot;:&quot;[0.1, 0.2]&quot; } ]</para>
@@ -104,15 +102,22 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The input configurations for chroma key. The value is a JSON string. For more information, see <b>ScreenInputConfig</b>.</para>
+        /// <para>The settings for the chroma keying input. This parameter is a JSON string. For more information, see <b>ScreenInputConfig</b>.</para>
         /// <remarks>
-        /// <para> This parameter is required only if you set LayoutType to studio.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>This parameter is required only when LayoutType is set to studio.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[ { &quot;Index&quot;:&quot;1&quot;, &quot;ChannelId&quot;:&quot;RV01&quot;, &quot;Color&quot;:&quot;green&quot;, &quot;PositionX&quot;:&quot;0.1&quot;, &quot;PositionY&quot;:&quot;0.2&quot;, &quot;HeightNormalized&quot;:&quot;0.4&quot; } ]</para>

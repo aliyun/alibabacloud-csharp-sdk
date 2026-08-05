@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The callback authentication key.</para>
+        /// <para>The authentication key for the callback.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourkey</para>
@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>Indicates whether callback authentication is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b>: Callback authentication is enabled.</description></item>
-        /// <item><description><b>no</b>: Callback authentication is disabled.</description></item>
+        /// <item><description><para><b>yes</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>no</b>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string NotifyUrl { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5056369B-D337-499E-B8B7-B761BD37B08A</para>

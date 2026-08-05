@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeDomainUsageDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billable region where the resource usage data was generated.</para>
+        /// <para>The usage region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CN</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Area { get; set; }
 
         /// <summary>
-        /// <para>The time interval between the returned entries. Unit: seconds.</para>
+        /// <para>The time interval of each record. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// <para>The domain name.</para>
+        /// <para>The streaming domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for which the resource usage data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T21:00Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B955107D-E658-4E77-B913-E0AC3D31693E</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range for which the resource usage data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-10T20:00Z</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource usage data.</para>
+        /// <para>The usage type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>

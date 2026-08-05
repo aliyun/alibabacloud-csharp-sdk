@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StartLiveMPUTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. You can specify only one application ID. The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The application ID. Only one ID is supported. It can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-). The maximum length is 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The channel ID. You can specify only one channel ID. The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The channel ID. Only one ID is supported. It can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-). The maximum length is 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ChannelId { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of an idle connection. Unit: seconds. Valid values: [10,86400].</para>
+        /// <para>The idle timeout period. Unit: seconds. The value must be in the range of [10, 86400].</para>
         /// <remarks>
-        /// <para> If the task is idle for a period of time longer than the duration specified by the MaxIdleTime parameter, the task is automatically stopped. If the parameter is not specified, the task is stopped after the channel is closed.</para>
+        /// <para>If you set this parameter, the task is automatically stopped when it has been idle for a period longer than MaxIdleTime. If you do not set this parameter, the task is stopped immediately after the channel is closed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,8 +47,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The stream mixing mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: the single-stream relay mode. In this mode, the service only relays the original single stream, but does not transcode mixed streams. You do not need to set parameters for mixed-stream transcoding.</description></item>
-        /// <item><description><b>1</b> (default): the mixed-stream relay mode.</description></item>
+        /// <item><description><para><b>0</b>: Single-stream ingest. The original single stream is ingested without stream mixing or transcoding. You do not need to configure stream mixing and transcoding parameters.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b> (default): Stream mixing and transcoding.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,9 +62,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string MixMode { get; set; }
 
         /// <summary>
-        /// <para>The multiple ingest URLs to relay. This parameter allows you to specify multiple ingest URLs.</para>
+        /// <para>The parameters for ingesting to multiple URLs. You can specify multiple live ingest URLs.</para>
         /// <remarks>
-        /// <para> The StreamURL and MultiStreamURL parameters are mutually exclusive. You must specify one of the two parameters.</para>
+        /// <para>When you set the ingest URL for a task, you must configure either the StreamURL parameter or the MultiStreamURL parameter, but not both.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("MultiStreamURL")]
@@ -70,13 +72,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<StartLiveMPUTaskRequestMultiStreamURL> MultiStreamURL { get; set; }
         public class StartLiveMPUTaskRequestMultiStreamURL : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to perform stream relay by using Alibaba Cloud CDN. Valid values:</para>
+            /// <para>Specifies whether to ingest the stream to Alibaba Cloud CDN.</para>
             /// <list type="bullet">
-            /// <item><description>false: performs stream relay by using a CDN service that is not Alibaba Cloud CDN.</description></item>
-            /// <item><description>true: performs stream relay by using Alibaba Cloud CDN.</description></item>
+            /// <item><description><para>false: Ingest to a non-Alibaba Cloud CDN.</para>
+            /// </description></item>
+            /// <item><description><para>true: Ingest to Alibaba Cloud CDN.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> The default value of this parameter is false.</para>
+            /// <para>The default value is false.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public bool? IsAliCdn { get; set; }
 
             /// <summary>
-            /// <para>The ingest URL. Only the RTMP format is supported. The URL can be up to 2,048 characters in length. For information about the generation rules of ingest URLs, see <a href="https://help.aliyun.com/document_detail/199339.html">Ingest and streaming URLs</a>.</para>
+            /// <para>The live ingest URL. Only the RTMP protocol is supported. The maximum length is 2048 characters. For information about how to generate the URL, see <a href="https://help.aliyun.com/document_detail/199339.html">Ingest URLs and playback URLs</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rtmp://example.com/live/stream****</para>
@@ -99,11 +103,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The region in which the streams are mixed. Valid values:</para>
+        /// <para>The region where the stream mixing service is located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CN-Shanghai</b></description></item>
-        /// <item><description><b>AP-Singapore</b> (default)</description></item>
-        /// <item><description><b>EMAA-Saudi</b></description></item>
+        /// <item><description><para><b>CN-Shanghai&lt;props=&quot;china&quot;&gt;(default)</b>: Shanghai.</para>
+        /// </description></item>
+        /// <item><description><para><b>AP-Singapore&lt;props=&quot;intl&quot;&gt;(default)</b>: Singapore.</para>
+        /// </description></item>
+        /// <item><description><para><b>EMAA-Saudi</b>: Saudi Arabia.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,24 +121,26 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The supplemental enhancement information (SEI) parameters.</para>
+        /// <para>The SEI configuration parameters.</para>
         /// </summary>
         [NameInMap("SeiParams")]
         [Validation(Required=false)]
         public StartLiveMPUTaskRequestSeiParams SeiParams { get; set; }
         public class StartLiveMPUTaskRequestSeiParams : TeaModel {
             /// <summary>
-            /// <para>The layout and volume SEI. If you leave this parameter empty, the default layout and volume SEI is used.</para>
+            /// <para>The layout and volume SEI. The content of this parameter can be empty, which means the default layout and volume SEI is carried.</para>
             /// </summary>
             [NameInMap("LayoutVolume")]
             [Validation(Required=false)]
             public StartLiveMPUTaskRequestSeiParamsLayoutVolume LayoutVolume { get; set; }
             public class StartLiveMPUTaskRequestSeiParamsLayoutVolume : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to include the SEI in an Instantaneous Decoder Refresh (IDR) frame. Valid values:</para>
+                /// <para>Specifies whether to ensure that SEI is carried when sending an IDR keyframe. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: does not include the SEI.</description></item>
-                /// <item><description><b>1</b>: includes the SEI.</description></item>
+                /// <item><description><para><b>0</b>: Does not ensure SEI is carried.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: Ensures SEI is carried.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -142,7 +151,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string FollowIdr { get; set; }
 
                 /// <summary>
-                /// <para>The interval at which the SEI is sent. Valid values: [1000,5000]. Unit: milliseconds.</para>
+                /// <para>The SEI sending interval. Unit: milliseconds. The value must be in the range of [1000, 5000].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -154,17 +163,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to pass through the SEI.</para>
+            /// <para>The pass-through SEI.</para>
             /// </summary>
             [NameInMap("PassThrough")]
             [Validation(Required=false)]
             public StartLiveMPUTaskRequestSeiParamsPassThrough PassThrough { get; set; }
             public class StartLiveMPUTaskRequestSeiParamsPassThrough : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to include the SEI in an IDR frame. Valid values:</para>
+                /// <para>Specifies whether to ensure that SEI is carried when sending an IDR keyframe. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: does not include the SEI.</description></item>
-                /// <item><description><b>1</b>: includes the SEI.</description></item>
+                /// <item><description><para><b>0</b>: Does not ensure SEI is carried.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: Ensures SEI is carried.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -175,7 +186,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string FollowIdr { get; set; }
 
                 /// <summary>
-                /// <para>The interval at which the SEI is sent. Valid values: [1000,5000]. Unit: milliseconds.</para>
+                /// <para>The SEI sending interval. Unit: milliseconds. The value must be in the range of [1000, 5000].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -185,7 +196,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string Interval { get; set; }
 
                 /// <summary>
-                /// <para>The payload content of the SEI.</para>
+                /// <para>The payload content of the pass-through SEI.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>yourPayloadContent</para>
@@ -195,7 +206,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string PayloadContent { get; set; }
 
                 /// <summary>
-                /// <para>The key of the payload content of the SEI. If you do not specify this parameter, the default value udd is used.</para>
+                /// <para>The key corresponding to the payload content of the pass-through SEI. If not set, the default key is \<c>udd\\</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>yourPayloadContentKey</para>
@@ -207,7 +218,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             }
 
             /// <summary>
-            /// <para>The custom payload_type of the SEI. Valid values: 100 to 254. If you do not specify this parameter, the default value 5 is used.</para>
+            /// <para>The custom payload_type of the SEI message. The value must be in the range of 100-254. If not set, the default payload_type is 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -219,17 +230,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The single-stream relay parameters. These parameters are required if you set MixMode to 0. Leave these parameters empty in the mixed-stream relay mode.</para>
+        /// <para>The parameters for single-stream ingest. This parameter is required when MixMode is set to 0. Do not set this parameter for stream mixing and transcoding.</para>
         /// </summary>
         [NameInMap("SingleSubParams")]
         [Validation(Required=false)]
         public StartLiveMPUTaskRequestSingleSubParams SingleSubParams { get; set; }
         public class StartLiveMPUTaskRequestSingleSubParams : TeaModel {
             /// <summary>
-            /// <para>The type of the video source. This parameter is valid only when you set StreamType to 2. Valid values:</para>
+            /// <para>The type of video input stream in single-stream ingest mode. This parameter is valid only for video streams (StreamType=2). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>camera</b> (default)</description></item>
-            /// <item><description><b>shareScreen</b></description></item>
+            /// <item><description><para><b>camera</b> (default): Camera stream.</para>
+            /// </description></item>
+            /// <item><description><para><b>shareScreen</b>: Screen sharing stream.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -240,11 +253,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The type of the stream that you want to relay. Valid values:</para>
+            /// <para>The type of stream to ingest in single-stream ingest mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b> (default): original stream</description></item>
-            /// <item><description><b>1</b>: only the audio track</description></item>
-            /// <item><description><b>2</b>: only the video track</description></item>
+            /// <item><description><para><b>0</b> (default): Ingest the original stream.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Ingest only the audio stream.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Ingest only the video stream.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -255,7 +271,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string StreamType { get; set; }
 
             /// <summary>
-            /// <para>The user ID. In the single-stream relay mode, you can relay only one stream in a request.</para>
+            /// <para>The ID of the user whose stream is ingested. Only one stream can be ingested at a time.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -268,13 +284,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ingest URL. You can specify only one ingest URL in the Real-Time Messaging Protocol (RTMP) format. The URL can be up to 2,048 characters in length. For information about the generation rules of ingest URLs, see <a href="https://help.aliyun.com/document_detail/199339.html">Ingest and streaming URLs</a>.</para>
+        /// <para>The live ingest URL. Only the RTMP protocol is supported. Only one URL is supported. The maximum length is 2048 characters. For information about how to generate the URL, see <a href="https://help.aliyun.com/document_detail/199339.html">Ingest URLs and playback URLs</a>.</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>For domain names with hotlink protection enabled, the ingest URL must include an access token.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If the ingest URL is under a domain name for which hotlink protection is enabled, you must include an access token in the URL.</description></item>
-        /// <item><description>You cannot use the same ingest URL in different tasks.</description></item>
-        /// <item><description>You cannot use the same ingest URL within 10 seconds after a task is stopped.</description></item>
+        /// <item><description><para>Do not use the same StreamURL in different tasks at the same time.</para>
+        /// </description></item>
+        /// <item><description><para>Do not use the same StreamURL within 10 seconds after a task stops.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -285,7 +305,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamURL { get; set; }
 
         /// <summary>
-        /// <para>The task ID. You can specify only one task ID. The ID can be up to 55 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The ID must be unique.</para>
+        /// <para>The task ID. Only one ID is supported. It can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-). The maximum length is 55 characters. This ID is the unique identifier for the bypass ingest task.
+        /// If a task with the same ID still exists and has not been cleared when you start a new task, \<c>InvalidParam\\</c> is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -296,24 +317,26 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The mixed-stream relay parameters. These parameters are required if you set MixMode to 1. Leave these parameters empty if you use the single-stream relay mode.</para>
+        /// <para>The parameters for stream mixing and transcoding. This parameter is required when MixMode is set to 1. Do not set this parameter for single-stream ingest.</para>
         /// </summary>
         [NameInMap("TranscodeParams")]
         [Validation(Required=false)]
         public StartLiveMPUTaskRequestTranscodeParams TranscodeParams { get; set; }
         public class StartLiveMPUTaskRequestTranscodeParams : TeaModel {
             /// <summary>
-            /// <para>The global background image.</para>
+            /// <para>The global background image for the mixed stream.</para>
             /// </summary>
             [NameInMap("Background")]
             [Validation(Required=false)]
             public StartLiveMPUTaskRequestTranscodeParamsBackground Background { get; set; }
             public class StartLiveMPUTaskRequestTranscodeParamsBackground : TeaModel {
                 /// <summary>
-                /// <para>The display mode of the global background image. Valid values:</para>
+                /// <para>The display mode of the output video. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: scales the background image proportionally to fit the view, with black bars displayed.</description></item>
-                /// <item><description><b>1</b> (default): crops the background image to fit the view.</description></item>
+                /// <item><description><para><b>0</b>: Scale and display a black background.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b> (default): Clip.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -324,7 +347,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string RenderMode { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the global background image. The URL can be up to 2,048 characters in length.</para>
+                /// <para>The URL of the global background image. The maximum length is 2048 characters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>yourImageUrl</para>
@@ -343,7 +366,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public StartLiveMPUTaskRequestTranscodeParamsEncodeParams EncodeParams { get; set; }
             public class StartLiveMPUTaskRequestTranscodeParamsEncodeParams : TeaModel {
                 /// <summary>
-                /// <para>The bitrate of the audio. Valid values: [8,500]. Unit: Kbit/s.</para>
+                /// <para>The audio bitrate. Unit: kbps. The value must be in the range of [8, 500].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>128</para>
@@ -353,7 +376,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string AudioBitrate { get; set; }
 
                 /// <summary>
-                /// <para>The number of sound channels. Valid values: 1 and 2.</para>
+                /// <para>The number of audio channels. Valid values: 1, 2.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -363,10 +386,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string AudioChannels { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the output stream is an audio-only stream. Valid values:</para>
+                /// <para>Specifies whether the stream is audio-only. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: The output stream is an audio-only stream. If you set this parameter to true, you need to configure only audio-related parameters under EncodeParams.</description></item>
-                /// <item><description><b>false</b> (default): The output stream is not an audio-only stream. If you set this parameter to false, you need to configure all parameters under EncodeParams, except the VideoCodec and EnhancedParam parameters.</description></item>
+                /// <item><description><para><b>true</b>: Audio-only. You only need to set audio-related parameters.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b> (default): Not audio-only. All parameters except VideoCodec and EnhancedParam must be specified.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -377,7 +402,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string AudioOnly { get; set; }
 
                 /// <summary>
-                /// <para>The audio sampling rate. Valid values: 8000, 16000, 32000, 44100, and 48000. Unit: Hz.</para>
+                /// <para>The audio sampling rate. Unit: Hz. Valid values: 8000, 16000, 32000, 44100, 48000.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>44100</para>
@@ -387,13 +412,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string AudioSampleRate { get; set; }
 
                 /// <summary>
-                /// <para>The parameter used for encoding enhancement, which is a JSON string. The parameter includes the optional profile and preset fields.</para>
+                /// <para>The enhanced encoding parameters. This is a JSON string. The supported optional configurations include \<c>profile\\</c> and \<c>preset\\</c>.</para>
                 /// <list type="bullet">
-                /// <item><description>profile: the encoding level. If the video codec is H.264, the valid values of this field are baseline, main, and high. If the video codec is H.265, the valid value of this field is main.</description></item>
-                /// <item><description>preset: adjusts the trade-off between encoding speed and video quality. The valid values of this field are ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, and placebo. Each value specifies a level of trade-off between encoding speed and video quality. For example, the ultrafast preset has the fastest encoding speed but the lowest video quality, while the placebo preset sacrifices the encoding speed for the best video quality.</description></item>
+                /// <item><description><para>\<c>profile\\</c>: The encoding profile. If the video encoding format is H.264, valid values for \<c>profile\\</c> include &quot;baseline&quot;, &quot;main&quot;, and &quot;high&quot;. If the video encoding format is H.265, the valid value for \<c>profile\\</c> is &quot;main&quot;.</para>
+                /// </description></item>
+                /// <item><description><para>\<c>preset\\</c>: Balances encoding speed and quality. Valid values for \<c>preset\\</c> include &quot;ultrafast&quot;, &quot;superfast&quot;, &quot;veryfast&quot;, &quot;faster&quot;, &quot;fast&quot;, &quot;medium&quot;, &quot;slow&quot;, &quot;slower&quot;, &quot;veryslow&quot;, and &quot;placebo&quot;. Each value represents a strategy for balancing encoding speed and output video quality, from &quot;ultrafast&quot; (fastest encoding speed) to &quot;placebo&quot; (highest quality, slowest encoding speed).</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> A value of superfast for the preset field is suitable for real-time communication scenarios. We recommend that you not set the field if you are not a professional encoding engineer.</para>
+                /// <para>For example, &quot;superfast&quot; is mainly used for real-time communication. If you are not an expert in encoders, do not set this option.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -404,7 +431,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string EnhancedParam { get; set; }
 
                 /// <summary>
-                /// <para>The bitrate of the video. Valid values: [1,10000]. Unit: Kbit/s.</para>
+                /// <para>The video bitrate. Unit: kbps. The value must be in the range of [1, 10000].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3500</para>
@@ -414,10 +441,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string VideoBitrate { get; set; }
 
                 /// <summary>
-                /// <para>The video codec. Valid values:</para>
+                /// <para>The video encoding format. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>H.264 (default)</description></item>
-                /// <item><description>H.265</description></item>
+                /// <item><description><para>H.264 (default).</para>
+                /// </description></item>
+                /// <item><description><para>H.265.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -428,7 +457,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string VideoCodec { get; set; }
 
                 /// <summary>
-                /// <para>The frame rate of the video. Valid values: [1,60]. Unit: frames per second (FPS).</para>
+                /// <para>The video frame rate. Unit: fps. The value must be in the range of [1, 60].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>25</para>
@@ -438,7 +467,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string VideoFramerate { get; set; }
 
                 /// <summary>
-                /// <para>The group of pictures (GOP) size of the video. Valid values: [1,60].</para>
+                /// <para>The video GOP size. The value must be in the range of [1, 60].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -448,7 +477,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string VideoGop { get; set; }
 
                 /// <summary>
-                /// <para>The height of the video. Valid values: [0,1920]. Unit: pixels.</para>
+                /// <para>The video height. Unit: pixels. The value must be in the range of [0, 1920].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -458,7 +487,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string VideoHeight { get; set; }
 
                 /// <summary>
-                /// <para>The width of the video. Valid values: [0,1920]. Unit: pixels.</para>
+                /// <para>The video width. Unit: pixels. The value must be in the range of [0, 1920].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1920</para>
@@ -472,7 +501,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The video layout information.</para>
             /// <remarks>
-            /// <para> If video transcoding is required, you must specify the video layout information, including the x-coordinate and y-coordinate, the width and height, and the layer. For audio-only transcoding, leave the video layout information empty.</para>
+            /// <para>For video transcoding, you must specify the video layout information, including coordinates (X, Y), pane dimensions (Width, Height), and stacking order (ZOrder). For audio-only transcoding, do not specify video layout information.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Layout")]
@@ -480,14 +509,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public StartLiveMPUTaskRequestTranscodeParamsLayout Layout { get; set; }
             public class StartLiveMPUTaskRequestTranscodeParamsLayout : TeaModel {
                 /// <summary>
-                /// <para>The information about the panes.</para>
+                /// <para>The information about user panes in the mixed stream.</para>
                 /// </summary>
                 [NameInMap("UserPanes")]
                 [Validation(Required=false)]
                 public List<StartLiveMPUTaskRequestTranscodeParamsLayoutUserPanes> UserPanes { get; set; }
                 public class StartLiveMPUTaskRequestTranscodeParamsLayoutUserPanes : TeaModel {
                     /// <summary>
-                    /// <para>The URL of the background image of the pane. The URL can be up to 2,048 characters in length. This image is displayed if the user turns off the camera or is not present in the channel.</para>
+                    /// <para>The URL of the background image for the video pane. The maximum length is 2048 characters. When a user turns off their camera or has not joined the channel, this image is displayed in their layout position.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>yourImageUrl</para>
@@ -497,7 +526,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public string BackgroundImageUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The height of the pane. The value is normalized.</para>
+                    /// <para>The height of the pane, as a normalized percentage.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.2632</para>
@@ -507,10 +536,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public string Height { get; set; }
 
                     /// <summary>
-                    /// <para>The display mode of the pane. Valid values:</para>
+                    /// <para>The display mode of the output video pane. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>0</b>: scales the video proportionally to fit the view, with black bars displayed.</description></item>
-                    /// <item><description><b>1 (default)</b>: crops the video to fit the view.</description></item>
+                    /// <item><description><para><b>0</b>: Scale and display a black background.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>1</b> (default): Clip.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -521,14 +552,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public string RenderMode { get; set; }
 
                     /// <summary>
-                    /// <para>The information about the user whose stream is played in the pane. If you leave this parameter empty, the system automatically sets this parameter based on the order in which streamers join the channel.</para>
+                    /// <para>The information about the user corresponding to this pane. If you do not set this parameter, the system automatically fills it based on the order in which streamers join the channel.</para>
                     /// <remarks>
+                    /// <list type="bullet">
+                    /// <item><description>If you specify user information, that user must already be configured in the \<c>TranscodeParams.UserInfos\\</c> parameter.</description></item>
+                    /// </list>
                     /// </remarks>
                     /// <list type="bullet">
-                    /// <item><description><para>If you specify the information about a user by using this parameter, the information about the user must also be specified by using the TranscodeParams.UserInfos parameter.</para>
-                    /// </description></item>
-                    /// <item><description><para>This parameter is valid only when you set StreamType to 0 or 2.</para>
-                    /// </description></item>
+                    /// <item><description>This parameter is valid only for original streams and video streams.</description></item>
                     /// </list>
                     /// </summary>
                     [NameInMap("UserInfo")]
@@ -536,7 +567,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public StartLiveMPUTaskRequestTranscodeParamsLayoutUserPanesUserInfo UserInfo { get; set; }
                     public class StartLiveMPUTaskRequestTranscodeParamsLayoutUserPanesUserInfo : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the channel where the user is. If the user is in the same channel, you can leave this parameter empty. We recommend that you specify this parameter when you perform stream mixing across channels.</para>
+                        /// <para>The ID of the channel where the user is located. You do not need to set this parameter for users in the same channel. For cross-channel stream mixing, set this parameter.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>yourChannelId</para>
@@ -546,10 +577,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                         public string ChannelId { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the video source. This parameter is valid only when you set StreamType to 2. Valid values:</para>
+                        /// <para>The type of video input stream in stream mixing and transcoding mode. This parameter is valid only for video streams (StreamType=2). Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>camera</b> (default)</description></item>
-                        /// <item><description><b>shareScreen</b></description></item>
+                        /// <item><description><para><b>camera</b> (default): Camera stream.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>shareScreen</b>: Screen sharing stream.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -572,7 +605,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     }
 
                     /// <summary>
-                    /// <para>The width of the pane. The value is normalized.</para>
+                    /// <para>The width of the pane, as a normalized percentage.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.3564</para>
@@ -582,7 +615,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public string Width { get; set; }
 
                     /// <summary>
-                    /// <para>The x-coordinate of the pane. The value is normalized.</para>
+                    /// <para>The X-coordinate, as a normalized percentage.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.2456</para>
@@ -592,7 +625,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public string X { get; set; }
 
                     /// <summary>
-                    /// <para>The y-coordinate of the pane. The value is normalized.</para>
+                    /// <para>The Y-coordinate, as a normalized percentage.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.3789</para>
@@ -602,7 +635,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                     public string Y { get; set; }
 
                     /// <summary>
-                    /// <para>The layer in which the pane resides. A value of 0 indicates the bottom layer. Each increment of the value by 1 indicates the next upper layer.</para>
+                    /// <para>The stacking order. 0 is the bottom layer. Layer 1 is on top of layer 0, and so on.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -616,14 +649,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             }
 
             /// <summary>
-            /// <para>The information about the users whose streams are subscribed to. If you leave this parameter empty, streams from all users are mixed.</para>
+            /// <para>The information about the users to subscribe to for stream mixing. If you do not specify users, all users are included in the mixed stream.</para>
             /// </summary>
             [NameInMap("UserInfos")]
             [Validation(Required=false)]
             public List<StartLiveMPUTaskRequestTranscodeParamsUserInfos> UserInfos { get; set; }
             public class StartLiveMPUTaskRequestTranscodeParamsUserInfos : TeaModel {
                 /// <summary>
-                /// <para>The ID of the channel where the subscribed user is. If the user is in the same channel, you can leave this parameter empty. We recommend that you specify this parameter when you perform stream mixing across channels.</para>
+                /// <para>The ID of the channel where the subscribed user is located. You do not need to set this parameter for users in the same channel. For cross-channel stream mixing, set this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>yourChannelId</para>
@@ -633,10 +666,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string ChannelId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the video source that is subscribed to. This parameter is valid only when you set StreamType to 2. Valid values:</para>
+                /// <para>The type of video input stream to subscribe to for stream mixing. This parameter is valid only for video streams (StreamType=2). Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>camera</b> (default)</description></item>
-                /// <item><description><b>shareScreen</b></description></item>
+                /// <item><description><para><b>camera</b> (default): Camera stream.</para>
+                /// </description></item>
+                /// <item><description><para><b>shareScreen</b>: Screen sharing stream.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -647,11 +682,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the relayed stream that is subscribed to. Valid values:</para>
+                /// <para>The type of stream to subscribe to for stream mixing. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b> (default): original stream</description></item>
-                /// <item><description><b>1</b>: only the audio track</description></item>
-                /// <item><description><b>2</b>: only the video track</description></item>
+                /// <item><description><para><b>0</b> (default): Ingest the original stream.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: Ingest only the audio stream.</para>
+                /// </description></item>
+                /// <item><description><para><b>2</b>: Ingest only the video stream.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -662,7 +700,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string StreamType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the subscribed user.</para>
+                /// <para>The ID of the user to subscribe to for stream mixing.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

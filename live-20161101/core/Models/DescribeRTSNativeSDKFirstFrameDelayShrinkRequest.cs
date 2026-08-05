@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeRTSNativeSDKFirstFrameDelayShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The time granularity. Valid values: 300, 3600, 14400, 28800, and 86400. Unit: seconds. The default value is 300. If you specify an invalid value or do not specify this parameter, the default value is used.</para>
+        /// <para>The time granularity. Valid values: 300, 3600, 14400, 28800, and 86400. Unit: seconds. If you do not specify this parameter or specify an unsupported value, the default value 300 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// <para>From V2.1.0, all domain names are queried by default. You can also specify specific domain names that you want to query. In this case, separate the domain names with commas (,). You can specify up to 500 domain names in each call.</para>
+        /// <para>The domain names to query. By default, all domain names are queried (version 2.1.0 and later). You can also specify domain names. Separate multiple domain names with commas (,). You can specify up to 500 domain names at a time.</para>
         /// </summary>
         [NameInMap("DomainNameList")]
         [Validation(Required=false)]
         public string DomainNameListShrink { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time. This parameter is required. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-10T21:00:00Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time. This parameter is required. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-10T20:00:00Z</para>

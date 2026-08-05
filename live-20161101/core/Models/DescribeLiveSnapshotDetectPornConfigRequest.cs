@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveSnapshotDetectPornConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The name of the application to which the stream belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveApp****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The streamer streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,15 +31,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The order in which the entries are sorted based on creation time. Valid values:</para>
+        /// <para>The order in which entries are sorted by creation time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Asc</b> (default): ascending order</description></item>
-        /// <item><description><b>Desc</b>: descending order</description></item>
-        /// </list>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>asc</description></item>
-        /// <item><description>desc</description></item>
+        /// <item><description><b>Asc</b> (default): ascending order.</description></item>
+        /// <item><description><b>Desc</b>: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +59,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>5 to 30</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>10</b>. Valid values: <b>5 to 30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

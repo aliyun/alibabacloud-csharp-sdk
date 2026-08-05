@@ -34,8 +34,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The stream mixing mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: the single-stream relay mode. In this mode, the service only relays the original single stream, but does not transcode mixed streams. You do not need to set parameters for mixed-stream transcoding.</description></item>
-        /// <item><description><b>1</b> (default): the mixed-stream relay mode.</description></item>
+        /// <item><description><para><b>0</b>: the single-stream relay mode. In this mode, the service only relays the original single stream, but does not transcode mixed streams. You do not need to set parameters for mixed-stream transcoding.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b> (default): the mixed-stream relay mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,9 +73,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If the ingest URL is under a domain name for which hotlink protection is enabled, you must include an access token in the URL.</description></item>
-        /// <item><description>You cannot use the same ingest URL in different tasks.</description></item>
-        /// <item><description>You cannot use the same ingest URL within 10 seconds after a task is stopped.</description></item>
+        /// <item><description><para>If the ingest URL is under a domain name for which hotlink protection is enabled, you must include an access token in the URL.</para>
+        /// </description></item>
+        /// <item><description><para>You cannot use the same ingest URL in different tasks.</para>
+        /// </description></item>
+        /// <item><description><para>You cannot use the same ingest URL within 10 seconds after a task is stopped.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeCasterStreamUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the production studio.</para>
-        /// <para>If you create a production studio through the <a href="~~69338#doc-api-live-CreateCaster~~">CreateCaster</a> interface, check the value of the CasterId parameter in the response.</para>
-        /// <para>If you create a production studio through the ApsaraVideo Live Console, log in to the console, then check the ID of the production studio through the following path:</para>
-        /// <para>Production Studios &gt; Production Studio Management</para>
+        /// <para>The ID of the production studio. Make sure that the CasterId is correct.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If you create a production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, obtain the ID from the CasterId parameter in the response.</para>
+        /// </description></item>
+        /// <item><description><para>If you create a production studio in the ApsaraVideo Live console, go to the <b>ApsaraVideo Live console</b> and choose <b>Production Studio</b> &gt; <b>Cloud Production Studio</b> to view the ID.</para>
+        /// </description></item>
+        /// </list>
         /// <remarks>
-        /// <para> The CasterId is reflected in the Name column on the Production Studio Management page.</para>
+        /// <para>The name of a production studio in the list on the Cloud Production Studio page is its ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -30,6 +33,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

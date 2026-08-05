@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteCasterComponentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the production studio. You can use the ID as a request parameter in the API operation that is called to query the components in the production studio, add an episode list to the production studio, or modify a component in the production studio.</para>
+        /// <para>The ID of the production studio. This ID can be used in subsequent API calls to query the component list, add a program, or modify a component of the production studio.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a2b8e671-2fe5-4642-a2ec-bf93880****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The component ID. You can use the ID as a request parameter in the API operation that is called to query the component in the production studio or modify the component in the production studio.</para>
+        /// <para>The component ID. This ID can be used in subsequent API calls to query or modify the component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21926b36-7dd2-4fde-ae25-51b5bc8e****</para>

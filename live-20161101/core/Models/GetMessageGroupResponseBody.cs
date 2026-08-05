@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class GetMessageGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-****-CB92E68F4CD8</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>Return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetMessageGroupResponseBodyResult Result { get; set; }
         public class GetMessageGroupResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The time when the message group was created. The time is displayed in UTC.</para>
+            /// <para>UTC timestamp when the message group was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1502280113</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the creator.</para>
+            /// <para>Creator ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>as****hs</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string CreatorId { get; set; }
 
             /// <summary>
-            /// <para>The extended field.</para>
+            /// <para>Extension field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public Dictionary<string, object> Extension { get; set; }
 
             /// <summary>
-            /// <para>The ID of the message group.</para>
+            /// <para>Message group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AE35-****-T95F</para>
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the message group is muted.</para>
+            /// <para>Indicates whether all members in this message group are muted.</para>
             /// <list type="bullet">
-            /// <item><description>true: The message group is muted.</description></item>
-            /// <item><description>false: The message group is not muted.</description></item>
+            /// <item><description>true: All members are muted.</description></item>
+            /// <item><description>false: All members are not muted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public bool? IsMuteAll { get; set; }
 
             /// <summary>
-            /// <para>The status of the message group. The default value is <b>1</b>, which indicates that the message group is normal.</para>
+            /// <para>Message group status. The default value is <b>1</b>, which indicates that the message group status is normal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

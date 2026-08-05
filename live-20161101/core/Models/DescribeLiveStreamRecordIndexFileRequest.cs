@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamRecordIndexFileRequest : TeaModel {
         /// <summary>
-        /// <para>System-defined parameter. Value: <b>DescribeLiveStreamRecordIndexFile</b>.</para>
+        /// <para>The AppName of the live stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>ApsaraVideo Live stores the configuration information of an M3U8 index file for six months. You can query only index files created in the previous six months. M3U8 index files are stored in Object Storage Service (OSS) buckets. The retention period is determined by the storage configuration of the OSS buckets.</para>
-        /// <h2><a href="#qps-"></a>QPS limit</h2>
-        /// <para>You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/343507.html">QPS limits</a>.</para>
+        /// <para>The main streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,9 +36,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the index file.</para>
+        /// <para>The manifest ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2847890.html">DescribeLiveStreamRecordIndexFiles</a> operation to query the ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2847890.html">DescribeLiveStreamRecordIndexFiles</a> API to query the ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,7 +54,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The main domain of the live stream.</para>
+        /// <para>The name of the live stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

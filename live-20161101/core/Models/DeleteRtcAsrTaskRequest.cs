@@ -13,12 +13,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The task ID. You can obtain the ID from the response to the <a href="https://help.aliyun.com/document_detail/2848217.html">CreateRtcAsrTask</a> operation.</para>
+        /// <para>The ID of the task. Call the <a href="https://help.aliyun.com/document_detail/2848217.html">CreateRtcAsrTask</a> operation to obtain the task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

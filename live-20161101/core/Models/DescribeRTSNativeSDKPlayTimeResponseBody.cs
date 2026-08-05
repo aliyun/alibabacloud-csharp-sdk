@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for which the data was queried.</para>
+        /// <para>The end time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-10T21:00:00Z</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The average playback duration and average stuttering duration at each interval. Unit: milliseconds.</para>
+        /// <para>The average playback duration and average stall duration for each time interval. Unit: milliseconds.</para>
         /// </summary>
         [NameInMap("PlayTimeData")]
         [Validation(Required=false)]
         public List<DescribeRTSNativeSDKPlayTimeResponseBodyPlayTimeData> PlayTimeData { get; set; }
         public class DescribeRTSNativeSDKPlayTimeResponseBodyPlayTimeData : TeaModel {
             /// <summary>
-            /// <para>The average playback duration within the period of time.</para>
+            /// <para>The average playback duration during the time interval. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string PlayTime { get; set; }
 
             /// <summary>
-            /// <para>The average stuttering duration within the period of time.</para>
+            /// <para>The average stall duration during the time interval. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string StallTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the returned data.</para>
+            /// <para>The start time of the time interval. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-10T20:00:00Z</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id</para>
         /// 
         /// <b>Example:</b>
         /// <para>7BF95F2A-3B24-4CDE-9346-7F6FA86697A1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range for which the data was queried.</para>
+        /// <para>The start time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-10T20:00:00Z</para>

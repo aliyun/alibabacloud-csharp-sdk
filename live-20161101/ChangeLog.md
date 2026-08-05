@@ -1,3 +1,9 @@
+2026-08-05 Version: 3.0.1
+- Update API BatchSetLiveDomainConfigs: add request parameters DryRun.
+- Update API DescribeCasterConfig: add response parameters Body.AudioMixerMode.
+- Update API SetLiveDomainCertificate: add request parameters DryRun.
+
+
 2026-05-26 Version: 3.0.0
 - Update API AddLiveRecordVodConfig: delete request parameters FormatConfig.
 - Update API UpdateLiveRecordVodConfig: delete request parameters FormatConfig.

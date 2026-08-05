@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListMessageAppRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1. Valid values: 1 to 100000.</para>
+        /// <para>Page number. Default value: 1. Valid values: 1 to 100000.</para>
+        /// <remarks>
+        /// <para>This page number is the current display page.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +24,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of applications to return on each page. Default value: 20. Valid values: 1 to 50.</para>
+        /// <para>Number of applications displayed per page. Default value: 20. Valid values: 1 to 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +35,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>Sorting method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: ascending order by time</description></item>
-        /// <item><description>1: descending order by time</description></item>
+        /// <item><description>0: Ascending order by time.</description></item>
+        /// <item><description>1: Descending order by time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

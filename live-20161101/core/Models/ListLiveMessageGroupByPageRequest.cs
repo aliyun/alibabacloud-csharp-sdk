@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveMessageGroupByPageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</para>
+        /// <para>The data center. This value must be the same as the data center specified in <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>. Currently supported data centers are Shanghai (cn-shanghai) and Singapore (ap-southeast-1).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataCenter { get; set; }
 
         /// <summary>
-        /// <para>The status of the groups to query. Default value: 0. Valid values:</para>
+        /// <para>The group status. Default value: 0. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: all groups</description></item>
-        /// <item><description>1: existing groups</description></item>
-        /// <item><description>2: deleted groups</description></item>
+        /// <item><description>0: Queries all groups.</description></item>
+        /// <item><description>1: Queries groups that are not deleted.</description></item>
+        /// <item><description>2: Queries deleted groups.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? GroupStatus { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: [1,10000].</para>
+        /// <para>The page number. Valid values: [1,10000\].</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:[1,50].</para>
+        /// <para>The page size. Valid values: [1,50\].</para>
         /// <para>Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sort order based on the time when the groups were created. Valid values:</para>
+        /// <para>The sort order, based on group creation time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: ascending order</description></item>
-        /// <item><description>2: descending order</description></item>
+        /// <item><description>1: Ascending order.</description></item>
+        /// <item><description>2: Descending order.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

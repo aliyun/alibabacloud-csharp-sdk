@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class GetEditingJobInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the production studio.</para>
+        /// <para>The production studio ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>53200b81-b761-4c10-842a-a0726d97****</para>
@@ -20,13 +20,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The information about editing tasks. The following fields are returned for each editing task:</para>
+        /// <para>The video clip task information. This includes:</para>
         /// <list type="bullet">
-        /// <item><description><b>OutputVodId</b>: the ID of the output video-on-demand (VOD) file.</description></item>
-        /// <item><description><b>TaskStatus</b>: the status of the editing task. Valid values: -1, 0, 1, 2, and 3. A value of -1 indicates that the editing task fails. A value of 0 indicates that the editing task is being initialized. A value of 1 indicates that editing is in progress. A value of 2 indicates that the output VOD file is being uploaded. A value of 3 indicates that the editing task is successful.</description></item>
-        /// <item><description><b>StorageLocation</b>: the storage location in ApsaraVideo VOD.</description></item>
-        /// <item><description><b>FileName</b>: the name of the file that is edited.</description></item>
-        /// <item><description><b>ShowId</b>: the ID of the episode.</description></item>
+        /// <item><description><para><b>OutputVodId</b>: The ID of the output video-on-demand file.</para>
+        /// </description></item>
+        /// <item><description><para><b>TaskStatus</b>: The status of the video clip task. (-1: failed. 0: task initialized. 1: clipping in progress. 2: uploading. 3: task succeeded.)</para>
+        /// </description></item>
+        /// <item><description><para><b>StorageLocation</b>: The video-on-demand storage address.</para>
+        /// </description></item>
+        /// <item><description><para><b>FileName</b>: The name of the clipped file.</para>
+        /// </description></item>
+        /// <item><description><para><b>ShowId</b>: The show ID.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

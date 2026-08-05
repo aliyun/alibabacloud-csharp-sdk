@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateRtsLiveStreamTranscodeRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs, which cannot be modified.</para>
+        /// <para>The AppName of the live stream. This parameter cannot be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string App { get; set; }
 
         /// <summary>
-        /// <para>The bitrate of the output audio. Unit: Kbit/s. Valid values: 1 to 1000.</para>
+        /// <para>The output audio bitrate. Unit: kbps. Valid values: 1 to <b>1000</b>.</para>
         /// <remarks>
-        /// <para> This parameter is required if you set the TemplateType parameter to audio.</para>
+        /// <para>Required if you set TemplateType to audio.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? AudioBitrate { get; set; }
 
         /// <summary>
-        /// <para>The number of sound channels. Valid values:</para>
+        /// <para>The number of audio channels. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: mono</description></item>
-        /// <item><description><b>2</b>: stereo</description></item>
+        /// <item><description><para><b>1</b>: mono.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: stereo.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,13 +50,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? AudioChannelNum { get; set; }
 
         /// <summary>
-        /// <para>The audio encoder. Valid values:</para>
+        /// <para>The audio codec. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>aac</description></item>
-        /// <item><description>mp3</description></item>
+        /// <item><description><para>aac</para>
+        /// </description></item>
+        /// <item><description><para>mp3</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> To use the Opus encoder, you need only to set the Opus parameter to true.</para>
+        /// <para>To use the Opus codec, set the Opus parameter to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,10 +71,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The audio codec profile. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>aac_low</description></item>
-        /// <item><description>aac_he</description></item>
-        /// <item><description>aac_he_v2</description></item>
-        /// <item><description>aac_ld</description></item>
+        /// <item><description><para>aac_low</para>
+        /// </description></item>
+        /// <item><description><para>aac_he</para>
+        /// </description></item>
+        /// <item><description><para>aac_he_v2</para>
+        /// </description></item>
+        /// <item><description><para>aac_ld</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,9 +89,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AudioProfile { get; set; }
 
         /// <summary>
-        /// <para>The audio sampling rate. Valid values: 22050, 32000, 44100, 48000, and 96000. 44100 is commonly used. Unit: Hz.</para>
+        /// <para>The audio sample rate. Valid values: 22050, 32000, 44100, 48000, 96000. Recommended: 44100. Unit: Hz.</para>
         /// <remarks>
-        /// <para> If the value of the AudioProfile parameter is aac_ld, the audio sampling rate cannot exceed 44,100.</para>
+        /// <para>If AudioProfile is set to aac_ld, the sample rate cannot exceed 44100.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -94,19 +102,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? AudioRate { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to remove B frames during transcoding. Valid values:</para>
+        /// <para>Controls whether to remove B-frames from the transcoded output video. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Remove B frames.</description></item>
-        /// <item><description>false (default): Retain B frames.</description></item>
+        /// <item><description><para><b>true</b>: The transcoded video has no B-frames.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The transcoded video contains B-frames. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
+        /// <para>Required if you set TemplateType to h264, h264-nbhd, or h264-origin.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><para>This parameter is required when the TemplateType parameter is set to h264, h264-nbhd, or h264-origin.</para>
-        /// </description></item>
-        /// <item><description><para>If this parameter is not specified, the default value false is used.</para>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -116,7 +121,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? DeleteBframes { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain, which cannot be modified.</para>
+        /// <para>The streaming domain. This parameter cannot be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,9 +132,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The frame rate of the output video. Unit: frames per second (FPS). Valid values: 1 to 60.</para>
+        /// <para>The frame rate of the output video. Unit: frames per second (FPS). Valid values: 1 to <b>60</b>.</para>
         /// <remarks>
-        /// <para> This parameter is required when the TemplateType parameter is set to h264, h264-nbhd, or h264-origin.</para>
+        /// <para>Required if you set TemplateType to h264, h264-nbhd, or h264-origin.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -140,7 +145,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? FPS { get; set; }
 
         /// <summary>
-        /// <para>The group of pictures (GOP) of the output video. This parameter is used to specify the keyframe interval. Unit: seconds. Valid values: 1 to 3.</para>
+        /// <para>The Group of Pictures (GOP) size, which specifies the keyframe interval. Unit: seconds. Valid values: <b>1</b> to <b>3</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -150,21 +155,24 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Gop { get; set; }
 
         /// <summary>
-        /// <para>The height of the output video. Unit: pixel.</para>
-        /// <para>The value must comply with the following rules:</para>
+        /// <para>Output video height in pixels.</para>
+        /// <para>Requirements:</para>
         /// <list type="bullet">
-        /// <item><description>Height ≥ 100: The height of the video is at least 100 pixels.</description></item>
-        /// <item><description>max(Height,Width) ≤ 2560: The larger of the width and height of the video cannot exceed 2,560 pixels.</description></item>
-        /// <item><description>min(Height,Width) ≤ 1440: The smaller of the width and height of the video cannot exceed 1,440 pixels. For example, a resolution of 1560 × 1560 pixels is invalid.</description></item>
+        /// <item><description><para>Height ≥ 100</para>
+        /// </description></item>
+        /// <item><description><para>max(Height, Width) ≤ 2560</para>
+        /// </description></item>
+        /// <item><description><para>min(Height, Width) ≤ 1440</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required when the TemplateType parameter is set to h264, h264-nbhd, or h264-origin.</para>
+        /// <item><description><para>Required if you set TemplateType to h264, h264-nbhd, or h264-origin.</para>
         /// </description></item>
-        /// <item><description><para>If the TemplateType parameter is set to h264-origin, the highest resolution supported is 4K.</para>
+        /// <item><description><para>For h264-origin templates, the resolution can be up to 4K to retain the information of the source stream.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1280</para>
@@ -174,10 +182,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? Height { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable triggered transcoding. Valid values:</para>
+        /// <para>Specifies whether to enable on-demand transcoding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b>: enables triggered transcoding.</description></item>
-        /// <item><description><b>no</b>: disables triggered transcoding.</description></item>
+        /// <item><description><para><b>yes</b>: Transcoding only starts when the first viewer requests this transcoded stream.</para>
+        /// </description></item>
+        /// <item><description><para><b>no</b>: Transcoding starts immediately after the stream is published.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -188,14 +198,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Lazy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to transcode streams to the Opus format to be compatible with native WebRTC. Valid values:</para>
+        /// <para>Specifies whether to use the Opus codec for audio transcoding. This is mainly for compatibility with native WebRTC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Transcode streams to the Opus format.</description></item>
-        /// <item><description>false: Do not transcode streams to the Opus format.</description></item>
+        /// <item><description><para><b>true</b>: Transcodes the audio to the Opus format.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Does not use the Opus format for transcoding. This is the default value.</para>
+        /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para> If this parameter is not specified, the default value false is used.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -209,11 +218,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The video encoding profile. The profile defines a set of parameters that are used to encode a video. In most cases, a greater value indicates better image quality and higher resource consumption. Valid values:</para>
+        /// <para>The video codec profile. A larger value indicates better video quality and higher resource consumption for encoding and decoding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: baseline. This value is suitable for mobile devices.</description></item>
-        /// <item><description><b>2</b>: main. This value is suitable for standard-definition devices.</description></item>
-        /// <item><description><b>3</b>: high. This value is suitable for high-definition devices.</description></item>
+        /// <item><description><para><b>1</b>: baseline (for mobile devices).</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: main (for SD devices).</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: high (for HD devices).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -223,12 +235,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? Profile { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom transcoding template, which cannot be modified.</para>
+        /// <para>The name of the custom transcoding template. This parameter cannot be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -239,7 +257,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Template { get; set; }
 
         /// <summary>
-        /// <para>The type of the custom transcoding template, which cannot be modified.</para>
+        /// <para>The type of the custom transcoding template. This parameter cannot be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -250,15 +268,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string TemplateType { get; set; }
 
         /// <summary>
-        /// <para>The bitrate of the output video. Unit: Kbit/s. Valid values: 1 to 6000.</para>
+        /// <para>The output video bitrate. Unit: kbps. Valid values: 1 to <b>6000</b>.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required when the TemplateType parameter is set to h264, h264-nbhd, or h264-origin.</para>
+        /// <item><description><para>Required if you set TemplateType to h264, h264-nbhd, or h264-origin.</para>
         /// </description></item>
-        /// <item><description><para>The bitrate of the output video is as close to the value that you specify as possible, but not the same as the value, especially when the value is excessively large or small.</para>
+        /// <item><description><para>The system tries to transcode the video at the specified bitrate. However, the actual bitrate may not be the same as the specified value, especially when the specified value is too high or too low.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -268,21 +286,20 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? VideoBitrate { get; set; }
 
         /// <summary>
-        /// <para>The width of the output video. Unit: pixel.</para>
-        /// <para>The value must comply with the following rules:</para>
+        /// <para>Output video width in pixels.</para>
+        /// <para>Requirements:</para>
         /// <list type="bullet">
-        /// <item><description>Width ≥ 100: The width of the video is at least 100 pixels.</description></item>
-        /// <item><description>max(Height,Width) ≤ 2560: The larger of the width and height of the video cannot exceed 2,560 pixels.</description></item>
-        /// <item><description>min(Height,Width) ≤ 1440: The smaller of the width and height of the video cannot exceed 1,440 pixels. For example, a resolution of 1560 × 1560 pixels is invalid.</description></item>
+        /// <item><description><para>Width ≥ 100</para>
+        /// </description></item>
+        /// <item><description><para>max(Height, Width) ≤ 2560</para>
+        /// </description></item>
+        /// <item><description><para>min(Height, Width) ≤ 1440</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
+        /// <para>Required if you set TemplateType to h264, h264-nbhd, or h264-origin.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><para>This parameter is required when the TemplateType parameter is set to h264, h264-nbhd, or h264-origin.</para>
-        /// </description></item>
-        /// <item><description><para>If the TemplateType parameter is set to h264-origin, the highest resolution supported is 4K.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>For h264-origin templates, the resolution can be up to 4K to retain the information of the source stream.</para>
         /// 
         /// <b>Example:</b>
         /// <para>720</para>

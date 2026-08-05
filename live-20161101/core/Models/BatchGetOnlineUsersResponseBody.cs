@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The returned result</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public BatchGetOnlineUsersResponseBodyResult Result { get; set; }
         public class BatchGetOnlineUsersResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The information about users.</para>
+            /// <para>The array of objects</para>
             /// </summary>
             [NameInMap("OnlineUsers")]
             [Validation(Required=false)]
             public List<BatchGetOnlineUsersResponseBodyResultOnlineUsers> OnlineUsers { get; set; }
             public class BatchGetOnlineUsersResponseBodyResultOnlineUsers : TeaModel {
                 /// <summary>
-                /// <para>The time when the user joined the group. The value is a UTC timestamp. Unit: milliseconds.</para>
+                /// <para>The UTC timestamp when the user joined the message group. Unit: milliseconds</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12**45</para>
@@ -46,8 +46,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 /// <summary>
                 /// <para>Indicates whether the user is online. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>: The user is online.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: The user is offline.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public bool? Online { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user.</para>
+                /// <para>The user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>de1**a0</para>

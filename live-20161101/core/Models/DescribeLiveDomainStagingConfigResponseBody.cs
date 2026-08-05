@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDomainStagingConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The feature configurations of the accelerated domain name.</para>
+        /// <para>The domain name configurations.</para>
         /// </summary>
         [NameInMap("DomainConfigs")]
         [Validation(Required=false)]
         public List<DescribeLiveDomainStagingConfigResponseBodyDomainConfigs> DomainConfigs { get; set; }
         public class DescribeLiveDomainStagingConfigResponseBodyDomainConfigs : TeaModel {
             /// <summary>
-            /// <para>The configuration ID.</para>
+            /// <para>The ID of the configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6295</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public List<DescribeLiveDomainStagingConfigResponseBodyDomainConfigsFunctionArgs> FunctionArgs { get; set; }
             public class DescribeLiveDomainStagingConfigResponseBodyDomainConfigsFunctionArgs : TeaModel {
                 /// <summary>
-                /// <para>The name of the parameter.</para>
+                /// <para>The name of the configuration parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>auth_type</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string ArgName { get; set; }
 
                 /// <summary>
-                /// <para>The configured value.</para>
+                /// <para>The value of the configuration parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>req_auth</para>
@@ -66,12 +66,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string FunctionName { get; set; }
 
             /// <summary>
-            /// <para>The configuration status. Valid values:</para>
+            /// <para>The status of the configuration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>success</b></description></item>
-            /// <item><description><b>testing</b></description></item>
-            /// <item><description><b>failed</b></description></item>
-            /// <item><description><b>configuring</b></description></item>
+            /// <item><description><para><b>success</b>: Successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>testing</b>: The configuration is being verified.</para>
+            /// </description></item>
+            /// <item><description><para><b>failed</b>: Failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>configuring</b>: The configuration is in progress.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C80705BF-0F76-41FA-BAD1-5B59296A4E59</para>

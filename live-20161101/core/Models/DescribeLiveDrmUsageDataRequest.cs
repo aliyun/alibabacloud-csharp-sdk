@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDrmUsageDataRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name.</para>
+        /// <para>The live streaming domain name.</para>
         /// <list type="bullet">
-        /// <item><description>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</description></item>
-        /// <item><description>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</description></item>
+        /// <item><description>You can specify a single domain name or multiple domain names. Separate multiple domain names with commas (,).</description></item>
+        /// <item><description>If this parameter is left empty, the merged data of all live streaming domain names is returned by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,13 +35,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The time granularity of the query. Unit: seconds. Valid values:</para>
+        /// <para>The time granularity of the queried data. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>300</description></item>
         /// <item><description>3600</description></item>
         /// <item><description>86400</description></item>
         /// </list>
-        /// <para>Default value: 3600.</para>
+        /// <para>If you do not set this parameter or set it to an unsupported value, the default value 3600 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -54,12 +54,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The key that is used to group data. The following keys are supported: domain, region, and drm_type. If you want to specify multiple keys, separate them with commas (,). Default value: domain,region,drm_type. If you leave this parameter empty or set it to null, the returned data is not grouped.</para>
+        /// <para>The grouping key. Default value: domain,region,drm_type. You can specify one or more of the following values: domain, region, and drm_type. Separate multiple values with commas (,). Set this parameter to an empty string or null to disable grouping by these keys.</para>
         /// 
         /// <b>Example:</b>
         /// <para>domain,region,drm_type</para>
@@ -69,7 +75,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SplitBy { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The minimum time granularity is 5 minutes.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC. The minimum data granularity is 5 minutes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

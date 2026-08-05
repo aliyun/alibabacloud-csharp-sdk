@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>coims-pre</para>
+        /// <para>demo</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</para>
+        /// <para>The data center. This value must be the same as the data center specified in <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>. Currently supported values: cn-shanghai (Shanghai) and ap-southeast-1 (Singapore).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataCenter { get; set; }
 
         /// <summary>
-        /// <para>The ID of the interactive messaging group whose information you want to query.</para>
+        /// <para>The group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

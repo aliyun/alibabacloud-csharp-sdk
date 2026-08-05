@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeMixStreamListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the stream mixing tasks.</para>
+        /// <para>The list of stream mixing tasks.</para>
         /// </summary>
         [NameInMap("MixStreamList")]
         [Validation(Required=false)]
         public List<DescribeMixStreamListResponseBodyMixStreamList> MixStreamList { get; set; }
         public class DescribeMixStreamListResponseBodyMixStreamList : TeaModel {
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The app name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveApp****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The main streaming domain.</para>
+            /// <para>The streaming domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The time when the stream mixing task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the stream mixing task was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-09-17T08:39:14Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the stream mixing task was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the stream mixing task was last modified. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-09-17T08:39:15Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The number of input streams.</para>
+            /// <para>The number of input sources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? InputStreamNumber { get; set; }
 
             /// <summary>
-            /// <para>The ID of the layout.</para>
+            /// <para>The layout ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USERDEFINED</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string MixStreamTemplate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the stream mixing task. You can specify this parameter in a request to delete the steam mixing task.</para>
+            /// <para>The ID of the stream mixing task. You can use this ID to delete the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aaf9a50f-c460-3a9b-f180-38dd8f05****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string MixstreamId { get; set; }
 
             /// <summary>
-            /// <para>The name of the output stream.</para>
+            /// <para>The stream name of the stream mixing task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveStream****</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BC1E78D3-FA8B-4457-DEE2-6093E1232254</para>

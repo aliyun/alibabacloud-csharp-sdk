@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to collect statistics at the domain name level. Valid values:</para>
+        /// <para>The domain name statistics switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: collects statistics at the domain name level.</description></item>
-        /// <item><description>off (default): collects statistics at the user level.</description></item>
+        /// <item><description>on: enables domain name-level statistics.</description></item>
+        /// <item><description>off: user-level data. User-level data is collected by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainSwitch { get; set; }
 
         /// <summary>
-        /// <para>The end time of stream pulling. The time must be in UTC. The end time must be later than the start time. The maximum time range that can be specified by StartTime and EndTime is 30 days.</para>
+        /// <para>The end time of stream pulling in UTC. The interval between StartTime and EndTime must be within 30 days, and EndTime must be later than the current time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2017-10-10T21:00:00Z</para>
+        /// <para>2017-10-10T22:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -48,12 +48,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time of stream pulling. The time must be in UTC. The maximum time range that can be specified by StartTime and EndTime is 30 days.</para>
+        /// <para>The start time of stream pulling in UTC. The interval between StartTime and EndTime must be within 30 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

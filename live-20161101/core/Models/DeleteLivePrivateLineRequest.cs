@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The acceleration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>play: streaming acceleration</description></item>
-        /// <item><description>publish: stream ingest acceleration</description></item>
+        /// <item><description>play: streaming acceleration.</description></item>
+        /// <item><description>publish: stream ingest acceleration.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AccelerationType { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,12 +50,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream.</para>
+        /// <para>The live stream name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

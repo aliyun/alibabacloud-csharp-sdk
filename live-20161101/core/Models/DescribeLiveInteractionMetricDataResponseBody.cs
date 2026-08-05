@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveInteractionMetricDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The node data.</para>
+        /// <para>An array of data points.</para>
         /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]
         public List<DescribeLiveInteractionMetricDataResponseBodyNodes> Nodes { get; set; }
         public class DescribeLiveInteractionMetricDataResponseBodyNodes : TeaModel {
             /// <summary>
-            /// <para>The time when the metric was queried. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The timestamp of the data point, specified as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1548670257000</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A01C98C5-25AE-124A-83FE-514DF5C5BE36</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The summary data.</para>
+        /// <para>The summarized data for the query time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>

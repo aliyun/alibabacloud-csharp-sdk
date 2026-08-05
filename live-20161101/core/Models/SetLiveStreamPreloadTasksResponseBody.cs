@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetLiveStreamPreloadTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of URLs for which the prefetch task configuration failed.</para>
+        /// <para>The number of URLs for which the prefetch task failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36E0E523-E0C6-5D95-A465-A8EA2DCBA2A5</para>
@@ -54,13 +54,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the prefetch task. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Success</description></item>
-        /// <item><description>Failed</description></item>
+        /// <item><description>Success: successful.</description></item>
+        /// <item><description>Failed: failed.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Success is returned only if the prefetch task is configured for all specified streaming URLs.</para>
+        /// <para>The status is Failed if any task fails to be created.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The number of URLs for which the prefetch task is successfully configured.</para>
+        /// <para>The number of URLs for which the prefetch task succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? SuccessURL { get; set; }
 
         /// <summary>
-        /// <para>The total number of URLs.</para>
+        /// <para>The total number of URLs in the prefetch task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

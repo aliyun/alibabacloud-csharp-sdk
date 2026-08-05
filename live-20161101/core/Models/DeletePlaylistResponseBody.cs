@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeletePlaylistResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to query the information about the episode list, start the episode list, or stop the episode list.</para>
+        /// <para>The playlist ID. You can use this ID as a request parameter to query, start, or stop the playlist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>445409ec-7eaa-461d-8f29-4bec2eb9****</para>

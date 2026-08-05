@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyLiveAIStudioRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the background material in ApsaraVideo VOD. You can obtain the ID from the ApsaraVideo VOD console.</para>
+        /// <para>VOD resource ID of the background material, obtained from the VOD console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d0eb493192c771efba644531858c0102</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string BackgroundResourceId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the background material.</para>
+        /// <para>Resource access URL of the background material.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxx.com/2.mp4">https://xxx.com/2.mp4</a></para>
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string BackgroundResourceUrl { get; set; }
 
         /// <summary>
-        /// <para>The type of the background material. Valid values:</para>
+        /// <para>Background material type:</para>
         /// <list type="bullet">
-        /// <item><description>VOD: a video in ApsaraVideo VOD</description></item>
-        /// <item><description>PIC: an image</description></item>
-        /// <item><description>LIVE: a live stream</description></item>
+        /// <item><description>VOD: Video on demand</description></item>
+        /// <item><description>PIC: Image</description></item>
+        /// <item><description>LIVE: Live stream</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string BackgroundType { get; set; }
 
         /// <summary>
-        /// <para>The custom description.</para>
+        /// <para>Custom description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom</para>
@@ -55,17 +55,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The preview height. Unit: pixels.</para>
-        /// <para>The following preview specifications (width × height) are supported:</para>
+        /// <para>Preview screen height, unit: px.</para>
+        /// <para>The preview screen width x height only supports the following specifications:</para>
         /// <list type="bullet">
-        /// <item><description>Landscape low definition 360p (640×360)</description></item>
-        /// <item><description>Portrait low definition 360p (360×640)</description></item>
-        /// <item><description>Landscape standard definition 480p (854×480)</description></item>
-        /// <item><description>Portrait standard definition 480p (480×854)</description></item>
-        /// <item><description>Landscape high definition 720p (1280×720)</description></item>
-        /// <item><description>Portrait high definition 720p (720×1280)</description></item>
-        /// <item><description>Landscape ultra-high definition 1080p (1920×1080)</description></item>
-        /// <item><description>Portrait ultra-high definition 1080p (1080×1920)</description></item>
+        /// <item><description>Landscape Smooth 360P 640x360</description></item>
+        /// <item><description>Portrait Smooth 360P 360x640</description></item>
+        /// <item><description>Landscape Standard Definition 480P 854x480</description></item>
+        /// <item><description>Portrait Standard Definition 480P 480x854</description></item>
+        /// <item><description>Landscape HD 720P 1280x720</description></item>
+        /// <item><description>Portrait HD 720P 720x1280</description></item>
+        /// <item><description>Landscape Full HD 1080P 1920x1080</description></item>
+        /// <item><description>Portrait Full HD 1080P 1080x1920</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? Height { get; set; }
 
         /// <summary>
-        /// <para>The layout information of the chroma-keyed material.</para>
+        /// <para>Layout position information of the source stream after matting.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MattingLayout")]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public ModifyLiveAIStudioRequestMattingLayout MattingLayout { get; set; }
         public class ModifyLiveAIStudioRequestMattingLayout : TeaModel {
             /// <summary>
-            /// <para>The normalized value of the height. The value indicates the ratio of the material height to the height of the background. Valid values: <b>0 to 1</b>.</para>
+            /// <para>Normalized height value, which is the height ratio of the matted portrait to the background. Value range: <b>0~1</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? HeightNormalized { get; set; }
 
             /// <summary>
-            /// <para>The x-coordinate of the material. Valid values: <b>0 to 1</b>. The upper-left corner is used as the coordinate origin for the material.</para>
+            /// <para>Position parameter, X coordinate. Value range: <b>0~1</b>. The material position uses the upper-left corner as the reference point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? PositionX { get; set; }
 
             /// <summary>
-            /// <para>The y-coordinate of the material. Valid values: <b>0 to 1</b>. The upper-left corner is used as the coordinate origin for the material.</para>
+            /// <para>Position parameter, Y coordinate. Value range: <b>0~1</b>. The material position uses the upper-left corner as the reference point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -116,11 +116,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The type of chroma key. Valid values:</para>
+        /// <para>Matting type:</para>
         /// <list type="bullet">
-        /// <item><description>green: green-screen chroma key</description></item>
-        /// <item><description>blue: blue-screen chroma key</description></item>
-        /// <item><description>complex: background replacement</description></item>
+        /// <item><description>green: Green screen matting</description></item>
+        /// <item><description>blue: Blue screen matting</description></item>
+        /// <item><description>complex: Real-scene matting</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -132,14 +132,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string MattingType { get; set; }
 
         /// <summary>
-        /// <para>The layout information of the multimedia material.</para>
+        /// <para>Layout position information of the multimedia material.</para>
         /// </summary>
         [NameInMap("MediaLayout")]
         [Validation(Required=false)]
         public ModifyLiveAIStudioRequestMediaLayout MediaLayout { get; set; }
         public class ModifyLiveAIStudioRequestMediaLayout : TeaModel {
             /// <summary>
-            /// <para>The normalized value of the material height. The value indicates the ratio of the material height to the height of the background. Valid values: <b>0 to 1</b>.</para>
+            /// <para>Normalized height value of the material, which is the height ratio of the material to the background. Value range: <b>0~1</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? HeightNormalized { get; set; }
 
             /// <summary>
-            /// <para>The x-coordinate of the material. Valid values: <b>0 to 1</b>. The upper-left corner is used as the coordinate origin for the material.</para>
+            /// <para>Position parameter, X coordinate. Value range: <b>0~1</b>. The material position uses the upper-left corner as the reference point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? PositionX { get; set; }
 
             /// <summary>
-            /// <para>The y-coordinate of the material. Valid values: <b>0 to 1</b>. The upper-left corner is used as the coordinate origin for the material.</para>
+            /// <para>Position parameter, Y coordinate. Value range: <b>0~1</b>. The material position uses the upper-left corner as the reference point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the multimedia material in ApsaraVideo VOD. You can obtain the ID from the ApsaraVideo VOD console.</para>
+        /// <para>VOD resource ID of the multimedia material, obtained from the VOD console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d0eb493192c771efba644531858c01102</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string MediaResourceId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the multimedia material. Specify either this parameter or the MediaResourceId parameter.</para>
+        /// <para>Resource access URL of the multimedia material. Either this or the resource ID should be provided.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxx.com/1.mp4">https://xxx.com/1.mp4</a></para>
@@ -191,11 +191,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string MediaResourceUrl { get; set; }
 
         /// <summary>
-        /// <para>The type of the multimedia material. Valid values:</para>
+        /// <para>Multimedia material type:</para>
         /// <list type="bullet">
-        /// <item><description>VOD: a video in ApsaraVideo VOD</description></item>
-        /// <item><description>PIC: an image</description></item>
-        /// <item><description>LIVE: a live stream</description></item>
+        /// <item><description>VOD: Video on demand</description></item>
+        /// <item><description>PIC: Image</description></item>
+        /// <item><description>LIVE: Live stream</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -209,12 +209,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>Region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the virtual studio template. The name is the same as the value of the StudioName parameter that was specified when you called the CreateLiveAIStudio operation to create the virtual studio template.</para>
+        /// <para>Virtual studio template name, same as the StudioName parameter in the create API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -225,7 +231,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StudioName { get; set; }
 
         /// <summary>
-        /// <para>The preview width. Unit: pixels.</para>
+        /// <para>Preview screen width, unit: px.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1920</para>

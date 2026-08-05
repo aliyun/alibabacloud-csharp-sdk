@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class EditShowAndReplaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the editing task. The following fields are included:</para>
+        /// <para>The task information, which contains:</para>
         /// <list type="bullet">
-        /// <item><description><b>vodId</b>: the ID of the VOD file.</description></item>
-        /// <item><description><b>mediaid</b>: the ID of the media file.</description></item>
-        /// <item><description><b>jobId</b>: the ID of the editing task.</description></item>
+        /// <item><description><para><b>vodId</b>: the video-on-demand file ID.</para>
+        /// </description></item>
+        /// <item><description><para><b>mediaid</b>: the media file ID.</para>
+        /// </description></item>
+        /// <item><description><para><b>jobId</b>: the task ID.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string JobInfo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</para>

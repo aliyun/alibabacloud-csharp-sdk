@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the episode.</para>
+        /// <para>The show ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a2b8e671-2fe5-4642-a2ec-bf93880e****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ShowId { get; set; }
 
         /// <summary>
-        /// <para>The list of resources that failed to be added and the reason for failure.</para>
+        /// <para>The list of resources that failed to be added and the failure reasons.</para>
         /// 
         /// <b>Example:</b>
         /// <para>failedList[Show1, Show2...]</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string FailedList { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the episodes that were added.</para>
+        /// <para>The list of show IDs that were successfully added.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>f1933f16-5467-4308-b3a9-e8d451a90999,547436b8-c839-4469-a2c0-704c1ce5ce00</para>
+        /// <para>f1933f16-5467-4308-b3a9-e8d451a90999，547436b8-c839-4469-a2c0-704c1ce5ce00</para>
         /// </summary>
         [NameInMap("successfulShowIds")]
         [Validation(Required=false)]

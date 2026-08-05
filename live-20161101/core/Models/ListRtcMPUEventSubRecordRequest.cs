@@ -10,9 +10,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListRtcMPUEventSubRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The ID of the subscribed application. You can view your application IDs by navigating to <b>ApsaraVideo Live &gt; Live+ &gt; ApsaraVideo Real-time Communication &gt; Application Management</b>.</para>
         /// <remarks>
-        /// <para> The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <list type="bullet">
+        /// <item><description>The application ID consists of uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters.</description></item>
+        /// <item><description>You must first call CreateRtcMPUEventSub to create a stream mixing and forwarding event subscription for this application ID.</description></item>
+        /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +27,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The end time of the query.
+        /// Format: yyyy-MM-ddTHH:mm:ssZ (UTC). The value cannot be later than the current time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>The number of records per page. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +61,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The start time of the query.
+        /// Format: yyyy-MM-ddTHH:mm:ssZ (UTC). The value cannot be earlier than seven days before the current time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +73,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the subscription.</para>
+        /// <para>The callback ID of the subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourSubId</para>

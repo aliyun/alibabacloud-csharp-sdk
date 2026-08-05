@@ -13,12 +13,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the subtitle template.</para>
+        /// <para>The ID of the caption template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +35,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SubtitleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the subtitle template. The name can contain only digits, letters, and hyphens (-). The name cannot start with a hyphen.</para>
+        /// <para>The name of the caption template. The name can contain only digits, letters, and hyphens (-). A hyphen cannot be the first character.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sub01</para>

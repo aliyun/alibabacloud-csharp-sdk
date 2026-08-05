@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateLiveMessageAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The application ID. The ID is used in subsequent operations, such as joining a group.</para>
+        /// <para>The application ID, which is used for subsequent operations such as joining groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The AppKey for authentication of this application.</para>
+        /// <para>The AppKey, which is used to generate authentication for various operations related to the AppId.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppKey { get; set; }
 
         /// <summary>
-        /// <para>The application signature. The signature is required when you use the interactive messaging SDK.</para>
+        /// <para>The application signature. The interactive messaging service SDK requires this information.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppSign { get; set; }
 
         /// <summary>
-        /// <para>The data center in which the interactive messaging application was created.</para>
+        /// <para>The data center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

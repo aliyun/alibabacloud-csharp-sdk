@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeToutiaoLivePlayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the live stream.</para>
+        /// <para>The details of the stream information.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public List<DescribeToutiaoLivePlayResponseBodyContent> Content { get; set; }
         public class DescribeToutiaoLivePlayResponseBodyContent : TeaModel {
             /// <summary>
-            /// <para>The name of the application to which the live stream belongs.</para>
+            /// <para>The name of the application to which the stream belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveApp****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The Content Delivery Network (CDN) name.</para>
+            /// <para>The CDN name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ali</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? PlayNum { get; set; }
 
             /// <summary>
-            /// <para>The name of the live stream.</para>
+            /// <para>The stream name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveStream****</para>

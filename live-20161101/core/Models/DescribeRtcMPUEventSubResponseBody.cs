@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the subscription.</para>
+        /// <para>The event callback information.</para>
         /// </summary>
         [NameInMap("SubInfo")]
         [Validation(Required=false)]
         public DescribeRtcMPUEventSubResponseBodySubInfo SubInfo { get; set; }
         public class DescribeRtcMPUEventSubResponseBodySubInfo : TeaModel {
             /// <summary>
-            /// <para>The application ID. You can specify only one application ID.</para>
+            /// <para>The ID of the subscribed application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yourAppId</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string CallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>The ID of the channel to which mixed-stream relay event callbacks are sent. Multiple channel IDs are separated by commas (,). If this parameter is not returned, mixed-stream relay event callbacks are sent to all channels.</para>
+            /// <para>The channel IDs of stream mixing tasks that receive callbacks, separated by commas (,). If this field is empty, all channels receive callbacks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yourCh1,yourCh2</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string ChannelIds { get; set; }
 
             /// <summary>
-            /// <para>The time when the event callback was fired. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The creation time of the event callback, in the format of yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-09 18:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the subscription.</para>
+            /// <para>The event callback ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sub-<b><b><b>9799B2C4500</b></b></b></para>

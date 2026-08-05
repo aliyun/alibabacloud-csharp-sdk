@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class QueryLiveDomainMultiStreamListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The online streams returned.</para>
+        /// <para>The number of online records.</para>
         /// </summary>
         [NameInMap("OnlineStreams")]
         [Validation(Required=false)]
         public List<QueryLiveDomainMultiStreamListResponseBodyOnlineStreams> OnlineStreams { get; set; }
         public class QueryLiveDomainMultiStreamListResponseBodyOnlineStreams : TeaModel {
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apptest</para>
@@ -27,18 +27,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The switchover records.</para>
+            /// <para>The stream switching records.</para>
             /// </summary>
             [NameInMap("ChangeLogs")]
             [Validation(Required=false)]
             public List<QueryLiveDomainMultiStreamListResponseBodyOnlineStreamsChangeLogs> ChangeLogs { get; set; }
             public class QueryLiveDomainMultiStreamListResponseBodyOnlineStreamsChangeLogs : TeaModel {
                 /// <summary>
-                /// <para>The reason for the switchover.</para>
+                /// <para>The reason for stream switching.</para>
                 /// <list type="bullet">
-                /// <item><description>merge cut manually: You proactively switched the stream.</description></item>
-                /// <item><description>master stream no data: No data is available in the active stream.</description></item>
-                /// <item><description>master stream low quality: The quality of the active stream deteriorated.</description></item>
+                /// <item><description>merge cut manually: The user manually switched the stream.</description></item>
+                /// <item><description>master stream no data: The primary stream has no data.</description></item>
+                /// <item><description>master stream low quality: The primary stream quality degraded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string ChangeReason { get; set; }
 
                 /// <summary>
-                /// <para>The switchover time.</para>
+                /// <para>The stream switching time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC+0).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-13T09:20:47Z</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string ChangeTime { get; set; }
 
                 /// <summary>
-                /// <para>The stream used after the switchover.</para>
+                /// <para>The stream that is actually used after the switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rtmp://118.178.168.35:1936/wwMultitest/pull.livetest2.aliyunlive.com_wwMultitest428_AliRewrite_2?vhost=pull.livetest2.aliyunlive.com&amp;live_rtmp_test=on</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string MasterUpstream { get; set; }
 
                 /// <summary>
-                /// <para>The IP address used after the switchover.</para>
+                /// <para>The IP address used after the stream switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.1.1.1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string UpstreamIp { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the stream after the switchover.</para>
+                /// <para>The stream identifier after the switch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>***test_AliRewrite_2</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             }
 
             /// <summary>
-            /// <para>The main streaming domain.</para>
+            /// <para>The streaming domain of the streamer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>play.***.com</para>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the dual-stream disaster recovery feature is enabled. Valid values:</para>
+            /// <para>The feature switch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>on</b>: enabled</description></item>
-            /// <item><description><b>off</b>: disabled</description></item>
+            /// <item><description><b>on</b>: enabled.</description></item>
+            /// <item><description><b>off</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,22 +125,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string StreamName { get; set; }
 
             /// <summary>
-            /// <para>The standby streams.</para>
+            /// <para>The list of all candidate streams.</para>
             /// </summary>
             [NameInMap("UpstreamList")]
             [Validation(Required=false)]
             public List<QueryLiveDomainMultiStreamListResponseBodyOnlineStreamsUpstreamList> UpstreamList { get; set; }
             public class QueryLiveDomainMultiStreamListResponseBodyOnlineStreamsUpstreamList : TeaModel {
                 /// <summary>
-                /// <para>The active/standby tag.</para>
+                /// <para>The primary/secondary flag.</para>
                 /// <remarks>
-                /// <para> This parameter indicates whether the active or standby stream is being distributed.</para>
+                /// <para>Indicates which stream is currently being used for merged distribution.</para>
                 /// </remarks>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -150,7 +145,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public bool? MasterFlag { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the stream ingest client.</para>
+                /// <para>The IP address of the ingest client.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.1.1.1</para>
@@ -160,7 +155,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string UpstreamIp { get; set; }
 
                 /// <summary>
-                /// <para>The unique identifier of the stream ingest.</para>
+                /// <para>The unique identifier of the ingest stream.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>***test_Alirewrite1</para>
@@ -170,7 +165,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string UpstreamSequence { get; set; }
 
                 /// <summary>
-                /// <para>The stream ingest time.</para>
+                /// <para>The stream ingest time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC+0).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-13T09:20:47Z</para>
@@ -184,7 +179,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -214,7 +209,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19</para>

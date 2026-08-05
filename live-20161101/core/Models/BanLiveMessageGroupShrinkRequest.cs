@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application.</para>
+        /// <para>The data center. This value must be the same as the data center that you specified when you called <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>.</para>
         /// <remarks>
-        /// <para> Valid values: cn-shanghai and ap-southeast-1 (Singapore).</para>
+        /// <para>The supported data centers are China (Shanghai) (cn-shanghai) and Singapore (ap-southeast-1).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataCenter { get; set; }
 
         /// <summary>
-        /// <para>The users whom you do not want to mute when the group is muted.</para>
+        /// <para>The users who are exempt from the group-wide mute. Specify up to 30 users. Separate multiple user IDs with a comma (,).</para>
         /// </summary>
         [NameInMap("ExceptUsers")]
         [Validation(Required=false)]

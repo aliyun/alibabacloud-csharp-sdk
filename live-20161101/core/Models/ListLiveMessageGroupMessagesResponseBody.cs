@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveMessageGroupMessagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the group queried.</para>
+        /// <para>The group ID of the group to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>grouptest</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current page is followed by another page.</para>
+        /// <para>Indicates whether there is a next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? Hasmore { get; set; }
 
         /// <summary>
-        /// <para>Details about the messages.</para>
+        /// <para>The message list.</para>
         /// </summary>
         [NameInMap("MessageList")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Body { get; set; }
 
             /// <summary>
-            /// <para>The ID of the message.</para>
+            /// <para>The message identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-1-1-0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string MsgTid { get; set; }
 
             /// <summary>
-            /// <para>The type of the message.</para>
+            /// <para>The message type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? MsgType { get; set; }
 
             /// <summary>
-            /// <para>The details about the user who sent the message.</para>
+            /// <para>The message sender details.</para>
             /// </summary>
             [NameInMap("Sender")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// <para>The additional information about the user who sent the message.</para>
+                /// <para>The extended information of the user who sent the message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testusermeta2</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             }
 
             /// <summary>
-            /// <para>The sequence number of the message.</para>
+            /// <para>The message sequence number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? SeqNumber { get; set; }
 
             /// <summary>
-            /// <para>The time when the message was sent. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the message was created, expressed as a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1697081134</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The starting page number for the next query. A value of 0 indicates that no further pages can be queried.</para>
+        /// <para>The start position of the next page. The value is 0 if there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

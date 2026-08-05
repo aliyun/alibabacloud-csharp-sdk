@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamTranscodeStreamNumResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of streams for which transcoding is triggered by stream pulling.</para>
+        /// <para>The number of streams that triggered transcoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of streams.</para>
+        /// <para>The total number of transcoding streams.</para>
         /// 
         /// <b>Example:</b>
         /// <para>57</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? Total { get; set; }
 
         /// <summary>
-        /// <para>The details about the transcoding templates.</para>
+        /// <para>The transcoding template data.</para>
         /// </summary>
         [NameInMap("TranscodeStreamCountDetails")]
         [Validation(Required=false)]
         public List<DescribeLiveStreamTranscodeStreamNumResponseBodyTranscodeStreamCountDetails> TranscodeStreamCountDetails { get; set; }
         public class DescribeLiveStreamTranscodeStreamNumResponseBodyTranscodeStreamCountDetails : TeaModel {
             /// <summary>
-            /// <para>The number of streams that use the transcoding template.</para>
+            /// <para>The number of streams for the transcoding template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The number of streams that are transcoded.</para>
+        /// <para>The number of transcoded streams.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamsOnlineListRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</para>
+        /// <para>The name of the application to which the stream belongs. You can view the AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveApp****</para>
@@ -20,7 +20,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The streaming domain of the streamer.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>When you specify DomainName, make sure that the domain name is a live streaming domain name and that you have the permissions to manage the domain name.</description></item>
+        /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +36,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only specific parameters. Valid values:</para>
+        /// <para>Specifies whether to return only specified fields. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b>: returns only the DomainName, AppName, StreamName, and PublishTime parameters.</description></item>
-        /// <item><description><b>no</b>: returns all parameters. This is the default value.</description></item>
+        /// <item><description><para><b>yes</b>: Only the DomainName, AppName, StreamName, and PublishTime fields are returned.  </para>
+        /// </description></item>
+        /// <item><description><para><b>no</b> (default): All fields are returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,10 +76,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The mode in which stream names are matched. Valid values:</para>
+        /// <para>Specifies whether to use fuzzy match for the stream name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>fuzzy</b> (default): fuzzy match</description></item>
-        /// <item><description><b>strict</b>: exact match</description></item>
+        /// <item><description><para><b>fuzzy</b> (default): fuzzy match.</para>
+        /// </description></item>
+        /// <item><description><para><b>strict</b>: exact match.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,12 +91,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string QueryType { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream. You can specify only one live stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</para>
+        /// <para>The stream name. Only a single StreamName can be specified. You can view the StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveStream****</para>
@@ -97,11 +112,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamName { get; set; }
 
         /// <summary>
-        /// <para>The type of the streams to query. Valid values:</para>
+        /// <para>The stream type. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description><b>all</b> (default): all streams</description></item>
-        /// <item><description><b>raw</b>: source streams</description></item>
-        /// <item><description><b>trans</b>: transcoded streams</description></item>
+        /// <item><description><para><b>all</b> (default): all streams.</para>
+        /// </description></item>
+        /// <item><description><para><b>raw</b>: raw streams.</para>
+        /// </description></item>
+        /// <item><description><para><b>trans</b>: transcoded streams.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

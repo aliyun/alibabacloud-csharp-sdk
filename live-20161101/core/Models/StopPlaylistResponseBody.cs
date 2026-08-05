@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StopPlaylistResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the episode list.</para>
+        /// <para>The playlist ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>445409ec-7eaa-461d-8f29-4bec2eb9****</para>

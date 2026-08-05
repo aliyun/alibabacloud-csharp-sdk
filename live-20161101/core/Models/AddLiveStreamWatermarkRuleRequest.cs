@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddLiveStreamWatermarkRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The AppName of the live stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,21 +56,32 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream. The following rules apply:</para>
+        /// <para>The stream name. The following rules apply:</para>
         /// <list type="bullet">
-        /// <item><description>A stream name can be exactly matched. Example: liveStreamA.</description></item>
-        /// <item><description>Fuzzy match is also supported. The use of an asterisk (<c>*</c>) allows all approximate matches to be found.</description></item>
-        /// <item><description>You can place the asterisk before or after an approximate string.</description></item>
+        /// <item><description><para>To match a specific stream, enter the full stream name. For example, liveStreamA.</para>
+        /// </description></item>
+        /// <item><description><para>You can use a wildcard match. The asterisk (<c>*</c>) matches all streams.</para>
+        /// </description></item>
+        /// <item><description><para>You can perform prefix and suffix matching.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Fuzzy match: Only one asterisk (<c>*</c>) before or after an approximate string is allowed. The approximate string must be enclosed in <c>()</c>. Separate multiple strings with vertical bars (<c>|</c>).</description></item>
-        /// <item><description>For example, <c>*(t1|t2)</c> matches all streams whose name has the <c>t1</c> or <c>t2</c> suffix, and <c>(abc|123)*</c> matches all streams whose name has the <c>abc</c> or <c>123</c> prefix.</description></item>
+        /// <item><description><para>You can use only one asterisk (<c>*</c>). The asterisk must be at the beginning or end of the string. The matching items must be enclosed in parentheses (<c>()</c>) and separated by a vertical bar (<c>|</c>).</para>
+        /// </description></item>
+        /// <item><description><para>For example, <c>*(t1|t2)</c> matches all streams that end with <c>t1</c> or <c>t2</c>. <c>(abc|123)*</c> matches all streams that start with <c>abc</c> or <c>123</c>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -85,7 +96,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the watermark template.</para>
         /// <remarks>
-        /// <para> You can obtain the template ID by checking the value of the TemplateId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/410759.html">AddLiveStreamWatermark</a> operation.</para>
+        /// <para>Get the template ID from the response of the <a href="https://help.aliyun.com/document_detail/2848096.html">AddLiveStreamWatermark</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

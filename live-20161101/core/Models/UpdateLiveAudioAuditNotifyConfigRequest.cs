@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateLiveAudioAuditNotifyConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The callback URL. This URL is used to receive callback notifications about violations in audio.</para>
+        /// <para>The webhook URL for receiving callback notifications about audio that contains violations.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://guide.aliyundoc.com/callback">http://guide.aliyundoc.com/callback</a></para>
@@ -20,13 +20,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Callback { get; set; }
 
         /// <summary>
-        /// <para>The callback template. Configure the following fields:</para>
+        /// <para>The callback template for automated review. The value can contain the following variables:</para>
         /// <list type="bullet">
-        /// <item><description><b>{DomainName}</b>: the streaming domain.</description></item>
-        /// <item><description><b>{AppName}</b>: the name of the application to which the live stream belongs.</description></item>
-        /// <item><description><b>{StreamName}</b>: the name of the live stream.</description></item>
-        /// <item><description><b>{Timestamp}</b>: the time when the callback is returned. The value of this field is a UNIX timestamp. Unit: seconds.</description></item>
-        /// <item><description><b>{Result}</b>: the moderation results.</description></item>
+        /// <item><description><para><b>{DomainName}</b>: The streaming domain.</para>
+        /// </description></item>
+        /// <item><description><para><b>{AppName}</b>: The AppName of the stream.</para>
+        /// </description></item>
+        /// <item><description><para><b>{StreamName}</b>: The stream name.</para>
+        /// </description></item>
+        /// <item><description><para><b>{Timestamp}</b>: The UNIX timestamp when the callback is generated. Unit: seconds.</para>
+        /// </description></item>
+        /// <item><description><para><b>{Result}</b>: The detection result.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,6 +56,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

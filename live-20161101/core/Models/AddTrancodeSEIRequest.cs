@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddTrancodeSEIRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</para>
+        /// <para>The AppName of the live stream. View AppNames on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The time period after which the SEI is inserted after the request is received. Unit: milliseconds.</para>
+        /// <para>The delay in milliseconds before the SEI is inserted after the command is received.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,10 +47,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to append the SEI to each keyframe or frame. Valid values:</para>
+        /// <para>Specifies the insertion pattern for the SEI.</para>
         /// <list type="bullet">
-        /// <item><description><b>keyframe</b></description></item>
-        /// <item><description><b>frame</b></description></item>
+        /// <item><description><para><b>keyframe</b>: Inserts at every keyframe.</para>
+        /// </description></item>
+        /// <item><description><para><b>frame</b>: Inserts at every single frame.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,12 +63,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Pattern { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of times that the SEI is repeatedly inserted. A value of -1 specifies infinite times.</para>
+        /// <para>The number of times to repeat the insertion. A value of -1 means infinite repetitions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +87,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The name of the live stream.</para>
         /// <remarks>
-        /// <para> The value of this parameter must be the name of the source stream. This way, the SEI is inserted to all the transcoded streams.</para>
+        /// <para>It must be the name of the source stream. This ensures that SEI is inserted into all transcoded streams.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -91,7 +99,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamName { get; set; }
 
         /// <summary>
-        /// <para>The SEI text. It can be up to 4,000 bytes in length.</para>
+        /// <para>The SEI text. Length limit: 4000 bytes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

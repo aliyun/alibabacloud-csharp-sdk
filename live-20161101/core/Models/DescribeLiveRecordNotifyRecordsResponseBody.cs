@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<DescribeLiveRecordNotifyRecordsResponseBodyCallbackList> CallbackList { get; set; }
         public class DescribeLiveRecordNotifyRecordsResponseBodyCallbackList : TeaModel {
             /// <summary>
-            /// <para>The name of the application to which the live stream belongs.</para>
+            /// <para>The name of the application to which the stream belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveApp****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The description of the result. A value of success indicates that the request is successful. If the request fails, an error message is returned.</para>
+            /// <para>The result description. The value is success if the callback was successful. Otherwise, an error message is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The main streaming domain.</para>
+            /// <para>The streamer\&quot;s streaming domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -47,19 +47,35 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The callback content.</para>
+            /// <para>The specific content of the callback.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>July 26,  16:14{&quot;domain&quot;:&quot;al.xxxx.com&quot;,&quot;stream&quot;:&quot;livestream01&quot;,&quot;pull _stream_result&quot;:true,&quot;cdn&quot;:&quot;al&quot;}</para>
+            /// <para>7月26日 16:14{&quot;domain&quot;:&quot;al.xxxx.com&quot;,&quot;stream&quot;:&quot;livestream01&quot;,&quot;pull _stream_result&quot;:true,&quot;cdn&quot;:&quot;al&quot;}</para>
             /// </summary>
             [NameInMap("NotifyContent")]
             [Validation(Required=false)]
             public string NotifyContent { get; set; }
 
+            /// <summary>
+            /// <para>The callback request header.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///   &quot;Content-Type&quot;: [
+            ///     &quot;application/json; charset=utf-8&quot;
+            ///   ]
+            /// }</para>
+            /// </summary>
             [NameInMap("NotifyHeader")]
             [Validation(Required=false)]
             public string NotifyHeader { get; set; }
 
+            /// <summary>
+            /// <para>The response returned by the user after receiving the callback.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;Code&quot;:0,&quot;Msg&quot;:&quot;Success&quot;}</para>
+            /// </summary>
             [NameInMap("NotifyResponse")]
             [Validation(Required=false)]
             public string NotifyResponse { get; set; }
@@ -67,8 +83,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The callback result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>success</description></item>
-            /// <item><description>failed</description></item>
+            /// <item><description>success: The callback was successful.</description></item>
+            /// <item><description>failed: The callback failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +95,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string NotifyResult { get; set; }
 
             /// <summary>
-            /// <para>The time when the callback was returned. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The callback time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-10-19T19:09:28Z</para>
@@ -91,13 +107,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The callback type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>file_created: The recording file is created.</description></item>
-            /// <item><description>record_error: A recording error occurs.</description></item>
-            /// <item><description>record_started: Recording is started.</description></item>
-            /// <item><description>record_paused: Recording is paused.</description></item>
-            /// <item><description>record_resumed: Recording is resumed.</description></item>
-            /// <item><description>record_force_transcode_fail: The recording task fails to trigger transcoding.</description></item>
-            /// <item><description>transformat_error: An error occurs when the live stream is parsed.</description></item>
+            /// <item><description>file_created: The recording was created.</description></item>
+            /// <item><description>record_error: A recording error occurred.</description></item>
+            /// <item><description>record_started: The recording started.</description></item>
+            /// <item><description>record_paused: The recording was paused.</description></item>
+            /// <item><description>record_resumed: The recording was resumed.</description></item>
+            /// <item><description>record_force_transcode_fail: The recording task failed to trigger transcoding.</description></item>
+            /// <item><description>transformat_error: An error occurred while parsing the live stream content.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,12 +133,23 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public string NotifyUrl { get; set; }
 
+            /// <summary>
+            /// <para>The recording storage type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>oss: recorded to OSS</description></item>
+            /// <item><description>vod: recorded to ApsaraVideo VOD</description></item>
+            /// <item><description>all: all storage types</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oss</para>
+            /// </summary>
             [NameInMap("StorageType")]
             [Validation(Required=false)]
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The name of the live stream.</para>
+            /// <para>The stream name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveStream****</para>
@@ -144,7 +171,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The prompt message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -184,7 +211,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that meet the specified conditions.</para>
+        /// <para>The total number of entries that meet the conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

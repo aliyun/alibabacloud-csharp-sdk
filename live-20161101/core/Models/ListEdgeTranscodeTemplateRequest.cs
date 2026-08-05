@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListEdgeTranscodeTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data center.</para>
+        /// <para>The data center ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the query.</para>
+        /// <para>The search keyword. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You can specify a template ID for an exact match.</description></item>
-        /// <item><description>You can also specify a template name for a fuzzy match.</description></item>
+        /// <item><description>Template ID. Exact match is supported.</description></item>
+        /// <item><description>Template name. Fuzzy match is supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -58,12 +58,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The sorting order of the templates by creation time. Default value: desc. Valid values:</para>
+        /// <para>The sorting rule. Templates are sorted by creation time (CreateTime). Default value: desc. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>desc: descending order.</description></item>
         /// <item><description>asc: ascending order.</description></item>
@@ -77,14 +83,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The type of edge transcoding. Valid values:</para>
+        /// <para>The edge transcoding type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>common</b>: standard transcoding and Narrowband HD™ 1.0 transcoding.</description></item>
-        /// <item><description><b>nbhd-2</b>: Narrowband HD™ 2.0 transcoding.</description></item>
-        /// <item><description><b>ultra-hd</b>: ultra-high definition transcoding.</description></item>
+        /// <item><description><b>common</b>: default transcoding (standard + Narrowband HD 1.0).</description></item>
+        /// <item><description><b>nbhd-2</b>: Narrowband HD 2.0.</description></item>
+        /// <item><description><b>ultra-hd</b>: ultra-high definition.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the query result is filtered based on the type of edge transcoding on which you are granted permissions.</para>
+        /// <para>If this parameter is not specified, the system displays transcoding templates for the transcoding types that the user has permissions to access.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -97,11 +103,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The video encoding format. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>H.264</description></item>
-        /// <item><description>H.265</description></item>
+        /// <item><description>H.264.</description></item>
+        /// <item><description>H.265.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the query result is filtered based on the video encoding format on which you are granted permissions.</para>
+        /// <para>If this parameter is not specified, the system displays transcoding templates for the video encoding formats that the user has permissions to access.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

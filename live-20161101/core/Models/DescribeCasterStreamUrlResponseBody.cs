@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</para>
+        /// <para>16A96B9A-F203-4EC5-8E43-CB92E6******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of streams that were returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

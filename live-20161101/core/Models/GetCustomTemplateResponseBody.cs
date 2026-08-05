@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class GetCustomTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configurations of the template.</para>
+        /// <para>The template configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{height:1080,scale:[16:9],gop:60,bframes:30,cdesc:h264}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the template.</para>
+        /// <para>The template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestTemplate</para>

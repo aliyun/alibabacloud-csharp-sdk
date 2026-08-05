@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamWatermarksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5c6a2a0df228-4a64- af62-20e91b9676b3</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of watermark templates that meet the specified conditions.</para>
+        /// <para>The total number of matching entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

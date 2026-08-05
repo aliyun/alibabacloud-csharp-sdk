@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddShowIntoShowListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the production studio.</para>
+        /// <para>The production studio ID.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the CasterId value returned by the CreateCaster operation.</para>
+        /// </description></item>
+        /// <item><description><para>If you created the production studio in the ApsaraVideo Live console, navigate to <b>ApsaraVideo Live console</b> &gt; <b>Production Studios</b> &gt; <b>Cloud Production Studio</b> to view the production studio name.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The production studio name in the production studio list on the Cloud Production Studio page of the ApsaraVideo Live console is the production studio ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,9 +30,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The duration of the episode. Unit: seconds.</para>
+        /// <para>The playback duration of a single show. Unit: seconds.</para>
         /// <remarks>
-        /// <para>You can specify only one of the <b>RepeatTimes</b> and <b>Duration</b> parameters.</para>
+        /// <list type="bullet">
+        /// <item><description>You can set only one of <b>RepeatTimes</b> and <b>Duration</b>.</description></item>
+        /// <item><description>This parameter is required when ResourceType is set to live.</description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,7 +46,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? Duration { get; set; }
 
         /// <summary>
-        /// <para>The custom type label.</para>
+        /// <para>The custom type tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,17 +59,23 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of times the episode repeats after the first playback is complete. The default value is 0.</para>
+        /// <para>The number of times a single show is repeated. Default value: 0.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>You can specify only one of the <b>RepeatTimes</b> and <b>Duration</b> parameters. - The RepeatTimes parameter specifies the number of repetitions. For example, if you set the value to -1, the episode is to be played for infinite times. If you set the value to 0, the episode is to be played once. If you set the value to 1, the episode is to be played twice.</description></item>
+        /// <item><description>You can set only one of <b>RepeatTimes</b> and <b>Duration</b>.- RepeatTimes specifies the number of repetitions. For example, -1 means infinite repetition, 0 means the show is repeated 0 times (played once), 1 means the show is repeated 1 time (played twice), and so on.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -74,7 +85,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? RepeatTimes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>The VOD file ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a2b8e671-2fe5-4642-a2ec-bf93880e****</para>
@@ -86,14 +97,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>live: live stream</description></item>
-        /// <item><description>vod: on-demand video</description></item>
-        /// <item><description>pic: image</description></item>
+        /// <item><description>live: live streaming resource.</description></item>
+        /// <item><description>vod: video-on-demand resource.</description></item>
+        /// <item><description>pic: image resource.</description></item>
         /// </list>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>When using video-on-demand (VOD) resources, use managed Bucket resources first. Resources in your own Bucket may expire. If you use resources in your own Bucket, check the resource validity period.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>When you select media resources from ApsaraVideo VOD, we recommend that you select resources that are stored in hosted OSS buckets. Resources stored in non-hosted OSS buckets have a validity period. Pay attention to the validity if you select resources that are stored in non-hosted OSS buckets. - You can add a live stream from ApsaraVideo Live or by using a third-party URL. - You can add an on-demand video from ApsaraVideo VOD or by using a third-party URL, or add an on-demand image.</description></item>
+        /// <item><description>Live files support live streaming resources and third-party URLs.</description></item>
+        /// <item><description>VOD files support video-on-demand resources, image resources, and third-party URLs.</description></item>
+        /// <item><description>When using live streaming resources, you must also specify the Duration parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,14 +120,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The URL of the resource.</para>
+        /// <para>The URL of the playback file.</para>
         /// </summary>
         [NameInMap("ResourceUrl")]
         [Validation(Required=false)]
         public string ResourceUrl { get; set; }
 
         /// <summary>
-        /// <para>The name of the episode.</para>
+        /// <para>The show name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveShow****</para>
@@ -121,7 +137,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ShowName { get; set; }
 
         /// <summary>
-        /// <para>The position of the episode in the episode list. Position indexes start from 0. By default, the episode is added to the end of the episode list.</para>
+        /// <para>The position in the playlist where the show is inserted. Positions start from 0. By default, the show is added to the end of the current playlist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -131,13 +147,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? Spot { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to add multiple episodes to the episode list at a time. Valid values:</para>
+        /// <para>Specifies whether to add shows to the playlist in batch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: adds multiple episodes to the episode list at a time.</description></item>
-        /// <item><description>false: adds a single episode to the episode list.</description></item>
+        /// <item><description><para>true: Batch addition.</para>
+        /// </description></item>
+        /// <item><description><para>false: Single addition.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter or this parameter is left empty, a single episode is to be added to the episode list.</para>
+        /// <para>If this parameter is not specified or left empty, single addition is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -148,16 +166,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? IsBatchMode { get; set; }
 
         /// <summary>
-        /// <para>The episodes that you want to add to the episode list. Each episode has a unique name and resource URL.</para>
+        /// <para>The list of show resources to add. Each resource has independent parameters such as showName and resourceUrl.</para>
         /// </summary>
         [NameInMap("showList")]
         [Validation(Required=false)]
         public List<AddShowIntoShowListRequestShowList> ShowList { get; set; }
         public class AddShowIntoShowListRequestShowList : TeaModel {
             /// <summary>
-            /// <para>The duration of the episode. Unit: seconds.</para>
+            /// <para>The playback duration of a single show. Unit: seconds.</para>
             /// <remarks>
-            /// <para> You can specify only one of the <b>RepeatTimes</b> and <b>Duration</b> parameters.</para>
+            /// <list type="bullet">
+            /// <item><description>You can set only one of <b>repeatTimes</b> and <b>duration</b>.</description></item>
+            /// <item><description>This parameter is required when resourceType is set to live.</description></item>
+            /// </list>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -168,7 +189,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>The custom type label.</para>
+            /// <para>The custom type tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -178,14 +199,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? LiveInputType { get; set; }
 
             /// <summary>
-            /// <para>The number of times the episode repeats after the first playback is complete. Default value: 0.</para>
+            /// <para>The number of times a single show is repeated. Default value: 0.</para>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>You can set only one of <b>repeatTimes</b> and <b>duration</b>.</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>You can specify only one of the <b>RepeatTimes</b> and <b>Duration</b> parameters.</para>
-            /// </description></item>
-            /// <item><description><para>The RepeatTimes parameter specifies the number of repetitions. For example, if you set the value to 0, the episode is to be played once. If you set the value to 1, the episode is to be played twice.</para>
-            /// </description></item>
+            /// <item><description>repeatTimes specifies the number of repetitions. For example, 0 means the show is repeated 0 times (played once), 1 means the show is repeated 1 time (played twice), and so on.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -196,7 +217,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? RepeatTimes { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
+            /// <para>The VOD file ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a2b8e671-2fe5-4642-a2ec-bf93880e****</para>
@@ -208,19 +229,22 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             /// <summary>
             /// <para>The resource type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>live: live stream</description></item>
-            /// <item><description>vod: on-demand video</description></item>
-            /// <item><description>pic: image</description></item>
+            /// <item><description><para>live: live streaming resource.</para>
+            /// </description></item>
+            /// <item><description><para>vod: video-on-demand resource.</para>
+            /// </description></item>
+            /// <item><description><para>pic: image resource.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>When using video-on-demand (VOD) resources, use managed Bucket resources first. Resources in your own Bucket may expire. If you use resources in your own Bucket, check the resource validity period.</description></item>
+            /// </list>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>When you select media resources from ApsaraVideo VOD, we recommend that you select resources that are stored in hosted OSS buckets. Resources stored in non-hosted OSS buckets have a validity period. Pay attention to the validity if you select resources that are stored in non-hosted OSS buckets.</para>
-            /// </description></item>
-            /// <item><description><para>You can add a live stream from ApsaraVideo Live or by using a third-party URL.</para>
-            /// </description></item>
-            /// <item><description><para>You can add an on-demand video from ApsaraVideo VOD or by using a third-party URL, or add an on-demand image.</para>
-            /// </description></item>
+            /// <item><description>Live files support live streaming resources and third-party URLs.</description></item>
+            /// <item><description>VOD files support video-on-demand resources, image resources, and third-party URLs.</description></item>
+            /// <item><description>When using live streaming resources, you must also specify the duration parameter.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -231,14 +255,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The URL of the resource.</para>
+            /// <para>The URL of the playback file.</para>
             /// </summary>
             [NameInMap("resourceUrl")]
             [Validation(Required=false)]
             public string ResourceUrl { get; set; }
 
             /// <summary>
-            /// <para>The name of the episode.</para>
+            /// <para>The show name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveShow****</para>

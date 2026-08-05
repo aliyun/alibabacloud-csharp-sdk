@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyCasterComponentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the component. You can use the ID as a request parameter in the API operation that is called to query components in a production studio.</para>
+        /// <para>The component ID. You can use this ID as a request parameter to query the components of the production studio.</para>
         /// 
         /// <b>Example:</b>
         /// <para>05ab713c-676e-49c0-96ce-cc408da1****</para>

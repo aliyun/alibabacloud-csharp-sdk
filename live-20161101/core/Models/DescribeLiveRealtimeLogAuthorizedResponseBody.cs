@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveRealtimeLogAuthorizedResponseBody : TeaModel {
         /// <summary>
-        /// <para>The authorization status. <b>true</b>: authorized <b>false</b>: not authorized</para>
+        /// <para>The authorization status. Valid values:</para>
+        /// <para><b>true****false</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

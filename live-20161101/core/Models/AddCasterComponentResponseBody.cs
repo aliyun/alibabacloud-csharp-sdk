@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class AddCasterComponentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The component ID. The value can be used as the value of a request parameter to query, modify, or delete a production studio.</para>
+        /// <para>The component ID. Use this ID to query, modify, or delete the component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21926b36-7dd2-4fde-ae25-51b5bc8e****</para>

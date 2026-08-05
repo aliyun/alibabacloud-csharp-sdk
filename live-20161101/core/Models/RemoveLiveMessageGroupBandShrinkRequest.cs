@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application.</para>
+        /// <para>The data center. This must be the same data center that you specified when you called <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>.</para>
         /// <remarks>
-        /// <para> Valid values: cn-shanghai and ap-southeast-1 (Singapore).</para>
+        /// <para>Valid values: \<c>cn-shanghai\\</c> (Shanghai) and \<c>ap-southeast-1\\</c> (Singapore).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The users whom you want to unmute.</para>
+        /// <para>The list of users to unmute. You can specify up to 30 users. Separate multiple user IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UnbannedUsers")]

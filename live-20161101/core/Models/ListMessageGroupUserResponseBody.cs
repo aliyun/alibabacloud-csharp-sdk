@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListMessageGroupUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-****-CB92E68F4CD8</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>Return results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListMessageGroupUserResponseBodyResult Result { get; set; }
         public class ListMessageGroupUserResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the current page is followed by another page. Valid values:</para>
+            /// <para>Indicates whether there is a next page. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The current page is followed by another page.</description></item>
-            /// <item><description>false: The current page is not followed by another page.</description></item>
+            /// <item><description>true: There is a next page.</description></item>
+            /// <item><description>false: There is no next page.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public bool? HasMore { get; set; }
 
             /// <summary>
-            /// <para>The total number of users in the message group.</para>
+            /// <para>Total number of message group users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? Total { get; set; }
 
             /// <summary>
-            /// <para>Details about the users.</para>
+            /// <para>User list.</para>
             /// </summary>
             [NameInMap("UserList")]
             [Validation(Required=false)]
             public List<ListMessageGroupUserResponseBodyResultUserList> UserList { get; set; }
             public class ListMessageGroupUserResponseBodyResultUserList : TeaModel {
                 /// <summary>
-                /// <para>The time when the user joined the message group. The value is a UTC timestamp.</para>
+                /// <para>UTC timestamp when the user joined the message group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12**45</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public long? JoinTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user.</para>
+                /// <para>User ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>de1<b>a0,hu</b>9</para>

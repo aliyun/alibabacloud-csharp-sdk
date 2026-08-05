@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeStreamLocationBlockResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of entries that meet the specified conditions.</para>
+        /// <para>The total number of entries that meet the specified criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The total number of pages.</para>
+        /// <para>The total number of pages returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

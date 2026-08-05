@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDelayConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs. You can specify an asterisk (\*) as the value to match all applications under the domain name.</para>
+        /// <para>The application name. You can use a wildcard character (\*) to represent all applications under the domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string App { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,12 +35,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream. You can specify an asterisk (\*) as the value to match all streams in the application.</para>
+        /// <para>The stream name. You can use a wildcard character (\*) to represent all streams under the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

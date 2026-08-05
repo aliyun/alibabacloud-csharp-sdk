@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The certificate type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>upload</b>: a custom certificate</description></item>
-        /// <item><description><b>cas</b>: a certificate that is purchased from Certificate Management Service</description></item>
-        /// <item><description><b>free</b>: a free certificate (for testing)</description></item>
+        /// <item><description><b>upload</b>: an uploaded certificate.</description></item>
+        /// <item><description><b>cas</b>: a certificate from SSL Certificates Service.</description></item>
+        /// <item><description><b>free</b>: a personal test certificate (Free Edition).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CertType { get; set; }
 
         /// <summary>
-        /// <para>The domain name that is secured by the certificate. The domain name uses <c>HTTPS</c>-based acceleration.</para>
+        /// <para>The accelerated domain name to which the certificate belongs. The domain name is of the <c>https</c> acceleration type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to check the certificate name for duplicates. A value of 1 indicates that the system does not perform the check and overwrites the information about the certificate that has the same name. Set the value to <b>1</b>.</para>
+        /// <para>Specifies whether to perform only a dry run, without actually executing the operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: sends a dry run request. If the request passes the check, the operation is not actually executed.</description></item>
+        /// <item><description>false (default): sends a normal request. If the request passes the check, the operation is actually executed.</description></item>
+        /// </list>
+        /// <para>The dry run checks parameter validity, RAM permissions, and resource status. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the operation is not actually executed.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>Ignores the check for duplicate certificate names and overwrites the existing certificate information with the same name. Fixed value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,9 +72,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The private key.</para>
+        /// <para>The private key content.</para>
         /// <remarks>
-        /// <para> This parameter is required only if you set the SSLProtocol parameter to on.</para>
+        /// <para>This parameter is required only when SSLProtocol is set to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -73,10 +85,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SSLPri { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the HTTPS certificate. Valid values:</para>
+        /// <para>Specifies whether to enable the HTTPS certificate. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>. If you set this parameter to <b>on</b>, you must also specify the SSLPub and SSLPri parameters.</description></item>
-        /// <item><description><b>off</b>. This is the default value.</description></item>
+        /// <item><description><b>on</b>: enabled. If the value is <b>on</b>, you must also set the SSLPub and SSLPri request parameters.</description></item>
+        /// <item><description><b>off</b> (default): disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -88,9 +100,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SSLProtocol { get; set; }
 
         /// <summary>
-        /// <para>The public key.</para>
+        /// <para>The public key content.</para>
         /// <remarks>
-        /// <para> This parameter is required only if you set the SSLProtocol parameter to on.</para>
+        /// <para>This parameter is required only when SSLProtocol is set to on.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

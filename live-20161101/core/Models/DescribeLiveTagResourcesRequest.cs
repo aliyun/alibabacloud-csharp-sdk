@@ -13,12 +13,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The N resources. The resources are domain names in this operation. Valid values of N: <b>1 to 50</b>.</para>
+        /// <para>The resource IDs. The resources are domain names for live streaming. You can query up to 50 resource IDs at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +35,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resources. Set the value to <b>DOMAIN</b>.</para>
+        /// <para>The type of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,14 +46,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The N tags.</para>
+        /// <para>A list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeLiveTagResourcesRequestTag> Tag { get; set; }
         public class DescribeLiveTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. Valid values of N: <b>1 to 20</b>.</para>
+            /// <para>The tag key. You can specify up to 20 tag keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -57,7 +63,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. Valid values of N: <b>1 to 20</b>.</para>
+            /// <para>The tag value. You can specify up to 20 tag values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>product</para>

@@ -24,12 +24,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The complete ingest URL or streaming URL. You can use the <a href="https://help.aliyun.com/document_detail/197400.html">URL generator</a> to generate a URL.</para>
+        /// <para>The complete ingest or streaming URL. You can use the <a href="https://help.aliyun.com/document_detail/197400.html">URL generator</a> to generate a URL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

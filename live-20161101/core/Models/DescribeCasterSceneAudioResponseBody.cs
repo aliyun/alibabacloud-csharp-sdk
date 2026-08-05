@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the production studio. You can specify the ID in a request to start a scene in the production studio.</para>
+        /// <para>The ID of the production studio. This ID can be used as a request parameter to start the production studio scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>97df6b7f-3490-47d2-ac50-88338765****</para>
@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The audio mode. By default, the audio follows video (AFV) mode is used. Valid values:</para>
+        /// <para>Specifies whether to enable audio follow. By default, audio follow is enabled.</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: the audio mixing mode</description></item>
-        /// <item><description><b>1</b>: the AFV mode</description></item>
+        /// <item><description><para><b>0</b>: mix mode.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: audio-follows-video mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

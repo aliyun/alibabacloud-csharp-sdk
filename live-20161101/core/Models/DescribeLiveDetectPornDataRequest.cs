@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveDetectPornDataRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The name of the application to which the stream belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveApp****</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string App { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain to query.</para>
+        /// <para>The streaming domain to query.</para>
         /// <list type="bullet">
-        /// <item><description>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</description></item>
-        /// <item><description>If you do not specify this parameter, the data of all domain names within your Alibaba Cloud account is returned.</description></item>
+        /// <item><description><para>You can query one or more domain names. To query multiple domain names, separate them with commas (,).</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify this parameter, the service returns the merged data for all streaming domains.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-10T09:00:00Z</para>
@@ -44,10 +46,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a quota of free image scanning is available. Valid values:</para>
+        /// <para>You have a daily free quota for image scans. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>free</b>: specifies that a quota of free image scanning is available.</description></item>
-        /// <item><description><b>charge</b>: specifies that a quota of free image scanning is not available and fees are charged.</description></item>
+        /// <item><description><para><b>free</b></para>
+        /// </description></item>
+        /// <item><description><para><b>charge</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the domain name resides.</para>
+        /// <para>The region where the domain name is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -71,18 +75,29 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The moderation scenario. Valid values:</para>
+        /// <para>The detection scenario. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>porn</b>: pornography detection. This is the default value.</description></item>
-        /// <item><description><b>terrorism</b>: terrorism detection</description></item>
-        /// <item><description><b>ad</b>: ad violation detection</description></item>
-        /// <item><description><b>live</b>: undesirable scene detection</description></item>
-        /// <item><description><b>logo</b>: logo detection</description></item>
+        /// <item><description><para><b>porn</b> (default): pornography detection.</para>
+        /// </description></item>
+        /// <item><description><para><b>terrorism</b>: terrorism and political content detection.</para>
+        /// </description></item>
+        /// <item><description><para><b>ad</b>: ad and text violation detection.</para>
+        /// </description></item>
+        /// <item><description><para><b>live</b>: undesirable live streaming scenario detection.</para>
+        /// </description></item>
+        /// <item><description><para><b>logo</b>: logo detection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,9 +108,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Scene { get; set; }
 
         /// <summary>
-        /// <para>The fields based on which data is grouped. Separate multiple fields with commas (,).</para>
+        /// <para>The list of grouping fields. Separate multiple fields with commas (,).</para>
         /// <remarks>
-        /// <para>If you leave the <b>SplitBy</b> parameter empty, only the <b>TimeStamp</b> and <b>Count</b> parameters are returned.</para>
+        /// <para>If you leave this parameter empty, the service returns only TimeStamp and Count.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -106,14 +121,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SplitBy { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>You can query data from the last 90 days.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>You can query data in the last 90 days.</para>
-        /// </description></item>
-        /// <item><description><para>The minimum data granularity is 5 minutes. If you do not specify this parameter, data in the last 24 hours is queried.</para>
-        /// </description></item>
+        /// <item><description>The minimum data granularity is 5 minutes. If you leave this parameter empty, the service queries data from the last 24 hours by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,7 +139,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream.</para>
+        /// <para>The stream name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveStream****</para>

@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The end of the time range during which the data was queried.</para>
+        /// <para>The end time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-10-10T21:00:00Z</para>
@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4B460F8B-993C-4F48-B98A-910811DEBFEB</para>
+        /// <para>4B460F8B-993C-4F48-B98A-91081******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range during which the data was queried.</para>
+        /// <para>The start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-10-10T20:00:00Z</para>

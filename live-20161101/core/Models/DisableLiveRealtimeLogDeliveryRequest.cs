@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DisableLiveRealtimeLogDeliveryRequest : TeaModel {
         /// <summary>
-        /// <para>The streaming domain for which you want to suspend real-time log delivery. Separate multiple streaming domains with commas (,).</para>
+        /// <para>The streaming domain for which to pause real-time log delivery. To specify multiple domain names, separate them with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +24,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

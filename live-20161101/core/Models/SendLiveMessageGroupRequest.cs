@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SendLiveMessageGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application in which the message is received.</para>
+        /// <para>The ID of the interactive messaging application that is used to receive the message.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The message body. The body can be up to 15 KB in length.</para>
+        /// <para>The message body. It can be up to 15 KB in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hello,group</para>
@@ -31,7 +31,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Body { get; set; }
 
         /// <summary>
-        /// <para>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</para>
+        /// <para>The data center, which must be the same as the data center specified in <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cn-shanghai: Shanghai</description></item>
+        /// <item><description>ap-southeast-1: Singapore</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the group that receives the message.</para>
         /// <remarks>
-        /// <para> Make sure that the specified group ID exists. Otherwise, a ResourceNotExist error is returned.</para>
+        /// <para>Make sure that the specified GroupId is available. Otherwise, a ResourceNotExist error is returned.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message, which is a unique identifier that can be used to delete the message. The ID can be up to 64 bytes in length and can contain letters and digits.</para>
+        /// <para>The unique identifier of the message. This parameter is used to delete the message. The ID can contain only letters and digits and can be up to 64 bytes in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>169830****</para>
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string MsgTid { get; set; }
 
         /// <summary>
-        /// <para>The message type.</para>
+        /// <para>The message type. The total number of message types sent within a single group cannot exceed 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? MsgType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable message caching. Valid values: true and false. Default value: false, which specifies that the message is cached to the recent message list of the group.</para>
+        /// <para>Specifies whether to disable message caching to the list of the latest messages in the group. Valid values: true and false. Default value: false, which indicates that the message is cached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -85,7 +89,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? NoCache { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable message storage. Valid values: true and false. Default value: false, which specifies that the message is stored for a validity period of 30 days. You can find the message in the response of the ListLiveMessageGroupMessages operation. If you do not want to store the message, set this parameter to true.</para>
+        /// <para>Specifies whether to disable message storage. Valid values: true and false. Default value: false, which indicates that the message is stored for a validity period of 30 days. You can find the message in the response of the ListLiveMessageGroupMessages operation. If you do not need to store the message, set this parameter to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -126,7 +130,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? StaticsIncrease { get; set; }
 
         /// <summary>
-        /// <para>The weight of the message. Default value: 1. A greater value indicates a higher priority. For a message of the highest priority, you can set the weight to 1000000.</para>
+        /// <para>The weight of the message. Default value: 1.</para>
+        /// <list type="bullet">
+        /// <item><description>For low-priority messages such as likes, you can set the weight to 1.</description></item>
+        /// <item><description>For regular text messages such as bullet comments, you can set the weight to 5.</description></item>
+        /// <item><description>For high-priority messages such as red envelopes and gifts, you can set the weight to 1000000.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SendMessageToGroupUsersShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application.</para>
+        /// <para>Interactive Messages application</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The message body. The value is a JSON string.</para>
+        /// <para>Message body in JSONString format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message group.</para>
+        /// <para>Message group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who performs the operation.</para>
+        /// <para>Operator user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,17 +54,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string OperatorUserId { get; set; }
 
         /// <summary>
-        /// <para>The list of users to receive the message.</para>
+        /// <para>User list.</para>
         /// </summary>
         [NameInMap("ReceiverIdList")]
         [Validation(Required=false)]
         public string ReceiverIdListShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the message requires Alibaba Cloud content moderation. Valid values:</para>
+        /// <para>Specifies whether the current message content requires Content Moderation by Alibaba Cloud. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: does not require content moderation.</description></item>
-        /// <item><description><b>false</b>: requires content moderation. This is the default value.</description></item>
+        /// <item><description><b>true</b>: Content Moderation is not required.</description></item>
+        /// <item><description><b>false</b> (default): Content Moderation is required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? SkipAudit { get; set; }
 
         /// <summary>
-        /// <para>The type of the message. A value that is less than or equal to 10000 specifies a system message. A value that is greater than 10000 specifies a custom message.</para>
+        /// <para>Message type. When the type field value is less than or equal to 10000, it indicates a system message. When the value is greater than 10000, it indicates a custom message.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

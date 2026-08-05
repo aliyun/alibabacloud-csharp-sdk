@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StartRtcCloudTranscodeShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the application to which the channel belongs. The ID can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-). The maximum length is 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the channel to which the user to be transcoded belongs. The ID can contain uppercase letters, lowercase letters, digits, underscores (_), and hyphens (-). The maximum length is 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The parameters for the input stream subscription.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InputParam")]
@@ -37,6 +40,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string InputParamShrink { get; set; }
 
         /// <summary>
+        /// <para>The idle timeout period in seconds. If a task cannot subscribe to the specified streamer\&quot;s stream and remains idle for longer than this period, the task automatically stops. The value must be an integer from 10 to 14,400. The default value is 300.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>600</para>
         /// </summary>
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? MaxIdleTime { get; set; }
 
         /// <summary>
+        /// <para>The parameters for the transcoded output.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OutputParams")]

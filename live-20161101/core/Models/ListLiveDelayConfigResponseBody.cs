@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of stream delay configurations.</para>
+        /// <para>The total number of stream delay configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

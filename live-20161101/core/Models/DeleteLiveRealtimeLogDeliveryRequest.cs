@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveRealtimeLogDeliveryRequest : TeaModel {
         /// <summary>
-        /// <para>The streaming domain.</para>
-        /// <para>Separate multiple streaming domains with commas (,).</para>
+        /// <para>The streaming domain name.</para>
+        /// <para>To specify multiple domain names, separate them with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore to which log entries are delivered.</para>
+        /// <para>The name of the SLS Logstore to which logs are delivered in real time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Log Service project that is used for real-time log delivery.</para>
+        /// <para>The name of the Simple Log Service (SLS) project to which logs are delivered in real time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Project { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Log Service project is deployed.</para>
+        /// <para>The region where the SLS project is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +58,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateLiveStreamTranscodeRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the stream belongs, and it cannot be modified.</para>
+        /// <para>The AppName of the live stream. This parameter cannot be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string App { get; set; }
 
         /// <summary>
-        /// <para>Streamer domain name, not modifiable.</para>
+        /// <para>The streaming domain. This parameter cannot be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,12 +32,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The encryption configuration. The value is a JSON string. The following fields are included in the syntax:</para>
+        /// <para>The encryption settings, formatted as a JSON string.</para>
         /// <list type="bullet">
-        /// <item><description>EncryptType: the type of the encryption. Set the value to <b>aliyun</b>.</description></item>
-        /// <item><description>KmsKeyID: the ID of the CMK in KMS.</description></item>
-        /// <item><description>KmsKeyExpireInterval: the validity period of the CMK. Valid values: <b>60 to 3600</b>. Unit: seconds.</description></item>
+        /// <item><description><para><b>EncryptType</b>: The encryption type. Set the value to aliyun.</para>
+        /// </description></item>
+        /// <item><description><para><b>KmsKeyID</b>: The ID of the customer master key (CMK) in Key Management Service (KMS).</para>
+        /// </description></item>
+        /// <item><description><para><b>KmsKeyExpireInterval</b>: The key rotation period. Unit: seconds. Valid values: <b>60 to 3600.</b></para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>When you use Digital Rights Management (DRM) encryption, you cannot modify <b>KmsKeyID</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;EncryptType&quot;: &quot;aliyun&quot;, &quot;KmsKeyID&quot;:&quot;afce5722-81d2-43c3-9930-7601da11****&quot;,&quot;KmsKeyExpireInterval&quot;:&quot;3600&quot;}</para>
@@ -47,10 +53,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EncryptParameters { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable triggered transcoding. Valid values:</para>
+        /// <para>Specifies whether to enable on-demand transcoding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b>: enables triggered transcoding.</description></item>
-        /// <item><description><b>no</b>: disables triggered transcoding.</description></item>
+        /// <item><description><para><b>yes</b>: Transcoding only starts when the first viewer requests this transcoded stream.</para>
+        /// </description></item>
+        /// <item><description><para><b>no</b>: Transcoding starts immediately after the stream is published.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,12 +72,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Transcoding template, not modifiable.</para>
+        /// <para>The transcoding template name. This parameter cannot be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

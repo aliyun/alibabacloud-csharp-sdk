@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current page is followed by a page.</para>
+        /// <para>Indicates whether there is a next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<ListEventSubEventResponseBodyLogs> Logs { get; set; }
         public class ListEventSubEventResponseBodyLogs : TeaModel {
             /// <summary>
-            /// <para>The application ID.</para>
+            /// <para>The ID of the subscribed application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9qb1****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The HTTP status code. A value of 200 indicates that the callback was successful.</para>
+            /// <para>The error code. A value of 200 indicates a successful callback.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? Cost { get; set; }
 
             /// <summary>
-            /// <para>The details about the callback.</para>
+            /// <para>The callback content details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;MsgId\&quot;:\&quot;875d5266cbabb1834cc84a105cf68454\&quot;,\&quot;MsgTimestamp\&quot;:1697545591,\&quot;SubscribeId\&quot;:\&quot;09be0d2254cb5a89f4cbd86403ec5343\&quot;,\&quot;AppId\&quot;:\&quot;xxx\&quot;,\&quot;ChannelId\&quot;:\&quot;9099\&quot;,\&quot;Contents\&quot;:[{\&quot;Event\&quot;:\&quot;UserEvent\&quot;,\&quot;UserEvent\&quot;:{\&quot;UserId\&quot;:\&quot;linux_test\&quot;,\&quot;EventTag\&quot;:\&quot;Leave\&quot;,\&quot;SessionId\&quot;:\&quot;je7y2sBZJZQ0VBJZrh4LnBkxvGH2WyVs\&quot;,\&quot;Timestamp\&quot;:1697545591,\&quot;ChannelProfile\&quot;:\&quot;interactive_live\&quot;,\&quot;US\&quot;:5068748604047364,\&quot;Reason\&quot;:1,\&quot;Role\&quot;:1,\&quot;TerminalType\&quot;:6,\&quot;UserType\&quot;:2}}]}</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Data { get; set; }
 
             /// <summary>
-            /// <para>The ID of the callback record.</para>
+            /// <para>The callback record ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>875d5266cbabb1834cc84a105cf6****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string MessageId { get; set; }
 
             /// <summary>
-            /// <para>The subscription ID.</para>
+            /// <para>The subscription event ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ad53276431c****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string SubId { get; set; }
 
             /// <summary>
-            /// <para>The time when the callback was generated.</para>
+            /// <para>The time when the callback record was generated. The time is in the UTC+8 time zone. Format: yyyy-MM-dd hh:mm:ss.SSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-17 20:26:31.988</para>

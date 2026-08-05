@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CancelMuteGroupUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-****-CB92E68F4CD8</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>Return result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CancelMuteGroupUserResponseBodyResult Result { get; set; }
         public class CancelMuteGroupUserResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the members are unmuted. Valid values:</para>
+            /// <para>Whether unmuting is successful, values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The members are unmuted.</description></item>
-            /// <item><description>false: The members failed to be unmuted.</description></item>
+            /// <item><description>true: Successful.</description></item>
+            /// <item><description>false: Unsuccessful.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateRtcMPUEventSubRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The ID of the application to subscribe to. You can view your application IDs by navigating to <b>ApsaraVideo Live &gt; Live+ &gt; ApsaraVideo Real-time Communication &gt; Application Management</b>. If no application exists, create one by clicking <b>Create Application</b>.</para>
         /// <remarks>
-        /// <para>The ID can be up to 64 characters in length and can contain letters, digits, underscores, and hyphens (-).</para>
+        /// <para>The application ID consists of uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The callback URL.</para>
+        /// <para>The callback URL. For the URL format, refer to the callback content specifications below.</para>
         /// <remarks>
-        /// <para>The callback URL can be up to 2,083 characters in length. You can use headers such as HTTP and HTTPS in callback URLs. The URL can contain letters, digits, and the following special characters: - _ ? % = # . / +</para>
+        /// <para>The callback URL protocol must be HTTP or HTTPS. The URL can contain only the following characters: a-z, A-Z, 0-9, -, _, ?, %, =, #, ., /, and +. The URL cannot exceed 2083 characters.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,16 +38,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The ID of the channel to which you want to send mixed-stream relay event callbacks. Separate multiple channel IDs with commas (,).</para>
+        /// <para>The channel IDs of the stream mixing tasks for which you want to receive callbacks. You can specify multiple channel IDs separated by commas (,).</para>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If you leave this parameter empty, callbacks for all stream mixing and relaying tasks under the specified AppId are received by default.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you leave this parameter empty, you are subscribed to mixed-stream relay events of all channels in the application.</para>
-        /// </description></item>
-        /// <item><description><para>You cannot specify duplicate channel IDs. You can specify up to 20 channel IDs in each call.</para>
-        /// </description></item>
-        /// <item><description><para>The ID can be up to 64 characters in length and contain letters, digits, underscores (_), and hyphens (-).</para>
-        /// </description></item>
+        /// <item><description>When specifying multiple channel IDs, do not include duplicates. You can specify up to 20 channel IDs at a time.</description></item>
+        /// <item><description>Each channel ID consists of uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

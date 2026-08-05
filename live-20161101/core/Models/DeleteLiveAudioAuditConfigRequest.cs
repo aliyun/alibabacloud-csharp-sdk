@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DeleteLiveAudioAuditConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs.</para>
+        /// <para>The AppName of the live stream.</para>
         /// <remarks>
-        /// <para> A value of asterisk (\*) specifies all applications under the domain name.</para>
+        /// <para>Set AppName to an asterisk (\*) to match all AppNames under the domain.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,14 +38,20 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream.</para>
+        /// <para>The stream name.</para>
         /// <remarks>
-        /// <para> A value of asterisk (\*) specifies all live streams in the application.</para>
+        /// <para>Set StreamName to an asterisk (\*) to match all streams in the AppName.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

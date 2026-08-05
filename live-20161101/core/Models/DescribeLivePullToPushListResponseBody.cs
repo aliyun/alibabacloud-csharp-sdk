@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLivePullToPushListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>Page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Number of query records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a05e6b15-15af-405b-a4a2-0152245*****</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tasks.</para>
+        /// <para>Task information list.</para>
         /// </summary>
         [NameInMap("TaskList")]
         [Validation(Required=false)]
         public List<DescribeLivePullToPushListResponseBodyTaskList> TaskList { get; set; }
         public class DescribeLivePullToPushListResponseBodyTaskList : TeaModel {
             /// <summary>
-            /// <para>The current file index.</para>
+            /// <para>Currently effective playlist sequence offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? CurrentFileIndex { get; set; }
 
             /// <summary>
-            /// <para>The current offset for video playback.</para>
+            /// <para>Currently effective video playback offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,13 +67,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? CurrentOffset { get; set; }
 
             /// <summary>
-            /// <para>The reason why the task was exited. Valid values:</para>
+            /// <para>Task exit reason:</para>
             /// <list type="bullet">
-            /// <item><description>TriggerByUser: You proactively ended the task.</description></item>
-            /// <item><description>OverEndTime: The specified end time was exceeded.</description></item>
+            /// <item><description>TriggerByUser: Actively ended by user.</description></item>
+            /// <item><description>OverEndTime: Exceeded the preset end time.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is returned only if the task status is exited.</para>
+            /// <para>Only returned when the task is in exited state.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -84,9 +84,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string TaskExitReason { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was exited. The value is a Unix timestamp in seconds.</para>
+            /// <para>Task exit time, Unix timestamp in seconds.</para>
             /// <remarks>
-            /// <para> This parameter is returned only if the task status is exited.</para>
+            /// <para>Only returned when the task is in exited state.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? TaskExitTime { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>Task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fb0d4ac7-c7e3-4978-9743-0bf2f6e8****</para>
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The information about the task.</para>
+            /// <para>Task information.</para>
             /// </summary>
             [NameInMap("TaskInfo")]
             [Validation(Required=false)]
             public DescribeLivePullToPushListResponseBodyTaskListTaskInfo TaskInfo { get; set; }
             public class DescribeLivePullToPushListResponseBodyTaskListTaskInfo : TeaModel {
                 /// <summary>
-                /// <para>The HTTP callback URL.</para>
+                /// <para>HTTP callback URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hahaha.com</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string CallbackURL { get; set; }
 
                 /// <summary>
-                /// <para>The destination URL to which the stream is relayed.</para>
+                /// <para>Destination push stream URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rtmp://qd.push.lgg.alivecdn.com/testhsc/streamhsc?live_rtmp_*******</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string DstUrl { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>Task end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-12-30T14:30:00Z</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The file index, which indicates the sequence of the file where the playback starts.</para>
+                /// <para>File index, starts playback from the nth file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -154,15 +154,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public int? FileIndex { get; set; }
 
                 /// <summary>
-                /// <para>The offset of the position where the system starts to read the video resource. Unit: seconds. Valid values: positive numbers.</para>
+                /// <para>Start offset, the starting offset value of the video file. Unit: seconds. Value: greater than 0.</para>
                 /// <remarks>
-                /// </remarks>
                 /// <list type="bullet">
-                /// <item><description><para>This parameter indicates an offset from the first frame.</para>
-                /// </description></item>
-                /// <item><description><para>This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</para>
-                /// </description></item>
+                /// <item><description>Indicates the position to start reading from, relative to the first frame.</description></item>
+                /// <item><description>Only valid for VOD resources or video files.</description></item>
                 /// </list>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -172,14 +170,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public int? Offset { get; set; }
 
                 /// <summary>
-                /// <para>The number of playbacks after the first playback is complete. Valid values:</para>
+                /// <para>Number of times to repeat playback after completion. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0 (default): specifies that the video list is played only once.</description></item>
-                /// <item><description>\-1: specifies that the video list is played in loop mode.</description></item>
-                /// <item><description>Positive integer: specifies the number of times the video list repeats after the first playback is complete.</description></item>
+                /// <item><description>0 (default): No repeat playback.</description></item>
+                /// <item><description>-1: Loop indefinitely.</description></item>
+                /// <item><description>Other positive integers: Number of times to repeat playback after completion.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> This parameter is applicable to only video resources from ApsaraVideo VOD or a third party.</para>
+                /// <para>This parameter only applies to VOD or third-party video streams.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -190,7 +188,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public int? RepeatNumber { get; set; }
 
                 /// <summary>
-                /// <para>The number of retries allowed.</para>
+                /// <para>Number of retries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -200,7 +198,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public int? RetryCount { get; set; }
 
                 /// <summary>
-                /// <para>The retry interval. Unit: seconds.</para>
+                /// <para>Retry interval, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -210,7 +208,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public int? RetryInterval { get; set; }
 
                 /// <summary>
-                /// <para>The protocol of the source stream.</para>
+                /// <para>Source stream protocol name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>flv</para>
@@ -220,11 +218,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string SourceProtocol { get; set; }
 
                 /// <summary>
-                /// <para>The type of the source stream. Valid values:</para>
+                /// <para>Source stream type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>live: a live stream</description></item>
-                /// <item><description>vod: a list of ApsaraVideo VOD resources</description></item>
-                /// <item><description>url: a list of video resources from a third party</description></item>
+                /// <item><description>live: Live stream.</description></item>
+                /// <item><description>vod: Alibaba Cloud Video on Demand resource.</description></item>
+                /// <item><description>url: Third-party video file resource.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -235,14 +233,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The source URLs.</para>
+                /// <para>Source stream URL addresses.</para>
                 /// </summary>
                 [NameInMap("SourceUrls")]
                 [Validation(Required=false)]
                 public List<string> SourceUrls { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>Task start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-12-04T09:16:00Z</para>
@@ -252,7 +250,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The task ID.</para>
+                /// <para>Task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fb0d4ac7-c7e3-4978-9743-0bf2f6e8****</para>
@@ -262,7 +260,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
-                /// <para>The task name.</para>
+                /// <para>Task name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>taskname</para>
@@ -274,14 +272,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             }
 
             /// <summary>
-            /// <para>The reason why the task was stopped.</para>
+            /// <para>Reason for task stopping:</para>
             /// <list type="bullet">
-            /// <item><description>PullStreamFailed: An exception occurred while pulling the source stream. A retry is in progress.</description></item>
-            /// <item><description>PushStreamFailed: An exception occurred while ingesting the stream. A retry is in progress.</description></item>
-            /// <item><description>UnknownError: An unknown exception occurred.</description></item>
+            /// <item><description>PullStreamFailed: Source stream pulling exception, retrying.</description></item>
+            /// <item><description>PushStreamFailed: Destination stream pushing exception, retrying.</description></item>
+            /// <item><description>UnknownError: Unknown exception.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is returned only if the task status is stopped.</para>
+            /// <para>Only returned when the task is in stopped state.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -292,13 +290,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string TaskInvalidReason { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
+            /// <para>Current task status:</para>
             /// <list type="bullet">
-            /// <item><description>0: not started.</description></item>
-            /// <item><description>1: running. Stream pulling and stream relay are normal.</description></item>
-            /// <item><description>2: abnormal.</description></item>
-            /// <item><description>3: stopped. It may be because exceptions occur during stream pulling or stream relay or you proactively call the StopLivePullToPush operation.</description></item>
-            /// <item><description>\-1: exited.</description></item>
+            /// <item><description>0: Not started (start time has not been reached).</description></item>
+            /// <item><description>1: Running normally (stream pulling and pushing are normal).</description></item>
+            /// <item><description>2: Running abnormally.</description></item>
+            /// <item><description>3: Stopped (stream pulling or pushing is abnormal, or the task was actively stopped by calling the API).</description></item>
+            /// <item><description>-1: Exited.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -311,7 +309,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>Total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

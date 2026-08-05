@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetLiveStreamPreloadTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The acceleration region where you want to prefetch the live content. Valid values:</para>
+        /// <para>The prefetch area. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>domestic: regions in the Chinese mainland.</description></item>
-        /// <item><description>overseas: regions outside the Chinese mainland.</description></item>
-        /// <item><description>global: regions in and outside the Chinese mainland.</description></item>
+        /// <item><description>domestic: the Chinese mainland.</description></item>
+        /// <item><description>overseas: outside the Chinese mainland, including Hong Kong (China), Macao (China), and Taiwan (China).</description></item>
+        /// <item><description>global: global acceleration.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, the acceleration region configured for the domain name is used.</para>
+        /// <para>If you do not specify this parameter, the default prefetch area is the acceleration region configured for your domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>domestic</para>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Area { get; set; }
 
         /// <summary>
-        /// <para>The streaming domain name.</para>
+        /// <para>The streaming domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The streaming URL. You can specify up to 100 streaming URLs in a request. Separate multiple streaming URLs with commas (,).</para>
+        /// <para>The live stream URLs. You can specify multiple URLs separated by commas (,). A maximum of 100 URLs can be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PlayUrl")]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string PlayUrl { get; set; }
 
         /// <summary>
-        /// <para>The end time of the prefetch task. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-06-30T19:00:00Z. The interval between the start time and end time cannot exceed 6 hours.</para>
+        /// <para>The end time of the prefetch task in UTC. Example: 2016-06-30T19:00:00Z. The interval between EndTime and StartTime cannot exceed 6 hours.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-06-30T19:00:00Z</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string PreloadedEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the prefetch task. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-06-29T19:00:00Z. If you do not specify this parameter, the prefetch task runs for 1 hour by default.</para>
+        /// <para>The start time of the prefetch task in UTC. Example: 2016-06-29T19:00:00Z. If you do not specify this parameter, the default prefetch duration is 1 hour.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2016-06-29T19:00:00Z</para>
@@ -68,6 +68,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string PreloadedStartTime { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

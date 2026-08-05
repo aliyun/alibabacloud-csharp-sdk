@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SendLikeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application.</para>
+        /// <para>Interactive Messages application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The mode in which system messages are broadcasted. Valid values:</para>
+        /// <para>System message diffusion type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: specifies that system messages are not broadcasted. This is the default value.</description></item>
-        /// <item><description>1: specifies that system messages are broadcasted to specified users.</description></item>
-        /// <item><description>2: specifies that system messages are broadcasted to the message group.</description></item>
+        /// <item><description>0: No diffusion.</description></item>
+        /// <item><description>1: Diffusion to specified users.</description></item>
+        /// <item><description>2: Diffusion to a group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? BroadCastType { get; set; }
 
         /// <summary>
-        /// <para>The number of likes.</para>
+        /// <para>Number of likes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Count { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message group.</para>
+        /// <para>Message group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who performs the operation.</para>
+        /// <para>Operator user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de1**a0</para>

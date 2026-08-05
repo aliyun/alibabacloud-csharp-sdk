@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The ID of the interactive messaging application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ab6b5740****</para>
+        /// <para>demo</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The signature of the interactive messaging application. It is required by the interactive messaging SDK.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>H4sIAAAAAAAE/wBwAI//zguHB+lYCilkv7diSkk4GhHQAvMXs5tWyI+I09+uEBiB5sqa28ycJSJFmsd50Mhz8nDrvvqmti+fVaNLC5CMgLvNIy48v1aV9x74LRNFN0+Dxd2Al51xuDNkEIDaEwjqfyxscTXjSr0iQjHu2WgkpQAAAP//AQAA//+yR5XCc****</para>
+        /// <hr>
         /// </summary>
         [NameInMap("AppSign")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6AA1AE11-EA78-1FD4-A966-6BA843073F6D</para>
+        /// <para>6AA1AE11-EA78-1FD4-A966-6BA84307****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

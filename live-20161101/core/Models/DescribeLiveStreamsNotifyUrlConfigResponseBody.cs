@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>Exception event callback URL.</para>
+            /// <para>The callback URL for receiving notifications about exception events.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://4a7e5f08.r37.cpolar.top/live/Record/call-back/streamException">https://4a7e5f08.r37.cpolar.top/live/Record/call-back/streamException</a></para>
@@ -47,10 +47,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string NotifyAuthKey { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether callback authentication is enabled. Valid values:</para>
+            /// <para>Indicates whether authentication is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>yes</description></item>
-            /// <item><description>no</description></item>
+            /// <item><description><para><b>yes</b></para>
+            /// </description></item>
+            /// <item><description><para><b>no</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string NotifyReqAuth { get; set; }
 
             /// <summary>
-            /// <para>The callback URL.</para>
+            /// <para>The callback URL for receiving live stream information.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveRealtimeLogAuthorizedRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter has no practical significance.</para>
+        /// <para>This parameter is not used.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>none</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("LiveOpenapiReserve")]
         [Validation(Required=false)]
@@ -23,6 +23,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

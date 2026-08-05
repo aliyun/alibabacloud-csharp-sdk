@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveRealtimeLogDeliveryDomainsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Logstore to which log entries are delivered.</para>
+        /// <para>The name of the SLS Logstore for real-time log delivery.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Log Service project that is used for real-time log delivery.</para>
+        /// <para>The name of the SLS project for real-time log delivery.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Project { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Log Service project is deployed.</para>
+        /// <para>The region of the SLS project for real-time log delivery.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +46,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

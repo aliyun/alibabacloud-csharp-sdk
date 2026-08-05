@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class OpenLiveShiftRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs. You can specify an asterisk (\*) as the value to match all applications under the domain name. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</para>
+        /// <para>The name of the application. The wildcard character (\<em>) is supported. An asterisk (\</em>) represents all applications under the specified domain name. For more information, see <a href="https://help.aliyun.com/document_detail/197397.html">Stream management</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveApp****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The streaming domain.</para>
+        /// <para>The streaming domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The length of a TS segment for HTTP Live Streaming (HLS). Unit: seconds.</para>
+        /// <para>The duration of an HTTP Live Streaming (HLS) transport stream (TS) segment. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -41,10 +41,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable time shifting for the transcoded stream. Valid values:</para>
+        /// <para>Specifies whether to enable time shifting for transcoded streams. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: disables time shifting for the transcoded stream.</description></item>
-        /// <item><description><b>false</b>: enables time shifting for the transcoded stream.</description></item>
+        /// <item><description><para><b>true</b>: Time shifting is disabled for transcoded streams.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Time shifting is enabled for transcoded streams.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 
@@ -59,12 +61,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the live stream. You can specify an asterisk (\*) as the value to match all streams in the application. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</para>
+        /// <para>The name of the stream. The wildcard character (\<em>) is supported. An asterisk (\</em>) represents all streams under the specified application. For more information, see <a href="https://help.aliyun.com/document_detail/197397.html">Stream management</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liveStream****</para>
@@ -74,7 +82,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamName { get; set; }
 
         /// <summary>
-        /// <para>The duration for which data is retained. Default value: 7. Unit: day.</para>
+        /// <para>The data retention period. The default value is 7. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

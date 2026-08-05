@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The task name. The name can contain letters, digits, hyphens (-), and underscores (_). The name must be 255 characters in length.</para>
+        /// <para>The job name. The name can contain Chinese characters, letters, digits, hyphens (-), and underscores (_). The name can be up to 255 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +35,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

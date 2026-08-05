@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveMessageGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of the group administrators.</para>
+        /// <para>The list of administrators.</para>
         /// </summary>
         [NameInMap("AdminList")]
         [Validation(Required=false)]
         public List<string> AdminList { get; set; }
 
         /// <summary>
-        /// <para>The time when the group was created. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The creation time. This value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1698305471</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? Createtime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the group creator.</para>
+        /// <para>The creator ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>uid1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CreatorId { get; set; }
 
         /// <summary>
-        /// <para>The time when the group was deleted. This parameter is returned only if the group was deleted.</para>
+        /// <para>The deletion time. This parameter is returned only when the group has been deleted. This value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1698299827</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? Deletatime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the group was deleted.</para>
+        /// <para>Indicates whether the group has been deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? Delete { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who deleted the group. This parameter is returned only if the group was deleted.</para>
+        /// <para>The user who deleted the group. This parameter is returned only when the group has been deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>uid1</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>grouptest1</para>
+        /// <para>grouptest</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>Additional information about the group.</para>
+        /// <para>The extended information of the group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testgroupinfo</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupInfo { get; set; }
 
         /// <summary>
-        /// <para>The name of the group.</para>
+        /// <para>The group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mytestgroup</para>
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The categorized message statistics. This parameter is returned only if the group exists.</para>
+        /// <para>The message count statistics by category. This parameter is returned only when the group exists.</para>
         /// </summary>
         [NameInMap("MsgAmount")]
         [Validation(Required=false)]
         public Dictionary<string, long?> MsgAmount { get; set; }
 
         /// <summary>
-        /// <para>The number of online users in the group. This parameter is returned only if the group exists.</para>
+        /// <para>The number of online users in the group. This parameter is returned only when the group exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -117,17 +117,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1815A27D-BAE2-10E6-89FD-D477951C67C7</para>
+        /// <para>1815A27D-BAE2-10E6-89FD-D477951C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the group is a super group. Valid values:</para>
+        /// <para>Indicates whether the group is a super large group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True</description></item>
-        /// <item><description>False</description></item>
+        /// <item><description>True: The group is a super large group.</description></item>
+        /// <item><description>False: The group is not a super large group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public bool? SuperLargeGroup { get; set; }
 
         /// <summary>
-        /// <para>The total number of sessions. This parameter is returned only if the group exists.</para>
+        /// <para>The total number of sessions. This parameter is returned only when the group exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

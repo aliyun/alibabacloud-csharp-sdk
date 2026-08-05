@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateMessageGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application.</para>
+        /// <para>The interactive message application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The extended field.</para>
+        /// <para>The extension field.</para>
         /// </summary>
         [NameInMap("Extension")]
         [Validation(Required=false)]
         public Dictionary<string, string> Extension { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message group.</para>
+        /// <para>The message group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,22 +10,34 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ModifyCasterComponentRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the subtitle component. The value must be a JSON string. This parameter contains the following fields:</para>
+        /// <para>The properties of the caption layer. The value is a JSON string. The following properties are supported:</para>
         /// <remarks>
-        /// <para> This parameter is required if you set ComponentType to caption.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>This parameter is required if you set ComponentType to caption.</para>
         /// <list type="bullet">
-        /// <item><description><b>SizeNormalized</b>: the normalized value of the font size. The value of this field equals the font size divided by the output height. Valid values: <c>0 to 1</c>. The maximum font size is 1,024, even if the font size calculated based on this field is greater than 1,024.</description></item>
-        /// <item><description><b>BorderWidthNormalized</b>: the normalized value of the border width. The value of this field equals the border width divided by the font size. Valid values: <c>0 to 1</c>. Default value: 0. The maximum border width is 16, even if the border width calculated based on this field is greater than 16.</description></item>
-        /// <item><description><b>FontName</b>: the font name. Default value: KaiTi. For more information about the valid values, see <b>Fonts used in a production studio</b>.</description></item>
-        /// <item><description><b>BorderColor</b>: the color of the text border. Valid values: 0x000000 to 0xffffff. By default, this parameter is left empty. In this case, the color of the text border is transparent.</description></item>
-        /// <item><description><b>LocationId</b>: the channel ID of the source subtitles.</description></item>
-        /// <item><description><b>SourceLan</b>: the source language of the subtitles in the video. Valid values: en (English), cn (Chinese), es (Spanish), and ru (Russian). Default value: cn.</description></item>
-        /// <item><description><b>TargetLan</b>: the target language of the subtitles in the video. If you do not specify this field, speech recognition is used. If you specify this field, translation is used. Valid values: en (English), cn (Chinese), es (Spanish), and ru (Russian).</description></item>
-        /// <item><description><b>ShowSourceLan</b>: specifies whether to display the source language. A value of true specifies that the source language is displayed. A value of false specifies that the source language is not displayed. Default value: false.</description></item>
-        /// <item><description><b>Truncation</b>: specifies whether to allow subtitle truncation. A value of true specifies that the subtitles can be truncated. A value of false specifies that the subtitles cannot be truncated. Default value: false.</description></item>
-        /// <item><description><b>SourceLanPerLineWordCount</b>: the number of words displayed in each line of the source language. This field takes effect only if you set Truncation to true. Default value: 20.</description></item>
-        /// <item><description><b>TargetLanPerLineWordCount</b>: the number of words displayed in each line of the target language. This field takes effect only if you set Truncation to true. Default value: 20.</description></item>
+        /// <item><description><para><b>SizeNormalized</b>: The normalized font size. The font size is calculated using the formula: font_size/output_height. The value must be in the range of <c>[0,1]</c>. If the calculated font size is greater than 1024, the value 1024 is used.</para>
+        /// </description></item>
+        /// <item><description><para><b>BorderWidthNormalized</b>: The normalized width of the text border. The normalized width is calculated based on the font size using the formula: BorderWidth/FontSize. The value must be in the range of <c>[0,1]</c>. If the calculated value is greater than 16, the value 16 is used. Default value: 0.</para>
+        /// </description></item>
+        /// <item><description><para><b>FontName</b>: The font name. For more information about valid values, see <b>Production studio fonts</b>. Default value: KaiTi.</para>
+        /// </description></item>
+        /// <item><description><para><b>BorderColor</b>: The color of the text border. Valid values are from 0x000000 to 0xffffff. The default value is an empty string, which indicates that this parameter is not used.</para>
+        /// </description></item>
+        /// <item><description><para><b>LocationId</b>: The channel ID of the translation source.</para>
+        /// </description></item>
+        /// <item><description><para><b>SourceLan</b>: The source language of the audio in the video source. Valid values are en (English), cn (Chinese), es (Spanish), and ru (Russian). Default value: cn.</para>
+        /// </description></item>
+        /// <item><description><para><b>TargetLan</b>: The target language for translation. If you do not set this parameter, only speech recognition is performed. If you set this parameter, translation is also performed. Valid values are en (English), cn (Chinese), es (Spanish), and ru (Russian).</para>
+        /// </description></item>
+        /// <item><description><para><b>ShowSourceLan</b>: Specifies whether to display the source language. Valid values are true (display) and false (do not display). Default value: false.</para>
+        /// </description></item>
+        /// <item><description><para><b>Truncation</b>: Specifies whether to truncate the caption. Valid values are true (truncate) and false (do not truncate). Default value: false.</para>
+        /// </description></item>
+        /// <item><description><para><b>SourceLanPerLineWordCount</b>: The number of words per line for the source language. This parameter takes effect only if Truncation is set to true. Default value: 20.</para>
+        /// </description></item>
+        /// <item><description><para><b>TargetLanPerLineWordCount</b>: The number of words per line for the target language. This parameter takes effect only if Truncation is set to true. Default value: 20.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,11 +50,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The ID of the production studio.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>The ID is returned after you call the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation.</para>
+        /// </description></item>
+        /// <item><description><para>If you create a production studio in the LIVE console, go to the <b>LIVE</b> &gt; <b>Production Studio</b> &gt; <b>Cloud Production Studio</b> page to find the ID.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The name of the production studio in the list on the Cloud Production Studio page is the production studio ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +68,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the component. If the component was added by calling the <a href="https://help.aliyun.com/document_detail/2848030.html">AddCasterComponent</a> operation, check the value of the response parameter ComponentId to obtain the ID.</para>
+        /// <para>The component ID. The ID is returned after you call the <a href="https://help.aliyun.com/document_detail/2848030.html">AddCasterComponent</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,12 +79,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ComponentId { get; set; }
 
         /// <summary>
-        /// <para>The information about the component layer, such as the size and layout, The value must be a JSON string. This parameter contains the following fields:</para>
+        /// <para>The size and layout of the layer. The value is a JSON string. The following properties are supported:</para>
         /// <list type="bullet">
-        /// <item><description><b>HeightNormalized</b>: the normalized value of the height of the component layer.</description></item>
-        /// <item><description><b>WidthNormalized</b>: the normalized value of the width of the component layer.</description></item>
-        /// <item><description><b>PositionNormalized</b>: the normalized value of the position of the component layer.</description></item>
-        /// <item><description><b>PositionRefer</b>: the reference coordinates of the component layer.</description></item>
+        /// <item><description><para><b>HeightNormalized</b>: The normalized height.</para>
+        /// </description></item>
+        /// <item><description><para><b>WidthNormalized</b>: The normalized width.</para>
+        /// </description></item>
+        /// <item><description><para><b>PositionNormalized</b>: The normalized position of the layer.</para>
+        /// </description></item>
+        /// <item><description><para><b>PositionRefer</b>: The reference point for the position of the layer.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,7 +99,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ComponentLayer { get; set; }
 
         /// <summary>
-        /// <para>The name of the component. By default, the name is the ID of the component.</para>
+        /// <para>The name of the component. The default value is the component ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text01</para>
@@ -93,9 +111,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The type of the component. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>text</b>: text component. The TextLayerContent parameter is required if you set ComponentType to text.</description></item>
-        /// <item><description><b>image</b>: image component. The ImageLayerContent parameter is required if you set ComponentType to image.</description></item>
-        /// <item><description><b>caption</b>: subtitle component. The CaptionLayerContent parameter is required if you set ComponentType to caption.</description></item>
+        /// <item><description><para><b>text</b>: A text component. The TextLayerContent parameter is required only if you set ComponentType to text.</para>
+        /// </description></item>
+        /// <item><description><para><b>image</b>: An image component. The ImageLayerContent parameter is required only if you set ComponentType to image.</para>
+        /// </description></item>
+        /// <item><description><para><b>caption</b>: A translation caption component. The CaptionLayerContent parameter is required only if you set ComponentType to caption.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,11 +127,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ComponentType { get; set; }
 
         /// <summary>
-        /// <para>The display effect for the component. Valid values:</para>
+        /// <para>The display effect of the component. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>none</b> (default)</description></item>
-        /// <item><description><b>animateH</b>: horizontal scrolling</description></item>
-        /// <item><description><b>animateV</b>: vertical scrolling</description></item>
+        /// <item><description><para><b>none</b> (default): no effect.</para>
+        /// </description></item>
+        /// <item><description><para><b>animateH</b>: horizontal scroll.</para>
+        /// </description></item>
+        /// <item><description><para><b>animateV</b>: vertical scroll.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,11 +145,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Effect { get; set; }
 
         /// <summary>
-        /// <para>The information about the image component. The value must be a JSON string.</para>
+        /// <para>The properties of the image layer. The value is a JSON string.</para>
         /// <remarks>
-        /// <para> This parameter is required if you set ComponentType to image.</para>
+        /// <para>Notice: </para>
         /// </remarks>
-        /// <para>The MaterialId field specifies the ID of the material from the media asset library.</para>
+        /// <para>This parameter is required if you set ComponentType to image.</para>
+        /// <para>MaterialId is the ID of the material in the media asset library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;MaterialId&quot;:&quot;6cf724c6ebfd4a59b5b3cec6f10d5ecf&quot;}</para>
@@ -138,22 +163,35 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The information about the text component. The value must be a JSON string. This parameter contains the following fields:</para>
+        /// <para>The properties of the text layer. The value is a JSON string. The following properties are supported:</para>
         /// <remarks>
-        /// <para> This parameter is required if you set ComponentType to text.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>This parameter is required if you set ComponentType to text.</para>
         /// <list type="bullet">
-        /// <item><description><b>SizeNormalized</b>: the normalized value of the font size. The value of this field equals the font size divided by the output height. Valid values: <c>0 to 1</c>. The maximum font size is 1,024, even if the font size calculated based on this field is greater than 1,024.</description></item>
-        /// <item><description><b>BorderWidthNormalized</b>: the normalized value of the border width. The value of this field equals the border width divided by the font size. Valid values: <c>0 to 1</c>. Default value: 0. The maximum border width is 16, even if the border width calculated based on this field is greater than 16.</description></item>
-        /// <item><description><b>FontName</b>: the font name. Default value: KaiTi. For more information about the valid values, see <b>Fonts used in a production studio</b>.</description></item>
-        /// <item><description><b>BorderColor</b>: the color of the text border. Valid values: 0x000000 to 0xffffff. By default, this parameter is left empty. In this case, the color of the text border is transparent.</description></item>
-        /// <item><description><b>Text</b>: the content of the text. By default, this parameter is left empty. In this case, the text contains no content.</description></item>
-        /// <item><description><b>Color</b>: the color of the text. The default value is 0xff0000, which indicates that the text is in red.</description></item>
+        /// <item><description><para><b>SizeNormalized</b>: The normalized font size. The font size is calculated using the formula: font_size/output_height. The value must be in the range of <c>[0,1]</c>. If the calculated font size is greater than 1024, the value 1024 is used.</para>
+        /// </description></item>
+        /// <item><description><para><b>BorderWidthNormalized</b>: The normalized width of the text border. The normalized width is calculated based on the font size using the formula: BorderWidth/FontSize. The value must be in the range of <c>[0,1]</c>. If the calculated value is greater than 16, the value 16 is used. Default value: 0.</para>
+        /// </description></item>
+        /// <item><description><para><b>FontName</b>: The font name. For more information about valid values, see <b>Production studio fonts</b>. Default value: KaiTi.</para>
+        /// </description></item>
+        /// <item><description><para><b>BorderColor</b>: The color of the text border. Valid values are from 0x000000 to 0xffffff. The default value is an empty string, which indicates that this parameter is not used.</para>
+        /// </description></item>
+        /// <item><description><para><b>Text</b>: The text content. The default value is an empty string.</para>
+        /// </description></item>
+        /// <item><description><para><b>Color</b>: The color of the text. Default value: 0xff0000, which is red.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

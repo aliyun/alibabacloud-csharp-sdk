@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? StreamCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of online users at the specified point in time for all the live streams under the main streaming domain.</para>
+        /// <para>The total number of online users at the specified point in time on the specified domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

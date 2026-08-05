@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class BatchSetLiveDomainConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The domain names that you want to batch configure. Supported domain names include ingest domains, main streaming domains, and sub-streaming domains. Separate multiple domain names with commas (,).</para>
+        /// <para>The domain names that you want to configure in batches. Valid values: ingest domain names, primary streaming domain names, and secondary streaming domain names. Separate multiple domain names with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,9 +20,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string DomainNames { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// <para>The list of features.</para>
-        /// <para>Some features, such as <c>filetype_based_ttl_set</c>, support multiple configuration records. To update one of the configuration records, use <c>configId</c> to identify the record. For more information, see <b>Format of the Functions parameter</b> and <b>Features specified by the Functions parameter</b>.</para>
+        /// <para>Some features, such as <c>filetype_based_ttl_set</c>, allow you to set multiple records. If you want to update a specific record, you can specify the record by its <c>configId</c>. For more information, refer to <b>Functions format description</b> and <b>Functions feature description</b> below.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

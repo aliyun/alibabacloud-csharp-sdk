@@ -105,14 +105,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5c6a2a0df228-4a64- af62-20e91b9676b3</para>
+        /// <para>5c6a2a0df228-4a64- af62-20e91b******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of production studios.</para>
+        /// <para>The total number of production studios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class RemoveShowFromShowListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the episode.</para>
+        /// <para>The show ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a2b8e671-2fe5-4642-a2ec-bf93880e****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ShowId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of episodes that failed to be removed and the relevant failure information.</para>
+        /// <para>A list of IDs of the shows that failed to be deleted and the failure information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>failedList[Show1, Show2...]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string FailedList { get; set; }
 
         /// <summary>
-        /// <para>The IDs of episodes that were removed.</para>
+        /// <para>The IDs of the shows that were successfully deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f1933f16-5467-4308-b3a9-e8d451a90999</para>

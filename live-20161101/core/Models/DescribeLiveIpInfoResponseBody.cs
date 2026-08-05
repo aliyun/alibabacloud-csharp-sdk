@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The Chinese name of the ISP.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ChinaTelecom</para>
+        /// <para>电信</para>
         /// </summary>
         [NameInMap("ISP")]
         [Validation(Required=false)]
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string IspEname { get; set; }
 
         /// <summary>
-        /// <para>The Chinese name of the region.</para>
+        /// <para>The Chinese name of the IP region.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>China-Guizhou-guiyang</para>
+        /// <para>中国-贵州省-贵阳市</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The English name of the region.</para>
+        /// <para>The English name of the IP region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>China-Guizhou-guiyang</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RegionEname { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1B1D0EE7-9559-489D-BC4E-279495EB8FB8</para>

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The time interval between the data entries returned. Unit: seconds.</para>
+        /// <para>The time interval between data entries. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>

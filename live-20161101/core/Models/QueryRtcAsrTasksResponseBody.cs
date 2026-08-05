@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class QueryRtcAsrTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the request. If success is returned, the request was successful. If an error message is returned, the request failed.</para>
+        /// <para>The description of the result. A value of \<c>success\\</c> indicates that the call is successful. If the call fails, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D8ADAB55-1BB8-5C01-8434-C45D353BB1FD</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. HTTP status code 2000 indicates that the request was successful. Other HTTP status codes indicate that the request failed.</para>
+        /// <para>The status code. A value of 2000 indicates that the call is successful. Other values indicate that an error occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? RetCode { get; set; }
 
         /// <summary>
-        /// <para>The results returned for the tasks.</para>
+        /// <para>The result set of tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StopRtcCloudRecordingRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the task that is returned when you start an RTC cloud recording.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

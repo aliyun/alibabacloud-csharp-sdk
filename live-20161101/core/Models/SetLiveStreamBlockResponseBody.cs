@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The result description.</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, ok is returned.</description></item>
-        /// <item><description>If the request failed, the failure detail is returned.</description></item>
+        /// <item><description>Success: ok.</description></item>
+        /// <item><description>Failure: failure details.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,13 +34,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ok: The request was successful.</description></item>
-        /// <item><description>fail: The request failed.</description></item>
+        /// <item><description>ok: succeeded.</description></item>
+        /// <item><description>fail: failed.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If any parameter failed to be configured, the request failed.</para>
+        /// <para>The task is considered failed if any single subtask fails to be created.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

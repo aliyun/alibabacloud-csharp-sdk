@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class StopRtcAsrTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the request. If success is returned, the request is successful. If an error message is returned, the request failed.</para>
+        /// <para>The result of the call. The value is \<c>success\\</c> if the call is successful. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3D208CC1-27C9-51E9-82B8-A6682D466421</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned HTTP status code. HTTP status code 2000 indicates that the request is successful. If another HTTP status code is returned, the request failed.</para>
+        /// <para>The status code. A value of \<c>2000\\</c> indicates that the call was successful. Other values indicate that the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>

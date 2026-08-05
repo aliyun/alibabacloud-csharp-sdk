@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateLiveStreamRecordIndexFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The recording configuration.</para>
+        /// <para>The recording configuration information.</para>
         /// </summary>
         [NameInMap("RecordInfo")]
         [Validation(Required=false)]
         public CreateLiveStreamRecordIndexFilesResponseBodyRecordInfo RecordInfo { get; set; }
         public class CreateLiveStreamRecordIndexFilesResponseBodyRecordInfo : TeaModel {
             /// <summary>
-            /// <para>The name of the application to which the live stream belongs.</para>
+            /// <para>The name of the application to which the stream belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveApp****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The time when the index file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The creation time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2016-05-27T09:40:56Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The main streaming domain.</para>
+            /// <para>The streamer streaming domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public float? Duration { get; set; }
 
             /// <summary>
-            /// <para>The end time of the index file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The end time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-12-01T07:40:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The height of the video.</para>
+            /// <para>The video height.</para>
             /// 
             /// <b>Example:</b>
             /// <para>480</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string OssEndpoint { get; set; }
 
             /// <summary>
-            /// <para>The name of the recording that is stored in OSS.</para>
+            /// <para>The name of the recording file stored in OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveObject****.m3u8</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string RecordId { get; set; }
 
             /// <summary>
-            /// <para>The URL of the M3U8 index file.</para>
+            /// <para>The URL of the index file.</para>
             /// </summary>
             [NameInMap("RecordUrl")]
             [Validation(Required=false)]
             public string RecordUrl { get; set; }
 
             /// <summary>
-            /// <para>The start time of the index file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The start time. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-12-01T07:36:00Z</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the live stream.</para>
+            /// <para>The stream name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liveStream****</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string StreamName { get; set; }
 
             /// <summary>
-            /// <para>The width of the video.</para>
+            /// <para>The video width.</para>
             /// 
             /// <b>Example:</b>
             /// <para>640</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550439A3-F8EC-4CA2-BB62-B9DB43EEEF30</para>

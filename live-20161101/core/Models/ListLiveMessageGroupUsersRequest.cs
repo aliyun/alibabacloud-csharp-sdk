@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ListLiveMessageGroupUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the interactive messaging application to query.</para>
+        /// <para>The ID of the live interactive application to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The data center. It must be the same as the data center that was specified when you called the <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a> operation to create the interactive messaging application. Valid values: cn-shanghai and ap-southeast-1 (Singapore).</para>
+        /// <para>The data center. This value must be the same as the data center specified in <a href="https://help.aliyun.com/document_detail/2848162.html">CreateLiveMessageApp</a>. Valid values: cn-shanghai (Shanghai) and ap-southeast-1 (Singapore).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataCenter { get; set; }
 
         /// <summary>
-        /// <para>The ID of the group to query.</para>
+        /// <para>The group ID of the group to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The starting page number for the query. If you leave this parameter empty, the query starts from the first page.</para>
+        /// <para>The start position of the query page. If this parameter is left empty, the first page is returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? NextPageToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>10 to 50</b>.</para>
+        /// <para>The number of users to display per page. Valid values: <b>10 to 50</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,10 +63,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sort order based on the time when the users joined the group. Valid values:</para>
+        /// <para>The sort order. Users are sorted by the time they joined the group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: ascending order</description></item>
-        /// <item><description>2: descending order</description></item>
+        /// <item><description><para>1: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>2: descending order.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

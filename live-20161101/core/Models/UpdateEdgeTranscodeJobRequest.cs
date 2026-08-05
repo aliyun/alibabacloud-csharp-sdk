@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateEdgeTranscodeJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data center.</para>
+        /// <para>The data center ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the edge transcoding task.</para>
+        /// <para>The ID of the edge transcoding job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The task name.</para>
+        /// <para>The job name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task1</para>
@@ -45,12 +45,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the input stream.</para>
+        /// <para>The input stream URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rtmp://mydomain/app/stream1</para>
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StreamInput { get; set; }
 
         /// <summary>
-        /// <para>The URL of the output stream.</para>
+        /// <para>The output stream URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rtmp://testdomain/app/stream2</para>

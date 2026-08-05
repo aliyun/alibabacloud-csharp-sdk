@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateRoomRealTimeStreamAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ARTC application. You can specify only one application ID. The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The ID of the ApsaraVideo Real-time Communication application. Only a single ID is supported. The value can contain uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters. You can view your application IDs by navigating to <b>ApsaraVideo Live &gt; Live+ &gt; Real-time Communication &gt; Application Management</b>. If no application exists, create one by clicking <b>Create Application</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the channel. You can specify only one ID. The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The ID of the channel to join. Only a single ID is supported. The value can contain uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ChannelId { get; set; }
 
         /// <summary>
-        /// <para>The name of the RTMP stream. The name can be up to 40 characters in length.</para>
+        /// <para>The display name of the RTMP stream in the channel. Maximum length: 40 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the RTMP URL. Unit: seconds. The default value is 36,000 seconds, which is 10 hours.</para>
+        /// <para>The validity period of the RTMP URL. Unit: seconds. Default value: 36000 (10 hours).</para>
         /// 
         /// <b>Example:</b>
         /// <para>43200</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who ingests the stream over RTMP. The user ID must be different from IDs of other users in the channel. The ID can be up to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The user ID for the RTMP stream ingest. This value must not duplicate any other user ID in the channel. The value can contain uppercase and lowercase letters, digits, underscores, and hyphens (-), with a maximum of 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

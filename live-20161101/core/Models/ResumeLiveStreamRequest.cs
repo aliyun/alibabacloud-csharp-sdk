@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class ResumeLiveStreamRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs. You can specify an asterisk (\*) as the value to match all applications. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</para>
+        /// <para>The name of the application to which the ingest stream belongs. You can set this parameter to * to indicate all AppName values (no restriction on AppName). You can view the AppName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the live stream is ingested by a streamer or played by a client. Set the value to <b>publisher</b>, which specifies that the live stream is ingested by a streamer.</para>
+        /// <para>Specifies whether the stream is a streamer ingest stream or a client playback stream. Currently supported value: <b>publisher</b> (streamer ingest).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the ingested stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</para>
+        /// <para>The name of the ingest stream. You can view the StreamName on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeDomainUsageDataRequest : TeaModel {
         /// <summary>
-        /// <para>The billable region. Valid values:</para>
+        /// <para>The region code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CN</b>: Chinese mainland</description></item>
-        /// <item><description><b>OverSeas</b>: outside the Chinese mainland</description></item>
-        /// <item><description><b>AP1</b>: Asia Pacific 1</description></item>
-        /// <item><description><b>AP2</b>: Asia Pacific 2</description></item>
-        /// <item><description><b>AP3</b>: Asia Pacific 3</description></item>
-        /// <item><description><b>NA</b>: North America</description></item>
-        /// <item><description><b>SA</b>: South America</description></item>
-        /// <item><description><b>EU</b>: Europe</description></item>
-        /// <item><description><b>MEAA</b>: Middle East and Africa</description></item>
-        /// <item><description><b>all</b>: all regions</description></item>
+        /// <item><description><b>CN</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>OverSeas</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><b>AP1</b>: Asia-Pacific 1.</description></item>
+        /// <item><description><b>AP2</b>: Asia-Pacific 2.</description></item>
+        /// <item><description><b>AP3</b>: Asia-Pacific 3.</description></item>
+        /// <item><description><b>NA</b>: North America.</description></item>
+        /// <item><description><b>SA</b>: South America.</description></item>
+        /// <item><description><b>EU</b>: Europe.</description></item>
+        /// <item><description><b>MEAA</b>: Middle East and Africa.</description></item>
+        /// <item><description><b>all</b>: all regions.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the default value CN is used. Alibaba Cloud supports the following countries and regions outside the Chinese mainland: - Asia Pacific 1: Hong Kong (China), Macao (China), Taiwan (China), Japan, and Southeast Asia excluding Vietnam and Indonesia. - Asia Pacific 2: Indonesia, South Korea, and Vietnam. - Asia Pacific 3: Australia and New Zealand. - North America: US and Canada. - South America: Brazil. Europe: Ukraine, UK, France, Netherlands, Spain, Italy, Sweden, and Germany. - Middle East and Africa: South Africa, Oman, UAE, and Kuwait.</para>
+        /// <para>If this parameter is not specified, the default value is the Chinese mainland. Regions outside the Chinese mainland: - Asia-Pacific 1: Hong Kong (China), Macao (China), Taiwan (China), Japan, and Southeast Asian countries except Vietnam and Indonesia. - Asia-Pacific 2: Indonesia, South Korea, and Vietnam. - Asia-Pacific 3: Australia and New Zealand. North America: the United States and Canada. - South America: Brazil. - Europe: Ukraine, the United Kingdom, France, the Netherlands, Spain, Italy, Sweden, and Germany. - Middle East and Africa: South Africa, Oman, the United Arab Emirates, and Kuwait.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,12 +35,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Area { get; set; }
 
         /// <summary>
-        /// <para>The protocol of the data to query. Valid values:</para>
+        /// <para>The protocol of the data to retrieve. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>http</b>: HTTP</description></item>
-        /// <item><description><b>https</b>: HTTPS</description></item>
-        /// <item><description><b>quic</b>: QUIC</description></item>
-        /// <item><description><b>all</b> (default): HTTP, HTTPS, and QUIC</description></item>
+        /// <item><description><para><b>http</b>: HTTP.</para>
+        /// </description></item>
+        /// <item><description><para><b>https</b>: HTTPS.</para>
+        /// </description></item>
+        /// <item><description><para><b>quic</b>: QUIC.</para>
+        /// </description></item>
+        /// <item><description><para><b>all</b> (default): all of the preceding protocols.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,10 +55,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataProtocol { get; set; }
 
         /// <summary>
-        /// <para>The domain name.</para>
+        /// <para>The streaming domain.</para>
         /// <list type="bullet">
-        /// <item><description>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</description></item>
-        /// <item><description>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</description></item>
+        /// <item><description><para>You can specify a single domain name or multiple domain names. Separate multiple domain names with commas (,).</para>
+        /// </description></item>
+        /// <item><description><para>If this parameter is empty, the merged data of all streaming domains is returned by default.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,8 +71,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
-        /// <para>The end time must be later than the start time. The maximum time range that you can specify is <b>31</b> days.</para>
+        /// <para>The end time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
+        /// <para>The end time must be later than the start time, and the difference between the end time and the start time cannot exceed <b>31</b> days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,12 +83,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The category of the resource usage data to query. Valid values:</para>
+        /// <para>The data type of the usage data to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>bps</b>: streaming bandwidth</description></item>
-        /// <item><description><b>traf</b>: streaming traffic</description></item>
-        /// <item><description><b>req_traf</b>: stream ingest traffic if you set Type to push, or stream relay traffic if you set Type to push_proxy</description></item>
-        /// <item><description><b>req_bps</b>: stream ingest bandwidth if you set Type to push, or stream relay bandwidth if you set Type to push_proxy</description></item>
+        /// <item><description><para><b>bps</b>: playback bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para><b>traf</b>: traffic.</para>
+        /// </description></item>
+        /// <item><description><para><b>req_traf</b>: when Type is set to push, this indicates stream ingest traffic. When Type is set to push_proxy, this indicates relay traffic.</para>
+        /// </description></item>
+        /// <item><description><para><b>req_bps</b>: when Type is set to push, this indicates stream ingest bandwidth. When Type is set to push_proxy, this indicates relay bandwidth.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -94,7 +104,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Field { get; set; }
 
         /// <summary>
-        /// <para>The time interval between the data entries to return. Unit: seconds. Valid values: <b>300</b> (5 minutes), <b>3600</b> (1 hour), and <b>86400</b> (1 day).</para>
+        /// <para>Forces retrieval of data at the specified time granularity, in seconds. Valid values: <b>300</b> (5 minutes), <b>3600</b> (1 hour), and <b>86400</b> (1 day).</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -107,12 +117,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -123,17 +139,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource usage data to query.</para>
-        /// <para>Valid values if you set <b>Field</b> to <b>bps</b> or <b>traf</b>:</para>
+        /// <para>The type of usage data to retrieve.</para>
+        /// <para>When <b>Field</b> is set to <b>bps</b> or <b>traf</b>, valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>rts</b>: bandwidth or traffic for Real-Time Streaming (RTS)</description></item>
-        /// <item><description><b>quic</b>: bandwidth or traffic for QUIC</description></item>
-        /// <item><description><b>all</b>: all bandwidth or traffic</description></item>
+        /// <item><description><b>rts</b>: RTS bandwidth or traffic.</description></item>
+        /// <item><description><b>quic</b>: QUIC bandwidth or traffic.</description></item>
         /// </list>
-        /// <para>Valid values if you set <b>Field</b> to <b>req_traf</b> or <b>req_bps</b>:</para>
+        /// <para>When <b>Field</b> is set to <b>req_traf</b> or <b>req_bps</b>, valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>push</b>: stream ingest bandwidth or traffic</description></item>
-        /// <item><description><b>push_proxy</b>: stream relay bandwidth or traffic</description></item>
+        /// <item><description><b>push</b>: stream ingest bandwidth or traffic.</description></item>
+        /// <item><description><b>push_proxy</b>: relay bandwidth or traffic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

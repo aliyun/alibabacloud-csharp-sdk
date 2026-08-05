@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateLiveSnapshotDetectPornConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the live stream belongs. The value of this parameter must be the same as the application name in the ingest URL. Otherwise, the configuration does not take effect. The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (<em>). The name cannot start with a hyphen (-) or underscore (</em>). You can also specify an asterisk (\*) as the value to match all applications.</para>
+        /// <para>The name of the application to which the stream belongs. The AppName value must match the AppName in the ingest URL for the template to take effect. The value can be up to 255 characters in length and can contain digits, uppercase and lowercase letters, hyphens (-), and underscores (_). Hyphens and underscores cannot be the first character. The value can also be a single asterisk (*) to match all AppName values.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The main streaming domain.</para>
+        /// <para>The streaming domain of the streamer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The interval at which snapshots are captured from the live stream. Valid values: <b>5 to 3600</b>. Unit: seconds.</para>
+        /// <para>The sampling interval. Valid values: <b>5 to 3600</b>. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string OssBucket { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the Object Storage Service (OSS) bucket.</para>
+        /// <para>The endpoint of the OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-oss-****.aliyuncs.com</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string OssEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The name of the snapshot that stores violations such as pornographic content and politically sensitive content.</para>
+        /// <para>The name of the stored image that contains violations such as pornography or politically sensitive content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{liveApp****}/{liveStream****}/{Date}/{Hour}/{Minute}_{Second}.jpg</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The moderation scenario array.</para>
+        /// <para>The array of detection scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>porn</para>

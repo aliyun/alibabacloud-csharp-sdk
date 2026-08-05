@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateCustomLiveStreamTranscodeRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the stream belongs, and it cannot be modified.</para>
+        /// <para>The AppName of the live stream. This parameter cannot be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string App { get; set; }
 
         /// <summary>
-        /// <para>Audio transcoding bitrate. Unit: kbps, value range: 1 to 1000.</para>
+        /// <para>The output audio bitrate. Unit: kbps. Valid values: 1 to <b>1000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>512</para>
@@ -31,10 +31,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? AudioBitrate { get; set; }
 
         /// <summary>
-        /// <para>Number of audio channels. Values: </para>
+        /// <para>The number of audio channels. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: Mono. </description></item>
-        /// <item><description>2: Stereo.</description></item>
+        /// <item><description><para>1: mono.</para>
+        /// </description></item>
+        /// <item><description><para>2: stereo.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,10 +47,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? AudioChannelNum { get; set; }
 
         /// <summary>
-        /// <para>Audio encoding format. Values: </para>
+        /// <para>The audio codec. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>aac </description></item>
-        /// <item><description>mp3</description></item>
+        /// <item><description><para>aac</para>
+        /// </description></item>
+        /// <item><description><para>mp3</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,12 +63,16 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AudioCodec { get; set; }
 
         /// <summary>
-        /// <para>Audio encoding. Values: </para>
+        /// <para>The audio profile. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>aac_low</description></item>
-        /// <item><description>aac_he</description></item>
-        /// <item><description>aac_he_v2 </description></item>
-        /// <item><description>aac_ld</description></item>
+        /// <item><description><para>aac_low</para>
+        /// </description></item>
+        /// <item><description><para>aac_he</para>
+        /// </description></item>
+        /// <item><description><para>aac_he_v2</para>
+        /// </description></item>
+        /// <item><description><para>aac_ld</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,9 +83,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AudioProfile { get; set; }
 
         /// <summary>
-        /// <para>Audio sampling rate. Values: 22050, 32000, 44100, 48000, 96000. Unit: Hz.</para>
+        /// <para>The audio sample rate. Valid values: 22050, 32000, 44100, 48000, and 96000. Unit: Hz.</para>
         /// <remarks>
-        /// <para>If <b>AudioProfile</b> is set to <b>aac_ld</b>, the sampling rate must not exceed 44100.</para>
+        /// <para>If you set <b>AudioProfile</b> to <b>aac_ld</b>, the sample rate cannot exceed 44100.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -88,26 +96,38 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? AudioRate { get; set; }
 
         /// <summary>
-        /// <para>The source-based bitrate settings. This parameter takes precedence over other bitrate settings. The following fields must be included:</para>
+        /// <para>The adaptive bitrate settings. If specified, it overrides the VideoBitrate parameter. Fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>UpLimit</b>: the maximum bitrate. Set this field to an integer from 128 to 10000. The value must be greater than the minimum bitrate.</description></item>
-        /// <item><description><b>LowerLimit</b>: the minimum bitrate. Set this field to an integer from 128 to 10000. The value must be smaller than the maximum bitrate.</description></item>
-        /// <item><description><b>Factor</b>: the ratio of the output bitrate to the source bitrate. Valid values: 0.1 to 1. The value is accurate to one decimal place. A value of 1 indicates that the output video has the same bitrate as the source video.</description></item>
+        /// <item><description><para><b>UpLimit (integer):</b> Required. The upper limit of the bitrate. This must be an integer from 128 to 10000 and greater than the lower limit.</para>
+        /// </description></item>
+        /// <item><description><para><b>LowerLimit (integer):</b> Required. The lower limit of the bitrate. This must be an integer from 128 to 10000 and less than the upper limit.</para>
+        /// </description></item>
+        /// <item><description><para><b>Factor (float):</b> Required: The factor by which the source bitrate is multiplied to calculate the output bitrate. Valid values: 0.1 to 1. The value can be accurate to one decimal place. A value of 1 indicates that the output bitrate is the same as the source bitrate.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;UpLimit\&quot;:2500,\&quot;LowerLimit\&quot;:800,\&quot;Factor\&quot;:1}</para>
+        /// <para>{&quot;UpLimit&quot;:2500,&quot;LowerLimit&quot;:800,&quot;Factor&quot;:1}</para>
         /// </summary>
         [NameInMap("BitrateWithSource")]
         [Validation(Required=false)]
         public string BitrateWithSource { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to automatically detect and remove interlacing during transcoding. Deinterlacing converts interlaced video into progressive video.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: enables deinterlacing.</para>
+        /// </description></item>
+        /// <item><description><para>false: keeps the source format. This is the default value.</para>
+        /// </description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("DeInterlaced")]
         [Validation(Required=false)]
         public bool? DeInterlaced { get; set; }
 
         /// <summary>
-        /// <para>Streamer domain name, unmodifiable.</para>
+        /// <para>The streaming domain. This parameter cannot be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,15 +138,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>Encryption configuration. JSON format, with the following fields: </para>
+        /// <para>The encryption settings, formatted as a JSON string.</para>
         /// <list type="bullet">
-        /// <item><description>EncryptType: Type of encryption. Fixed value is aliyun.</description></item>
-        /// <item><description>KmsKeyID: User\&quot;s KMS master key ID. </description></item>
-        /// <item><description>KmsKeyExpireInterval: Key rotation period. Value range: 60~3600, unit: seconds.<remarks>
-        /// <para>When using DRM encryption, KmsKeyID cannot be modified.</para>
-        /// </remarks>
+        /// <item><description><para><b>EncryptType</b>: The encryption type. Set the value to aliyun.</para>
+        /// </description></item>
+        /// <item><description><para><b>KmsKeyID</b>: The ID of the customer master key (CMK) in Key Management Service (KMS).</para>
+        /// </description></item>
+        /// <item><description><para><b>KmsKeyExpireInterval</b>: The key rotation period. Unit: seconds. Valid values: <b>60 to 3600.</b></para>
         /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>When you use Digital Rights Management (DRM) encryption, you cannot modify KmsKeyID.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;EncryptType&quot;: &quot;aliyun&quot;, &quot;KmsKeyID&quot;:&quot;afce5722-81d2-43c3-9930-7601da11****&quot;,&quot;KmsKeyExpireInterval&quot;:&quot;3600&quot;}</para>
@@ -136,22 +159,25 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EncryptParameters { get; set; }
 
         /// <summary>
-        /// <para>Other source-based settings. The following fields are included:</para>
+        /// <para>Other adaptive settings that align the transcoded stream with the source stream. Fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>KeyFrameOpen</b>: Valid values: yes and no.</description></item>
-        /// <item><description><b>Copyts</b>: Valid values: yes and no.</description></item>
-        /// <item><description><b>SeiMode</b>: Valid values: 0, 1, and 2. 0 specifies that no supplemental enhancement information (SEI) messages are passed through, 1 specifies that part of SEI messages are passed through, and 2 specifies that all SEI messages are passed through.</description></item>
+        /// <item><description><para><b>KeyFrameOpen</b>: Specifies whether to align keyframes with the source stream. Valid values: yes and no.</para>
+        /// </description></item>
+        /// <item><description><para><b>Copyts (string)</b>: Specifies whether to align the presentation timestamp (PTS) with the source stream. Valid values: yes and no.</para>
+        /// </description></item>
+        /// <item><description><para><b>SeiMode</b>: The pass-through mode for Supplemental Enhancement Information (SEI). Valid values: 0 (disabled), 1 (pass through partial parameters), and 2 (pass through all).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;KeyFrameOpen\&quot;:\&quot;yes\&quot;,\&quot;Copyts\&quot;:\&quot;yes\&quot;,\&quot;SeiMode\&quot;:1}</para>
+        /// <para>{&quot;KeyFrameOpen&quot;:&quot;yes&quot;,&quot;Copyts&quot;:&quot;yes&quot;,&quot;SeiMode&quot;:1}</para>
         /// </summary>
         [NameInMap("ExtWithSource")]
         [Validation(Required=false)]
         public string ExtWithSource { get; set; }
 
         /// <summary>
-        /// <para>Transcode video frame rate. Unit: FPS, value range: 1 to 60.</para>
+        /// <para>The frame rate of the output video. Unit: frames per second (FPS). Valid values: 1 to <b>60</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -161,24 +187,28 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? FPS { get; set; }
 
         /// <summary>
-        /// <para>The source-based frame rate settings. This parameter takes precedence over other frame rate settings. The following fields must be included:</para>
+        /// <para>Adapts the output frame rate based on the source\&quot;s frame rate, while keeping it within a specified range. If specified, it overrides the FPS parameter. Fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>UpLimit</b>: the maximum frame rate. Set this field to an integer from 1 to 60. The value must be greater than the minimum frame rate.</description></item>
-        /// <item><description><b>LowerLimit</b>: the minimum frame rate. Set this field to an integer from 1 to 60. The value must be smaller than the maximum frame rate.</description></item>
+        /// <item><description><para><b>UpLimit (integer):</b> Required. The upper limit of the frame rate. This must be an integer from 1 to 60 and greater than the lower limit.</para>
+        /// </description></item>
+        /// <item><description><para><b>LowerLimit (integer):</b> Required. The lower limit of the frame rate. This must be an integer from 1 to 60 and less than the upper limit.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;UpLimit\&quot;:60,\&quot;LowerLimit\&quot;:1}</para>
+        /// <para>{&quot;UpLimit&quot;:60,&quot;LowerLimit&quot;:1}</para>
         /// </summary>
         [NameInMap("FpsWithSource")]
         [Validation(Required=false)]
         public string FpsWithSource { get; set; }
 
         /// <summary>
-        /// <para>Video GOP (Group of Pictures), supports units in frames or seconds. When the unit is frames, the value should be {number}; when the unit is seconds, the value should be {number}s. </para>
+        /// <para>The Group of Pictures (GOP) size. The unit can be frame or second. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>For frames, the range is 1 to 3000. </description></item>
-        /// <item><description>For seconds, the range is 1 to 20s.</description></item>
+        /// <item><description><para>By frames: 1 to 3000.</para>
+        /// </description></item>
+        /// <item><description><para>By seconds: 1s to 20s.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -189,15 +219,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Gop { get; set; }
 
         /// <summary>
-        /// <para>Video transcoding height. Unit: pixels. The value must meet the following three conditions:</para>
+        /// <para>Output video height in pixels. Requirements:</para>
         /// <list type="bullet">
-        /// <item><description>Height ≥ 100: The height of the video must be no less than 100 pixels.</description></item>
-        /// <item><description>max(Height, Width) ≤ 2560: The larger of the video\&quot;s width and height cannot exceed 2560.</description></item>
-        /// <item><description>min(Height, Width) ≤ 1440: The smaller of the video\&quot;s width and height cannot exceed 1440.<remarks>
-        /// <para>For 265 narrowband HD templates, the maximum resolution is 1280×720.</para>
-        /// </remarks>
+        /// <item><description><para><b>Height ≥ 100</b></para>
+        /// </description></item>
+        /// <item><description><para><b>max(Height, Width) ≤ 2560</b></para>
+        /// </description></item>
+        /// <item><description><para><b>min(Height, Width) ≤ 1440</b></para>
         /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>For h265-nbhd templates, it cannot exceed 720.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>720</para>
@@ -207,10 +240,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? Height { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable triggered transcoding. Valid values:</para>
+        /// <para>Specifies whether to enable on-demand transcoding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b>: enables triggered transcoding.</description></item>
-        /// <item><description><b>no</b>: disables triggered transcoding.</description></item>
+        /// <item><description><para><b>yes</b>: Transcoding only starts when the first viewer requests this transcoded stream.</para>
+        /// </description></item>
+        /// <item><description><para><b>no</b>: Transcoding starts immediately after the stream is published.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -225,11 +260,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Encoding level. A set of specific encoding features supported by the video, generally, the higher the value, the better the picture quality, but also the higher the resources consumed for encoding and decoding. Values: </para>
+        /// <para>The video codec profile. A larger value indicates better video quality and higher resource consumption for encoding and decoding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: baseline (suitable for mobile devices).</description></item>
-        /// <item><description>2: main (suitable for standard resolution devices). </description></item>
-        /// <item><description>3: high (suitable for high-resolution devices).</description></item>
+        /// <item><description><para><b>1</b>: baseline (for mobile devices).</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: main (for SD devices).</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: high (for HD devices).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -239,33 +277,50 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? Profile { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The source-based resolution settings. This parameter takes precedence over other resolution settings. The following fields must be included:</para>
+        /// <para>The adaptive resolution settings. If specified, it overrides the Height and Width parameters. Fieds:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Type</b>: You can set this field to short, long, or screen. short specifies that the resolution of the output video is adapted to the shorter side, long specifies that the resolution of the output video is adapted to the longer side, and screen specifies that the output video has an adaptive resolution.</para>
+        /// <item><description><para><b>Type (string):</b> Required. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>short</b>: sets the shorter edge of the video to the specified value and scales the other edge to maintain the original aspect ratio.</para>
         /// </description></item>
-        /// <item><description><para><b>Value</b>:</para>
+        /// <item><description><para><b>long</b>: sets the longer edge of the video to the specified value and scales the other edge to maintain the original aspect ratio.</para>
+        /// </description></item>
+        /// <item><description><para><b>screen</b>: Matches the output to a standard resolution, automatically flipping the dimensions based on the source\&quot;s orientation.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>Value (string):</b> Required. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Set this field to 360, 480, 540, 720, or 1080 if the Type field is set to short.</description></item>
-        /// <item><description>Set this field to 640, 848, 960, 1280, or 1920 if the Type field is set to long.</description></item>
-        /// <item><description>Set this field to 640\*360, 848\*480, 960\*540, 1280\*720, or 1920\*1080 if the Type field is set to screen.</description></item>
+        /// <item><description><para>For short: 360, 480, 540, 720, and 1080.</para>
+        /// </description></item>
+        /// <item><description><para>For long: 640, 848, 960, 1280, and 1920.</para>
+        /// </description></item>
+        /// <item><description><para>For screen: 640×360, 848×480, 960×540, 1280×720, and 1920×1080.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;Type\&quot;:\&quot;short\&quot;,\&quot;Value\&quot;:\&quot;1080\&quot;}</para>
+        /// <para>{&quot;Type&quot;:&quot;short&quot;,&quot;Value&quot;:&quot;1080&quot;}</para>
         /// </summary>
         [NameInMap("ResWithSource")]
         [Validation(Required=false)]
         public string ResWithSource { get; set; }
 
         /// <summary>
-        /// <para>Custom name of the transcoding template, not modifiable.</para>
+        /// <para>The custom name of the transcoding template. This parameter cannot be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -276,7 +331,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string Template { get; set; }
 
         /// <summary>
-        /// <para>Custom transcoding template type, unmodifiable.</para>
+        /// <para>The type of the custom transcoding template. This parameter cannot be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -287,9 +342,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string TemplateType { get; set; }
 
         /// <summary>
-        /// <para>Video transcoding bitrate. Unit: kbps, value range: 1 to 6000.</para>
+        /// <para>The output video bitrate. Unit: kbps. Valid values: 1 to <b>6000</b>.</para>
         /// <remarks>
-        /// <para>The actual bitrate of the transcoded video will try to be as close as possible to the one you set, but it cannot be guaranteed to be exactly the same, especially when the set bitrate is too high or too low.</para>
+        /// <para>The system tries to transcode the video at the specified bitrate. However, the actual bitrate may not be the same as the specified value, especially when the specified value is too high or too low.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -300,15 +355,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public int? VideoBitrate { get; set; }
 
         /// <summary>
-        /// <para>Video transcoding width. Unit: pixels. The value must meet the following three conditions: </para>
+        /// <para>Output video width in pixels.</para>
+        /// <para>Requirements:</para>
         /// <list type="bullet">
-        /// <item><description>Width ≥ 100: The video width must be no less than 100 pixels. </description></item>
-        /// <item><description>max(Height, Width) ≤ 2560: The larger of the video\&quot;s height and width cannot exceed 2560. </description></item>
-        /// <item><description>min(Height, Width) ≤ 1440: The smaller of the video\&quot;s height and width cannot exceed 1440.<remarks>
-        /// <para>For 265 narrowband HD templates, the maximum resolution is 1280×720.</para>
-        /// </remarks>
+        /// <item><description><para><b>Width ≥ 100</b></para>
+        /// </description></item>
+        /// <item><description><para><b>max(Height, Width) ≤ 2560</b></para>
+        /// </description></item>
+        /// <item><description><para><b>min(Height, Width) ≤ 1440</b></para>
         /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>For h265-nbhd templates, it cannot exceed 1280.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>576</para>

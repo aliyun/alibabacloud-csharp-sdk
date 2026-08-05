@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message group.</para>
+        /// <para>The message group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of user IDs. Separate multiple user IDs with commas (,). You can specify a maximum of 20 user IDs.</para>
+        /// <para>The list of user IDs. Separate multiple user IDs with commas (,). You can specify up to 20 user IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

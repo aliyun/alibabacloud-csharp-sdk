@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateEventSubRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The ID of the application to subscribe to. You can view your application IDs by navigating to <b>ApsaraVideo Live &gt; Live+ &gt; ApsaraVideo Real-time Communication &gt; Application Management</b>. If no application exists, create one by clicking [Create Application].</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The callback URL. For more information about the content of the messages that are sent to the callback URL, see the Callback section in this topic.</para>
+        /// <para>The callback URL. For the callback content, see the callback content examples below.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,17 +32,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The channel ID. You can call the <a href="https://help.aliyun.com/document_detail/2628135.html">ListEventSub</a> operation to query the channel ID.</para>
+        /// <para>The ID of the channel to subscribe to. You can call the <a href="https://help.aliyun.com/document_detail/2848210.html">ListEventSub</a> operation to query the subscribed channel IDs.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required if you specify the Users.N parameter.</para>
-        /// </description></item>
-        /// <item><description><para>If you set this parameter to \* or do not specify this parameter, all channels are subscribed to.</para>
-        /// </description></item>
-        /// <item><description><para>Each application ID allows only one all-channel subscription.</para>
-        /// </description></item>
+        /// <item><description>If the Users.N parameter is not empty, this parameter is required.</description></item>
+        /// <item><description>If ChannelId is set to \* or left empty, all channels are subscribed. Each AppId allows only one all-channel subscription.</description></item>
+        /// <item><description>Each AppId allows a maximum of 20 subscriptions at the same time.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123333</para>
@@ -52,7 +49,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ChannelId { get; set; }
 
         /// <summary>
-        /// <para>Subscribe to events.</para>
+        /// <para>The subscription events.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Events")]
@@ -60,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public List<string> Events { get; set; }
 
         /// <summary>
-        /// <para>The user whose events you want to subscribe to. If you leave this parameter empty, the events of all users in the channel are subscribed to, including the events of the streamer and viewers. Specify this parameter in the following format:</para>
+        /// <para>The users whose messages you want to subscribe to. If this parameter is empty, all users in the channel (including streamers and viewers) are subscribed. Format:</para>
         /// <pre><c>Users.1=****
         /// Users.2=****
         /// ......

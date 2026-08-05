@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for which the data was queried.</para>
+        /// <para>The end time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-10T21:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range for which the data was queried.</para>
+        /// <para>The start time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-10T20:00:00Z</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The total number of playbacks and the number of successful playbacks at each interval.</para>
+        /// <para>The total playback count and total successful playback count for each time interval. Unit: count.</para>
         /// </summary>
         [NameInMap("VvData")]
         [Validation(Required=false)]
         public List<DescribeRTSNativeSDKVvDataResponseBodyVvData> VvData { get; set; }
         public class DescribeRTSNativeSDKVvDataResponseBodyVvData : TeaModel {
             /// <summary>
-            /// <para>The timestamp of the returned data.</para>
+            /// <para>The start time of the time interval. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-10T20:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string TimeStamp { get; set; }
 
             /// <summary>
-            /// <para>The number of successful playbacks within the period of time.</para>
+            /// <para>The total number of successful playbacks within the specified time period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>99</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string VvSuccess { get; set; }
 
             /// <summary>
-            /// <para>The total number of playbacks within the period of time.</para>
+            /// <para>The total number of playbacks within the specified time period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

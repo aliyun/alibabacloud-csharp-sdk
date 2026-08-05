@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class InitializeAutoShowListTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the production studio.</para>
+        /// <para>The production studio ID.</para>
         /// <remarks>
-        /// <para> The value of this parameter can be used as the value of a request parameter to query the streaming URL of the production studio, start the production studio, add video resources to the production studio, add a production studio layout, query production studio layouts, add a production studio component, and add a production studio playlist.</para>
+        /// <para>This ID can be used as a request parameter for querying production studio stream URLs, starting the production studio, adding video resources to the production studio, adding layouts to the production studio, querying the layout list of the production studio, adding components to the production studio, and adding programs to the production studio.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,11 +33,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of output video streams.</para>
+        /// <para>The list of output addresses of the production studio.</para>
         /// <list type="bullet">
-        /// <item><description>videoFormat: the format of the streaming URL.</description></item>
-        /// <item><description>outputStreamUrl: the source URL.</description></item>
-        /// <item><description>transcodeConfig: the output resolution specified for video transcoding of the source URL.</description></item>
+        /// <item><description><para>videoFormat: the streaming URL format.</para>
+        /// </description></item>
+        /// <item><description><para>outputStreamUrl: the stream pulling URL.</para>
+        /// </description></item>
+        /// <item><description><para>transcodeConfig: the transcoding resolution description of the stream pulling URL.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

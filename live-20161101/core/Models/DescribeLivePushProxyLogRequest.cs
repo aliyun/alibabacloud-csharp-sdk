@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLivePushProxyLogRequest : TeaModel {
         /// <summary>
-        /// <para>The ingest domain. You can specify only one domain in each request.</para>
+        /// <para>The ingest domain. Multi-domain queries are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Get the log end time.
-        /// Date format follows the ISO8601 representation and uses UTC+0 time, formatted as yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The end of the time range to query logs.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-09-20T09:00:00Z</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number. Default value: 1. Valid values: [1, 9223372036854775807].</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: [1,1000]. Default value: 300.</para>
+        /// <para>The page size. Valid values: [1, 1000\]. Default value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -55,12 +55,19 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Get the log start time in ISO8601 format with UTC+0 timezone, formatted as yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The beginning of the time range to query logs.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-09-20T08:00:00Z</para>

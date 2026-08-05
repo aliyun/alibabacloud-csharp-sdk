@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateLiveRealTimeLogDeliveryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</para>
+        /// <para>F32C57AA-7BF8-49AE-A2CC-9F42390F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveStreamRecordIndexFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The sort order.</para>
+        /// <para>The sorting order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>

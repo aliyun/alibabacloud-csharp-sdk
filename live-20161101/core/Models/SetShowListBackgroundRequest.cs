@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class SetShowListBackgroundRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the production studio.</para>
+        /// <para>The production studio ID.</para>
         /// <list type="bullet">
-        /// <item><description>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</description></item>
-        /// <item><description>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <b>Production Studio Management</b> page. To go to the page, log on to the <b>ApsaraVideo Live console</b> and click <b>Production Studios</b> in the left-side navigation pane.</description></item>
+        /// <item><description><para>If you created the production studio by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the CasterId value returned by the CreateCaster operation.</para>
+        /// </description></item>
+        /// <item><description><para>If you created the production studio in the ApsaraVideo Live console, navigate to <b>ApsaraVideo Live console</b> &gt; <b>Production Studios</b> &gt; <b>Cloud Production Studio</b> to view the production studio name.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can find the ID of the production studio in the Instance ID/Name column.</para>
+        /// <para>The production studio name in the production studio list on the Cloud Production Studio page is the production studio ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,9 +30,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string CasterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the material in ApsaraVideo VOD.</para>
+        /// <para>The video-on-demand material ID.</para>
         /// <remarks>
-        /// <para> Specify either this parameter or the ResourceUrl parameter.</para>
+        /// <para>Specify either this parameter or ResourceUrl.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,19 +46,28 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid values:</para>
+        /// <para>The material type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LIVE: live stream. You can add a live stream from ApsaraVideo Live or by using a third-party URL.</description></item>
-        /// <item><description>VOD: on-demand video. You can add an on-demand video from ApsaraVideo VOD or by using a third-party URL.</description></item>
-        /// <item><description>PIC: image. You can add an image from ApsaraVideo VOD or by using a third-party URL.</description></item>
+        /// <item><description><para>LIVE: live streaming material. Supports live streaming materials and third-party URLs.</para>
+        /// </description></item>
+        /// <item><description><para>VOD: video-on-demand material. Supports video-on-demand materials and third-party URLs.</para>
+        /// </description></item>
+        /// <item><description><para>PIC: image material. Supports video-on-demand materials and third-party URLs.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Set this parameter to one of the preceding values, or leave this parameter empty.</para>
+        /// <para>Specify one of the three values or leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,7 +78,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The URL of the third-party material.</para>
+        /// <para>The URL of the external material.</para>
         /// </summary>
         [NameInMap("ResourceUrl")]
         [Validation(Required=false)]

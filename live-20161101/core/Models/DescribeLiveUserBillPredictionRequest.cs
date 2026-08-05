@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveUserBillPredictionRequest : TeaModel {
         /// <summary>
-        /// <para>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time. The time must be in UTC and follow the yyyy-MM-ddTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-01T05:45:00Z</para>
@@ -23,12 +23,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd**THH:mm:ssZ</em> format. The time must be in UTC.</para>
+        /// <para>The start time. The time must be in UTC and follow the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-01T05:40:00Z</para>

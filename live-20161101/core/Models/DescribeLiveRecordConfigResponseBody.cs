@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         }
 
         /// <summary>
-        /// <para>The sorting order of recording configurations by creation time.</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of recording configurations that meet the specified conditions.</para>
+        /// <para>The total number of entries that meet the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

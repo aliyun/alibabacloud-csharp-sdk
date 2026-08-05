@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeShowListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</para>
@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>****Details of the episode list.</para>
-        /// <para>Show indicates the information about a specific episode. For more information, see the <b>Show</b> parameter.</para>
+        /// <para>The details of the playlist. <c>Show</c> contains the details of a show in the playlist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ShowList[Show1, Show2, Show3...]</para>
@@ -31,14 +30,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string ShowList { get; set; }
 
         /// <summary>
-        /// <para>The information about the episode list.</para>
+        /// <para>The playlist.</para>
         /// </summary>
         [NameInMap("ShowListInfo")]
         [Validation(Required=false)]
         public DescribeShowListResponseBodyShowListInfo ShowListInfo { get; set; }
         public class DescribeShowListResponseBodyShowListInfo : TeaModel {
             /// <summary>
-            /// <para>The background of the episode list.</para>
+            /// <para>The background of the playlist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;MaterialId\&quot;:\&quot;a2b8e671-2fe5-4642-a2ec-bf93880e****\&quot;,\&quot;resourceType\&quot;:\&quot;VOD\&quot;}</para>
@@ -48,7 +47,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string Background { get; set; }
 
             /// <summary>
-            /// <para>The ID of the episode that is playing.</para>
+            /// <para>The ID of the show that is being played.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a2b8e671-2fe5-4642-a2ec-bf93880e****</para>
@@ -58,9 +57,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string CurrentShowId { get; set; }
 
             /// <summary>
-            /// <para>The episode of the highest priority.</para>
+            /// <para>The highest-priority show.</para>
             /// <remarks>
-            /// <para>You can configure this parameter only before the episode list starts playing.</para>
+            /// <para>You can configure this parameter only before the playlist starts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -71,9 +70,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string HighPriorityShowId { get; set; }
 
             /// <summary>
-            /// <para>The time at which the episode of the highest priority is played. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.</para>
+            /// <para>The time when the highest-priority show is played. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.</para>
             /// <remarks>
-            /// <para>You can configure this parameter only before the episode list starts playing. After you configure this parameter, when the specified point in time is reached, any episode that is playing stops and the episode of the highest priority in the episode list starts to play.</para>
+            /// <para>You can configure this parameter only before the playlist starts. After the configuration is complete, the system switches to the highest-priority show at the specified time.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -134,7 +133,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             }
 
             /// <summary>
-            /// <para>The number of additional times the episode list is played by default. The value is 0.</para>
+            /// <para>The default number of loops for the playlist. This value is always 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -144,7 +143,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public int? ShowListRepeatTimes { get; set; }
 
             /// <summary>
-            /// <para>The number of additional times the episode list is played.</para>
+            /// <para>The number of times the entire playlist is looped.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The callback authentication key. The key must be 16 to 32 characters in length and can contain only letters and digits.</para>
+        /// <para>The authentication key for the callback. The key must be 16 to 32 characters in length and contain only letters and digits.</para>
         /// <remarks>
-        /// <para>This parameter is required if you set the NotifyReqAuth parameter to <b>yes</b>.</para>
+        /// <para>This parameter is required if you set NotifyReqAuth to <b>yes</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,11 +36,13 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>Specifies whether to enable callback authentication. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b></description></item>
-        /// <item><description><b>no</b> (default)</description></item>
+        /// <item><description><para><b>yes</b>: Enables</para>
+        /// </description></item>
+        /// <item><description><para><b>no</b> (Default): Disables</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required if you set the NotifyAuthKey parameter to yes.</para>
+        /// <para>If you set this parameter to yes, NotifyAuthKey is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string NotifyReqAuth { get; set; }
 
         /// <summary>
-        /// <para>The callback URL. Specify a valid URL that is up to 500 characters in length.</para>
+        /// <para>The callback URL. The URL must be valid, with a maximum length of 500 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,6 +67,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

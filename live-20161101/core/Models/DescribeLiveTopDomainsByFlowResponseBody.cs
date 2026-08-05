@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class DescribeLiveTopDomainsByFlowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of domain names in your account.</para>
+        /// <para>The total number of domain names under the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? DomainCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of domain names that are in the Enabled state in your account.</para>
+        /// <para>The total number of running domain names under the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? DomainOnlineCount { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for which data was queried.</para>
+        /// <para>The end time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-03-20T16:00:00Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range for which data was queried.</para>
+        /// <para>The start time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-03-17T16:00:00Z</para>
