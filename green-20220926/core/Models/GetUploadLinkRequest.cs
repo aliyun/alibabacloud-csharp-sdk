@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetUploadLinkRequest : TeaModel {
         /// <summary>
-        /// <para>Upload Link address</para>
+        /// <para>The upload URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetOssCheckStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

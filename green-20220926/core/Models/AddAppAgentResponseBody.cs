@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class UpdateOssCheckResultsFeedBackResponseBody : TeaModel {
+    public class AddAppAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>ag.abcxxx</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public bool? Data { get; set; }
+        public string Data { get; set; }
 
         /// <summary>
         /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>

@@ -8,16 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetUploadInfoRequest : TeaModel {
+    public class RecoverAppConfigHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The upload name.</para>
+        /// <para>App ID。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test.</para>
+        /// <para>txt_check_agent_01</para>
         /// </summary>
-        [NameInMap("Name")]
+        [NameInMap("AppId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string AppId { get; set; }
+
+        /// <summary>
+        /// <para>The version number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1785898163</para>
+        /// </summary>
+        [NameInMap("AppVersion")]
+        [Validation(Required=false)]
+        public long? AppVersion { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
@@ -33,7 +43,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>image</para>
+        /// <para>agent_text</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

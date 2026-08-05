@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateOssCheckResultsBatchFeedbackResponseBody : TeaModel {
         /// <summary>
-        /// <para>Quantity of invalid items.</para>
+        /// <para>The number of invalid items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? InvalidCount { get; set; }
 
         /// <summary>
-        /// <para>Quantity of duplicates.</para>
+        /// <para>The number of duplicate items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? RepeatCount { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Number of succeeded items.</para>
+        /// <para>The number of successful items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? SuccessCount { get; set; }
 
         /// <summary>
-        /// <para>Tips message.</para>
+        /// <para>The prompt information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxx</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Tips { get; set; }
 
         /// <summary>
-        /// <para>Total quantity.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

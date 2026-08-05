@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The name of the library.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>代答库名称</para>
+            /// <para>ProxyAnswerLibraryName</para>
             /// </summary>
             [NameInMap("LibName")]
             [Validation(Required=false)]

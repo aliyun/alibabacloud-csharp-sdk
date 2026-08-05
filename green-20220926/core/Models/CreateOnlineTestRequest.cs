@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CreateOnlineTestRequest : TeaModel {
         /// <summary>
-        /// <para>Data ID</para>
+        /// <para>The data ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string DataId { get; set; }
 
         /// <summary>
-        /// <para>Resource Type</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>video</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Service Code</para>
+        /// <para>The service code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VideoModeration</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>Detection URL</para>
+        /// <para>The URL to be detected.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxxxxxx.com/data/data.png">https://xxxxxxxxxx.com/data/data.png</a></para>

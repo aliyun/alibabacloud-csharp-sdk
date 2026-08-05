@@ -8,12 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetUploadInfoRequest : TeaModel {
+    public class CopyAppConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The upload name.</para>
+        /// <para>The ID of the source App to copy from.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test.</para>
+        /// <para>txt_check_agent_01</para>
+        /// </summary>
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
+        /// <summary>
+        /// <para>The name of the new App to be created from the copy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CustomTextModeration</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -33,7 +43,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>image</para>
+        /// <para>agent_text</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

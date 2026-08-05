@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetUploadInfoRequest : TeaModel {
+    public class CreateAppConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The upload name.</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test.</para>
+        /// <para>CustomReview</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -33,11 +33,31 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>image</para>
+        /// <para>agent_text</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
+
+        /// <summary>
+        /// <para>The system app ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>txt_check_agent</para>
+        /// </summary>
+        [NameInMap("SysAppId")]
+        [Validation(Required=false)]
+        public string SysAppId { get; set; }
+
+        /// <summary>
+        /// <para>The type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>plus</para>
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

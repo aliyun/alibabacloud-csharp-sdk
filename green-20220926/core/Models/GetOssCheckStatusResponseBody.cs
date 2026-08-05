@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Bid { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the service is activated on Alibaba Cloud.</para>
+        /// <para>Indicates whether the commodity is activated on Alibaba Cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the account has an overdue payment.</para>
+        /// <para>Indicates whether there is an overdue payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RamStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. This ID can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

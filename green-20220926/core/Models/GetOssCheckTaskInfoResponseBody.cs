@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetOssCheckTaskInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The OSS buckets.</para>
+        /// <para>The storage buckets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;Bucket\&quot;:\&quot;aileshijie\&quot;,\&quot;Region\&quot;:\&quot;cn-hangzhou\&quot;}]</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public GetOssCheckTaskInfoResponseBodyConfig Config { get; set; }
         public class GetOssCheckTaskInfoResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>The filter configuration for each bucket. The key is the bucket name, and the value is the filter configuration, which includes prefix and suffix filters and filter character lists.</para>
+            /// <para>The filter configuration for each bucket. The key is the bucket name, and the value is the filter configuration, which includes prefix/suffix filters and filter character lists.</para>
             /// </summary>
             [NameInMap("BucketPrefixFilterConfig")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public long? CallbackId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to deduplicate historically scanned tasks.</para>
+            /// <para>Indicates whether to deduplicate previously scanned tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The execution date of the scheduled task. The value is an integer.</para>
+            /// <para>The execution date of the scheduled task. The value is an integer in the format of a single digit, such as 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? ExecuteDate { get; set; }
 
             /// <summary>
-            /// <para>The estimated execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The expected execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-09 10:30:00</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ExecuteTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether freezing is enabled.</para>
+            /// <para>Indicates whether to freeze.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public bool? Freeze { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to freeze high-risk images.</para>
+            /// <para>Specifies whether to freeze high-risk images.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public bool? FreezeHighRisk1 { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to freeze high-risk audio and text.</para>
+            /// <para>Specifies whether to freeze high-risk audio and text.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public bool? FreezeHighRisk2 { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to freeze medium-risk images.</para>
+            /// <para>Specifies whether to freeze medium-risk images.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public bool? FreezeMediumRisk1 { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to freeze medium-risk audio and text.</para>
+            /// <para>Specifies whether to freeze medium-risk audio and text.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Referer { get; set; }
 
             /// <summary>
-            /// <para>The scan limit.</para>
+            /// <para>The scan limit quantity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public bool? ScanNoFileType { get; set; }
 
             /// <summary>
-            /// <para>The type of files to scan.</para>
+            /// <para>The file type to scan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string CopyFrom { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the service is a copy.</para>
+                /// <para>Indicates whether the service is copied.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <para>The service name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>内容检测</para>
+                /// <para>Content moderation.</para>
                 /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
@@ -378,7 +378,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? MediaType { get; set; }
 
         /// <summary>
-        /// <para>The previous execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</para>
+        /// <para>The last execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-08 10:30:00</para>
@@ -451,7 +451,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>文档存量任务 20240914100517757</para>
+        /// <para>Document stock task 20240914100517757</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

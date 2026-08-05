@@ -8,16 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class GetUploadInfoRequest : TeaModel {
+    public class DeleteAppAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The upload name.</para>
+        /// <para>Agent ID。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test.</para>
+        /// <para>ag.abcxxx</para>
         /// </summary>
-        [NameInMap("Name")]
+        [NameInMap("AgentId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string AgentId { get; set; }
+
+        /// <summary>
+        /// <para>App ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>txt_check_agent_01</para>
+        /// </summary>
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
@@ -33,7 +43,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>image</para>
+        /// <para>agent_text</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

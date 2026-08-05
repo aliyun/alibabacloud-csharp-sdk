@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The media asset type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>image</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MediaType")]
         [Validation(Required=false)]

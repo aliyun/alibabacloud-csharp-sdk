@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class UpdateOssCheckResultsFeedBackResponseBody : TeaModel {
+    public class CreateAppConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

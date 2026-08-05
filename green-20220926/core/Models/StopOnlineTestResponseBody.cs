@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class StopOnlineTestResponseBody : TeaModel {
         /// <summary>
-        /// <para>Backend-assigned ID used as the UUID of a Request. It can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Service encoding</para>
+        /// <para>The service code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>baselineCheck</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>Detection Job ID</para>
+        /// <para>The ID of the detection task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxx-xxxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>Detection Status</para>
+        /// <para>The detection status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>Detection URL</para>
+        /// <para>The detection URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxxxx.com/data/data.png">https://xxxxxxxx.com/data/data.png</a></para>

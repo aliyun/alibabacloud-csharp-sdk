@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>Conversation information</para>
+        /// <para>The conversation messages.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;content\&quot;:\&quot;你好\&quot;,\&quot;role\&quot;:\&quot;user\&quot;}]</para>
+        /// <para>[{&quot;content&quot;:&quot;Hello&quot;,&quot;role&quot;:&quot;user&quot;}]</para>
         /// </summary>
         [NameInMap("Messages")]
         [Validation(Required=false)]
         public object Messages { get; set; }
 
         /// <summary>
-        /// <para>Temperature value for the large model</para>
+        /// <para>The temperature value of the large language model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.5</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public float? Temperature { get; set; }
 
         /// <summary>
-        /// <para>Top p parameter controlling the randomness of the large model\&quot;s output.</para>
+        /// <para>The top_p parameter that controls the randomness of the large language model output.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.5</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public float? TopP { get; set; }
 
         /// <summary>
-        /// <para>Type of conversation</para>
+        /// <para>The conversation type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image</para>

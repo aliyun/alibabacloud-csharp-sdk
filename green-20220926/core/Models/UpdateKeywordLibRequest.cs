@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateKeywordLibRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the keyword library.</para>
+        /// <para>The keyword library ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>custom_xxxx</para>
+        /// <para>custom_6.2193748597</para>
         /// </summary>
         [NameInMap("LibId")]
         [Validation(Required=false)]
         public string LibId { get; set; }
 
         /// <summary>
-        /// <para>The name of the keyword library.</para>
+        /// <para>The keyword library name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestLibrary.</para>
