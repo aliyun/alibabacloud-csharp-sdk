@@ -4586,7 +4586,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This feature is currently available only on the Lingjun AI Computing Service platform and is accessible to customers through a whitelist.</description></item>
-        /// <item><description><c>NodeName</c> and <c>ResourceGroupId</c> are required parameters that represent the node name and the ID of the resource group to which the node belongs.</description></item>
+        /// <item><description><c>NodeName</c> and <c>ResourceGroupId</c> are required parameters that represent the node name and the resource group ID to which the node belongs.</description></item>
         /// <item><description>Optional parameters include <c>OversoldTypes</c> and <c>GPUIndexes</c>, which are used to further filter or specify conditions.</description></item>
         /// </list>
         /// </description>
@@ -4650,7 +4650,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This feature is currently available only on the Lingjun AI Computing Service platform and is accessible to customers through a whitelist.</description></item>
-        /// <item><description><c>NodeName</c> and <c>ResourceGroupId</c> are required parameters that represent the node name and the ID of the resource group to which the node belongs.</description></item>
+        /// <item><description><c>NodeName</c> and <c>ResourceGroupId</c> are required parameters that represent the node name and the resource group ID to which the node belongs.</description></item>
         /// <item><description>Optional parameters include <c>OversoldTypes</c> and <c>GPUIndexes</c>, which are used to further filter or specify conditions.</description></item>
         /// </list>
         /// </description>
@@ -4714,7 +4714,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This feature is currently available only on the Lingjun AI Computing Service platform and is accessible to customers through a whitelist.</description></item>
-        /// <item><description><c>NodeName</c> and <c>ResourceGroupId</c> are required parameters that represent the node name and the ID of the resource group to which the node belongs.</description></item>
+        /// <item><description><c>NodeName</c> and <c>ResourceGroupId</c> are required parameters that represent the node name and the resource group ID to which the node belongs.</description></item>
         /// <item><description>Optional parameters include <c>OversoldTypes</c> and <c>GPUIndexes</c>, which are used to further filter or specify conditions.</description></item>
         /// </list>
         /// </description>
@@ -4743,7 +4743,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This feature is currently available only on the Lingjun AI Computing Service platform and is accessible to customers through a whitelist.</description></item>
-        /// <item><description><c>NodeName</c> and <c>ResourceGroupId</c> are required parameters that represent the node name and the ID of the resource group to which the node belongs.</description></item>
+        /// <item><description><c>NodeName</c> and <c>ResourceGroupId</c> are required parameters that represent the node name and the resource group ID to which the node belongs.</description></item>
         /// <item><description>Optional parameters include <c>OversoldTypes</c> and <c>GPUIndexes</c>, which are used to further filter or specify conditions.</description></item>
         /// </list>
         /// </description>

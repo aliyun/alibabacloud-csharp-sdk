@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class NodePodInfo : TeaModel {
         /// <summary>
+        /// <para>The occupied GPU indexes.</para>
+        /// </summary>
+        [NameInMap("GPUIndexes")]
+        [Validation(Required=false)]
+        public List<int?> GPUIndexes { get; set; }
+
+        /// <summary>
+        /// <para>The Pod status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Running</para>
         /// </summary>
@@ -18,6 +27,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Phase { get; set; }
 
         /// <summary>
+        /// <para>The IP address of the Pod.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>192.168.2.2</para>
         /// </summary>
@@ -26,6 +37,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PodIP { get; set; }
 
         /// <summary>
+        /// <para>The Pod name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -34,6 +47,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PodName { get; set; }
 
         /// <summary>
+        /// <para>The namespace of the Pod.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -41,11 +56,16 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string PodNamespace { get; set; }
 
+        /// <summary>
+        /// <para>The resource usage information.</para>
+        /// </summary>
         [NameInMap("ResourceSpec")]
         [Validation(Required=false)]
         public ResourceAmount ResourceSpec { get; set; }
 
         /// <summary>
+        /// <para>The task ID or service ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dlc19de9s6vn3acr</para>
         /// </summary>
@@ -54,6 +74,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string WorkloadId { get; set; }
 
         /// <summary>
+        /// <para>The sub-product that the Pod belongs to.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dlc</para>
         /// </summary>
