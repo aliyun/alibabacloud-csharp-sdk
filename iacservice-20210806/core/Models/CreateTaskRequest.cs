@@ -241,6 +241,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1.248.0</para>
+        /// </summary>
         [NameInMap("terraformProviderVersion")]
         [Validation(Required=false)]
         public string TerraformProviderVersion { get; set; }
