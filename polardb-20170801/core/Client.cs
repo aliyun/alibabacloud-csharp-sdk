@@ -22739,7 +22739,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a path mapping for transparent acceleration.</para>
+        /// <para>Deletes a transparent acceleration path mapping.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22789,7 +22789,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a path mapping for transparent acceleration.</para>
+        /// <para>Deletes a transparent acceleration path mapping.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22839,7 +22839,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a path mapping for transparent acceleration.</para>
+        /// <para>Deletes a transparent acceleration path mapping.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22857,7 +22857,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a path mapping for transparent acceleration.</para>
+        /// <para>Deletes a transparent acceleration path mapping.</para>
         /// </summary>
         /// 
         /// <param name="request">
