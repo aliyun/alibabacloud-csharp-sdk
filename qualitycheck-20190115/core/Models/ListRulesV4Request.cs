@@ -213,6 +213,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        [NameInMap("TargetType")]
+        [Validation(Required=false)]
+        public string TargetType { get; set; }
+
         /// <summary>
         /// <para>Type value of the rule category that the rule belongs to.</para>
         /// 
