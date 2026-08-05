@@ -28358,6 +28358,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["Topk"] = request.Topk;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.User))
+            {
+                query["User"] = request.User;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -28407,6 +28411,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topk))
             {
                 query["Topk"] = request.Topk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.User))
+            {
+                query["User"] = request.User;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

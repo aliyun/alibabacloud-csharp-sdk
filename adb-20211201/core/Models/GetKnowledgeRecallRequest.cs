@@ -41,6 +41,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public int? Topk { get; set; }
 
+        /// <summary>
+        /// <para>The username. Only files that this user has permission to access are recalled.</para>
+        /// </summary>
+        [NameInMap("User")]
+        [Validation(Required=false)]
+        public string User { get; set; }
+
     }
 
 }
