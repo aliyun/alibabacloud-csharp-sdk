@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateGatewayRequestLogConfig LogConfig { get; set; }
         public class CreateGatewayRequestLogConfig : TeaModel {
             /// <summary>
-            /// <para>The Simple Log Service (SLS) log configuration.</para>
+            /// <para>The Simple Log Service (SLS) configuration, which controls gateway log collection.</para>
             /// </summary>
             [NameInMap("sls")]
             [Validation(Required=false)]
             public CreateGatewayRequestLogConfigSls Sls { get; set; }
             public class CreateGatewayRequestLogConfigSls : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to enable SLS logging.</para>
+                /// <para>Specifies whether to enable SLS log collection.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>

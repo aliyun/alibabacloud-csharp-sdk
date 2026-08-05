@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetConsumerResponseBodyData Data { get; set; }
         public class GetConsumerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AccessKey identity authentication configurations.</para>
+            /// <para>The AK/SK identity authentication configuration.</para>
             /// </summary>
             [NameInMap("akSkIdentityConfigs")]
             [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The consumer group description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>用于线上 API 调用方分组</para>
+                /// <para>Used for grouping online API callers</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The time when the API consumer joined the consumer group. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The time when the API consumer joined the consumer group, in Unix milliseconds timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1715769600000</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The deployment status of the API in the current environment.</para>
+            /// <para>The publish status of the API in the current environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试专用消费者</para>
+            /// <para>Test-dedicated consumer</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]

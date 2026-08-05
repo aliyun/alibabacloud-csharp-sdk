@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试消费者</para>
+        /// <para>Test consumer</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the API consumer.</para>
+        /// <para>Specifies whether to enable the consumer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

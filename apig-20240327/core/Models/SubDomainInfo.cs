@@ -30,12 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The network type. Valid values:</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Intranet</description></item>
-        /// <item><description>Internet</description></item>
-        /// </list>
+        /// <para>The network type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Intranet</para>
@@ -45,12 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The protocol.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>HTTPS</description></item>
-        /// <item><description>HTTP</description></item>
-        /// </list>
+        /// <para>The protocol type supported by the subdomain. Valid values: HTTP, HTTPS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>

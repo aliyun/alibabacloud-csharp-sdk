@@ -1,3 +1,6 @@
+2026-08-05 Version: 10.1.3
+- Generated csharp 2024-03-27 for APIG.
+
 2026-07-30 Version: 10.1.2
 - Update API CreateGateway: add request parameters body.gatewayMode.
 - Update API GetGateway: add response parameters Body.data.gatewayMode.

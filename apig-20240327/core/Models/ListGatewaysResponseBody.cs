@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string CreateFrom { get; set; }
 
                 /// <summary>
-                /// <para>The creation timestamp, in milliseconds.</para>
+                /// <para>The creation timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The expiration timestamp for subscription instances, in milliseconds.</para>
+                /// <para>The expiration timestamp for subscription instances. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172086834548</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the gateway instance was created before the AI gateway feature was released.</para>
+                /// <para>Indicates whether the gateway instance was created before AI gateway was released.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? Legacy { get; set; }
 
                 /// <summary>
-                /// <para>The list of gateway ingress addresses.</para>
+                /// <para>The list of gateway entry addresses.</para>
                 /// </summary>
                 [NameInMap("loadBalancers")]
                 [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string AddressType { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether this is the default ingress address of the gateway.</para>
+                    /// <para>Indicates whether this is the default entry address of the gateway.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string TargetVersion { get; set; }
 
                 /// <summary>
-                /// <para>The update timestamp, in milliseconds.</para>
+                /// <para>The update timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>

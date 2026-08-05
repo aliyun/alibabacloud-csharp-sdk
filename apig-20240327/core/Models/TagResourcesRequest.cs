@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The resource type used for the tagging operation. Set this to Gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gateway</para>

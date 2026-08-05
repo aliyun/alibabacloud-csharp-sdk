@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<TlsCipherSuitesConfigTlsCipherSuite> TlsCipherSuite { get; set; }
         public class TlsCipherSuitesConfigTlsCipherSuite : TeaModel {
             /// <summary>
-            /// <para>The suite name.</para>
+            /// <para>The TLS cipher suite name, such as ECDHE-ECDSA-AES256-GCM-SHA384.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECDHE-ECDSA-AES256-GCM-SHA384</para>

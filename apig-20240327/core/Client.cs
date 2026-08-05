@@ -17391,7 +17391,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds labels to resources.</para>
+        /// <para>Tags resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17445,7 +17445,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds labels to resources.</para>
+        /// <para>Tags resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17499,7 +17499,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds labels to resources.</para>
+        /// <para>Tags resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17518,7 +17518,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds labels to resources.</para>
+        /// <para>Tags resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18555,7 +18555,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an API consumer.</para>
+        /// <para>Updates a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18617,7 +18617,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an API consumer.</para>
+        /// <para>Updates a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18679,7 +18679,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an API consumer.</para>
+        /// <para>Updates a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18698,7 +18698,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an API consumer.</para>
+        /// <para>Updates a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
